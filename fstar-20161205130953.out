@@ -1,0 +1,14 @@
+make: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+All packages listed in packages.config are already installed.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
