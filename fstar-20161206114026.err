@@ -1,0 +1,64 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: warning: -jN forced in submake: disabling jobserver mode.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+make[4]: warning: -jN forced in submake: disabling jobserver mode.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: warning: -jN forced in submake: disabling jobserver mode.
+.\bijection.fst(5,32-5,45): (Warning) Pattern misses at least one bound variable: x#882
+WARNING: (3949,6): pattern does not contain all quantified variables.
+.\bijection.fst(5,32-5,45): (Warning) Pattern misses at least one bound variable: x#4222
+.\ifc.fst(170,15-174,23): (Warning) Pattern misses at least one bound variable: env#18346
+WARNING: (3942,6): pattern does not contain all quantified variables.
+WARNING: (3997,6): pattern does not contain all quantified variables.
+WARNING: (43857,26): pattern does not contain any variable.
+.\ifc.fst(224,16-229,23): (Warning) Pattern misses at least one bound variable: env#29871
+.\ifc.fst(225,2-229,23): (Warning) Pattern misses at least one bound variable: env#31212
+WARNING: (43857,26): pattern does not contain any variable.
+WARNING: (44055,26): pattern does not contain any variable.
+.\ifc.fst(171,2-174,23): (Warning) Pattern misses at least one bound variable: env#90995
+.\ifc.fst(225,2-229,23): (Warning) Pattern misses at least one bound variable: env#91682
+WARNING: (43836,26): pattern does not contain any variable.
+WARNING: (44024,26): pattern does not contain any variable.
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\examples\metatheory\StackMachine.fst.hints; ran without hints
+.\StackMachine.fst(197,4-204,57): (Error) could not prove post-condition
+.\StackMachine.fst(197,4-204,57): (Error) could not prove post-condition
+Verified module: StackMachine (34913 milliseconds)
+2 errors were reported (see above)
+make[3]: *** [../Makefile.include:63: StackMachine.uver] Error 1
+make[3]: *** Waiting for unfinished jobs....
+.\Ex06b.fst(78,50-83,37): (Error) Unknown assertion failed
+Verified module: Ex06b (29340 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:39: verify-Ex06b.fst] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[2]: *** [Makefile:48: metatheory.uall] Error 2
+make[2]: *** Waiting for unfinished jobs....
+.\Ex07d.fst(173,67-202,48): (Error) Unknown assertion failed
+Verified module: Ex07d (35823 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:39: verify-Ex07d.fst] Error 1
+make[2]: *** [Makefile:48: ../doc/tutorial/code/exercises.uall] Error 2
+.\Ex07c.fst(201,67-241,49): (Error) Unknown assertion failed
+Verified module: Ex07c (33822 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:42: verify-Ex07c.fst] Error 1
+make[3]: *** Waiting for unfinished jobs....
+.\Ex07b.fst(238,67-275,44): (Error) Unknown assertion failed
+Verified module: Ex07b (39510 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:42: verify-Ex07b.fst] Error 1
+make[2]: *** [Makefile:48: ../doc/tutorial/code/solutions.uall] Error 2
+.\Crypto.Symmetric.Poly1305.fst(491,59-527,72): (Error) Unknown assertion failed
+Verified module: Crypto.Symmetric.Poly1305 (567056 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:68: Crypto.Symmetric.Poly1305.fst-ver] Error 1
+make[4]: *** Waiting for unfinished jobs....
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\examples\low-level\crypto\Crypto.AEAD.Encoding.fst.hints; ran without hints
+make[3]: *** [Makefile:39: uall] Error 2
+make[2]: *** [Makefile:48: low-level.uall] Error 2
+make[1]: *** [Makefile:264: uexamples] Error 2
+make: *** [Makefile:241: utest] Error 2
