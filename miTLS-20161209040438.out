@@ -1,0 +1,518 @@
+make: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/src/tls'
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --version | grep ^commit | sed 's/commit=\([^ ]*\).*/\1/' > ../../.fstar_version
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Flags \
+Flags.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MonotoneMap \
+MonotoneMap.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSError \
+TLSError.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSConstants \
+TLSConstants.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Transport \
+Transport.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Nonce \
+Nonce.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module RSAKey \
+RSAKey.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module DHGroup \
+DHGroup.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module ECGroup \
+ECGroup.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module CommonDH \
+CommonDH.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module PMS \
+PMS.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Hashing \
+Hashing.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module HashMAC \
+HashMAC.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Cert \
+Cert.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Signature \
+Signature.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSInfo \
+TLSInfo.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module IdNonce \
+IdNonce.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSExtensions \
+TLSExtensions.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Range \
+Range.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module DataStream \
+DataStream.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Alert \
+Alert.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Content \
+Content.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamPlain \
+StreamPlain.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamAE \
+StreamAE.fst
+Verified module: Flags (32 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MasterSecret \
+MasterSecret.fst
+Verified module: MonotoneMap (6641 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StatefulPlain \
+StatefulPlain.fst
+Verified module: TLSError (8618 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module LHAEPlain \
+LHAEPlain.fst
+Verified module: Transport (4089 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module AEAD_GCM \
+AEAD_GCM.fst
+Verified module: Hashing (286 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC \
+MAC.fst
+Verified module: RSAKey (3456 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StatefulLHAE \
+StatefulLHAE.fst
+Verified module: HashMAC (5691 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Record \
+Record.fst
+Verified module: PMS (13940 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC_SHA256 \
+MAC_SHA256.fst
+Verified module: Cert (26709 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC_SHA1 \
+MAC_SHA1.fst
+Verified module: DHGroup (31011 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StAE \
+StAE.fst
+Verified module: CommonDH (41132 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module KeySchedule \
+KeySchedule.fst
+Verified module: IdNonce (37616 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamDeltas \
+StreamDeltas.fst
+Verified module: ECGroup (45222 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module HKDF \
+HKDF.fst
+Verified module: Nonce (50913 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Epochs \
+Epochs.fst
+Verified module: HKDF (9205 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Connection \
+Connection.fst
+Verified module: MAC_SHA1 (39713 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module ConnInvariant \
+ConnInvariant.fst
+Verified module: MAC_SHA256 (38644 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module FFI \
+FFI.fst
+Verified module: MAC (156888 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLS \
+TLS.fst
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+Verified module: FFI (1123 milliseconds)
+All verification conditions discharged successfully
+mkdir -p output
+# Build ../../libs/ffi/FFICallbacks.cmxa
+make -C ../../libs/ffi
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/libs/ffi'
+ocamlfind c -package batteries,zarith -c FFICallbacks.mli
+ocamlfind opt -package batteries,zarith -c FFICallbacks.ml -ccopt -Wall -ccopt -fPIC ffi.c
+ocamlfind opt -package batteries,zarith -c FFICallbacks.ml -ccopt -Wall -ccopt -fPIC ffi.c
+ocamlfind mklib -package batteries,zarith -o FFICallbacks FFICallbacks.cmx ffi.o
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/libs/ffi'
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar  --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/spartan \
+  --no_location_info --lax --codegen OCaml --__temp_no_proj TLSExtensions \
+  --__temp_no_proj FStar.Heap --odir output --no_extract FStar.All --no_extract FStar.List --no_extract FStar.Heap --no_extract FStar.Set --no_extract FStar.Map --no_extract FStar.ST --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.IO --no_extract Platform.Bytes --no_extract Platform.Date --no_extract Platform.Error --no_extract Platform.Tcp --no_extract SessionDB --no_extract DB --no_extract DHDB --no_extract CoreCrypto --no_extract LowCProvider --no_extract FFICallbacks \
+  --codegen-lib CoreCrypto --codegen-lib LowCProvider --codegen-lib Platform --codegen-lib Classical --codegen-lib SeqProperties --codegen-lib HyperHeap --codegen-lib HyperStack --codegen-lib FFICallbacks \
+  --include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+  --include concrete-flags \
+  Flags.fst MonotoneMap.fst TLSError.fst TLSConstants.fst Transport.fst Nonce.fst RSAKey.fst DHGroup.fst ECGroup.fst CommonDH.fst PMS.fst Hashing.fst HashMAC.fst Cert.fst Signature.fst PSK.fst TLSInfo.fst IdNonce.fst TLSExtensions.fst Buffer.Utils.fst Crypto.Symmetric.Bytes.fst Crypto.Config.fst Crypto.Indexing.fst Flag.fst Spartan.fst Crypto.Symmetric.AES.fst Crypto.Symmetric.AES128.fst Crypto.Symmetric.Chacha20.fst Crypto.Symmetric.Cipher.fst Crypto.Symmetric.Poly1305.Bigint.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6.fst Crypto.Symmetric.Poly1305.Bignum.fst Crypto.Symmetric.Poly1305.Spec.fst Crypto.Symmetric.Poly1305.fst Crypto.Symmetric.GF128.Spec.fst Crypto.Symmetric.GF128.fst Crypto.Symmetric.MAC.fst Crypto.Symmetric.UF1CMA.fst Crypto.Plain.fst Crypto.Symmetric.PRF.fst Crypto.AEAD.Encoding.fst Crypto.AEAD.Invariant.fst Crypto.AEAD.Lemmas.fst Crypto.AEAD.Lemmas.Part2.fst Crypto.AEAD.Lemmas.Part3.fst Crypto.AEAD.Wrappers.fst Crypto.AEAD.fst AEADOpenssl.fst AEADProvider.fst Range.fst DataStream.fst Alert.fst Content.fst StreamPlain.fst StatefulPlain.fst LHAEPlain.fst StreamAE.fst AEAD_GCM.fst MAC.fst Encode.fst StatefulLHAE.fst ENC.fst HandshakeMessages.fst StAE.fst StreamDeltas.fst Record.fst HKDF.fst TLSPRF.fst MasterSecret.fst HandshakeLog.fst Negotiation.fst Epochs.fst KeySchedule.fst Handshake.fst Connection.fst ConnInvariant.fst TLS.fst FFI.fst test/TestRecord.fst test/TestDH.fst test/TestGCM.fst test/TestHandshake.fst test/TestFFI.fst test/TestAPI.fst 
+Verified module: Connection (56624 milliseconds)
+All verification conditions discharged successfully
+Verified module: TLSInfo (387017 milliseconds)
+All verification conditions discharged successfully
+Verified module: TLSExtensions (389562 milliseconds)
+All verification conditions discharged successfully
+Verified module: StreamDeltas (184391 milliseconds)
+All verification conditions discharged successfully
+Verified module: Record (139724 milliseconds)
+All verification conditions discharged successfully
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+Verified module: DataStream (219382 milliseconds)
+All verification conditions discharged successfully
+Verified module: Signature (467891 milliseconds)
+All verification conditions discharged successfully
+Verified module: Alert (5329 milliseconds)
+All verification conditions discharged successfully
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+Verified module: LHAEPlain (53742 milliseconds)
+All verification conditions discharged successfully
+Verified module: KeySchedule (134362 milliseconds)
+All verification conditions discharged successfully
+Extracting module Mul
+Extracting module Squash
+Extracting module StrongExcludedMiddle
+Extracting module Tot
+Extracting module Classical
+Extracting module ListProperties
+Extracting module Seq
+Extracting module SeqProperties
+Extracting module Lib
+Extracting module Lemmas
+Extracting module BitVector
+Extracting module UInt
+Extracting module UInt32
+Extracting module Int
+Extracting module Int16
+Extracting module FunctionalExtensionality
+Extracting module PropositionalExtensionality
+Extracting module PredicateExtensionality
+Extracting module TSet
+Extracting module Ghost
+Extracting module Flags
+Extracting module RRef
+Extracting module MonotoneMap
+Extracting module TLSError
+Extracting module TLSConstants
+Extracting module Nonce
+Extracting module Hashing
+Extracting module ECGroup
+Extracting module Cert
+Extracting module DHGroup
+Extracting module CommonDH
+Extracting module Config
+Extracting module PSK
+Extracting module RSAKey
+Extracting module PMS
+Verified module: StatefulPlain (153145 milliseconds)
+All verification conditions discharged successfully
+Extracting module TLSInfo
+Extracting module Indexing
+Extracting module Flag
+Extracting module Buffer
+Extracting module UInt8
+Extracting module Int64
+Extracting module Int63
+Extracting module Int32
+Extracting module Int8
+Extracting module UInt64
+Extracting module UInt128
+Extracting module UInt63
+Extracting module UInt16
+Extracting module Cast
+Extracting module Utils
+Extracting module Bytes
+Extracting module Chacha20
+Extracting module AES
+Extracting module Spartan
+Extracting module AES128
+Extracting module Bytes
+Extracting module Cipher
+Extracting module Parameters
+Extracting module Bigint
+Extracting module Lemmas
+Extracting module Spec
+Extracting module Part1
+Extracting module Part2
+Extracting module Part3
+Extracting module Part4
+Extracting module Part5
+Extracting module Quantifiers
+Extracting module Part6
+Extracting module Bignum
+Extracting module Poly1305
+Extracting module Spec
+Extracting module GF128
+Extracting module MAC
+Extracting module UF1CMA
+Extracting module Plain
+Extracting module PRF
+Extracting module Encoding
+Extracting module Invariant
+Extracting module AEADOpenssl
+Extracting module BufferUtils
+Extracting module Lemmas
+Extracting module Part2
+Extracting module Part3
+Extracting module Wrappers
+Extracting module AEAD
+Extracting module AEADProvider
+Extracting module Range
+Extracting module TLSExtensions
+Extracting module HandshakeMessages
+Extracting module HandshakeLog
+Extracting module IdNonce
+Extracting module Seq
+Extracting module Signature
+Extracting module HashMAC
+Extracting module TLSPRF
+Extracting module DataStream
+Extracting module Alert
+Extracting module Content
+Extracting module StreamPlain
+Extracting module StreamAE
+Extracting module StatefulPlain
+Extracting module LHAEPlain
+Extracting module AEAD_GCM
+Extracting module StatefulLHAE
+Extracting module StAE
+Extracting module Negotiation
+Extracting module Epochs
+Extracting module HKDF
+Extracting module KeySchedule
+Extracting module Handshake
+Extracting module MAC
+Extracting module Encode
+Extracting module ENC
+Extracting module TestRecord
+Extracting module Transport
+Extracting module Connection
+Extracting module Record
+Extracting module StreamDeltas
+Extracting module TLS
+Extracting module FFI
+Extracting module TestFFI
+Extracting module TestAPI
+Extracting module TestDH
+Extracting module TestGCM
+Extracting module MasterSecret
+Extracting module ConnInvariant
+Extracting module TestHandshake
+All verification conditions discharged successfully
+# Note (JP): the Makefile seems incorrect and we need to run make clean
+# first
+make -C C:/Build/Agent/_work/3/s/fstar/ulib/ml clean
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ulib/ml'
+rm -f *.cmi *.cmo *.cmx *.exe *.o *.a *.cmxa *~ FStar_ST.cmx FStar_All.cmx FStar_ST.cmi FStar_All.cmi FStar_ST.o FStar_All.o
+rm -f ./extracted/*
+rm -f hyperstack/*.o hyperstack/*.cm*
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ulib/ml'
+# Builds everything against prims, setting MEM=HST
+make -C C:/Build/Agent/_work/3/s/fstar/ulib/ml MEM=HST
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ulib/ml'
+make -C .. mgen
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ulib/ml'
+mkdir -p ml/extracted
+/cygdrive/c/Build/Agent/_work/3/s/fstar/bin/fstar.exe  --use_hints --lax --codegen OCaml --odir ml/extracted FStar.Set.fst FStar.TSet.fst FStar.Map.fst FStar.HyperHeap.fst FStar.HyperStack.fst
+Extracting module FunctionalExtensionality
+Extracting module PropositionalExtensionality
+Extracting module PredicateExtensionality
+Extracting module TSet
+Extracting module Set
+Extracting module Tot
+Extracting module Heap
+Extracting module Map
+Extracting module HyperHeap
+Extracting module HyperStack
+All verification conditions discharged successfully
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ulib'
+make prims.o FStar_Mul.o FStar_Float.o FStar_Char.o FStar_Int8.o FStar_UInt8.o FStar_Int16.o FStar_UInt16.o FStar_Int32.o FStar_UInt32.o FStar_Int64.o FStar_UInt64.o FStar_UInt128.o FStar_Int_Cast.o FStar_BaseTypes.o FStar_IO.o FStar_Heap.o FStar_List.o FStar_Option.o FStar_String.o FStar_Set.o FStar_Buffer.o FStar_CommonST.o ./extracted/FStar_TSet.o ./extracted/FStar_Map.o ./extracted/FStar_HyperHeap.o ./extracted/FStar_HyperStack.o hyperstack/FStar_ST.o hyperstack/FStar_All.o
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ulib/ml'
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg prims.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Mul.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Float.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Char.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int8.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt8.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int16.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt16.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int32.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt32.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int64.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt64.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt128.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int_Cast.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_BaseTypes.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_IO.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Heap.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_List.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Option.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_String.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Set.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Buffer.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_CommonST.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_TSet.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_Map.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_HyperHeap.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_HyperStack.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg hyperstack/FStar_ST.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg hyperstack/FStar_All.ml
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ulib/ml'
+ocamlopt -a prims.cmx FStar_Mul.cmx FStar_Float.cmx FStar_Char.cmx FStar_Int8.cmx FStar_UInt8.cmx FStar_Int16.cmx FStar_UInt16.cmx FStar_Int32.cmx FStar_UInt32.cmx FStar_Int64.cmx FStar_UInt64.cmx FStar_UInt128.cmx FStar_Int_Cast.cmx FStar_BaseTypes.cmx FStar_IO.cmx FStar_Heap.cmx FStar_List.cmx FStar_Option.cmx FStar_String.cmx FStar_Set.cmx FStar_Buffer.cmx FStar_CommonST.cmx ./extracted/FStar_TSet.cmx ./extracted/FStar_Map.cmx ./extracted/FStar_HyperHeap.cmx ./extracted/FStar_HyperStack.cmx hyperstack/FStar_ST.cmx hyperstack/FStar_All.cmx -o fstarlib.cmxa
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ulib/ml'
+# Recursively builds everything in platform, etc.
+make -C C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/ml
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/ml'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/ml'
+# Low-level C record stack
+make -C C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider'
+ocamlfind dep *.ml *.mli > .depend
+make -C ../../../ucontrib/CoreCrypto/ml
+make -C .. krml-test.exe
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider'
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/ml'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/ml'
+../../../kremlin/krml -verbose -ccopt -maes -ccopt -Wno-error=pointer-sign  -I spartan_aes -I crypto -I ../../../kremlin/kremlib -I ../../../kremlin/test crypto/spartan/Crypto.Config.fst crypto/real/Flag.fst \
+	spartan_aes/aes.o crypto/spartan_stub.c \
+       	crypto/Crypto.KrmlTest.fst -no-prefix Crypto.KrmlTest \
+       	../../../kremlin/test/testlib.c crypto/test_hacks.c \
+	-tmpdir tmp -add-include '"testlib.h"' -o krml-test.exe
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/examples/low-level'
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider'
+Verified module: MasterSecret (325413 milliseconds)
+All verification conditions discharged successfully
+Verified module: Content (243417 milliseconds)
+All verification conditions discharged successfully
+Verified module: Epochs (688423 milliseconds)
+All verification conditions discharged successfully
+Verified module: TLS (790331 milliseconds)
+All verification conditions discharged successfully
+Verified module: StatefulLHAE (653429 milliseconds)
+All verification conditions discharged successfully
+Verified module: ConnInvariant (1103943 milliseconds)
+All verification conditions discharged successfully
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/src/tls'
