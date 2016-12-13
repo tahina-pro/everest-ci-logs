@@ -1,0 +1,611 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: warning: -jN forced in submake: disabling jobserver mode.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+make[4]: warning: -jN forced in submake: disabling jobserver mode.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: warning: -jN forced in submake: disabling jobserver mode.
+.\ifc.fst(170,15-174,23): (Warning) Pattern misses at least one bound variable: env#16319
+WARNING: (59087,26): pattern does not contain any variable.
+.\ifc.fst(224,16-229,23): (Warning) Pattern misses at least one bound variable: env#28785
+.\ifc.fst(225,2-229,23): (Warning) Pattern misses at least one bound variable: env#30208
+WARNING: (59087,26): pattern does not contain any variable.
+WARNING: (59303,26): pattern does not contain any variable.
+.\ifc.fst(171,2-174,23): (Warning) Pattern misses at least one bound variable: env#95144
+.\ifc.fst(225,2-229,23): (Warning) Pattern misses at least one bound variable: env#95831
+.\ifcExample.fst(6,15-9,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(9,15-10,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(10,15-11,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(11,15-12,17): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (59066,26): pattern does not contain any variable.
+WARNING: (59272,26): pattern does not contain any variable.
+.\Ex01a.fst(64,28-67,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TestMRef.fst(7,59-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\bijection.fst(5,32-5,45): (Warning) Pattern misses at least one bound variable: x#708
+WARNING: (4573,6): pattern does not contain all quantified variables.
+.\bijection.fst(5,32-5,45): (Warning) Pattern misses at least one bound variable: x#3554
+.\Encrypt_SymEnc.fst(24,78-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (4566,6): pattern does not contain all quantified variables.
+WARNING: (4621,6): pattern does not contain all quantified variables.
+TRYING NORMALIZATION OF REIFY: Tm_match ... (match (MonadicLift-Tm_delayed{bool : PURE -> EXN} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed{EXN int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> EXN} int)))
+	|_  -> (MonadicLift-Tm_delayed{int : PURE -> EXN} (op_Division i j)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXN} (op_Equality j 0))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{int : PURE -> EXN} (op_Division i j))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{int : PURE -> EXN} (op_Division i j))    after (fun i j -> (reify (MonadicLift-Tm_delayed{int : PURE -> EXN} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXN} (op_Equality j 0))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> EXN} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (match (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXN} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed-resolved{EXN int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> EXN} int)))
+	|_  -> (MonadicLift-Tm_delayed-resolved{int : PURE -> EXN} (op_Division i j)))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> EXN} (op_Division i@1 j@0))))
+TRYING NORMALIZATION OF REIFY: Tm_app ... ([[EXN.reflect]] (raise_ a))
+RESULT OF NORMALIZATION : before ([[EXN.reflect]] (raise_ a))    after (fun a -> (raise_ a@0))
+TRYING NORMALIZATION OF REIFY: Tm_match ... (match (MonadicLift-Tm_delayed{bool : PURE -> EXN} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed{EXN int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> EXN} int)))
+	|_  -> (MonadicLift-Tm_delayed{int : PURE -> EXN} (op_Division i j)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXN} (op_Equality j 0))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{int : PURE -> EXN} (op_Division i j))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{int : PURE -> EXN} (op_Division i j))    after (fun i j -> (reify (MonadicLift-Tm_delayed{int : PURE -> EXN} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXN} (op_Equality j 0))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> EXN} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (match (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXN} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed-resolved{EXN int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> EXN} int)))
+	|_  -> (MonadicLift-Tm_delayed-resolved{int : PURE -> EXN} (op_Division i j)))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> EXN} (op_Division i@1 j@0))))
+TRYING NORMALIZATION OF REIFY: Tm_app ... ([[EXN.reflect]] (raise_ a))
+RESULT OF NORMALIZATION : before ([[EXN.reflect]] (raise_ a))    after (fun a -> (raise_ a@0))
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.MarkovsPrinciple.fst.hints; ran without hints
+.\MAC.fst(43,17-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#469440  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Addition x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#469520 s#469521)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#469440  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (fun u -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#469520 s#469521)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#470376  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Subtraction x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#470488 s#470489)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#470376  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))    after (fun uu___ -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#470488 s#470489)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_match ... (match (MonadicLift-Tm_name: h{bool : PURE -> STINT} h) with
+	| true  -> let  uu___#53  : unit = (Monadic-Tm_delayed{STINT unit} (incr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT int} let  y#471017  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+let  uu___#55  : unit = (Monadic-Tm_delayed{STINT unit} (decr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+y@1)
+	|_  -> (Monadic-Tm_delayed{STINT int} (op_Addition (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_name: h{bool : PURE -> STINT} h)
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+BEFORE NORMALIZING MONADIC APP : (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))    after (fun h -> (op_Addition (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_name: h{bool : PURE -> STINT} h)    after (fun h -> (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+RESULT OF NORMALIZATION : before (match (MonadicLift-Tm_name: h{bool : PURE -> STINT} h) with
+	| true  -> let  uu___#53  : unit = (Monadic-Tm_delayed-resolved{STINT unit} (incr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT int} let  y#471017  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+let  uu___#55  : unit = (Monadic-Tm_delayed-resolved{STINT unit} (decr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+y@1)
+	|_  -> (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)))    after (fun h -> (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+TRYING NORMALIZATION OF REIFY: Tm_app ... ([[STINT.reflect]] (action_get ()))
+RESULT OF NORMALIZATION : before ([[STINT.reflect]] (action_get ()))    after (fun uu___ -> (action_get ()))
+TRYING NORMALIZATION OF REIFY: Tm_app ... ([[STINT.reflect]] (action_put x))
+RESULT OF NORMALIZATION : before ([[STINT.reflect]] (action_put x))    after (fun x -> (action_put x@0))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#553090  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Addition x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#553177 s#553178)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#553090  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (fun u -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#553177 s#553178)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#141723  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Addition x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#141759 s#141760)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#141723  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (fun u -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#141759 s#141760)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#142429  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Subtraction x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#142476 s#142477)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#142429  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))    after (fun uu___ -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#142476 s#142477)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_match ... (match (MonadicLift-Tm_delayed{bool : PURE -> STEXN} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed{STEXN int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> STEXN} int)))
+	|_  -> (MonadicLift-Tm_delayed{int : PURE -> STEXN} (op_Division i j)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{bool : PURE -> STEXN} (op_Equality j 0))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{int : PURE -> STEXN} (op_Division i j))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{int : PURE -> STEXN} (op_Division i j))    after (fun i j -> (reify (MonadicLift-Tm_delayed{int : PURE -> STEXN} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{bool : PURE -> STEXN} (op_Equality j 0))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> STEXN} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (match (MonadicLift-Tm_delayed-resolved{bool : PURE -> STEXN} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed-resolved{STEXN int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> STEXN} int)))
+	|_  -> (MonadicLift-Tm_delayed-resolved{int : PURE -> STEXN} (op_Division i j)))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> STEXN} (op_Division i@1 j@0))))
+TRYING NORMALIZATION OF REIFY: Tm_match ... (match (MonadicLift-Tm_name: h{bool : PURE -> STINT} h) with
+	| true  -> let  uu___#53  : unit = (Monadic-Tm_delayed{STINT unit} (incr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT int} let  y#143005  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+let  uu___#55  : unit = (Monadic-Tm_delayed{STINT unit} (decr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+y@1)
+	|_  -> (Monadic-Tm_delayed{STINT int} (op_Addition (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_name: h{bool : PURE -> STINT} h)
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+BEFORE NORMALIZING MONADIC APP : (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))    after (fun h -> (op_Addition (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_name: h{bool : PURE -> STINT} h)    after (fun h -> (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+RESULT OF NORMALIZATION : before (match (MonadicLift-Tm_name: h{bool : PURE -> STINT} h) with
+	| true  -> let  uu___#53  : unit = (Monadic-Tm_delayed-resolved{STINT unit} (incr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT int} let  y#143005  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+let  uu___#55  : unit = (Monadic-Tm_delayed-resolved{STINT unit} (decr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+y@1)
+	|_  -> (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)))    after (fun h -> (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+TRYING NORMALIZATION OF REIFY: Tm_app ... ([[STINT.reflect]] (action_get ()))
+RESULT OF NORMALIZATION : before ([[STINT.reflect]] (action_get ()))    after (fun uu___ -> (action_get ()))
+TRYING NORMALIZATION OF REIFY: Tm_app ... ([[STINT.reflect]] (action_put x))
+RESULT OF NORMALIZATION : before ([[STINT.reflect]] (action_put x))    after (fun x -> (action_put x@0))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#469440  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Addition x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#611531 s#611532)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#469440  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (fun u -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#611531 s#611532)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#470376  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Subtraction x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#611701 s#611702)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#470376  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))    after (fun uu___ -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#611701 s#611702)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_match ... (match (MonadicLift-Tm_name: h{bool : PURE -> STINT} h) with
+	| true  -> let  uu___#53  : unit = (Monadic-Tm_delayed{STINT unit} (incr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT int} let  y#471017  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+let  uu___#55  : unit = (Monadic-Tm_delayed{STINT unit} (decr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+y@1)
+	|_  -> (Monadic-Tm_delayed{STINT int} (op_Addition (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_name: h{bool : PURE -> STINT} h)
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+BEFORE NORMALIZING MONADIC APP : (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))    after (fun h -> (op_Addition (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_name: h{bool : PURE -> STINT} h)    after (fun h -> (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+RESULT OF NORMALIZATION : before (match (MonadicLift-Tm_name: h{bool : PURE -> STINT} h) with
+	| true  -> let  uu___#53  : unit = (Monadic-Tm_delayed-resolved{STINT unit} (incr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT int} let  y#471017  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+let  uu___#55  : unit = (Monadic-Tm_delayed-resolved{STINT unit} (decr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+y@1)
+	|_  -> (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)))    after (fun h -> (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+TRYING NORMALIZATION OF REIFY: Tm_app ... ([[STINT.reflect]] (action_get ()))
+RESULT OF NORMALIZATION : before ([[STINT.reflect]] (action_get ()))    after (fun uu___ -> (action_get ()))
+TRYING NORMALIZATION OF REIFY: Tm_app ... ([[STINT.reflect]] (action_put x))
+RESULT OF NORMALIZATION : before ([[STINT.reflect]] (action_put x))    after (fun x -> (action_put x@0))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#553090  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Addition x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#612235 s#612236)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#553090  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (fun u -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#612235 s#612236)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#173953  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Addition x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#173996 s#173997)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#173953  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (fun u -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#173996 s#173997)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_match ... (match (MonadicLift-Tm_delayed{bool : PURE -> STEXN} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed{STEXN int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> STEXN} int)))
+	|_  -> (MonadicLift-Tm_delayed{int : PURE -> STEXN} (op_Division i j)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{bool : PURE -> STEXN} (op_Equality j 0))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{int : PURE -> STEXN} (op_Division i j))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{int : PURE -> STEXN} (op_Division i j))    after (fun i j -> (reify (MonadicLift-Tm_delayed{int : PURE -> STEXN} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{bool : PURE -> STEXN} (op_Equality j 0))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> STEXN} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (match (MonadicLift-Tm_delayed-resolved{bool : PURE -> STEXN} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed-resolved{STEXN int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> STEXN} int)))
+	|_  -> (MonadicLift-Tm_delayed-resolved{int : PURE -> STEXN} (op_Division i j)))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> STEXN} (op_Division i@1 j@0))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#141723  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Addition x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#222541 s#222542)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#141723  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (fun u -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#222541 s#222542)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#142429  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Subtraction x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#222711 s#222712)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#142429  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Subtraction n@0 1)))))    after (fun uu___ -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#222711 s#222712)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Subtraction x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+TRYING NORMALIZATION OF REIFY: Tm_match ... (match (MonadicLift-Tm_name: h{bool : PURE -> STINT} h) with
+	| true  -> let  uu___#53  : unit = (Monadic-Tm_delayed{STINT unit} (incr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT int} let  y#143005  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+let  uu___#55  : unit = (Monadic-Tm_delayed{STINT unit} (decr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+y@1)
+	|_  -> (Monadic-Tm_delayed{STINT int} (op_Addition (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_name: h{bool : PURE -> STINT} h)
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+BEFORE NORMALIZING MONADIC APP : (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))    after (fun h -> (op_Addition (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_name: h{bool : PURE -> STINT} h)    after (fun h -> (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+RESULT OF NORMALIZATION : before (match (MonadicLift-Tm_name: h{bool : PURE -> STINT} h) with
+	| true  -> let  uu___#53  : unit = (Monadic-Tm_delayed-resolved{STINT unit} (incr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT int} let  y#143005  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+let  uu___#55  : unit = (Monadic-Tm_delayed-resolved{STINT unit} (decr (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+y@1)
+	|_  -> (Monadic-Tm_delayed-resolved{STINT int} (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1)))    after (fun h -> (op_Addition (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) 1))
+TRYING NORMALIZATION OF REIFY: Tm_app ... ([[STINT.reflect]] (action_get ()))
+RESULT OF NORMALIZATION : before ([[STINT.reflect]] (action_get ()))    after (fun uu___ -> (action_get ()))
+TRYING NORMALIZATION OF REIFY: Tm_app ... ([[STINT.reflect]] (action_put x))
+RESULT OF NORMALIZATION : before ([[STINT.reflect]] (action_put x))    after (fun x -> (action_put x@0))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STINT unit} let  n#173953  : int = (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition n@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} (Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (reify (Monadic-Tm_meta{STINT unit} (Monadic-Tm_app{STINT unit} (put (MonadicLift-Tm_app{int : PURE -> STINT} (op_Addition x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT int} (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ()))))    after (match (reify (Monadic-Tm_meta{STINT int} (Monadic-Tm_app{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#223245 s#223246)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STINT unit} let  n#173953  : int = (Monadic-Tm_delayed-resolved{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))
+in
+(Monadic-Tm_delayed-resolved{STINT unit} (put (MonadicLift-Tm_delayed-resolved{int : PURE -> STINT} (op_Addition n@0 1)))))    after (fun u -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STINT int} (Monadic-Tm_delayed{STINT int} (get (MonadicLift-Tm_constant{unit : PURE -> STINT} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#223245 s#223246)  -> (reify (Monadic-Tm_delayed{STINT unit} (Monadic-Tm_delayed{STINT unit} (put (MonadicLift-Tm_delayed{int : PURE -> STINT} (op_Addition x@1 1))))) s@0)) <: (tuple2 unit int)) <: (tuple2 unit int))) <: (s0-x:int -> PURE ((tuple2 unit int)))))
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\examples\algorithms\Huffman.fst.hints; ran without hints
+.\FStar.DM4F.ST.fst(18,54-18,55): (Error) Subtyping check failed; expected type Type; got type s (see unknown(0,0-0,0))
+Verified module: FStar.DM4F.ST (4453 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:29: FStar.DM4F.ST.uver] Error 1
+make[3]: *** Waiting for unfinished jobs....
+TRYING NORMALIZATION OF REIFY: Tm_match ... (match (MonadicLift-Tm_delayed{bool : PURE -> EXNST} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed{EXNST int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> EXNST} int)))
+	|_  -> (MonadicLift-Tm_delayed{int : PURE -> EXNST} (op_Division i j)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXNST} (op_Equality j 0))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{int : PURE -> EXNST} (op_Division i j))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{int : PURE -> EXNST} (op_Division i j))    after (fun i j -> (reify (MonadicLift-Tm_delayed{int : PURE -> EXNST} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXNST} (op_Equality j 0))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> EXNST} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (match (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXNST} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed-resolved{EXNST int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> EXNST} int)))
+	|_  -> (MonadicLift-Tm_delayed-resolved{int : PURE -> EXNST} (op_Division i j)))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> EXNST} (op_Division i@1 j@0))))
+TRYING NORMALIZATION OF REIFY: Tm_match ... (match (MonadicLift-Tm_delayed{bool : PURE -> EXNST} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed{EXNST int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> EXNST} int)))
+	|_  -> (MonadicLift-Tm_delayed{int : PURE -> EXNST} (op_Division i j)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXNST} (op_Equality j 0))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (MonadicLift-Tm_delayed-resolved{int : PURE -> EXNST} (op_Division i j))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{int : PURE -> EXNST} (op_Division i j))    after (fun i j -> (reify (MonadicLift-Tm_delayed{int : PURE -> EXNST} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXNST} (op_Equality j 0))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> EXNST} (op_Division i@1 j@0))))
+RESULT OF NORMALIZATION : before (match (MonadicLift-Tm_delayed-resolved{bool : PURE -> EXNST} (op_Equality j 0)) with
+	| true  -> (Monadic-Tm_delayed-resolved{EXNST int} (raise (MonadicLift-Tm_fvar: int{Type : PURE -> EXNST} int)))
+	|_  -> (MonadicLift-Tm_delayed-resolved{int : PURE -> EXNST} (op_Division i j)))    after (fun i j -> (reify (MonadicLift-Tm_delayed-resolved{int : PURE -> EXNST} (op_Division i@1 j@0))))
+.\TestMRef.fst(7,59-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(67,17-69,35): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.IndefiniteDescription.fst.hints; ran without hints
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE a} let  h0#478939  : heap = (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(MonadicLift-Tm_delayed{a : PURE -> STATE} (sel h0@0 r)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE heap} (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE a} (MonadicLift-Tm_delayed-resolved{a : PURE -> STATE} (sel h0@0 r)))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE a} (MonadicLift-Tm_delayed-resolved{a : PURE -> STATE} (sel h0@0 r)))    after ((Mktuple2 (sel x r) s) <: (tuple2 a heap))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE heap} (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ()))))    after (match (reify (Monadic-Tm_meta{STATE heap} (Monadic-Tm_app{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#479323 s#479324)  -> ((Mktuple2 (sel x@1 r) s@0) <: (tuple2 a heap)))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE a} let  h0#478939  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(MonadicLift-Tm_delayed-resolved{a : PURE -> STATE} (sel h0@0 r)))    after (fun r -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STATE heap} (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#479323 s#479324)  -> ((Mktuple2 (sel x@1 r@3) s@0) <: (tuple2 a@4 heap))) <: (tuple2 a@2 heap)) <: (tuple2 a@2 heap))) <: (s0-x:heap -> PURE ((tuple2 a@2 heap)))))
+TRYING NORMALIZATION OF REIFY: Tm_app ... (read )
+RESULT OF NORMALIZATION : before (read )    after (fun  -> (reify (read )))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE unit} let  h0#483112  : heap = (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd h0@0 r v)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE heap} (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE unit} (Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r v)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} (Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r v)))))    after (reify (Monadic-Tm_meta{STATE unit} (Monadic-Tm_app{STATE unit} (put (MonadicLift-Tm_app{heap : PURE -> STATE} (upd x r v))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE heap} (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ()))))    after (match (reify (Monadic-Tm_meta{STATE heap} (Monadic-Tm_app{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#483585 s#483586)  -> (reify (Monadic-Tm_delayed{STATE unit} (Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd x@1 r v))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} let  h0#483112  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r v)))))    after (fun r v -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STATE heap} (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#483585 s#483586)  -> (reify (Monadic-Tm_delayed{STATE unit} (Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd x@1 r@4 v@3))))) s@0)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) <: (s0-x:heap -> PURE ((tuple2 unit heap)))))
+TRYING NORMALIZATION OF REIFY: Tm_app ... (write )
+RESULT OF NORMALIZATION : before (write )    after (fun  -> (reify (write )))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE unit} let  x#576050  : ((fun r -> int) r) = (Monadic-Tm_delayed{STATE ((fun r -> int) r)} (read (MonadicLift-Tm_name: r{(ref ((fun r -> int) r)) : PURE -> STATE} r)))
+in
+(Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_delayed{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE ((fun r -> int) r)} (Monadic-Tm_delayed-resolved{STATE ((fun r -> int) r)} (read (MonadicLift-Tm_name: r{(ref ((fun r -> int) r)) : PURE -> STATE} r))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE unit} (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_delayed-resolved{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_delayed-resolved{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x@0 1)))))    after (reify (Monadic-Tm_meta{STATE unit} (Monadic-Tm_app{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_app{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE ((fun r -> int) r)} (Monadic-Tm_delayed-resolved{STATE ((fun r -> int) r)} (read (MonadicLift-Tm_name: r{(ref ((fun r -> int) r)) : PURE -> STATE} r))))    after (match (reify (Monadic-Tm_meta{STATE int} (Monadic-Tm_app{STATE int} (read (MonadicLift-Tm_name: r{(ref ((fun r -> int) r)) : PURE -> STATE} r)))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#576312 s#576313)  -> (reify (Monadic-Tm_delayed{STATE unit} (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_delayed{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} let  x#576050  : ((fun r -> int) r) = (Monadic-Tm_delayed-resolved{STATE ((fun r -> int) r)} (read (MonadicLift-Tm_name: r{(ref ((fun r -> int) r)) : PURE -> STATE} r)))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_delayed-resolved{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x@0 1)))))    after (fun r -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STATE int} (Monadic-Tm_delayed{STATE int} (read (MonadicLift-Tm_bvar: r@1{(ref ((fun r -> int) r@1)) : PURE -> STATE} r@1)))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#576312 s#576313)  -> (reify (Monadic-Tm_delayed{STATE unit} (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_bvar: r@3{(ref ((fun r x -> int) r@3 x@0)) : PURE -> STATE} r@3) (MonadicLift-Tm_delayed{((fun r x -> int) r@3 x@0) : PURE -> STATE} (op_Addition x@1 1))))) s@0)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) <: (s0-x:heap -> PURE ((tuple2 unit heap)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))
+BEFORE NORMALIZING MONADIC APP : (STATE_bind_elab Type unit Tm_unknown (STATE_return_elab Type ((fun h0 r -> int) h0 r)) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab (ref ((fun h0 r -> int) h0 r)) unit Tm_unknown (STATE_return_elab (ref ((fun h0 r -> int) h0 r)) r) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab ((fun h0 r -> int) h0 r) unit Tm_unknown (STATE_return_elab ((fun h0 r -> int) h0 r) 42) Tm_unknown (fun monadic_app_var -> (write monadic_app_var@1 monadic_app_var@0)))))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))
+BEFORE NORMALIZING MONADIC APP : (STATE_bind_elab Type unit Tm_unknown (STATE_return_elab Type ((fun h0 r -> int) h0 r)) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab (ref ((fun h0 r -> int) h0 r)) unit Tm_unknown (STATE_return_elab (ref ((fun h0 r -> int) h0 r)) r) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab ((fun h0 r -> int) h0 r) unit Tm_unknown (STATE_return_elab ((fun h0 r -> int) h0 r) 42) Tm_unknown (fun monadic_app_var -> (write monadic_app_var@1 monadic_app_var@0)))))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))
+BEFORE NORMALIZING MONADIC APP : (STATE_bind_elab Type unit Tm_unknown (STATE_return_elab Type ((fun h0 r -> int) h0 r)) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab (ref ((fun h0 r -> int) h0 r)) unit Tm_unknown (STATE_return_elab (ref ((fun h0 r -> int) h0 r)) r) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab ((fun h0 r -> int) h0 r) unit Tm_unknown (STATE_return_elab ((fun h0 r -> int) h0 r) 42) Tm_unknown (fun monadic_app_var -> (write monadic_app_var@1 monadic_app_var@0)))))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))
+BEFORE NORMALIZING MONADIC APP : (STATE_bind_elab Type unit Tm_unknown (STATE_return_elab Type ((fun h0 r -> int) h0 r)) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab (ref ((fun h0 r -> int) h0 r)) unit Tm_unknown (STATE_return_elab (ref ((fun h0 r -> int) h0 r)) r) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab ((fun h0 r -> int) h0 r) unit Tm_unknown (STATE_return_elab ((fun h0 r -> int) h0 r) 42) Tm_unknown (fun monadic_app_var -> (write monadic_app_var@1 monadic_app_var@0)))))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))
+BEFORE NORMALIZING MONADIC APP : (STATE_bind_elab Type unit Tm_unknown (STATE_return_elab Type ((fun h0 r -> int) h0 r)) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab (ref ((fun h0 r -> int) h0 r)) unit Tm_unknown (STATE_return_elab (ref ((fun h0 r -> int) h0 r)) r) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab ((fun h0 r -> int) h0 r) unit Tm_unknown (STATE_return_elab ((fun h0 r -> int) h0 r) 42) Tm_unknown (fun monadic_app_var -> (write monadic_app_var@1 monadic_app_var@0)))))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))
+BEFORE NORMALIZING MONADIC APP : (STATE_bind_elab Type unit Tm_unknown (STATE_return_elab Type ((fun h0 r -> int) h0 r)) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab (ref ((fun h0 r -> int) h0 r)) unit Tm_unknown (STATE_return_elab (ref ((fun h0 r -> int) h0 r)) r) Tm_unknown (fun monadic_app_var -> (STATE_bind_elab ((fun h0 r -> int) h0 r) unit Tm_unknown (STATE_return_elab ((fun h0 r -> int) h0 r) 42) Tm_unknown (fun monadic_app_var -> (write monadic_app_var@1 monadic_app_var@0)))))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))    after (fun p -> (l_and (contains_a_well_typed h0 r) (l_Forall (fun a -> (l_Forall (fun n1 -> (l_imp (l_and (contains_a_well_typed h0 r) (l_and (l_and (contains_a_well_typed h0 r) (contains_a_well_typed n1@0 r)) (eq2 n1@0 (upd h0 r 42)))) (l_imp (eq2 (Mktuple2 a@1 n1@0) (reify (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42))) h0)) (l_Forall (fun y -> (l_imp (eq2 y@0 (Mktuple2 a@2 n1@1)) (l_Forall (fun x -> (l_imp (eq2 x@0 ((((((((Monadic-Tm_delayed{STATE unit} let  h0#577055  : heap = (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (snd ((((((((Monadic-Tm_delayed{STATE unit} let  h0#577072  : heap = (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (l_imp (contains_a_well_typed h0 r) (contains_a_well_typed h0 r)) (l_Forall (fun y -> (l_imp (eq2 y@0 r) (l_Forall (fun x -> (l_imp (eq2 x@0 (upd h0 r 42)) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (eq2 (snd ((((((((Monadic-Tm_delayed{STATE unit} let  h0#577093  : heap = (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (eq2 (snd ((((((((Monadic-Tm_delayed{STATE unit} let  h0#577109  : heap = (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) (l_Forall (fun x -> (l_imp (l_and (eq2 (snd ((((((((Monadic-Tm_delayed{STATE unit} let  h0#577125  : heap = (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) l_True) (l_imp (eq2 x@0 (_assert (eq2 (snd ((((((((Monadic-Tm_delayed{STATE unit} let  h0#577140  : heap = (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) ())) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (p@14 y@0))))))))))))))))))))))))))))))))))))))))))))))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))    after (fun p -> (l_and (contains_a_well_typed h0 r) (l_Forall (fun a -> (l_Forall (fun n1 -> (l_imp (l_and (contains_a_well_typed h0 r) (l_and (l_and (contains_a_well_typed h0 r) (contains_a_well_typed n1@0 r)) (eq2 n1@0 (upd h0 r 42)))) (l_imp (eq2 (Mktuple2 a@1 n1@0) (reify (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42))) h0)) (l_Forall (fun y -> (l_imp (eq2 y@0 (Mktuple2 a@2 n1@1)) (l_Forall (fun x -> (l_imp (eq2 x@0 ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577055  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577072  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (l_imp (contains_a_well_typed h0 r) (contains_a_well_typed h0 r)) (l_Forall (fun y -> (l_imp (eq2 y@0 r) (l_Forall (fun x -> (l_imp (eq2 x@0 (upd h0 r 42)) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577093  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577109  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) (l_Forall (fun x -> (l_imp (l_and (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577125  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) l_True) (l_imp (eq2 x@0 (_assert (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577140  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) ())) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (p@14 y@0))))))))))))))))))))))))))))))))))))))))))))))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))    after (fun p -> (l_and (contains_a_well_typed h0 r) (l_Forall (fun a -> (l_Forall (fun n1 -> (l_imp (l_and (contains_a_well_typed h0 r) (l_and (l_and (contains_a_well_typed h0 r) (contains_a_well_typed n1@0 r)) (eq2 n1@0 (upd h0 r 42)))) (l_imp (eq2 (Mktuple2 a@1 n1@0) (reify (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42))) h0)) (l_Forall (fun y -> (l_imp (eq2 y@0 (Mktuple2 a@2 n1@1)) (l_Forall (fun x -> (l_imp (eq2 x@0 ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577055  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577072  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (l_imp (contains_a_well_typed h0 r) (contains_a_well_typed h0 r)) (l_Forall (fun y -> (l_imp (eq2 y@0 r) (l_Forall (fun x -> (l_imp (eq2 x@0 (upd h0 r 42)) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577093  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577109  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) (l_Forall (fun x -> (l_imp (l_and (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577125  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) l_True) (l_imp (eq2 x@0 (_assert (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577140  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) ())) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (p@14 y@0))))))))))))))))))))))))))))))))))))))))))))))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))    after (fun p -> (l_and (contains_a_well_typed h0 r) (l_Forall (fun a -> (l_Forall (fun n1 -> (l_imp (l_and (contains_a_well_typed h0 r) (l_and (l_and (contains_a_well_typed h0 r) (contains_a_well_typed n1@0 r)) (eq2 n1@0 (upd h0 r 42)))) (l_imp (eq2 (Mktuple2 a@1 n1@0) (reify (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42))) h0)) (l_Forall (fun y -> (l_imp (eq2 y@0 (Mktuple2 a@2 n1@1)) (l_Forall (fun x -> (l_imp (eq2 x@0 ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577055  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577072  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (l_imp (contains_a_well_typed h0 r) (contains_a_well_typed h0 r)) (l_Forall (fun y -> (l_imp (eq2 y@0 r) (l_Forall (fun x -> (l_imp (eq2 x@0 (upd h0 r 42)) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577093  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577109  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) (l_Forall (fun x -> (l_imp (l_and (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577125  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) l_True) (l_imp (eq2 x@0 (_assert (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577140  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) ())) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (p@14 y@0))))))))))))))))))))))))))))))))))))))))))))))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))    after (fun p -> (l_and (contains_a_well_typed h0 r) (l_Forall (fun a -> (l_Forall (fun n1 -> (l_imp (l_and (contains_a_well_typed h0 r) (l_and (l_and (contains_a_well_typed h0 r) (contains_a_well_typed n1@0 r)) (eq2 n1@0 (upd h0 r 42)))) (l_imp (eq2 (Mktuple2 a@1 n1@0) (reify (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42))) h0)) (l_Forall (fun y -> (l_imp (eq2 y@0 (Mktuple2 a@2 n1@1)) (l_Forall (fun x -> (l_imp (eq2 x@0 ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577055  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577072  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (l_imp (contains_a_well_typed h0 r) (contains_a_well_typed h0 r)) (l_Forall (fun y -> (l_imp (eq2 y@0 r) (l_Forall (fun x -> (l_imp (eq2 x@0 (upd h0 r 42)) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577093  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577109  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) (l_Forall (fun x -> (l_imp (l_and (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577125  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) l_True) (l_imp (eq2 x@0 (_assert (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577140  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) ())) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (p@14 y@0))))))))))))))))))))))))))))))))))))))))))))))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42)))    after (fun p -> (l_and (contains_a_well_typed h0 r) (l_Forall (fun a -> (l_Forall (fun n1 -> (l_imp (l_and (contains_a_well_typed h0 r) (l_and (l_and (contains_a_well_typed h0 r) (contains_a_well_typed n1@0 r)) (eq2 n1@0 (upd h0 r 42)))) (l_imp (eq2 (Mktuple2 a@1 n1@0) (reify (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun h0 r -> int) h0 r)) : PURE -> STATE} r) (MonadicLift-Tm_constant{((fun h0 r -> int) h0 r) : PURE -> STATE} 42))) h0)) (l_Forall (fun y -> (l_imp (eq2 y@0 (Mktuple2 a@2 n1@1)) (l_Forall (fun x -> (l_imp (eq2 x@0 ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577055  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577072  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (l_imp (contains_a_well_typed h0 r) (contains_a_well_typed h0 r)) (l_Forall (fun y -> (l_imp (eq2 y@0 r) (l_Forall (fun x -> (l_imp (eq2 x@0 (upd h0 r 42)) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_Forall (fun x -> (l_imp (eq2 x@0 (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577093  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42))) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (l_and (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577109  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) (l_Forall (fun x -> (l_imp (l_and (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577125  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) l_True) (l_imp (eq2 x@0 (_assert (eq2 (snd ((((((((Monadic-Tm_delayed-resolved{STATE unit} let  h0#577140  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r 42))))) h0) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) (upd h0 r 42)) ())) (l_Forall (fun y -> (l_imp (eq2 y@0 x@1) (p@14 y@0))))))))))))))))))))))))))))))))))))))))))))))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE a} let  h0#478939  : heap = (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(MonadicLift-Tm_delayed{a : PURE -> STATE} (sel h0@0 r)))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE heap} (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE a} (MonadicLift-Tm_delayed-resolved{a : PURE -> STATE} (sel h0@0 r)))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE a} (MonadicLift-Tm_delayed-resolved{a : PURE -> STATE} (sel h0@0 r)))    after ((Mktuple2 (sel x r) s) <: (tuple2 a heap))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE heap} (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ()))))    after (match (reify (Monadic-Tm_meta{STATE heap} (Monadic-Tm_app{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#642501 s#642502)  -> ((Mktuple2 (sel x@1 r) s@0) <: (tuple2 a heap)))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE a} let  h0#478939  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(MonadicLift-Tm_delayed-resolved{a : PURE -> STATE} (sel h0@0 r)))    after (fun r -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STATE heap} (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#642501 s#642502)  -> ((Mktuple2 (sel x@1 r@3) s@0) <: (tuple2 a@4 heap))) <: (tuple2 a@2 heap)) <: (tuple2 a@2 heap))) <: (s0-x:heap -> PURE ((tuple2 a@2 heap)))))
+TRYING NORMALIZATION OF REIFY: Tm_app ... (read )
+RESULT OF NORMALIZATION : before (read )    after (fun  -> (reify (read )))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE unit} let  h0#483112  : heap = (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd h0@0 r v)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE heap} (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ()))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE unit} (Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r v)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} (Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r v)))))    after (reify (Monadic-Tm_meta{STATE unit} (Monadic-Tm_app{STATE unit} (put (MonadicLift-Tm_app{heap : PURE -> STATE} (upd x r v))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE heap} (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ()))))    after (match (reify (Monadic-Tm_meta{STATE heap} (Monadic-Tm_app{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#643042 s#643043)  -> (reify (Monadic-Tm_delayed{STATE unit} (Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd x@1 r v))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} let  h0#483112  : heap = (Monadic-Tm_delayed-resolved{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (put (MonadicLift-Tm_delayed-resolved{heap : PURE -> STATE} (upd h0@0 r v)))))    after (fun r v -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STATE heap} (Monadic-Tm_delayed{STATE heap} (get (MonadicLift-Tm_constant{unit : PURE -> STATE} ())))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#643042 s#643043)  -> (reify (Monadic-Tm_delayed{STATE unit} (Monadic-Tm_delayed{STATE unit} (put (MonadicLift-Tm_delayed{heap : PURE -> STATE} (upd x@1 r@4 v@3))))) s@0)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) <: (s0-x:heap -> PURE ((tuple2 unit heap)))))
+TRYING NORMALIZATION OF REIFY: Tm_app ... (write )
+RESULT OF NORMALIZATION : before (write )    after (fun  -> (reify (write )))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed{STATE unit} let  x#576050  : ((fun r -> int) r) = (Monadic-Tm_delayed{STATE ((fun r -> int) r)} (read (MonadicLift-Tm_name: r{(ref ((fun r -> int) r)) : PURE -> STATE} r)))
+in
+(Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_delayed{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x@0 1)))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE ((fun r -> int) r)} (Monadic-Tm_delayed-resolved{STATE ((fun r -> int) r)} (read (MonadicLift-Tm_name: r{(ref ((fun r -> int) r)) : PURE -> STATE} r))))
+TRYING NORMALIZATION OF REIFY: Tm_meta ... (Monadic-Tm_delayed-resolved{STATE unit} (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_delayed-resolved{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x@0 1)))))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} (Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_delayed-resolved{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x@0 1)))))    after (reify (Monadic-Tm_meta{STATE unit} (Monadic-Tm_app{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_app{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x 1))))) s)
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE ((fun r -> int) r)} (Monadic-Tm_delayed-resolved{STATE ((fun r -> int) r)} (read (MonadicLift-Tm_name: r{(ref ((fun r -> int) r)) : PURE -> STATE} r))))    after (match (reify (Monadic-Tm_meta{STATE int} (Monadic-Tm_app{STATE int} (read (MonadicLift-Tm_name: r{(ref ((fun r -> int) r)) : PURE -> STATE} r)))) s0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#643598 s#643599)  -> (reify (Monadic-Tm_delayed{STATE unit} (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_delayed{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x@1 1))))) s@0))
+RESULT OF NORMALIZATION : before (Monadic-Tm_delayed-resolved{STATE unit} let  x#576050  : ((fun r -> int) r) = (Monadic-Tm_delayed-resolved{STATE ((fun r -> int) r)} (read (MonadicLift-Tm_name: r{(ref ((fun r -> int) r)) : PURE -> STATE} r)))
+in
+(Monadic-Tm_delayed-resolved{STATE unit} (write (MonadicLift-Tm_name: r{(ref ((fun r x -> int) r x@0)) : PURE -> STATE} r) (MonadicLift-Tm_delayed-resolved{((fun r x -> int) r x@0) : PURE -> STATE} (op_Addition x@0 1)))))    after (fun r -> ((fun s0 -> (((match (reify (Monadic-Tm_delayed{STATE int} (Monadic-Tm_delayed{STATE int} (read (MonadicLift-Tm_bvar: r@1{(ref ((fun r -> int) r@1)) : PURE -> STATE} r@1)))) s0@0) with
+	| (Mktuple2 #.uu___#498 #.uu___#499 x#643598 s#643599)  -> (reify (Monadic-Tm_delayed{STATE unit} (Monadic-Tm_delayed{STATE unit} (write (MonadicLift-Tm_bvar: r@3{(ref ((fun r x -> int) r@3 x@0)) : PURE -> STATE} r@3) (MonadicLift-Tm_delayed{((fun r x -> int) r@3 x@0) : PURE -> STATE} (op_Addition x@1 1))))) s@0)) <: (tuple2 unit heap)) <: (tuple2 unit heap))) <: (s0-x:heap -> PURE ((tuple2 unit heap)))))
+.\FStar.DM4F.Heap.ST.fst(211,68-211,74): (Error) assertion failed (see .\FStar.DM4F.Heap.ST.fst(211,75-211,136))
+Verified module: FStar.DM4F.Heap.ST (34470 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:29: FStar.DM4F.Heap.ST.uver] Error 1
+make[2]: *** [Makefile:48: dm4free.uall] Error 2
+make[2]: *** Waiting for unfinished jobs....
+.\Ex10a.fst(25,16-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex07c.fst(174,67-203,48): (Error) Unknown assertion failed
+Verified module: Ex07c (32310 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:39: verify-Ex07c.fst] Error 1
+make[3]: *** Waiting for unfinished jobs....
+.\Ex12a.Cap.fst(18,70-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(25,16-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.StrongExcludedMiddle.fst.hints; ran without hints
+.\Ex12a.Cap.fst(16,70-18,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(5,13-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(20,27-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(52,35-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex07c.fst(201,67-241,49): (Error) Unknown assertion failed
+Verified module: Ex07c (35492 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:42: verify-Ex07c.fst] Error 1
+make[3]: *** Waiting for unfinished jobs....
+.\Ex12b.RPC.fst(122,14-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+make[2]: *** [Makefile:48: ../doc/tutorial/code/exercises.uall] Error 2
+make[2]: *** [Makefile:48: ../doc/tutorial/code/solutions.uall] Error 2
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Sys_error("Broken pipe")
+make[4]: *** [Makefile:68: Crypto.Symmetric.Poly1305.fst-ver] Error 1
+make[4]: *** Waiting for unfinished jobs....
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Sys_error("Invalid argument")
+make[4]: *** [Makefile:68: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1.fst-ver] Error 1
+.\Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4.fst(50,60-69,5): (Error) Unknown assertion failed
+Verified module: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4 (100846 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:68: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4.fst-ver] Error 1
+.\Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3.fst(240,93-274,28): (Error) Unknown assertion failed
+Verified module: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3 (103442 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:68: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3.fst-ver] Error 1
+.\Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2.fst(38,0-51,41): (Error) Unknown assertion failed
+Verified module: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2 (127119 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:68: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2.fst-ver] Error 1
+.\Crypto.Symmetric.GCM.fst(92,33-97,13): (Error) Unknown assertion failed
+Verified module: Crypto.Symmetric.GCM (124287 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:68: Crypto.Symmetric.GCM.fst-ver] Error 1
+.\Buffer.Utils.fst(108,33-147,7): (Error) Unknown assertion failed
+Verified module: Buffer.Utils (152946 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:68: Buffer.Utils.fst-ver] Error 1
+.\Crypto.Symmetric.Chacha20.fst(193,73-200,14): (Error) Unknown assertion failed
+Verified module: Crypto.Symmetric.Chacha20 (217727 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:68: Crypto.Symmetric.Chacha20.fst-ver] Error 1
+.\Crypto.AEAD.Encoding.fst(220,121-222,48): (Error) Unknown assertion failed
+Verified module: Crypto.AEAD.Encoding (66922 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:68: Crypto.AEAD.Encoding.fst-ver] Error 1
+.\Crypto.Symmetric.AES.fst(385,68-391,5): (Error) Unknown assertion failed
+Verified module: Crypto.Symmetric.AES (279796 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:68: Crypto.Symmetric.AES.fst-ver] Error 1
+.\Crypto.AEAD.Invariant.fst(105,17-124,17): (Error) Unknown assertion failed
+Verified module: Crypto.AEAD.Invariant (113446 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:68: Crypto.AEAD.Invariant.fst-ver] Error 1
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\examples\low-level\crypto\Crypto.Test.fst.hints; ran without hints
+.\Crypto.Test.fst(241,14-244,108): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: *** [Makefile:39: uall] Error 2
+make[2]: *** [Makefile:48: low-level.uall] Error 2
+make[1]: *** [Makefile:264: uexamples] Error 2
+make: *** [Makefile:241: utest] Error 2
