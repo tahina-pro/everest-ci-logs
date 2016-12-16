@@ -1,0 +1,833 @@
+--2016-12-16 12:23:51--  https://github.com/Z3Prover/z3/releases/download/z3-4.5.0/z3-4.5.0-x64-win.zip
+Resolving github.com (github.com)... 192.30.253.113, 192.30.253.112
+Connecting to github.com (github.com)|192.30.253.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-cloud.s3.amazonaws.com/releases/32944298/15544432-ab55-11e6-92c0-c0729fa27eee.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20161216%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20161216T202353Z&X-Amz-Expires=300&X-Amz-Signature=3402021b65f157eac0370ab19a087b43840ef2410851cb45e9e8b1bb0b768e31&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dz3-4.5.0-x64-win.zip&response-content-type=application%2Foctet-stream [following]
+--2016-12-16 12:23:52--  https://github-cloud.s3.amazonaws.com/releases/32944298/15544432-ab55-11e6-92c0-c0729fa27eee.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20161216%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20161216T202353Z&X-Amz-Expires=300&X-Amz-Signature=3402021b65f157eac0370ab19a087b43840ef2410851cb45e9e8b1bb0b768e31&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dz3-4.5.0-x64-win.zip&response-content-type=application%2Foctet-stream
+Resolving github-cloud.s3.amazonaws.com (github-cloud.s3.amazonaws.com)... 52.216.80.128
+Connecting to github-cloud.s3.amazonaws.com (github-cloud.s3.amazonaws.com)|52.216.80.128|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10928751 (10M) [application/octet-stream]
+Saving to: ‘z3-4.5.0-x64-win.zip’
+
+0K .......... .......... .......... .......... ..........  0%  209K 51s
+50K .......... .......... .......... .......... ..........  0%  311K 42s
+100K .......... .......... .......... .......... ..........  1%  308K 39s
+150K .......... .......... .......... .......... ..........  1%  615K 34s
+200K .......... .......... .......... .......... ..........  2%  624K 30s
+250K .......... .......... .......... .......... ..........  2%  622K 28s
+300K .......... .......... .......... .......... ..........  3%  623K 26s
+350K .......... .......... .......... .......... ..........  3%  621K 25s
+400K .......... .......... .......... .......... ..........  4%  629K 24s
+450K .......... .......... .......... .......... ..........  4%  629K 23s
+500K .......... .......... .......... .......... ..........  5% 46.9M 21s
+550K .......... .......... .......... .......... ..........  5%  620K 20s
+600K .......... .......... .......... .......... ..........  6% 17.2M 19s
+650K .......... .......... .......... .......... ..........  6%  651K 18s
+700K .......... .......... .......... .......... ..........  7% 28.5M 17s
+750K .......... .......... .......... .......... ..........  7%  640K 17s
+800K .......... .......... .......... .......... ..........  7% 41.4M 16s
+850K .......... .......... .......... .......... ..........  8% 54.0M 15s
+900K .......... .......... .......... .......... ..........  8%  639K 15s
+950K .......... .......... .......... .......... ..........  9% 50.2M 14s
+1000K .......... .......... .......... .......... ..........  9%  637K 14s
+1050K .......... .......... .......... .......... .......... 10% 51.6M 13s
+1100K .......... .......... .......... .......... .......... 10% 52.4M 13s
+1150K .......... .......... .......... .......... .......... 11%  638K 13s
+1200K .......... .......... .......... .......... .......... 11% 50.4M 12s
+1250K .......... .......... .......... .......... .......... 12% 51.2M 12s
+1300K .......... .......... .......... .......... .......... 12% 58.0M 11s
+1350K .......... .......... .......... .......... .......... 13%  643K 11s
+1400K .......... .......... .......... .......... .......... 13% 46.8M 11s
+1450K .......... .......... .......... .......... .......... 14% 33.5M 10s
+1500K .......... .......... .......... .......... .......... 14% 46.3M 10s
+1550K .......... .......... .......... .......... .......... 14%  648K 10s
+1600K .......... .......... .......... .......... .......... 15% 51.3M 10s
+1650K .......... .......... .......... .......... .......... 15% 52.1M 9s
+1700K .......... .......... .......... .......... .......... 16% 61.0M 9s
+1750K .......... .......... .......... .......... .......... 16%  649K 9s
+1800K .......... .......... .......... .......... .......... 17% 45.3M 9s
+1850K .......... .......... .......... .......... .......... 17% 45.2M 9s
+1900K .......... .......... .......... .......... .......... 18% 51.0M 8s
+1950K .......... .......... .......... .......... .......... 18%  646K 8s
+2000K .......... .......... .......... .......... .......... 19% 52.7M 8s
+2050K .......... .......... .......... .......... .......... 19% 48.7M 8s
+2100K .......... .......... .......... .......... .......... 20% 51.6M 8s
+2150K .......... .......... .......... .......... .......... 20%  649K 8s
+2200K .......... .......... .......... .......... .......... 21% 50.6M 8s
+2250K .......... .......... .......... .......... .......... 21% 52.9M 7s
+2300K .......... .......... .......... .......... .......... 22% 50.7M 7s
+2350K .......... .......... .......... .......... .......... 22%  647K 7s
+2400K .......... .......... .......... .......... .......... 22% 46.1M 7s
+2450K .......... .......... .......... .......... .......... 23% 53.0M 7s
+2500K .......... .......... .......... .......... .......... 23% 52.0M 7s
+2550K .......... .......... .......... .......... .......... 24% 1.13M 7s
+2600K .......... .......... .......... .......... .......... 24% 1.42M 7s
+2650K .......... .......... .......... .......... .......... 25% 53.6M 6s
+2700K .......... .......... .......... .......... .......... 25% 53.7M 6s
+2750K .......... .......... .......... .......... .......... 26% 1.12M 6s
+2800K .......... .......... .......... .......... .......... 26% 1.35M 6s
+2850K .......... .......... .......... .......... .......... 27% 15.8M 6s
+2900K .......... .......... .......... .......... .......... 27% 39.7M 6s
+2950K .......... .......... .......... .......... .......... 28% 1.24M 6s
+3000K .......... .......... .......... .......... .......... 28% 1.36M 6s
+3050K .......... .......... .......... .......... .......... 29% 14.3M 6s
+3100K .......... .......... .......... .......... .......... 29% 39.2M 6s
+3150K .......... .......... .......... .......... .......... 29% 42.5M 5s
+3200K .......... .......... .......... .......... .......... 30%  674K 6s
+3250K .......... .......... .......... .......... .......... 30% 14.2M 5s
+3300K .......... .......... .......... .......... .......... 31% 41.5M 5s
+3350K .......... .......... .......... .......... .......... 31% 47.7M 5s
+3400K .......... .......... .......... .......... .......... 32%  678K 5s
+3450K .......... .......... .......... .......... .......... 32% 14.3M 5s
+3500K .......... .......... .......... .......... .......... 33% 36.3M 5s
+3550K .......... .......... .......... .......... .......... 33% 47.7M 5s
+3600K .......... .......... .......... .......... .......... 34%  676K 5s
+3650K .......... .......... .......... .......... .......... 34% 13.4M 5s
+3700K .......... .......... .......... .......... .......... 35% 37.1M 5s
+3750K .......... .......... .......... .......... .......... 35% 42.8M 5s
+3800K .......... .......... .......... .......... .......... 36%  673K 5s
+3850K .......... .......... .......... .......... .......... 36% 15.2M 5s
+3900K .......... .......... .......... .......... .......... 37% 19.0M 5s
+3950K .......... .......... .......... .......... .......... 37% 39.1M 4s
+4000K .......... .......... .......... .......... .......... 37%  685K 4s
+4050K .......... .......... .......... .......... .......... 38% 15.5M 4s
+4100K .......... .......... .......... .......... .......... 38% 18.1M 4s
+4150K .......... .......... .......... .......... .......... 39% 37.3M 4s
+4200K .......... .......... .......... .......... .......... 39%  684K 4s
+4250K .......... .......... .......... .......... .......... 40% 24.1M 4s
+4300K .......... .......... .......... .......... .......... 40% 17.4M 4s
+4350K .......... .......... .......... .......... .......... 41% 14.9M 4s
+4400K .......... .......... .......... .......... .......... 41% 1.28M 4s
+4450K .......... .......... .......... .......... .......... 42% 1.33M 4s
+4500K .......... .......... .......... .......... .......... 42% 11.3M 4s
+4550K .......... .......... .......... .......... .......... 43% 37.4M 4s
+4600K .......... .......... .......... .......... .......... 43% 1.28M 4s
+4650K .......... .......... .......... .......... .......... 44% 1.33M 4s
+4700K .......... .......... .......... .......... .......... 44% 8.34M 4s
+4750K .......... .......... .......... .......... .......... 44% 51.0M 4s
+4800K .......... .......... .......... .......... .......... 45% 1.34M 4s
+4850K .......... .......... .......... .......... .......... 45% 1.30M 4s
+4900K .......... .......... .......... .......... .......... 46% 9.19M 4s
+4950K .......... .......... .......... .......... .......... 46% 49.7M 3s
+5000K .......... .......... .......... .......... .......... 47% 51.6M 3s
+5050K .......... .......... .......... .......... .......... 47%  686K 3s
+5100K .......... .......... .......... .......... .......... 48% 30.2M 3s
+5150K .......... .......... .......... .......... .......... 48% 11.1M 3s
+5200K .......... .......... .......... .......... .......... 49% 46.1M 3s
+5250K .......... .......... .......... .......... .......... 49%  702K 3s
+5300K .......... .......... .......... .......... .......... 50% 14.6M 3s
+5350K .......... .......... .......... .......... .......... 50% 11.3M 3s
+5400K .......... .......... .......... .......... .......... 51% 50.2M 3s
+5450K .......... .......... .......... .......... .......... 51%  693K 3s
+5500K .......... .......... .......... .......... .......... 52% 18.6M 3s
+5550K .......... .......... .......... .......... .......... 52% 11.5M 3s
+5600K .......... .......... .......... .......... .......... 52% 50.5M 3s
+5650K .......... .......... .......... .......... .......... 53%  689K 3s
+5700K .......... .......... .......... .......... .......... 53% 16.2M 3s
+5750K .......... .......... .......... .......... .......... 54% 13.2M 3s
+5800K .......... .......... .......... .......... .......... 54% 25.2M 3s
+5850K .......... .......... .......... .......... .......... 55%  699K 3s
+5900K .......... .......... .......... .......... .......... 55% 14.2M 3s
+5950K .......... .......... .......... .......... .......... 56% 13.8M 3s
+6000K .......... .......... .......... .......... .......... 56% 18.8M 3s
+6050K .......... .......... .......... .......... .......... 57% 1.33M 3s
+6100K .......... .......... .......... .......... .......... 57% 1.37M 3s
+6150K .......... .......... .......... .......... .......... 58% 10.1M 3s
+6200K .......... .......... .......... .......... .......... 58% 35.4M 3s
+6250K .......... .......... .......... .......... .......... 59% 1.29M 2s
+6300K .......... .......... .......... .......... .......... 59% 1.30M 2s
+6350K .......... .......... .......... .......... .......... 59% 13.4M 2s
+6400K .......... .......... .......... .......... .......... 60% 10.8M 2s
+6450K .......... .......... .......... .......... .......... 60% 1.38M 2s
+6500K .......... .......... .......... .......... .......... 61% 1.33M 2s
+6550K .......... .......... .......... .......... .......... 61% 13.4M 2s
+6600K .......... .......... .......... .......... .......... 62% 22.5M 2s
+6650K .......... .......... .......... .......... .......... 62% 1.30M 2s
+6700K .......... .......... .......... .......... .......... 63% 1.34M 2s
+6750K .......... .......... .......... .......... .......... 63% 10.7M 2s
+6800K .......... .......... .......... .......... .......... 64% 16.3M 2s
+6850K .......... .......... .......... .......... .......... 64% 4.60M 2s
+6900K .......... .......... .......... .......... .......... 65%  833K 2s
+6950K .......... .......... .......... .......... .......... 65% 12.7M 2s
+7000K .......... .......... .......... .......... .......... 66% 7.67M 2s
+7050K .......... .......... .......... .......... .......... 66% 3.60M 2s
+7100K .......... .......... .......... .......... .......... 66%  898K 2s
+7150K .......... .......... .......... .......... .......... 67% 10.3M 2s
+7200K .......... .......... .......... .......... .......... 67% 7.73M 2s
+7250K .......... .......... .......... .......... .......... 68% 7.64M 2s
+7300K .......... .......... .......... .......... .......... 68%  791K 2s
+7350K .......... .......... .......... .......... .......... 69% 10.1M 2s
+7400K .......... .......... .......... .......... .......... 69% 9.03M 2s
+7450K .......... .......... .......... .......... .......... 70% 7.26M 2s
+7500K .......... .......... .......... .......... .......... 70%  792K 2s
+7550K .......... .......... .......... .......... .......... 71% 10.4M 2s
+7600K .......... .......... .......... .......... .......... 71% 9.08M 2s
+7650K .......... .......... .......... .......... .......... 72% 28.6M 2s
+7700K .......... .......... .......... .......... .......... 72% 1.36M 2s
+7750K .......... .......... .......... .......... .......... 73% 1.35M 2s
+7800K .......... .......... .......... .......... .......... 73% 16.4M 2s
+7850K .......... .......... .......... .......... .......... 74% 9.78M 1s
+7900K .......... .......... .......... .......... .......... 74% 1.36M 1s
+7950K .......... .......... .......... .......... .......... 74% 1.32M 1s
+8000K .......... .......... .......... .......... .......... 75% 14.5M 1s
+8050K .......... .......... .......... .......... .......... 75% 12.2M 1s
+8100K .......... .......... .......... .......... .......... 76% 1.28M 1s
+8150K .......... .......... .......... .......... .......... 76% 1.41M 1s
+8200K .......... .......... .......... .......... .......... 77% 16.8M 1s
+8250K .......... .......... .......... .......... .......... 77% 10.8M 1s
+8300K .......... .......... .......... .......... .......... 78% 1.28M 1s
+8350K .......... .......... .......... .......... .......... 78% 1.44M 1s
+8400K .......... .......... .......... .......... .......... 79% 9.20M 1s
+8450K .......... .......... .......... .......... .......... 79% 12.2M 1s
+8500K .......... .......... .......... .......... .......... 80% 4.19M 1s
+8550K .......... .......... .......... .......... .......... 80%  882K 1s
+8600K .......... .......... .......... .......... .......... 81% 9.79M 1s
+8650K .......... .......... .......... .......... .......... 81% 9.44M 1s
+8700K .......... .......... .......... .......... .......... 81% 3.47M 1s
+8750K .......... .......... .......... .......... .......... 82%  894K 1s
+8800K .......... .......... .......... .......... .......... 82% 10.0M 1s
+8850K .......... .......... .......... .......... .......... 83% 9.23M 1s
+8900K .......... .......... .......... .......... .......... 83% 3.50M 1s
+8950K .......... .......... .......... .......... .......... 84%  894K 1s
+9000K .......... .......... .......... .......... .......... 84% 10.5M 1s
+9050K .......... .......... .......... .......... .......... 85% 8.99M 1s
+9100K .......... .......... .......... .......... .......... 85% 5.91M 1s
+9150K .......... .......... .......... .......... .......... 86%  810K 1s
+9200K .......... .......... .......... .......... .......... 86% 10.7M 1s
+9250K .......... .......... .......... .......... .......... 87% 8.86M 1s
+9300K .......... .......... .......... .......... .......... 87% 5.72M 1s
+9350K .......... .......... .......... .......... .......... 88% 1.38M 1s
+9400K .......... .......... .......... .......... .......... 88% 1.64M 1s
+9450K .......... .......... .......... .......... .......... 89% 11.0M 1s
+9500K .......... .......... .......... .......... .......... 89% 8.25M 1s
+9550K .......... .......... .......... .......... .......... 89% 1.23M 1s
+9600K .......... .......... .......... .......... .......... 90% 1.71M 1s
+9650K .......... .......... .......... .......... .......... 90% 8.40M 0s
+9700K .......... .......... .......... .......... .......... 91% 7.73M 0s
+9750K .......... .......... .......... .......... .......... 91% 1.21M 0s
+9800K .......... .......... .......... .......... .......... 92% 1.69M 0s
+9850K .......... .......... .......... .......... .......... 92% 10.5M 0s
+9900K .......... .......... .......... .......... .......... 93% 7.40M 0s
+9950K .......... .......... .......... .......... .......... 93% 1.22M 0s
+10000K .......... .......... .......... .......... .......... 94% 1.64M 0s
+10050K .......... .......... .......... .......... .......... 94% 10.0M 0s
+10100K .......... .......... .......... .......... .......... 95% 9.33M 0s
+10150K .......... .......... .......... .......... .......... 95% 1.20M 0s
+10200K .......... .......... .......... .......... .......... 96% 1.84M 0s
+10250K .......... .......... .......... .......... .......... 96% 8.65M 0s
+10300K .......... .......... .......... .......... .......... 96% 10.3M 0s
+10350K .......... .......... .......... .......... .......... 97% 3.95M 0s
+10400K .......... .......... .......... .......... .......... 97%  880K 0s
+10450K .......... .......... .......... .......... .......... 98% 7.88M 0s
+10500K .......... .......... .......... .......... .......... 98% 10.1M 0s
+10550K .......... .......... .......... .......... .......... 99% 3.88M 0s
+10600K .......... .......... .......... .......... .......... 99%  887K 0s
+10650K .......... .......... ..                              100% 24.5M=5.3s
+
+2016-12-16 12:23:57 (1.97 MB/s) - ‘z3-4.5.0-x64-win.zip’ saved [10928751/10928751]
+
+Cloning into 'mitls-fstar'...
+Switched to a new branch 'adl_lowlevel_merge'
+Cloning into 'Spartan'...
+Checking out files:  31% (337/1078)   Checking out files:  32% (345/1078)   Checking out files:  33% (356/1078)   Checking out files:  34% (367/1078)   Checking out files:  35% (378/1078)   Checking out files:  36% (389/1078)   Checking out files:  37% (399/1078)   Checking out files:  38% (410/1078)   Checking out files:  39% (421/1078)   Checking out files:  40% (432/1078)   Checking out files:  41% (442/1078)   Checking out files:  42% (453/1078)   Checking out files:  43% (464/1078)   Checking out files:  44% (475/1078)   Checking out files:  45% (486/1078)   Checking out files:  46% (496/1078)   Checking out files:  47% (507/1078)   Checking out files:  48% (518/1078)   Checking out files:  49% (529/1078)   Checking out files:  50% (539/1078)   Checking out files:  51% (550/1078)   Checking out files:  52% (561/1078)   Checking out files:  53% (572/1078)   Checking out files:  54% (583/1078)   Checking out files:  55% (593/1078)   Checking out files:  56% (604/1078)   Checking out files:  57% (615/1078)   Checking out files:  58% (626/1078)   Checking out files:  59% (637/1078)   Checking out files:  60% (647/1078)   Checking out files:  61% (658/1078)   Checking out files:  62% (669/1078)   Checking out files:  63% (680/1078)   Checking out files:  64% (690/1078)   Checking out files:  65% (701/1078)   Checking out files:  66% (712/1078)   Checking out files:  67% (723/1078)   Checking out files:  68% (734/1078)   Checking out files:  69% (744/1078)   Checking out files:  70% (755/1078)   Checking out files:  71% (766/1078)   Checking out files:  72% (777/1078)   Checking out files:  73% (787/1078)   Checking out files:  74% (798/1078)   Checking out files:  75% (809/1078)   Checking out files:  76% (820/1078)   Checking out files:  77% (831/1078)   Checking out files:  77% (839/1078)   Checking out files:  78% (841/1078)   Checking out files:  79% (852/1078)   Checking out files:  80% (863/1078)   Checking out files:  81% (874/1078)   Checking out files:  82% (884/1078)   Checking out files:  83% (895/1078)   Checking out files:  84% (906/1078)   Checking out files:  85% (917/1078)   Checking out files:  86% (928/1078)   Checking out files:  87% (938/1078)   Checking out files:  88% (949/1078)   Checking out files:  89% (960/1078)   Checking out files:  90% (971/1078)   Checking out files:  91% (981/1078)   Checking out files:  92% (992/1078)   Checking out files:  93% (1003/1078)   Checking out files:  94% (1014/1078)   Checking out files:  95% (1025/1078)   Checking out files:  96% (1035/1078)   Checking out files:  97% (1046/1078)   Checking out files:  98% (1057/1078)   Checking out files:  99% (1068/1078)   Checking out files: 100% (1078/1078)   Checking out files: 100% (1078/1078), done.
+Already on 'master'
+Cloning into 'FStar'...
+Checking out files:  50% (1203/2390)   Checking out files:  51% (1219/2390)   Checking out files:  52% (1243/2390)   Checking out files:  53% (1267/2390)   Checking out files:  54% (1291/2390)   Checking out files:  55% (1315/2390)   Checking out files:  56% (1339/2390)   Checking out files:  57% (1363/2390)   Checking out files:  58% (1387/2390)   Checking out files:  59% (1411/2390)   Checking out files:  60% (1434/2390)   Checking out files:  61% (1458/2390)   Checking out files:  62% (1482/2390)   Checking out files:  63% (1506/2390)   Checking out files:  64% (1530/2390)   Checking out files:  65% (1554/2390)   Checking out files:  66% (1578/2390)   Checking out files:  67% (1602/2390)   Checking out files:  68% (1626/2390)   Checking out files:  69% (1650/2390)   Checking out files:  70% (1673/2390)   Checking out files:  71% (1697/2390)   Checking out files:  72% (1721/2390)   Checking out files:  73% (1745/2390)   Checking out files:  74% (1769/2390)   Checking out files:  75% (1793/2390)   Checking out files:  76% (1817/2390)   Checking out files:  77% (1841/2390)   Checking out files:  78% (1865/2390)   Checking out files:  79% (1889/2390)   Checking out files:  80% (1912/2390)   Checking out files:  81% (1936/2390)   Checking out files:  82% (1960/2390)   Checking out files:  83% (1984/2390)   Checking out files:  84% (2008/2390)   Checking out files:  85% (2032/2390)   Checking out files:  86% (2056/2390)   Checking out files:  87% (2080/2390)   Checking out files:  88% (2104/2390)   Checking out files:  89% (2128/2390)   Checking out files:  90% (2151/2390)   Checking out files:  91% (2175/2390)   Checking out files:  92% (2199/2390)   Checking out files:  93% (2223/2390)   Checking out files:  94% (2247/2390)   Checking out files:  95% (2271/2390)   Checking out files:  96% (2295/2390)   Checking out files:  97% (2319/2390)   Checking out files:  98% (2343/2390)   Checking out files:  99% (2367/2390)   Checking out files: 100% (2390/2390)   Checking out files: 100% (2390/2390), done.
+Switched to a new branch 'c_record_aead'
+Cloning into 'hacl-star'...
+Switched to a new branch 'jk_low_level_crypto'
+Cloning into 'kremlin'...
+Already on 'master'
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+
+Microsoft (R) Program Maintenance Utility Version 14.00.24210.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Microsoft (R) Program Maintenance Utility Version 14.00.24210.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Microsoft (R) Program Maintenance Utility Version 14.00.24210.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Could Not Find D:\cygwin\home\protz\Code\everest\Spartan\obj\sha256_main_i.c
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN\amd64\cl.exe"' : return code '0x2'
+Stop.
+cp: cannot stat 'D:/cygwin/home/protz/Code/everest/Spartan/obj/aes-gcc.S': No such file or directory
+make: *** [Makefile:28: import] Error 1
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Cloning into '/cygdrive/d/cygwin/home/protz/Code/everest/FStar/ucontrib/CoreCrypto/ml/openssl'...
+crypto/bio/b_sock.c: In function 'BIO_get_accept_socket':
+crypto/bio/b_sock.c:214:13: warning: overflow in implicit constant conversion [-Woverflow]
+int s = INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:219:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:222:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:229:13: warning: overflow in implicit constant conversion [-Woverflow]
+s = INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:236:13: warning: overflow in implicit constant conversion [-Woverflow]
+s = INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c: In function 'BIO_socket':
+crypto/bio/b_sock2.c:45:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c:51:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c: In function 'BIO_connect':
+crypto/bio/b_sock2.c:90:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:98:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c: In function 'BIO_listen':
+crypto/bio/b_sock2.c:164:47: warning: passing argument 4 of 'getsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (getsockopt(sock, SOL_SOCKET, SO_TYPE, &socktype, &socktype_len) != 0
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:980:34: note: expected 'char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI getsockopt(SOCKET s,int level,int optname,char *optval,int *optlen);
+^
+crypto/bio/b_sock2.c:187:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:195:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:204:57: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_IPV6, IPV6_V6ONLY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c: In function 'BIO_accept_ex':
+crypto/bio/b_sock2.c:249:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c:254:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+In file included from crypto/bn/bn_print.c:15:0:
+crypto/bn/bn_print.c: In function 'BN_bn2dec':
+crypto/bn/bn_lcl.h:94:27: warning: unknown conversion type character 'l' in format [-Wformat=]
+#  define BN_DEC_FMT1     "%llu"
+^
+crypto/bn/bn_print.c:106:37: note: in expansion of macro 'BN_DEC_FMT1'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
+^
+crypto/bn/bn_lcl.h:94:27: warning: too many arguments for format [-Wformat-extra-args]
+#  define BN_DEC_FMT1     "%llu"
+^
+crypto/bn/bn_print.c:106:37: note: in expansion of macro 'BN_DEC_FMT1'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
+^
+crypto/bn/bn_lcl.h:95:27: warning: unknown conversion type character 'l' in format [-Wformat=]
+#  define BN_DEC_FMT2     "%019llu"
+^
+crypto/bn/bn_print.c:111:41: note: in expansion of macro 'BN_DEC_FMT2'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
+^
+crypto/bn/bn_lcl.h:95:27: warning: too many arguments for format [-Wformat-extra-args]
+#  define BN_DEC_FMT2     "%019llu"
+^
+crypto/bn/bn_print.c:111:41: note: in expansion of macro 'BN_DEC_FMT2'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
+^
+crypto/threads_win.c: In function 'CRYPTO_atomic_add':
+crypto/threads_win.c:132:35: warning: passing argument 1 of '_InterlockedExchangeAdd' from incompatible pointer type [-Wincompatible-pointer-types]
+*ret = InterlockedExchangeAdd(val, amount) + amount;
+^
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/winnt.h:27:0,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/minwindef.h:163,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/windef.h:8,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/windows.h:69,
+from crypto/threads_win.c:11:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/psdk_inc/intrin-impl.h:1026:10: note: expected 'volatile long int *' but argument is of type 'int *'
+__LONG32 _InterlockedExchangeAdd(__LONG32 volatile *Addend, __LONG32 Value) {
+^
+ar: creating libssl.a
+ar: creating libcrypto.a
+openssl_stub.c: In function ‘ocaml_openssl_init’:
+openssl_stub.c:93:3: warning: implicit declaration of function ‘OPENSSL_config’ [-Wimplicit-function-declaration]
+OPENSSL_config("CoreCrypto");
+^
+openssl_stub.c: In function ‘ocaml_rsa_gen_key’:
+openssl_stub.c:668:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_get_key’:
+openssl_stub.c:779:21: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:27: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:33: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_encrypt’:
+openssl_stub.c:823:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_decrypt’:
+openssl_stub.c:878:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_sign’:
+openssl_stub.c:922:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_verify’:
+openssl_stub.c:975:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_dsa_gen_params’:
+openssl_stub.c:1087:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_gen_key’:
+openssl_stub.c:1144:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1144:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_get_key’:
+openssl_stub.c:1183:21: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:27: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:33: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1190:21: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1190:29: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_set_key’:
+openssl_stub.c:1235:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1236:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1236:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_sign’:
+openssl_stub.c:1325:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1326:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1326:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_verify’:
+openssl_stub.c:1368:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1369:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1369:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dh_gen_params’:
+openssl_stub.c:1473:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_params_of_string’:
+openssl_stub.c:1506:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_gen_key’:
+openssl_stub.c:1561:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1561:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_compute’:
+openssl_stub.c:1672:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1672:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.inv_cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.inv_cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Symmetric.MAC.rcreate, in file Crypto_Symmetric_MAC: eternal newbuf 0uint8 Crypto.Symmetric.MAC.wlen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, after the definition of len, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @6 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+File "test/mitls.ml", line 58, characters 12-28:
+Warning 6: labels were omitted in the application of this function.
+File "test/mitls.ml", line 63, characters 12-28:
+Warning 6: labels were omitted in the application of this function.
+File "test/mitls.ml", line 68, characters 12-28:
+Warning 6: labels were omitted in the application of this function.
+File "test/mitls.ml", line 104, characters 2-656:
+Warning 4: this pattern-matching is fragile.
+It will remain exhaustive when constructors are added to type TLSConstants.protocolVersion.
+File "test/mitls.ml", line 104, characters 2-656:
+Warning 4: this pattern-matching is fragile.
+It will remain exhaustive when constructors are added to type TLSConstants.protocolVersion.
