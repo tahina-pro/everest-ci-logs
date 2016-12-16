@@ -1,0 +1,112 @@
++ OCAML_TARBALL='https://www.dropbox.com/s/p2g539wopa52mvj/ocaml-4.02.3-64bit.tar.bz2?dl=0'
++ OPAM_TARBALL='https://www.dropbox.com/s/uhgpzgkplviy2mh/opam-4.02.3-64bit.tar.bz2?dl=0'
++ FLEXDLL_NAME=flexdll-bin-0.35
++ FLEXDLL_URL=http://alain.frisch.fr/flexdll/flexdll-bin-0.35.zip
++ Z3_VERSION=4.5.0
++ Z3_NAME=z3-4.5.0-x64-win
++ Z3_URL=https://github.com/Z3Prover/z3/releases/download/z3-4.5.0/z3-4.5.0-x64-win.zip
++ VS_BIN=
++ [[ -v VS140COMNTOOLS ]]
++ VS_BIN='C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\/../../VC/bin'
++ FS_DIR='C:/Program Files (x86)/Microsoft SDKs/F#/4.0/Framework/v4.0/'
++ [[ 1 != '' ]]
++ export 'GIT_SSH_COMMAND=ssh -oBatchMode=yes'
++ GIT_SSH_COMMAND='ssh -oBatchMode=yes'
++ export GIT_TERMINAL_PROMPT=0
++ GIT_TERMINAL_PROMPT=0
++ cd_to_everest
++ echo -n '# Switching to the everest directory'
++ [[ everest != \e\v\e\r\e\s\t ]]
++ [[ ./everest != everest ]]
+++ dirname ./everest
++ cd .
+++ pwd
++ echo ' ... now in /cygdrive/c/Build/Agent/_work/30/s'
++ echo
++ source lib.sh
++ source repositories.sh
+++ declare -A repositories
+++ repositories[FStar]=git@github.com:FStarLang/FStar.git
+++ repositories[kremlin]=git@github.com:FStarLang/kremlin.git
+++ repositories[hacl-star]=git@github.com:mitls/hacl-star.git
+++ repositories[mitls-fstar]=git@github.com:mitls/mitls-fstar.git
+++ repositories[Spartan]=ssh://msresearch@msresearch.visualstudio.com/DefaultCollection/Ironclad/_git/Spartan
++ source hashes.sh
+++ declare -A hashes
+++ declare -A branches
+++ hashes[mitls-fstar]=8086422f8fa44be4a5ab60131416287c3f52a37d
+++ branches[mitls-fstar]=adl_lowlevel_merge
+++ hashes[Spartan]=0e468a84c72b23d2283dcf3df4ecc83103d559d7
+++ branches[Spartan]=master
+++ hashes[FStar]=398666d9b5cbfd8fdc0f8363c5b5396d74f53b97
+++ branches[FStar]=c_record_aead
+++ hashes[hacl-star]=0bdd09e379b66d8016f3579b2af00e4072e17479
+++ branches[hacl-star]=jk_low_level_crypto
+++ hashes[kremlin]=6051d1b35d823175a75854d917259ca304c79c1d
+++ branches[kremlin]=master
++ cygsetup=setup-x86_64.exe
++ cygsetup_args='--no-desktop --no-shortcuts --no-startmenu --wait --quiet-mode'
++ [[ test == '' ]]
++ true
++ case "$1" in
++ do_test
++ FStar/examples/low-level/krml-test.exe
++ cd mitls-fstar/src/tls
++ test.out
+./everest: line 569: test.out: command not found
++ OCAML_TARBALL='https://www.dropbox.com/s/p2g539wopa52mvj/ocaml-4.02.3-64bit.tar.bz2?dl=0'
++ OPAM_TARBALL='https://www.dropbox.com/s/uhgpzgkplviy2mh/opam-4.02.3-64bit.tar.bz2?dl=0'
++ FLEXDLL_NAME=flexdll-bin-0.35
++ FLEXDLL_URL=http://alain.frisch.fr/flexdll/flexdll-bin-0.35.zip
++ Z3_VERSION=4.5.0
++ Z3_NAME=z3-4.5.0-x64-win
++ Z3_URL=https://github.com/Z3Prover/z3/releases/download/z3-4.5.0/z3-4.5.0-x64-win.zip
++ VS_BIN=
++ [[ -v VS140COMNTOOLS ]]
++ VS_BIN='C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\/../../VC/bin'
++ FS_DIR='C:/Program Files (x86)/Microsoft SDKs/F#/4.0/Framework/v4.0/'
++ [[ 1 != '' ]]
++ export 'GIT_SSH_COMMAND=ssh -oBatchMode=yes'
++ GIT_SSH_COMMAND='ssh -oBatchMode=yes'
++ export GIT_TERMINAL_PROMPT=0
++ GIT_TERMINAL_PROMPT=0
++ cd_to_everest
++ echo -n '# Switching to the everest directory'
++ [[ everest != \e\v\e\r\e\s\t ]]
++ [[ ./everest != everest ]]
+++ dirname ./everest
++ cd .
+++ pwd
++ echo ' ... now in /cygdrive/c/Build/Agent2/_work/7/s'
++ echo
++ source lib.sh
++ source repositories.sh
+++ declare -A repositories
+++ repositories[FStar]=git@github.com:FStarLang/FStar.git
+++ repositories[kremlin]=git@github.com:FStarLang/kremlin.git
+++ repositories[hacl-star]=git@github.com:mitls/hacl-star.git
+++ repositories[mitls-fstar]=git@github.com:mitls/mitls-fstar.git
+++ repositories[Spartan]=ssh://msresearch@msresearch.visualstudio.com/DefaultCollection/Ironclad/_git/Spartan
++ source hashes.sh
+++ declare -A hashes
+++ declare -A branches
+++ hashes[mitls-fstar]=8086422f8fa44be4a5ab60131416287c3f52a37d
+++ branches[mitls-fstar]=adl_lowlevel_merge
+++ hashes[Spartan]=0e468a84c72b23d2283dcf3df4ecc83103d559d7
+++ branches[Spartan]=master
+++ hashes[FStar]=398666d9b5cbfd8fdc0f8363c5b5396d74f53b97
+++ branches[FStar]=c_record_aead
+++ hashes[hacl-star]=0bdd09e379b66d8016f3579b2af00e4072e17479
+++ branches[hacl-star]=jk_low_level_crypto
+++ hashes[kremlin]=6051d1b35d823175a75854d917259ca304c79c1d
+++ branches[kremlin]=master
++ cygsetup=setup-x86_64.exe
++ cygsetup_args='--no-desktop --no-shortcuts --no-startmenu --wait --quiet-mode'
++ [[ test == '' ]]
++ true
++ case "$1" in
++ do_test
++ FStar/examples/low-level/krml-test.exe
++ cd mitls-fstar/src/tls
++ test.out
+./everest: line 569: test.out: command not found
