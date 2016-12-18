@@ -1,0 +1,44 @@
+make[2]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+make[2]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+6 shift/reduce conflicts.
+make[5]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+make[6]: warning: -jN forced in submake: disabling jobserver mode.
+./Ex01a.fst(64,28-67,48): (Warning) Top-level let-bindings must be total; this term may have effects
+./Encrypt_SymEnc.fst(24,78-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+./bijection.fst(5,32-5,45): (Warning) Pattern misses at least one bound variable: x#708
+WARNING: (4725,6): pattern does not contain all quantified variables.
+./bijection.fst(5,32-5,45): (Warning) Pattern misses at least one bound variable: x#3554
+WARNING: (4718,6): pattern does not contain all quantified variables.
+WARNING: (4773,6): pattern does not contain all quantified variables.
+./ifc.fst(170,15-174,23): (Warning) Pattern misses at least one bound variable: env#16425
+WARNING: (62255,26): pattern does not contain any variable.
+./ifc.fst(226,16-231,23): (Warning) Pattern misses at least one bound variable: env#28892
+./ifc.fst(227,2-231,23): (Warning) Pattern misses at least one bound variable: env#30315
+./MAC.fst(43,17-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (62255,26): pattern does not contain any variable.
+WARNING: (62473,26): pattern does not contain any variable.
+./ifc.fst(171,2-174,23): (Warning) Pattern misses at least one bound variable: env#95264
+./ifc.fst(227,2-231,23): (Warning) Pattern misses at least one bound variable: env#95951
+./ifcExample.fst(6,15-9,15): (Warning) Top-level let-bindings must be total; this term may have effects
+./ifcExample.fst(9,15-10,15): (Warning) Top-level let-bindings must be total; this term may have effects
+./ifcExample.fst(10,15-11,15): (Warning) Top-level let-bindings must be total; this term may have effects
+./ifcExample.fst(11,15-12,17): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (62234,26): pattern does not contain any variable.
+WARNING: (62440,26): pattern does not contain any variable.
+./TestMRef.fst(7,59-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex10a.fst(25,16-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+./TestMRef.fst(7,59-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex10a.fst(25,16-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12a.Cap.fst(18,70-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12a.Cap.fst(16,70-18,26): (Warning) Top-level let-bindings must be total; this term may have effects
+./Mac.fst(67,17-69,35): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(5,13-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(20,27-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(52,35-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(122,14-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+./Crypto.Test.fst(590,14-609,104): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+make[1]: *** [Crypto.Symmetric.PRF.fst-ver] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make: *** [ulong] Error 2
