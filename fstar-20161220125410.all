@@ -1,0 +1,80 @@
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc 6.1.0'.
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent2\_work\1\s\bin\basic.dll
+absyn -> C:\Build\Agent2\_work\1\s\bin\absyn.dll
+tc -> C:\Build\Agent2\_work\1\s\bin\tc.dll
+format -> C:\Build\Agent2\_work\1\s\bin\format.dll
+tosmt -> C:\Build\Agent2\_work\1\s\bin\tosmt.dll
+syntax -> C:\Build\Agent2\_work\1\s\bin\syntax.dll
+typechecker -> C:\Build\Agent2\_work\1\s\bin\typechecker.dll
+extraction -> C:\Build\Agent2\_work\1\s\bin\extraction.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent2\_work\1\s\bin\prettyprint.dll
+compiling to dfas (can take a while...)
+341 states
+writing output
+building tables
+computing first function...time: 00:00:00.2060602
+building kernels...time: 00:00:00.1465016
+building kernel table...time: 00:00:00.0175299
+computing lookahead relations..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.5050678
+building lookahead table...time: 00:00:00.2318444
+building action table...state 30: shift/reduce error on BAR
+state 412: shift/reduce error on SEMICOLON
+state 439: shift/reduce error on BAR
+state 442: shift/reduce error on BAR
+state 454: shift/reduce error on BAR
+state 530: shift/reduce error on COLON_EQUALS
+state 566: shift/reduce error on LBRACE
+time: 00:00:00.8224434
+building goto table...time: 00:00:00.2371111
+returning tables.
+7 shift/reduce conflicts
+719 states
+139 nonterminals
+140 terminals
+388 productions
+#rows in action table: 719
+parser -> C:\Build\Agent2\_work\1\s\bin\parser.dll
+fsdoc -> C:\Build\Agent2\_work\1\s\bin\fsdoc.dll
+smtencoding -> C:\Build\Agent2\_work\1\s\bin\smtencoding.dll
+fstar -> C:\Build\Agent2\_work\1\s\bin\fstar.exe
+tests -> C:\Build\Agent2\_work\1\s\bin\tests.exe
+chmod a+x ../bin/tests.exe
+chmod a+x ../bin/fstar.exe
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make fsharp-regressions
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+../bin/tests.exe
+Initializing ...
+
+Unhandled Exception: System.Exception: Unexpected 
+at FStar.Tests.Pars.parse_mod(String mod_name, env dsenv) in C:\Build\Agent2\_work\1\s\src\tests\pars.fs:line 30
+at FStar.Tests.Pars.init_once() in C:\Build\Agent2\_work\1\s\src\tests\pars.fs:line 41
+at FStar.Tests.Pars.init() in C:\Build\Agent2\_work\1\s\src\tests\pars.fs:line 54
+at FStar.Tests.Test.main(String[] argv) in C:\Build\Agent2\_work\1\s\src\tests\test.fs:line 21
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: *** [Makefile:253: fsharp-regressions] Error 127
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make: *** [Makefile:246: utest] Error 2
