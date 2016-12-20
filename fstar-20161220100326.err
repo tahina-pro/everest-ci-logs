@@ -1,0 +1,20 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\Crypto.AEAD.Decrypt.fst(114,43-114,44) : (Error) Expected expression of type "t"; got expression "n" of type "int"
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[1]: *** [Makefile:65: Crypto.AEAD.Decrypt.fst-ver] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:246: utest] Error 2
