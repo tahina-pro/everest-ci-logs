@@ -1,0 +1,73 @@
+make: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Installing 'FsLexYacc 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent\_work\1\s\bin\basic.dll
+absyn -> C:\Build\Agent\_work\1\s\bin\absyn.dll
+tc -> C:\Build\Agent\_work\1\s\bin\tc.dll
+format -> C:\Build\Agent\_work\1\s\bin\format.dll
+tosmt -> C:\Build\Agent\_work\1\s\bin\tosmt.dll
+syntax -> C:\Build\Agent\_work\1\s\bin\syntax.dll
+C:\Build\Agent\_work\1\s\src\typechecker\dmff.fs(401,15): warning FS0025: Incomplete pattern matches on this expression. For example, the value '[]' may indicate a case not covered by the pattern(s). [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(411,15): error FS1129: The type 'comp_typ' does not contain a field 'result_typ' [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(681,42): error FS0039: The field, constructor or member 'result_typ' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(681,77): error FS0039: The field, constructor or member 'result_typ' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(698,11): error FS1129: The type 'comp_typ' does not contain a field 'result_typ' [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(701,15): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(1451,30): error FS0039: The field, constructor or member 'comp' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(1486,19): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(1510,29): error FS1129: The type 'lcomp' does not contain a field 'res_typ' [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(1578,33): error FS1129: The type 'lcomp' does not contain a field 'res_typ' [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(1587,39): error FS1129: The type 'lcomp' does not contain a field 'res_typ' [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tcterm.fs(1828,20): error FS0039: The record label 'res_typ' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(62,18): error FS0039: The field, constructor or member 'res_typ' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(380,49): error FS0039: The value, constructor, namespace or type 'comp_result' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(384,19): error FS0039: The record label 'result_typ' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(409,33): error FS0039: The value, constructor, namespace or type 'comp_result' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(543,51): error FS0001: This expression was expected to have type    term    but here has type    typ -> term [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(539,15): warning FS0025: Incomplete pattern matches on this expression. For example, the value '([_;_;_],_)' may indicate a case not covered by the pattern(s). [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(626,13): warning FS0025: Incomplete pattern matches on this expression. For example, the value '([],_)' may indicate a case not covered by the pattern(s). [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(676,11): error FS0039: The record label 'source' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(821,32): error FS0039: The value, constructor, namespace or type 'arrow_formals' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(872,24): error FS0039: The value, constructor, namespace or type 'arrow_formals' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(883,40): error FS0039: The field, constructor or member 'res_typ' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(887,74): error FS0039: The field, constructor or member 'res_typ' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(924,28): error FS0039: The value, constructor, namespace or type 'arrow_formals' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(933,34): error FS0039: The value, constructor, namespace or type 'comp_result' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1365,48): error FS0039: The field, constructor or member 'source' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1366,48): error FS0039: The field, constructor or member 'target' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1367,49): error FS0039: The field, constructor or member 'source' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1367,87): error FS0039: The field, constructor or member 'source' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1368,49): error FS0039: The field, constructor or member 'target' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1368,87): error FS0039: The field, constructor or member 'target' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1382,19): error FS0039: The field, constructor or member 'lift' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1382,29): error FS0039: The field, constructor or member 'lift_wp' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1400,53): error FS0039: The field, constructor or member 'source' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1400,91): error FS0039: The field, constructor or member 'source' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1404,38): error FS0039: The field, constructor or member 'source' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1408,27): error FS0039: The field, constructor or member 'target' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1421,27): error FS1129: The type 'sub_eff' does not contain a field 'lift_wp' [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent\_work\1\s\src\typechecker\tc.fs(1469,91): error FS0039: The field, constructor or member 'comp' is not defined [C:\Build\Agent\_work\1\s\src\typechecker\typechecker.fsproj]
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: *** [Makefile:52: all] Error 1
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make: *** [Makefile:237: utest] Error 2
