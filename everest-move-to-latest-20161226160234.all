@@ -1,0 +1,95 @@
+Removing FStar/
+Removing Spartan/
+Removing mitls-fstar/
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent2/_work/8/s
+
+OVERVIEW: ./everest, a high-level management script for Project Everest
+
+USAGE: ./everest COMMANDS
+
+COMMAND:
+check     ensure that all the required programs are found in path, install
+them if needed; offer to customize ~/.bashrc with proper env
+variables
+
+pull      self-update the everest repository (i.e. the script and
+hashes.sh) then run reset
+
+reset     pull all projects and move them to the revisions specified by
+hashes.sh
+
+snapshot  make the current state a new known set of working revisions; this
+writes into hashes.sh
+
+make      rebuild all projects
+
+test      launch the test artifacts
+
+clean     clean all projets
+
+help      print the current message
+Checking environment
+... which found
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+... all 41 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... all 15 ocamlfind packages found
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+... correct z3 version detected
+I don't see any fstar.exe or krml in your path; add /cygdrive/c/Build/Agent2/_work/8/s/FStar/bin and /cygdrive/c/Build/Agent2/_work/8/s/kremlin to your PATH via ~/.bashrc? [Yn]
+/home/everbld/everest-ci/ci: line 244: cd: mitls-fstar: No such file or directory
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+git pull <remote> <branch>
+
+/home/everbld/everest-ci/ci: line 244: cd: Spartan: No such file or directory
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+/home/everbld/everest-ci/ci: line 244: cd: FStar: No such file or directory
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+/home/everbld/everest-ci/ci: line 244: cd: hacl-star: No such file or directory
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+/home/everbld/everest-ci/ci: line 244: cd: kremlin: No such file or directory
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+/home/everbld/everest-ci/ci: line 258: ./everest: No such file or directory
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   697  100     2  100   695     10   3722 --:--:-- --:--:-- --:--:--  3926
