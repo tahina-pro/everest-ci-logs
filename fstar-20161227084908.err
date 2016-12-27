@@ -1,0 +1,192 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\Ex01a.fst(67,3-67,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(10,3-10,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(11,3-11,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(12,3-12,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(13,3-13,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Encrypt_SymEnc.fst(29,3-29,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.Symmetric.GF128.fst-ver] Error 1
+.\MAC.fst(45,3-45,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Flag, Crypto.Indexing, Crypto.Config, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, FStar.Monotonic.RRef, Crypto.Symmetric.GF128.Spec, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Flag, Crypto.Indexing, Crypto.Config, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, Crypto.Symmetric.GF128.Spec, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.Symmetric.UF1CMA.fst-ver] Error 1
+make[4]: *** [Makefile:96: Crypto.Symmetric.MAC.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.Symmetric.GCM.fst-ver] Error 1
+.\TestMRef.fst(8,3-8,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.AES256GCM.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, FStar.Monotonic.RRef, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.Symmetric.PRF.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, FStar.Monotonic.RRef, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.Invariant.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, Crypto.Symmetric.Poly1305.Lemmas, FStar.Monotonic.RRef, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.Encoding.fst-ver] Error 1
+.\Ex10a.fst(26,3-26,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, FStar.Monotonic.RRef, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.Encrypt.Invariant.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.AEAD.BufferUtils, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.EnxorDexor.fst-ver] Error 1
+.\Ex10a.fst(26,3-26,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(20,3-20,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(18,3-18,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, FStar.Monotonic.RRef, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.AEAD.BufferUtils, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.Wrappers.PRF.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.AEAD.BufferUtils, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.Wrappers.CMA.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.Wrappers.Encoding.fst-ver] Error 1
+.\Ex12b.RPC.fst(8,3-8,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,3-21,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,3-53,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,3-123,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, Crypto.Symmetric.Poly1305.Lemmas, FStar.Monotonic.RRef, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.MAC_Wrapper.Invariant.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, FStar.Monotonic.RRef, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.AEAD.BufferUtils, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.Encrypt.Ideal.Invariant.fst-ver] Error 1
+.\TestMRef.fst(8,3-8,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(69,3-69,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, FStar.Monotonic.RRef, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.Enxor.Invariant.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.AEAD.BufferUtils, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.Encrypt.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Crypto.Symmetric.Chacha20, Crypto.Plain, Flag, Crypto.Indexing, Crypto.Config, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.AEAD.BufferUtils, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.fst-ver] Error 1
+.\Crypto.Symmetric.GF128.fst(25,15-25,24) : (Error) Identifier not found: [C.load64_le]
+Module C does not belong to the list of modules in scope, namely Crypto.Symmetric.GF128.Spec, Crypto.Symmetric.Poly1305, Crypto.Symmetric.Poly1305.Bignum, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6, Crypto.Symmetric.Poly1305.Lemmas, Crypto.Symmetric.Cipher, Crypto.Symmetric.AES128, Spartan, Crypto.Symmetric.AES, Flag, Crypto.Indexing, Crypto.Config, Crypto.Symmetric.Chacha20, FStar.Buffer.Quantifiers, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3, Crypto.AEAD.BufferUtils, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2, Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1, Crypto.Symmetric.Poly1305.Bigint, Crypto.Symmetric.Poly1305.Parameters, Crypto.Symmetric.Poly1305.Spec, Crypto.Symmetric.Bytes, Buffer.Utils, FStar.Int.Cast, FStar.UInt16, FStar.UInt63, FStar.Int8, FStar.Int32, FStar.Int63, FStar.Int64, FStar.Buffer, FStar.UInt128, FStar.IO, FStar.Float, FStar.Bytes, FStar.UInt8, FStar.All, FStar.ST, FStar.Ghost, FStar.HyperStack, FStar.HyperHeap, FStar.Map, FStar.Set, FStar.Heap, FStar.TSet, FStar.PredicateExtensionality, FStar.PropositionalExtensionality, FStar.FunctionalExtensionality, FStar.UInt64, FStar.Int16, FStar.Int, FStar.UInt32, FStar.UInt, FStar.BitVector, FStar.Math.Lemmas, FStar.Math.Lib, FStar.SeqProperties, FStar.Seq, FStar.ListProperties, FStar.Classical, FStar.List.Tot, FStar.StrongExcludedMiddle, FStar.Squash, FStar.Mul, Prims
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:96: Crypto.AEAD.Decrypt.fst-ver] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Makefile:35: uall] Error 2
+make[2]: *** [Makefile:48: low-level.uall] Error 2
+make[2]: Target 'uall' not remade because of errors.
+make[1]: *** [Makefile:272: uexamples] Error 2
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:249: utest] Error 2
