@@ -1,0 +1,73 @@
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent2/_work/8/s
+
+Checking environment
+... which found
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+... all 41 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... all 15 ocamlfind packages found
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+... correct z3 version detected
+
+Remember to run source ~/.bashrc if it was modified!
+Note: you *may* want to add /cygdrive/c/Build/Agent2/_work/8/s/FStar/bin and /cygdrive/c/Build/Agent2/_work/8/s/kremlin to your PATH
+Note: you *may* want to export FSTAR_HOME=/cygdrive/c/Build/Agent2/_work/8/s/FStar
+
+Pulling mitls-fstar
+Note: you're welcome to create symbolic links if you already have cloned the repository elsewhere
+Do you want to run: try_git_clone git@github.com:mitls/mitls-fstar.git mitls-fstar? [Yn]
+Cloning into 'mitls-fstar'...
+Switched to a new branch 'adl_lowlevel_merge'
+Branch adl_lowlevel_merge set up to track remote branch adl_lowlevel_merge from origin.
+HEAD is now at 8086422 Temporarily disable client test
+
+Pulling Spartan
+Do you want to run: try_git_clone ssh://msresearch@msresearch.visualstudio.com/DefaultCollection/Ironclad/_git/Spartan Spartan? [Yn]
+Cloning into 'Spartan'...
+Checking out files:  30% (329/1078)   Checking out files:  31% (335/1078)   Checking out files:  32% (345/1078)   Checking out files:  33% (356/1078)   Checking out files:  34% (367/1078)   Checking out files:  35% (378/1078)   Checking out files:  36% (389/1078)   Checking out files:  37% (399/1078)   Checking out files:  38% (410/1078)   Checking out files:  39% (421/1078)   Checking out files:  40% (432/1078)   Checking out files:  41% (442/1078)   Checking out files:  42% (453/1078)   Checking out files:  43% (464/1078)   Checking out files:  44% (475/1078)   Checking out files:  45% (486/1078)   Checking out files:  46% (496/1078)   Checking out files:  47% (507/1078)   Checking out files:  48% (518/1078)   Checking out files:  49% (529/1078)   Checking out files:  50% (539/1078)   Checking out files:  51% (550/1078)   Checking out files:  52% (561/1078)   Checking out files:  53% (572/1078)   Checking out files:  54% (583/1078)   Checking out files:  55% (593/1078)   Checking out files:  56% (604/1078)   Checking out files:  57% (615/1078)   Checking out files:  58% (626/1078)   Checking out files:  59% (637/1078)   Checking out files:  60% (647/1078)   Checking out files:  61% (658/1078)   Checking out files:  62% (669/1078)   Checking out files:  63% (680/1078)   Checking out files:  64% (690/1078)   Checking out files:  65% (701/1078)   Checking out files:  66% (712/1078)   Checking out files:  67% (723/1078)   Checking out files:  68% (734/1078)   Checking out files:  68% (738/1078)   Checking out files:  69% (744/1078)   Checking out files:  70% (755/1078)   Checking out files:  71% (766/1078)   Checking out files:  72% (777/1078)   Checking out files:  73% (787/1078)   Checking out files:  74% (798/1078)   Checking out files:  75% (809/1078)   Checking out files:  76% (820/1078)   Checking out files:  77% (831/1078)   Checking out files:  78% (841/1078)   Checking out files:  79% (852/1078)   Checking out files:  80% (863/1078)   Checking out files:  81% (874/1078)   Checking out files:  82% (884/1078)   Checking out files:  83% (895/1078)   Checking out files:  84% (906/1078)   Checking out files:  85% (917/1078)   Checking out files:  86% (928/1078)   Checking out files:  87% (938/1078)   Checking out files:  88% (949/1078)   Checking out files:  89% (960/1078)   Checking out files:  90% (971/1078)   Checking out files:  91% (981/1078)   Checking out files:  92% (992/1078)   Checking out files:  93% (1003/1078)   Checking out files:  94% (1014/1078)   Checking out files:  95% (1025/1078)   Checking out files:  96% (1035/1078)   Checking out files:  97% (1046/1078)   Checking out files:  98% (1057/1078)   Checking out files:  99% (1068/1078)   Checking out files: 100% (1078/1078)   Checking out files: 100% (1078/1078), done.
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at febadc0 Fix .gen.dfy dependency tracking
+
+Pulling FStar
+Do you want to run: try_git_clone git@github.com:FStarLang/FStar.git FStar? [Yn]
+Cloning into 'FStar'...
+Checking out files:  38% (916/2408)   Checking out files:  39% (940/2408)   Checking out files:  40% (964/2408)   Checking out files:  41% (988/2408)   Checking out files:  42% (1012/2408)   Checking out files:  43% (1036/2408)   Checking out files:  44% (1060/2408)   Checking out files:  45% (1084/2408)   Checking out files:  46% (1108/2408)   Checking out files:  47% (1132/2408)   Checking out files:  48% (1156/2408)   Checking out files:  49% (1180/2408)   Checking out files:  50% (1204/2408)   Checking out files:  51% (1229/2408)   Checking out files:  52% (1253/2408)   Checking out files:  53% (1277/2408)   Checking out files:  54% (1301/2408)   Checking out files:  55% (1325/2408)   Checking out files:  56% (1349/2408)   Checking out files:  57% (1373/2408)   Checking out files:  58% (1397/2408)   Checking out files:  59% (1421/2408)   Checking out files:  60% (1445/2408)   Checking out files:  61% (1469/2408)   Checking out files:  62% (1493/2408)   Checking out files:  63% (1518/2408)   Checking out files:  64% (1542/2408)   Checking out files:  65% (1566/2408)   Checking out files:  66% (1590/2408)   Checking out files:  67% (1614/2408)   Checking out files:  68% (1638/2408)   Checking out files:  69% (1662/2408)   Checking out files:  70% (1686/2408)   Checking out files:  71% (1710/2408)   Checking out files:  72% (1734/2408)   Checking out files:  73% (1758/2408)   Checking out files:  74% (1782/2408)   Checking out files:  75% (1806/2408)   Checking out files:  76% (1831/2408)   Checking out files:  77% (1855/2408)   Checking out files:  78% (1879/2408)   Checking out files:  78% (1889/2408)   Checking out files:  79% (1903/2408)   Checking out files:  80% (1927/2408)   Checking out files:  81% (1951/2408)   Checking out files:  82% (1975/2408)   Checking out files:  83% (1999/2408)   Checking out files:  84% (2023/2408)   Checking out files:  85% (2047/2408)   Checking out files:  86% (2071/2408)   Checking out files:  87% (2095/2408)   Checking out files:  88% (2120/2408)   Checking out files:  89% (2144/2408)   Checking out files:  90% (2168/2408)   Checking out files:  91% (2192/2408)   Checking out files:  92% (2216/2408)   Checking out files:  93% (2240/2408)   Checking out files:  94% (2264/2408)   Checking out files:  95% (2288/2408)   Checking out files:  96% (2312/2408)   Checking out files:  97% (2336/2408)   Checking out files:  98% (2360/2408)   Checking out files:  99% (2384/2408)   Checking out files: 100% (2408/2408)   Checking out files: 100% (2408/2408), done.
+error: pathspec 'c_record_planA' did not match any file(s) known to git.
+Updating 8086422..01bc100
+Fast-forward
+.fstar_version           |  2 +-
+src/tls/AEADProvider.fst | 16 ++++++++--------
+src/tls/Makefile         | 10 ++++++----
+3 files changed, 15 insertions(+), 13 deletions(-)
+Already up-to-date.
+Already up-to-date.
+/home/everbld/everest-ci/ci: line 244: cd: hacl-star: No such file or directory
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+git pull <remote> <branch>
+
+/home/everbld/everest-ci/ci: line 244: cd: kremlin: No such file or directory
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+/home/everbld/everest-ci/ci: line 258: ./everest: No such file or directory
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   746  100     2  100   744      5   1901 --:--:-- --:--:-- --:--:--  1968
