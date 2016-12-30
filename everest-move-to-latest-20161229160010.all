@@ -99,3 +99,275 @@ Checking environment
 ... which found
 ... no suspicious bash
 ... 64-bit cygwin
+... no suspicious cygwin packages
+... all 41 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... all 15 ocamlfind packages found
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+... correct z3 version detected
+
+Remember to run source ~/.bashrc if it was modified!
+Note: you *may* want to add /cygdrive/c/Build/Agent2/_work/8/s/FStar/bin and /cygdrive/c/Build/Agent2/_work/8/s/kremlin to your PATH
+Note: you *may* want to export FSTAR_HOME=/cygdrive/c/Build/Agent2/_work/8/s/FStar
+
+Pulling mitls-fstar
+Note: you're welcome to create symbolic links if you already have cloned the repository elsewhere
+Do you want to run: try_git_clone git@github.com:mitls/mitls-fstar.git mitls-fstar? [Yn]
+Cloning into 'mitls-fstar'...
+Switched to a new branch 'adl_lowlevel_merge'
+Branch adl_lowlevel_merge set up to track remote branch adl_lowlevel_merge from origin.
+HEAD is now at 01bc100 Windows dependency order seems stricter...
+
+Pulling Spartan
+Do you want to run: try_git_clone ssh://msresearch@msresearch.visualstudio.com/DefaultCollection/Ironclad/_git/Spartan Spartan? [Yn]
+Cloning into 'Spartan'...
+Checking out files:  29% (318/1078)   Checking out files:  30% (324/1078)   Checking out files:  31% (335/1078)   Checking out files:  32% (345/1078)   Checking out files:  33% (356/1078)   Checking out files:  34% (367/1078)   Checking out files:  35% (378/1078)   Checking out files:  36% (389/1078)   Checking out files:  37% (399/1078)   Checking out files:  38% (410/1078)   Checking out files:  39% (421/1078)   Checking out files:  40% (432/1078)   Checking out files:  41% (442/1078)   Checking out files:  42% (453/1078)   Checking out files:  43% (464/1078)   Checking out files:  44% (475/1078)   Checking out files:  45% (486/1078)   Checking out files:  46% (496/1078)   Checking out files:  47% (507/1078)   Checking out files:  48% (518/1078)   Checking out files:  49% (529/1078)   Checking out files:  50% (539/1078)   Checking out files:  51% (550/1078)   Checking out files:  52% (561/1078)   Checking out files:  53% (572/1078)   Checking out files:  54% (583/1078)   Checking out files:  55% (593/1078)   Checking out files:  56% (604/1078)   Checking out files:  57% (615/1078)   Checking out files:  58% (626/1078)   Checking out files:  59% (637/1078)   Checking out files:  60% (647/1078)   Checking out files:  61% (658/1078)   Checking out files:  62% (669/1078)   Checking out files:  62% (674/1078)   Checking out files:  63% (680/1078)   Checking out files:  64% (690/1078)   Checking out files:  65% (701/1078)   Checking out files:  66% (712/1078)   Checking out files:  67% (723/1078)   Checking out files:  68% (734/1078)   Checking out files:  69% (744/1078)   Checking out files:  70% (755/1078)   Checking out files:  71% (766/1078)   Checking out files:  72% (777/1078)   Checking out files:  73% (787/1078)   Checking out files:  74% (798/1078)   Checking out files:  75% (809/1078)   Checking out files:  76% (820/1078)   Checking out files:  77% (831/1078)   Checking out files:  78% (841/1078)   Checking out files:  79% (852/1078)   Checking out files:  80% (863/1078)   Checking out files:  81% (874/1078)   Checking out files:  82% (884/1078)   Checking out files:  83% (895/1078)   Checking out files:  84% (906/1078)   Checking out files:  85% (917/1078)   Checking out files:  86% (928/1078)   Checking out files:  87% (938/1078)   Checking out files:  88% (949/1078)   Checking out files:  89% (960/1078)   Checking out files:  90% (971/1078)   Checking out files:  91% (981/1078)   Checking out files:  92% (992/1078)   Checking out files:  93% (1003/1078)   Checking out files:  94% (1014/1078)   Checking out files:  95% (1025/1078)   Checking out files:  96% (1035/1078)   Checking out files:  97% (1046/1078)   Checking out files:  98% (1057/1078)   Checking out files:  99% (1068/1078)   Checking out files: 100% (1078/1078)   Checking out files: 100% (1078/1078), done.
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at febadc0 Fix .gen.dfy dependency tracking
+
+Pulling FStar
+Do you want to run: try_git_clone git@github.com:FStarLang/FStar.git FStar? [Yn]
+Cloning into 'FStar'...
+Checking out files:  38% (919/2413)   Checking out files:  39% (942/2413)   Checking out files:  40% (966/2413)   Checking out files:  41% (990/2413)   Checking out files:  42% (1014/2413)   Checking out files:  43% (1038/2413)   Checking out files:  44% (1062/2413)   Checking out files:  45% (1086/2413)   Checking out files:  46% (1110/2413)   Checking out files:  47% (1135/2413)   Checking out files:  48% (1159/2413)   Checking out files:  49% (1183/2413)   Checking out files:  50% (1207/2413)   Checking out files:  51% (1231/2413)   Checking out files:  52% (1255/2413)   Checking out files:  53% (1279/2413)   Checking out files:  54% (1304/2413)   Checking out files:  55% (1328/2413)   Checking out files:  56% (1352/2413)   Checking out files:  57% (1376/2413)   Checking out files:  58% (1400/2413)   Checking out files:  59% (1424/2413)   Checking out files:  60% (1448/2413)   Checking out files:  61% (1472/2413)   Checking out files:  62% (1497/2413)   Checking out files:  63% (1521/2413)   Checking out files:  64% (1545/2413)   Checking out files:  65% (1569/2413)   Checking out files:  66% (1593/2413)   Checking out files:  67% (1617/2413)   Checking out files:  68% (1641/2413)   Checking out files:  69% (1665/2413)   Checking out files:  70% (1690/2413)   Checking out files:  71% (1714/2413)   Checking out files:  72% (1738/2413)   Checking out files:  73% (1762/2413)   Checking out files:  74% (1786/2413)   Checking out files:  75% (1810/2413)   Checking out files:  76% (1834/2413)   Checking out files:  77% (1859/2413)   Checking out files:  78% (1883/2413)   Checking out files:  79% (1907/2413)   Checking out files:  80% (1931/2413)   Checking out files:  81% (1955/2413)   Checking out files:  81% (1967/2413)   Checking out files:  82% (1979/2413)   Checking out files:  83% (2003/2413)   Checking out files:  84% (2027/2413)   Checking out files:  85% (2052/2413)   Checking out files:  86% (2076/2413)   Checking out files:  87% (2100/2413)   Checking out files:  88% (2124/2413)   Checking out files:  89% (2148/2413)   Checking out files:  90% (2172/2413)   Checking out files:  91% (2196/2413)   Checking out files:  92% (2220/2413)   Checking out files:  93% (2245/2413)   Checking out files:  94% (2269/2413)   Checking out files:  95% (2293/2413)   Checking out files:  96% (2317/2413)   Checking out files:  97% (2341/2413)   Checking out files:  98% (2365/2413)   Checking out files:  99% (2389/2413)   Checking out files: 100% (2413/2413)   Checking out files: 100% (2413/2413), done.
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at bae9872 Merge branch 'master' of pro.github.com:FStarLang/FStar
+
+Pulling hacl-star
+Do you want to run: try_git_clone git@github.com:mitls/hacl-star.git hacl-star? [Yn]
+Cloning into 'hacl-star'...
+Switched to a new branch 'jk_dev'
+Branch jk_dev set up to track remote branch jk_dev from origin.
+HEAD is now at efafdee More progress
+
+Pulling kremlin
+Do you want to run: try_git_clone git@github.com:FStarLang/kremlin.git kremlin? [Yn]
+Cloning into 'kremlin'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at ad37e6d Fix bug
+Already up-to-date.
+Already up-to-date.
+Updating bae9872..60339d6
+Fast-forward
+INSTALL.md                                   |  32 +--
+examples/bug-reports/bug152.fst              |   2 +-
+examples/bug-reports/bug607.fst              |  13 ++
+examples/bug-reports/bug769.fst              |  10 +
+examples/bug-reports/bug769b.fst             |   7 +
+examples/bug-reports/bug769c.fst             |   5 +
+examples/bug-reports/bug769d.fst             |   4 +
+src/ocaml-output/FStar_Extraction_ML_Code.ml | Bin 52422 -> 46342 bytes
+src/ocaml-output/FStar_FStar.ml              | Bin 9386 -> 9359 bytes
+src/ocaml-output/FStar_Format.ml             | Bin 2754 -> 2592 bytes
+src/ocaml-output/Makefile                    |   2 +-
+ulib/FStar.ListProperties.fst                |   6 +
+ulib/FStar.ListProperties.fst.hints          | 284 ++++++++++++++++-----------
+13 files changed, 242 insertions(+), 123 deletions(-)
+create mode 100644 examples/bug-reports/bug607.fst
+create mode 100644 examples/bug-reports/bug769.fst
+create mode 100644 examples/bug-reports/bug769b.fst
+create mode 100644 examples/bug-reports/bug769c.fst
+create mode 100644 examples/bug-reports/bug769d.fst
+Updating efafdee..1a44e72
+Fast-forward
+crypto/bignum/Hacl.Bignum.Fmul.fst                 |   2 +-
+crypto/bignum/Hacl.Bignum.fst                      |  26 +-
+crypto/bignum/Hacl.Spec.Bignum.Fmul.fst            |   1 -
+crypto/bignum/Hacl.Spec.Bignum.fst                 |  50 ++
+crypto/bignum/Makefile                             |   4 +
+crypto/bignum/interfaces/Hacl.Bignum.Fsquare.fsti  |   1 +
+.../interfaces/Hacl.Spec.Bignum.Fsquare.fsti       |   2 +
+.../bignum/poly1305/Hacl.Bignum.AddAndMultiply.fst |  48 ++
+crypto/bignum/poly1305/Hacl.Bignum.Modulo.fst      |  79 ++-
+crypto/bignum/poly1305/Hacl.MAC.Poly1305_64.fst    | 198 +++---
+.../poly1305/Hacl.Spec.Bignum.AddAndMultiply.fst   | 528 ++++++++++++++++
+crypto/bignum/poly1305/Hacl.Spec.Bignum.Modulo.fst | 251 +++++++-
+crypto/bignum/x25519/Hacl.Bignum.Crecip.fst        |   5 +
+crypto/bignum/x25519/Hacl.Bignum.Fsquare.fst       | 113 ++++
+crypto/bignum/x25519/Hacl.EC.AddAndDouble.fst      | 245 +++++++-
+crypto/bignum/x25519/Hacl.Spec.Bignum.Fsquare.fst  | 679 +++++++++++++++++++++
+crypto/bignum/x25519/Hacl.Spec.Bignum.Modulo.fst   |   4 +-
+crypto/bignum/x25519/Hacl.Spec.EC.AddAndDouble.fst | 189 +++++-
+.../bignum/x25519/Hacl.Spec.EC.AddAndDouble2.fst   |  45 ++
+19 files changed, 2319 insertions(+), 151 deletions(-)
+create mode 100644 crypto/bignum/Hacl.Spec.Bignum.fst
+create mode 100644 crypto/bignum/interfaces/Hacl.Bignum.Fsquare.fsti
+create mode 100644 crypto/bignum/interfaces/Hacl.Spec.Bignum.Fsquare.fsti
+create mode 100644 crypto/bignum/poly1305/Hacl.Bignum.AddAndMultiply.fst
+create mode 100644 crypto/bignum/poly1305/Hacl.Spec.Bignum.AddAndMultiply.fst
+create mode 100644 crypto/bignum/x25519/Hacl.Bignum.Fsquare.fst
+create mode 100644 crypto/bignum/x25519/Hacl.Spec.Bignum.Fsquare.fst
+create mode 100644 crypto/bignum/x25519/Hacl.Spec.EC.AddAndDouble2.fst
+Already up-to-date.
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent2/_work/8/s
+
+exported FSTAR_HOME=C:/Build/Agent2/_work/8/s/FStar
+exported SPARTAN_HOME=C:/Build/Agent2/_work/8/s/Spartan
+exported PATH=/cygdrive/c/Build/Agent2/_work/8/s/FStar/ucontrib/CoreCrypto/ml/openssl:/cygdrive/c/Build/Agent2/_work/8/s/FStar/bin:/cygdrive/c/Build/Agent2/_work/8/s/kremlin:/home/everbld/everest/z3-4.5.0-x64-win/bin:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin/amd64:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin:/cygdrive/c/PROGRA~2/MIA713~1/F#/4.0/FRAMEW~1/v4.0/:/home/everbld/.opam/system/bin:/usr/x86_64-w64-mingw32/sys-root/mingw/bin/:/usr/local/bin:/usr/bin:/cygdrive/c/Build/Agent2/externals/git/cmd:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/windows/system32:/cygdrive/c/windows:/cygdrive/c/windows/System32/Wbem:/cygdrive/c/windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:%USERPROFILE%/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit:/cygdrive/c/Python35-32:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin:/cygdrive/c/Build/Agent2/bin:/cygdrive/c/Build/Agent2/bin
+Rebuilding FStar
+Running make -C FStar/src/ocaml-output -j 15
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/8/s/FStar/src/ocaml-output'
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+echo 'let version = "0.9.3.1-beta"' > FStar_Version.ml
+cp parse.mly ../parser/ml/
+echo 'let platform = "Windows_x64"' >> FStar_Version.ml
+echo "%{" > ../parser/parse.fsy
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+# We are opening the same module twice but we need these modules
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo 'let date = "2016-12-29T16:02:10-08:00"' >> FStar_Version.ml
+# open for the definition of tokens
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo 'let commit= "60339d6"' >> FStar_Version.ml
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar.Absyn.Syntax" >> ../parser/parse.fsy
+echo "open FStar_Absyn_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar.Absyn.Const" >> ../parser/parse.fsy
+echo "open FStar_Absyn_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Absyn.Util" >> ../parser/parse.fsy
+echo "open FStar_Absyn_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar.String" >> ../parser/parse.fsy
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# TODO: create a proper OCamlbuild rule for this production so that
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+cd ../../ && ocamlbuild -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I lib/ml -use-ocamlfind main.native
+mkdir 'C:\Build\Agent2\_work\8\s\FStar\src/ocaml-output/_build'
+mkdir src
+mkdir src/fstar
+mkdir src/fstar/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/fstar/ml/main.ml > src/fstar/ml/main.ml.depends
+mkdir src/ocaml-output
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_FStar.ml > src/ocaml-output/FStar_FStar.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Absyn_Syntax.ml > src/ocaml-output/FStar_Absyn_Syntax.ml.depends
+mkdir lib
+mkdir lib/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_All.ml > lib/ml/FStar_All.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Const.ml > src/ocaml-output/FStar_Const.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_BaseTypes.ml > lib/ml/FStar_BaseTypes.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Char.ml > lib/ml/FStar_Char.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Float.ml > lib/ml/FStar_Float.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Int16.ml > lib/ml/FStar_Int16.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Int32.ml > lib/ml/FStar_Int32.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Int64.ml > lib/ml/FStar_Int64.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Int8.ml > lib/ml/FStar_Int8.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_UInt16.ml > lib/ml/FStar_UInt16.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_UInt8.ml > lib/ml/FStar_UInt8.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Char.cmo lib/ml/FStar_Char.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Float.cmo lib/ml/FStar_Float.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int16.cmo lib/ml/FStar_Int16.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int32.cmo lib/ml/FStar_Int32.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int64.cmo lib/ml/FStar_Int64.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int8.cmo lib/ml/FStar_Int8.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_UInt16.cmo lib/ml/FStar_UInt16.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_UInt8.cmo lib/ml/FStar_UInt8.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Ident.ml > src/ocaml-output/FStar_Ident.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_All.cmo lib/ml/FStar_All.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_List.ml > lib/ml/FStar_List.ml.depends
+mkdir src/basic
+mkdir src/basic/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Range.ml > src/basic/ml/FStar_Range.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_BaseTypes.cmo lib/ml/FStar_BaseTypes.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Util.ml > src/basic/ml/FStar_Util.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_List.cmo lib/ml/FStar_List.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/prims.ml > lib/ml/prims.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/MkPrims.ml > lib/ml/MkPrims.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/MkPrims.cmo lib/ml/MkPrims.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/prims.cmo lib/ml/prims.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Util.cmo src/basic/ml/FStar_Util.ml
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_ST.ml > lib/ml/FStar_ST.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_String.ml > lib/ml/FStar_String.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Range.cmo src/basic/ml/FStar_Range.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_ST.cmo lib/ml/FStar_ST.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_String.cmo lib/ml/FStar_String.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Ident.cmo src/ocaml-output/FStar_Ident.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Unionfind.ml > src/basic/ml/FStar_Unionfind.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Const.cmo src/ocaml-output/FStar_Const.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Unionfind.cmo src/basic/ml/FStar_Unionfind.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Absyn_Util.ml > src/ocaml-output/FStar_Absyn_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Absyn_Const.ml > src/ocaml-output/FStar_Absyn_Const.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Syntax.cmo src/ocaml-output/FStar_Absyn_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Absyn_Visit.ml > src/ocaml-output/FStar_Absyn_Visit.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Const.cmo src/ocaml-output/FStar_Absyn_Const.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Visit.cmo src/ocaml-output/FStar_Absyn_Visit.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Dependences.ml > src/ocaml-output/FStar_Dependences.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Options.ml > src/ocaml-output/FStar_Options.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Getopt.ml > src/basic/ml/FStar_Getopt.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Platform.ml > src/basic/ml/FStar_Platform.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Getopt.cmo src/basic/ml/FStar_Getopt.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Platform.cmo src/basic/ml/FStar_Platform.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_Dep.ml > src/ocaml-output/FStar_Parser_Dep.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Options.cmo src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_AST.ml > src/ocaml-output/FStar_Parser_AST.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Absyn_Print.ml > src/ocaml-output/FStar_Absyn_Print.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Util.cmo src/ocaml-output/FStar_Absyn_Util.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_Syntax.ml > src/ocaml-output/FStar_Syntax_Syntax.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_Util.ml > src/ocaml-output/FStar_Syntax_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_Const.ml > src/ocaml-output/FStar_Syntax_Const.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Syntax.cmo src/ocaml-output/FStar_Syntax_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_InstFV.ml > src/ocaml-output/FStar_Syntax_InstFV.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_Subst.ml > src/ocaml-output/FStar_Syntax_Subst.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Option.ml > lib/ml/FStar_Option.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Option.cmo lib/ml/FStar_Option.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Subst.cmo src/ocaml-output/FStar_Syntax_Subst.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Const.cmo src/ocaml-output/FStar_Syntax_Const.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_InstFV.cmo src/ocaml-output/FStar_Syntax_InstFV.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Errors.ml > src/ocaml-output/FStar_Tc_Errors.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Print.cmo src/ocaml-output/FStar_Absyn_Print.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Env.ml > src/ocaml-output/FStar_Tc_Env.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Normalize.ml > src/ocaml-output/FStar_Tc_Normalize.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Env.cmo src/ocaml-output/FStar_Tc_Env.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Recheck.ml > src/ocaml-output/FStar_Tc_Recheck.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Recheck.cmo src/ocaml-output/FStar_Tc_Recheck.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Normalize.cmo src/ocaml-output/FStar_Tc_Normalize.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Util.cmo src/ocaml-output/FStar_Syntax_Util.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Errors.cmo src/ocaml-output/FStar_Tc_Errors.ml
