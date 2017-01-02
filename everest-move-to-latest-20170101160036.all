@@ -1,0 +1,1458 @@
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent2/_work/8/s
+
+Checking environment
+... which found
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+... all 41 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... all 15 ocamlfind packages found
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+... correct z3 version detected
+
+Remember to run source ~/.bashrc if it was modified!
+Note: you *may* want to add /cygdrive/c/Build/Agent2/_work/8/s/FStar/bin and /cygdrive/c/Build/Agent2/_work/8/s/kremlin to your PATH
+Note: you *may* want to export FSTAR_HOME=/cygdrive/c/Build/Agent2/_work/8/s/FStar
+
+Pulling mitls-fstar
+Note: you're welcome to create symbolic links if you already have cloned the repository elsewhere
+Do you want to run: try_git_clone git@github.com:mitls/mitls-fstar.git mitls-fstar? [Yn]
+Cloning into 'mitls-fstar'...
+Switched to a new branch 'adl_lowlevel_merge'
+Branch adl_lowlevel_merge set up to track remote branch adl_lowlevel_merge from origin.
+HEAD is now at 8086422 Temporarily disable client test
+
+Pulling Spartan
+Do you want to run: try_git_clone ssh://msresearch@msresearch.visualstudio.com/DefaultCollection/Ironclad/_git/Spartan Spartan? [Yn]
+Cloning into 'Spartan'...
+Checking out files:  23% (257/1076)   Checking out files:  24% (259/1076)   Checking out files:  25% (269/1076)   Checking out files:  26% (280/1076)   Checking out files:  27% (291/1076)   Checking out files:  28% (302/1076)   Checking out files:  29% (313/1076)   Checking out files:  30% (323/1076)   Checking out files:  31% (334/1076)   Checking out files:  32% (345/1076)   Checking out files:  33% (356/1076)   Checking out files:  34% (366/1076)   Checking out files:  35% (377/1076)   Checking out files:  36% (388/1076)   Checking out files:  37% (399/1076)   Checking out files:  38% (409/1076)   Checking out files:  39% (420/1076)   Checking out files:  40% (431/1076)   Checking out files:  41% (442/1076)   Checking out files:  42% (452/1076)   Checking out files:  43% (463/1076)   Checking out files:  44% (474/1076)   Checking out files:  45% (485/1076)   Checking out files:  46% (495/1076)   Checking out files:  47% (506/1076)   Checking out files:  48% (517/1076)   Checking out files:  49% (528/1076)   Checking out files:  50% (538/1076)   Checking out files:  51% (549/1076)   Checking out files:  52% (560/1076)   Checking out files:  53% (571/1076)   Checking out files:  54% (582/1076)   Checking out files:  55% (592/1076)   Checking out files:  56% (603/1076)   Checking out files:  57% (614/1076)   Checking out files:  58% (625/1076)   Checking out files:  59% (635/1076)   Checking out files:  60% (646/1076)   Checking out files:  61% (657/1076)   Checking out files:  61% (662/1076)   Checking out files:  62% (668/1076)   Checking out files:  63% (678/1076)   Checking out files:  64% (689/1076)   Checking out files:  65% (700/1076)   Checking out files:  66% (711/1076)   Checking out files:  67% (721/1076)   Checking out files:  68% (732/1076)   Checking out files:  69% (743/1076)   Checking out files:  70% (754/1076)   Checking out files:  71% (764/1076)   Checking out files:  72% (775/1076)   Checking out files:  73% (786/1076)   Checking out files:  74% (797/1076)   Checking out files:  75% (807/1076)   Checking out files:  76% (818/1076)   Checking out files:  77% (829/1076)   Checking out files:  78% (840/1076)   Checking out files:  79% (851/1076)   Checking out files:  80% (861/1076)   Checking out files:  81% (872/1076)   Checking out files:  82% (883/1076)   Checking out files:  83% (894/1076)   Checking out files:  84% (904/1076)   Checking out files:  85% (915/1076)   Checking out files:  86% (926/1076)   Checking out files:  87% (937/1076)   Checking out files:  88% (947/1076)   Checking out files:  89% (958/1076)   Checking out files:  90% (969/1076)   Checking out files:  91% (980/1076)   Checking out files:  92% (990/1076)   Checking out files:  93% (1001/1076)   Checking out files:  94% (1012/1076)   Checking out files:  95% (1023/1076)   Checking out files:  96% (1033/1076)   Checking out files:  97% (1044/1076)   Checking out files:  98% (1055/1076)   Checking out files:  99% (1066/1076)   Checking out files: 100% (1076/1076)   Checking out files: 100% (1076/1076), done.
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at febadc0 Fix .gen.dfy dependency tracking
+
+Pulling FStar
+Do you want to run: try_git_clone git@github.com:FStarLang/FStar.git FStar? [Yn]
+Cloning into 'FStar'...
+Checking out files:  30% (729/2415)   Checking out files:  31% (749/2415)   Checking out files:  32% (773/2415)   Checking out files:  33% (797/2415)   Checking out files:  34% (822/2415)   Checking out files:  35% (846/2415)   Checking out files:  36% (870/2415)   Checking out files:  37% (894/2415)   Checking out files:  38% (918/2415)   Checking out files:  39% (942/2415)   Checking out files:  40% (966/2415)   Checking out files:  41% (991/2415)   Checking out files:  42% (1015/2415)   Checking out files:  43% (1039/2415)   Checking out files:  44% (1063/2415)   Checking out files:  45% (1087/2415)   Checking out files:  46% (1111/2415)   Checking out files:  47% (1136/2415)   Checking out files:  48% (1160/2415)   Checking out files:  49% (1184/2415)   Checking out files:  50% (1208/2415)   Checking out files:  51% (1232/2415)   Checking out files:  52% (1256/2415)   Checking out files:  53% (1280/2415)   Checking out files:  54% (1305/2415)   Checking out files:  55% (1329/2415)   Checking out files:  56% (1353/2415)   Checking out files:  57% (1377/2415)   Checking out files:  58% (1401/2415)   Checking out files:  59% (1425/2415)   Checking out files:  60% (1449/2415)   Checking out files:  61% (1474/2415)   Checking out files:  62% (1498/2415)   Checking out files:  63% (1522/2415)   Checking out files:  64% (1546/2415)   Checking out files:  65% (1570/2415)   Checking out files:  65% (1572/2415)   Checking out files:  66% (1594/2415)   Checking out files:  67% (1619/2415)   Checking out files:  68% (1643/2415)   Checking out files:  69% (1667/2415)   Checking out files:  70% (1691/2415)   Checking out files:  71% (1715/2415)   Checking out files:  72% (1739/2415)   Checking out files:  73% (1763/2415)   Checking out files:  74% (1788/2415)   Checking out files:  75% (1812/2415)   Checking out files:  76% (1836/2415)   Checking out files:  77% (1860/2415)   Checking out files:  78% (1884/2415)   Checking out files:  79% (1908/2415)   Checking out files:  80% (1932/2415)   Checking out files:  81% (1957/2415)   Checking out files:  82% (1981/2415)   Checking out files:  83% (2005/2415)   Checking out files:  84% (2029/2415)   Checking out files:  85% (2053/2415)   Checking out files:  86% (2077/2415)   Checking out files:  87% (2102/2415)   Checking out files:  88% (2126/2415)   Checking out files:  89% (2150/2415)   Checking out files:  90% (2174/2415)   Checking out files:  91% (2198/2415)   Checking out files:  92% (2222/2415)   Checking out files:  93% (2246/2415)   Checking out files:  94% (2271/2415)   Checking out files:  95% (2295/2415)   Checking out files:  96% (2319/2415)   Checking out files:  97% (2343/2415)   Checking out files:  98% (2367/2415)   Checking out files:  99% (2391/2415)   Checking out files: 100% (2415/2415)   Checking out files: 100% (2415/2415), done.
+error: pathspec 'c_record_planA' did not match any file(s) known to git.
+Updating 8086422..01bc100
+Fast-forward
+.fstar_version           |  2 +-
+src/tls/AEADProvider.fst | 16 ++++++++--------
+src/tls/Makefile         | 10 ++++++----
+3 files changed, 15 insertions(+), 13 deletions(-)
+Updating febadc0..8f6e842
+Fast-forward
+.gitignore                                         |  29 +-
+README.md                                          |   6 +-
+SConscript                                         |  36 +-
+SConstruct                                         | 126 ++--
+src/arch/arm/{decls.spd => decls.vad}              |  38 +-
+src/arch/arm/leakage.i.dfy                         |  86 +--
+src/arch/arm/{spartan.i.dfy => vale.i.dfy}         | 130 ++--
+src/arch/x64/{decls.spd => decls.vad}              |  18 +-
+src/arch/x64/printMasm.s.dfy                       |   2 +-
+src/arch/x64/{spartan.i.dfy => vale.i.dfy}         | 129 ++--
+src/arch/x86/{decls.spd => decls.vad}              |  14 +-
+src/arch/x86/leakage.i.dfy                         |  14 +-
+src/arch/x86/printGcc.s.dfy                        |   2 +-
+src/arch/x86/printMasm.s.dfy                       |   2 +-
+src/arch/x86/{spartan.i.dfy => vale.i.dfy}         | 121 ++--
+src/crypto/aes/aes-x64/aes.h                       |   2 +-
+src/crypto/aes/aes-x64/{aes.spd => aes.vad}        |  20 +-
+src/crypto/aes/aes-x64/aes_main.i.dfy              |   2 +-
+src/crypto/aes/aes-x64/testaes.c                   |   2 +-
+src/crypto/aes/{aes.spd => aes.vad}                |  17 +-
+src/crypto/aes/aes_lemmas.i.dfy                    |   2 +-
+src/crypto/aes/aes_main.i.dfy                      |   2 +-
+src/crypto/aes/{cbc.spd => cbc.vad}                |  30 +-
+src/crypto/aes/cbc_helpers.i.dfy                   |   8 +-
+src/crypto/aes/testcbc.c                           |   6 +-
+src/crypto/hashing/EverestSHA256.c                 |  10 +-
+src/crypto/hashing/EverestSHA256Glue.c             |   4 +-
+src/crypto/hashing/buildengine.bat                 |   4 +-
+src/crypto/hashing/buildtestsha256.bat             |   8 +-
+src/crypto/hashing/sha-arm/sha256-helpers.i.dfy    |   4 +-
+src/crypto/hashing/sha-arm/sha256-invariants.i.dfy |   4 +-
+.../hashing/sha-arm/{sha256.spd => sha256.vad}     |  18 +-
+.../hashing/sha-x64/{sha256.spd => sha256.vad}     |  47 +-
+src/crypto/hashing/sha-x64/sha256_helpers.i.dfy    |   4 +-
+...6_spartan_main.i.dfy => sha256_vale_main.i.dfy} |   4 +-
+src/crypto/hashing/{sha256.spd => sha256.vad}      |  47 +-
+src/crypto/hashing/sha256_helpers.i.dfy            |   4 +-
+src/crypto/hashing/sha256_hmac.i.dfy               |   2 +-
+src/crypto/hashing/sha256_main.i.dfy               |  10 +-
+...6_spartan_main.i.dfy => sha256_vale_main.i.dfy} |   4 +-
+src/crypto/hashing/testsha256.c                    |  24 +-
+.../{parser_help.i.dfy => dafny_wrappers.i.dfy}    |   4 +-
+src/lib/util/heaplets.i.dfy                        |  12 +-
+src/lib/util/heaplets64.i.dfy                      |  12 +-
+src/test/{memcpy.spd => memcpy.vad}                |   8 +-
+src/test/{stack-test.spd => stack-test.vad}        |   8 +-
+tools/Spartan/src/Spartan.sln                      |  22 -
+tools/Spartan/src/VisualStudio/Spartan.fsproj      | 161 -----
+tools/Spartan/src/emit_mindy_direct.fs             | 661 ---------------------
+tools/Spartan/test/DottedNames.spd                 | 172 ------
+tools/Spartan/test/assert-by.spd                   | 181 ------
+tools/Spartan/test/calc.spd                        | 122 ----
+tools/Spartan/test/refined1.spd                    | 204 -------
+.../DafnyInterface/Source/DafnyInterface.sln       |   0
+.../Source/DafnyInterface/DafnyDriver.cs           | 390 ++++++------
+.../Source/DafnyInterface/DafnyInterface.csproj    |   0
+.../DafnyInterface/Properties/AssemblyInfo.cs      |   0
+.../DafnyInterface/bin/DafnyInterface.dll          | Bin
+tools/{Spartan => Vale}/SConscript                 | 169 +++---
+tools/{Spartan => Vale}/doc/index.html             | 216 +++----
+.../src/VisualStudio => Vale/src}/.gitignore       |   0
+.../src/Spartan.fsproj => Vale/src/Vale.fsproj}    |  16 +-
+.../VisualStudio/Spartan.sln => Vale/src/Vale.sln} |   2 +-
+tools/{Spartan => Vale}/src/ast.fs                 |   0
+tools/{Spartan => Vale}/src/ast_util.fs            |   0
+tools/{Spartan => Vale}/src/debug_print.fs         |   0
+tools/{Spartan => Vale}/src/emit_common.fs         |  22 +-
+tools/{Spartan => Vale}/src/emit_dafny_direct.fs   |   4 +-
+tools/{Spartan => Vale}/src/emit_dafny_text.fs     |   0
+tools/{Spartan => Vale}/src/emit_fstar_text.fs     |   0
+.../src/emit_vale_text.fs}                         |   2 +-
+tools/{Spartan => Vale}/src/lex.fsl                |   0
+tools/{Spartan => Vale}/src/main.fs                |   2 +-
+tools/{Spartan => Vale}/src/packages.config        |   0
+tools/{Spartan => Vale}/src/parse.fsy              |   0
+tools/{Spartan => Vale}/src/parse_util.fs          |   0
+tools/{Spartan => Vale}/src/transform.fs           |   7 +-
+tools/Vale/test/DottedNames.vad                    |  88 +++
+tools/Vale/test/assert-by.vad                      |  98 +++
+tools/Vale/test/calc.vad                           |  36 ++
+.../test/inline-if.spd => Vale/test/common.vad}    |  97 +--
+tools/Vale/test/inline-if.vad                      |  37 ++
+tools/Vale/test/refined1.vad                       | 121 ++++
+.../test/refined2.spd => Vale/test/refined2.vad}   |  38 +-
+.../test/refined3.spd => Vale/test/refined3.vad}   |  28 +-
+IRONROOT.sentinel => unreleased/IRONROOT.sentinel  |   0
+STYLE.md => unreleased/STYLE.md                    |   0
+.../bin_tools}/NuBuild/AzureManager.exe            | Bin
+.../bin_tools}/NuBuild/AzureManager.pdb            | Bin
+.../bin_tools}/NuBuild/Microsoft.Data.Edm.dll      | Bin
+.../bin_tools}/NuBuild/Microsoft.Data.Edm.xml      |   0
+.../bin_tools}/NuBuild/Microsoft.Data.OData.dll    | Bin
+.../bin_tools}/NuBuild/Microsoft.Data.OData.xml    |   0
+.../NuBuild/Microsoft.Data.Services.Client.dll     | Bin
+.../NuBuild/Microsoft.Data.Services.Client.xml     |   0
+.../NuBuild/Microsoft.Threading.Tasks.dll          | Bin
+.../NuBuild/Microsoft.Threading.Tasks.xml          |   0
+.../Microsoft.WindowsAzure.Common.NetFramework.dll | Bin
+.../Microsoft.WindowsAzure.Common.NetFramework.xml |   0
+.../NuBuild/Microsoft.WindowsAzure.Common.dll      | Bin
+.../NuBuild/Microsoft.WindowsAzure.Common.xml      |   0
+.../Microsoft.WindowsAzure.Management.Compute.dll  | Bin
+.../Microsoft.WindowsAzure.Management.Compute.xml  |   0
+.../Microsoft.WindowsAzure.Management.Storage.dll  | Bin
+.../Microsoft.WindowsAzure.Management.Storage.xml  |   0
+.../NuBuild/Microsoft.WindowsAzure.Storage.dll     | Bin
+.../NuBuild/Microsoft.WindowsAzure.Storage.xml     |   0
+.../bin_tools}/NuBuild/NuBuild.exe                 | Bin
+.../bin_tools}/NuBuild/NuBuild.pdb                 | Bin
+.../bin_tools}/NuBuild/NuBuild.vshost.exe          | Bin
+.../bin_tools}/NuBuild/NuBuild.vshost.exe.config   |   0
+.../bin_tools}/NuBuild/NuBuild.vshost.exe.manifest |   0
+.../bin_tools}/NuBuild/System.Spatial.dll          | Bin
+.../bin_tools}/NuBuild/System.Spatial.xml          |   0
+.../experiments}/crypto-perf-tests/.gitignore      |   0
+.../experiments}/crypto-perf-tests/common/Makefile |   0
+.../crypto-perf-tests/common/common.cc             |   0
+.../experiments}/crypto-perf-tests/common/common.h |   0
+.../experiments}/crypto-perf-tests/driver.go       |   0
+.../crypto-perf-tests/tests/boringssl/cbc/Makefile |   0
+.../crypto-perf-tests/tests/boringssl/cbc/old.cc   |   0
+.../tests/boringssl/cbc/source.cc                  |   0
+.../crypto-perf-tests/tests/boringssl/gcm/Makefile |   0
+.../tests/boringssl/gcm/source.cc                  |   0
+.../tests/boringssl/sha256/Makefile                |   0
+.../tests/boringssl/sha256/source.cc               |   0
+.../tests/boringssl/x25519/Makefile                |   0
+.../tests/boringssl/x25519/source.cc               |   0
+.../crypto-perf-tests/tests/botan/25519/Makefile   |   0
+.../crypto-perf-tests/tests/botan/25519/source.cc  |   0
+.../crypto-perf-tests/tests/botan/cbc/Makefile     |   0
+.../crypto-perf-tests/tests/botan/cbc/source.cc    |   0
+.../tests/botan/chacha20/Makefile                  |   0
+.../tests/botan/chacha20/source.cc                 |   0
+.../crypto-perf-tests/tests/botan/gcm/Makefile     |   0
+.../crypto-perf-tests/tests/botan/gcm/source.cc    |   0
+.../crypto-perf-tests/tests/botan/sha256/Makefile  |   0
+.../crypto-perf-tests/tests/botan/sha256/source.cc |   0
+.../crypto-perf-tests/tests/cryptopp/cbc/Makefile  |   0
+.../crypto-perf-tests/tests/cryptopp/cbc/source.cc |   0
+.../tests/cryptopp/chacha20/Makefile               |   0
+.../tests/cryptopp/chacha20/source.cc              |   0
+.../crypto-perf-tests/tests/cryptopp/gcm/Makefile  |   0
+.../crypto-perf-tests/tests/cryptopp/gcm/source.cc |   0
+.../tests/cryptopp/sha256/Makefile                 |   0
+.../tests/cryptopp/sha256/source.cc                |   0
+.../tests/libgcrypt/25519/Makefile                 |   0
+.../tests/libgcrypt/25519/source.cc                |   0
+.../crypto-perf-tests/tests/libgcrypt/cbc/Makefile |   0
+.../tests/libgcrypt/cbc/source.cc                  |   0
+.../tests/libgcrypt/chacha20/Makefile              |   0
+.../tests/libgcrypt/chacha20/source.cc             |   0
+.../crypto-perf-tests/tests/libgcrypt/gcm/Makefile |   0
+.../tests/libgcrypt/gcm/source.cc                  |   0
+.../tests/libgcrypt/sha256/Makefile                |   0
+.../tests/libgcrypt/sha256/source.cc               |   0
+.../tests/libsodium/chacha20/Makefile              |   0
+.../tests/libsodium/chacha20/source.cc             |   0
+.../crypto-perf-tests/tests/libsodium/gcm/Makefile |   0
+.../tests/libsodium/gcm/source.cc                  |   0
+.../tests/libsodium/sha256/Makefile                |   0
+.../tests/libsodium/sha256/source.cc               |   0
+.../crypto-perf-tests/tests/mbedtls/cbc/Makefile   |   0
+.../crypto-perf-tests/tests/mbedtls/cbc/source.cc  |   0
+.../crypto-perf-tests/tests/mbedtls/gcm/Makefile   |   0
+.../crypto-perf-tests/tests/mbedtls/gcm/source.cc  |   0
+.../tests/mbedtls/sha256/Makefile                  |   0
+.../tests/mbedtls/sha256/source.cc                 |   0
+.../tests/nettle/chacha20/Makefile                 |   0
+.../tests/nettle/chacha20/source.cc                |   0
+.../tests/nettle/gcm.broken/Makefile               |   0
+.../tests/nettle/gcm.broken/source.cc              |   0
+.../crypto-perf-tests/tests/nettle/sha256/Makefile |   0
+.../tests/nettle/sha256/source.cc                  |   0
+.../crypto-perf-tests/tests/openssl/cbc/Makefile   |   0
+.../crypto-perf-tests/tests/openssl/cbc/source.cc  |   0
+.../tests/openssl/chacha20/Makefile                |   0
+.../tests/openssl/chacha20/source.cc               |   0
+.../crypto-perf-tests/tests/openssl/gcm/Makefile   |   0
+.../crypto-perf-tests/tests/openssl/gcm/source.cc  |   0
+.../tests/openssl/sha256/Makefile                  |   0
+.../tests/openssl/sha256/source.cc                 |   0
+.../experiments}/spartan/simple-hash.sdfy          |   0
+lit.site.cfg => unreleased/lit.site.cfg            |   0
+makefile => unreleased/makefile                    |   0
+{src => unreleased/src}/arch/x86/def.s.fst         |   0
+{src => unreleased/src}/crypto/aes/fips-197.pdf    | Bin
+.../src}/crypto/aes/intel-aes-docs.pdf             | Bin
+.../crypto/aes/nistspecialpublication800-38d.pdf   | Bin
+{src => unreleased/src}/test/sha256-test.spd       | 162 ++---
+{tools => unreleased/tools}/DepGraph/parse.py      |   0
+{tools => unreleased/tools}/Mindy/App.config       |   0
+.../tools}/Mindy/Binaries/BoogieAbsInt.dll         | Bin
+.../tools}/Mindy/Binaries/BoogieBasetypes.dll      | Bin
+.../Mindy/Binaries/BoogieCodeContractsExtender.dll | Bin
+.../tools}/Mindy/Binaries/BoogieConcurrency.dll    | Bin
+.../tools}/Mindy/Binaries/BoogieCore.dll           | Bin
+.../tools}/Mindy/Binaries/BoogieDoomed.dll         | Bin
+.../Mindy/Binaries/BoogieExecutionEngine.dll       | Bin
+.../tools}/Mindy/Binaries/BoogieGraph.dll          | Bin
+.../tools}/Mindy/Binaries/BoogieHoudini.dll        | Bin
+.../tools}/Mindy/Binaries/BoogieModel.dll          | Bin
+.../tools}/Mindy/Binaries/BoogieParserHelper.dll   | Bin
+.../tools}/Mindy/Binaries/BoogieVCExpr.dll         | Bin
+.../tools}/Mindy/Binaries/BoogieVCGeneration.dll   | Bin
+.../tools}/Mindy/Binaries/Dafny.exe                | Bin
+.../tools}/Mindy/Binaries/DafnyPipeline.dll        | Bin
+.../tools}/Mindy/Binaries/DafnyPrelude.bpl         |   0
+.../tools}/Mindy/Binaries/Mindy.exe                | Bin
+.../tools}/Mindy/Binaries/Mindy.exe.config         |   0
+.../tools}/Mindy/Binaries/Mindy.pdb                | Bin
+.../tools}/Mindy/Binaries/Mindy.vshost.exe.config  |   0
+.../Mindy/Binaries/Mindy.vshost.exe.manifest       |   0
+.../tools}/Mindy/Binaries/Provers.SMTLib.dll       | Bin
+{tools => unreleased/tools}/Mindy/Binaries/z3.exe  | Bin
+{tools => unreleased/tools}/Mindy/Dafny/AbsInt.dll | Bin
+{tools => unreleased/tools}/Mindy/Dafny/BVD.exe    | Bin
+.../tools}/Mindy/Dafny/BVD.exe.config              |   0
+.../tools}/Mindy/Dafny/Basetypes.dll               | Bin
+{tools => unreleased/tools}/Mindy/Dafny/Boogie.exe | Bin
+{tools => unreleased/tools}/Mindy/Dafny/Boogie.suo | Bin
+.../tools}/Mindy/Dafny/Boogie.vshost.exe           | Bin
+.../tools}/Mindy/Dafny/Boogie.vshost.exe.manifest  |   0
+.../tools}/Mindy/Dafny/BoogieAbsInt.dll            | Bin
+.../tools}/Mindy/Dafny/BoogieBasetypes.dll         | Bin
+.../Mindy/Dafny/BoogieCodeContractsExtender.dll    | Bin
+.../tools}/Mindy/Dafny/BoogieConcurrency.dll       | Bin
+.../tools}/Mindy/Dafny/BoogieCore.dll              | Bin
+.../tools}/Mindy/Dafny/BoogieDoomed.dll            | Bin
+.../tools}/Mindy/Dafny/BoogieExecutionEngine.dll   | Bin
+.../tools}/Mindy/Dafny/BoogieGraph.dll             | Bin
+.../tools}/Mindy/Dafny/BoogieHoudini.dll           | Bin
+.../tools}/Mindy/Dafny/BoogieModel.dll             | Bin
+.../tools}/Mindy/Dafny/BoogieModelViewer.dll       | Bin
+.../tools}/Mindy/Dafny/BoogieParserHelper.dll      | Bin
+.../tools}/Mindy/Dafny/BoogiePredication.dll       | Bin
+.../tools}/Mindy/Dafny/BoogieVCExpr.dll            | Bin
+.../tools}/Mindy/Dafny/BoogieVCGeneration.dll      | Bin
+.../Mindy/Dafny/CodeContracts/Dafny.Contracts.dll  | Bin
+.../tools}/Mindy/Dafny/CodeContractsExtender.dll   | Bin
+.../tools}/Mindy/Dafny/Concurrency.dll             | Bin
+{tools => unreleased/tools}/Mindy/Dafny/Core.dll   | Bin
+{tools => unreleased/tools}/Mindy/Dafny/Dafny.exe  | Bin
+.../tools}/Mindy/Dafny/Dafny.exe.config            |   0
+{tools => unreleased/tools}/Mindy/Dafny/Dafny.pdb  | Bin
+.../tools}/Mindy/Dafny/Dafny.vshost.exe            | Bin
+.../tools}/Mindy/Dafny/Dafny.vshost.exe.config     |   0
+.../tools}/Mindy/Dafny/Dafny.vshost.exe.manifest   |   0
+.../tools}/Mindy/Dafny/DafnyIroncladVsPlugin.vsix  | Bin
+.../tools}/Mindy/Dafny/DafnyLanguageService.dll    | Bin
+.../tools}/Mindy/Dafny/DafnyLanguageService.vsix   | Bin
+.../tools}/Mindy/Dafny/DafnyMenu.dll               | Bin
+.../tools}/Mindy/Dafny/DafnyMenu.pkgdef            | Bin
+.../tools}/Mindy/Dafny/DafnyMenu.vsix              | Bin
+.../tools}/Mindy/Dafny/DafnyOptions.txt            |   0
+.../tools}/Mindy/Dafny/DafnyPipeline.dll           | Bin
+.../tools}/Mindy/Dafny/DafnyPrelude.bpl            |   0
+.../tools}/Mindy/Dafny/DafnyRuntime.cs             |   0
+.../tools}/Mindy/Dafny/DafnyServer.exe             | Bin
+.../tools}/Mindy/Dafny/DafnyServer.exe.config      |   0
+{tools => unreleased/tools}/Mindy/Dafny/Doomed.dll | Bin
+.../tools}/Mindy/Dafny/ExecutionEngine.dll         | Bin
+{tools => unreleased/tools}/Mindy/Dafny/Graph.dll  | Bin
+.../tools}/Mindy/Dafny/Houdini.dll                 | Bin
+.../tools}/Mindy/Dafny/Microsoft.Z3.dll            | Bin
+.../tools}/Mindy/Dafny/Microsoft.Z3.xml            |   0
+.../tools}/Mindy/Dafny/Microsoft.Z3V3.dll          | Bin
+{tools => unreleased/tools}/Mindy/Dafny/Model.dll  | Bin
+.../tools}/Mindy/Dafny/ModelViewer.dll             | Bin
+.../tools}/Mindy/Dafny/ParserHelper.dll            | Bin
+.../tools}/Mindy/Dafny/Predication.dll             | Bin
+.../tools}/Mindy/Dafny/PrepareBoogieZip.bat        |   0
+.../tools}/Mindy/Dafny/PrepareDafnyZip.bat         |   0
+.../tools}/Mindy/Dafny/Provers.SMTLib.dll          | Bin
+.../tools}/Mindy/Dafny/Provers.SMTLib.pdb          | Bin
+{tools => unreleased/tools}/Mindy/Dafny/README     |   0
+.../Mindy/Dafny/System.Collections.Immutable.dll   | Bin
+{tools => unreleased/tools}/Mindy/Dafny/VCExpr.dll | Bin
+.../tools}/Mindy/Dafny/VCGeneration.dll            | Bin
+.../tools}/Mindy/Dafny/Z3-LICENSE.txt              |   0
+.../tools}/Mindy/Dafny/Z3AxiomProfiler.exe         | Bin
+.../tools}/Mindy/Dafny/dafny-server                |   0
+.../tools}/Mindy/Dafny/extension.vsixmanifest      |   0
+{tools => unreleased/tools}/Mindy/Dafny/iZ3.exe    | Bin
+{tools => unreleased/tools}/Mindy/Dafny/libiz3.lib | Bin
+.../tools}/Mindy/Dafny/msvcp100.dll                | Bin
+.../tools}/Mindy/Dafny/msvcr100.dll                | Bin
+.../tools}/Mindy/Dafny/vcomp100.dll                | Bin
+{tools => unreleased/tools}/Mindy/Dafny/z3.dll     | Bin
+{tools => unreleased/tools}/Mindy/Dafny/z3.exe     | Bin
+{tools => unreleased/tools}/Mindy/Dafny/z3.lib     | Bin
+{tools => unreleased/tools}/Mindy/Dafny/z3_dbg.dll | Bin
+{tools => unreleased/tools}/Mindy/Dafny/z3_dbg.lib | Bin
+{tools => unreleased/tools}/Mindy/Mindy.csproj     |   0
+{tools => unreleased/tools}/Mindy/Mindy.sln        |   0
+{tools => unreleased/tools}/Mindy/MindyMain.cs     |   0
+.../tools}/Mindy/Properties/AssemblyInfo.cs        |   0
+{tools => unreleased/tools}/Mindy/Translator.cs    |   0
+{tools => unreleased/tools}/NuBuild/.gitignore     |   0
+.../tools}/NuBuild/AzureManager/App.config         |   0
+.../tools}/NuBuild/AzureManager/AzureAccount.cs    |   0
+.../NuBuild/AzureManager/AzureManager.csproj       |   0
+.../tools}/NuBuild/AzureManager/Program.cs         |   0
+.../AzureManager/Properties/AssemblyInfo.cs        |   0
+.../NuBuild/AzureManager/ServiceConfiguration.cs   |   0
+.../tools}/NuBuild/CloudExecutionEngine/App.config |   0
+.../CloudExecutionEngine.csproj                    |   0
+.../tools}/NuBuild/CloudExecutionEngine/Program.cs |   0
+.../Properties/AssemblyInfo.cs                     |   0
+.../CloudExecutionWorker/CloudExecutionEngine.cs   |   0
+.../CloudExecutionWorker.csproj                    |   0
+.../Properties/AssemblyInfo.cs                     |   0
+.../NuBuild/CloudExecutionWorker/WorkerRole.cs     |   0
+.../tools}/NuBuild/CloudExecutionWorker/app.config |   0
+.../tools}/NuBuild/CloudQueueTool/App.config       |   0
+.../NuBuild/CloudQueueTool/CloudQueueTool.csproj   |   0
+.../tools}/NuBuild/CloudQueueTool/Program.cs       |   0
+.../CloudQueueTool/Properties/AssemblyInfo.cs      |   0
+.../tools}/NuBuild/CustomDictionary.xml            |   0
+.../tools}/NuBuild/ItemCacheTool/App.config        |   0
+.../tools}/NuBuild/ItemCacheTool/CacheState.cs     |   0
+.../NuBuild/ItemCacheTool/ItemCacheTool.csproj     |   0
+.../tools}/NuBuild/ItemCacheTool/Program.cs        |   0
+.../ItemCacheTool/Properties/AssemblyInfo.cs       |   0
+{tools => unreleased/tools}/NuBuild/NuBuild.sln    |   0
+.../tools}/NuBuild/NuBuild/.gitignore              |   0
+.../tools}/NuBuild/NuBuild/AbstractId.cs           |   0
+.../tools}/NuBuild/NuBuild/AnnotationScanner.cs    |   0
+.../tools}/NuBuild/NuBuild/App.config              |   0
+.../tools}/NuBuild/NuBuild/AsmRewriterVerb.cs      |   0
+.../tools}/NuBuild/NuBuild/BackgroundWorker.cs     |   0
+.../NuBuild/NuBuild/BasmObligationIncludes.cs      |   0
+.../NuBuild/NuBuild/BasmTransitiveDepsVerb.cs      |   0
+.../tools}/NuBuild/NuBuild/BatchVerifyVerb.cs      |   0
+.../tools}/NuBuild/NuBuild/BeatExtensions.cs       |   0
+.../tools}/NuBuild/NuBuild/BeatIncludes.cs         |   0
+.../tools}/NuBuild/NuBuild/BeatVerb.cs             |   0
+.../tools}/NuBuild/NuBuild/BoogieAsmDepBase.cs     |   0
+.../tools}/NuBuild/NuBuild/BoogieAsmLinkVerb.cs    |   0
+.../BoogieAsmVerificationObligationListVerb.cs     |   0
+.../tools}/NuBuild/NuBuild/BoogieAsmVerifyVerb.cs  |   0
+.../tools}/NuBuild/NuBuild/BoogieAsmWorkerBase.cs  |   0
+.../tools}/NuBuild/NuBuild/BoogieVerb.cs           |   0
+.../tools}/NuBuild/NuBuild/BootableAppVerb.cs      |   0
+.../tools}/NuBuild/NuBuild/BuildEngine.cs          |   0
+.../tools}/NuBuild/NuBuild/BuildObject.cs          |   0
+.../NuBuild/NuBuild/BuildObjectValuePointer.cs     |   0
+.../tools}/NuBuild/NuBuild/CachedHash.cs           |   0
+.../tools}/NuBuild/NuBuild/CloudExecutionQueue.cs  |   0
+.../tools}/NuBuild/NuBuild/CloudExecutionReport.cs |   0
+.../NuBuild/NuBuild/CloudExecutionRequest.cs       |   0
+.../tools}/NuBuild/NuBuild/CloudExecutionWaiter.cs |   0
+.../tools}/NuBuild/NuBuild/CloudSubmitter.cs       |   0
+.../tools}/NuBuild/NuBuild/ConcatContext.cs        |   0
+.../tools}/NuBuild/NuBuild/ConcatContextVerb.cs    |   0
+.../tools}/NuBuild/NuBuild/ContextContents.cs      |   0
+.../NuBuild/NuBuild/ContextGeneratingVerb.cs       |   0
+.../tools}/NuBuild/NuBuild/CustomManifestParser.cs |   0
+.../tools}/NuBuild/NuBuild/DafnyCCVerb.cs          |   0
+.../tools}/NuBuild/NuBuild/DafnyCompileOneVerb.cs  |   0
+.../NuBuild/NuBuild/DafnyExecutableDependencies.cs |   0
+.../tools}/NuBuild/NuBuild/DafnyExtensions.cs      |   0
+.../tools}/NuBuild/NuBuild/DafnyIncludes.cs        |   0
+.../tools}/NuBuild/NuBuild/DafnySpecVerb.cs        |   0
+.../NuBuild/NuBuild/DafnyTransformBaseVerb.cs      |   0
+.../NuBuild/NuBuild/DafnyTransitiveDepsVerb.cs     |   0
+.../tools}/NuBuild/NuBuild/DafnyVerifyOneVerb.cs   |   0
+.../tools}/NuBuild/NuBuild/DafnyVerifyTreeVerb.cs  |   0
+.../tools}/NuBuild/NuBuild/DbgFileCopySpeedTest.cs |   0
+.../tools}/NuBuild/NuBuild/DbgHashSpeedTest.cs     |   0
+.../tools}/NuBuild/NuBuild/DbgVerbCounter.cs       |   0
+.../tools}/NuBuild/NuBuild/DependencyCache.cs      |   0
+.../NuBuild/NuBuild/DependencyDisposition.cs       |   0
+.../tools}/NuBuild/NuBuild/Disposition.cs          |   0
+.../tools}/NuBuild/NuBuild/EntryStitcherVerb.cs    |   0
+.../tools}/NuBuild/NuBuild/Hasher.cs               |   0
+.../tools}/NuBuild/NuBuild/IAsmProducer.cs         |   0
+.../NuBuild/NuBuild/IContextGeneratingVerb.cs      |   0
+.../tools}/NuBuild/NuBuild/IHasher.cs              |   0
+.../tools}/NuBuild/NuBuild/IIncludeFactory.cs      |   0
+.../tools}/NuBuild/NuBuild/IIncludePathContext.cs  |   0
+.../tools}/NuBuild/NuBuild/IItemCache.cs           |   0
+.../tools}/NuBuild/NuBuild/IObligationsProducer.cs |   0
+.../NuBuild/NuBuild/IProcessInvokeAsyncVerb.cs     |   0
+.../tools}/NuBuild/NuBuild/IProcessInvoker.cs      |   0
+.../tools}/NuBuild/NuBuild/IRejectable.cs          |   0
+.../tools}/NuBuild/NuBuild/IVerb.cs                |   0
+.../tools}/NuBuild/NuBuild/IVerbWorker.cs          |   0
+.../NuBuild/NuBuild/IVerificationResultParser.cs   |   0
+.../tools}/NuBuild/NuBuild/IncludePathContext.cs   |   0
+.../tools}/NuBuild/NuBuild/IronRootDirectory.cs    |   0
+.../tools}/NuBuild/NuBuild/IroncladAppVerb.cs      |   0
+.../tools}/NuBuild/NuBuild/IronfleetAppVerb.cs     |   0
+.../tools}/NuBuild/NuBuild/ItemCacheCloud.cs       |   0
+.../tools}/NuBuild/NuBuild/ItemCacheLocal.cs       |   0
+.../tools}/NuBuild/NuBuild/ItemCacheMultiplexer.cs |   0
+{tools => unreleased/tools}/NuBuild/NuBuild/Job.cs |   0
+.../tools}/NuBuild/NuBuild/LinkerVerb.cs           |   0
+.../tools}/NuBuild/NuBuild/Logger.cs               |   0
+.../tools}/NuBuild/NuBuild/MasmVerb.cs             |   0
+.../tools}/NuBuild/NuBuild/NMakeVerb.cs            |   0
+.../tools}/NuBuild/NuBuild/NuBuild.csproj          |   0
+.../NuBuild/NuBuild/ObjectFailedException.cs       |   0
+.../NuBuild/ObjectMissingFromCacheException.cs     |   0
+.../NuBuild/NuBuild/ObjectNotReadyException.cs     |   0
+.../tools}/NuBuild/NuBuild/OrderPreservingSet.cs   |   0
+.../tools}/NuBuild/NuBuild/PathNormalizer.cs       |   0
+.../tools}/NuBuild/NuBuild/PoundDefines.cs         |   0
+.../tools}/NuBuild/NuBuild/Presentater.cs          |   0
+.../tools}/NuBuild/NuBuild/Presentation.cs         |   0
+.../tools}/NuBuild/NuBuild/PresentationBuilder.cs  |   0
+.../NuBuild/NuBuild/ProcessInvokeAsyncWorker.cs    |   0
+.../tools}/NuBuild/NuBuild/ProcessInvoker.cs       |   0
+.../tools}/NuBuild/NuBuild/Program.cs              |   0
+.../NuBuild/NuBuild/Properties/AssemblyInfo.cs     |   0
+.../tools}/NuBuild/NuBuild/Repository.cs           |   0
+.../tools}/NuBuild/NuBuild/ResultSummaryRecord.cs  |   0
+.../tools}/NuBuild/NuBuild/Scheduler.cs            |   0
+.../NuBuild/NuBuild/SourceConfigurationError.cs    |   0
+.../tools}/NuBuild/NuBuild/SourcePath.cs           |   0
+.../NuBuild/NuBuild/SourcePathIncludeContext.cs    |   0
+.../tools}/NuBuild/NuBuild/StaticContextVerb.cs    |   0
+.../tools}/NuBuild/NuBuild/SymDiffBaseVerb.cs      |   0
+.../tools}/NuBuild/NuBuild/SymDiffCombineVerb.cs   |   0
+.../tools}/NuBuild/NuBuild/SymDiffEngine.cs        |   0
+.../tools}/NuBuild/NuBuild/SymDiffExtractVerb.cs   |   0
+.../tools}/NuBuild/NuBuild/SymDiffInferVerb.cs     |   0
+.../tools}/NuBuild/NuBuild/SymDiffMergeBaseVerb.cs |   0
+.../NuBuild/NuBuild/SymDiffMergeConfigVerb.cs      |   0
+.../tools}/NuBuild/NuBuild/SymDiffMergeVerb.cs     |   0
+.../tools}/NuBuild/NuBuild/ToDo.txt                |   0
+.../NuBuild/NuBuild/TransitiveDepsContents.cs      |   0
+.../tools}/NuBuild/NuBuild/TransitiveDepsVerb.cs   |   0
+.../NuBuild/UnverifiedSentinelVirtualContents.cs   |   0
+.../tools}/NuBuild/NuBuild/UserError.cs            |   0
+.../tools}/NuBuild/NuBuild/Util.cs                 |   0
+.../tools}/NuBuild/NuBuild/VSProjectParser.cs      |   0
+.../tools}/NuBuild/NuBuild/VSSolutionParser.cs     |   0
+.../tools}/NuBuild/NuBuild/VSSolutionVerb.cs       |   0
+.../tools}/NuBuild/NuBuild/Verb.cs                 |   0
+.../tools}/NuBuild/NuBuild/VerbOutputsContext.cs   |   0
+.../NuBuild/NuBuild/VerbOutputsContextVerb.cs      |   0
+.../tools}/NuBuild/NuBuild/VerbRunner.cs           |   0
+.../tools}/NuBuild/NuBuild/VerbSyncWorker.cs       |   0
+.../tools}/NuBuild/NuBuild/VerbToposorter.cs       |   0
+.../tools}/NuBuild/NuBuild/VerificationMessage.cs  |   0
+.../NuBuild/NuBuild/VerificationObligationList.cs  |   0
+.../tools}/NuBuild/NuBuild/VerificationRequest.cs  |   0
+.../tools}/NuBuild/NuBuild/VerificationResult.cs   |   0
+.../NuBuild/VerificationResultBoogieParser.cs      |   0
+.../NuBuild/VerificationResultDafnyParser.cs       |   0
+.../NuBuild/VerificationResultSummaryVerb.cs       |   0
+.../NuBuild/NuBuild/VerificationResultVerb.cs      |   0
+.../tools}/NuBuild/NuBuild/VirtualBuildObject.cs   |   0
+.../tools}/NuBuild/NuBuild/VirtualContents.cs      |   0
+.../tools}/NuBuild/NuBuild/WaitIndex.cs            |   0
+.../tools}/NuBuild/NuBuild/WinLinkerVerb.cs        |   0
+.../tools}/NuBuild/NuBuild/WorkingDirectory.cs     |   0
+.../tools}/NuBuild/NuBuild/XmlFiller.cs            |   0
+.../NuBuild/NuBuildExecutionService/.gitignore     |   0
+.../CloudExecutionWorkerContent/diagnostics.wadcfg |   0
+.../NuBuildExecutionService.ccproj                 |   0
+.../ServiceConfiguration.Cloud.cscfg               |   0
+.../ServiceConfiguration.Local.cscfg               |   0
+.../ServiceDefinition.csdef                        |   0
+.../base/x64/WaHostBootstrapper.exe.config         |   0
+.../References/Microsoft.Threading.Tasks.dll       | Bin
+.../References/Microsoft.Threading.Tasks.xml       |   0
+.../Microsoft.WindowsAzure.Common.NetFramework.dll | Bin
+.../Microsoft.WindowsAzure.Common.NetFramework.xml |   0
+.../References/Microsoft.WindowsAzure.Common.dll   | Bin
+.../References/Microsoft.WindowsAzure.Common.xml   |   0
+.../Microsoft.WindowsAzure.Management.Compute.dll  | Bin
+.../Microsoft.WindowsAzure.Management.Compute.xml  |   0
+.../Microsoft.WindowsAzure.Management.Storage.dll  | Bin
+.../Microsoft.WindowsAzure.Management.Storage.xml  |   0
+.../References/Microsoft.WindowsAzure.Storage.dll  | Bin
+.../References/Microsoft.WindowsAzure.Storage.xml  |   0
+.../tools}/NuBuild/Settings.StyleCop               |   0
+{tools => unreleased/tools}/NuBuild/makefile       |   0
+{tools => unreleased/tools}/NuBuild/modules.result |   0
+.../tools}/ShowLitResults/App.config               |   0
+.../tools}/ShowLitResults/Newtonsoft.Json.dll      | Bin
+.../ShowLitResults/Properties/AssemblyInfo.cs      |   0
+.../tools}/ShowLitResults/ShowLitResults.cs        |   0
+.../tools}/ShowLitResults/ShowLitResults.csproj    |   0
+.../tools}/ShowLitResults/ShowLitResults.exe       | Bin
+.../tools}/Spartan/complexLibDafny/x86decls.sdfy   |   0
+.../tools}/Spartan/complexLibDafny/x86def.dfy      |   0
+.../tools}/Spartan/complexLibDafny/x86print.dfy    |   0
+.../Spartan/complexLibDafny/x86spartan-assume.dfy  |   0
+.../tools}/Spartan/complexLibDafny/x86spartan.dfy  |   0
+{tools => unreleased/tools}/Spartan/makefile       |   0
+.../tools}/Spartan/notes/no-sha-perf.txt           |   0
+.../tools}/Spartan/notes/perf-data-analysis.xlsx   | Bin
+.../tools}/Spartan/notes/refined-perf.txt          |   0
+.../tools}/Spartan/notes/unroll_sha.py             |   0
+.../Spartan/notes/verification-perf-debugging.txt  |   0
+{tools => unreleased/tools}/Spartan/perf-test.py   |   0
+{tools => unreleased/tools}/Spartan/pydiff.py      |   0
+.../test/benchmarks/gc1/MiniCopyingRegions.bpl     |   0
+.../tools}/Spartan/test/benchmarks/gc1/MiniMs.bpl  |   0
+.../Spartan/test/benchmarks/gc1/MiniMsRegions.bpl  |   0
+.../tools}/Spartan/test/benchmarks/gc1/README.txt  |   0
+.../tools}/Spartan/test/benchmarks/gc1/Trusted.bpl |   0
+.../test/benchmarks/gc1/TrustedBitVectors.bpl      |   0
+.../benchmarks/gc1/TrustedBitVectorsBuiltin.bpl    |   0
+.../test/benchmarks/gc1/VerifiedBitVectors.bpl     |   0
+.../benchmarks/gc1/VerifiedBitVectorsBuiltin.bpl   |   0
+.../gc1/VerifiedBitVectorsBuiltinImpl.bpl          |   0
+.../test/benchmarks/gc1/VerifiedBitVectorsImpl.bpl |   0
+.../Spartan/test/benchmarks/gc1/VerifiedCommon.bpl |   0
+.../benchmarks/gc1/VerifiedCopyingCollector.bpl    |   0
+.../benchmarks/gc1/VerifiedMarkSweepCollector.bpl  |   0
+.../tools}/Spartan/test/benchmarks/gc2/Trusted.dfy |   0
+.../test/benchmarks/gc2/VerifiedBitVectors.dfy     |   0
+.../Spartan/test/benchmarks/gc2/VerifiedCommon.dfy |   0
+.../benchmarks/gc2/VerifiedCopyingCollector.dfy    |   0
+.../tools}/Spartan/test/benchmarks/gc3/Trusted.dfy |   0
+.../test/benchmarks/gc3/VerifiedBitVectors.dfy     |   0
+.../Spartan/test/benchmarks/gc3/VerifiedCommon.dfy |   0
+.../benchmarks/gc3/VerifiedCopyingCollector.dfy    |   0
+.../test/benchmarks/ironclad1/Drivers/.gitignore   |   0
+.../ironclad1/Drivers/CPU/assembly.i.dfy           |   0
+.../ironclad1/Drivers/CPU/assembly.s.dfy           |   0
+.../ironclad1/Drivers/CPU/assembly_premium.i.dfy   |   0
+.../ironclad1/Libraries/BigNum/.gitignore          |   0
+.../ironclad1/Libraries/BigNum/BigNatAdd.i.dfy     |   0
+.../Libraries/BigNum/BigNatBitCount.i.dfy          |   0
+.../ironclad1/Libraries/BigNum/BigNatBitwise.i.dfy |   0
+.../ironclad1/Libraries/BigNum/BigNatCompare.i.dfy |   0
+.../ironclad1/Libraries/BigNum/BigNatCore.i.dfy    |   0
+.../ironclad1/Libraries/BigNum/BigNatDiv.i.dfy     |   0
+.../ironclad1/Libraries/BigNum/BigNatMod.i.dfy     |   0
+.../ironclad1/Libraries/BigNum/BigNatMul.i.dfy     |   0
+.../ironclad1/Libraries/BigNum/BigNatPartial.i.dfy |   0
+.../ironclad1/Libraries/BigNum/BigNatRandom.i.dfy  |   0
+.../ironclad1/Libraries/BigNum/BigNatSub.i.dfy     |   0
+.../ironclad1/Libraries/BigNum/BigNatTestLib.i.dfy |   0
+.../ironclad1/Libraries/BigNum/BigNatX86Shim.i.dfy |   0
+.../ironclad1/Libraries/BigNum/BigNum.i.dfy        |   0
+.../Libraries/BigNum/BigNumBEAdaptor.i.dfy         |   0
+.../ironclad1/Libraries/BigNum/BigRat.i.dfy        |   0
+.../ironclad1/Libraries/BigNum/Word32.i.dfy        |   0
+.../benchmarks/ironclad1/Libraries/Math/.gitignore |   0
+.../Libraries/Math/BitwiseOperations.i.dfy         |   0
+.../benchmarks/ironclad1/Libraries/Math/GCD.s.dfy  |   0
+.../Libraries/Math/bit_vector_lemmas.i.dfy         |   0
+.../Libraries/Math/bit_vector_lemmas_premium.i.dfy |   0
+.../benchmarks/ironclad1/Libraries/Math/div.i.dfy  |   0
+.../ironclad1/Libraries/Math/div_boogie.i.dfy      |   0
+.../ironclad1/Libraries/Math/div_def.i.dfy         |   0
+.../ironclad1/Libraries/Math/div_nonlinear.i.dfy   |   0
+.../ironclad1/Libraries/Math/evenodd.i.dfy         |   0
+.../benchmarks/ironclad1/Libraries/Math/mul.i.dfy  |   0
+.../ironclad1/Libraries/Math/mul_nonlinear.i.dfy   |   0
+.../ironclad1/Libraries/Math/power.i.dfy           |   0
+.../ironclad1/Libraries/Math/power.s.dfy           |   0
+.../ironclad1/Libraries/Math/power2.i.dfy          |   0
+.../ironclad1/Libraries/Math/power2.s.dfy          |   0
+.../ironclad1/Libraries/Math/power2methods.i.dfy   |   0
+.../ironclad1/Libraries/Math/round.i.dfy           |   0
+.../ironclad1/Libraries/Math/round.s.dfy           |   0
+.../benchmarks/ironclad1/Libraries/Util/.gitignore |   0
+.../ironclad1/Libraries/Util/DebugPrint.i.dfy      |   0
+.../ironclad1/Libraries/Util/Halter.i.dfy          |   0
+.../ironclad1/Libraries/Util/ProfileIfc.i.dfy      |   0
+.../ironclad1/Libraries/Util/arrays.i.dfy          |   0
+.../ironclad1/Libraries/Util/arrays_2.i.dfy        |   0
+.../ironclad1/Libraries/Util/arrays_and_seqs.i.dfy |   0
+.../ironclad1/Libraries/Util/be_sequences.s.dfy    |   0
+.../ironclad1/Libraries/Util/beseqs_simple.i.dfy   |   0
+.../ironclad1/Libraries/Util/bytes_and_words.s.dfy |   0
+.../ironclad1/Libraries/Util/insecure_prng.i.dfy   |   0
+.../Libraries/Util/integer_sequences.i.dfy         |   0
+.../Libraries/Util/integer_sequences.s.dfy         |   0
+.../Libraries/Util/integer_sequences_premium.i.dfy |   0
+.../ironclad1/Libraries/Util/relational.i.dfy      |   0
+.../ironclad1/Libraries/Util/relational.s.dfy      |   0
+.../ironclad1/Libraries/Util/repeat_digit.i.dfy    |   0
+.../ironclad1/Libraries/Util/seq_blocking.i.dfy    |   0
+.../ironclad1/Libraries/Util/seq_blocking.s.dfy    |   0
+.../ironclad1/Libraries/Util/seqs_and_ints.i.dfy   |   0
+.../ironclad1/Libraries/Util/seqs_canonical.i.dfy  |   0
+.../ironclad1/Libraries/Util/seqs_common.i.dfy     |   0
+.../ironclad1/Libraries/Util/seqs_reverse.i.dfy    |   0
+.../ironclad1/Libraries/Util/seqs_simple.i.dfy     |   0
+.../ironclad1/Libraries/Util/seqs_transforms.i.dfy |   0
+.../ironclad1/Libraries/Util/word_bits.i.dfy       |   0
+.../test/benchmarks/ironclad1/Libraries/base.s.dfy |   0
+.../ironfleet2/Distributed/Common/.gitignore       |   0
+.../Common/Collections/CountMatches.i.dfy          |   0
+.../Distributed/Common/Collections/Maps.i.dfy      |   0
+.../Distributed/Common/Collections/Maps2.i.dfy     |   0
+.../Distributed/Common/Collections/Maps2.s.dfy     |   0
+.../Distributed/Common/Collections/Multisets.s.dfy |   0
+.../Distributed/Common/Collections/Seqs.i.dfy      |   0
+.../Distributed/Common/Collections/Seqs.s.dfy      |   0
+.../Distributed/Common/Collections/Sets.i.dfy      |   0
+.../Common/Framework/AbstractService.s.dfy         |   0
+.../Common/Framework/DistributedSystem.s.dfy       |   0
+.../Distributed/Common/Framework/Environment.s.dfy |   0
+.../Common/Framework/EnvironmentSynchrony.s.dfy    |   0
+.../Distributed/Common/Framework/Host.s.dfy        |   0
+.../Common/Framework/HostQueueLemmas.i.dfy         |   0
+.../Distributed/Common/Framework/Main.s.dfy        |   0
+.../Distributed/Common/Logic/Option.i.dfy          |   0
+.../Common/Logic/Temporal/Temporal.s.dfy           |   0
+.../Distributed/Common/Logic/Temporal/Time.s.dfy   |   0
+.../ironfleet2/Distributed/Common/Native/Io.s.dfy  |   0
+.../Distributed/Common/Native/NativeTypes.i.dfy    |   0
+.../Distributed/Common/Native/NativeTypes.s.dfy    |   0
+.../Distributed/Protocol/Common/NodeIdentity.i.dfy |   0
+.../Distributed/Protocol/Common/NodeIdentity.s.dfy |   0
+.../Distributed/Protocol/Common/UpperBound.s.dfy   |   0
+.../Distributed/Protocol/RSL/Acceptor.i.dfy        |   0
+.../Distributed/Protocol/RSL/Broadcast.i.dfy       |   0
+.../Distributed/Protocol/RSL/ClockReading.i.dfy    |   0
+.../Distributed/Protocol/RSL/Configuration.i.dfy   |   0
+.../Distributed/Protocol/RSL/Constants.i.dfy       |   0
+.../Protocol/RSL/DistributedSystem.i.dfy           |   0
+.../Distributed/Protocol/RSL/Election.i.dfy        |   0
+.../Distributed/Protocol/RSL/Environment.i.dfy     |   0
+.../Distributed/Protocol/RSL/Executor.i.dfy        |   0
+.../Distributed/Protocol/RSL/Learner.i.dfy         |   0
+.../Distributed/Protocol/RSL/Message.i.dfy         |   0
+.../Distributed/Protocol/RSL/Parameters.i.dfy      |   0
+.../Distributed/Protocol/RSL/Proposer.i.dfy        |   0
+.../Distributed/Protocol/RSL/Replica.i.dfy         |   0
+.../Distributed/Protocol/RSL/StateMachine.i.dfy    |   0
+.../Distributed/Protocol/RSL/Types.i.dfy           |   0
+.../Distributed/Services/RSL/AbstractService.s.dfy |   0
+.../Distributed/Services/RSL/AppStateMachine.s.dfy |   0
+.../ironfleet2/Distributed/apps.dfy.batch          |   0
+.../test/benchmarks/sha256_1/assembly.s.dfy        |   0
+.../test/benchmarks/sha256_1/sha256-test.dfy       |   0
+.../Spartan/test/benchmarks/sha256_1/sha256.i.dfy  |   0
+.../Spartan/test/benchmarks/sha256_1/sha256.s.dfy  |   0
+.../test/benchmarks/sha256_1/sha_common.s.dfy      |   0
+.../Spartan/test/benchmarks/sha256_1/x86def.dfy    |   0
+.../Spartan/test/benchmarks/sha256_1/x86print.dfy  |   0
+.../test/benchmarks/sha256_1/x86spartan.dfy        |   0
+.../Spartan/test/benchmarks/taint1/assembly.s.dfy  |   0
+.../Spartan/test/benchmarks/taint1/x86def.dfy      |   0
+.../Spartan/test/benchmarks/taint1/x86spartan.dfy  |   0
+.../Spartan/test/benchmarks/taint1/x86taint.dfy    |   0
+.../tools}/Spartan/test/flags-test.sdfy            |   0
+.../tools}/Spartan/test/ftest1.sfst                |   0
+{tools => unreleased/tools}/Spartan/test/mini.sdfy |   0
+.../tools}/Spartan/test/minidef.dfy.old            |   0
+.../tools}/Spartan/test/sha256-test-complex.sdfy   |   0
+.../tools}/Spartan/test/sha256-test.sdfy           |   0
+.../tools}/Spartan/test/spartan-debug.spd          |   0
+.../tools}/Spartan/test/test1.sdfy                 |   0
+.../tools}/fsharp/FSharp.Build.dll                 | Bin
+.../tools}/fsharp/FSharp.Compiler.CodeDom.dll      | Bin
+.../tools}/fsharp/FSharp.Compiler.CodeDom.xml      |   0
+.../FSharp.Compiler.Interactive.Settings.dll       | Bin
+.../fsharp/FSharp.Compiler.Server.Shared.dll       | Bin
+.../tools}/fsharp/FSharp.Compiler.dll              | Bin
+{tools => unreleased/tools}/fsharp/FSharp.Core.dll | Bin
+{tools => unreleased/tools}/fsharp/FSharp.Core.xml |   0
+.../tools}/fsharp/FSharp.LanguageService.Base.dll  | Bin
+.../tools}/fsharp/FSharp.LanguageService.dll       | Bin
+.../tools}/fsharp/FSharp.PowerPack.Build.Tasks.dll | Bin
+.../tools}/fsharp/FSharp.PowerPack.Build.Tasks.xml |   0
+.../tools}/fsharp/FSharp.PowerPack.Linq.dll        | Bin
+.../tools}/fsharp/FSharp.PowerPack.Linq.xml        |   0
+.../fsharp/FSharp.PowerPack.Math.Providers.dll     | Bin
+.../tools}/fsharp/FSharp.PowerPack.Metadata.dll    | Bin
+.../tools}/fsharp/FSharp.PowerPack.Metadata.xml    |   0
+.../tools}/fsharp/FSharp.PowerPack.Plot.Excel.dll  | Bin
+.../fsharp/FSharp.PowerPack.Plot.Neutral.dll       | Bin
+.../tools}/fsharp/FSharp.PowerPack.Plot.XCeed.dll  | Bin
+.../tools}/fsharp/FSharp.PowerPack.Plot.dll        | Bin
+.../tools}/fsharp/FSharp.PowerPack.dll             | Bin
+.../tools}/fsharp/FSharp.PowerPack.xml             |   0
+.../tools}/fsharp/FSharp.ProjectSystem.Base.dll    | Bin
+.../tools}/fsharp/FSharp.ProjectSystem.FSharp.dll  | Bin
+.../fsharp/FSharp.ProjectSystem.PropertyPages.dll  | Bin
+.../tools}/fsharp/FSharp.VS.FSI.dll                | Bin
+{tools => unreleased/tools}/fsharp/fsc.exe         | Bin
+{tools => unreleased/tools}/fsharp/fsi.exe         | Bin
+{tools => unreleased/tools}/fsharp/fslex.exe       | Bin
+{tools => unreleased/tools}/fsharp/fsyacc.exe      | Bin
+{tools => unreleased/tools}/scripts/.gitignore     |   0
+.../tools}/scripts/build-summary.py                |   0
+{tools => unreleased/tools}/scripts/check-lf.ps1   |   0
+.../tools}/scripts/dafny-line-count.py             |   0
+.../tools}/scripts/dafny-oneproc.py                |   0
+.../tools}/scripts/dafny-profiler.py               |   0
+.../tools}/scripts/dafnyBuildVsix.ps1              |   0
+.../tools}/scripts/expand-tabs-in-place            |   0
+.../tools}/scripts/function_call_graph.py          |   0
+.../tools}/scripts/integration-project/build.py    |   0
+.../scripts/integration-project/build.pyproj       |   0
+.../tools}/scripts/integration-project/build.sln   |   0
+.../scripts/integration-project/make-project.sln   |   0
+.../integration-project/make-project.vcxproj       |   0
+.../tools}/scripts/integration-testing.ps1         |   0
+{tools => unreleased/tools}/scripts/linecounts.bat |   0
+.../tools}/scripts/mindy-profiler.py               |   0
+{tools => unreleased/tools}/scripts/purge.py       |   0
+.../tools}/scripts/spartan-line-count.py           |   0
+.../tools}/scripts/z3ReprintLog.cs                 |   0
+705 files changed, 1471 insertions(+), 2673 deletions(-)
+rename src/arch/arm/{decls.spd => decls.vad} (89%)
+rename src/arch/arm/{spartan.i.dfy => vale.i.dfy} (78%)
+rename src/arch/x64/{decls.spd => decls.vad} (95%)
+rename src/arch/x64/{spartan.i.dfy => vale.i.dfy} (84%)
+rename src/arch/x86/{decls.spd => decls.vad} (95%)
+rename src/arch/x86/{spartan.i.dfy => vale.i.dfy} (84%)
+rename src/crypto/aes/aes-x64/{aes.spd => aes.vad} (96%)
+rename src/crypto/aes/{aes.spd => aes.vad} (96%)
+rename src/crypto/aes/{cbc.spd => cbc.vad} (91%)
+rename src/crypto/hashing/sha-arm/{sha256.spd => sha256.vad} (96%)
+rename src/crypto/hashing/sha-x64/{sha256.spd => sha256.vad} (95%)
+rename src/crypto/hashing/sha-x64/{sha256_spartan_main.i.dfy => sha256_vale_main.i.dfy} (93%)
+rename src/crypto/hashing/{sha256.spd => sha256.vad} (95%)
+rename src/crypto/hashing/{sha256_spartan_main.i.dfy => sha256_vale_main.i.dfy} (94%)
+rename src/lib/util/{parser_help.i.dfy => dafny_wrappers.i.dfy} (89%)
+rename src/test/{memcpy.spd => memcpy.vad} (89%)
+rename src/test/{stack-test.spd => stack-test.vad} (78%)
+delete mode 100644 tools/Spartan/src/Spartan.sln
+delete mode 100755 tools/Spartan/src/VisualStudio/Spartan.fsproj
+delete mode 100644 tools/Spartan/src/emit_mindy_direct.fs
+delete mode 100644 tools/Spartan/test/DottedNames.spd
+delete mode 100644 tools/Spartan/test/assert-by.spd
+delete mode 100644 tools/Spartan/test/calc.spd
+delete mode 100644 tools/Spartan/test/refined1.spd
+rename tools/{Spartan => Vale}/DafnyInterface/Source/DafnyInterface.sln (100%)
+rename tools/{Spartan => Vale}/DafnyInterface/Source/DafnyInterface/DafnyDriver.cs (84%)
+rename tools/{Spartan => Vale}/DafnyInterface/Source/DafnyInterface/DafnyInterface.csproj (100%)
+rename tools/{Spartan => Vale}/DafnyInterface/Source/DafnyInterface/Properties/AssemblyInfo.cs (100%)
+rename tools/{Spartan => Vale}/DafnyInterface/bin/DafnyInterface.dll (100%)
+rename tools/{Spartan => Vale}/SConscript (51%)
+rename tools/{Spartan => Vale}/doc/index.html (73%)
+rename tools/{Spartan/src/VisualStudio => Vale/src}/.gitignore (100%)
+mode change 100755 => 100644
+rename tools/{Spartan/src/Spartan.fsproj => Vale/src/Vale.fsproj} (89%)
+rename tools/{Spartan/src/VisualStudio/Spartan.sln => Vale/src/Vale.sln} (85%)
+mode change 100755 => 100644
+rename tools/{Spartan => Vale}/src/ast.fs (100%)
+rename tools/{Spartan => Vale}/src/ast_util.fs (100%)
+rename tools/{Spartan => Vale}/src/debug_print.fs (100%)
+rename tools/{Spartan => Vale}/src/emit_common.fs (95%)
+rename tools/{Spartan => Vale}/src/emit_dafny_direct.fs (97%)
+rename tools/{Spartan => Vale}/src/emit_dafny_text.fs (100%)
+rename tools/{Spartan => Vale}/src/emit_fstar_text.fs (100%)
+rename tools/{Spartan/src/emit_spartan_text.fs => Vale/src/emit_vale_text.fs} (97%)
+rename tools/{Spartan => Vale}/src/lex.fsl (100%)
+rename tools/{Spartan => Vale}/src/main.fs (97%)
+rename tools/{Spartan => Vale}/src/packages.config (100%)
+rename tools/{Spartan => Vale}/src/parse.fsy (100%)
+rename tools/{Spartan => Vale}/src/parse_util.fs (100%)
+rename tools/{Spartan => Vale}/src/transform.fs (96%)
+create mode 100644 tools/Vale/test/DottedNames.vad
+create mode 100644 tools/Vale/test/assert-by.vad
+create mode 100644 tools/Vale/test/calc.vad
+rename tools/{Spartan/test/inline-if.spd => Vale/test/common.vad} (54%)
+create mode 100644 tools/Vale/test/inline-if.vad
+create mode 100644 tools/Vale/test/refined1.vad
+rename tools/{Spartan/test/refined2.spd => Vale/test/refined2.vad} (88%)
+rename tools/{Spartan/test/refined3.spd => Vale/test/refined3.vad} (92%)
+rename IRONROOT.sentinel => unreleased/IRONROOT.sentinel (100%)
+rename STYLE.md => unreleased/STYLE.md (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/AzureManager.exe (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/AzureManager.pdb (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.Data.Edm.dll (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.Data.Edm.xml (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.Data.OData.dll (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.Data.OData.xml (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.Data.Services.Client.dll (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.Data.Services.Client.xml (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.Threading.Tasks.dll (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.Threading.Tasks.xml (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.WindowsAzure.Common.NetFramework.dll (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.WindowsAzure.Common.NetFramework.xml (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.WindowsAzure.Common.dll (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.WindowsAzure.Common.xml (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.WindowsAzure.Management.Compute.dll (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.WindowsAzure.Management.Compute.xml (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.WindowsAzure.Management.Storage.dll (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.WindowsAzure.Management.Storage.xml (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.WindowsAzure.Storage.dll (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/Microsoft.WindowsAzure.Storage.xml (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/NuBuild.exe (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/NuBuild.pdb (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/NuBuild.vshost.exe (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/NuBuild.vshost.exe.config (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/NuBuild.vshost.exe.manifest (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/System.Spatial.dll (100%)
+rename {bin_tools => unreleased/bin_tools}/NuBuild/System.Spatial.xml (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/.gitignore (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/common/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/common/common.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/common/common.h (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/driver.go (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/boringssl/cbc/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/boringssl/cbc/old.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/boringssl/cbc/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/boringssl/gcm/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/boringssl/gcm/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/boringssl/sha256/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/boringssl/sha256/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/boringssl/x25519/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/boringssl/x25519/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/botan/25519/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/botan/25519/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/botan/cbc/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/botan/cbc/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/botan/chacha20/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/botan/chacha20/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/botan/gcm/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/botan/gcm/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/botan/sha256/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/botan/sha256/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/cryptopp/cbc/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/cryptopp/cbc/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/cryptopp/chacha20/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/cryptopp/chacha20/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/cryptopp/gcm/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/cryptopp/gcm/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/cryptopp/sha256/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/cryptopp/sha256/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libgcrypt/25519/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libgcrypt/25519/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libgcrypt/cbc/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libgcrypt/cbc/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libgcrypt/chacha20/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libgcrypt/chacha20/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libgcrypt/gcm/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libgcrypt/gcm/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libgcrypt/sha256/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libgcrypt/sha256/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libsodium/chacha20/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libsodium/chacha20/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libsodium/gcm/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libsodium/gcm/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libsodium/sha256/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/libsodium/sha256/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/mbedtls/cbc/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/mbedtls/cbc/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/mbedtls/gcm/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/mbedtls/gcm/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/mbedtls/sha256/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/mbedtls/sha256/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/nettle/chacha20/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/nettle/chacha20/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/nettle/gcm.broken/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/nettle/gcm.broken/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/nettle/sha256/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/nettle/sha256/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/openssl/cbc/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/openssl/cbc/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/openssl/chacha20/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/openssl/chacha20/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/openssl/gcm/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/openssl/gcm/source.cc (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/openssl/sha256/Makefile (100%)
+rename {experiments => unreleased/experiments}/crypto-perf-tests/tests/openssl/sha256/source.cc (100%)
+rename {experiments => unreleased/experiments}/spartan/simple-hash.sdfy (100%)
+rename lit.site.cfg => unreleased/lit.site.cfg (100%)
+rename makefile => unreleased/makefile (100%)
+rename {src => unreleased/src}/arch/x86/def.s.fst (100%)
+rename {src => unreleased/src}/crypto/aes/fips-197.pdf (100%)
+rename {src => unreleased/src}/crypto/aes/intel-aes-docs.pdf (100%)
+rename {src => unreleased/src}/crypto/aes/nistspecialpublication800-38d.pdf (100%)
+rename {src => unreleased/src}/test/sha256-test.spd (90%)
+rename {tools => unreleased/tools}/DepGraph/parse.py (100%)
+rename {tools => unreleased/tools}/Mindy/App.config (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieAbsInt.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieBasetypes.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieCodeContractsExtender.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieConcurrency.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieCore.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieDoomed.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieExecutionEngine.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieGraph.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieHoudini.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieModel.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieParserHelper.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieVCExpr.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/BoogieVCGeneration.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/Dafny.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/DafnyPipeline.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/DafnyPrelude.bpl (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/Mindy.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/Mindy.exe.config (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/Mindy.pdb (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/Mindy.vshost.exe.config (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/Mindy.vshost.exe.manifest (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/Provers.SMTLib.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Binaries/z3.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/AbsInt.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BVD.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BVD.exe.config (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Basetypes.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Boogie.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Boogie.suo (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Boogie.vshost.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Boogie.vshost.exe.manifest (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieAbsInt.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieBasetypes.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieCodeContractsExtender.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieConcurrency.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieCore.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieDoomed.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieExecutionEngine.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieGraph.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieHoudini.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieModel.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieModelViewer.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieParserHelper.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogiePredication.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieVCExpr.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/BoogieVCGeneration.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/CodeContracts/Dafny.Contracts.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/CodeContractsExtender.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Concurrency.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Core.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Dafny.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Dafny.exe.config (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Dafny.pdb (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Dafny.vshost.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Dafny.vshost.exe.config (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Dafny.vshost.exe.manifest (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyIroncladVsPlugin.vsix (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyLanguageService.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyLanguageService.vsix (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyMenu.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyMenu.pkgdef (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyMenu.vsix (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyOptions.txt (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyPipeline.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyPrelude.bpl (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyRuntime.cs (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyServer.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/DafnyServer.exe.config (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Doomed.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/ExecutionEngine.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Graph.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Houdini.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Microsoft.Z3.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Microsoft.Z3.xml (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Microsoft.Z3V3.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Model.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/ModelViewer.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/ParserHelper.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Predication.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/PrepareBoogieZip.bat (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/PrepareDafnyZip.bat (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Provers.SMTLib.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Provers.SMTLib.pdb (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/README (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/System.Collections.Immutable.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/VCExpr.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/VCGeneration.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Z3-LICENSE.txt (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/Z3AxiomProfiler.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/dafny-server (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/extension.vsixmanifest (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/iZ3.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/libiz3.lib (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/msvcp100.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/msvcr100.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/vcomp100.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/z3.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/z3.exe (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/z3.lib (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/z3_dbg.dll (100%)
+rename {tools => unreleased/tools}/Mindy/Dafny/z3_dbg.lib (100%)
+rename {tools => unreleased/tools}/Mindy/Mindy.csproj (100%)
+rename {tools => unreleased/tools}/Mindy/Mindy.sln (100%)
+rename {tools => unreleased/tools}/Mindy/MindyMain.cs (100%)
+rename {tools => unreleased/tools}/Mindy/Properties/AssemblyInfo.cs (100%)
+rename {tools => unreleased/tools}/Mindy/Translator.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/.gitignore (100%)
+rename {tools => unreleased/tools}/NuBuild/AzureManager/App.config (100%)
+rename {tools => unreleased/tools}/NuBuild/AzureManager/AzureAccount.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/AzureManager/AzureManager.csproj (100%)
+rename {tools => unreleased/tools}/NuBuild/AzureManager/Program.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/AzureManager/Properties/AssemblyInfo.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/AzureManager/ServiceConfiguration.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudExecutionEngine/App.config (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudExecutionEngine/CloudExecutionEngine.csproj (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudExecutionEngine/Program.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudExecutionEngine/Properties/AssemblyInfo.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudExecutionWorker/CloudExecutionEngine.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudExecutionWorker/CloudExecutionWorker.csproj (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudExecutionWorker/Properties/AssemblyInfo.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudExecutionWorker/WorkerRole.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudExecutionWorker/app.config (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudQueueTool/App.config (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudQueueTool/CloudQueueTool.csproj (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudQueueTool/Program.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/CloudQueueTool/Properties/AssemblyInfo.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/CustomDictionary.xml (100%)
+rename {tools => unreleased/tools}/NuBuild/ItemCacheTool/App.config (100%)
+rename {tools => unreleased/tools}/NuBuild/ItemCacheTool/CacheState.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/ItemCacheTool/ItemCacheTool.csproj (100%)
+rename {tools => unreleased/tools}/NuBuild/ItemCacheTool/Program.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/ItemCacheTool/Properties/AssemblyInfo.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild.sln (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/.gitignore (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/AbstractId.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/AnnotationScanner.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/App.config (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/AsmRewriterVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BackgroundWorker.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BasmObligationIncludes.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BasmTransitiveDepsVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BatchVerifyVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BeatExtensions.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BeatIncludes.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BeatVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BoogieAsmDepBase.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BoogieAsmLinkVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BoogieAsmVerificationObligationListVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BoogieAsmVerifyVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BoogieAsmWorkerBase.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BoogieVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BootableAppVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BuildEngine.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BuildObject.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/BuildObjectValuePointer.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/CachedHash.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/CloudExecutionQueue.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/CloudExecutionReport.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/CloudExecutionRequest.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/CloudExecutionWaiter.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/CloudSubmitter.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ConcatContext.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ConcatContextVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ContextContents.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ContextGeneratingVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/CustomManifestParser.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DafnyCCVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DafnyCompileOneVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DafnyExecutableDependencies.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DafnyExtensions.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DafnyIncludes.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DafnySpecVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DafnyTransformBaseVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DafnyTransitiveDepsVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DafnyVerifyOneVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DafnyVerifyTreeVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DbgFileCopySpeedTest.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DbgHashSpeedTest.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DbgVerbCounter.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DependencyCache.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/DependencyDisposition.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Disposition.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/EntryStitcherVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Hasher.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IAsmProducer.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IContextGeneratingVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IHasher.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IIncludeFactory.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IIncludePathContext.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IItemCache.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IObligationsProducer.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IProcessInvokeAsyncVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IProcessInvoker.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IRejectable.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IVerbWorker.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IVerificationResultParser.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IncludePathContext.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IronRootDirectory.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IroncladAppVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/IronfleetAppVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ItemCacheCloud.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ItemCacheLocal.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ItemCacheMultiplexer.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Job.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/LinkerVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Logger.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/MasmVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/NMakeVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/NuBuild.csproj (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ObjectFailedException.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ObjectMissingFromCacheException.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ObjectNotReadyException.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/OrderPreservingSet.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/PathNormalizer.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/PoundDefines.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Presentater.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Presentation.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/PresentationBuilder.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ProcessInvokeAsyncWorker.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ProcessInvoker.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Program.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Properties/AssemblyInfo.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Repository.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ResultSummaryRecord.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Scheduler.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SourceConfigurationError.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SourcePath.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SourcePathIncludeContext.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/StaticContextVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SymDiffBaseVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SymDiffCombineVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SymDiffEngine.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SymDiffExtractVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SymDiffInferVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SymDiffMergeBaseVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SymDiffMergeConfigVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/SymDiffMergeVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/ToDo.txt (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/TransitiveDepsContents.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/TransitiveDepsVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/UnverifiedSentinelVirtualContents.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/UserError.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Util.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VSProjectParser.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VSSolutionParser.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VSSolutionVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/Verb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerbOutputsContext.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerbOutputsContextVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerbRunner.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerbSyncWorker.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerbToposorter.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerificationMessage.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerificationObligationList.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerificationRequest.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerificationResult.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerificationResultBoogieParser.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerificationResultDafnyParser.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerificationResultSummaryVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VerificationResultVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VirtualBuildObject.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/VirtualContents.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/WaitIndex.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/WinLinkerVerb.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/WorkingDirectory.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuild/XmlFiller.cs (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuildExecutionService/.gitignore (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuildExecutionService/CloudExecutionWorkerContent/diagnostics.wadcfg (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuildExecutionService/NuBuildExecutionService.ccproj (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuildExecutionService/ServiceConfiguration.Cloud.cscfg (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuildExecutionService/ServiceConfiguration.Local.cscfg (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuildExecutionService/ServiceDefinition.csdef (100%)
+rename {tools => unreleased/tools}/NuBuild/NuBuildExecutionService/csx/Release/roles/CloudExecutionWorker/base/x64/WaHostBootstrapper.exe.config (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.Threading.Tasks.dll (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.Threading.Tasks.xml (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.WindowsAzure.Common.NetFramework.dll (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.WindowsAzure.Common.NetFramework.xml (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.WindowsAzure.Common.dll (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.WindowsAzure.Common.xml (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.WindowsAzure.Management.Compute.dll (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.WindowsAzure.Management.Compute.xml (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.WindowsAzure.Management.Storage.dll (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.WindowsAzure.Management.Storage.xml (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.WindowsAzure.Storage.dll (100%)
+rename {tools => unreleased/tools}/NuBuild/References/Microsoft.WindowsAzure.Storage.xml (100%)
+rename {tools => unreleased/tools}/NuBuild/Settings.StyleCop (100%)
+rename {tools => unreleased/tools}/NuBuild/makefile (100%)
+rename {tools => unreleased/tools}/NuBuild/modules.result (100%)
+rename {tools => unreleased/tools}/ShowLitResults/App.config (100%)
+rename {tools => unreleased/tools}/ShowLitResults/Newtonsoft.Json.dll (100%)
+rename {tools => unreleased/tools}/ShowLitResults/Properties/AssemblyInfo.cs (100%)
+rename {tools => unreleased/tools}/ShowLitResults/ShowLitResults.cs (100%)
+rename {tools => unreleased/tools}/ShowLitResults/ShowLitResults.csproj (100%)
+rename {tools => unreleased/tools}/ShowLitResults/ShowLitResults.exe (100%)
+rename {tools => unreleased/tools}/Spartan/complexLibDafny/x86decls.sdfy (100%)
+rename {tools => unreleased/tools}/Spartan/complexLibDafny/x86def.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/complexLibDafny/x86print.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/complexLibDafny/x86spartan-assume.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/complexLibDafny/x86spartan.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/makefile (100%)
+rename {tools => unreleased/tools}/Spartan/notes/no-sha-perf.txt (100%)
+rename {tools => unreleased/tools}/Spartan/notes/perf-data-analysis.xlsx (100%)
+rename {tools => unreleased/tools}/Spartan/notes/refined-perf.txt (100%)
+rename {tools => unreleased/tools}/Spartan/notes/unroll_sha.py (100%)
+rename {tools => unreleased/tools}/Spartan/notes/verification-perf-debugging.txt (100%)
+rename {tools => unreleased/tools}/Spartan/perf-test.py (100%)
+rename {tools => unreleased/tools}/Spartan/pydiff.py (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/MiniCopyingRegions.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/MiniMs.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/MiniMsRegions.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/README.txt (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/Trusted.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/TrustedBitVectors.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/TrustedBitVectorsBuiltin.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/VerifiedBitVectors.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/VerifiedBitVectorsBuiltin.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/VerifiedBitVectorsBuiltinImpl.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/VerifiedBitVectorsImpl.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/VerifiedCommon.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/VerifiedCopyingCollector.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc1/VerifiedMarkSweepCollector.bpl (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc2/Trusted.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc2/VerifiedBitVectors.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc2/VerifiedCommon.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc2/VerifiedCopyingCollector.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc3/Trusted.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc3/VerifiedBitVectors.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc3/VerifiedCommon.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/gc3/VerifiedCopyingCollector.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Drivers/.gitignore (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Drivers/CPU/assembly.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Drivers/CPU/assembly.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Drivers/CPU/assembly_premium.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/.gitignore (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatAdd.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatBitCount.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatBitwise.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatCompare.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatCore.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatDiv.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatMod.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatMul.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatPartial.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatRandom.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatSub.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatTestLib.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNatX86Shim.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNum.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigNumBEAdaptor.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/BigRat.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/BigNum/Word32.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/.gitignore (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/BitwiseOperations.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/GCD.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/bit_vector_lemmas.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/bit_vector_lemmas_premium.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/div.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/div_boogie.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/div_def.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/div_nonlinear.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/evenodd.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/mul.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/mul_nonlinear.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/power.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/power.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/power2.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/power2.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/power2methods.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/round.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Math/round.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/.gitignore (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/DebugPrint.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/Halter.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/ProfileIfc.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/arrays.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/arrays_2.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/arrays_and_seqs.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/be_sequences.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/beseqs_simple.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/bytes_and_words.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/insecure_prng.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/integer_sequences.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/integer_sequences.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/integer_sequences_premium.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/relational.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/relational.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/repeat_digit.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/seq_blocking.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/seq_blocking.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/seqs_and_ints.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/seqs_canonical.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/seqs_common.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/seqs_reverse.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/seqs_simple.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/seqs_transforms.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/Util/word_bits.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironclad1/Libraries/base.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/.gitignore (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Collections/CountMatches.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Collections/Maps.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Collections/Maps2.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Collections/Maps2.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Collections/Multisets.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Collections/Seqs.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Collections/Seqs.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Collections/Sets.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Framework/AbstractService.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Framework/DistributedSystem.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Framework/Environment.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Framework/EnvironmentSynchrony.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Framework/Host.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Framework/HostQueueLemmas.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Framework/Main.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Logic/Option.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Logic/Temporal/Temporal.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Logic/Temporal/Time.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Native/Io.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Native/NativeTypes.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Common/Native/NativeTypes.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/Common/NodeIdentity.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/Common/NodeIdentity.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/Common/UpperBound.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Acceptor.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Broadcast.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/ClockReading.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Configuration.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Constants.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/DistributedSystem.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Election.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Environment.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Executor.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Learner.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Message.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Parameters.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Proposer.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Replica.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/StateMachine.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Protocol/RSL/Types.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Services/RSL/AbstractService.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/Services/RSL/AppStateMachine.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/ironfleet2/Distributed/apps.dfy.batch (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/sha256_1/assembly.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/sha256_1/sha256-test.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/sha256_1/sha256.i.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/sha256_1/sha256.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/sha256_1/sha_common.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/sha256_1/x86def.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/sha256_1/x86print.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/sha256_1/x86spartan.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/taint1/assembly.s.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/taint1/x86def.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/taint1/x86spartan.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/benchmarks/taint1/x86taint.dfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/flags-test.sdfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/ftest1.sfst (100%)
+rename {tools => unreleased/tools}/Spartan/test/mini.sdfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/minidef.dfy.old (100%)
+rename {tools => unreleased/tools}/Spartan/test/sha256-test-complex.sdfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/sha256-test.sdfy (100%)
+rename {tools => unreleased/tools}/Spartan/test/spartan-debug.spd (100%)
+rename {tools => unreleased/tools}/Spartan/test/test1.sdfy (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.Build.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.Compiler.CodeDom.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.Compiler.CodeDom.xml (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.Compiler.Interactive.Settings.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.Compiler.Server.Shared.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.Compiler.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.Core.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.Core.xml (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.LanguageService.Base.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.LanguageService.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Build.Tasks.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Build.Tasks.xml (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Linq.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Linq.xml (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Math.Providers.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Metadata.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Metadata.xml (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Plot.Excel.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Plot.Neutral.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Plot.XCeed.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.Plot.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.PowerPack.xml (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.ProjectSystem.Base.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.ProjectSystem.FSharp.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.ProjectSystem.PropertyPages.dll (100%)
+rename {tools => unreleased/tools}/fsharp/FSharp.VS.FSI.dll (100%)
+rename {tools => unreleased/tools}/fsharp/fsc.exe (100%)
+rename {tools => unreleased/tools}/fsharp/fsi.exe (100%)
+rename {tools => unreleased/tools}/fsharp/fslex.exe (100%)
+rename {tools => unreleased/tools}/fsharp/fsyacc.exe (100%)
+rename {tools => unreleased/tools}/scripts/.gitignore (100%)
+rename {tools => unreleased/tools}/scripts/build-summary.py (100%)
+rename {tools => unreleased/tools}/scripts/check-lf.ps1 (100%)
+rename {tools => unreleased/tools}/scripts/dafny-line-count.py (100%)
+rename {tools => unreleased/tools}/scripts/dafny-oneproc.py (100%)
+rename {tools => unreleased/tools}/scripts/dafny-profiler.py (100%)
+rename {tools => unreleased/tools}/scripts/dafnyBuildVsix.ps1 (100%)
+rename {tools => unreleased/tools}/scripts/expand-tabs-in-place (100%)
+rename {tools => unreleased/tools}/scripts/function_call_graph.py (100%)
+rename {tools => unreleased/tools}/scripts/integration-project/build.py (100%)
+rename {tools => unreleased/tools}/scripts/integration-project/build.pyproj (100%)
+rename {tools => unreleased/tools}/scripts/integration-project/build.sln (100%)
+rename {tools => unreleased/tools}/scripts/integration-project/make-project.sln (100%)
+rename {tools => unreleased/tools}/scripts/integration-project/make-project.vcxproj (100%)
+rename {tools => unreleased/tools}/scripts/integration-testing.ps1 (100%)
+rename {tools => unreleased/tools}/scripts/linecounts.bat (100%)
+rename {tools => unreleased/tools}/scripts/mindy-profiler.py (100%)
+rename {tools => unreleased/tools}/scripts/purge.py (100%)
+rename {tools => unreleased/tools}/scripts/spartan-line-count.py (100%)
+rename {tools => unreleased/tools}/scripts/z3ReprintLog.cs (100%)
+Already up-to-date.
+/home/everbld/everest-ci/ci: line 246: cd: hacl-star: No such file or directory
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+git pull <remote> <branch>
+
+/home/everbld/everest-ci/ci: line 246: cd: kremlin: No such file or directory
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /cygdrive/c)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+/home/everbld/everest-ci/ci: line 260: ./everest: No such file or directory
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   746  100     2  100   744      8   3037 --:--:-- --:--:-- --:--:--  3978
