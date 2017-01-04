@@ -1,0 +1,65 @@
+make[2]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+make[2]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+6 shift/reduce conflicts.
+./Ex01a.fst(67,0-67,48): (Warning) Top-level let-bindings must be total; this term may have effects
+./Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+./ifcExample.fst(10,0-10,15): (Warning) Top-level let-bindings must be total; this term may have effects
+./ifcExample.fst(11,0-11,15): (Warning) Top-level let-bindings must be total; this term may have effects
+./ifcExample.fst(12,0-12,15): (Warning) Top-level let-bindings must be total; this term may have effects
+./ifcExample.fst(13,0-13,17): (Warning) Top-level let-bindings must be total; this term may have effects
+./MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex10a.fst(26,0-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: /LinuxAgent/_work/4/s/examples/incl/Test.fst.hints; ran without hints
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Sys_error("Test.fst: No such file or directory")
+make[4]: *** [field.pos.pver] Error 1
+./Ex12a.Cap.fst(20,0-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: /LinuxAgent/_work/4/s/examples/incl/Test.fst.hints; ran without hints
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Sys_error("Test.fst: No such file or directory")
+make[4]: *** [noshadow.pos.pver] Error 1
+Warning: Unable to open hints file: /LinuxAgent/_work/4/s/examples/incl/Test.fst.hints; ran without hints
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Sys_error("Test.fst: No such file or directory")
+make[4]: *** [open.pos.pver] Error 1
+./Ex10a.fst(26,0-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: /LinuxAgent/_work/4/s/examples/incl/Test.fst.hints; ran without hints
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Sys_error("Test.fst: No such file or directory")
+make[4]: *** [plain.pos.pver] Error 1
+./Ex12a.Cap.fst(18,0-18,26): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: /LinuxAgent/_work/4/s/examples/incl/Test.fst.hints; ran without hints
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Sys_error("Test.fst: No such file or directory")
+make[4]: *** [private.pos.pver] Error 1
+./Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: /LinuxAgent/_work/4/s/examples/incl/Test.fst.hints; ran without hints
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Sys_error("Test.fst: No such file or directory")
+make[4]: *** [shadow.pos.pver] Error 1
+Warning: Unable to open hints file: /LinuxAgent/_work/4/s/examples/incl/Test.fst.hints; ran without hints
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Sys_error("Test.fst: No such file or directory")
+make[4]: *** [trans.pos.pver] Error 1
+make[4]: Target `uall' not remade because of errors.
+make[3]: *** [incl.uall] Error 2
+./TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+./TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+./Mac.fst(69,0-69,35): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+make[5]: *** [Crypto.AEAD.Invariant.fst-ver] Error 1
+Unexpected error; please file a bug report, ideally with a minimized version of the source program that triggered the error.
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+make[5]: *** [Crypto.AEAD.Encoding.fst-ver] Error 1
+make[5]: Target `all' not remade because of errors.
+make[4]: *** [uall] Error 2
+make[3]: *** [low-level.uall] Error 2
+make[3]: Target `uall' not remade because of errors.
+make[2]: *** [uexamples] Error 2
+make[2]: Target `uregressions' not remade because of errors.
+make[1]: *** [utest] Error 2
+make: *** [ulong] Error 2
