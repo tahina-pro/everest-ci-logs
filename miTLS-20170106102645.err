@@ -1,0 +1,47 @@
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(42,3-42,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(44,3-44,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,3-47,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,3-20,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(100,3-100,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,3-132,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(175,3-175,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,3-34,3): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(91,3-91,3): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (412607,44): '=' cannot be used in patterns.
+WARNING: (412607,44): 'if' cannot be used in patterns.
+WARNING: (412607,44): 'if' cannot be used in patterns.
+.\StreamPlain.fst(78,4-78,7): (Error) Unknown assertion failed
+Verified module: StreamPlain (293428 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:250: StreamPlain.fst-ver] Error 1
+.\StatefulLHAE.fst(55,15-55,21): (Error) Subtyping check failed; expected type rgn; got type rid (see .\TLSConstants.fst(37,101-37,123))
+.\StatefulLHAE.fst(69,21-69,27): (Error) Subtyping check failed; expected type rgn; got type rid (see .\TLSConstants.fst(37,101-37,123))
+.\StatefulLHAE.fst(80,18-80,24): (Error) Subtyping check failed; expected type rgn; got type rid (see .\TLSConstants.fst(37,101-37,123))
+Verified module: StatefulLHAE (471190 milliseconds)
+3 errors were reported (see above)
+make: *** [Makefile:250: StatefulLHAE.fst-ver] Error 1
+WARNING: (423923,44): '=' cannot be used in patterns.
+WARNING: (423923,44): 'if' cannot be used in patterns.
+WARNING: (423923,44): 'if' cannot be used in patterns.
+.\Range.fst(175,4-175,21): (Error) could not prove post-condition
+.\Range.fst(279,4-279,26): (Error) Unknown assertion failed
+Verified module: Range (547028 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:250: Range.fst-ver] Error 1
+.\StAE.fst(274,3-274,3): (Error) Unknown assertion failed
+.\StAE.fst(322,3-322,3): (Error) Unknown assertion failed
+.\StAE.fst(404,27-404,49): (Error) Subtyping check failed; expected type plainLen; got type nat (see .\StreamPlain.fst(29,24-29,37))
+Verified module: StAE (610173 milliseconds)
+3 errors were reported (see above)
+make: *** [Makefile:250: StAE.fst-ver] Error 1
+.\StreamAE.fst(128,22-128,23): (Error) Subtyping check failed; expected type id; got type id (see .\AEADProvider.fst(76,36-76,57))
+.\StreamAE.fst(156,19-156,28): (Error) assertion failed (see .\AEADProvider.fst(242,22-242,59))
+.\StreamAE.fst(212,42-212,43): (Error) Subtyping check failed; expected type (n#7849:nat{(b2t (op_LessThanOrEqual (repr_bytes n@0) (noncelen i)))}); got type (match (authId i) with
+| true  -> (seqn_val (__proj__State__item__region e) (__proj__State__item__log e) max_ctr)
+|_  -> counter) (see C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Bytes.fst(146,41-146,58))
+.\StreamAE.fst(277,26-277,27): (Error) Subtyping check failed; expected type plainlen; got type plainLen (see .\AEADProvider.fst(280,22-280,59))
+Verified module: StreamAE (1297018 milliseconds)
+4 errors were reported (see above)
+make: *** [Makefile:250: StreamAE.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
