@@ -1,0 +1,311 @@
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/2/s/src/tls'
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --version | grep ^commit | sed 's/commit=\([^ ]*\).*/\1/' > ../../.fstar_version
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Flags \
+Flags.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MonotoneMap \
+MonotoneMap.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSError \
+TLSError.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSConstants \
+TLSConstants.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Transport \
+Transport.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Nonce \
+Nonce.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module RSAKey \
+RSAKey.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module DHGroup \
+DHGroup.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module ECGroup \
+ECGroup.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module CommonDH \
+CommonDH.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module PMS \
+PMS.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Hashing \
+Hashing.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module HashMAC \
+HashMAC.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Cert \
+Cert.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Signature \
+Signature.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSInfo \
+TLSInfo.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module IdNonce \
+IdNonce.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSExtensions \
+TLSExtensions.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Range \
+Range.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module DataStream \
+DataStream.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Alert \
+Alert.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Content \
+Content.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamPlain \
+StreamPlain.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamAE \
+StreamAE.fst
+Verified module: Flags (21 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Flags.fst.hints; ran without hints
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MasterSecret \
+MasterSecret.fst
+Verified module: TLSError (1132 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StatefulPlain \
+StatefulPlain.fst
+Verified module: MonotoneMap (2520 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module LHAEPlain \
+LHAEPlain.fst
+Verified module: Transport (1724 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module AEAD_GCM \
+AEAD_GCM.fst
+Verified module: RSAKey (516 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC \
+MAC.fst
+Verified module: Hashing (175 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StatefulLHAE \
+StatefulLHAE.fst
+.\TLSConstants.fst(40,34-42,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(42,63-45,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(37,17-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: HashMAC (2181 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Record \
+Record.fst
+Verified module: PMS (2761 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC_SHA256 \
+MAC_SHA256.fst
+Verified module: DHGroup (3563 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC_SHA1 \
+MAC_SHA1.fst
+Verified module: CommonDH (5034 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StAE \
+StAE.fst
+.\IdNonce.fst(16,46-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Alert (2861 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module KeySchedule \
+KeySchedule.fst
+.\MasterSecret.fst(32,17-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: LHAEPlain (7306 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamDeltas \
+StreamDeltas.fst
+Verified module: ECGroup (19288 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module HKDF \
+HKDF.fst
+Verified module: Cert (20978 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Epochs \
+Epochs.fst
+Verified module: MAC_SHA1 (9245 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Connection \
+Connection.fst
+Verified module: IdNonce (26261 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module ConnInvariant \
+ConnInvariant.fst
+Verified module: Record (3865 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module FFI \
+FFI.fst
+Verified module: HKDF (5787 milliseconds)
+All verification conditions discharged successfully
+Verified module: StatefulPlain (20528 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLS \
+TLS.fst
+Verified module: TLSExtensions (29656 milliseconds)
+All verification conditions discharged successfully
+Verified module: MAC_SHA256 (12126 milliseconds)
+All verification conditions discharged successfully
+Verified module: StreamPlain (29254 milliseconds)
+All verification conditions discharged successfully
+.\Nonce.fst(129,38-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Nonce (36717 milliseconds)
+All verification conditions discharged successfully
+Verified module: DataStream (34136 milliseconds)
+All verification conditions discharged successfully
+.\Signature.fst(174,43-175,32): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: StreamDeltas (3891 milliseconds)
+All verification conditions discharged successfully
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+Verified module: StatefulLHAE (29475 milliseconds)
+All verification conditions discharged successfully
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+Verified module: TLSInfo (60131 milliseconds)
+All verification conditions discharged successfully
+Verified module: MAC (45139 milliseconds)
+All verification conditions discharged successfully
+Verified module: Content (62320 milliseconds)
+All verification conditions discharged successfully
+Verified module: StreamAE (60543 milliseconds)
+All verification conditions discharged successfully
+Verified module: KeySchedule (16219 milliseconds)
+All verification conditions discharged successfully
+Verified module: MasterSecret (57585 milliseconds)
+All verification conditions discharged successfully
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+.\KeySchedule.fst(527,4-527,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+Verified module: AEAD_GCM (59830 milliseconds)
+All verification conditions discharged successfully
+Verified module: Connection (14279 milliseconds)
+All verification conditions discharged successfully
+Verified module: StAE (87573 milliseconds)
+All verification conditions discharged successfully
+Verified module: Epochs (55618 milliseconds)
+All verification conditions discharged successfully
+Verified module: FFI (841 milliseconds)
+All verification conditions discharged successfully
+Verified module: Signature (130454 milliseconds)
+All verification conditions discharged successfully
+.\ConnInvariant.fst(89,72-92,64): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: TLSConstants (158088 milliseconds)
+All verification conditions discharged successfully
+Verified module: TLS (97415 milliseconds)
+All verification conditions discharged successfully
+Verified module: ConnInvariant (174893 milliseconds)
+All verification conditions discharged successfully
+Verified module: Range (1928837 milliseconds)
+All verification conditions discharged successfully
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/2/s/src/tls'
