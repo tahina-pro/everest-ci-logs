@@ -1,0 +1,11 @@
+make: Entering directory '/home/darrenge/everest/fstar/src/ocaml-output'
+cd ../../ && ocamlbuild -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I lib/ml -use-ocamlfind main.native
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Driver.cmo src/ocaml-output/FStar_Parser_Driver.ml
+File "src/ocaml-output/FStar_Parser_Driver.ml", line 1:
+Exit code 2 while executing this command:
+Error: The files src/basic/ml\fStar_Util.cmi
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Driver.cmo src/ocaml-output/FStar_Parser_Driver.ml
+and src/parser/ml\fStar_Parser_ParseIt.cmi
+make inconsistent assumptions over interface FStar_Util
+make: Leaving directory '/home/darrenge/everest/fstar/src/ocaml-output'
+make: *** [Makefile:93: fstar.exe] Error 2
