@@ -1,0 +1,42 @@
+Removing setup-x86_64.exe
+Removing z3-4.5.0-x64-win.zip
+Removing z3-4.5.0-x64-win/
+# Switching to the everest directory ... now in /home/everbld/everest
+
+OVERVIEW: ./everest, a high-level management script for Project Everest
+
+USAGE: ./everest COMMAND
+
+COMMANDS:
+check     ensure that all the required programs are found in path, install
+them if needed; offer to customize ~/.bashrc with proper env
+variables
+
+pull      pull all projects and move them to the revisions specified by
+hashes.sh
+
+make      rebuild all projects
+
+snapshot  make the current state a new known set of working revisions; this
+writes into hashes.sh
+
+help      print the current message
+[34mChecking environment
+(B[m... which found
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+... all 42 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... ocamlfind found
+... all 14 ocamlfind packages found
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+[31mERROR: the right version of z3 doesn't seem to be installed
+(B[m[35mDownload it from the internet? [Yn]
