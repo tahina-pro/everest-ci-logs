@@ -1,0 +1,141 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\Ex01a.fst(67,0-67,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(57,0-57,48): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+Failure("k=(h0:heap -> h1:heap -> n:((fun h0 h1 -> nat) h0@1 h1@0) -> x:(?34294 h0@2 h1@1 n@0) -> y:((fun h0 h1 n x -> (dtuple2 ((fun h0 h1 n x -> (?34359 h0@3 h1@2 n@1 x@0)) h0@3 h1@2 n@1 x@0) (?34356 h0@3 h1@2 n@1 x@0))) h0@3 h1@2 n@1 x@0) -> Tot (uu___:((fun h0 h1 n x y -> (?34359 h0@4 h1@3 n@2 x@1)) h0@4 h1@3 n@2 x@1 y@0) -> Type))\nxs=h0, h1, n, x, y, uu___\nargs=h0 h1 n x y\nIll-formed substitutution")
+Raised at file "pervasives.ml", line 30, characters 22-33
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 3542, characters 30-57
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 3197, characters 7-33
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 2587, characters 10-219
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 2015, characters 7-45
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 4650, characters 10-27
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5049, characters 15-47
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2196, characters 17-86
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2516, characters 15-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1054, characters 3-63
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2188, characters 15-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2516, characters 15-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1054, characters 3-63
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2188, characters 15-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2516, characters 15-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1054, characters 3-63
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 737, characters 3-23
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2188, characters 15-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3787, characters 15-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3273, characters 15-48
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3170, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3354, characters 15-31
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3387, characters 15-753
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3470, characters 15-68
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3636, characters 15-43
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 168, characters 14-133
+Called from file "list.ml", line 84, characters 24-34
+Called from file "lib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 291, characters 15-65
+Called from file "src/ocaml-output/FStar_Universal.ml", line 316, characters 14-57
+Called from file "src/ocaml-output/FStar_Universal.ml", line 327, characters 14-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 363, characters 14-58
+Called from file "src/ocaml-output/FStar_FStar.ml", line 234, characters 14-55
+Called from file "src/ocaml-output/FStar_FStar.ml", line 296, characters 15-22
+
+make[3]: *** [../Makefile.include:63: ImmutableST.uver] Error 1
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\incl\Test.fst.hints; ran without hints
+Unexpected error
+Failure("k=(h0:heap -> h1:heap -> n:((fun h0 h1 -> nat) h0@1 h1@0) -> x:(?34294 h0@2 h1@1 n@0) -> y:((fun h0 h1 n x -> (dtuple2 ((fun h0 h1 n x -> (?34359 h0@3 h1@2 n@1 x@0)) h0@3 h1@2 n@1 x@0) (?34356 h0@3 h1@2 n@1 x@0))) h0@3 h1@2 n@1 x@0) -> Tot (uu___:((fun h0 h1 n x y -> (?34359 h0@4 h1@3 n@2 x@1)) h0@4 h1@3 n@2 x@1 y@0) -> Type))\nxs=h0, h1, n, x, y, uu___\nargs=h0 h1 n x y\nIll-formed substitutution")
+Raised at file "pervasives.ml", line 30, characters 22-33
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 3542, characters 30-57
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 3197, characters 7-33
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 2587, characters 10-219
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 2015, characters 7-45
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 4650, characters 10-27
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5049, characters 15-47
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2196, characters 17-86
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2516, characters 15-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1054, characters 3-63
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2188, characters 15-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2516, characters 15-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1054, characters 3-63
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2188, characters 15-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2516, characters 15-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1054, characters 3-63
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 737, characters 3-23
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2188, characters 15-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3787, characters 15-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3273, characters 15-48
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3170, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3354, characters 15-31
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3387, characters 15-753
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3470, characters 15-68
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3636, characters 15-43
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 168, characters 14-133
+Called from file "list.ml", line 84, characters 24-34
+Called from file "lib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 291, characters 15-65
+Called from file "src/ocaml-output/FStar_Universal.ml", line 316, characters 14-57
+Called from file "src/ocaml-output/FStar_Universal.ml", line 327, characters 14-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 363, characters 14-58
+Called from file "src/ocaml-output/FStar_FStar.ml", line 234, characters 14-55
+Called from file "src/ocaml-output/FStar_FStar.ml", line 296, characters 15-22
+
+make[3]: *** [../Makefile.include:63: AllocST.uver] Error 1
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\incl\Test.fst.hints; ran without hints
+.\ifcExample.fst(10,0-10,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(11,0-11,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(12,0-12,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(13,0-13,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\incl\Test.fst.hints; ran without hints
+.\Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\incl\Test.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\incl\Test.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\incl\Test.fst.hints; ran without hints
+.\MRefHeap.fst(23,9-23,10) : (Error) (?34558 a r h m) is not a subtype of the expected type (dtuple2 (?34580 a r h m v) (?34581 a r h m v))
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[3]: *** [../Makefile.include:63: ReifyTest.uver] Error 1
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\incl\Test.fst.hints; ran without hints
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MRefHeap.fst(23,9-23,10) : (Error) (?34558 a r h m) is not a subtype of the expected type (dtuple2 (?34580 a r h m v) (?34581 a r h m v))
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[3]: *** [../Makefile.include:63: MRefST.uver] Error 1
+make[3]: Target 'uall' not remade because of errors.
+make[2]: *** [Makefile:49: preorders.uall] Error 2
+.\Ex10a.fst(26,0-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(20,0-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(69,0-69,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(26,0-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(18,0-18,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+make[2]: Target 'uall' not remade because of errors.
+make[1]: *** [Makefile:452: uexamples] Error 2
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:429: utest] Error 2
