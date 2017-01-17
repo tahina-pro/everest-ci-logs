@@ -1,0 +1,68 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/31/s
+About to run: everest_move
+BUILD_SOURCEBRANCHNAME: darren
+BUILD_DEFINITIONNAME: Everest-Nightly-Upgrade-Windows
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent/_work/31/s
+
+OVERVIEW: ./everest, a high-level management script for Project Everest
+
+USAGE: ./everest COMMANDS
+
+COMMAND:
+check     ensure that all the required programs are found in path, install
+them if needed; offer to customize ~/.bashrc with proper env
+variables
+
+pull      pull all projects and move them to the revisions specified by
+hashes.sh
+
+make      rebuild all projects
+
+test      launch the test artifacts
+
+clean     clean all projets
+
+snapshot  make the current state a new known set of working revisions; this
+writes into hashes.sh
+
+help      print the current message
+Checking environment
+... which found
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/8/s
+About to run: everest_move
+BUILD_SOURCEBRANCHNAME: barrybo
+BUILD_DEFINITIONNAME: Everest-Nightly-Upgrade-Windows
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+Removing FStar/
+Removing Spartan/
+Removing mitls-fstar/
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent2/_work/8/s
+
+Checking environment
+... which found
+... all 41 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... all 41 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... all 15 ocamlfind packages found
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+... correct z3 version detected
+I don't see any fstar.exe or krml in your path; add /cygdrive/c/Build/Agent/_work/31/s/FStar/bin and /cygdrive/c/Build/Agent/_work/31/s/kremlin to your PATH via ~/.bashrc? [Yn]
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
