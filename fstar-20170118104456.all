@@ -1,0 +1,81 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: kyod_toplevel_pattern
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Installing 'FsLexYacc 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent\_work\1\s\bin\basic.dll
+absyn -> C:\Build\Agent\_work\1\s\bin\absyn.dll
+tc -> C:\Build\Agent\_work\1\s\bin\tc.dll
+format -> C:\Build\Agent\_work\1\s\bin\format.dll
+tosmt -> C:\Build\Agent\_work\1\s\bin\tosmt.dll
+syntax -> C:\Build\Agent\_work\1\s\bin\syntax.dll
+typechecker -> C:\Build\Agent\_work\1\s\bin\typechecker.dll
+extraction -> C:\Build\Agent\_work\1\s\bin\extraction.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent\_work\1\s\bin\prettyprint.dll
+compiling to dfas (can take a while...)
+342 states
+writing output
+building tables
+computing first function...time: 00:00:00.1854254
+building kernels...time: 00:00:00.1130301
+building kernel table...time: 00:00:00.0136864
+computing lookahead relations........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.3886035
+building lookahead table...time: 00:00:00.1736627
+building action table...state 415: shift/reduce error on SEMICOLON
+state 442: shift/reduce error on BAR
+state 445: shift/reduce error on LBRACE
+state 446: shift/reduce error on BAR
+state 457: shift/reduce error on BAR
+state 533: shift/reduce error on COLON_EQUALS
+state 569: shift/reduce error on LBRACE
+time: 00:00:00.6412227
+building goto table...time: 00:00:00.2015849
+returning tables.
+7 shift/reduce conflicts
+725 states
+139 nonterminals
+141 terminals
+392 productions
+#rows in action table: 725
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(455,18): error FS0001: The type 'term'' does not support the 'equality' constraint because it is a record, union or struct with one or more structural element types which do not support the 'equality' constraint. Either avoid the use of equality with this type, or add the 'StructuralEquality' attribute to the type to determine which field type does not support equality [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1754,11): error FS0001: This expression was expected to have type    bool    but here has type    let_qualifier [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1797,43): error FS0001: This expression was expected to have type    Range.range    but here has type    string [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1807,25): error FS0001: This expression was expected to have type    env_t    but here has type    decl [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1807,32): error FS1129: The type 'env_t' does not contain a field 'd' [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1811,33): error FS0001: This expression was expected to have type    lid    but here has type    ident [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1812,35): error FS0001: This expression was expected to have type    string    but here has type    ident [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1813,38): error FS0001: This expression was expected to have type    lid    but here has type    Range.range -> lident [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1815,42): error FS0001: This expression was expected to have type    ident    but here has type    Range.range -> lident [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1816,29): error FS0001: This expression was expected to have type    decl    but here has type    decoration Prims.list -> decl [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1822,22): error FS0039: The value, constructor, namespace or type 'Typechecker' is not defined [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1824,62): error FS0001: The type 'bv' does not support the 'equality' constraint because it is a record, union or struct with one or more structural element types which do not support the 'equality' constraint. Either avoid the use of equality with this type, or add the 'StructuralEquality' attribute to the type to determine which field type does not support equality [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1825,12): error FS0001: This expression was expected to have type    sigelt    but here has type    decl -> env_t * sigelts [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\tosyntax.fs(1825,24): error FS0001: This expression was expected to have type    sigelt list    but here has type    env_t [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+smtencoding -> C:\Build\Agent\_work\1\s\bin\smtencoding.dll
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: *** [Makefile:52: all] Error 1
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make: *** [Makefile:252: utest] Error 2
