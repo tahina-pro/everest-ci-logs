@@ -1,0 +1,41 @@
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(42,0-42,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(44,0-45,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(91,0-92,64): (Warning) Top-level let-bindings must be total; this term may have effects
+.\StreamPlain.fst(78,0-141,57): (Error) Unknown assertion failed
+Verified module: StreamPlain (337234 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:239: StreamPlain.fst-ver] Error 1
+WARNING: (412936,44): '=' cannot be used in patterns.
+WARNING: (412936,44): 'if' cannot be used in patterns.
+WARNING: (412936,44): 'if' cannot be used in patterns.
+.\StatefulLHAE.fst(55,15-55,21): (Error) Subtyping check failed; expected type rgn; got type rid (see .\TLSConstants.fst(37,101-37,123))
+.\StatefulLHAE.fst(69,21-69,27): (Error) Subtyping check failed; expected type rgn; got type rid (see .\TLSConstants.fst(37,101-37,123))
+.\StatefulLHAE.fst(80,18-80,24): (Error) Subtyping check failed; expected type rgn; got type rid (see .\TLSConstants.fst(37,101-37,123))
+.\StatefulLHAE.fst(117,11-117,18): (Error) assertion failed (see .\AEAD_GCM.fst(225,9-225,61))
+Verified module: StatefulLHAE (572734 milliseconds)
+4 errors were reported (see above)
+make: *** [Makefile:239: StatefulLHAE.fst-ver] Error 1
+WARNING: (424251,44): '=' cannot be used in patterns.
+WARNING: (424251,44): 'if' cannot be used in patterns.
+WARNING: (424251,44): 'if' cannot be used in patterns.
+.\StAE.fst(277,0-280,55): (Error) Unknown assertion failed
+.\StAE.fst(407,27-407,49): (Error) Subtyping check failed; expected type plainLen; got type nat (see .\StreamPlain.fst(29,24-29,37))
+Verified module: StAE (694953 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:239: StAE.fst-ver] Error 1
+.\StreamAE.fst(159,19-159,28): (Error) assertion failed (see .\AEADProvider.fst(244,22-244,59))
+.\StreamAE.fst(217,27-217,28): (Error) Subtyping check failed; expected type plainlen; got type plainLen (see .\AEADProvider.fst(281,22-281,59))
+.\StreamAE.fst(278,43-278,44): (Error) Subtyping check failed; expected type (n#7735:nat{(b2t (op_LessThanOrEqual (repr_bytes n@0) (noncelen i)))}); got type (match (authId i) with
+| true  -> (seqn_val (__proj__State__item__region d) (__proj__State__item__log d) max_ctr)
+|_  -> counter) (see C:\Build\Agent2\_work\2\s\fstar\ucontrib\Platform\fst\Platform.Bytes.fst(146,41-146,58))
+Verified module: StreamAE (1273125 milliseconds)
+3 errors were reported (see above)
+make: *** [Makefile:239: StreamAE.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
