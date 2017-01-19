@@ -1,0 +1,26 @@
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(42,0-42,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(44,0-45,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (413092,44): '=' cannot be used in patterns.
+WARNING: (413092,44): 'if' cannot be used in patterns.
+WARNING: (413092,44): 'if' cannot be used in patterns.
+.\ConnInvariant.fst(91,0-92,64): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (424448,44): '=' cannot be used in patterns.
+WARNING: (424448,44): 'if' cannot be used in patterns.
+WARNING: (424448,44): 'if' cannot be used in patterns.
+.\StAE.fst(360,19-360,26): (Error) assertion failed (see .\StreamAE.fst(205,6-205,43))
+.\StAE.fst(416,27-416,49): (Error) Subtyping check failed; expected type plainLen; got type nat (see .\StreamPlain.fst(34,24-34,37))
+Verified module: StAE (924897 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:239: StAE.fst-ver] Error 1
+.\StreamAE.fst(225,0-251,3): (Error) Unknown assertion failed
+Verified module: StreamAE (1581577 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:239: StreamAE.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
