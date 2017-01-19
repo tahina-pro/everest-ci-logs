@@ -1,0 +1,23 @@
+This is /home/vsts/everest-ci/ci
+Working directory: /home/vsts/FStar
+About to run: make -C src ulong -j 24 -k
+BUILD_SOURCEBRANCHNAME:
+BUILD_DEFINITIONNAME:
+make: Entering directory '/home/vsts/FStar/src'
+make utest
+make[1]: Entering directory '/home/vsts/FStar/src'
+make all
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Entering directory '/home/vsts/FStar/src'
+mono VS/.nuget/NuGet.exe restore VS/FStar.sln
+make[2]: mono: Command not found
+make[2]: *** [nuget-restore] Error 127
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [utest] Error 2
+Makefile:63: recipe for target 'nuget-restore' failed
+make[2]: Leaving directory '/home/vsts/FStar/src'
+Makefile:252: recipe for target 'utest' failed
+make[1]: Leaving directory '/home/vsts/FStar/src'
+Makefile:285: recipe for target 'ulong' failed
+make: *** [ulong] Error 2
+make: Leaving directory '/home/vsts/FStar/src'
