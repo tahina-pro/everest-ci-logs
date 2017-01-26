@@ -1,0 +1,151 @@
+This is /home/vsts/everest-ci/ci
+Working directory: /LinuxAgent/_work/4/s
+About to run: make -C src ulong -j 6 -k
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: FStar-Nightly-Linux
+make: Entering directory '/LinuxAgent/_work/4/s/src'
+make utest
+make[1]: Entering directory '/LinuxAgent/_work/4/s/src'
+make all
+make[2]: Entering directory '/LinuxAgent/_work/4/s/src'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+mono VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Installing 'FsLexYacc 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[3]: Entering directory '/LinuxAgent/_work/4/s/src/VS'
+[ -d packages ] || make update-nuget
+mono .nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[3]: Leaving directory '/LinuxAgent/_work/4/s/src/VS'
+xbuild /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+XBuild Engine Version 12.0
+Mono, Version 4.2.1.0
+Copyright (C) 2005-2013 Various Mono authors
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+/LinuxAgent/_work/4/s/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+/LinuxAgent/_work/4/s/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+compiling to dfas (can take a while...)
+342 states
+writing output
+building tables
+computing first function...time: 00:00:00.0657525
+building kernels...time: 00:00:00.0800515
+building kernel table...time: 00:00:00.0062293
+computing lookahead relations........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.4408976
+building lookahead table...time: 00:00:00.1779125
+building action table...state 415: shift/reduce error on SEMICOLON
+state 442: shift/reduce error on BAR
+state 445: shift/reduce error on LBRACE
+state 446: shift/reduce error on BAR
+state 457: shift/reduce error on BAR
+state 533: shift/reduce error on COLON_EQUALS
+state 569: shift/reduce error on LBRACE
+time: 00:00:00.7370838
+building goto table...time: 00:00:00.2272901
+returning tables.
+7 shift/reduce conflicts
+725 states
+139 nonterminals
+141 terminals
+392 productions
+#rows in action table: 725
+/LinuxAgent/_work/4/s/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+Configuration: Release Platform: AnyCPU
+/LinuxAgent/_work/4/s/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+/LinuxAgent/_work/4/s/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+/LinuxAgent/_work/4/s/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/LinuxAgent/_work/4/s/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/LinuxAgent/_work/4/s/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/LinuxAgent/_work/4/s/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+Configuration: Release Platform: AnyCPU
+/LinuxAgent/_work/4/s/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/LinuxAgent/_work/4/s/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/LinuxAgent/_work/4/s/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/LinuxAgent/_work/4/s/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+chmod a+x ../bin/tests.exe
+chmod a+x ../bin/fstar.exe
+make[2]: Leaving directory '/LinuxAgent/_work/4/s/src'
+make -C ocaml-output
+make[2]: Entering directory '/LinuxAgent/_work/4/s/src/ocaml-output'
+cp ../parser/ml/parse.mly ./parse.mly
+echo 'let version = "0.9.3.1-beta"' > FStar_Version.ml
+echo 'let platform = "Linux_x86_64"' >> FStar_Version.ml
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+echo 'let date = "2017-01-26T22:50:56+00:00"' >> FStar_Version.ml
+echo 'let commit= "72a0d51"' >> FStar_Version.ml
+echo "%{" > ../parser/parse.fsy
+# We are opening the same module twice but we need these modules
+# open for the definition of tokens
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+# TODO: create a proper OCamlbuild rule for this production so that
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/fstar/ml/main.ml > src/fstar/ml/main.ml.depends
++ ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/fstar/ml/main.ml > src/fstar/ml/main.ml.depends
+ocamlfind: Package `batteries' not found
+Command exited with code 2.
+Makefile:94: recipe for target 'fstar.exe' failed
+make[2]: Leaving directory '/LinuxAgent/_work/4/s/src/ocaml-output'
+make[2]: *** [fstar.exe] Error 10
+make[2]: Target 'all' not remade because of errors.
+Makefile:250: recipe for target 'utest' failed
+make[1]: Leaving directory '/LinuxAgent/_work/4/s/src'
+make[1]: *** [utest] Error 2
+make: *** [ulong] Error 2
+Makefile:272: recipe for target 'ulong' failed
+make: Leaving directory '/LinuxAgent/_work/4/s/src'
