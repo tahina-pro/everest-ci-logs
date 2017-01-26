@@ -1,0 +1,18 @@
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(42,0-42,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(44,0-45,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (412939,44): '=' cannot be used in patterns.
+WARNING: (412939,44): 'if' cannot be used in patterns.
+WARNING: (412939,44): 'if' cannot be used in patterns.
+.\Alert.fst(58,0-94,80): (Error) Unknown assertion failed
+Verified module: Alert (208836 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:240: Alert.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
