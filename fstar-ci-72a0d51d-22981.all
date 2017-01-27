@@ -1,0 +1,1917 @@
+This is /home/vsts/everest-ci/ci
+Working directory: /home/vsts/everest/FStar
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME:
+BUILD_DEFINITIONNAME:
+make: Entering directory '/home/vsts/everest/FStar/src'
+make all
+make[1]: Entering directory '/home/vsts/everest/FStar/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+mono VS/.nuget/NuGet.exe restore VS/FStar.sln
+All packages listed in packages.config are already installed.
+make -C VS install-packages
+make[2]: Entering directory '/home/vsts/everest/FStar/src/VS'
+[ -d packages ] || make update-nuget
+mono .nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/home/vsts/everest/FStar/src/VS'
+xbuild /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+XBuild Engine Version 12.0
+Mono, Version 4.2.1.0
+Copyright (C) 2005-2013 Various Mono authors
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+/home/vsts/everest/FStar/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+/home/vsts/everest/FStar/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/home/vsts/everest/FStar/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+Configuration: Release Platform: AnyCPU
+/home/vsts/everest/FStar/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+/home/vsts/everest/FStar/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+Configuration: Release Platform: AnyCPU
+Configuration: Release Platform: AnyCPU
+/home/vsts/everest/FStar/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/home/vsts/everest/FStar/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/home/vsts/everest/FStar/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/home/vsts/everest/FStar/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+Configuration: Release Platform: AnyCPU
+/home/vsts/everest/FStar/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/home/vsts/everest/FStar/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/home/vsts/everest/FStar/src/prettyprint/prettyprint.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+/home/vsts/everest/FStar/src/smtencoding/smtencoding.fsproj:  warning : Project has unknown ToolsVersion '14.0'. Using the default tools version '4.0' instead.
+chmod a+x ../bin/tests.exe
+chmod a+x ../bin/fstar.exe
+make[1]: Leaving directory '/home/vsts/everest/FStar/src'
+make -C ocaml-output
+make[1]: Entering directory '/home/vsts/everest/FStar/src/ocaml-output'
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+# No parallelism done
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make[1]: Leaving directory '/home/vsts/everest/FStar/src/ocaml-output'
+make fstar-ocaml
+make[1]: Entering directory '/home/vsts/everest/FStar/src'
+make ocaml
+make[2]: Entering directory '/home/vsts/everest/FStar/src'
+rm -rf boot_fstis u_boot_fsts u_ocaml-output
+mkdir boot_fstis u_boot_fsts u_ocaml-output
+make prep
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: Entering directory '/home/vsts/everest/FStar/src'
+cp basic/string.fsi boot_fstis/FStar.string.fsti
+cp basic/list.fsi boot_fstis/FStar.list.fst
+sed -i 's/open Prims/module ALL_TEMP = FStar.All/g' boot_fstis/FStar.list.fst
+sed -i 's/<.* when .* : equality>//g' boot_fstis/FStar.list.fst
+sed -i 's/val/assume val/g' boot_fstis/FStar.list.fst
+cp basic/util.fsi boot_fstis/FStar.util.fsti
+sed -i 's/open System.IO/module ALL_TMP = FStar.All/g' boot_fstis/FStar.util.fsti
+sed -i 's/type time.*/assume new type time/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type smap.*/assume new type smap : Type0 -> Type0/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type out_channel.*/assume new type out_channel/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type file_handle.*/assume new type file_handle/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type stream_reader.*/assume new type stream_reader/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type string_builder.*/assume new type string_builder/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type proc.*/assume new type proc/g' boot_fstis/FStar.util.fsti
+sed -i 's/type set.*/assume new type set:Type0 -> Type0/g' boot_fstis/FStar.util.fsti
+cp basic/platform.fsi boot_fstis/FStar.platform.fsti
+cp basic/bytes.fsti boot_fstis/FStar.bytes.fst
+cp basic/range.fsi boot_fstis/FStar.range.fsti
+cp basic/version.fsi boot_fstis/FStar.version.fsti
+cp basic/getopt.fsi boot_fstis/FStar.getopt.fsti
+cp basic/unionfind.fsi boot_fstis/FStar.unionfind.fsti
+sed -i 's/type cell.*/module ALL_TMP = FStar.All/g' boot_fstis/FStar.unionfind.fsti
+sed -i 's/and contents.*//g' boot_fstis/FStar.unionfind.fsti
+sed -i 's/.*| Data.*//g' boot_fstis/FStar.unionfind.fsti
+sed -i 's/.*| Fwd.*//g' boot_fstis/FStar.unionfind.fsti
+sed -i 's/type uvar.*/assume new type uvar : Type0 -> Type0/g' boot_fstis/FStar.unionfind.fsti
+cp prettyprint/prettyprint.fsi boot_fstis/FStar.Pprint.fsti
+echo "#light \"off\"" > boot_fstis/FStar.Parser.Parse.fsti
+head -n -12 parser/parse.fsi >> boot_fstis/FStar.Parser.Parse.fsti
+sed -i 's/module FStar.Parser.Parse/module FStar.Parser.Parse\nopen FStar.All\nopen FStar.BaseTypes\ntype bytes = array<byte>/' boot_fstis/FStar.Parser.Parse.fsti
+make rename_as_fst
+make[4]: Entering directory '/home/vsts/everest/FStar/src'
+./tools/rename_all_boot_fsts
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Encode.fs to u_boot_fsts/FStar.SMTEncoding.Encode.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Term.fsi to u_boot_fsts/FStar.SMTEncoding.Term.fsti
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Solver.fs to u_boot_fsts/FStar.SMTEncoding.Solver.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Z3.fs to u_boot_fsts/FStar.SMTEncoding.Z3.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Util.fs to u_boot_fsts/FStar.SMTEncoding.Util.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Solver.fsi to u_boot_fsts/FStar.SMTEncoding.Solver.fsti
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.ErrorReporting.fsi to u_boot_fsts/FStar.SMTEncoding.ErrorReporting.fsti
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.ErrorReporting.fs to u_boot_fsts/FStar.SMTEncoding.ErrorReporting.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.SplitQueryCases.fs to u_boot_fsts/FStar.SMTEncoding.SplitQueryCases.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Encode.fsi to u_boot_fsts/FStar.SMTEncoding.Encode.fsti
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Term.fs to u_boot_fsts/FStar.SMTEncoding.Term.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Common.fs to u_boot_fsts/FStar.TypeChecker.Common.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Util.fs to u_boot_fsts/FStar.TypeChecker.Util.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Rel.fs to u_boot_fsts/FStar.TypeChecker.Rel.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.TcTerm.fsi to u_boot_fsts/FStar.TypeChecker.TcTerm.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Err.fs to u_boot_fsts/FStar.TypeChecker.Err.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Tc.fs to u_boot_fsts/FStar.TypeChecker.Tc.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Normalize.fsi to u_boot_fsts/FStar.TypeChecker.Normalize.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Tc.fsi to u_boot_fsts/FStar.TypeChecker.Tc.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Util.fsi to u_boot_fsts/FStar.TypeChecker.Util.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Normalize.fs to u_boot_fsts/FStar.TypeChecker.Normalize.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.DMFF.fs to u_boot_fsts/FStar.TypeChecker.DMFF.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.DMFF.fsi to u_boot_fsts/FStar.TypeChecker.DMFF.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.TcTerm.fs to u_boot_fsts/FStar.TypeChecker.TcTerm.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Env.fs to u_boot_fsts/FStar.TypeChecker.Env.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Rel.fsi to u_boot_fsts/FStar.TypeChecker.Rel.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Env.fsi to u_boot_fsts/FStar.TypeChecker.Env.fsti
+[rename_all_boot_fsts]: copying ./fsdoc/FStar.Fsdoc.Generator.fs to u_boot_fsts/FStar.Fsdoc.Generator.fst
+./boot_fstis/FStar.platform.fsti is unrecognized
+./boot_fstis/FStar.version.fsti is unrecognized
+./boot_fstis/FStar.getopt.fsti is unrecognized
+./boot_fstis/FStar.unionfind.fsti is unrecognized
+./boot_fstis/FStar.Pprint.fsti is unrecognized
+./boot_fstis/FStar.util.fsti is unrecognized
+./boot_fstis/FStar.Parser.Parse.fsti is unrecognized
+./boot_fstis/FStar.range.fsti is unrecognized
+./boot_fstis/FStar.bytes.fst is unrecognized
+./boot_fstis/FStar.list.fst is unrecognized
+./boot_fstis/FStar.string.fsti is unrecognized
+[rename_all_boot_fsts]: copying ./basic/FStar.Errors.fs to u_boot_fsts/FStar.Errors.fst
+[rename_all_boot_fsts]: copying ./basic/FStar.Options.fs to u_boot_fsts/FStar.Options.fst
+[rename_all_boot_fsts]: copying ./basic/FStar.Options.fsi to u_boot_fsts/FStar.Options.fsti
+[rename_all_boot_fsts]: copying ./basic/FStar.Const.fs to u_boot_fsts/FStar.Const.fst
+[rename_all_boot_fsts]: copying ./basic/FStar.Ident.fs to u_boot_fsts/FStar.Ident.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.Dep.fs to u_boot_fsts/FStar.Parser.Dep.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.Dep.fsi to u_boot_fsts/FStar.Parser.Dep.fsti
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.ToDocument.fsi to u_boot_fsts/FStar.Parser.ToDocument.fsti
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.Lexhelp.fs to u_boot_fsts/FStar.Parser.Lexhelp.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.Driver.fs to u_boot_fsts/FStar.Parser.Driver.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.AST.fs to u_boot_fsts/FStar.Parser.AST.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.Interleave.fs to u_boot_fsts/FStar.Parser.Interleave.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.ToDocument.fs to u_boot_fsts/FStar.Parser.ToDocument.fst
+[rename_all_boot_fsts]: copying ./format/FStar.Format.fs to u_boot_fsts/FStar.Format.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Top.fs to u_boot_fsts/FStar.Top.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Universal.fs to u_boot_fsts/FStar.Universal.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Dependencies.fs to u_boot_fsts/FStar.Dependencies.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Interactive.fs to u_boot_fsts/FStar.Interactive.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Indent.fs to u_boot_fsts/FStar.Indent.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Main.fs to u_boot_fsts/FStar.Main.fst
+./boot_fsts/FStar.SMTEncoding.Z3.fst is unrecognized
+./boot_fsts/FStar.SMTEncoding.Solver.fst is unrecognized
+./boot_fsts/FStar.Extraction.ML.Code.fst is unrecognized
+./boot_fsts/FStar.Syntax.Const.fst is unrecognized
+./boot_fsts/FStar.Extraction.ML.Syntax.fst is unrecognized
+./boot_fsts/FStar.Options.fst is unrecognized
+./boot_fsts/FStar.SMTEncoding.Util.fst is unrecognized
+./boot_fsts/FStar.Syntax.Syntax.fst is unrecognized
+./boot_fsts/FStar.TypeChecker.Rel.fst is unrecognized
+./boot_fsts/FStar.Fsdoc.Generator.fst is unrecognized
+./boot_fsts/FStar.SMTEncoding.SplitQueryCases.fst is unrecognized
+./boot_fsts/FStar.Absyn.Visit.fst is unrecognized
+./boot_fsts/FStar.SMTEncoding.ErrorReporting.fst is unrecognized
+./boot_fsts/FStar.Dependencies.fst is unrecognized
+./boot_fsts/FStar.TypeChecker.Util.fst is unrecognized
+./boot_fsts/FStar.Parser.ToDocument.fst is unrecognized
+./boot_fsts/FStar.ToSMT.SplitQueryCases.fst is unrecognized
+./boot_fsts/FStar.Tc.Tc.fst is unrecognized
+./boot_fsts/FStar.Tc.Util.fst is unrecognized
+./boot_fsts/FStar.Extraction.ML.Util.fst is unrecognized
+./boot_fsts/FStar.Stratified.fst is unrecognized
+./boot_fsts/FStar.ToSMT.Z3.fst is unrecognized
+./boot_fsts/FStar.Interactive.fst is unrecognized
+./boot_fsts/FStar.Extraction.ML.Term.fst is unrecognized
+./boot_fsts/FStar.Absyn.Print.fst is unrecognized
+./boot_fsts/FStar.TypeChecker.Errors.fst is unrecognized
+./boot_fsts/FStar.Indent.fst is unrecognized
+./boot_fsts/FStar.Syntax.InstFV.fst is unrecognized
+./boot_fsts/FStar.TypeChecker.DMFF.fst is unrecognized
+./boot_fsts/FStar.FStar.fst is unrecognized
+./boot_fsts/FStar.Syntax.Free.fst is unrecognized
+./boot_fsts/FStar.Tc.Env.fst is unrecognized
+./boot_fsts/FStar.Syntax.Subst.fst is unrecognized
+./boot_fsts/FStar.Extraction.ML.UEnv.fst is unrecognized
+./boot_fsts/FStar.TypeChecker.Common.fst is unrecognized
+./boot_fsts/FStar.Syntax.MutRecTy.fst is unrecognized
+./boot_fsts/FStar.Parser.Interleave.fst is unrecognized
+./boot_fsts/FStar.ToSMT.Encode.fst is unrecognized
+./boot_fsts/FStar.TypeChecker.TcTerm.fst is unrecognized
+./boot_fsts/FStar.TypeChecker.Env.fst is unrecognized
+./boot_fsts/FStar.Parser.Dep.fst is unrecognized
+./boot_fsts/FStar.Parser.AST.fst is unrecognized
+./boot_fsts/FStar.Parser.ParseIt.fsti is unrecognized
+./boot_fsts/FStar.Absyn.Syntax.fst is unrecognized
+./boot_fsts/FStar.Extraction.ML.ExtractTyp.fst is unrecognized
+./boot_fsts/FStar.Parser.DesugarEnv.fst is unrecognized
+./boot_fsts/FStar.Tc.Errors.fst is unrecognized
+./boot_fsts/FStar.Absyn.Util.fst is unrecognized
+./boot_fsts/FStar.Syntax.Util.fst is unrecognized
+./boot_fsts/FStar.Format.fst is unrecognized
+./boot_fsts/FStar.Tc.Rel.fst is unrecognized
+./boot_fsts/FStar.TypeChecker.Normalize.fst is unrecognized
+./boot_fsts/FStar.Extraction.Kremlin.fst is unrecognized
+./boot_fsts/FStar.Parser.Parse.fsti is unrecognized
+./boot_fsts/FStar.Parser.Env.fst is unrecognized
+./boot_fsts/FStar.Extraction.ML.Modul.fst is unrecognized
+./boot_fsts/FStar.Extraction.ML.ExtractExp.fst is unrecognized
+./boot_fsts/FStar.Parser.Desugar.fst is unrecognized
+./boot_fsts/FStar.Tc.Normalize.fst is unrecognized
+./boot_fsts/FStar.ToSMT.Term.fst is unrecognized
+./boot_fsts/FStar.Universal.fst is unrecognized
+./boot_fsts/FStar.Extraction.ML.Env.fst is unrecognized
+./boot_fsts/FStar.Absyn.Const.fst is unrecognized
+./boot_fsts/FStar.Const.fst is unrecognized
+./boot_fsts/FStar.Extraction.ML.ExtractMod.fst is unrecognized
+./boot_fsts/FStar.Ident.fst is unrecognized
+./boot_fsts/FStar.Parser.ToSyntax.fst is unrecognized
+./boot_fsts/FStar.Syntax.Print.fst is unrecognized
+./boot_fsts/FStar.SMTEncoding.Term.fst is unrecognized
+./boot_fsts/FStar.Parser.Driver.fst is unrecognized
+./boot_fsts/FStar.SMTEncoding.Encode.fst is unrecognized
+./boot_fsts/FStar.Parser.Lexhelp.fst is unrecognized
+./boot_fsts/FStar.TypeChecker.Tc.fst is unrecognized
+./boot_fsts/FStar.Tc.Recheck.fst is unrecognized
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Modul.fs to u_boot_fsts/FStar.Extraction.ML.Modul.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.UEnv.fs to u_boot_fsts/FStar.Extraction.ML.UEnv.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Code.fs to u_boot_fsts/FStar.Extraction.ML.Code.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Code.fsi to u_boot_fsts/FStar.Extraction.ML.Code.fsti
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Term.fs to u_boot_fsts/FStar.Extraction.ML.Term.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Syntax.fs to u_boot_fsts/FStar.Extraction.ML.Syntax.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Util.fs to u_boot_fsts/FStar.Extraction.ML.Util.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.Kremlin.fs to u_boot_fsts/FStar.Extraction.Kremlin.fst
+[rename_all_boot_fsts]: copying ./tosyntax/FStar.ToSyntax.ToSyntax.fsi to u_boot_fsts/FStar.ToSyntax.ToSyntax.fsti
+[rename_all_boot_fsts]: copying ./tosyntax/FStar.ToSyntax.Env.fsi to u_boot_fsts/FStar.ToSyntax.Env.fsti
+[rename_all_boot_fsts]: copying ./tosyntax/FStar.ToSyntax.ToSyntax.fs to u_boot_fsts/FStar.ToSyntax.ToSyntax.fst
+[rename_all_boot_fsts]: copying ./tosyntax/FStar.ToSyntax.Env.fs to u_boot_fsts/FStar.ToSyntax.Env.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.MutRecTy.fsi to u_boot_fsts/FStar.Syntax.MutRecTy.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Util.fs to u_boot_fsts/FStar.Syntax.Util.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Print.fs to u_boot_fsts/FStar.Syntax.Print.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Subst.fsi to u_boot_fsts/FStar.Syntax.Subst.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.InstFV.fs to u_boot_fsts/FStar.Syntax.InstFV.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Free.fs to u_boot_fsts/FStar.Syntax.Free.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Syntax.fs to u_boot_fsts/FStar.Syntax.Syntax.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Syntax.fsi to u_boot_fsts/FStar.Syntax.Syntax.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Print.fsi to u_boot_fsts/FStar.Syntax.Print.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Free.fsi to u_boot_fsts/FStar.Syntax.Free.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.MutRecTy.fs to u_boot_fsts/FStar.Syntax.MutRecTy.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Subst.fs to u_boot_fsts/FStar.Syntax.Subst.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.InstFV.fsi to u_boot_fsts/FStar.Syntax.InstFV.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Const.fs to u_boot_fsts/FStar.Syntax.Const.fst
+cp parser/parseit.fsi u_boot_fsts/FStar.Parser.Parseit.fsti
+make[4]: Leaving directory '/home/vsts/everest/FStar/src'
+sed -i "s/type term' =/type term' : Type0 =/g"      u_boot_fsts/FStar.Syntax.Syntax.fst* #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i "s/and pat' =/and pat' : Type0 =/g"          u_boot_fsts/FStar.Syntax.Syntax.fst* #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i "s/and comp' =/and comp' : Type0 =/g"        u_boot_fsts/FStar.Syntax.Syntax.fst* #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i 's/type env =/type env : Type0 =/g'          u_boot_fsts/FStar.TypeChecker.Env.fst* #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i 's/and solver_t =/and solver_t : Type0 =/g'  u_boot_fsts/FStar.TypeChecker.Env.fst* #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i 's/and guard_t =/and guard_t : Type0 =/g'    u_boot_fsts/FStar.TypeChecker.Env.fst* #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i "s/type term' =/type term': Type0 =/g"       u_boot_fsts/FStar.SMTEncoding.Term.fst* #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i "s/type term' =/type term': Type0 =/g"       u_boot_fsts/FStar.SMTEncoding.Term.fst* #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i "s/type term' =/type term': Type0 =/g"       u_boot_fsts/FStar.Parser.AST.fst #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i "s/type pattern' =/type pattern': Type0 =/g" u_boot_fsts/FStar.Parser.AST.fst #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i "s/type decl' =/type decl': Type0 =/g"       u_boot_fsts/FStar.Parser.AST.fst #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i "s/type mlexpr' =/type mlexpr': Type0 =/g"   u_boot_fsts/FStar.Extraction.ML.Syntax.fst #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i "s/type mlsig1 =/type mlsig1: Type0 =/g"     u_boot_fsts/FStar.Extraction.ML.Syntax.fst #TODO, fix up universe generalization for mutual recursive types, issue #806
+sed -i 's/module FStar.Parser.Lexhelp/module FStar.Parser.Lexhelp open FStar.Mul/' u_boot_fsts/FStar.Parser.Lexhelp.fst #uses * for multiplication only
+make[3]: Leaving directory '/home/vsts/everest/FStar/src'
+make u_extract_misc u_extract_syntax u_extract_parser \
+u_extract_typechecker u_extract_tosyntax u_extract_smtencoding \
+u_extract_extraction u_extract_fstar
+make[3]: Entering directory '/home/vsts/everest/FStar/src'
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.Options.fst u_boot_fsts/FStar.Ident.fst u_boot_fsts/FStar.Errors.fst u_boot_fsts/FStar.Const.fst u_boot_fsts/FStar.Format.fst --extract_module FStar.Options --extract_module FStar.Ident --extract_module FStar.Errors --extract_module FStar.Const --extract_module FStar.Format
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.Syntax.Syntax.fst u_boot_fsts/FStar.Syntax.Const.fst u_boot_fsts/FStar.Syntax.Subst.fst u_boot_fsts/FStar.Syntax.Free.fst u_boot_fsts/FStar.Syntax.InstFV.fst u_boot_fsts/FStar.Syntax.Util.fst u_boot_fsts/FStar.Syntax.Print.fst u_boot_fsts/FStar.Syntax.MutRecTy.fst u_boot_fsts/FStar.Fsdoc.Generator.fst --extract_namespace FStar.Syntax --extract_namespace FStar.Fsdoc
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.Parser.AST.fst u_boot_fsts/FStar.Parser.Interleave.fst u_boot_fsts/FStar.Parser.Lexhelp.fst u_boot_fsts/FStar.Parser.Parseit.fsti u_boot_fsts/FStar.Parser.Driver.fst u_boot_fsts/FStar.Parser.Dep.fst u_boot_fsts/FStar.Parser.ToDocument.fst --extract_namespace FStar.Parser
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.Common.fst u_boot_fsts/FStar.TypeChecker.Env.fst u_boot_fsts/FStar.TypeChecker.Normalize.fst u_boot_fsts/FStar.TypeChecker.Err.fst --extract_namespace FStar.TypeChecker
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.Rel.fst --extract_module FStar.TypeChecker.Rel
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.Util.fst --extract_module FStar.TypeChecker.Util
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.DMFF.fst --extract_module FStar.TypeChecker.DMFF
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.TcTerm.fst --extract_module FStar.TypeChecker.TcTerm
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.Tc.fst --extract_module FStar.TypeChecker.Tc
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.ToSyntax.Env.fst u_boot_fsts/FStar.ToSyntax.ToSyntax.fst --extract_namespace FStar.ToSyntax
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.SMTEncoding.Term.fst u_boot_fsts/FStar.SMTEncoding.Util.fst u_boot_fsts/FStar.SMTEncoding.Z3.fst u_boot_fsts/FStar.SMTEncoding.SplitQueryCases.fst u_boot_fsts/FStar.SMTEncoding.ErrorReporting.fst --extract_namespace FStar.SMTEncoding
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.SMTEncoding.Encode.fst --extract_module FStar.SMTEncoding.Encode
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.SMTEncoding.Solver.fst --extract_module FStar.SMTEncoding.Solver
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.Extraction.ML.Syntax.fst u_boot_fsts/FStar.Extraction.ML.UEnv.fst u_boot_fsts/FStar.Extraction.ML.Util.fst u_boot_fsts/FStar.Extraction.ML.Code.fst u_boot_fsts/FStar.Extraction.ML.Term.fst u_boot_fsts/FStar.Extraction.ML.Modul.fst u_boot_fsts/FStar.Extraction.Kremlin.fst --extract_namespace FStar.Extraction
+../bin/fstar-any.sh --trace_error --eager_inference --MLish --lax --fs_typ_app --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.Dependencies.fst u_boot_fsts/FStar.Interactive.fst u_boot_fsts/FStar.Universal.fst u_boot_fsts/FStar.Indent.fst u_boot_fsts/FStar.Main.fst --extract_module FStar.Dependencies --extract_module FStar.Interactive --extract_module FStar.Universal --extract_module FStar.Indent --extract_module FStar.Main
+./u_boot_fsts/FStar.Syntax.Syntax.fst(392,0-392,33): (Warning) Annotation from val declaration overrides inline type annotation
+./u_boot_fsts/FStar.Syntax.Syntax.fst(441,0-441,48): (Warning) Annotation from val declaration overrides inline type annotation
+./u_boot_fsts/FStar.Syntax.Syntax.fst(442,0-442,76): (Warning) Annotation from val declaration overrides inline type annotation
+./u_boot_fsts/FStar.Syntax.Syntax.fst(493,0-495,38): (Warning) Annotation from val declaration overrides inline type annotation
+Extracted module Options
+Extracted module Errors
+Extracted module Ident
+Extracted module Const
+Extracted module Format
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/src/boot_fstis/FStar.Pprint.fsti(33,0-33,13) (Warning): Adding an implicit 'assume new' qualifier on document
+./u_boot_fsts/FStar.TypeChecker.Env.fst(303,0-307,35): (Warning) Annotation from val declaration overrides inline type annotation
+./u_boot_fsts/FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+Extracted module Syntax
+Extracted module Subst
+Extracted module InstFV
+Extracted module Const
+Extracted module Util
+Extracted module Print
+Extracted module Generator
+Extracted module Free
+Extracted module MutRecTy
+All verification conditions discharged successfully
+Extracted module Term
+Extracted module Util
+Extracted module SplitQueryCases
+Extracted module Z3
+Extracted module ErrorReporting
+All verification conditions discharged successfully
+Extracted module AST
+Extracted module Driver
+Extracted module Lexhelp
+Extracted module ToDocument
+Extracted module Dep
+Extracted module Interleave
+All verification conditions discharged successfully
+Extracted module Common
+Extracted module Env
+Extracted module Util
+All verification conditions discharged successfully
+Extracted module Normalize
+Extracted module Err
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/src/boot_fstis/FStar.Pprint.fsti(33,0-33,13) (Warning): Adding an implicit 'assume new' qualifier on document
+Extracted module Syntax
+Extracted module UEnv
+Extracted module Util
+Extracted module Code
+Extracted module Term
+Extracted module Modul
+Extracted module Kremlin
+All verification conditions discharged successfully
+Extracted module Dependencies
+Extracted module Indent
+Extracted module Interactive
+Extracted module Universal
+Extracted module Main
+All verification conditions discharged successfully
+Extracted module Solver
+All verification conditions discharged successfully
+Extracted module DMFF
+All verification conditions discharged successfully
+Extracted module Env
+Extracted module ToSyntax
+All verification conditions discharged successfully
+Extracted module TcTerm
+All verification conditions discharged successfully
+Extracted module Tc
+All verification conditions discharged successfully
+Extracted module Rel
+All verification conditions discharged successfully
+Extracted module Encode
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/src'
+cp u_ocaml-output/*.ml ocaml-output/
+make[2]: Leaving directory '/home/vsts/everest/FStar/src'
+make boot-ocaml
+make[2]: Entering directory '/home/vsts/everest/FStar/src'
+make -C ocaml-output all
+make[3]: Entering directory '/home/vsts/everest/FStar/src/ocaml-output'
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+# No parallelism done
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make[3]: Leaving directory '/home/vsts/everest/FStar/src/ocaml-output'
+make[2]: Leaving directory '/home/vsts/everest/FStar/src'
+make[1]: Leaving directory '/home/vsts/everest/FStar/src'
+make uregressions
+make[1]: Entering directory '/home/vsts/everest/FStar/src'
+make -C ../ulib
+make -C ../examples all
+make[2]: Entering directory '/home/vsts/everest/FStar/examples'
+make -C bug-reports all
+make -C low-level all
+make -C data_structures all
+make -C algorithms all
+make -C crypto all
+make -C termination all
+make[2]: Entering directory '/home/vsts/everest/FStar/ulib'
+make -C software_foundations all
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/low-level'
+make -C crypto all
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/termination'
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/crypto'
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/data_structures'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.UInt16.fst
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/bug-reports'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/bug-reports'
+make -C ../doc/tutorial/code/exercises all
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module wf wf.fst
+make[4]: Entering directory '/home/vsts/everest/FStar/examples/low-level/crypto'
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Buffer.Utils \
+Buffer.Utils.fst
+make -C ../doc/tutorial/code/solutions all
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Bytes \
+Crypto.Symmetric.Bytes.fst
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Poly1305.Bigint \
+Crypto.Symmetric.Poly1305.Bigint.fst
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Poly1305.Parameters \
+Crypto.Symmetric.Poly1305.Parameters.fst
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1 \
+Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1.fst
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Bytes.fst
+make -C rel all
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2 \
+Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2.fst
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3 \
+Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3.fst
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/software_foundations'
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4 \
+Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4.fst
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5 \
+Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5.fst
+make -C maths all
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6 \
+Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6.fst
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module CPS.Simple CPS.Simple.fst
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Poly1305.Bignum \
+Crypto.Symmetric.Poly1305.Bignum.fst
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Poly1305.Spec \
+Crypto.Symmetric.Poly1305.Spec.fst
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/algorithms'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module BinarySearch BinarySearch.fst
+make[3]: Entering directory '/home/vsts/everest/FStar/doc/tutorial/code/exercises'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 AES.fst
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module BinarySearchTree BinarySearchTree.fst
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex01a.fst
+make[3]: Entering directory '/home/vsts/everest/FStar/doc/tutorial/code/solutions'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex01a.fst
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/maths'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Gcd Gcd.fst
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module SfBasic SfBasic.fst
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/rel'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error   --use_hints rel.fst whilelanguage.fst ifc.fst ifcExample.fst
+Verified module: Wf (840 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error   --use_hints bijection.fst random_tapes.fst
+./Ex01a.fst(67,0-67,48): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex01a (1230 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex02a.fst
+Verified module: CPS.Simple (271 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module CPS.Double CPS.Double.fst
+./Ex01a.fst(57,0-57,48): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex01a (1590 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex02a.fst
+Verified module: Gcd (924 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/maths'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03a.fst
+Verified module: BinarySearchTree (3515 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module BinarySearchTree0 BinarySearchTree0.fst
+Verified module: AES (828 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 Encrypt_SymEnc.fst
+Verified module: Ex02a (503 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03a.fst
+Verified module: BinarySearch (6793 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module IntSort IntSort.fst
+Verified module: CPS.Double (208 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module CPS.DoubleLambdaLifting2 CPS.DoubleLambdaLifting2.fst
+Verified module: SfBasic (11838 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module SfLists SfLists.fst
+Verified module: Ex03a (443 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module InsertionSort InsertionSort.fst
+Verified module: Bijection (465 milliseconds)
+Verified module: Random_Tapes (1658 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module MergeSort MergeSort.fst
+Verified module: Ex02a (383 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03b.fst
+Verified module: BinarySearchTree0 (1902 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module BinarySearchTreeBasic BinarySearchTreeBasic.fst
+Verified module: FStar.Bytes (841 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module BinarySearchTreeFirst BinarySearchTreeFirst.fst
+Verified module: Crypto.Symmetric.Poly1305.Parameters (1822 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03b.fst
+Verified module: CPS.DoubleLambdaLifting2 (267 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module CPS.DoubleDefun CPS.DoubleDefun.fst
+Verified module: Ex03a (450 milliseconds)
+All verification conditions discharged successfully
+make -C paradoxes all
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/paradoxes'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints PropositionalExtensionalityInconsistent.fst
+Verified module: Ex03b (184 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03c.fst
+Verified module: IntSort (3575 milliseconds)
+All verification conditions discharged successfully
+Verified module: InsertionSort (1994 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error   --use_hints delimited_release.fst
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03c.fst
+Verified module: Ex03b (252 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error   --use_hints recursive.fst
+./Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Encrypt_SymEnc (4424 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 Encrypt_Sample.fst
+Verified module: BinarySearchTreeFirst (4550 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 SHA1.fst
+Verified module: CPS.DoubleDefun (2252 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module CPS.Expr CPS.Expr.fst
+Verified module: PropositionalExtensionalityInconsistent (1931 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/paradoxes'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.HyperStack.fst
+Verified module: Ex03c (255 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04a.fst
+Verified module: FStar.UInt16 (20353 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04b.fst
+Verified module: MergeSort (13781 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module QuickSort.List QuickSort.List.fst
+Verified module: Ex03c (545 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04a.fst
+Verified module: BinarySearchTreeBasic (13644 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module RBTree RBTree.fst
+Verified module: Recursive (1169 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module QuickSort.Seq QuickSort.Seq.fst
+Verified module: Crypto.Symmetric.Poly1305.Bigint (16444 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module QuickSort.Array QuickSort.Array.fst
+Verified module: Ex04a (396 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module GC GC.fst
+Verified module: Ex04b (802 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04c.fst
+Verified module: SfLists (16090 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module SfPoly SfPoly.fst
+Verified module: Ex04a (823 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04b.fst
+Verified module: CPS.Expr (1152 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module CPS.SimpleDefun CPS.SimpleDefun.fst
+Verified module: SHA1 (900 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unification Unification.fst
+Verified module: Encrypt_Sample (77 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 MAC.fst
+Verified module: Delimited_Release (13124 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 Sig.fst
+Verified module: Ex04c (918 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04e.fst
+Verified module: Ex04b (845 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04c.fst
+./ifcExample.fst(10,0-10,15): (Warning) Top-level let-bindings must be total; this term may have effects
+./ifcExample.fst(11,0-11,15): (Warning) Top-level let-bindings must be total; this term may have effects
+./ifcExample.fst(12,0-12,15): (Warning) Top-level let-bindings must be total; this term may have effects
+./ifcExample.fst(13,0-13,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: QuickSort.List (11253 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Array.fst
+Verified module: WhileLanguage (8621 milliseconds)
+Verified module: Rel (2224 milliseconds)
+Verified module: Ifc (39528 milliseconds)
+Verified module: IfcExample (5003 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/rel'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 EtM.Plain.fst
+Verified module: CPS.SimpleDefun (1425 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module CPS.SimpleLambdaLifting CPS.SimpleLambdaLifting.fst
+Verified module: Ex04e (1164 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04f.fst
+Verified module: Ex04c (1874 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04e.fst
+Verified module: QuickSort.Array (9239 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04g.fst
+./MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Crypto.Symmetric.Poly1305.Spec (32453 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04f.fst
+Verified module: MAC (2017 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --explicit_deps ArrayRealized.fst Vector.fst
+Verified module: Sig (2782 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04h.fst
+Verified module: CPS.SimpleLambdaLifting (307 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Eval.DB Eval.DB.fst
+Verified module: GC (20863 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module termination termination.fst
+Verified module: QuickSort.Seq (15492 milliseconds)
+All verification conditions discharged successfully
+make -C printf all
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/printf'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module SimplePrintf SimplePrintf.fst
+./Ex04g.fst(5,4-5,6): Warning: Admitting tl without a definition
+./Ex04g.fst(4,4-4,6): Warning: Admitting hd without a definition
+Verified module: Ex04g (105 milliseconds)
+All verification conditions discharged successfully
+make -C metatheory all
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/metatheory'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module ParSubst ParSubst.fst
+Verified module: RBTree (27253 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module StlcCbvDbPntSubstNoLists StlcCbvDbPntSubstNoLists.fst
+Verified module: SfPoly (21223 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/software_foundations'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.SeqProperties.fst
+Verified module: Ex04e (1392 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 EtM.MAC.fst
+Verified module: Ex04f (688 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.PropositionalExtensionality.fst
+Verified module: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5 (24898 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex05a.fst
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/data_structures'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04g.fst
+Verified module: FStar.HyperStack (32334 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex05b.fst
+Verified module: Ex04f (2252 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module StlcStrongDbParSubst StlcStrongDbParSubst.fst
+Verified module: Ex04h (76 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module StlcCbvDbParSubst StlcCbvDbParSubst.fst
+Verified module: EtM.Plain (27 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints LambdaOmega.fst --max_fuel 1 --max_ifuel 1 --initial_fuel 1
+./Ex05a.fst(28,4-28,13): Warning: Admitting rev_is_ok without a definition
+Verified module: FStar.PropositionalExtensionality (51 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module StackMachine StackMachine.fst
+Verified module: Ex05a (1153 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.GF128 \
+Crypto.Symmetric.GF128.fst
+Verified module: Ex04g (321 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04h.fst
+WARNING: (4770,6): pattern does not contain all quantified variables.
+Verified module: Termination (6095 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06a.fst
+Verified module: Ex05b (871 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.GCM \
+Crypto.Symmetric.GCM.fst
+Verified module: Eval.DB (6632 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/termination'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex05a.fst
+Verified module: ParSubst (5868 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.MAC \
+Crypto.Symmetric.MAC.fst
+Verified module: SimplePrintf (5666 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/printf'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Classical.fst
+Verified module: FStar.Array (12713 milliseconds)
+All verification conditions discharged successfully
+make -C verifythis all
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/verifythis'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints 2015/Problem01.fst
+Verified module: Unification (32502 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Huffman Huffman.fst
+Verified module: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1 (54758 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Ghost.fst
+Verified module: Ex04h (653 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 EtM.CPA.fst
+./Ex06a.fst(5,4-5,13): Warning: Admitting partition without a definition
+Verified module: Ex06a (63 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06b.fst
+Verified module: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6 (43994 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex05b.fst
+Verified module: StlcCbvDbPntSubstNoLists (14908 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06e.fst
+Verified module: Ex05a (2350 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.UF1CMA \
+Crypto.Symmetric.UF1CMA.fst
+Verified module: EtM.MAC (4315 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.AES \
+Crypto.Symmetric.AES.fst
+Verified module: FStar.Classical (3939 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06a.fst
+Verified module: Problem01 (2247 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/verifythis'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07a.fst
+Verified module: FStar.Ghost (1766 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.AES128 \
+Crypto.Symmetric.AES128.fst
+./Ex06e.fst(18,4-18,8): Warning: Admitting sort without a definition
+Verified module: Ex06e (602 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Chacha20 \
+Crypto.Symmetric.Chacha20.fst
+Verified module: StlcCbvDbParSubst (18989 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Cipher \
+Crypto.Symmetric.Cipher.fst
+Verified module: Ex06a (320 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06b.fst
+Verified module: StlcStrongDbParSubst (20252 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07b.fst
+Verified module: Ex05b (3905 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.OrdMapProps.fst
+./Ex07a.fst(228,4-228,14): Warning: Admitting typed_step without a definition
+Verified module: Ex06b (11607 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 EtM.AE.fst
+Verified module: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2 (67006 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.ST.fst
+Verified module: FStar.OrdMapProps (687 milliseconds)
+All verification conditions discharged successfully
+make -C preorders all
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/preorders'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module MRefST MRefST.fst
+Verified module: FStar.ST (112 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module ReifyTestTSST ReifyTestTSST.fst
+Verified module: Ex06b (8805 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06c.fst
+Verified module: Huffman (22878 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/algorithms'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06d.fst
+Verified module: EtM.CPA (3860 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07c.fst
+Verified module: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4 (82440 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06e.fst
+Verified module: ReifyTestTSST (1905 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07d.fst
+Verified module: Ex07a (21650 milliseconds)
+All verification conditions discharged successfully
+make -C dm4free all
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/dm4free'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.MonadLaws.fst
+Verified module: EtM.AE (7732 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.RSA.fst
+Verified module: Ex06e (1886 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.PlainPKE.fst
+./Ex07d.fst(225,4-225,8): Warning: Admitting eval without a definition
+Verified module: Ex06d (9442 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Seq.fst
+Verified module: FStar.DM4F.MonadLaws (2338 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints Effects.Def.fst
+Verified module: Crypto.Symmetric.Poly1305.Bignum (88918 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.IntST.fst
+Verified module: MRefST (15480 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module SnapshotST SnapshotST.fst
+Verified module: Buffer.Utils (117397 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --record_hints --verify_module MRefHeap MRefHeap.fst
+Verified module: Effects.Def (4869 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Preorder Preorder.fst
+Verified module: SnapshotST (4401 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.Exceptions.fst
+Verified module: Ex07c (31381 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Int16.fst
+Verified module: FStar.DM4F.IntST (8110 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.Plain.fst
+Verified module: Ex06c (33031 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07a.fst
+Verified module: Preorder (52 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07b.fst
+Verified module: HyE.RSA (582 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.PRF \
+Crypto.Symmetric.PRF.fst
+Verified module: MRefHeap (11130 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module AllocSTwHeaps AllocSTwHeaps.fst
+Verified module: HyE.PlainPKE (354 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.AES256GCM \
+Crypto.AEAD.AES256GCM.fst
+Verified module: FStar.DM4F.Exceptions (5277 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.ExnSt.fst
+Verified module: FStar.Seq (22172 milliseconds)
+All verification conditions discharged successfully
+make -C incl all
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/incl'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include field.pos --odir field.pos field.pos/Test.fst
+Verified module: FStar.SeqProperties (91352 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include plain.pos --odir plain.pos plain.pos/Test.fst
+Verified module: Ex07b (60938 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include trans.pos --odir trans.pos trans.pos/Test.fst
+Verified module: AllocSTwHeaps (2082 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module ReifyTest ReifyTest.fst
+Verified module: Test (51 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module ImmutableSTwHeaps ImmutableSTwHeaps.fst
+Verified module: Test (40 milliseconds)
+All verification conditions discharged successfully
+make -C micro-benchmarks all
+make[3]: Entering directory '/home/vsts/everest/FStar/examples/micro-benchmarks'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.Basic Unit1.Basic.fst
+Verified module: Ex07d (42929 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex10a.fst
+Verified module: HyE.Plain (86 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.AE.fst
+Verified module: Test (51 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include noshadow.pos --odir noshadow.pos noshadow.pos/Test.fst
+Verified module: FStar.DM4F.ExnSt (6123 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.StExn.fst
+Verified module: Crypto.Symmetric.GCM (62538 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include shadow.pos --odir shadow.pos shadow.pos/Test.fst
+Verified module: ImmutableSTwHeaps (1509 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.Projectors2 Unit1.Projectors2.fst
+Verified module: Ex07a (20994 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include private.pos --odir private.pos private.pos/Test.fst
+Verified module: Test (47 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encoding \
+Crypto.AEAD.Encoding.fst
+Verified module: ReifyTest (7205 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module NatHeap NatHeap.fst
+./Ex10a.fst(26,0-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex10a (2674 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex10b.fst
+Verified module: Test (61 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07c.fst
+Verified module: Test (38 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include open.pos --odir open.pos open.pos/Test.fst
+Verified module: StackMachine (114805 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12a.Cap.fst
+Verified module: FStar.DM4F.StExn (9249 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.ST.fst
+Verified module: FStar.Int16 (19904 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Int63.fst
+Verified module: Crypto.Symmetric.GF128 (84700 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Int128.fst
+Verified module: Test (21 milliseconds)
+All verification conditions discharged successfully
+! /home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include plain.neg --odir plain.neg plain.neg/Test.fst > plain.neg/error.log 2>&1
+Verified module: Crypto.Symmetric.Chacha20 (68162 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.WPsAndTriples Unit1.WPsAndTriples.fst
+Verified module: Ex10b (2794 milliseconds)
+All verification conditions discharged successfully
+! /home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include trans.neg --odir trans.neg trans.neg/Test.fst > trans.neg/error.log 2>&1
+Verified module: HyE.AE (4659 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.CCA2.fst
+Verified module: NatHeap (8911 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module AllocST AllocST.fst
+Verified module: FStar.DM4F.ST (2614 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.Heap.fst
+Verified module: LambdaOmega (132583 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/metatheory'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module ImmutableST ImmutableST.fst
+plain.neg failed as expected
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12d.Pad.fst
+./Ex12a.Cap.fst(20,0-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex12a.Cap (513 milliseconds)
+All verification conditions discharged successfully
+! /home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include noshadow.neg --odir noshadow.neg noshadow.neg/Test.fst > noshadow.neg/error.log 2>&1
+trans.neg failed as expected
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Invariant \
+Crypto.AEAD.Invariant.fst
+Verified module: Unit1.Projectors2 (26 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.BufferUtils \
+Crypto.AEAD.BufferUtils.fst
+Verified module: Unit1.WPsAndTriples (606 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt.Invariant \
+Crypto.AEAD.Encrypt.Invariant.fst
+Verified module: AllocST (2310 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Enxor.Invariant \
+Crypto.AEAD.Enxor.Invariant.fst
+Verified module: FStar.DM4F.Heap (3317 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.Heap.ST.fst
+noshadow.neg failed as expected
+! /home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include private.neg --odir private.neg private.neg/Test.fst > private.neg/error.log 2>&1
+Verified module: ImmutableST (3054 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/preorders'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.StExnC.fst
+Verified module: Ex07b (56415 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.IFC.fst
+private.neg failed as expected
+! /home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include open.neg --odir open.neg open.neg/Test.fst > open.neg/error.log 2>&1
+Verified module: Unit1.Basic (32308 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.Parser Unit1.Parser.fst
+Verified module: Ex12d.Pad (1588 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12e.Pad.fst
+open.neg failed as expected
+! /home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include shadow.neg --odir shadow.neg shadow.neg/Test.fst > shadow.neg/error.log 2>&1
+Verified module: FStar.DM4F.Heap.ST (8326 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12f.TMAC.fst
+Verified module: FStar.DM4F.StExnC (9484 milliseconds)
+All verification conditions discharged successfully
+Verified module: HyE.CCA2 (3784 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07d.fst
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.HCCA2.fst
+Verified module: FStar.DM4F.IFC (9522 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.DM4F.Continuations.fst
+Verified module: FStar.Int63 (19999 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints delimcc.fst
+Verified module: FStar.Int128 (19862 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Universe.fst
+shadow.neg failed as expected
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/incl'
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.EnxorDexor \
+Crypto.AEAD.EnxorDexor.fst
+Verified module: Unit1.Parser (2479 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.RefinementInference Unit1.RefinementInference.fst
+Verified module: DelimCC (2229 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.WPsAndTriples_ST Unit1.WPsAndTriples_ST.fst
+Verified i'face (or impl+i'face): FStar.Universe (49 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Axiomatic.Array.fst
+Verified module: FStar.DM4F.Continuations (5002 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/dm4free'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Relational.Relational.fst
+Verified module: Unit1.RefinementInference (236 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.Projectors1 Unit1.Projectors1.fst
+Verified module: Unit1.WPsAndTriples_ST (424 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --z3rlimit 10 --verify_module Formatting --verify_module SHA1 --verify_module MAC --verify_module RPC   \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst RPC.fst
+Verified module: Ex12e.Pad (2129 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Int8.fst
+Verified module: FStar.Axiomatic.Array (915 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12g.TMAC2.fst
+./Ex12f.TMAC.fst(26,4-26,10): Warning: Admitting verify without a definition
+./Ex12f.TMAC.fst(25,4-25,7): Warning: Admitting mac without a definition
+./Ex12f.TMAC.fst(24,4-24,10): Warning: Admitting keygen without a definition
+Verified module: Ex12f.TMAC (55 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.PRF \
+Crypto.AEAD.Wrappers.PRF.fst
+Verified module: Crypto.AEAD.AES256GCM (44130 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Math.Lib.fst
+Verified module: FStar.Relational.Relational (4089 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.CMA \
+Crypto.AEAD.Wrappers.CMA.fst
+Verified module: HyE.HCCA2 (2777 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.Encoding \
+Crypto.AEAD.Wrappers.Encoding.fst
+./MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Unit1.Projectors1 (2661 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.UnificationTests Unit1.UnificationTests.fst
+./Ex12g.TMAC2.fst(30,4-30,10): Warning: Admitting verify without a definition
+./Ex12g.TMAC2.fst(29,4-29,7): Warning: Admitting mac without a definition
+Verified module: Ex12g.TMAC2 (1417 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ulib/hyperheap Ex11a.fst
+./RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+./RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+./RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: FStar.Math.Lib (14291 milliseconds)
+All verification conditions discharged successfully
+make -C ../../../..//ulib/ml
+make[4]: Entering directory '/home/vsts/everest/FStar/ulib/ml'
+make -C .. mgen
+make[5]: Entering directory '/home/vsts/everest/FStar/ulib/ml'
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+mkdir -p ml/extracted
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --lax --codegen OCaml --odir ml/extracted FStar.Set.fst FStar.TSet.fst FStar.Map.fst FStar.HyperHeap.fst FStar.HyperStack.fst
+./RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: SHA1 (926 milliseconds)
+Verified module: MAC (1862 milliseconds)
+Verified module: Formatting (6123 milliseconds)
+Verified module: RPC (2503 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --z3rlimit 10 --verify_module CntFormat --verify_module SHA1 --verify_module MAC --verify_module CntProtocol \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst CntProtocol.fst
+Verified module: Ex07d (41535 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Int32.fst
+Verified module: Unit1.UnificationTests (51 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.RecursiveTypeFunctions Unit1.RecursiveTypeFunctions.fst
+Verified module: Crypto.Symmetric.AES128 (164537 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.UInt128.fst
+Verified module: Ex07c (95532 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex10a.fst
+Extracted module FunctionalExtensionality
+Extracted module PropositionalExtensionality
+Extracted module PredicateExtensionality
+Extracted module TSet
+Extracted module Set
+Extracted module Tot
+Extracted module Heap
+Extracted module Map
+Extracted module HyperHeap
+Extracted module HyperStack
+All verification conditions discharged successfully
+make[5]: Leaving directory '/home/vsts/everest/FStar/ulib'
+make prims.o FStar_Mul.o FStar_Float.o FStar_Char.o FStar_Int8.o FStar_UInt8.o FStar_Int16.o FStar_UInt16.o FStar_Int32.o FStar_UInt32.o FStar_Int64.o FStar_UInt64.o FStar_UInt128.o FStar_Int_Cast.o FStar_BaseTypes.o FStar_IO.o FStar_Heap.o FStar_List.o FStar_Option.o FStar_String.o FStar_Set.o FStar_Buffer.o FStar_CommonST.o FStar_ST.o FStar_All.o
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: Entering directory '/home/vsts/everest/FStar/ulib/ml'
+make[5]: 'prims.o' is up to date.
+make[5]: 'FStar_Mul.o' is up to date.
+make[5]: 'FStar_Float.o' is up to date.
+make[5]: 'FStar_Char.o' is up to date.
+make[5]: 'FStar_Int8.o' is up to date.
+make[5]: 'FStar_UInt8.o' is up to date.
+make[5]: 'FStar_Int16.o' is up to date.
+make[5]: 'FStar_UInt16.o' is up to date.
+make[5]: 'FStar_Int32.o' is up to date.
+make[5]: 'FStar_UInt32.o' is up to date.
+make[5]: 'FStar_Int64.o' is up to date.
+make[5]: 'FStar_UInt64.o' is up to date.
+make[5]: 'FStar_UInt128.o' is up to date.
+make[5]: 'FStar_Int_Cast.o' is up to date.
+make[5]: 'FStar_BaseTypes.o' is up to date.
+make[5]: 'FStar_IO.o' is up to date.
+make[5]: 'FStar_Heap.o' is up to date.
+make[5]: 'FStar_List.o' is up to date.
+make[5]: 'FStar_Option.o' is up to date.
+make[5]: 'FStar_String.o' is up to date.
+make[5]: 'FStar_Set.o' is up to date.
+make[5]: 'FStar_Buffer.o' is up to date.
+make[5]: 'FStar_CommonST.o' is up to date.
+make[5]: 'FStar_ST.o' is up to date.
+make[5]: 'FStar_All.o' is up to date.
+make[5]: Leaving directory '/home/vsts/everest/FStar/ulib/ml'
+ocamlopt -a prims.cmx FStar_Mul.cmx FStar_Float.cmx FStar_Char.cmx FStar_Int8.cmx FStar_UInt8.cmx FStar_Int16.cmx FStar_UInt16.cmx FStar_Int32.cmx FStar_UInt32.cmx FStar_Int64.cmx FStar_UInt64.cmx FStar_UInt128.cmx FStar_Int_Cast.cmx FStar_BaseTypes.cmx FStar_IO.cmx FStar_Heap.cmx FStar_List.cmx FStar_Option.cmx FStar_String.cmx FStar_Set.cmx FStar_Buffer.cmx FStar_CommonST.cmx FStar_ST.cmx FStar_All.cmx -o fstarlib.cmxa
+make[4]: Leaving directory '/home/vsts/everest/FStar/ulib/ml'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --no_extract FStar.All --no_extract FStar.BaseTypes --no_extract FStar.Char --no_extract FStar.Float --no_extract FStar.Heap --no_extract FStar.Int8 --no_extract FStar.Int16 --no_extract FStar.Int32 --no_extract FStar.Int64 --no_extract FStar.UInt8 --no_extract FStar.UInt16 --no_extract FStar.UInt32 --no_extract FStar.UInt64 --no_extract FStar.Int_Cast --no_extract FStar.IO --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.Set --no_extract FStar.ST --no_extract FStar.String --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HST --no_extract FStar.Buffer --no_extract FStar.Mul --odir out --codegen OCaml Ex01a.fst
+Verified module: FStar.Int8 (19837 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Unit2 Unit2.fst
+Verified module: Crypto.Symmetric.MAC (140866 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module TestSet TestSet.fst
+Verified module: Crypto.Symmetric.AES (167960 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module TestHeap TestHeap.fst
+Verified module: Unit1.RecursiveTypeFunctions (3887 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Int.Cast.fst
+./MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex10a.fst(26,0-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex01a.fst(67,0-67,48): (Warning) Top-level let-bindings must be total; this term may have effects
+Extracted module FunctionalExtensionality
+Extracted module PropositionalExtensionality
+Extracted module PredicateExtensionality
+Extracted module TSet
+Extracted module Ex01a
+Verified module: Ex01a (1087 milliseconds)
+All verification conditions discharged successfully
+ocamlfind opt -package batteries,stdint,zarith -linkpkg -g ../../../..//ulib/ml/fstarlib.cmxa -I ../../../..//ulib/ml out/Ex01a.ml -o Ex01a.exe
+File "Ex01a.fst", line 36, characters 4-6:
+Warning 26: unused variable v1.
+File "Ex01a.fst", line 37, characters 4-6:
+Warning 26: unused variable v2.
+File "Ex01a.fst", line 60, characters 4-6:
+Warning 26: unused variable v1.
+File "Ex01a.fst", line 61, characters 4-6:
+Warning 26: unused variable v2.
+File "Ex01a.fst", line 62, characters 4-6:
+Warning 26: unused variable v3.
+Verified module: Ex10a (3299 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex10b.fst
+./Ex01a.exe
+Dummy read of file demo/tempfile
+Fatal error: exception Ex01a.InvalidRead
+Dummy read of file demo/README
+Dummy write of string hello! to file demo/tempfile
+Raised at file "prims.ml", line 103, characters 20-21
+Dummy read of file demo/tempfile
+Dummy read of file demo/README
+Called from file "Ex01a.fst", line 62, characters 9-29
+Called from file "Ex01a.fst", line 68, characters 0-21
+make[3]: [Ex01a-ocaml] Error 2 (ignored)
+Makefile:60: recipe for target 'Ex01a-ocaml' failed
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module ShortCircuit ShortCircuit.fst
+Verified module: Crypto.Symmetric.Cipher (158255 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.OrdMap.fst
+Verified module: Unit2 (3227 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12a.Cap.fst
+Verified module: TestSet (443 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12b.RPC.fst
+Verified module: TestHeap (2334 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12d.Pad.fst
+./CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(30,0-30,26): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(33,0-33,54): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(36,0-36,54): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex11a (24131 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/doc/tutorial/code/exercises'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12e.Pad.fst
+./CntProtocol.fst(100,0-100,39): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: ShortCircuit (3276 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module FirstProofs FirstProofs.fst
+./CntProtocol.fst(127,0-127,18): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(159,0-175,5): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: SHA1 (928 milliseconds)
+Verified module: MAC (2217 milliseconds)
+Verified module: CntFormat (6119 milliseconds)
+Verified module: CntProtocol (8774 milliseconds)
+All verification conditions discharged successfully
+Verified module: Ex10b (5414 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/crypto'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.MRef.fst
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Decrypt \
+Crypto.AEAD.Decrypt.fst
+./Ex12a.Cap.fst(18,0-18,26): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex12a.Cap (780 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.MAC_Wrapper.Invariant \
+Crypto.AEAD.MAC_Wrapper.Invariant.fst
+./Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: FirstProofs (2432 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module TestMRef TestMRef.fst
+./Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex12b.RPC (2176 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module TestTwoLevelHeap TestTwoLevelHeap.fst
+Verified module: FStar.Int32 (19815 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Mac Mac.fst
+Verified module: FStar.MRef (1177 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module TestGhost TestGhost.fst
+Verified module: Ex12d.Pad (1932 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --verify_module Normalization Normalization.fst
+Verified module: FStar.UInt128 (22611 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints NegativeTests.BST.fst NegativeTests.Heap.fst NegativeTests.ShortCircuiting.fst NegativeTests.Bug260.fst NegativeTests.Neg.fst NegativeTests.Termination.fst NegativeTests.False.fst NegativeTests.Set.fst NegativeTests.ImplicitFalse.fst 2>&1 | tee fstar_log
+./TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: TestTwoLevelHeap (902 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt.Ideal.Invariant \
+Crypto.AEAD.Encrypt.Ideal.Invariant.fst
+Verified module: TestMRef (1939 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.List.Tot.fst
+Verified module: TestGhost (932 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.HyperHeap.fst
+Verified module: FStar.OrdMap (24049 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12f.TMAC.fst
+Verified module: Ex12e.Pad (3821 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12g.TMAC2.fst
+Verified module: Normalization (3835 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --include ../../../..//ulib/hyperheap Ex11a.fst
+./Mac.fst(69,0-69,35): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: MAC (3138 milliseconds)
+All verification conditions discharged successfully
+make -C ../../../..//ulib/ml
+make[4]: Entering directory '/home/vsts/everest/FStar/ulib/ml'
+make -C .. mgen
+make[5]: Entering directory '/home/vsts/everest/FStar/ulib/ml'
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+mkdir -p ml/extracted
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --lax --codegen OCaml --odir ml/extracted FStar.Set.fst FStar.TSet.fst FStar.Map.fst FStar.HyperHeap.fst FStar.HyperStack.fst
+Verified module: FStar.List.Tot (11272 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Int64.fst
+Extracted module FunctionalExtensionality
+Extracted module PropositionalExtensionality
+Extracted module PredicateExtensionality
+Extracted module TSet
+Extracted module Set
+Extracted module Tot
+Extracted module Heap
+Extracted module Map
+Extracted module HyperHeap
+Extracted module HyperStack
+All verification conditions discharged successfully
+make[5]: Leaving directory '/home/vsts/everest/FStar/ulib'
+make prims.o FStar_Mul.o FStar_Float.o FStar_Char.o FStar_Int8.o FStar_UInt8.o FStar_Int16.o FStar_UInt16.o FStar_Int32.o FStar_UInt32.o FStar_Int64.o FStar_UInt64.o FStar_UInt128.o FStar_Int_Cast.o FStar_BaseTypes.o FStar_IO.o FStar_Heap.o FStar_List.o FStar_Option.o FStar_String.o FStar_Set.o FStar_Buffer.o FStar_CommonST.o FStar_ST.o FStar_All.o
+make[5]: Entering directory '/home/vsts/everest/FStar/ulib/ml'
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: 'prims.o' is up to date.
+make[5]: 'FStar_Mul.o' is up to date.
+make[5]: 'FStar_Float.o' is up to date.
+make[5]: 'FStar_Char.o' is up to date.
+make[5]: 'FStar_Int8.o' is up to date.
+make[5]: 'FStar_UInt8.o' is up to date.
+make[5]: 'FStar_Int16.o' is up to date.
+make[5]: 'FStar_UInt16.o' is up to date.
+make[5]: 'FStar_Int32.o' is up to date.
+make[5]: 'FStar_UInt32.o' is up to date.
+make[5]: 'FStar_Int64.o' is up to date.
+make[5]: 'FStar_UInt64.o' is up to date.
+make[5]: 'FStar_UInt128.o' is up to date.
+make[5]: 'FStar_Int_Cast.o' is up to date.
+make[5]: 'FStar_BaseTypes.o' is up to date.
+make[5]: 'FStar_IO.o' is up to date.
+make[5]: 'FStar_Heap.o' is up to date.
+make[5]: 'FStar_List.o' is up to date.
+make[5]: 'FStar_Option.o' is up to date.
+make[5]: 'FStar_String.o' is up to date.
+make[5]: 'FStar_Set.o' is up to date.
+make[5]: 'FStar_Buffer.o' is up to date.
+make[5]: 'FStar_CommonST.o' is up to date.
+make[5]: 'FStar_ST.o' is up to date.
+make[5]: 'FStar_All.o' is up to date.
+make[5]: Leaving directory '/home/vsts/everest/FStar/ulib/ml'
+ocamlopt -a prims.cmx FStar_Mul.cmx FStar_Float.cmx FStar_Char.cmx FStar_Int8.cmx FStar_UInt8.cmx FStar_Int16.cmx FStar_UInt16.cmx FStar_Int32.cmx FStar_UInt32.cmx FStar_Int64.cmx FStar_UInt64.cmx FStar_UInt128.cmx FStar_Int_Cast.cmx FStar_BaseTypes.cmx FStar_IO.cmx FStar_Heap.cmx FStar_List.cmx FStar_Option.cmx FStar_String.cmx FStar_Set.cmx FStar_Buffer.cmx FStar_CommonST.cmx FStar_ST.cmx FStar_All.cmx -o fstarlib.cmxa
+make[4]: Leaving directory '/home/vsts/everest/FStar/ulib/ml'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints --no_extract FStar.All --no_extract FStar.BaseTypes --no_extract FStar.Char --no_extract FStar.Float --no_extract FStar.Heap --no_extract FStar.Int8 --no_extract FStar.Int16 --no_extract FStar.Int32 --no_extract FStar.Int64 --no_extract FStar.UInt8 --no_extract FStar.UInt16 --no_extract FStar.UInt32 --no_extract FStar.UInt64 --no_extract FStar.Int_Cast --no_extract FStar.IO --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.Set --no_extract FStar.ST --no_extract FStar.String --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HST --no_extract FStar.Buffer --no_extract FStar.Mul --odir out --codegen OCaml Ex01a.fst
+Verified module: Ex12f.TMAC (837 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.UInt8.fst
+Verified module: Crypto.AEAD.BufferUtils (123677 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt \
+Crypto.AEAD.Encrypt.fst
+Verified module: Ex12g.TMAC2 (1987 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.SquashProperties.fst
+./Ex01a.fst(57,0-57,48): (Warning) Top-level let-bindings must be total; this term may have effects
+Extracted module FunctionalExtensionality
+Extracted module PropositionalExtensionality
+Extracted module PredicateExtensionality
+Extracted module TSet
+Extracted module Ex01a
+Verified module: Ex01a (1652 milliseconds)
+All verification conditions discharged successfully
+ocamlfind opt -package batteries,stdint,zarith -linkpkg -g ../../../..//ulib/ml/fstarlib.cmxa -I ../../../..//ulib/ml out/Ex01a.ml -o Ex01a.exe 2>&1
+File "Ex01a.fst", line 29, characters 4-6:
+Warning 26: unused variable v1.
+File "Ex01a.fst", line 30, characters 4-6:
+Warning 26: unused variable v2.
+File "Ex01a.fst", line 51, characters 4-6:
+Warning 26: unused variable v1.
+File "Ex01a.fst", line 52, characters 4-6:
+Warning 26: unused variable v2.
+File "Ex01a.fst", line 53, characters 4-6:
+Warning 26: unused variable v3.
+Verified module: FStar.Int.Cast (46249 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Util.fst
+./Ex01a.exe 2>&1
+Dummy read of file demo/tempfile
+Dummy read of file demo/README
+Dummy write of string hello! to file demo/tempfile
+Dummy read of file demo/tempfile
+Dummy read of file demo/README
+Fatal error: exception Ex01a.InvalidRead
+Raised at file "prims.ml", line 103, characters 20-21
+make[3]: [Ex01a-ocaml] Error 2 (ignored)
+Called from file "Ex01a.fst", line 53, characters 9-29
+Called from file "Ex01a.fst", line 58, characters 0-21
+Makefile:63: recipe for target 'Ex01a-ocaml' failed
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD \
+Crypto.AEAD.fst
+Verified module: FStar.SquashProperties (5326 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Plain \
+Crypto.Plain.fst
+Verified module: FStar.Util (50 milliseconds)
+All verification conditions discharged successfully
+../../../bin/fstar.exe --fstar_home ../../.. --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include ../../../ulib/hyperstack --include hacl \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module TestMonotonic \
+TestMonotonic.fst
+Verified module: Ex11a (26326 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/home/vsts/everest/FStar/doc/tutorial/code/solutions'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.ErasedLogic.fst
+Verified module: FStar.HyperHeap (41074 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.IndefiniteDescription.fst
+Verified module: FStar.ErasedLogic (86 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.TSet.fst
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 926, characters 8-14
+Called from file "unix.ml", line 971, characters 4-126
+Re-raised at file "unix.ml", line 978, characters 10-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 604, characters 10-53
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 678, characters 1-55
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5682, characters 0-88
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2431, characters 3-57
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4135, characters 17-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3594, characters 17-50
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3182, characters 17-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3404, characters 17-33
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3440, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3530, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3718, characters 17-45
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 163, characters 16-101
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 165, characters 13-19
+Called from file "src/ocaml-output/FStar_Universal.ml", line 288, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 324, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 365, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+Makefile:97: recipe for target 'Crypto.AEAD.Wrappers.CMA.fst-ver' failed
+make[4]: *** [Crypto.AEAD.Wrappers.CMA.fst-ver] Error 1
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Heap.fst
+Verified module: FStar.Int64 (19787 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.All.fst
+./NegativeTests.False.fst(13,18-13,35): (Error) Expected type "(l_or l_True l_True)"; but "(Left T)" has type "(c_or (?39876 uu___) l_True)"
+./NegativeTests.False.fst(13,36-13,54): (Error) Expected type "(l_or l_True l_True)"; but "(Right T)" has type "(c_or l_True (?39889 uu___))"
+Verified module: FStar.IndefiniteDescription (3132 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Squash.fst
+Verified module: TestMonotonic (6472 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.UInt32.fst
+Verified module: FStar.Heap (1286 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Set.fst
+Verified module: FStar.TSet (3191 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.PredicateExtensionality.fst
+Verified module: FStar.All (103 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.SquashEffect.fst
+./NegativeTests.ImplicitFalse.fst(4,26-4,27): (Error) Failed to resolve implicit argument of type 'l_False' introduced in (?40601 uu___) because user-provided implicit term
+Verified module: FStar.UInt8 (22445 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Math.Lemmas.fst
+Verified i'face (or impl+i'face): FStar.Squash (62 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.List.fst
+./NegativeTests.BST.fst(21,38-21,42): (Error) Subtyping check failed; expected type (right#61:(option (tree 2)){(l_and (l_and (l_and (b2t (op_LessThanOrEqual 0 1)) (b2t (op_LessThanOrEqual 1 2))) (l_iff (b2t (uu___is_None right@0)) (b2t (op_Equality 1 2)))) (l_iff (b2t (uu___is_None (None ))) (b2t (op_Equality 1 0))))}); got type (option (tree 2)) (see ./NegativeTests.BST.fst(13,36-13,57))
+./NegativeTests.BST.fst(22,61-22,65): (Error) Subtyping check failed; expected type (right#61:(option (tree (op_Addition l 1))){(l_and (l_and (l_and (b2t (op_LessThanOrEqual l l)) (b2t (op_LessThanOrEqual l (op_Addition l 1)))) (l_iff (b2t (uu___is_None right@0)) (b2t (op_Equality l (op_Addition l 1))))) (l_iff (b2t (uu___is_None (Some t))) (b2t (op_Equality l l))))}); got type (option (tree (op_Addition l 1))) (see ./NegativeTests.BST.fst(13,36-13,57))
+./NegativeTests.BST.fst(23,78-23,87): (Error) Subtyping check failed; expected type (right#61:(option (tree (op_Addition l 1))){(l_and (l_and (l_and (b2t (op_LessThanOrEqual l (op_Addition l 1))) (b2t (op_LessThanOrEqual (op_Addition l 1) (op_Addition l 1)))) (l_iff (b2t (uu___is_None right@0)) (b2t (op_Equality (op_Addition l 1) (op_Addition l 1))))) (l_iff (b2t (uu___is_None (Some t1))) (b2t (op_Equality (op_Addition l 1) l))))}); got type (option (tree (op_Addition l 1))) (see ./NegativeTests.BST.fst(12,36-12,58))
+./NegativeTests.Bug260.fst(9,12-9,19): (Error) Subtyping check failed; expected type (validity (S (S t))); got type (validity (S t)) (see ./NegativeTests.Bug260.fst(8,37-9,19))
+./NegativeTests.False.fst(3,31-3,42): (Error) assertion failed
+./NegativeTests.Heap.fst(10,14-10,20): (Error) assertion failed (see ./NegativeTests.Heap.fst(10,21-10,54))
+./NegativeTests.Heap.fst(15,2-15,8): (Error) assertion failed (see ./NegativeTests.Heap.fst(15,9-15,14))
+./NegativeTests.ImplicitFalse.fst(4,0-4,33): (Error) assertion failed(Also see: /home/vsts/everest/FStar/bin/../ulib/prims.fst(175,22-175,33))
+./NegativeTests.Neg.fst(6,8-6,10): (Error) Subtyping check failed; expected type nat; got type int (see /home/vsts/everest/FStar/bin/../ulib/prims.fst(642,17-642,23))
+./NegativeTests.Neg.fst(8,8-8,10): (Error) Subtyping check failed; expected type nat; got type int (see /home/vsts/everest/FStar/bin/../ulib/prims.fst(642,17-642,23))
+./NegativeTests.Neg.fst(10,23-10,29): (Error) assertion failed (see ./NegativeTests.Neg.fst(10,30-10,35))
+./NegativeTests.Neg.fst(12,28-13,15): (Error) Patterns are incomplete
+./NegativeTests.Neg.fst(19,32-19,42): (Error) assertion failed (see ./NegativeTests.Neg.fst(15,44-15,57))
+./NegativeTests.Neg.fst(21,83-21,88): (Error) could not prove post-condition
+./NegativeTests.Neg.fst(25,30-25,31): (Error) Subtyping check failed; expected type (uu___#8021:(option 'a){(b2t (uu___is_Some uu___@0))}); got type (option 'a) (see /home/vsts/everest/FStar/bin/../ulib/prims.fst(252,4-252,8))
+./NegativeTests.Neg.fst(28,41-28,43): (Error) Subtyping check failed; expected type (uu___#9150:(result int){(b2t (uu___is_V uu___@0))}); got type (result int) (see /home/vsts/everest/FStar/bin/../ulib/prims.fst(259,4-259,5))
+./NegativeTests.Neg.fst(32,25-32,26): (Error) Subtyping check failed; expected type nat; got type int (see /home/vsts/everest/FStar/bin/../ulib/prims.fst(642,17-642,23))
+./NegativeTests.Set.fst(12,2-12,8): (Error) assertion failed (see ./NegativeTests.Set.fst(12,9-12,30))
+./NegativeTests.Set.fst(16,2-16,8): (Error) assertion failed (see ./NegativeTests.Set.fst(16,9-16,67))
+./NegativeTests.Set.fst(20,2-20,8): (Error) assertion failed (see ./NegativeTests.Set.fst(20,9-20,52))
+./NegativeTests.ShortCircuiting.fst(5,16-5,33): (Error) Subtyping check failed; expected type (b#22:bool{(bad_p b@0)}); got type bool (see ./NegativeTests.ShortCircuiting.fst(4,31-4,38))
+./NegativeTests.ShortCircuiting.fst(8,0-8,36): (Error) assertion failed(Also see: /home/vsts/everest/FStar/bin/../ulib/prims.fst(175,22-175,33))
+./NegativeTests.Termination.fst(7,27-7,28): (Error) Subtyping check failed; expected type (z#130:int{(precedes (LexCons m (LexCons z@0 LexTop)) m)}); got type int (see ./NegativeTests.Termination.fst(5,0-7,29))
+./NegativeTests.Termination.fst(13,26-13,35): (Error) Subtyping check failed; expected type (uu___#628:int{(precedes (LexCons n (LexCons uu___@0 LexTop)) (LexCons n (LexCons count LexTop)))}); got type int (see ./NegativeTests.Termination.fst(10,0-13,35))
+./NegativeTests.Termination.fst(20,29-20,54): (Error) Subtyping check failed; expected type (n#1104:int{(precedes (LexCons (op_Subtraction m 1) (LexCons n@0 LexTop)) (LexCons m (LexCons n LexTop)))}); got type int (see ./NegativeTests.Termination.fst(17,0-20,54))
+./NegativeTests.Termination.fst(25,28-25,29): (Error) Subtyping check failed; expected type (uu___#2065:(list 'a){(precedes uu___@0 l)}); got type (list 'a) (see ./NegativeTests.Termination.fst(23,0-25,29))
+./NegativeTests.Termination.fst(37,15-37,29): (Error) Subtyping check failed; expected type (x:(x#2696:nat{(b2t (op_LessThanOrEqual x@0 v))}) -> Tot nat); got type (uu___:(uu___#3541:nat{(precedes uu___@0 v)}) -> Tot nat) (see ./NegativeTests.Termination.fst(34,0-37,29))
+./NegativeTests.Termination.fst(48,19-48,29): (Error) Subtyping check failed; expected type (uu___#4370:snat{(precedes uu___@0 n)}); got type snat (see ./NegativeTests.Termination.fst(44,0-48,29))
+./NegativeTests.Termination.fst(55,34-55,35): (Error) Subtyping check failed; expected type (uu___#4992:snat{(precedes (LexCons (S (S n')) (LexCons uu___@0 LexTop)) (LexCons n (LexCons m LexTop)))}); got type snat (see ./NegativeTests.Termination.fst(51,0-55,35))
+./NegativeTests.Termination.fst(59,2-61,14): (Error) Patterns are incomplete
+./NegativeTests.Termination.fst(67,29-67,31): (Error) Subtyping check failed; expected type (uu___#6170:snat{(precedes (LexCons (S n') (LexCons uu___@0 LexTop)) (LexCons n (LexCons m LexTop)))}); got type snat (see ./NegativeTests.Termination.fst(64,0-67,31))
+./NegativeTests.Termination.fst(73,20-73,26): (Error) Subtyping check failed; expected type (uu___#7284:snat{(precedes uu___@0 n)}); got type snat (see ./NegativeTests.Termination.fst(70,0-73,26))
+Verified module: NegativeTests.ShortCircuiting (3285 milliseconds)
+Verified module: NegativeTests.BST (8368 milliseconds)
+Verified module: NegativeTests.Heap (4175 milliseconds)
+Verified module: NegativeTests.Termination (19316 milliseconds)
+Verified module: NegativeTests.Neg (16701 milliseconds)
+Verified module: NegativeTests.False (3612 milliseconds)
+Verified module: NegativeTests.Bug260 (3558 milliseconds)
+Verified module: NegativeTests.ImplicitFalse (2588 milliseconds)
+Verified module: NegativeTests.Set (5386 milliseconds)
+35 errors were reported (see above)
+Success: 35 failures were expected
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/micro-benchmarks'
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.MarkovsPrinciple.fst
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 926, characters 8-14
+Called from file "unix.ml", line 971, characters 4-126
+Re-raised at file "unix.ml", line 978, characters 10-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2671, characters 0-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3404, characters 17-33
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3440, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3530, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3718, characters 17-45
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 163, characters 16-101
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 288, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 324, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 365, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+Makefile:97: recipe for target 'Crypto.AEAD.Decrypt.fst-ver' failed
+make[4]: *** [Crypto.AEAD.Decrypt.fst-ver] Error 1
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.FunctionalExtensionality.fst
+Verified module: FStar.PredicateExtensionality (278 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.UInt64.fst
+Verified module: FStar.SquashEffect (597 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.OrdSetProps.fst
+Verified module: FStar.Set (4770 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Relational.Comp.fst
+Verified module: FStar.MarkovsPrinciple (99 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Map.fst
+Verified module: FStar.FunctionalExtensionality (379 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.OrdSet.fst
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 926, characters 8-14
+Called from file "unix.ml", line 971, characters 4-126
+Re-raised at file "unix.ml", line 978, characters 10-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 521, characters 1-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 678, characters 1-55
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5682, characters 0-88
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5782, characters 9-102
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5793, characters 17-83
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2940, characters 27-76
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3630, characters 17-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3182, characters 17-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3404, characters 17-33
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3440, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3530, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3718, characters 17-45
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 163, characters 16-101
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 165, characters 13-19
+Called from file "src/ocaml-output/FStar_Universal.ml", line 288, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 324, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 365, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+Makefile:97: recipe for target 'Crypto.AEAD.Wrappers.PRF.fst-ver' failed
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Constructive.fst
+make[4]: *** [Crypto.AEAD.Wrappers.PRF.fst-ver] Error 1
+Verified module: Crypto.AEAD.Wrappers.Encoding (32184 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.UInt.fst
+Verified module: FStar.List (7706 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Crypto.fst
+Verified module: FStar.Relational.Comp (486 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Mul.fst
+Verified module: FStar.OrdSetProps (1851 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.ListProperties.fst
+Verified module: FStar.Constructive (3677 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.UInt63.fst
+Verified module: FStar.Mul (31 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Reader.fst
+Verified module: FStar.Map (9378 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Integers.fst
+Verified module: Crypto.Plain (14608 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Tcp.fst
+Verified module: FStar.Reader (1515 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.TwoLevelHeap.fst
+Verified module: FStar.UInt32 (21386 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Int.fst
+Verified module: FStar.Crypto (2081 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.StrongExcludedMiddle.fst
+Verified module: FStar.OrdSet (22488 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.BitVector.fst
+Verified module: FStar.TwoLevelHeap (4134 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Char.fsti
+Verified module: FStar.UInt64 (21464 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.BaseTypes.fsti
+Verified module: FStar.StrongExcludedMiddle (221 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Float.fsti
+Verified module: FStar.Int (9104 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Universe.fsti
+Verified module: FStar.ListProperties (25659 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Matrix2.fsti
+Verified i'face (or impl+i'face): FStar.Char (662 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Option.fsti
+Verified module: FStar.Tcp (41 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.IO.fsti
+Verified i'face (or impl+i'face): FStar.Float (72 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.String.fsti
+Verified i'face (or impl+i'face): FStar.Universe (61 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Squash.fsti
+Verified i'face (or impl+i'face): FStar.Option (61 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Map.fst FStar.HyperHeap.fst hyperheap/FStar.ST.fst FStar.Util.fst
+Verified i'face (or impl+i'face): FStar.IO (244 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Map.fst FStar.HyperStack.fst hyperstack/FStar.ST.fst hyperstack/FStar.All.fst FStar.Monotonic.RRef.fst FStar.Monotonic.Seq.fst
+Verified i'face (or impl+i'face): FStar.String (530 milliseconds)
+All verification conditions discharged successfully
+/home/vsts/everest/FStar/bin/fstar.exe --trace_error --use_hints FStar.Map.fst FStar.HyperStack.fst hyperstack/FStar.ST.fst FStar.Buffer.fst FStar.Buffer.Quantifiers.fst
+Verified module: FStar.UInt63 (21484 milliseconds)
+All verification conditions discharged successfully
+Verified i'face (or impl+i'face): FStar.Squash (92 milliseconds)
+All verification conditions discharged successfully
+Verified i'face (or impl+i'face): FStar.Matrix2 (5581 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.BitVector (16516 milliseconds)
+All verification conditions discharged successfully
+Verified i'face (or impl+i'face): FStar.BaseTypes (46 milliseconds)
+All verification conditions discharged successfully
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 926, characters 8-14
+Called from file "unix.ml", line 971, characters 4-126
+Re-raised at file "unix.ml", line 978, characters 10-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2671, characters 0-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3404, characters 17-33
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3440, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3530, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3718, characters 17-45
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 163, characters 16-101
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 288, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 324, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 365, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+Makefile:97: recipe for target 'Crypto.AEAD.Encrypt.fst-ver' failed
+make[4]: *** [Crypto.AEAD.Encrypt.fst-ver] Error 1
+Verified module: Crypto.AEAD (4173 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Integers (44235 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.MAC_Wrapper.Invariant (61857 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Map (8322 milliseconds)
+Verified module: FStar.HyperHeap (32751 milliseconds)
+Verified module: FStar.ST (2132 milliseconds)
+Verified module: FStar.Util (39 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Encrypt.Ideal.Invariant (83750 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Map (8014 milliseconds)
+Verified module: FStar.HyperStack (25061 milliseconds)
+Verified module: FStar.ST (18331 milliseconds)
+Verified module: FStar.Monotonic.RRef (2334 milliseconds)
+Verified module: FStar.Monotonic.Seq (22775 milliseconds)
+Verified module: FStar.All (70 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.UF1CMA (392265 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3 (539154 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.UInt (124764 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.PRF (315847 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Encrypt.Invariant (250528 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Enxor.Invariant (251768 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.Bytes (579289 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Invariant (337315 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Map (9913 milliseconds)
+Verified module: FStar.HyperStack (27322 milliseconds)
+Verified module: FStar.ST (19706 milliseconds)
+Verified module: FStar.Buffer (144879 milliseconds)
+Verified module: FStar.Buffer.Quantifiers (4026 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.EnxorDexor (351100 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Math.Lemmas (368838 milliseconds)
+All verification conditions discharged successfully
+make[2]: Leaving directory '/home/vsts/everest/FStar/ulib'
+Verified module: Crypto.AEAD.Encoding (504716 milliseconds)
+All verification conditions discharged successfully
+make[4]: Target 'all' not remade because of errors.
+make[4]: Leaving directory '/home/vsts/everest/FStar/examples/low-level/crypto'
+Makefile:35: recipe for target 'all' failed
+make[3]: *** [all] Error 2
+make[3]: Leaving directory '/home/vsts/everest/FStar/examples/low-level'
+Makefile:42: recipe for target 'low-level.all' failed
+make[2]: *** [low-level.all] Error 2
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/home/vsts/everest/FStar/examples'
+make[1]: *** [uexamples] Error 2
+Makefile:269: recipe for target 'uexamples' failed
+make[1]: Target 'uregressions' not remade because of errors.
+make[1]: Leaving directory '/home/vsts/everest/FStar/src'
+Makefile:250: recipe for target 'utest' failed
+make: *** [utest] Error 2
+make: Leaving directory '/home/vsts/everest/FStar/src'
