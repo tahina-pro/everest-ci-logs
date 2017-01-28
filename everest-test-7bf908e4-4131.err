@@ -1,0 +1,17 @@
++ FStar/examples/low-level/krml-test.exe
++ FStar/examples/low-level/test-perf.exe
++ cd mitls-fstar/src/tls
++ make test
+File "test/mitls.ml", line 58, characters 12-28:
+Warning 6: labels were omitted in the application of this function.
+File "test/mitls.ml", line 63, characters 12-28:
+Warning 6: labels were omitted in the application of this function.
+File "test/mitls.ml", line 68, characters 12-28:
+Warning 6: labels were omitted in the application of this function.
+File "test/mitls.ml", line 104, characters 2-656:
+Warning 4: this pattern-matching is fragile.
+It will remain exhaustive when constructors are added to type TLSConstants.protocolVersion.
+File "test/mitls.ml", line 104, characters 2-656:
+Warning 4: this pattern-matching is fragile.
+It will remain exhaustive when constructors are added to type TLSConstants.protocolVersion.
++ set +x
