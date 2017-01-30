@@ -1,0 +1,504 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/3/s
+About to run: make -C src/tls -j 24 all-ver -k
+BUILD_SOURCEBRANCHNAME: taramana_include_seq
+BUILD_DEFINITIONNAME: miTLS-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/3/s/src/tls'
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --version | grep ^commit | sed 's/commit=\([^ ]*\).*/\1/' > ../../.fstar_version
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Flags \
+Flags.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MonotoneMap \
+MonotoneMap.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSError \
+TLSError.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSConstants \
+TLSConstants.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Transport \
+Transport.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Nonce \
+Nonce.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module RSAKey \
+RSAKey.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module DHGroup \
+DHGroup.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module ECGroup \
+ECGroup.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module CommonDH \
+CommonDH.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module PMS \
+PMS.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Hashing \
+Hashing.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module HashMAC \
+HashMAC.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Cert \
+Cert.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Signature \
+Signature.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSInfo \
+TLSInfo.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module IdNonce \
+IdNonce.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSExtensions \
+TLSExtensions.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Range \
+Range.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module DataStream \
+DataStream.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Alert \
+Alert.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Content \
+Content.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamPlain \
+StreamPlain.fst
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamAE \
+StreamAE.fst
+C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Error.fst(27,33-29,31) : (Error) Constructor ST not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: TLSError.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MasterSecret \
+MasterSecret.fst
+C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Error.fst(27,33-29,31) : (Error) Constructor ST not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Error.fst(27,33-29,31) : (Error) Constructor ST not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:240: Cert.fst-ver] Error 1
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StatefulPlain \
+StatefulPlain.fst
+make: *** [Makefile:240: Transport.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module LHAEPlain \
+LHAEPlain.fst
+C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Error.fst(27,33-29,31) : (Error) Constructor ST not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: DHGroup.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module AEAD_GCM \
+AEAD_GCM.fst
+Verified module: Flags (16 milliseconds)
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Flags.fst.hints; ran without hints
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC \
+MAC.fst
+C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Error.fst(27,33-29,31) : (Error) Constructor ST not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Error.fst(27,33-29,31) : (Error) Constructor ST not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: RSAKey.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StatefulLHAE \
+StatefulLHAE.fst
+make: *** [Makefile:240: TLSConstants.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Record \
+Record.fst
+C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Error.fst(27,33-29,31) : (Error) Constructor ST not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: PMS.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC_SHA256 \
+MAC_SHA256.fst
+C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Error.fst(27,33-29,31) : (Error) Constructor ST not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: CommonDH.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC_SHA1 \
+MAC_SHA1.fst
+C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Error.fst(27,33-29,31) : (Error) Constructor ST not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: ECGroup.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StAE \
+StAE.fst
+Verified module: MonotoneMap (6070 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module KeySchedule \
+KeySchedule.fst
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: StreamAE.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamDeltas \
+StreamDeltas.fst
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: Signature.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module HKDF \
+HKDF.fst
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: Nonce.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Epochs \
+Epochs.fst
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: TLSExtensions.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Connection \
+Connection.fst
+make: *** [Makefile:240: Hashing.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module ConnInvariant \
+ConnInvariant.fst
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: HashMAC.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module FFI \
+FFI.fst
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: IdNonce.fst-ver] Error 1
+C:/Build/Agent/_work/3/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/3/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent/_work/3/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/3/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/3/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/3/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLS \
+TLS.fst
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: TLSInfo.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: StreamPlain.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: Alert.fst-ver] Error 1
+make: *** [Makefile:240: DataStream.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: Content.fst-ver] Error 1
+C:\Build\Agent\_work\3\s\fstar\ucontrib\Platform\fst\Platform.Error.fst(27,33-29,31) : (Error) Constructor ST not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: HKDF.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: LHAEPlain.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: MasterSecret.fst-ver] Error 1
+make: *** [Makefile:240: MAC.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: Range.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: StatefulPlain.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: Record.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: MAC_SHA256.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: MAC_SHA1.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: StAE.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: AEAD_GCM.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: StatefulLHAE.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: KeySchedule.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: StreamDeltas.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: Epochs.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: Connection.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: ConnInvariant.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: FFI.fst-ver] Error 1
+.\TLSConstants.fst(1255,0-1266,78) : (Error) Computed type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" and effect "STATE" is not compatible with the annotated type "(l#77382:(list certType){(b2t (op_LessThanOrEqual (length l@0) 1))})" effect "Tot"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:240: TLS.fst-ver] Error 1
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/3/s/src/tls'
+make: Target 'all-ver' not remade because of errors.
