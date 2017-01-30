@@ -1,0 +1,91 @@
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(42,0-42,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(44,0-45,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\HashMAC.fst(28,20-28,24) : (Error) Identifier not found: [Hashing.hash]
+Module Hashing resolved into Hashing, definition hash not found
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:239: HashMAC.fst-ver] Error 1
+.\Signature.fst(67,29-67,33) : (Error) Identifier not found: [Hashing.hash]
+Module Hashing resolved into Hashing, definition hash not found
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:239: Signature.fst-ver] Error 1
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\HashMAC.fst(28,20-28,24) : (Error) Identifier not found: [Hashing.hash]
+Module Hashing resolved into Hashing, definition hash not found
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:239: MAC.fst-ver] Error 1
+.\HashMAC.fst(28,20-28,24) : (Error) Identifier not found: [Hashing.hash]
+Module Hashing resolved into Hashing, definition hash not found
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:239: MAC_SHA256.fst-ver] Error 1
+.\HashMAC.fst(28,20-28,24) : (Error) Identifier not found: [Hashing.hash]
+Module Hashing resolved into Hashing, definition hash not found
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:239: MAC_SHA1.fst-ver] Error 1
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\HashMAC.fst(28,20-28,24) : (Error) Identifier not found: [Hashing.hash]
+Module Hashing resolved into Hashing, definition hash not found
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:239: KeySchedule.fst-ver] Error 1
+.\Signature.fst(67,29-67,33) : (Error) Identifier not found: [Hashing.hash]
+Module Hashing resolved into Hashing, definition hash not found
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:239: Connection.fst-ver] Error 1
+.\Signature.fst(67,29-67,33) : (Error) Identifier not found: [Hashing.hash]
+Module Hashing resolved into Hashing, definition hash not found
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:239: FFI.fst-ver] Error 1
+.\Signature.fst(67,29-67,33) : (Error) Identifier not found: [Hashing.hash]
+Module Hashing resolved into Hashing, definition hash not found
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:239: ConnInvariant.fst-ver] Error 1
+.\Signature.fst(67,29-67,33) : (Error) Identifier not found: [Hashing.hash]
+Module Hashing resolved into Hashing, definition hash not found
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:239: TLS.fst-ver] Error 1
+WARNING: (413092,44): '=' cannot be used in patterns.
+WARNING: (413092,44): 'if' cannot be used in patterns.
+WARNING: (413092,44): 'if' cannot be used in patterns.
+make: Target 'all-ver' not remade because of errors.
