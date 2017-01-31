@@ -1,0 +1,42 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: vdum_resugar
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc 6.1.0'.
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent\_work\1\s\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent\_work\1\s\bin\prettyprint.dll
+C:\Build\Agent\_work\1\s\src\syntax\syntax.fsproj(50,2): error MSB4025: The project file could not be loaded. Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 50, position 2.
+C:\Build\Agent\_work\1\s\src\syntax\syntax.fsproj(50,2): error MSB4025: The project file could not be loaded. Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 50, position 2.
+format -> C:\Build\Agent\_work\1\s\bin\format.dll
+C:\Build\Agent\_work\1\s\src\syntax\syntax.fsproj(50,2): error MSB4025: The project file could not be loaded. Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 50, position 2.
+C:\Build\Agent\_work\1\s\src\syntax\syntax.fsproj(50,2): error MSB4025: The project file could not be loaded. Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 50, position 2.
+C:\Build\Agent\_work\1\s\src\syntax\syntax.fsproj(50,2): error MSB4025: The project file could not be loaded. Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 50, position 2.
+C:\Build\Agent\_work\1\s\src\syntax\syntax.fsproj(50,2): error MSB4025: The project file could not be loaded. Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 50, position 2.
+C:\Build\Agent\_work\1\s\src\syntax\syntax.fsproj(50,2): error MSB4025: The project file could not be loaded. Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 50, position 2.
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: *** [Makefile:53: all] Error 1
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make: *** [Makefile:258: utest] Error 2
