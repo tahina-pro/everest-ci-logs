@@ -1,0 +1,84 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(393,0-393,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(442,0-442,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(443,0-443,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(494,0-496,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(303,0-307,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(10,0-10,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(11,0-11,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(12,0-12,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(13,0-13,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\bytes\Platform.Bytes.fst.hints; ran without hints
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#1088
+WARNING: (65355,66): pattern does not contain any variable.
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (65101,66): pattern does not contain any variable.
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\tactics\MetaCoq.fst.hints; ran without hints
+WARNING: (4121,6): pattern does not contain all quantified variables.
+WARNING: (65101,66): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#40904
+.\Platform.Bytes.fst(257,156-260,30): (Warning) Pattern misses at least one bound variable: i#43016
+WARNING: (76666,6): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#80608
+.\Platform.Bytes.fst(257,156-260,30): (Warning) Pattern misses at least one bound variable: i#90055
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(27,0-27,19): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(27,0-27,19): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(21,0-21,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(19,0-19,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+File "Ex01a.fst", line 37, characters 4-6:
+Warning 26: unused variable v1.
+File "Ex01a.fst", line 38, characters 4-6:
+Warning 26: unused variable v2.
+File "Ex01a.fst", line 61, characters 4-6:
+Warning 26: unused variable v1.
+File "Ex01a.fst", line 62, characters 4-6:
+Warning 26: unused variable v2.
+File "Ex01a.fst", line 63, characters 4-6:
+Warning 26: unused variable v3.
+Fatal error: exception Ex01a.InvalidRead
+Raised at file "prims.ml", line 103, characters 20-21
+Called from file "Ex01a.fst", line 63, characters 9-29
+Called from file "Ex01a.fst", line 69, characters 0-21
+make[3]: [Makefile:63: Ex01a-ocaml] Error 2 (ignored)
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: [Makefile:66: Ex01a-ocaml] Error 2 (ignored)
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(30,0-30,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(33,0-33,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(36,0-36,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(100,0-100,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(127,0-127,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(159,0-175,5): (Warning) Top-level let-bindings must be total; this term may have effects
