@@ -1,0 +1,787 @@
+Cloning into 'vale'...
+Switched to a new branch 'taramana_include_seq'
+Cloning into 'mitls-fstar'...
+Switched to a new branch 'taramana_include_seq_lists'
+Cloning into 'FStar'...
+Checking out files:  45% (821/1817)   Checking out files:  46% (836/1817)   Checking out files:  47% (854/1817)   Checking out files:  48% (873/1817)   Checking out files:  49% (891/1817)   Checking out files:  50% (909/1817)   Checking out files:  51% (927/1817)   Checking out files:  52% (945/1817)   Checking out files:  53% (964/1817)   Checking out files:  54% (982/1817)   Checking out files:  55% (1000/1817)   Checking out files:  56% (1018/1817)   Checking out files:  57% (1036/1817)   Checking out files:  58% (1054/1817)   Checking out files:  59% (1073/1817)   Checking out files:  60% (1091/1817)   Checking out files:  61% (1109/1817)   Checking out files:  62% (1127/1817)   Checking out files:  63% (1145/1817)   Checking out files:  64% (1163/1817)   Checking out files:  65% (1182/1817)   Checking out files:  66% (1200/1817)   Checking out files:  67% (1218/1817)   Checking out files:  68% (1236/1817)   Checking out files:  69% (1254/1817)   Checking out files:  70% (1272/1817)   Checking out files:  71% (1291/1817)   Checking out files:  72% (1309/1817)   Checking out files:  73% (1327/1817)   Checking out files:  74% (1345/1817)   Checking out files:  75% (1363/1817)   Checking out files:  76% (1381/1817)   Checking out files:  77% (1400/1817)   Checking out files:  78% (1418/1817)   Checking out files:  79% (1436/1817)   Checking out files:  80% (1454/1817)   Checking out files:  81% (1472/1817)   Checking out files:  82% (1490/1817)   Checking out files:  83% (1509/1817)   Checking out files:  84% (1527/1817)   Checking out files:  85% (1545/1817)   Checking out files:  86% (1563/1817)   Checking out files:  87% (1581/1817)   Checking out files:  87% (1582/1817)   Checking out files:  88% (1599/1817)   Checking out files:  89% (1618/1817)   Checking out files:  90% (1636/1817)   Checking out files:  91% (1654/1817)   Checking out files:  92% (1672/1817)   Checking out files:  93% (1690/1817)   Checking out files:  94% (1708/1817)   Checking out files:  95% (1727/1817)   Checking out files:  96% (1745/1817)   Checking out files:  97% (1763/1817)   Checking out files:  98% (1781/1817)   Checking out files:  99% (1799/1817)   Checking out files: 100% (1817/1817)   Checking out files: 100% (1817/1817), done.
+Switched to a new branch 'taramana_include_seq_lists'
+Cloning into 'hacl-star'...
+Switched to a new branch 'taramana_include_seq_lists'
+Cloning into 'kremlin'...
+Switched to a new branch 'taramana_include_seq'
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Cloning into '/cygdrive/c/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/openssl'...
+crypto/bio/b_sock.c: In function 'BIO_get_accept_socket':
+crypto/bio/b_sock.c:214:13: warning: overflow in implicit constant conversion [-Woverflow]
+int s = INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:219:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:222:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:229:13: warning: overflow in implicit constant conversion [-Woverflow]
+s = INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:236:13: warning: overflow in implicit constant conversion [-Woverflow]
+s = INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c: In function 'BIO_socket':
+crypto/bio/b_sock2.c:45:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c:51:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c: In function 'BIO_connect':
+crypto/bio/b_sock2.c:90:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:98:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c: In function 'BIO_listen':
+crypto/bio/b_sock2.c:164:47: warning: passing argument 4 of 'getsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (getsockopt(sock, SOL_SOCKET, SO_TYPE, &socktype, &socktype_len) != 0
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:980:34: note: expected 'char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI getsockopt(SOCKET s,int level,int optname,char *optval,int *optlen);
+^
+crypto/bio/b_sock2.c:187:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:195:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:204:57: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_IPV6, IPV6_V6ONLY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:190:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c: In function 'BIO_accept_ex':
+crypto/bio/b_sock2.c:249:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c:254:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+In file included from crypto/bn/bn_print.c:15:0:
+crypto/bn/bn_print.c: In function 'BN_bn2dec':
+crypto/bn/bn_lcl.h:94:27: warning: unknown conversion type character 'l' in format [-Wformat=]
+#  define BN_DEC_FMT1     "%llu"
+^
+crypto/bn/bn_print.c:106:37: note: in expansion of macro 'BN_DEC_FMT1'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
+^
+crypto/bn/bn_lcl.h:94:27: warning: too many arguments for format [-Wformat-extra-args]
+#  define BN_DEC_FMT1     "%llu"
+^
+crypto/bn/bn_print.c:106:37: note: in expansion of macro 'BN_DEC_FMT1'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
+^
+crypto/bn/bn_lcl.h:95:27: warning: unknown conversion type character 'l' in format [-Wformat=]
+#  define BN_DEC_FMT2     "%019llu"
+^
+crypto/bn/bn_print.c:111:41: note: in expansion of macro 'BN_DEC_FMT2'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
+^
+crypto/bn/bn_lcl.h:95:27: warning: too many arguments for format [-Wformat-extra-args]
+#  define BN_DEC_FMT2     "%019llu"
+^
+crypto/bn/bn_print.c:111:41: note: in expansion of macro 'BN_DEC_FMT2'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
+^
+crypto/threads_win.c: In function 'CRYPTO_atomic_add':
+crypto/threads_win.c:132:35: warning: passing argument 1 of '_InterlockedExchangeAdd' from incompatible pointer type [-Wincompatible-pointer-types]
+*ret = InterlockedExchangeAdd(val, amount) + amount;
+^
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/winnt.h:27:0,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/minwindef.h:163,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/windef.h:8,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/windows.h:69,
+from crypto/threads_win.c:11:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/psdk_inc/intrin-impl.h:1026:10: note: expected 'volatile long int *' but argument is of type 'int *'
+__LONG32 _InterlockedExchangeAdd(__LONG32 volatile *Addend, __LONG32 Value) {
+^
+ar: creating libssl.a
+ar: creating libcrypto.a
+openssl_stub.c: In function ‘ocaml_openssl_init’:
+openssl_stub.c:93:3: warning: implicit declaration of function ‘OPENSSL_config’ [-Wimplicit-function-declaration]
+OPENSSL_config("CoreCrypto");
+^
+openssl_stub.c: In function ‘ocaml_rsa_gen_key’:
+openssl_stub.c:668:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_get_key’:
+openssl_stub.c:779:21: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:27: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:33: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_encrypt’:
+openssl_stub.c:823:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_decrypt’:
+openssl_stub.c:878:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_sign’:
+openssl_stub.c:922:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_verify’:
+openssl_stub.c:975:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_dsa_gen_params’:
+openssl_stub.c:1087:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_gen_key’:
+openssl_stub.c:1144:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1144:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_get_key’:
+openssl_stub.c:1183:21: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:27: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:33: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1190:21: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1190:29: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_set_key’:
+openssl_stub.c:1235:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1236:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1236:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_sign’:
+openssl_stub.c:1325:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1326:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1326:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_verify’:
+openssl_stub.c:1368:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1369:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1369:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dh_gen_params’:
+openssl_stub.c:1473:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_params_of_string’:
+openssl_stub.c:1506:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_gen_key’:
+openssl_stub.c:1561:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1561:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_compute’:
+openssl_stub.c:1672:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1672:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.inv_cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.inv_cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Symmetric.MAC.rcreate, in file Crypto_Symmetric_MAC: eternal newbuf 0uint8 Crypto.Symmetric.MAC.wlen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, after the definition of len, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @5 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Poly1305.Spec.field_mul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 8: : Crypto.Symmetric.MAC.rcreate is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.MAC.create is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.MAC.encodeB is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.MAC.start is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.akey_gen is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.akey_coerce is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.alloc is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.gen is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.coerce is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.start is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Plain.create is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.PRF.coerce is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.PRF.prf_mac is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.PRF.prf_sk0 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Encoding.accumulate is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Wrappers.Encoding.accumulate_enc is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Wrappers.Encoding.accumulate is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Wrappers.PRF.prf_mac_0 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Wrappers.PRF.prf_mac_enc is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Wrappers.PRF.prf_mac_dec is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.AEAD.Encoding.add_bytes -- removing the static qualifier from Crypto.AEAD.Encoding.add_bytes
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.AEAD.Encoding.store_lengths_poly1305 -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_poly1305
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.AEAD.Encoding.store_lengths_ghash -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_ghash
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.Symmetric.PRF.getBlock -- removing the static qualifier from Crypto.Symmetric.PRF.getBlock
+Warning 8: : Crypto.AEAD.gen is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.coerce is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.mk_aad is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.mk_key is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.mk_ivBuffer is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.mk_expected_cipher is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.test_aes_gcm_0 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.test_aes_gcm_1 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.test_aes_gcm_2 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.test_aes_gcm_3 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.test_aes_gcm_4 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.main is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.inv_cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.inv_cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Symmetric.MAC.rcreate, in file Crypto_Symmetric_MAC: eternal newbuf 0uint8 Crypto.Symmetric.MAC.wlen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, after the definition of len, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @5 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Poly1305.Spec.field_mul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 8: : Crypto.Symmetric.MAC.rcreate is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.MAC.create is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.MAC.encodeB is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.MAC.start is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.akey_gen is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.akey_coerce is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.alloc is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.gen is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.coerce is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.UF1CMA.start is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Plain.create is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.PRF.coerce is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.PRF.prf_mac is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.Symmetric.PRF.prf_sk0 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Encoding.accumulate is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Wrappers.Encoding.accumulate_enc is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Wrappers.Encoding.accumulate is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Wrappers.PRF.prf_mac_0 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Wrappers.PRF.prf_mac_enc is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.Wrappers.PRF.prf_mac_dec is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.AEAD.Encoding.add_bytes -- removing the static qualifier from Crypto.AEAD.Encoding.add_bytes
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.AEAD.Encoding.store_lengths_poly1305 -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_poly1305
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.AEAD.Encoding.store_lengths_ghash -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_ghash
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.Symmetric.PRF.getBlock -- removing the static qualifier from Crypto.Symmetric.PRF.getBlock
+Warning 8: : Crypto.AEAD.gen is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.AEAD.coerce is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.mk_aad is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.mk_key is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.mk_ivBuffer is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.mk_expected_cipher is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.test_aes_gcm_0 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.test_aes_gcm_1 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.test_aes_gcm_2 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.test_aes_gcm_3 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.test_aes_gcm_4 is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 8: : Crypto.KrmlTest.main is going to be inlined but has no F* [@ "substitute" ] decoration
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I ../../../kremlin/kremlib -I ../../../kremlin/test -I ../../../kremlin/kremlib -I ../../../kremlin/test -I ../../ucontrib/CoreCrypto/ml/openssl/include -I C:/Build/Agent2/_work/7/s/kremlin/kremlib -I tmp -maes -Ofast -m64 -march=native -mtune=native -flto -funroll-loops -fomit-frame-pointer -Wno-int-conversion tmp/Prims.o tmp/Buffer_Utils.o tmp/FStar.o tmp/Crypto_Symmetric_Bytes.o tmp/Crypto_Symmetric_Poly1305_Spec.o tmp/Crypto_Symmetric_Poly1305_Parameters.o tmp/Crypto_Symmetric_Poly1305_Bigint.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part1.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part2.o tmp/Crypto_AEAD_BufferUtils.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part3.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part4.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part5.o tmp/Crypto_Symmetric_Chacha20.o tmp/Crypto_Config.o tmp/Crypto_Indexing.o tmp/Flag.o tmp/Crypto_Symmetric_AES.o tmp/Spartan.o tmp/Crypto_Symmetric_AES128.o tmp/Crypto_Symmetric_Cipher.o tmp/Crypto_Symmetric_Poly1305_Lemmas.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part6.o tmp/Crypto_Symmetric_Poly1305_Bignum.o tmp/Crypto_Symmetric_Poly1305.o tmp/Crypto_Symmetric_GF128_Spec.o tmp/Crypto_Symmetric_GF128.o tmp/Crypto_Symmetric_MAC.o tmp/Crypto_Symmetric_UF1CMA.o tmp/Crypto_Plain.o tmp/Crypto_Symmetric_PRF.o tmp/Crypto_AEAD_Encoding.o tmp/Crypto_AEAD_Invariant.o tmp/Crypto_AEAD_Wrappers_Encoding.o tmp/Crypto_AEAD_Wrappers_CMA.o tmp/Crypto_AEAD_Encrypt_Invariant.o tmp/Crypto_AEAD_Wrappers_PRF.o tmp/Crypto_AEAD_EnxorDexor.o tmp/Crypto_AEAD_Encrypt_Ideal_Invariant.o tmp/Crypto_AEAD_MAC_Wrapper_Invariant.o tmp/Crypto_AEAD_Enxor_Invariant.o tmp/Crypto_AEAD_Encrypt.o tmp/Crypto_AEAD_Decrypt.o tmp/Crypto_AEAD.o tmp/Crypto_KrmlTest.o tmp/kremlib.o tmp/spartan_stub.o tmp/test_perf.o tmp/test_hacks.o tmp/testlib.o spartan_aes/aes.o -o test-perf.exe -L ../../ucontrib/CoreCrypto/ml/openssl/lib -L ../../ucontrib/CoreCrypto/ml/openssl -lcrypto
+make: *** [Makefile:216: test-perf.exe] Error 250
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+x86_64-w64-mingw32-ar: ../tmp/Buffer_Utils.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_BufferUtils.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_Decrypt.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_Encoding.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_Encrypt.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_Encrypt_Ideal_Invariant.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_Encrypt_Invariant.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_Enxor_Invariant.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_EnxorDexor.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_Invariant.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_MAC_Wrapper_Invariant.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_Wrappers_CMA.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_Wrappers_Encoding.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_AEAD_Wrappers_PRF.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Config.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Indexing.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_KrmlTest.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Plain.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_AES.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_AES128.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Bytes.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Chacha20.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Cipher.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_GF128.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_GF128_Spec.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_MAC.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Bigint.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Bignum.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part1.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part2.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part3.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part4.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part5.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part6.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Lemmas.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Parameters.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_Poly1305_Spec.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_PRF.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Crypto_Symmetric_UF1CMA.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Flag.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/FStar.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/kremlib.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Prims.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/Spartan.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/spartan_stub.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/test_hacks.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/test_perf.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: ../tmp/testlib.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Buffer_Utils.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_BufferUtils.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_Decrypt.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_Encoding.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_Encrypt.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_Encrypt_Ideal_Invariant.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_Encrypt_Invariant.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_Enxor_Invariant.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_EnxorDexor.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_Invariant.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_MAC_Wrapper_Invariant.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_Wrappers_CMA.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_Wrappers_Encoding.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_AEAD_Wrappers_PRF.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Config.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Indexing.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Plain.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_AES.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_AES128.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Bytes.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Chacha20.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Cipher.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_GF128.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_GF128_Spec.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_MAC.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Bigint.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Bignum.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part1.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part2.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part3.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part4.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part5.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part6.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Lemmas.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Parameters.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_Poly1305_Spec.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_PRF.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Crypto_Symmetric_UF1CMA.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Flag.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: FStar.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: kremlib.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Prims.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: Spartan.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: spartan_stub.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: test_hacks.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: test_perf.o: plugin needed to handle lto object
+x86_64-w64-mingw32-ar: testlib.o: plugin needed to handle lto object
+File "output/FStar_Seq_Base.ml", line 16, characters 24-50:
+Error: Unbound module FStar_List_Tot_Base
+make: *** [Makefile:342: mitls.cmxa] Error 2
