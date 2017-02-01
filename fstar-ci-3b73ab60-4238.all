@@ -1,0 +1,48 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: kyod_reification_examples
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Installing 'FsLexYacc 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent2\_work\1\s\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent2\_work\1\s\bin\prettyprint.dll
+C:\Build\Agent2\_work\1\s\src\syntax\FStar.Syntax.Print.fs(487,36): warning FS0025: Incomplete pattern matches on this expression. For example, the value 'Sig_pragma (LightOff, _)' may indicate a case not covered by the pattern(s). [C:\Build\Agent2\_work\1\s\src\syntax\syntax.fsproj]
+syntax -> C:\Build\Agent2\_work\1\s\bin\syntax.dll
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1086,42): error FS0001: Type mismatch. Expecting a    'a * 'b * 'c    but given a    'b    The resulting type would be infinite when unifying ''a' and ''b * 'a * 'c' [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1088,24): error FS0001: This expression was expected to have type    'a * 'b * 'c    but here has type    lcomp [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1089,12): error FS0001: Type mismatch. Expecting a    'a * 'b * 'c    but given a    'a * 'b    The tuples have differing lengths of 3 and 2 [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1092,61): error FS0001: This expression was expected to have type    lcomp    but here has type    'a * 'b * 'c [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1099,13): error FS0018: The two sides of this 'or' pattern bind different sets of variables [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1107,27): error FS0001: This expression was expected to have type    'a * 'b    but here has type    'c Prims.list [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1107,72): error FS0001: Type mismatch. Expecting a    (arg * bv option) list    but given a    (arg * bv option * either<(lident * typ),lcomp>) list    The tuples have differing lengths of 2 and 3 [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1109,35): error FS0001: Type mismatch. Expecting a    ('a * 'b) Prims.list    but given a    bv option Prims.list    The type ''a * 'b' does not match the type 'bv option' [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1116,34): error FS0001: Type mismatch. Expecting a    args    but given a    Prims.Tot<bv option Prims.list>    The type 'arg' does not match the type 'bv option' [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1118,44): error FS0039: The value or constructor 'body' is not defined [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs(1126,45): error FS0001: Type mismatch. Expecting a    (bv * lident * typ * term) option Prims.list    but given a    arg Prims.list    The type '(bv * lident * typ * term) option' does not match the type 'arg' [C:\Build\Agent2\_work\1\s\src\typechecker\typechecker.fsproj]
+format -> C:\Build\Agent2\_work\1\s\bin\format.dll
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: *** [Makefile:53: all] Error 1
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make: *** [Makefile:250: utest] Error 2
