@@ -1,0 +1,673 @@
+This is /home/darrenge/everest-ci/ci
+Working directory: /home/darrenge/everest/FStar
+About to run: .ci/fsdoc.sh
+BUILD_SOURCEBRANCHNAME:
+BUILD_DEFINITIONNAME:
+Running fsdoc in /home/darrenge/everest/FStar
+++ pwd
++ echo Running fsdoc in /home/darrenge/everest/FStar
++ FSDOC_ODIR=fsdoc_odir
++ mkdir -p fsdoc_odir
+~/everest/FStar/ulib ~/everest/FStar
++ pushd ulib
++ FST_FILES=(FStar.All.fst FStar.Array.fst FStar.Axiomatic.Array.fst FStar.BaseTypes.fsti FStar.BitVector.fst FStar.Buffer.fst FStar.Buffer.Quantifiers.fst FStar.Bytes.fst FStar.Char.fsti FStar.Classical.fst FStar.Constructive.fst FStar.Crypto.fst FStar.ErasedLogic.fst FStar.Float.fsti FStar.FunctionalExtensionality.fst FStar.Ghost.fst FStar.Heap.fst FStar.HyperHeap.fst FStar.HyperStack.fst FStar.Int.Cast.fst FStar.Int.fst FStar.Int128.fst FStar.Int16.fst FStar.Int31.fst FStar.Int32.fst FStar.Int63.fst FStar.Int64.fst FStar.Int8.fst FStar.Integers.fst FStar.IO.fsti FStar.List.Tot.fst FStar.List.Tot.Properties.fst FStar.List.Tot.fst FStar.List.fst FStar.Map.fst FStar.MarkovsPrinciple.fst FStar.Math.Lemmas.fst FStar.Math.Lib.fst FStar.Matrix2.fsti FStar.Monotonic.RRef.fst FStar.Monotonic.Seq.fst FStar.MRef.fst FStar.Mul.fst FStar.Option.fsti FStar.OrdMap.fst FStar.OrdMapProps.fst FStar.OrdSet.fst FStar.OrdSetProps.fst FStar.PredicateExtensionality.fst FStar.PropositionalExtensionality.fst FStar.Reader.fst FStar.Relational.Comp.fst FStar.Relational.Relational.fst FStar.Relational.State.fst FStar.Seq.Base.fst FStar.Seq.Properties.fst FStar.Seq.fst FStar.Set.fst FStar.Squash.fst FStar.Squash.fsti FStar.SquashEffect.fst FStar.SquashProperties.fst FStar.ST.fst FStar.String.fsti FStar.StrongExcludedMiddle.fst FStar.Tcp.fst FStar.TSet.fst FStar.TwoLevelHeap.fst FStar.UInt.fst FStar.UInt128.fst FStar.UInt16.fst FStar.UInt31.fst FStar.UInt32.fst FStar.UInt63.fst FStar.UInt64.fst FStar.UInt8.fst FStar.Util.fst prims.fst)
++ ../bin/fstar-any.sh --odir ../fsdoc_odir --doc FStar.All.fst FStar.Array.fst FStar.Axiomatic.Array.fst FStar.BaseTypes.fsti FStar.BitVector.fst FStar.Buffer.fst FStar.Buffer.Quantifiers.fst FStar.Bytes.fst FStar.Char.fsti FStar.Classical.fst FStar.Constructive.fst FStar.Crypto.fst FStar.ErasedLogic.fst FStar.Float.fsti FStar.FunctionalExtensionality.fst FStar.Ghost.fst FStar.Heap.fst FStar.HyperHeap.fst FStar.HyperStack.fst FStar.Int.Cast.fst FStar.Int.fst FStar.Int128.fst FStar.Int16.fst FStar.Int31.fst FStar.Int32.fst FStar.Int63.fst FStar.Int64.fst FStar.Int8.fst FStar.Integers.fst FStar.IO.fsti FStar.List.Tot.fst FStar.List.Tot.Properties.fst FStar.List.Tot.fst FStar.List.fst FStar.Map.fst FStar.MarkovsPrinciple.fst FStar.Math.Lemmas.fst FStar.Math.Lib.fst FStar.Matrix2.fsti FStar.Monotonic.RRef.fst FStar.Monotonic.Seq.fst FStar.MRef.fst FStar.Mul.fst FStar.Option.fsti FStar.OrdMap.fst FStar.OrdMapProps.fst FStar.OrdSet.fst FStar.OrdSetProps.fst FStar.PredicateExtensionality.fst FStar.PropositionalExtensionality.fst FStar.Reader.fst FStar.Relational.Comp.fst FStar.Relational.Relational.fst FStar.Relational.State.fst FStar.Seq.Base.fst FStar.Seq.Properties.fst FStar.Seq.fst FStar.Set.fst FStar.Squash.fst FStar.Squash.fsti FStar.SquashEffect.fst FStar.SquashProperties.fst FStar.ST.fst FStar.String.fsti FStar.StrongExcludedMiddle.fst FStar.Tcp.fst FStar.TSet.fst FStar.TwoLevelHeap.fst FStar.UInt.fst FStar.UInt128.fst FStar.UInt16.fst FStar.UInt31.fst FStar.UInt32.fst FStar.UInt63.fst FStar.UInt64.fst FStar.UInt8.fst FStar.Util.fst prims.fst
+~/everest/FStar
++ popd
+~/everest/FStar/fsdoc_odir ~/everest/FStar
++ pushd fsdoc_odir
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.All.fst
++ fe=FStar.All.fst
++ f=FStar.All
++ md=FStar.All.md
++ html=FStar.All.html
++ pandoc FStar.All.md -s --css=style.ccs -f markdown -t html -o FStar.All.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Array.fst
++ fe=FStar.Array.fst
++ f=FStar.Array
++ md=FStar.Array.md
++ html=FStar.Array.html
++ pandoc FStar.Array.md -s --css=style.ccs -f markdown -t html -o FStar.Array.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Axiomatic.Array.fst
++ fe=FStar.Axiomatic.Array.fst
++ f=FStar.Axiomatic.Array
++ md=FStar.Axiomatic.Array.md
++ html=FStar.Axiomatic.Array.html
++ pandoc FStar.Axiomatic.Array.md -s --css=style.ccs -f markdown -t html -o FStar.Axiomatic.Array.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.BaseTypes.fsti
++ fe=FStar.BaseTypes.fsti
++ f=FStar.BaseTypes
++ md=FStar.BaseTypes.md
++ html=FStar.BaseTypes.html
++ pandoc FStar.BaseTypes.md -s --css=style.ccs -f markdown -t html -o FStar.BaseTypes.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.BitVector.fst
++ fe=FStar.BitVector.fst
++ f=FStar.BitVector
++ md=FStar.BitVector.md
++ html=FStar.BitVector.html
++ pandoc FStar.BitVector.md -s --css=style.ccs -f markdown -t html -o FStar.BitVector.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Buffer.fst
++ fe=FStar.Buffer.fst
++ f=FStar.Buffer
++ md=FStar.Buffer.md
++ html=FStar.Buffer.html
++ pandoc FStar.Buffer.md -s --css=style.ccs -f markdown -t html -o FStar.Buffer.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Buffer.Quantifiers.fst
++ fe=FStar.Buffer.Quantifiers.fst
++ f=FStar.Buffer.Quantifiers
++ md=FStar.Buffer.Quantifiers.md
++ html=FStar.Buffer.Quantifiers.html
++ pandoc FStar.Buffer.Quantifiers.md -s --css=style.ccs -f markdown -t html -o FStar.Buffer.Quantifiers.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Bytes.fst
++ fe=FStar.Bytes.fst
++ f=FStar.Bytes
++ md=FStar.Bytes.md
++ html=FStar.Bytes.html
++ pandoc FStar.Bytes.md -s --css=style.ccs -f markdown -t html -o FStar.Bytes.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Char.fsti
++ fe=FStar.Char.fsti
++ f=FStar.Char
++ md=FStar.Char.md
++ html=FStar.Char.html
++ pandoc FStar.Char.md -s --css=style.ccs -f markdown -t html -o FStar.Char.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Classical.fst
++ fe=FStar.Classical.fst
++ f=FStar.Classical
++ md=FStar.Classical.md
++ html=FStar.Classical.html
++ pandoc FStar.Classical.md -s --css=style.ccs -f markdown -t html -o FStar.Classical.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Constructive.fst
++ fe=FStar.Constructive.fst
++ f=FStar.Constructive
++ md=FStar.Constructive.md
++ html=FStar.Constructive.html
++ pandoc FStar.Constructive.md -s --css=style.ccs -f markdown -t html -o FStar.Constructive.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Crypto.fst
++ fe=FStar.Crypto.fst
++ f=FStar.Crypto
++ md=FStar.Crypto.md
++ html=FStar.Crypto.html
++ pandoc FStar.Crypto.md -s --css=style.ccs -f markdown -t html -o FStar.Crypto.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.ErasedLogic.fst
++ fe=FStar.ErasedLogic.fst
++ f=FStar.ErasedLogic
++ md=FStar.ErasedLogic.md
++ html=FStar.ErasedLogic.html
++ pandoc FStar.ErasedLogic.md -s --css=style.ccs -f markdown -t html -o FStar.ErasedLogic.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Float.fsti
++ fe=FStar.Float.fsti
++ f=FStar.Float
++ md=FStar.Float.md
++ html=FStar.Float.html
++ pandoc FStar.Float.md -s --css=style.ccs -f markdown -t html -o FStar.Float.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.FunctionalExtensionality.fst
++ fe=FStar.FunctionalExtensionality.fst
++ f=FStar.FunctionalExtensionality
++ md=FStar.FunctionalExtensionality.md
++ html=FStar.FunctionalExtensionality.html
++ pandoc FStar.FunctionalExtensionality.md -s --css=style.ccs -f markdown -t html -o FStar.FunctionalExtensionality.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Ghost.fst
++ fe=FStar.Ghost.fst
++ f=FStar.Ghost
++ md=FStar.Ghost.md
++ html=FStar.Ghost.html
++ pandoc FStar.Ghost.md -s --css=style.ccs -f markdown -t html -o FStar.Ghost.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Heap.fst
++ fe=FStar.Heap.fst
++ f=FStar.Heap
++ md=FStar.Heap.md
++ html=FStar.Heap.html
++ pandoc FStar.Heap.md -s --css=style.ccs -f markdown -t html -o FStar.Heap.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.HyperHeap.fst
++ fe=FStar.HyperHeap.fst
++ f=FStar.HyperHeap
++ md=FStar.HyperHeap.md
++ html=FStar.HyperHeap.html
++ pandoc FStar.HyperHeap.md -s --css=style.ccs -f markdown -t html -o FStar.HyperHeap.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.HyperStack.fst
++ fe=FStar.HyperStack.fst
++ f=FStar.HyperStack
++ md=FStar.HyperStack.md
++ html=FStar.HyperStack.html
++ pandoc FStar.HyperStack.md -s --css=style.ccs -f markdown -t html -o FStar.HyperStack.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Int.Cast.fst
++ fe=FStar.Int.Cast.fst
++ f=FStar.Int.Cast
++ md=FStar.Int.Cast.md
++ html=FStar.Int.Cast.html
++ pandoc FStar.Int.Cast.md -s --css=style.ccs -f markdown -t html -o FStar.Int.Cast.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Int.fst
++ fe=FStar.Int.fst
++ f=FStar.Int
++ md=FStar.Int.md
++ html=FStar.Int.html
++ pandoc FStar.Int.md -s --css=style.ccs -f markdown -t html -o FStar.Int.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Int128.fst
++ fe=FStar.Int128.fst
++ f=FStar.Int128
++ md=FStar.Int128.md
++ html=FStar.Int128.html
++ pandoc FStar.Int128.md -s --css=style.ccs -f markdown -t html -o FStar.Int128.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Int16.fst
++ fe=FStar.Int16.fst
++ f=FStar.Int16
++ md=FStar.Int16.md
++ html=FStar.Int16.html
++ pandoc FStar.Int16.md -s --css=style.ccs -f markdown -t html -o FStar.Int16.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Int31.fst
++ fe=FStar.Int31.fst
++ f=FStar.Int31
++ md=FStar.Int31.md
++ html=FStar.Int31.html
++ pandoc FStar.Int31.md -s --css=style.ccs -f markdown -t html -o FStar.Int31.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Int32.fst
++ fe=FStar.Int32.fst
++ f=FStar.Int32
++ md=FStar.Int32.md
++ html=FStar.Int32.html
++ pandoc FStar.Int32.md -s --css=style.ccs -f markdown -t html -o FStar.Int32.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Int63.fst
++ fe=FStar.Int63.fst
++ f=FStar.Int63
++ md=FStar.Int63.md
++ html=FStar.Int63.html
++ pandoc FStar.Int63.md -s --css=style.ccs -f markdown -t html -o FStar.Int63.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Int64.fst
++ fe=FStar.Int64.fst
++ f=FStar.Int64
++ md=FStar.Int64.md
++ html=FStar.Int64.html
++ pandoc FStar.Int64.md -s --css=style.ccs -f markdown -t html -o FStar.Int64.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Int8.fst
++ fe=FStar.Int8.fst
++ f=FStar.Int8
++ md=FStar.Int8.md
++ html=FStar.Int8.html
++ pandoc FStar.Int8.md -s --css=style.ccs -f markdown -t html -o FStar.Int8.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Integers.fst
++ fe=FStar.Integers.fst
++ f=FStar.Integers
++ md=FStar.Integers.md
++ html=FStar.Integers.html
++ pandoc FStar.Integers.md -s --css=style.ccs -f markdown -t html -o FStar.Integers.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.IO.fsti
++ fe=FStar.IO.fsti
++ f=FStar.IO
++ md=FStar.IO.md
++ html=FStar.IO.html
++ pandoc FStar.IO.md -s --css=style.ccs -f markdown -t html -o FStar.IO.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.List.Tot.fst
++ fe=FStar.List.Tot.fst
++ f=FStar.List.Tot
++ md=FStar.List.Tot.md
++ html=FStar.List.Tot.html
++ pandoc FStar.List.Tot.md -s --css=style.ccs -f markdown -t html -o FStar.List.Tot.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.List.Tot.Properties.fst
++ fe=FStar.List.Tot.Properties.fst
++ f=FStar.List.Tot.Properties
++ md=FStar.List.Tot.Properties.md
++ html=FStar.List.Tot.Properties.html
++ pandoc FStar.List.Tot.Properties.md -s --css=style.ccs -f markdown -t html -o FStar.List.Tot.Properties.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.List.Tot.fst
++ fe=FStar.List.Tot.fst
++ f=FStar.List.Tot
++ md=FStar.List.Tot.md
++ html=FStar.List.Tot.html
++ pandoc FStar.List.Tot.md -s --css=style.ccs -f markdown -t html -o FStar.List.Tot.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.List.fst
++ fe=FStar.List.fst
++ f=FStar.List
++ md=FStar.List.md
++ html=FStar.List.html
++ pandoc FStar.List.md -s --css=style.ccs -f markdown -t html -o FStar.List.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Map.fst
++ fe=FStar.Map.fst
++ f=FStar.Map
++ md=FStar.Map.md
++ html=FStar.Map.html
++ pandoc FStar.Map.md -s --css=style.ccs -f markdown -t html -o FStar.Map.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.MarkovsPrinciple.fst
++ fe=FStar.MarkovsPrinciple.fst
++ f=FStar.MarkovsPrinciple
++ md=FStar.MarkovsPrinciple.md
++ html=FStar.MarkovsPrinciple.html
++ pandoc FStar.MarkovsPrinciple.md -s --css=style.ccs -f markdown -t html -o FStar.MarkovsPrinciple.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Math.Lemmas.fst
++ fe=FStar.Math.Lemmas.fst
++ f=FStar.Math.Lemmas
++ md=FStar.Math.Lemmas.md
++ html=FStar.Math.Lemmas.html
++ pandoc FStar.Math.Lemmas.md -s --css=style.ccs -f markdown -t html -o FStar.Math.Lemmas.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Math.Lib.fst
++ fe=FStar.Math.Lib.fst
++ f=FStar.Math.Lib
++ md=FStar.Math.Lib.md
++ html=FStar.Math.Lib.html
++ pandoc FStar.Math.Lib.md -s --css=style.ccs -f markdown -t html -o FStar.Math.Lib.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Matrix2.fsti
++ fe=FStar.Matrix2.fsti
++ f=FStar.Matrix2
++ md=FStar.Matrix2.md
++ html=FStar.Matrix2.html
++ pandoc FStar.Matrix2.md -s --css=style.ccs -f markdown -t html -o FStar.Matrix2.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Monotonic.RRef.fst
++ fe=FStar.Monotonic.RRef.fst
++ f=FStar.Monotonic.RRef
++ md=FStar.Monotonic.RRef.md
++ html=FStar.Monotonic.RRef.html
++ pandoc FStar.Monotonic.RRef.md -s --css=style.ccs -f markdown -t html -o FStar.Monotonic.RRef.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Monotonic.Seq.fst
++ fe=FStar.Monotonic.Seq.fst
++ f=FStar.Monotonic.Seq
++ md=FStar.Monotonic.Seq.md
++ html=FStar.Monotonic.Seq.html
++ pandoc FStar.Monotonic.Seq.md -s --css=style.ccs -f markdown -t html -o FStar.Monotonic.Seq.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.MRef.fst
++ fe=FStar.MRef.fst
++ f=FStar.MRef
++ md=FStar.MRef.md
++ html=FStar.MRef.html
++ pandoc FStar.MRef.md -s --css=style.ccs -f markdown -t html -o FStar.MRef.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Mul.fst
++ fe=FStar.Mul.fst
++ f=FStar.Mul
++ md=FStar.Mul.md
++ html=FStar.Mul.html
++ pandoc FStar.Mul.md -s --css=style.ccs -f markdown -t html -o FStar.Mul.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Option.fsti
++ fe=FStar.Option.fsti
++ f=FStar.Option
++ md=FStar.Option.md
++ html=FStar.Option.html
++ pandoc FStar.Option.md -s --css=style.ccs -f markdown -t html -o FStar.Option.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.OrdMap.fst
++ fe=FStar.OrdMap.fst
++ f=FStar.OrdMap
++ md=FStar.OrdMap.md
++ html=FStar.OrdMap.html
++ pandoc FStar.OrdMap.md -s --css=style.ccs -f markdown -t html -o FStar.OrdMap.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.OrdMapProps.fst
++ fe=FStar.OrdMapProps.fst
++ f=FStar.OrdMapProps
++ md=FStar.OrdMapProps.md
++ html=FStar.OrdMapProps.html
++ pandoc FStar.OrdMapProps.md -s --css=style.ccs -f markdown -t html -o FStar.OrdMapProps.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.OrdSet.fst
++ fe=FStar.OrdSet.fst
++ f=FStar.OrdSet
++ md=FStar.OrdSet.md
++ html=FStar.OrdSet.html
++ pandoc FStar.OrdSet.md -s --css=style.ccs -f markdown -t html -o FStar.OrdSet.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.OrdSetProps.fst
++ fe=FStar.OrdSetProps.fst
++ f=FStar.OrdSetProps
++ md=FStar.OrdSetProps.md
++ html=FStar.OrdSetProps.html
++ pandoc FStar.OrdSetProps.md -s --css=style.ccs -f markdown -t html -o FStar.OrdSetProps.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.PredicateExtensionality.fst
++ fe=FStar.PredicateExtensionality.fst
++ f=FStar.PredicateExtensionality
++ md=FStar.PredicateExtensionality.md
++ html=FStar.PredicateExtensionality.html
++ pandoc FStar.PredicateExtensionality.md -s --css=style.ccs -f markdown -t html -o FStar.PredicateExtensionality.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.PropositionalExtensionality.fst
++ fe=FStar.PropositionalExtensionality.fst
++ f=FStar.PropositionalExtensionality
++ md=FStar.PropositionalExtensionality.md
++ html=FStar.PropositionalExtensionality.html
++ pandoc FStar.PropositionalExtensionality.md -s --css=style.ccs -f markdown -t html -o FStar.PropositionalExtensionality.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Reader.fst
++ fe=FStar.Reader.fst
++ f=FStar.Reader
++ md=FStar.Reader.md
++ html=FStar.Reader.html
++ pandoc FStar.Reader.md -s --css=style.ccs -f markdown -t html -o FStar.Reader.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Relational.Comp.fst
++ fe=FStar.Relational.Comp.fst
++ f=FStar.Relational.Comp
++ md=FStar.Relational.Comp.md
++ html=FStar.Relational.Comp.html
++ pandoc FStar.Relational.Comp.md -s --css=style.ccs -f markdown -t html -o FStar.Relational.Comp.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Relational.Relational.fst
++ fe=FStar.Relational.Relational.fst
++ f=FStar.Relational.Relational
++ md=FStar.Relational.Relational.md
++ html=FStar.Relational.Relational.html
++ pandoc FStar.Relational.Relational.md -s --css=style.ccs -f markdown -t html -o FStar.Relational.Relational.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Relational.State.fst
++ fe=FStar.Relational.State.fst
++ f=FStar.Relational.State
++ md=FStar.Relational.State.md
++ html=FStar.Relational.State.html
++ pandoc FStar.Relational.State.md -s --css=style.ccs -f markdown -t html -o FStar.Relational.State.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Seq.Base.fst
++ fe=FStar.Seq.Base.fst
++ f=FStar.Seq.Base
++ md=FStar.Seq.Base.md
++ html=FStar.Seq.Base.html
++ pandoc FStar.Seq.Base.md -s --css=style.ccs -f markdown -t html -o FStar.Seq.Base.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Seq.Properties.fst
++ fe=FStar.Seq.Properties.fst
++ f=FStar.Seq.Properties
++ md=FStar.Seq.Properties.md
++ html=FStar.Seq.Properties.html
++ pandoc FStar.Seq.Properties.md -s --css=style.ccs -f markdown -t html -o FStar.Seq.Properties.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Seq.fst
++ fe=FStar.Seq.fst
++ f=FStar.Seq
++ md=FStar.Seq.md
++ html=FStar.Seq.html
++ pandoc FStar.Seq.md -s --css=style.ccs -f markdown -t html -o FStar.Seq.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Set.fst
++ fe=FStar.Set.fst
++ f=FStar.Set
++ md=FStar.Set.md
++ html=FStar.Set.html
++ pandoc FStar.Set.md -s --css=style.ccs -f markdown -t html -o FStar.Set.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Squash.fst
++ fe=FStar.Squash.fst
++ f=FStar.Squash
++ md=FStar.Squash.md
++ html=FStar.Squash.html
++ pandoc FStar.Squash.md -s --css=style.ccs -f markdown -t html -o FStar.Squash.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Squash.fsti
++ fe=FStar.Squash.fsti
++ f=FStar.Squash
++ md=FStar.Squash.md
++ html=FStar.Squash.html
++ pandoc FStar.Squash.md -s --css=style.ccs -f markdown -t html -o FStar.Squash.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.SquashEffect.fst
++ fe=FStar.SquashEffect.fst
++ f=FStar.SquashEffect
++ md=FStar.SquashEffect.md
++ html=FStar.SquashEffect.html
++ pandoc FStar.SquashEffect.md -s --css=style.ccs -f markdown -t html -o FStar.SquashEffect.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.SquashProperties.fst
++ fe=FStar.SquashProperties.fst
++ f=FStar.SquashProperties
++ md=FStar.SquashProperties.md
++ html=FStar.SquashProperties.html
++ pandoc FStar.SquashProperties.md -s --css=style.ccs -f markdown -t html -o FStar.SquashProperties.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.ST.fst
++ fe=FStar.ST.fst
++ f=FStar.ST
++ md=FStar.ST.md
++ html=FStar.ST.html
++ pandoc FStar.ST.md -s --css=style.ccs -f markdown -t html -o FStar.ST.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.String.fsti
++ fe=FStar.String.fsti
++ f=FStar.String
++ md=FStar.String.md
++ html=FStar.String.html
++ pandoc FStar.String.md -s --css=style.ccs -f markdown -t html -o FStar.String.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+~/everest/FStar
+++ basename FStar.StrongExcludedMiddle.fst
++ fe=FStar.StrongExcludedMiddle.fst
++ f=FStar.StrongExcludedMiddle
+~/everest/FStar/fstarlang.github.io ~/everest/FStar
++ md=FStar.StrongExcludedMiddle.md
++ html=FStar.StrongExcludedMiddle.html
++ pandoc FStar.StrongExcludedMiddle.md -s --css=style.ccs -f markdown -t html -o FStar.StrongExcludedMiddle.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Tcp.fst
++ fe=FStar.Tcp.fst
++ f=FStar.Tcp
++ md=FStar.Tcp.md
++ html=FStar.Tcp.html
++ pandoc FStar.Tcp.md -s --css=style.ccs -f markdown -t html -o FStar.Tcp.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.TSet.fst
++ fe=FStar.TSet.fst
++ f=FStar.TSet
++ md=FStar.TSet.md
++ html=FStar.TSet.html
+Initialized empty Git repository in /home/darrenge/everest/FStar/fstarlang.github.io/.git/
++ pandoc FStar.TSet.md -s --css=style.ccs -f markdown -t html -o FStar.TSet.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.TwoLevelHeap.fst
++ fe=FStar.TwoLevelHeap.fst
++ f=FStar.TwoLevelHeap
++ md=FStar.TwoLevelHeap.md
++ html=FStar.TwoLevelHeap.html
++ pandoc FStar.TwoLevelHeap.md -s --css=style.ccs -f markdown -t html -o FStar.TwoLevelHeap.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.UInt.fst
++ fe=FStar.UInt.fst
++ f=FStar.UInt
++ md=FStar.UInt.md
++ html=FStar.UInt.html
++ pandoc FStar.UInt.md -s --css=style.ccs -f markdown -t html -o FStar.UInt.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.UInt128.fst
++ fe=FStar.UInt128.fst
++ f=FStar.UInt128
++ md=FStar.UInt128.md
++ html=FStar.UInt128.html
++ pandoc FStar.UInt128.md -s --css=style.ccs -f markdown -t html -o FStar.UInt128.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.UInt16.fst
++ fe=FStar.UInt16.fst
++ f=FStar.UInt16
++ md=FStar.UInt16.md
++ html=FStar.UInt16.html
++ pandoc FStar.UInt16.md -s --css=style.ccs -f markdown -t html -o FStar.UInt16.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.UInt31.fst
++ fe=FStar.UInt31.fst
++ f=FStar.UInt31
++ md=FStar.UInt31.md
++ html=FStar.UInt31.html
++ pandoc FStar.UInt31.md -s --css=style.ccs -f markdown -t html -o FStar.UInt31.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.UInt32.fst
++ fe=FStar.UInt32.fst
++ f=FStar.UInt32
++ md=FStar.UInt32.md
++ html=FStar.UInt32.html
++ pandoc FStar.UInt32.md -s --css=style.ccs -f markdown -t html -o FStar.UInt32.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.UInt63.fst
++ fe=FStar.UInt63.fst
++ f=FStar.UInt63
++ md=FStar.UInt63.md
++ html=FStar.UInt63.html
++ pandoc FStar.UInt63.md -s --css=style.ccs -f markdown -t html -o FStar.UInt63.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.UInt64.fst
++ fe=FStar.UInt64.fst
++ f=FStar.UInt64
++ md=FStar.UInt64.md
++ html=FStar.UInt64.html
++ pandoc FStar.UInt64.md -s --css=style.ccs -f markdown -t html -o FStar.UInt64.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.UInt8.fst
++ fe=FStar.UInt8.fst
++ f=FStar.UInt8
++ md=FStar.UInt8.md
++ html=FStar.UInt8.html
++ pandoc FStar.UInt8.md -s --css=style.ccs -f markdown -t html -o FStar.UInt8.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename FStar.Util.fst
++ fe=FStar.Util.fst
++ f=FStar.Util
++ md=FStar.Util.md
++ html=FStar.Util.html
++ pandoc FStar.Util.md -s --css=style.ccs -f markdown -t html -o FStar.Util.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ for f in '"${FST_FILES[@]}"'
+++ basename prims.fst
++ fe=prims.fst
++ f=prims
++ md=prims.md
++ html=prims.html
++ pandoc prims.md -s --css=style.ccs -f markdown -t html -o prims.html
+.ci/fsdoc.sh: line 114: pandoc: command not found
++ sed -i '/[A-Za-z0-9]/s/\(.*\)/[\1](\1.html)/' index.md
++ pandoc index.md -s --css=style.ccs -f markdown -t html -o index.html
+.ci/fsdoc.sh: line 120: pandoc: command not found
++ popd
++ mkdir fstarlang.github.io
++ pushd fstarlang.github.io
++ git init
++ git config user.name fsdocbuild
++ git config user.email fsdocbuild@somewhereontheinternet.com
++ git pull https://e005c48a6ba90ce4fcd30491c99cb6b719d526ba@github.com/FStarLang/fstarlang.github.io
+From https://github.com/FStarLang/fstarlang.github.io
+* branch            HEAD       -> FETCH_HEAD
+~/everest/FStar/fstarlang.github.io/docs ~/everest/FStar/fstarlang.github.io ~/everest/FStar
++ pushd docs
++ mv '../../fsdoc_odir/*.html' .
+mv: cannot stat '../../fsdoc_odir/*.html': No such file or directory
++ git add FStar.All.html FStar.Array.html FStar.Axiomatic.Array.html FStar.BaseTypes.html FStar.BitVector.html FStar.Buffer.html FStar.Buffer.Quantifiers.html FStar.Bytes.html FStar.Char.html FStar.Classical.html FStar.Constructive.html FStar.Crypto.html FStar.ErasedLogic.html FStar.Float.html FStar.FunctionalExtensionality.html FStar.Ghost.html FStar.Heap.html FStar.HyperHeap.html FStar.HyperStack.html FStar.IndefiniteDescription.html FStar.Int.Cast.html FStar.Int.html FStar.Int128.html FStar.Int16.html FStar.Int31.html FStar.Int32.html FStar.Int63.html FStar.Int64.html FStar.Int8.html FStar.Integers.html FStar.IO.html FStar.List.html FStar.List.Tot.html FStar.ListProperties.html FStar.Map.html FStar.MarkovsPrinciple.html FStar.Math.Lemmas.html FStar.Math.Lib.html FStar.Matrix2.html FStar.Monotonic.RRef.html FStar.Monotonic.Seq.html FStar.MRef.html FStar.Mul.html FStar.Option.html FStar.OrdMap.html FStar.OrdMapProps.html FStar.OrdSet.html FStar.OrdSetProps.html FStar.PredicateExtensionality.html FStar.PropositionalExtensionality.html FStar.Reader.html FStar.Relational.Comp.html FStar.Relational.Relational.html FStar.Relational.State.html FStar.Seq.html FStar.SeqProperties.html FStar.Set.html FStar.Squash.html FStar.SquashEffect.html FStar.SquashProperties.html FStar.ST.html FStar.String.html FStar.StrongExcludedMiddle.html FStar.Tcp.html FStar.TSet.html FStar.TwoLevelHeap.html FStar.UInt.html FStar.UInt128.html FStar.UInt16.html FStar.UInt31.html FStar.UInt32.html FStar.UInt63.html FStar.UInt64.html FStar.UInt8.html FStar.Util.html index.html prims.html
++ git commit -m 'Automated doc refresh'
+On branch master
+nothing to commit, working directory clean
++ git remote add origin https://e005c48a6ba90ce4fcd30491c99cb6b719d526ba@github.com/FStarLang/fstarlang.github.io
++ git push origin master
+Everything up-to-date
+~/everest/FStar/fstarlang.github.io ~/everest/FStar
+~/everest/FStar
++ popd
++ popd
++ rm -rf fstarlang.github.io
