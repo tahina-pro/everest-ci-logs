@@ -1,0 +1,70 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: kyod_reification_examples
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Installing 'FsLexYacc 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent\_work\1\s\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent\_work\1\s\bin\prettyprint.dll
+syntax -> C:\Build\Agent\_work\1\s\bin\syntax.dll
+typechecker -> C:\Build\Agent\_work\1\s\bin\typechecker.dll
+compiling to dfas (can take a while...)
+342 states
+writing output
+building tables
+computing first function...time: 00:00:00.2183878
+building kernels...time: 00:00:00.1504174
+building kernel table...time: 00:00:00.0178905
+computing lookahead relations........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.5106619
+building lookahead table...time: 00:00:00.2322657
+building action table...state 415: shift/reduce error on SEMICOLON
+state 442: shift/reduce error on BAR
+state 445: shift/reduce error on LBRACE
+state 446: shift/reduce error on BAR
+state 457: shift/reduce error on BAR
+state 533: shift/reduce error on COLON_EQUALS
+state 569: shift/reduce error on LBRACE
+time: 00:00:00.8099904
+building goto table...time: 00:00:00.2533135
+returning tables.
+7 shift/reduce conflicts
+725 states
+139 nonterminals
+141 terminals
+392 productions
+#rows in action table: 725
+parser -> C:\Build\Agent\_work\1\s\bin\parser.dll
+format -> C:\Build\Agent\_work\1\s\bin\format.dll
+extraction -> C:\Build\Agent\_work\1\s\bin\extraction.dll
+fsdoc -> C:\Build\Agent\_work\1\s\bin\fsdoc.dll
+C:\Build\Agent\_work\1\s\src\smtencoding\FStar.SMTEncoding.Encode.fs(652,17): error FS0010: Unexpected keyword 'else' in expression [C:\Build\Agent\_work\1\s\src\smtencoding\smtencoding.fsproj]
+C:\Build\Agent\_work\1\s\src\smtencoding\FStar.SMTEncoding.Encode.fs(650,17): error FS0589: Incomplete conditional. Expected 'if <expr> then <expr>' or 'if <expr> then <expr> else <expr>'. [C:\Build\Agent\_work\1\s\src\smtencoding\smtencoding.fsproj]
+C:\Build\Agent\_work\1\s\src\smtencoding\FStar.SMTEncoding.Encode.fs(656,19): error FS0010: Unexpected keyword 'else' in expression [C:\Build\Agent\_work\1\s\src\smtencoding\smtencoding.fsproj]
+C:\Build\Agent\_work\1\s\src\smtencoding\FStar.SMTEncoding.Encode.fs(654,19): error FS0589: Incomplete conditional. Expected 'if <expr> then <expr>' or 'if <expr> then <expr> else <expr>'. [C:\Build\Agent\_work\1\s\src\smtencoding\smtencoding.fsproj]
+tosyntax -> C:\Build\Agent\_work\1\s\bin\tosyntax.dll
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: *** [Makefile:53: all] Error 1
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make: *** [Makefile:256: utest] Error 2
