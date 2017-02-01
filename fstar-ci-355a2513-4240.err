@@ -1,0 +1,28 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(398,0-398,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(448,0-448,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(449,0-449,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(500,0-502,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(304,0-308,35): (Warning) Annotation from val declaration overrides inline type annotation
+make[3]: *** [Makefile:185: u_extract_rel] Error 127
+make[3]: *** [Makefile:197: u_extract_tc] Error 127
+make[3]: Target 'u_extract_typechecker' not remade because of errors.
+make[2]: *** [Makefile:227: ocaml] Error 2
+make[1]: *** [Makefile:239: fstar-ocaml] Error 2
+make: *** [Makefile:253: utest] Error 2
