@@ -1,0 +1,53 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "../parser/parse.mly", line 83, characters 7-11:
+Warning: the token KIND is unused.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(397,0-397,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(447,0-447,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(498,0-500,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(163,30-163,34): (Error) Failed to resolve implicit argument of type 'Type' introduced in ?133119 because uvar in term (see .\u_boot_fsts\FStar.TypeChecker.Env.fst(163,31-163,33))
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(166,54-166,68): (Error) Failed to resolve implicit argument of type 'Type' introduced in ?133119 because uvar in term (see .\u_boot_fsts\FStar.TypeChecker.Env.fst(163,31-163,33))
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(170,16-170,35): (Error) Failed to resolve implicit argument of type 'Type' introduced in ?133119 because uvar in term (see .\u_boot_fsts\FStar.TypeChecker.Env.fst(163,31-163,33))
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(176,37-176,50) : (Error) Expected expression of type "(ref (?133436 uu___))"; got expression "query_indices" of type "(ref (list (list (tuple2 uu___ uu___))))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+3 errors were reported (see above)
+make[3]: *** [Makefile:161: u_extract_normalizer] Error 1
+.\u_boot_fsts\FStar.ToSyntax.Env.fst(991,13-991,25) : (Error) Identifier not found: [Util.print_string]
+Module Util resolved into FStar.Syntax.Util, definition print_string not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+make[3]: *** [Makefile:181: u_extract_tosyntax] Error 1
+.\u_boot_fsts\FStar.Interactive.fst(369,28-369,34) : (Error) Identifier not found: [sigmap]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[3]: *** [Makefile:198: u_extract_fstar] Error 1
+make[3]: Target 'u_extract_typechecker' not remade because of errors.
+make[2]: *** [Makefile:206: ocaml] Error 2
+make[1]: *** [Makefile:218: fstar-ocaml] Error 2
+make: *** [Makefile:232: utest] Error 2
