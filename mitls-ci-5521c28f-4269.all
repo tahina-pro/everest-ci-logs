@@ -1,0 +1,742 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/2/s
+About to run: mitls_verify
+BUILD_SOURCEBRANCHNAME: c_mitls-build_upgrade
+BUILD_DEFINITIONNAME: miTLS-CI-Windows
+From https://github.com/FStarLang/FStar
+3e1250b..dc0ca3f  aseem_positivity -> origin/aseem_positivity
+* [new branch]      aseem_run_proc_stderr_fix -> origin/aseem_run_proc_stderr_fix
+* [new branch]      c_ppdev_initial -> origin/c_ppdev_initial
+15dfdca..1dbba6f  catalin_private -> origin/catalin_private
+* [new branch]      jk_lowlevel -> origin/jk_lowlevel
+5a76970..d9b94c1  jk_seq_createL -> origin/jk_seq_createL
+9aa4213..ccd74e4  konrad_hye_example -> origin/konrad_hye_example
+b1b32b4..5d58a28  kyod_reification_examples -> origin/kyod_reification_examples
+782cb8f..bd0278d  master     -> origin/master
+7bc255e..2bc12c1  nik_private -> origin/nik_private
+b42e672..2bc298e  pp_jonathan_kenji -> origin/pp_jonathan_kenji
+16d25bb..9c1baf6  protz_failed_attempt_at_approximate_interactive_mode -> origin/protz_failed_attempt_at_approximate_interactive_mode
+db8ae71..fea7cde  taramana_include_seq -> origin/taramana_include_seq
+* [new branch]      taramana_include_seq_lists -> origin/taramana_include_seq_lists
+* [new branch]      taramana_include_seq_lists_merge -> origin/taramana_include_seq_lists_merge
+6645e7d..31f8420  taramana_lists -> origin/taramana_lists
+7cd31e5..65d4f5f  vdum_pprint_ocaml -> origin/vdum_pprint_ocaml
+* [new branch]      vdum_resugar -> origin/vdum_resugar
+HEAD is now at 1e46e95 merging master in
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+# JP: delete this line and the script once every member of the team has
+# run ./clean.sh once
+./clean.sh
+FStar_Parser_Parse.ml is not under version control, removing
+FStar_Version.ml is not under version control, removing
+rm -rf _build
+rm -f parse.mly FStar_Parser_Parse.ml FStar_Version.ml
+rm -f *.tar.gz *.zip
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+File "../parser/parse.mly", line 83, characters 7-11:
+Warning: the token KIND is unused.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+echo 'let version = "0.9.4.0"' > FStar_Version.ml
+cp parse.mly ../parser/ml/
+echo 'let platform = "Windows_x64"' >> FStar_Version.ml
+echo "%{" > ../parser/parse.fsy
+# We are opening the same module twice but we need these modules
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+echo "#light \"off\"" >> ../parser/parse.fsy
+# open for the definition of tokens
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo 'let date = "2017-02-01T16:45:03-08:00"' >> FStar_Version.ml
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "open Prims" >> ../parser/parse.fsy
+echo 'let commit= "1e46e95"' >> FStar_Version.ml
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO: create a proper OCamlbuild rule for this production so that
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+# OCamlbuild knows how to generate parse.mly first (possibly using
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+mkdir 'C:\Build\Agent2\_work\2\s\fstar\src/ocaml-output/_build'
+mkdir src
+mkdir src/fstar
+mkdir src/fstar/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/fstar/ml/main.ml > src/fstar/ml/main.ml.depends
+mkdir src/ocaml-output
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Main.ml > src/ocaml-output/FStar_Main.ml.depends
+mkdir src/ocaml-output/bootlibs
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_All.ml > src/ocaml-output/bootlibs/FStar_All.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Dependencies.ml > src/ocaml-output/FStar_Dependencies.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_All.cmo src/ocaml-output/bootlibs/FStar_All.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_List.ml > src/ocaml-output/bootlibs/FStar_List.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Options.ml > src/ocaml-output/FStar_Options.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_BaseTypes.ml > src/ocaml-output/bootlibs/FStar_BaseTypes.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Char.ml > src/ocaml-output/bootlibs/FStar_Char.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Float.ml > src/ocaml-output/bootlibs/FStar_Float.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Int16.ml > src/ocaml-output/bootlibs/FStar_Int16.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Int32.ml > src/ocaml-output/bootlibs/FStar_Int32.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Int64.ml > src/ocaml-output/bootlibs/FStar_Int64.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Int8.ml > src/ocaml-output/bootlibs/FStar_Int8.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_UInt16.ml > src/ocaml-output/bootlibs/FStar_UInt16.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_UInt8.ml > src/ocaml-output/bootlibs/FStar_UInt8.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Char.cmo src/ocaml-output/bootlibs/FStar_Char.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Float.cmo src/ocaml-output/bootlibs/FStar_Float.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int16.cmo src/ocaml-output/bootlibs/FStar_Int16.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int32.cmo src/ocaml-output/bootlibs/FStar_Int32.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int64.cmo src/ocaml-output/bootlibs/FStar_Int64.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int8.cmo src/ocaml-output/bootlibs/FStar_Int8.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_UInt16.cmo src/ocaml-output/bootlibs/FStar_UInt16.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_UInt8.cmo src/ocaml-output/bootlibs/FStar_UInt8.ml
+mkdir src/basic
+mkdir src/basic/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Getopt.ml > src/basic/ml/FStar_Getopt.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_List.cmo src/ocaml-output/bootlibs/FStar_List.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Platform.ml > src/basic/ml/FStar_Platform.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_ST.ml > src/ocaml-output/bootlibs/FStar_ST.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_String.ml > src/ocaml-output/bootlibs/FStar_String.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Util.ml > src/basic/ml/FStar_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/prims.ml > src/ocaml-output/bootlibs/prims.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/MkPrims.ml > src/ocaml-output/bootlibs/MkPrims.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/MkPrims.cmo src/ocaml-output/bootlibs/MkPrims.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/prims.cmo src/ocaml-output/bootlibs/prims.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_BaseTypes.cmo src/ocaml-output/bootlibs/FStar_BaseTypes.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Getopt.cmo src/basic/ml/FStar_Getopt.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Platform.cmo src/basic/ml/FStar_Platform.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_ST.cmo src/ocaml-output/bootlibs/FStar_ST.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_String.cmo src/ocaml-output/bootlibs/FStar_String.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Util.cmo src/basic/ml/FStar_Util.ml
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_Dep.ml > src/ocaml-output/FStar_Parser_Dep.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Const.ml > src/ocaml-output/FStar_Const.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Ident.ml > src/ocaml-output/FStar_Ident.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Range.ml > src/basic/ml/FStar_Range.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Range.cmo src/basic/ml/FStar_Range.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Ident.cmo src/ocaml-output/FStar_Ident.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Errors.ml > src/ocaml-output/FStar_Errors.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Options.cmo src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_AST.ml > src/ocaml-output/FStar_Parser_AST.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Const.cmo src/ocaml-output/FStar_Const.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Errors.cmo src/ocaml-output/FStar_Errors.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Const.ml > src/ocaml-output/FStar_Syntax_Const.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Syntax.ml > src/ocaml-output/FStar_Syntax_Syntax.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Unionfind.ml > src/basic/ml/FStar_Unionfind.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Unionfind.cmo src/basic/ml/FStar_Unionfind.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Syntax.cmo src/ocaml-output/FStar_Syntax_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Print.ml > src/ocaml-output/FStar_Syntax_Print.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Const.cmo src/ocaml-output/FStar_Syntax_Const.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Subst.ml > src/ocaml-output/FStar_Syntax_Subst.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Option.ml > src/ocaml-output/bootlibs/FStar_Option.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Option.cmo src/ocaml-output/bootlibs/FStar_Option.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Util.ml > src/ocaml-output/FStar_Syntax_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_InstFV.ml > src/ocaml-output/FStar_Syntax_InstFV.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Subst.cmo src/ocaml-output/FStar_Syntax_Subst.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_InstFV.cmo src/ocaml-output/FStar_Syntax_InstFV.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Util.cmo src/ocaml-output/FStar_Syntax_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Print.cmo src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_Driver.ml > src/ocaml-output/FStar_Parser_Driver.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_AST.cmo src/ocaml-output/FStar_Parser_AST.ml
+mkdir src/parser
+mkdir src/parser/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/parser/ml/FStar_Parser_ParseIt.ml > src/parser/ml/FStar_Parser_ParseIt.ml.depends
+''ocamllex.opt -q src/parser/ml/FStar_Parser_LexFStar.mll
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/parser/ml/FStar_Parser_LexFStar.ml > src/parser/ml/FStar_Parser_LexFStar.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_Parse.ml > src/ocaml-output/FStar_Parser_Parse.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/parser/ml/FStar_Parser_Util.ml > src/parser/ml/FStar_Parser_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_Util.cmo src/parser/ml/FStar_Parser_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Parse.cmo src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_LexFStar.cmo src/parser/ml/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_ParseIt.cmo src/parser/ml/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Driver.cmo src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Dep.cmo src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_Kremlin.ml > src/ocaml-output/FStar_Extraction_Kremlin.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Code.ml > src/ocaml-output/FStar_Extraction_ML_Code.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Bytes.ml > src/basic/ml/FStar_Bytes.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Syntax.ml > src/ocaml-output/FStar_Extraction_ML_Syntax.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Util.ml > src/ocaml-output/FStar_Extraction_ML_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Syntax.cmo src/ocaml-output/FStar_Extraction_ML_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_UEnv.ml > src/ocaml-output/FStar_Extraction_ML_UEnv.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Env.ml > src/ocaml-output/FStar_TypeChecker_Env.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Free.ml > src/ocaml-output/FStar_Syntax_Free.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Common.ml > src/ocaml-output/FStar_TypeChecker_Common.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Free.cmo src/ocaml-output/FStar_Syntax_Free.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Common.cmo src/ocaml-output/FStar_TypeChecker_Common.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmo src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmo src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Format.ml > src/ocaml-output/FStar_Format.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Bytes.cmo src/basic/ml/FStar_Bytes.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmo src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Format.cmo src/ocaml-output/FStar_Format.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmo src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Modul.ml > src/ocaml-output/FStar_Extraction_ML_Modul.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Term.ml > src/ocaml-output/FStar_Extraction_ML_Term.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Normalize.ml > src/ocaml-output/FStar_TypeChecker_Normalize.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_TcTerm.ml > src/ocaml-output/FStar_TypeChecker_TcTerm.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Err.ml > src/ocaml-output/FStar_TypeChecker_Err.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmo src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Rel.ml > src/ocaml-output/FStar_TypeChecker_Rel.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Err.cmo src/ocaml-output/FStar_TypeChecker_Err.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Util.ml > src/ocaml-output/FStar_TypeChecker_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmo src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmo src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmo src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+File "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3378, characters 3-53:
+Error: This expression has type
+FStar_Ident.lident Prims.list = FStar_Ident.lident list
+but an expression was expected of type 'a * 'b
+Exit code 2 while executing this command:
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmo src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+make: *** [Makefile:94: fstar.exe] Error 2
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/2/s/src/tls'
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --version | grep ^commit | sed 's/commit=\([^ ]*\).*/\1/' > ../../.fstar_version
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Flags \
+Flags.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MonotoneMap \
+MonotoneMap.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSError \
+TLSError.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSConstants \
+TLSConstants.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Transport \
+Transport.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Nonce \
+Nonce.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module RSAKey \
+RSAKey.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module DHGroup \
+DHGroup.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module ECGroup \
+ECGroup.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module CommonDH \
+CommonDH.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module PMS \
+PMS.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Hashing \
+Hashing.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module HashMAC \
+HashMAC.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Cert \
+Cert.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Signature \
+Signature.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSInfo \
+TLSInfo.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module IdNonce \
+IdNonce.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSExtensions \
+TLSExtensions.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Range \
+Range.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module DataStream \
+DataStream.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.hyperheap -> platform.error 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+Warning: recursive dependency on module fstar.list.tot.properties
+make: *** [Makefile:240: MonotoneMap.fst-ver] Error 1
+The cycle is: fstar.list.tot -> fstar.list.tot.properties 
+A DOT-format graph has been dumped in the current directory as dep.graph
+make: *** [Makefile:240: TLSError.fst-ver] Error 1
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+Warning: recursive dependency on module fstar.list.tot.properties
+The cycle is: fstar.list.tot -> fstar.list.tot.properties 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:240: Flags.fst-ver] Error 1
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Alert \
+Alert.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Content \
+Content.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamPlain \
+StreamPlain.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.hyperheap -> platform.error 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: Transport.fst-ver] Error 1
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamAE \
+StreamAE.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MasterSecret \
+MasterSecret.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.hyperheap -> platform.error 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> platform.bytes -> corecrypto -> nonce 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StatefulPlain \
+StatefulPlain.fst
+
+make: *** [Makefile:240: Nonce.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+make: *** [Makefile:240: RSAKey.fst-ver] Error 1
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.hyperheap -> platform.error 
+A DOT-format graph has been dumped in the current directory as dep.graph
+make: *** [Makefile:240: CommonDH.fst-ver] Error 1
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+Warning: recursive dependency on module fstar.list.tot
+make: *** [Makefile:240: DHGroup.fst-ver] Error 1
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.hyperheap -> platform.error 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module LHAEPlain \
+LHAEPlain.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.hyperheap -> platform.error 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.hyperheap -> platform.error 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+make: *** [Makefile:240: TLSConstants.fst-ver] Error 1
+--verify_module AEAD_GCM \
+AEAD_GCM.fst
+make: *** [Makefile:240: ECGroup.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> tlsconstants -> hashing 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC \
+MAC.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> tlsconstants -> hashing 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+make: *** [Makefile:240: Hashing.fst-ver] Error 1
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: HashMAC.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.hyperheap -> platform.error 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StatefulLHAE \
+StatefulLHAE.fst
+make: *** [Makefile:240: Cert.fst-ver] Error 1
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Record \
+Record.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.hyperheap -> platform.error 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: PMS.fst-ver] Error 1
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC_SHA256 \
+MAC_SHA256.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC_SHA1 \
+MAC_SHA1.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> tlsconstants -> hashing 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StAE \
+StAE.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:240: Signature.fst-ver] Error 1
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module KeySchedule \
+KeySchedule.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamDeltas \
+StreamDeltas.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> platform.bytes -> corecrypto -> nonce 
+A DOT-format graph has been dumped in the current directory as dep.graph
+make: *** [Makefile:240: TLSInfo.fst-ver] Error 1
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module HKDF \
+HKDF.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Epochs \
+Epochs.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Connection \
+Connection.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> platform.bytes -> corecrypto -> nonce 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module ConnInvariant \
+ConnInvariant.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> platform.bytes -> corecrypto -> nonce 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+make: *** [Makefile:240: TLSExtensions.fst-ver] Error 1
+Hint: cat dep.graph | grep -v _ | grep -v prims
+make: *** [Makefile:240: IdNonce.fst-ver] Error 1
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module FFI \
+FFI.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLS \
+TLS.fst
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.hyperheap -> platform.error 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: HKDF.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> tlsconstants -> hashing 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+Warning: recursive dependency on module fstar.list.tot
+make: *** [Makefile:240: MAC.fst-ver] Error 1
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> tlsconstants -> hashing 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> tlsconstants -> hashing 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+
+make: *** [Makefile:240: MAC_SHA256.fst-ver] Error 1
+make: *** [Makefile:240: MAC_SHA1.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+Warning: recursive dependency on module fstar.list.tot
+make: *** [Makefile:240: StatefulPlain.fst-ver] Error 1
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: Range.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: DataStream.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+
+make: *** [Makefile:240: StreamPlain.fst-ver] Error 1
+make: *** [Makefile:240: Content.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: StatefulLHAE.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: StreamAE.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+make: *** [Makefile:240: AEAD_GCM.fst-ver] Error 1
+Hint: cat dep.graph | grep -v _ | grep -v prims
+Warning: recursive dependency on module fstar.list.tot
+make: *** [Makefile:240: Alert.fst-ver] Error 1
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+
+make: *** [Makefile:240: MasterSecret.fst-ver] Error 1
+make: *** [Makefile:240: Record.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: KeySchedule.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: LHAEPlain.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: StreamDeltas.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: StAE.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: Epochs.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: TLS.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: ConnInvariant.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: FFI.fst-ver] Error 1
+Warning: recursive dependency on module fstar.list.tot
+The cycle is: fstar.list.tot.properties -> fstar.list.tot -> fstar.seq.properties -> fstar.seq -> fstar.uint -> fstar.uint32 -> fstar.int16 
+A DOT-format graph has been dumped in the current directory as dep.graph
+With GraphViz installed, try: fdp -Tpng -odep.png dep.graph
+Hint: cat dep.graph | grep -v _ | grep -v prims
+
+make: *** [Makefile:240: Connection.fst-ver] Error 1
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/2/s/src/tls'
+make: Target 'all-ver' not remade because of errors.

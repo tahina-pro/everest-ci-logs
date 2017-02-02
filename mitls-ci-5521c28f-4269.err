@@ -1,0 +1,76 @@
+From https://github.com/FStarLang/FStar
+3e1250b..dc0ca3f  aseem_positivity -> origin/aseem_positivity
+* [new branch]      aseem_run_proc_stderr_fix -> origin/aseem_run_proc_stderr_fix
+* [new branch]      c_ppdev_initial -> origin/c_ppdev_initial
+15dfdca..1dbba6f  catalin_private -> origin/catalin_private
+* [new branch]      jk_lowlevel -> origin/jk_lowlevel
+5a76970..d9b94c1  jk_seq_createL -> origin/jk_seq_createL
+9aa4213..ccd74e4  konrad_hye_example -> origin/konrad_hye_example
+b1b32b4..5d58a28  kyod_reification_examples -> origin/kyod_reification_examples
+782cb8f..bd0278d  master     -> origin/master
+7bc255e..2bc12c1  nik_private -> origin/nik_private
+b42e672..2bc298e  pp_jonathan_kenji -> origin/pp_jonathan_kenji
+16d25bb..9c1baf6  protz_failed_attempt_at_approximate_interactive_mode -> origin/protz_failed_attempt_at_approximate_interactive_mode
+db8ae71..fea7cde  taramana_include_seq -> origin/taramana_include_seq
+* [new branch]      taramana_include_seq_lists -> origin/taramana_include_seq_lists
+* [new branch]      taramana_include_seq_lists_merge -> origin/taramana_include_seq_lists_merge
+6645e7d..31f8420  taramana_lists -> origin/taramana_lists
+7cd31e5..65d4f5f  vdum_pprint_ocaml -> origin/vdum_pprint_ocaml
+* [new branch]      vdum_resugar -> origin/vdum_resugar
+File "../parser/parse.mly", line 83, characters 7-11:
+Warning: the token KIND is unused.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3378, characters 3-53:
+Error: This expression has type
+FStar_Ident.lident Prims.list = FStar_Ident.lident list
+but an expression was expected of type 'a * 'b
+make: *** [Makefile:94: fstar.exe] Error 2
+make: *** [Makefile:240: MonotoneMap.fst-ver] Error 1
+make: *** [Makefile:240: TLSError.fst-ver] Error 1
+make: *** [Makefile:240: Flags.fst-ver] Error 1
+make: *** [Makefile:240: Transport.fst-ver] Error 1
+make: *** [Makefile:240: Nonce.fst-ver] Error 1
+make: *** [Makefile:240: RSAKey.fst-ver] Error 1
+make: *** [Makefile:240: CommonDH.fst-ver] Error 1
+make: *** [Makefile:240: DHGroup.fst-ver] Error 1
+make: *** [Makefile:240: TLSConstants.fst-ver] Error 1
+make: *** [Makefile:240: ECGroup.fst-ver] Error 1
+make: *** [Makefile:240: Hashing.fst-ver] Error 1
+make: *** [Makefile:240: HashMAC.fst-ver] Error 1
+make: *** [Makefile:240: Cert.fst-ver] Error 1
+make: *** [Makefile:240: PMS.fst-ver] Error 1
+make: *** [Makefile:240: Signature.fst-ver] Error 1
+make: *** [Makefile:240: TLSInfo.fst-ver] Error 1
+make: *** [Makefile:240: TLSExtensions.fst-ver] Error 1
+make: *** [Makefile:240: IdNonce.fst-ver] Error 1
+make: *** [Makefile:240: HKDF.fst-ver] Error 1
+make: *** [Makefile:240: MAC.fst-ver] Error 1
+make: *** [Makefile:240: MAC_SHA256.fst-ver] Error 1
+make: *** [Makefile:240: MAC_SHA1.fst-ver] Error 1
+make: *** [Makefile:240: StatefulPlain.fst-ver] Error 1
+make: *** [Makefile:240: Range.fst-ver] Error 1
+make: *** [Makefile:240: DataStream.fst-ver] Error 1
+make: *** [Makefile:240: StreamPlain.fst-ver] Error 1
+make: *** [Makefile:240: Content.fst-ver] Error 1
+make: *** [Makefile:240: StatefulLHAE.fst-ver] Error 1
+make: *** [Makefile:240: StreamAE.fst-ver] Error 1
+make: *** [Makefile:240: AEAD_GCM.fst-ver] Error 1
+make: *** [Makefile:240: Alert.fst-ver] Error 1
+make: *** [Makefile:240: MasterSecret.fst-ver] Error 1
+make: *** [Makefile:240: Record.fst-ver] Error 1
+make: *** [Makefile:240: KeySchedule.fst-ver] Error 1
+make: *** [Makefile:240: LHAEPlain.fst-ver] Error 1
+make: *** [Makefile:240: StreamDeltas.fst-ver] Error 1
+make: *** [Makefile:240: StAE.fst-ver] Error 1
+make: *** [Makefile:240: Epochs.fst-ver] Error 1
+make: *** [Makefile:240: TLS.fst-ver] Error 1
+make: *** [Makefile:240: ConnInvariant.fst-ver] Error 1
+make: *** [Makefile:240: FFI.fst-ver] Error 1
+make: *** [Makefile:240: Connection.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
