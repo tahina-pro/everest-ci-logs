@@ -1,0 +1,42 @@
+From https://github.com/FStarLang/FStar
+* [new branch]      aseem_positivity_cleanup -> origin/aseem_positivity_cleanup
+1581038..1519fb0  master     -> origin/master
+* [new branch]      taramana_explicit_fstar_all -> origin/taramana_explicit_fstar_all
+File "../parser/parse.mly", line 83, characters 7-11:
+Warning: the token KIND is unused.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Warning: Unable to open hints file: C:\Build\Agent\_work\36\s\src\tls\Flags.fst.hints; ran without hints
+Unexpected error
+Sys_error("Flags.fst: No such file or directory")
+Raised by primitive operation at file "pervasives.ml", line 335, characters 20-46
+Called from file "digest.ml", line 36, characters 11-31
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 122, characters 29-69
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 166, characters 4-29
+Called from file "src/ocaml-output/FStar_Universal.ml", line 288, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 324, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 365, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+make: *** [Makefile:240: Flags.fst-ver] Error 1
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
+make: Target 'all-ver' not remade because of errors.
