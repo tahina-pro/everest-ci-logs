@@ -1,0 +1,32 @@
+From https://github.com/FStarLang/FStar
+* [new branch]      aseem_positivity_cleanup -> origin/aseem_positivity_cleanup
+bd0278d..1581038  master     -> origin/master
+* [new branch]      taramana_explicit_fstar_all -> origin/taramana_explicit_fstar_all
+fatal: ambiguous argument 'ae99535': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+File "../parser/parse.mly", line 83, characters 7-11:
+Warning: the token KIND is unused.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(48,0-49,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(21,0-22,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(133,0-133,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(106,0-106,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(181,0-181,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(35,0-36,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(91,0-92,64): (Warning) Top-level let-bindings must be total; this term may have effects
