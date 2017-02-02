@@ -1,0 +1,11 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+
+Unhandled Exception: System.Exception: Impossible: Too many pops
+at FStar.ToSyntax.Env.pop() in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.Env.fs:line 917
+at FStar.Interactive.check_frag(env dsenv, env env, FSharpOption`1 curmod, input_frag text) in C:\Build\Agent\_work\1\s\src\fstar\FStar.Interactive.fs:line 117
+at FStar.Tests.Pars.pars_and_tc_fragment(String s) in C:\Build\Agent\_work\1\s\src\tests\pars.fs:line 144
+at FStar.Tests.Norm.run_all() in C:\Build\Agent\_work\1\s\src\tests\norm.fs:line 100
+at FStar.Tests.Test.main(String[] argv) in C:\Build\Agent\_work\1\s\src\tests\test.fs:line 22
+make[1]: *** [Makefile:243: fsharp-regressions] Error 127
+make: *** [Makefile:230: utest] Error 2
