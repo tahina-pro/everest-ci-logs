@@ -1,0 +1,60 @@
+From https://github.com/FStarLang/FStar
+6fb14d1..dc0ca3f  aseem_positivity -> origin/aseem_positivity
+* [new branch]      aseem_positivity_cleanup -> origin/aseem_positivity_cleanup
+* [new branch]      beurdouche_docker -> origin/beurdouche_docker
+* [new branch]      c_ppdev_initial -> origin/c_ppdev_initial
+* [new branch]      c_valedev_initial -> origin/c_valedev_initial
+4308888..1dbba6f  catalin_private -> origin/catalin_private
+* [new branch]      cwinter_checked_hints -> origin/cwinter_checked_hints
+* [new branch]      cwinter_fsharp_hints -> origin/cwinter_fsharp_hints
+* [new branch]      cwinter_smt_proofs -> origin/cwinter_smt_proofs
+6407523..9ab7086  konrad_hye_example -> origin/konrad_hye_example
+ac40bdb..da2d65f  kyod_reification_examples -> origin/kyod_reification_examples
++ 0abf0ee...6908e15 kyod_tmp   -> origin/kyod_tmp  (forced update)
+831efda..6908e15  master     -> origin/master
+61e7443..1581038  nik_private -> origin/nik_private
+71e6e86..4f9c720  protz_     -> origin/protz_
+16d25bb..a16ccf7  protz_failed_attempt_at_approximate_interactive_mode -> origin/protz_failed_attempt_at_approximate_interactive_mode
+* [new branch]      taramana_explicit_fstar_all -> origin/taramana_explicit_fstar_all
+* [new branch]      taramana_include_seq_lists_merge -> origin/taramana_include_seq_lists_merge
+* [new branch]      v0.9.4.0   -> origin/v0.9.4.0
+65d4f5f..6031a2a  vdum_pprint_ocaml -> origin/vdum_pprint_ocaml
+* [new tag]         V0.9.4.0   -> V0.9.4.0
+File "../parser/parse.mly", line 83, characters 7-11:
+Warning: the token KIND is unused.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.OpenSSL.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.Spec.fst.hints; ran without hints
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.CRF.fst.hints; ran without hints
+.\Hashing.CRF.fst(28,8-28,80): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(108,0-108,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(183,0-183,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MAC_SHA256.fst(66,36-66,42): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(69,34-69,48))
+.\MAC_SHA256.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA256 (96031 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA256.fst-ver] Error 1
+.\MAC_SHA1.fst(60,4-60,53): (Error) could not prove post-condition
+.\MAC_SHA1.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA1 (99857 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA1.fst-ver] Error 1
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
+make: Target 'all-ver' not remade because of errors.
