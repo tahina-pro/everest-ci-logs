@@ -1,0 +1,74 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/37/s
+About to run: hacl_verify
+BUILD_SOURCEBRANCHNAME: restructure
+BUILD_DEFINITIONNAME: Hacl*-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+cp parse.mly ../parser/ml/
+echo "%{" > ../parser/parse.fsy
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# We are opening the same module twice but we need these modules
+# open for the definition of tokens
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+# TODO: create a proper OCamlbuild rule for this production so that
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+# No parallelism done
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+ocamlbuild -I src -I lib -I parser -use-menhir -use-ocamlfind -classic-display -menhir "menhir --infer --explain" Kremlin.native Tests.native
+ln -sf Kremlin.native krml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/crypto_proofs'
+Makefile:6: ../../FStar/ulib/ml/Makefile.include: No such file or directory
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/crypto_proofs'
+make: *** No rule to make target '../../FStar/ulib/ml/Makefile.include'.  Stop.
