@@ -1,0 +1,303 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/37/s
+About to run: hacl_verify
+BUILD_SOURCEBRANCHNAME: restructure
+BUILD_DEFINITIONNAME: Hacl*-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+cp parse.mly ../parser/ml/
+echo "%{" > ../parser/parse.fsy
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# We are opening the same module twice but we need these modules
+# open for the definition of tokens
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+# TODO: create a proper OCamlbuild rule for this production so that
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+echo 'let version = "0.9.4.0"' > FStar_Version.ml
+echo 'let platform = "Windows_x64"' >> FStar_Version.ml
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+echo 'let date = "2017-02-03T12:45:46-08:00"' >> FStar_Version.ml
+echo 'let commit= "b3175ff (dirty)"' >> FStar_Version.ml
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Errors.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_AST.cmx src/ocaml-output/FStar_Parser_AST.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Parse.cmx src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_ParseIt.cmx src/parser/ml/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Err.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Parser_ToDocument.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Dependencies.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_Syntax_MutRecTy.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmx src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Indent.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Main.cmx src/ocaml-output/FStar_Main.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/basic/ml -o src/fstar/ml/main.cmx src/fstar/ml/main.ml
+''ocamlfind ocamlopt -linkpkg -thread -package batteries -package zarith -package yojson -package pprint src/ocaml-output/bootlibs/FStar_List.cmx src/ocaml-output/bootlibs/MkPrims.cmx src/ocaml-output/bootlibs/prims.cmx src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Platform.cmx src/ocaml-output/bootlibs/FStar_Char.cmx src/ocaml-output/bootlibs/FStar_Float.cmx src/ocaml-output/bootlibs/FStar_Int16.cmx src/ocaml-output/bootlibs/FStar_Int32.cmx src/ocaml-output/bootlibs/FStar_Int64.cmx src/ocaml-output/bootlibs/FStar_Int8.cmx src/ocaml-output/bootlibs/FStar_UInt16.cmx src/ocaml-output/bootlibs/FStar_UInt8.cmx src/ocaml-output/bootlibs/FStar_BaseTypes.cmx src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Unionfind.cmx src/ocaml-output/bootlibs/FStar_All.cmx src/ocaml-output/bootlibs/FStar_ST.cmx src/ocaml-output/bootlibs/FStar_String.cmx src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/bootlibs/FStar_Option.cmx src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Parser_AST.cmx src/parser/ml/FStar_Parser_Util.cmx src/ocaml-output/FStar_Parser_Parse.cmx src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Fsdoc_Generator.cmx src/prettyprint/ml/FStar_Pprint.cmx src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Main.cmx src/fstar/ml/main.cmx -o src/fstar/ml/main.native
+# Parallel statistics: { count(total): 5(231), max: 5, min: 2, average(total): 2.800(1.039) }
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+ocamlbuild -I src -I lib -I parser -use-menhir -use-ocamlfind -classic-display -menhir "menhir --infer --explain" Kremlin.native Tests.native
+ln -sf Kremlin.native krml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/crypto_proofs'
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Buffer.Utils \
+utils/Buffer.Utils.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Bytes \
+utils/Crypto.Symmetric.Bytes.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.GF128 \
+primitives/Crypto.Symmetric.GF128.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.AES \
+primitives/Crypto.Symmetric.AES.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.AES128 \
+primitives/Crypto.Symmetric.AES128.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Cipher \
+prf/Crypto.Symmetric.Cipher.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.PRF \
+prf/Crypto.Symmetric.PRF.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.MAC \
+uf1cma/Crypto.Symmetric.MAC.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.UF1CMA \
+uf1cma/Crypto.Symmetric.UF1CMA.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt.Invariant \
+aead/Crypto.AEAD.Encrypt.Invariant.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encoding \
+aead/Crypto.AEAD.Encoding.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Invariant \
+aead/Crypto.AEAD.Invariant.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.BufferUtils \
+aead/Crypto.AEAD.BufferUtils.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Enxor.Invariant \
+aead/Crypto.AEAD.Enxor.Invariant.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.CMA \
+aead/Crypto.AEAD.Wrappers.CMA.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.Encoding \
+aead/Crypto.AEAD.Wrappers.Encoding.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.EnxorDexor \
+aead/Crypto.AEAD.EnxorDexor.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.PRF \
+aead/Crypto.AEAD.Wrappers.PRF.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Decrypt \
+aead/Crypto.AEAD.Decrypt.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.MAC_Wrapper.Invariant \
+aead/Crypto.AEAD.MAC_Wrapper.Invariant.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt.Ideal.Invariant \
+aead/Crypto.AEAD.Encrypt.Ideal.Invariant.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt \
+aead/Crypto.AEAD.Encrypt.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD \
+aead/Crypto.AEAD.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Plain \
+aead/Crypto.Plain.fst
+Verified module: Crypto.Plain (26529 milliseconds)
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\aead\Crypto.Plain.fst.hints; ran without hints
+All verification conditions discharged successfully
+Verified module: Buffer.Utils (29530 milliseconds)
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\utils\Buffer.Utils.fst.hints; ran without hints
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD (2348 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Decrypt (17466 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.GF128 (58740 milliseconds)
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\primitives\Crypto.Symmetric.GF128.fst.hints; ran without hints
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.Cipher (51882 milliseconds)
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\prf\Crypto.Symmetric.Cipher.fst.hints; ran without hints
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Wrappers.PRF (32443 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Encrypt.Ideal.Invariant (52215 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.AES (100468 milliseconds)
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\primitives\Crypto.Symmetric.AES.fst.hints; ran without hints
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.AES128 (110605 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\primitives\Crypto.Symmetric.AES128.fst.hints; ran without hints
+Verified module: Crypto.AEAD.Wrappers.Encoding (122311 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.BufferUtils (200711 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Enxor.Invariant (167782 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Encrypt.Invariant (183929 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.MAC_Wrapper.Invariant (184828 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Invariant (344626 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.MAC (399565 milliseconds)
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\uf1cma\Crypto.Symmetric.MAC.fst.hints; ran without hints
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.EnxorDexor (499345 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.PRF (532260 milliseconds)
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\prf\Crypto.Symmetric.PRF.fst.hints; ran without hints
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.Bytes (605101 milliseconds)
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\utils\Crypto.Symmetric.Bytes.fst.hints; ran without hints
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Encoding (683616 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.UF1CMA (817616 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Wrappers.CMA (1005990 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Encrypt (1059667 milliseconds)
+All verification conditions discharged successfully
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/crypto_proofs'
