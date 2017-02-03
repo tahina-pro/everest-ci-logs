@@ -1,0 +1,37 @@
+From https://github.com/FStarLang/FStar
+85c7f12..3b06e1f  aseem_positivity_cleanup -> origin/aseem_positivity_cleanup
+* [new branch]      beurdouche_docker -> origin/beurdouche_docker
+* [new branch]      c_valedev_initial -> origin/c_valedev_initial
+* [new branch]      cwinter_checked_hints -> origin/cwinter_checked_hints
+* [new branch]      cwinter_fsharp_hints -> origin/cwinter_fsharp_hints
+* [new branch]      cwinter_smt_proofs -> origin/cwinter_smt_proofs
+ccd74e4..7906465  konrad_hye_example -> origin/konrad_hye_example
+5d58a28..da2d65f  kyod_reification_examples -> origin/kyod_reification_examples
++ 0abf0ee...6908e15 kyod_tmp   -> origin/kyod_tmp  (forced update)
+1581038..803422c  master     -> origin/master
+71e6e86..5898ada  protz_     -> origin/protz_
+3f105e1..a16ccf7  protz_failed_attempt_at_approximate_interactive_mode -> origin/protz_failed_attempt_at_approximate_interactive_mode
+* [new branch]      v0.9.4.0   -> origin/v0.9.4.0
+65d4f5f..621977c  vdum_pprint_ocaml -> origin/vdum_pprint_ocaml
+* [new tag]         V0.9.4.0   -> V0.9.4.0
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\ideal-flags\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
