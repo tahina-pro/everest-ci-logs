@@ -1,0 +1,293 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/37/s
+About to run: hacl_verify
+BUILD_SOURCEBRANCHNAME: restructure
+BUILD_DEFINITIONNAME: Hacl*-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+# No parallelism done
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+ocamlbuild -I src -I lib -I parser -use-menhir -use-ocamlfind -classic-display -menhir "menhir --infer --explain" Kremlin.native Tests.native
+ln -sf Kremlin.native krml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/crypto_proofs'
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Buffer.Utils \
+utils/Buffer.Utils.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Bytes \
+utils/Crypto.Symmetric.Bytes.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.GF128 \
+primitives/Crypto.Symmetric.GF128.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.AES \
+primitives/Crypto.Symmetric.AES.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.AES128 \
+primitives/Crypto.Symmetric.AES128.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Cipher \
+prf/Crypto.Symmetric.Cipher.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.PRF \
+prf/Crypto.Symmetric.PRF.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.MAC \
+uf1cma/Crypto.Symmetric.MAC.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.UF1CMA \
+uf1cma/Crypto.Symmetric.UF1CMA.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt.Invariant \
+aead/Crypto.AEAD.Encrypt.Invariant.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encoding \
+aead/Crypto.AEAD.Encoding.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Invariant \
+aead/Crypto.AEAD.Invariant.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.BufferUtils \
+aead/Crypto.AEAD.BufferUtils.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Enxor.Invariant \
+aead/Crypto.AEAD.Enxor.Invariant.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.CMA \
+aead/Crypto.AEAD.Wrappers.CMA.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.Encoding \
+aead/Crypto.AEAD.Wrappers.Encoding.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.EnxorDexor \
+aead/Crypto.AEAD.EnxorDexor.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.PRF \
+aead/Crypto.AEAD.Wrappers.PRF.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Decrypt \
+aead/Crypto.AEAD.Decrypt.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.MAC_Wrapper.Invariant \
+aead/Crypto.AEAD.MAC_Wrapper.Invariant.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt.Ideal.Invariant \
+aead/Crypto.AEAD.Encrypt.Ideal.Invariant.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt \
+aead/Crypto.AEAD.Encrypt.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD \
+aead/Crypto.AEAD.fst
+/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent/_work/37/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Plain \
+aead/Crypto.Plain.fst
+.\utils\Buffer.Utils.fst(184,28-184,32) : (Error) Identifier not found: [Seq.cons]
+Module Seq resolved into FStar.Seq, definition cons not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: utils/Buffer.Utils.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.Plain.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: primitives/Crypto.Symmetric.GF128.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: utils/Crypto.Symmetric.Bytes.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: prf/Crypto.Symmetric.Cipher.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: prf/Crypto.Symmetric.PRF.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: uf1cma/Crypto.Symmetric.UF1CMA.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.AEAD.Encrypt.Invariant.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.AEAD.Encoding.fst-ver] Error 1 (ignored)
+make: [Makefile:140: aead/Crypto.AEAD.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: uf1cma/Crypto.Symmetric.MAC.fst-ver] Error 1 (ignored)
+make: [Makefile:140: aead/Crypto.AEAD.Invariant.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.AEAD.Wrappers.Encoding.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.AEAD.Enxor.Invariant.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.AEAD.Wrappers.CMA.fst-ver] Error 1 (ignored)
+make: [Makefile:140: aead/Crypto.AEAD.Wrappers.PRF.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.AEAD.MAC_Wrapper.Invariant.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.AEAD.Decrypt.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.AEAD.Encrypt.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.AEAD.EnxorDexor.fst-ver] Error 1 (ignored)
+C:\Build\Agent\_work\37\s\code\poly1305\FStar.Endianness.fst(41,13-41,17) : (Error) Identifier not found: [head]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: [Makefile:140: aead/Crypto.AEAD.Encrypt.Ideal.Invariant.fst-ver] Error 1 (ignored)
+Verified module: Crypto.Symmetric.AES (76366 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\primitives\Crypto.Symmetric.AES.fst.hints; ran without hints
+Verified module: Crypto.Symmetric.AES128 (96920 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\crypto_proofs\primitives\Crypto.Symmetric.AES128.fst.hints; ran without hints
+Verified module: Crypto.AEAD.BufferUtils (130057 milliseconds)
+All verification conditions discharged successfully
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/crypto_proofs'
