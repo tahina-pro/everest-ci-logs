@@ -1,0 +1,398 @@
+This is /home/darrenge/everest-ci/ci
+Working directory: /home/darrenge/everest
+About to run: scons.bat -C vale -j 4
+BUILD_SOURCEBRANCHNAME:
+BUILD_DEFINITIONNAME:
+scons: Entering directory `C:\cygwin\home\darrenge\everest\vale'
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+parallel (-j) builds may not work reliably with open Python files.
+File "C:\Python27\Scripts\scons.py", line 199, in <module>
+Copy file(s): "tools\Dafny\z3.exe" to "bin\z3.exe"
+csc -t:library -out:bin\DafnyInterface.dll tools\Vale\DafnyInterface\Source\DafnyInterface\DafnyDriver.cs tools\Vale\DafnyInterface\Source\DafnyInterface\Properties\AssemblyInfo.cs -r:tools\Dafny\BoogieAbsInt.dll -r:tools\Dafny\BoogieConcurrency.dll -r:tools\Dafny\BoogieCore.dll -r:tools\Dafny\BoogieExecutionEngine.dll -r:tools\Dafny\BoogieParserHelper.dll -r:tools\Dafny\BoogieVCGeneration.dll -r:tools\Dafny\Dafny.exe -r:tools\Dafny\DafnyPipeline.dll -r:tools\Dafny\Provers.SMTLib.dll
+tools\FsLexYacc\FsLexYacc.6.1.0\build\fsyacc.exe --module "Parse" tools\Vale\src\parse.fsy -o obj\Vale\parse.fs
+tools\FsLexYacc\FsLexYacc.6.1.0\build\fslex.exe tools\Vale\src\lex.fsl -o obj\Vale\lex.fs
+Copy file(s): "tools\Dafny\Provers.SMTLib.dll" to "bin\Provers.SMTLib.dll"
+Copy file(s): "tools\Dafny\DafnyRuntime.cs" to "bin\DafnyRuntime.cs"
+Copy file(s): "tools\Dafny\DafnyPrelude.bpl" to "bin\DafnyPrelude.bpl"
+Copy file(s): "tools\Dafny\Dafny.exe" to "bin\Dafny.exe"
+Copy file(s): "tools\Dafny\DafnyPipeline.dll" to "bin\DafnyPipeline.dll"
+compiling to dfas (can take a while...)
+building tables
+Copy file(s): "tools\Dafny\BoogieVCGeneration.dll" to "bin\BoogieVCGeneration.dll"
+Copy file(s): "tools\Dafny\BoogieVCExpr.dll" to "bin\BoogieVCExpr.dll"
+computing first function...Copy file(s): "tools\Dafny\BoogieParserHelper.dll" to "bin\BoogieParserHelper.dll"
+Copy file(s): "tools\Dafny\BoogieModel.dll" to "bin\BoogieModel.dll"
+time: 00:00:00.0481880
+building kernels...Copy file(s): "tools\Dafny\BoogieHoudini.dll" to "bin\BoogieHoudini.dll"
+Microsoft (R) Visual C# Compiler version 4.6.1586.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+Copy file(s): "tools\Dafny\BoogieGraph.dll" to "bin\BoogieGraph.dll"
+time: 00:00:00.0775290
+building kernel table...tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\types.s.dfy > obj\lib\util\types.s.tmp
+Copy file(s): "tools\Dafny\BoogieExecutionEngine.dll" to "bin\BoogieExecutionEngine.dll"
+time: 00:00:00.0202846
+computing lookahead relations....Copy file(s): "tools\Dafny\BoogieDoomed.dll" to "bin\BoogieDoomed.dll"
+.........................................Copy file(s): "tools\Dafny\BoogieCore.dll" to "bin\BoogieCore.dll"
+............................................Copy file(s): "tools\Dafny\BoogieConcurrency.dll" to "bin\BoogieConcurrency.dll"
+..............Copy file(s): "tools\Dafny\BoogieCodeContractsExtender.dll" to "bin\BoogieCodeContractsExtender.dll"
+..Copy file(s): "tools\Dafny\BoogieBasetypes.dll" to "bin\BoogieBasetypes.dll"
+.................Copy file(s): "tools\Dafny\BoogieAbsInt.dll" to "bin\BoogieAbsInt.dll"
+..............................................................................................tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\collections\Seqs.s.dfy > obj\lib\collections\Seqs.s.tmp
+.........................................................................................................................................................................................................................................................time: 00:00:00.4060853
+building lookahead table...time: 00:00:00.0460193
+building action table...time: 00:00:00.4134766
+building goto table...time: 00:00:00.0359127
+returning tables.
+462 states
+55 nonterminals
+95 terminals
+207 productions
+#rows in action table: 462
+398 states
+writing output
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\power2.s.dfy > obj\lib\math\power2.s.tmp
+C:\PROGRA~2\MIA713~1\F#\4.0\FRAMEW~1\v4.0\fsc.exe -g --platform:x86 --standalone --mlcompatibility -O tools\Vale\src\ast.fs tools\Vale\src\ast_util.fs tools\Vale\src\parse_util.fs obj\Vale\parse.fs obj\Vale\lex.fs tools\Vale\src\transform.fs tools\Vale\src\emit_common.fs tools\Vale\src\emit_dafny_text.fs tools\Vale\src\emit_dafny_direct.fs tools\Vale\src\emit_fstar_text.fs tools\Vale\src\emit_vale_text.fs tools\Vale\src\main.fs -o bin\vale.exe -r tools\Dafny\BoogieAbsInt.dll -r tools\Dafny\BoogieBasetypes.dll -r tools\Dafny\BoogieCodeContractsExtender.dll -r tools\Dafny\BoogieConcurrency.dll -r tools\Dafny\BoogieCore.dll -r tools\Dafny\BoogieDoomed.dll -r tools\Dafny\BoogieExecutionEngine.dll -r tools\Dafny\BoogieGraph.dll -r tools\Dafny\BoogieHoudini.dll -r tools\Dafny\BoogieModel.dll -r tools\Dafny\BoogieParserHelper.dll -r tools\Dafny\BoogieVCExpr.dll -r tools\Dafny\BoogieVCGeneration.dll -r tools\Dafny\DafnyPipeline.dll -r tools\Dafny\Dafny.exe -r bin\DafnyInterface.dll -r tools\Dafny\Newtonsoft.Json.dll -r tools\FsLexYacc\FsLexYacc.Runtime.6.1.0\lib\net40\FsLexYacc.Runtime.dll
+Microsoft (R) F# Compiler version 14.0.23413.0
+Copyright (c) Microsoft Corporation. All Rights Reserved.
+Copy file(s): "obj\lib\collections\Seqs.s.tmp" to "obj\lib\collections\Seqs.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\power.s.dfy > obj\lib\math\power.s.tmp
+Copy file(s): "obj\lib\math\power2.s.tmp" to "obj\lib\math\power2.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace src\lib\math\mul_nonlinear.i.dfy > obj\lib\math\mul_nonlinear.i.tmp
+Copy file(s): "obj\lib\util\types.s.tmp" to "obj\lib\util\types.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\operations.s.dfy > obj\lib\util\operations.s.tmp
+Copy file(s): "obj\lib\math\power.s.tmp" to "obj\lib\math\power.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\words_and_bytes.s.dfy > obj\lib\util\words_and_bytes.s.tmp
+Copy file(s): "obj\lib\math\mul_nonlinear.i.tmp" to "obj\lib\math\mul_nonlinear.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mul_auto_proofs.i.dfy > obj\lib\math\mul_auto_proofs.i.tmp
+Copy file(s): "obj\lib\util\words_and_bytes.s.tmp" to "obj\lib\util\words_and_bytes.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\div_def.i.dfy > obj\lib\math\div_def.i.tmp
+Copy file(s): "obj\lib\math\mul_auto_proofs.i.tmp" to "obj\lib\math\mul_auto_proofs.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mul_auto.i.dfy > obj\lib\math\mul_auto.i.tmp
+Copy file(s): "obj\lib\util\operations.s.tmp" to "obj\lib\util\operations.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\aes.s.dfy > obj\crypto\aes\aes.s.tmp
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\aes\aes.vad -out obj\crypto\aes\aes.gen.dfy
+Copy file(s): "obj\lib\math\div_def.i.tmp" to "obj\lib\math\div_def.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith /proverOpt:OPTIMIZE_FOR_BV=true src\lib\util\operations.i.dfy > obj\lib\util\operations.i.tmp
+// parsing .\src\crypto\aes\aes.vad
+Copy file(s): "obj\lib\math\mul_auto.i.tmp" to "obj\lib\math\mul_auto.i.vdfy"
+// parsing .\src\crypto\aes\../../arch/x86/decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mul.i.dfy > obj\lib\math\mul.i.tmp
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\arch\x86\decls.vad -out obj\arch\x86\decls.gen.dfy
+// parsing .\src\arch\x86\decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\dafny_wrappers.i.dfy > obj\lib\util\dafny_wrappers.i.tmp
+Copy file(s): "obj\lib\util\dafny_wrappers.i.tmp" to "obj\lib\util\dafny_wrappers.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace src\lib\math\div_nonlinear.i.dfy > obj\lib\math\div_nonlinear.i.tmp
+Copy file(s): "obj\lib\math\div_nonlinear.i.tmp" to "obj\lib\math\div_nonlinear.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\collections\Seqs.i.dfy > obj\lib\collections\Seqs.i.tmp
+Copy file(s): "obj\lib\math\mul.i.tmp" to "obj\lib\math\mul.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\div_boogie.i.dfy > obj\lib\math\div_boogie.i.tmp
+Copy file(s): "obj\lib\math\div_boogie.i.tmp" to "obj\lib\math\div_boogie.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mod_auto_proofs.i.dfy > obj\lib\math\mod_auto_proofs.i.tmp
+Copy file(s): "obj\lib\math\mod_auto_proofs.i.tmp" to "obj\lib\math\mod_auto_proofs.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mod_auto.i.dfy > obj\lib\math\mod_auto.i.tmp
+Copy file(s): "obj\crypto\aes\aes.s.tmp" to "obj\crypto\aes\aes.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x86\def.s.dfy > obj\arch\x86\def.s.tmp
+Copy file(s): "obj\lib\collections\Seqs.i.tmp" to "obj\lib\collections\Seqs.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\power.i.dfy > obj\lib\math\power.i.tmp
+Copy file(s): "obj\lib\util\operations.i.tmp" to "obj\lib\util\operations.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\Io.s.dfy > obj\lib\util\Io.s.tmp
+Copy file(s): "obj\lib\util\Io.s.tmp" to "obj\lib\util\Io.s.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\arch\arm\decls.vad -out obj\arch\arm\decls.gen.dfy
+Copy file(s): "obj\lib\math\mod_auto.i.tmp" to "obj\lib\math\mod_auto.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\div_auto_proofs.i.dfy > obj\lib\math\div_auto_proofs.i.tmp
+// parsing .\src\arch\arm\decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\arm\def.s.dfy > obj\arch\arm\def.s.tmp
+Copy file(s): "obj\lib\math\div_auto_proofs.i.tmp" to "obj\lib\math\div_auto_proofs.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\div_auto.i.dfy > obj\lib\math\div_auto.i.tmp
+Copy file(s): "obj\lib\math\power.i.tmp" to "obj\lib\math\power.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace src\arch\arm\nlarith.s.dfy > obj\arch\arm\nlarith.s.tmp
+Copy file(s): "obj\arch\arm\nlarith.s.tmp" to "obj\arch\arm\nlarith.s.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\arch\x64\decls.vad -out obj\arch\x64\decls.gen.dfy
+// parsing .\src\arch\x64\decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\def.s.dfy > obj\arch\x64\def.s.tmp
+Copy file(s): "obj\lib\math\div_auto.i.tmp" to "obj\lib\math\div_auto.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith /timeLimit:60 src\lib\math\div.i.dfy > obj\lib\math\div.i.tmp
+Copy file(s): "obj\arch\arm\def.s.tmp" to "obj\arch\arm\def.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\arm\leakage.s.dfy > obj\arch\arm\leakage.s.tmp
+Copy file(s): "obj\arch\arm\leakage.s.tmp" to "obj\arch\arm\leakage.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\arm\leakage-helpers.i.dfy > obj\arch\arm\leakage-helpers.i.tmp
+Copy file(s): "obj\lib\math\div.i.tmp" to "obj\lib\math\div.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\power2.i.dfy > obj\lib\math\power2.i.tmp
+Copy file(s): "obj\arch\x86\def.s.tmp" to "obj\arch\x86\def.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x86\leakage.s.dfy > obj\arch\x86\leakage.s.tmp
+Copy file(s): "obj\lib\math\power2.i.tmp" to "obj\lib\math\power2.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\words_and_bytes.i.dfy > obj\lib\util\words_and_bytes.i.tmp
+Copy file(s): "obj\arch\x86\leakage.s.tmp" to "obj\arch\x86\leakage.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x86\leakage-helpers.i.dfy > obj\arch\x86\leakage-helpers.i.tmp
+Copy file(s): "obj\arch\arm\leakage-helpers.i.tmp" to "obj\arch\arm\leakage-helpers.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\arm\vale.i.dfy > obj\arch\arm\vale.i.tmp
+Copy file(s): "obj\arch\x64\def.s.tmp" to "obj\arch\x64\def.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\arm\globals.s.dfy > obj\arch\arm\globals.s.tmp
+Copy file(s): "obj\lib\util\words_and_bytes.i.tmp" to "obj\lib\util\words_and_bytes.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\vale.i.dfy > obj\arch\x64\vale.i.tmp
+Copy file(s): "obj\arch\arm\globals.s.tmp" to "obj\arch\arm\globals.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\aes_helpers.i.dfy > obj\crypto\aes\aes_helpers.i.tmp
+Copy file(s): "obj\arch\arm\vale.i.tmp" to "obj\arch\arm\vale.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\arm\leakage.i.dfy > obj\arch\arm\leakage.i.tmp
+Copy file(s): "obj\crypto\aes\aes_helpers.i.tmp" to "obj\crypto\aes\aes_helpers.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\aes_lemmas.i.dfy > obj\crypto\aes\aes_lemmas.i.tmp
+Copy file(s): "obj\arch\x64\vale.i.tmp" to "obj\arch\x64\vale.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\arch\x64\decls.gen.dfy > obj\arch\x64\decls.tmp
+Copy file(s): "obj\crypto\aes\aes_lemmas.i.tmp" to "obj\crypto\aes\aes_lemmas.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\arch\arm\decls.gen.dfy > obj\arch\arm\decls.tmp
+Copy file(s): "obj\arch\arm\leakage.i.tmp" to "obj\arch\arm\leakage.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\arm\print.s.dfy > obj\arch\arm\print.s.tmp
+Copy file(s): "obj\arch\arm\print.s.tmp" to "obj\arch\arm\print.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x86\vale.i.dfy > obj\arch\x86\vale.i.tmp
+Copy file(s): "obj\arch\arm\decls.tmp" to "obj\arch\arm\decls.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\printMasm.s.dfy > obj\arch\x64\printMasm.s.tmp
+Copy file(s): "obj\arch\x64\printMasm.s.tmp" to "obj\arch\x64\printMasm.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\printGcc.s.dfy > obj\arch\x64\printGcc.s.tmp
+Copy file(s): "obj\arch\x64\printGcc.s.tmp" to "obj\arch\x64\printGcc.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\print.s.dfy > obj\arch\x64\print.s.tmp
+Copy file(s): "obj\arch\x64\print.s.tmp" to "obj\arch\x64\print.s.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\aes\cbc.vad -out obj\crypto\aes\cbc.gen.dfy
+// parsing .\src\crypto\aes\cbc.vad
+// parsing .\src\crypto\aes\../../arch/x86/decls.vad
+// parsing .\src\crypto\aes\aes.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\cbc.s.dfy > obj\crypto\aes\cbc.s.tmp
+Copy file(s): "obj\crypto\aes\cbc.s.tmp" to "obj\crypto\aes\cbc.s.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\aes\aes-x64\aes.vad -out obj\crypto\aes\aes-x64\aes.gen.dfy
+// parsing .\src\crypto\aes\aes-x64\aes.vad
+// parsing .\src\crypto\aes\aes-x64\../../../arch/x64/decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\arch\x64\decls.gen.dfy > obj\arch\x64\decls.gen.tmp
+Copy file(s): "obj\arch\x86\leakage-helpers.i.tmp" to "obj\arch\x86\leakage-helpers.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\gcm.s.dfy > obj\crypto\aes\gcm.s.tmp
+Copy file(s): "obj\arch\x86\vale.i.tmp" to "obj\arch\x86\vale.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\arch\x86\decls.gen.dfy > obj\arch\x86\decls.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x86\leakage.i.dfy > obj\arch\x86\leakage.i.tmp
+Copy file(s): "obj\arch\x64\decls.tmp" to "obj\arch\x64\decls.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\arch\x86\decls.gen.dfy > obj\arch\x86\decls.gen.tmp
+Copy file(s): "obj\arch\x86\leakage.i.tmp" to "obj\arch\x86\leakage.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x86\printGcc.s.dfy > obj\arch\x86\printGcc.s.tmp
+Copy file(s): "obj\arch\x86\decls.tmp" to "obj\arch\x86\decls.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x86\printMasm.s.dfy > obj\arch\x86\printMasm.s.tmp
+Copy file(s): "obj\arch\x64\decls.gen.tmp" to "obj\arch\x64\decls.gen.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\aes\aes-x64\aes.gen.dfy > obj\crypto\aes\aes-x64\aes.gen.tmp
+Copy file(s): "obj\arch\x86\printGcc.s.tmp" to "obj\arch\x86\printGcc.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\aes\aes-x64\aes.gen.dfy > obj\crypto\aes\aes-x64\aes.tmp
+Copy file(s): "obj\arch\x86\printMasm.s.tmp" to "obj\arch\x86\printMasm.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x86\print.s.dfy > obj\arch\x86\print.s.tmp
+Copy file(s): "obj\arch\x86\print.s.tmp" to "obj\arch\x86\print.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\cbc_helpers.i.dfy > obj\crypto\aes\cbc_helpers.i.tmp
+Copy file(s): "obj\arch\x86\decls.gen.tmp" to "obj\arch\x86\decls.gen.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\aes\aes.gen.dfy > obj\crypto\aes\aes.tmp
+Copy file(s): "obj\crypto\aes\cbc_helpers.i.tmp" to "obj\crypto\aes\cbc_helpers.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\aes\aes.gen.dfy > obj\crypto\aes\aes.gen.tmp
+Copy file(s): "obj\crypto\aes\aes-x64\aes.gen.tmp" to "obj\crypto\aes\aes-x64\aes.gen.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\aes-x64\aes_main.i.dfy > obj\crypto\aes\aes-x64\aes_main.i.tmp
+Copy file(s): "obj\crypto\aes\aes-x64\aes.tmp" to "obj\crypto\aes\aes-x64\aes.vdfy"
+Copy file(s): "obj\crypto\aes\gcm.s.tmp" to "obj\crypto\aes\gcm.s.vdfy"
+Copy file(s): "src\crypto\aes\testaes.c" to "obj\crypto\aes\testaes.c"
+cl /Foobj\crypto\aes\testaes.obj /c obj\crypto\aes\testaes.c /nologo /Ox /Gz /Itools\Kremlin\kremlib /Isrc\lib\util /Isrc\crypto\aes /Zi /Fdobj\crypto\aes\testaes.pdb
+testaes.c
+Copy file(s): "src\crypto\aes\testcbc.c" to "obj\crypto\aes\testcbc.c"
+cl /Foobj\crypto\aes\testcbc.obj /c obj\crypto\aes\testcbc.c /nologo /Ox /Gz /Itools\Kremlin\kremlib /Isrc\lib\util /Zi /Fdobj\crypto\aes\testcbc.pdb
+testcbc.c
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\hmac_common.s.dfy > obj\crypto\hashing\hmac_common.s.tmp
+Copy file(s): "obj\crypto\hashing\hmac_common.s.tmp" to "obj\crypto\hashing\hmac_common.s.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\hashing\sha-x64\sha256.vad -out obj\crypto\hashing\sha-x64\sha256.gen.dfy
+// parsing .\src\crypto\hashing\sha-x64\sha256.vad
+// parsing .\src\crypto\hashing\sha-x64\../../../arch/x64/decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha_common.s.dfy > obj\crypto\hashing\sha_common.s.tmp
+Copy file(s): "obj\crypto\hashing\sha_common.s.tmp" to "obj\crypto\hashing\sha_common.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256.s.dfy > obj\crypto\hashing\sha256.s.tmp
+Copy file(s): "obj\crypto\aes\aes-x64\aes_main.i.tmp" to "obj\crypto\aes\aes-x64\aes_main.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\collections\Sets.i.dfy > obj\lib\collections\Sets.i.tmp
+Copy file(s): "obj\lib\collections\Sets.i.tmp" to "obj\lib\collections\Sets.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\heaplets64.i.dfy > obj\lib\util\heaplets64.i.tmp
+Copy file(s): "obj\crypto\hashing\sha256.s.tmp" to "obj\crypto\hashing\sha256.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256.i.dfy > obj\crypto\hashing\sha256.i.tmp
+Copy file(s): "obj\lib\util\heaplets64.i.tmp" to "obj\lib\util\heaplets64.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\types.i.dfy > obj\lib\util\types.i.tmp
+Copy file(s): "obj\crypto\hashing\sha256.i.tmp" to "obj\crypto\hashing\sha256.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\hashing\sha-x64\sha256.gen.dfy > obj\crypto\hashing\sha-x64\sha256.tmp
+Copy file(s): "obj\lib\util\types.i.tmp" to "obj\lib\util\types.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256_context.i.dfy > obj\crypto\hashing\sha256_context.i.tmp
+Copy file(s): "obj\crypto\hashing\sha256_context.i.tmp" to "obj\crypto\hashing\sha256_context.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha-x64\sha256_helpers.i.dfy > obj\crypto\hashing\sha-x64\sha256_helpers.i.tmp
+Copy file(s): "obj\crypto\hashing\sha-x64\sha256_helpers.i.tmp" to "obj\crypto\hashing\sha-x64\sha256_helpers.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\hashing\sha-x64\sha256.gen.dfy > obj\crypto\hashing\sha-x64\sha256.gen.tmp
+Copy file(s): "obj\crypto\aes\aes.tmp" to "obj\crypto\aes\aes.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\hashing\sha256.vad -out obj\crypto\hashing\sha256.gen.dfy
+// parsing .\src\crypto\hashing\sha256.vad
+// parsing .\src\crypto\hashing\../../arch/x86/decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\heaplets.i.dfy > obj\lib\util\heaplets.i.tmp
+Copy file(s): "obj\lib\util\heaplets.i.tmp" to "obj\lib\util\heaplets.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\hashing\sha256.gen.dfy > obj\crypto\hashing\sha256.tmp
+Copy file(s): "obj\crypto\aes\aes.gen.tmp" to "obj\crypto\aes\aes.gen.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /noVerify /compile:2 src\lib\util\IoNative.cs src\crypto\aes\aes_main.i.dfy /out:obj\aes.exe
+[TRACE] Using prover: C:\cygwin\home\darrenge\everest\vale\tools\Dafny\z3.exe
+Parsing src\crypto\aes\aes_main.i.dfy
+Coalescing blocks...
+Inlining...
+
+Running abstract interpretation...
+[0.0900016 s]
+
+Dafny program verifier finished with 0 verified, 0 errors
+Compiled program written to aes.cs
+Compiled assembly into aes.exe
+obj\aes.exe MASM Win > obj\aes.asm
+ml /nologo /c /Foobj\aes.obj obj\aes.asm
+Assembling: obj\aes.asm
+obj\aes.exe GCC Win > obj\aes-gcc.S
+obj\aes.exe GCC MacOS > obj\aes-macos.S
+obj\aes.exe GCC Linux > obj\aes-linux.S
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith /timeLimit:120 obj\crypto\aes\cbc.gen.dfy > obj\crypto\aes\cbc.gen.tmp
+Copy file(s): "obj\crypto\hashing\sha-x64\sha256.tmp" to "obj\crypto\hashing\sha-x64\sha256.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\aes\cbc.gen.dfy > obj\crypto\aes\cbc.tmp
+Copy file(s): "obj\crypto\hashing\sha-x64\sha256.gen.tmp" to "obj\crypto\hashing\sha-x64\sha256.gen.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha-x64\sha256_vale_main.i.dfy > obj\crypto\hashing\sha-x64\sha256_vale_main.i.tmp
+Copy file(s): "obj\crypto\hashing\sha-x64\sha256_vale_main.i.tmp" to "obj\crypto\hashing\sha-x64\sha256_vale_main.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\aes_main.i.dfy > obj\crypto\aes\aes_main.i.tmp
+Copy file(s): "obj\crypto\aes\aes_main.i.tmp" to "obj\crypto\aes\aes_main.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256_helpers.i.dfy > obj\crypto\hashing\sha256_helpers.i.tmp
+Copy file(s): "obj\crypto\hashing\sha256_helpers.i.tmp" to "obj\crypto\hashing\sha256_helpers.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256_unique.i.dfy > obj\crypto\hashing\sha256_unique.i.tmp
+Copy file(s): "obj\crypto\aes\cbc.gen.tmp" to "obj\crypto\aes\cbc.gen.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /noVerify /compile:2 src\lib\util\IoNative.cs src\crypto\aes\cbc_main.i.dfy /out:obj\cbc.exe
+[TRACE] Using prover: C:\cygwin\home\darrenge\everest\vale\tools\Dafny\z3.exe
+Parsing src\crypto\aes\cbc_main.i.dfy
+Copy file(s): "obj\crypto\hashing\sha256_unique.i.tmp" to "obj\crypto\hashing\sha256_unique.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256_main.i.dfy > obj\crypto\hashing\sha256_main.i.tmp
+Coalescing blocks...
+Inlining...
+
+Running abstract interpretation...
+[0.0850037 s]
+
+Dafny program verifier finished with 0 verified, 0 errors
+Compiled program written to cbc.cs
+Compiled assembly into cbc.exe
+obj\cbc.exe MASM Win > obj\cbc.asm
+ml /nologo /c /Foobj\cbc.obj obj\cbc.asm
+Assembling: obj\cbc.asm
+obj\cbc.exe GCC Linux > obj\cbc-linux.S
+obj\cbc.exe GCC Win > obj\cbc-gcc.S
+obj\cbc.exe GCC MacOS > obj\cbc-macos.S
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\cbc_main.i.dfy > obj\crypto\aes\cbc_main.i.tmp
+Copy file(s): "obj\crypto\aes\cbc_main.i.tmp" to "obj\crypto\aes\cbc_main.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /kremlin /noVerify /compile:2 /spillTargetCode:1 src\crypto\hashing\sha256_main.i.dfy /out:obj\crypto\hashing\sha256_main.i.json
+[TRACE] Using prover: C:\cygwin\home\darrenge\everest\vale\tools\Dafny\z3.exe
+Parsing src\crypto\hashing\sha256_main.i.dfy
+Coalescing blocks...
+Inlining...
+
+Running abstract interpretation...
+[0.1480107 s]
+
+Dafny program verifier finished with 0 verified, 0 errors
+Compiled program written to sha256_main.i.json
+cd obj\crypto\hashing && C:\cygwin\home\darrenge\everest\vale\tools\Kremlin\Kremlin.native -warn-error +1..4 -warn-error @4 -skip-compilation -add-include \"DafnyLib.h\" sha256_main.i.json
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplifications successfully checked
+KreMLin: writing out .c and .h files for Prims, sha256_main_i, types_i, sha256_i, sha256_unique, words_and_bytes_i, Collections__Seqs_i, Collections__Seqs_s, sha256_s, hmac_common_s, sha_common_s, words_and_bytes_s, operations_s, Math__power2_i, Math__div_i, Math__div_auto_i, Math__div_auto_proofs_i, Math__mod_auto_i, Math__mod_auto_proofs_i, Math__div_boogie_i, Math__div_def_i, Math__power_i, Math__power_s, Math__power2_s, Math__mul_i, Math__mul_auto_i, Math__mul_auto_proofs_i, Math__mul_nonlinear_i, Math__div_nonlinear_i, types_s, _System
+cl /Foobj\crypto\hashing\sha256_main_i.obj /c obj\crypto\hashing\sha256_main_i.c /nologo /Ox /Gz /Itools\Kremlin\kremlib /Isrc\lib\util /Iobj\crypto\hashing /Zi /Fdobj\crypto\hashing\sha256_main_i.pdb
+sha256_main_i.c
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\hashing\sha256.gen.dfy > obj\crypto\hashing\sha256.gen.tmp
+Copy file(s): "obj\crypto\hashing\sha256_main.i.tmp" to "obj\crypto\hashing\sha256_main.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256_hmac.i.dfy > obj\crypto\hashing\sha256_hmac.i.tmp
+Copy file(s): "obj\crypto\hashing\sha256.tmp" to "obj\crypto\hashing\sha256.vdfy"
+Copy file(s): "src\crypto\hashing\testsha256.c" to "obj\crypto\hashing\testsha256.c"
+cl /Foobj\crypto\hashing\testsha256.obj /c obj\crypto\hashing\testsha256.c /nologo /Ox /Gz /Itools\Kremlin\kremlib /Isrc\lib\util /Iobj\crypto\hashing /Zi /Fdobj\crypto\hashing\testsha256.pdb
+testsha256.c
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\test\memcpy.vad -out obj\test\memcpy.gen.dfy
+// parsing .\src\test\memcpy.vad
+// parsing .\src\test\../arch/x86/decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\test\memcpy.gen.dfy > obj\test\memcpy.tmp
+Copy file(s): "obj\crypto\hashing\sha256_hmac.i.tmp" to "obj\crypto\hashing\sha256_hmac.i.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\test\stack-test.vad -out obj\test\stack-test.gen.dfy
+// parsing .\src\test\stack-test.vad
+// parsing .\src\test\../arch/x86/decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\test\stack-test.gen.dfy > obj\test\stack-test.tmp
+Copy file(s): "obj\test\memcpy.tmp" to "obj\test\memcpy.vdfy"
+link /nologo /OUT:obj\testaes.exe obj\crypto\aes\testaes.obj obj\aes.obj
+obj\testaes.exe
+AES128 success
+type NUL > obj/testaes.txt
+link /nologo /OUT:obj\testcbc.exe obj\crypto\aes\testcbc.obj obj\cbc.obj
+obj\testcbc.exe
+AES128 CBC success
+type NUL > obj/testcbc.txt
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\assert-by.vad -out obj\Vale\test\assert-by.gen.dfy
+// parsing .\tools\Vale\test\assert-by.vad
+// parsing .\tools\Vale\test\common.vad
+Copy file(s): "obj\test\stack-test.tmp" to "obj\test\stack-test.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\common.vad -out obj\Vale\test\common.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\calc.vad -out obj\Vale\test\calc.gen.dfy
+// parsing .\tools\Vale\test\common.vad
+// parsing .\tools\Vale\test\calc.vad
+// parsing .\tools\Vale\test\common.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\Vale\test\common.gen.dfy > obj\Vale\test\common.gen.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\Vale\test\common.gen.dfy > obj\Vale\test\common.tmp
+Copy file(s): "obj\Vale\test\common.tmp" to "obj\Vale\test\common.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\DottedNames.vad -out obj\Vale\test\DottedNames.gen.dfy
+Copy file(s): "obj\Vale\test\common.gen.tmp" to "obj\Vale\test\common.gen.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\Vale\test\assert-by.gen.dfy > obj\Vale\test\assert-by.tmp
+// parsing .\tools\Vale\test\DottedNames.vad
+// parsing .\tools\Vale\test\common.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\Vale\test\calc.gen.dfy > obj\Vale\test\calc.tmp
+Copy file(s): "obj\Vale\test\calc.tmp" to "obj\Vale\test\calc.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\Vale\test\DottedNames.gen.dfy > obj\Vale\test\DottedNames.tmp
+Copy file(s): "obj\Vale\test\assert-by.tmp" to "obj\Vale\test\assert-by.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\inline-if.vad -out obj\Vale\test\inline-if.gen.dfy
+// parsing .\tools\Vale\test\inline-if.vad
+// parsing .\tools\Vale\test\common.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\Vale\test\inline-if.gen.dfy > obj\Vale\test\inline-if.tmp
+Copy file(s): "obj\Vale\test\DottedNames.tmp" to "obj\Vale\test\DottedNames.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\refined2.vad -out obj\Vale\test\refined2.gen.dfy
+// parsing .\tools\Vale\test\refined2.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\Vale\test\refined2.gen.dfy > obj\Vale\test\refined2.tmp
+Copy file(s): "obj\Vale\test\inline-if.tmp" to "obj\Vale\test\inline-if.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\refined3.vad -out obj\Vale\test\refined3.gen.dfy
+// parsing .\tools\Vale\test\refined3.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\Vale\test\refined3.gen.dfy > obj\Vale\test\refined3.tmp
+Copy file(s): "obj\Vale\test\refined2.tmp" to "obj\Vale\test\refined2.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\test1.vad -out obj\Vale\test\test1.gen.dfy
+// parsing .\tools\Vale\test\test1.vad
+// parsing .\tools\Vale\test\common.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\Vale\test\test1.gen.dfy > obj\Vale\test\test1.tmp
+Copy file(s): "obj\crypto\aes\cbc.tmp" to "obj\crypto\aes\cbc.vdfy"
+Copy file(s): "obj\Vale\test\test1.tmp" to "obj\Vale\test\test1.vdfy"
+Copy file(s): "obj\Vale\test\refined3.tmp" to "obj\Vale\test\refined3.vdfy"
+Copy file(s): "obj\crypto\hashing\sha256.gen.tmp" to "obj\crypto\hashing\sha256.gen.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /noVerify /compile:2 src\lib\util\IoNative.cs src\crypto\hashing\sha256_vale_main.i.dfy /out:obj\sha256.exe
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256_vale_main.i.dfy > obj\crypto\hashing\sha256_vale_main.i.tmp
+[TRACE] Using prover: C:\cygwin\home\darrenge\everest\vale\tools\Dafny\z3.exe
+Parsing src\crypto\hashing\sha256_vale_main.i.dfy
+Coalescing blocks...
+Inlining...
+
+Running abstract interpretation...
+[0.0970009 s]
+
+Dafny program verifier finished with 0 verified, 0 errors
+Compiled program written to sha256.cs
+Compiled assembly into sha256.exe
+obj\sha256.exe MASM Win > obj\sha256.asm
+obj\sha256.exe GCC MacOS > obj\sha256-macos.S
+obj\sha256.exe GCC Linux > obj\sha256-linux.S
+ml /nologo /c /Foobj\sha256.obj obj\sha256.asm
+obj\sha256.exe GCC Win > obj\sha256-gcc.S
+Assembling: obj\sha256.asm
+link /nologo /OUT:obj\testsha256.exe obj\crypto\hashing\testsha256.obj obj\sha256.obj obj\crypto\hashing\sha256_main_i.obj
+obj\testsha256.exe
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+type NUL > obj/testsha256.txt
+Copy file(s): "obj\crypto\hashing\sha256_vale_main.i.tmp" to "obj\crypto\hashing\sha256_vale_main.i.vdfy"
+scons: done building targets.
