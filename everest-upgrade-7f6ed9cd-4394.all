@@ -1,0 +1,78 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/31/s
+About to run: everest_move
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: Everest-Nightly-Upgrade-Windows
+Removing FStar/
+Removing hacl-star/
+Removing kremlin/
+Removing log/
+Removing mitls-fstar/
+Removing test/_build/
+Removing test/test.native
+Removing vale/
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent/_work/31/s
+
+Checking environment
+... which found
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+... all 41 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... all 15 ocamlfind packages found
+... sample ocamlbuild project compiles successfully
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+... correct z3 version detected
+... nuget found in PATH
+... Python 2.7 found
+
+Remember to run source ~/.bashrc if it was modified!
+Note: you *may* want to add /cygdrive/c/Build/Agent/_work/31/s/FStar/bin and /cygdrive/c/Build/Agent/_work/31/s/kremlin to your PATH
+Note: you *may* want to export FSTAR_HOME=/cygdrive/c/Build/Agent/_work/31/s/FStar
+
+Pulling vale
+Note: you're welcome to create symbolic links if you already have cloned the repository elsewhere
+Cloning into 'vale'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at a71d74d Syntactically enforce reads/modifies for operands
+
+Pulling mitls-fstar
+Cloning into 'mitls-fstar'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 06020ab Remove .fstar submodule (why?)
+
+Pulling FStar
+Cloning into 'FStar'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at a10955e Merge commit '89cc1f136d0ee61070ac1b08d64e5eb7a7187d87'
+
+Pulling hacl-star
+Cloning into 'hacl-star'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at e1e2150 updated submodules
+
+Pulling kremlin
+Cloning into 'kremlin'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at a5179bf fix the build
+Already up-to-date.
+Already up-to-date.
+Already up-to-date.
+Already up-to-date.
+Already up-to-date.
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   302  100     2  100   300      8   1216 --:--:-- --:--:-- --:--:--  1935
