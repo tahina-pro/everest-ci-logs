@@ -1,0 +1,47 @@
+From https://github.com/FStarLang/FStar
+17e8f07..2d18871  c_valedev_initial -> origin/c_valedev_initial
++ 54b0c6e...cb6f816 cwinter_checked_hints -> origin/cwinter_checked_hints  (forced update)
+* [new branch]      cwinter_json_db_fix -> origin/cwinter_json_db_fix
++ 395701a...8033b7b cwinter_smt_proofs -> origin/cwinter_smt_proofs  (forced update)
+7906465..4bfb3a1  konrad_hye_example -> origin/konrad_hye_example
+803422c..a10955e  master     -> origin/master
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.Spec.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.OpenSSL.fst.hints; ran without hints
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.CRF.fst.hints; ran without hints
+.\Hashing.CRF.fst(28,8-28,80): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(108,0-108,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(183,0-183,32): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\HKDF.fsti.hints; ran without hints
+.\Hashing.CRF.fst(94,17-94,23): (Error) assertion failed (see .\Hashing.CRF.fst(94,34-94,57))
+Verified module: Hashing.CRF (29721 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:249: Hashing.CRF.fst-ver] Error 1
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MAC_SHA256.fst(66,36-66,42): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(69,34-69,48))
+.\MAC_SHA256.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA256 (88165 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA256.fst-ver] Error 1
+.\MAC_SHA1.fst(60,4-60,53): (Error) could not prove post-condition
+.\MAC_SHA1.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA1 (96471 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA1.fst-ver] Error 1
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
+make: Target 'all-ver' not remade because of errors.
