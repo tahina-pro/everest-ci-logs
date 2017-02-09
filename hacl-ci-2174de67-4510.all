@@ -1,0 +1,639 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/37/s
+About to run: hacl_verify
+BUILD_SOURCEBRANCHNAME: restructure
+BUILD_DEFINITIONNAME: Hacl*-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+cp parse.mly ../parser/ml/
+echo "%{" > ../parser/parse.fsy
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# We are opening the same module twice but we need these modules
+# open for the definition of tokens
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+# TODO: create a proper OCamlbuild rule for this production so that
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+echo 'let version = "0.9.4.0"' > FStar_Version.ml
+echo 'let platform = "Windows_x64"' >> FStar_Version.ml
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+echo 'let date = "2017-02-09T04:49:18-08:00"' >> FStar_Version.ml
+echo 'let commit= "7616c06 (dirty)"' >> FStar_Version.ml
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Dependencies.ml > src/ocaml-output/FStar_Dependencies.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Options.ml > src/ocaml-output/FStar_Options.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Util.ml > src/basic/ml/FStar_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Util.cmo src/basic/ml/FStar_Util.ml
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_Dep.ml > src/ocaml-output/FStar_Parser_Dep.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Const.ml > src/ocaml-output/FStar_Const.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Ident.ml > src/ocaml-output/FStar_Ident.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Range.cmo src/basic/ml/FStar_Range.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Ident.cmo src/ocaml-output/FStar_Ident.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Errors.ml > src/ocaml-output/FStar_Errors.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Options.cmo src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Const.cmo src/ocaml-output/FStar_Const.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Errors.cmo src/ocaml-output/FStar_Errors.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Const.ml > src/ocaml-output/FStar_Syntax_Const.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Syntax.cmo src/ocaml-output/FStar_Syntax_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Print.ml > src/ocaml-output/FStar_Syntax_Print.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Const.cmo src/ocaml-output/FStar_Syntax_Const.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Subst.ml > src/ocaml-output/FStar_Syntax_Subst.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Util.ml > src/ocaml-output/FStar_Syntax_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_InstFV.ml > src/ocaml-output/FStar_Syntax_InstFV.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Subst.cmo src/ocaml-output/FStar_Syntax_Subst.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_InstFV.cmo src/ocaml-output/FStar_Syntax_InstFV.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Util.cmo src/ocaml-output/FStar_Syntax_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Print.cmo src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_Driver.ml > src/ocaml-output/FStar_Parser_Driver.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_AST.cmo src/ocaml-output/FStar_Parser_AST.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_Util.cmo src/parser/ml/FStar_Parser_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Parse.cmo src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_LexFStar.cmo src/parser/ml/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_ParseIt.cmo src/parser/ml/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Driver.cmo src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Dep.cmo src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_Kremlin.ml > src/ocaml-output/FStar_Extraction_Kremlin.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Syntax.cmo src/ocaml-output/FStar_Extraction_ML_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Free.ml > src/ocaml-output/FStar_Syntax_Free.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Free.cmo src/ocaml-output/FStar_Syntax_Free.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Common.cmo src/ocaml-output/FStar_TypeChecker_Common.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmo src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmo src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Bytes.cmo src/basic/ml/FStar_Bytes.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmo src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmo src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Modul.ml > src/ocaml-output/FStar_Extraction_ML_Modul.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Term.ml > src/ocaml-output/FStar_Extraction_ML_Term.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmo src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Err.cmo src/ocaml-output/FStar_TypeChecker_Err.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Util.ml > src/ocaml-output/FStar_TypeChecker_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmo src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmo src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmo src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmo src/ocaml-output/FStar_Extraction_ML_Term.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Indent.ml > src/ocaml-output/FStar_Indent.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_ToDocument.ml > src/ocaml-output/FStar_Parser_ToDocument.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_ToDocument.cmo src/ocaml-output/FStar_Parser_ToDocument.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Interactive.ml > src/ocaml-output/FStar_Interactive.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Dependencies.cmo src/ocaml-output/FStar_Dependencies.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_Solver.ml > src/ocaml-output/FStar_SMTEncoding_Solver.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_Encode.ml > src/ocaml-output/FStar_SMTEncoding_Encode.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml > src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_Term.ml > src/ocaml-output/FStar_SMTEncoding_Term.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmo src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_Z3.ml > src/ocaml-output/FStar_SMTEncoding_Z3.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmo src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmo src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmo src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml > src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmo src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmo src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Universal.ml > src/ocaml-output/FStar_Universal.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmo src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_Env.cmo src/ocaml-output/FStar_ToSyntax_Env.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_MutRecTy.ml > src/ocaml-output/FStar_Syntax_MutRecTy.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_MutRecTy.cmo src/ocaml-output/FStar_Syntax_MutRecTy.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_DMFF.ml > src/ocaml-output/FStar_TypeChecker_DMFF.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmo src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcInductive.cmo src/ocaml-output/FStar_TypeChecker_TcInductive.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Interleave.cmo src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_ToSyntax.cmo src/ocaml-output/FStar_ToSyntax_ToSyntax.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmo src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Universal.cmo src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmo src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmo src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmo src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Indent.cmo src/ocaml-output/FStar_Indent.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Interactive.cmo src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Main.cmo src/ocaml-output/FStar_Main.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/basic/ml -o src/fstar/ml/main.cmo src/fstar/ml/main.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Util.ml
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Range.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Ident.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Const.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Errors.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Syntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/FStar_Syntax_Const.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_Subst.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_InstFV.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_AST.cmx src/ocaml-output/FStar_Parser_AST.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_Util.cmx src/parser/ml/FStar_Parser_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Parse.cmx src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_ParseIt.cmx src/parser/ml/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_Syntax_Free.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Common.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Bytes.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Err.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Parser_ToDocument.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Dependencies.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_Syntax_MutRecTy.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmx src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Indent.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Main.cmx src/ocaml-output/FStar_Main.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/basic/ml -o src/fstar/ml/main.cmx src/fstar/ml/main.ml
+''ocamlfind ocamlopt -linkpkg -thread -package batteries -package zarith -package yojson -package pprint src/ocaml-output/bootlibs/FStar_List.cmx src/ocaml-output/bootlibs/MkPrims.cmx src/ocaml-output/bootlibs/prims.cmx src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Platform.cmx src/ocaml-output/bootlibs/FStar_Char.cmx src/ocaml-output/bootlibs/FStar_Float.cmx src/ocaml-output/bootlibs/FStar_Int16.cmx src/ocaml-output/bootlibs/FStar_Int32.cmx src/ocaml-output/bootlibs/FStar_Int64.cmx src/ocaml-output/bootlibs/FStar_Int8.cmx src/ocaml-output/bootlibs/FStar_UInt16.cmx src/ocaml-output/bootlibs/FStar_UInt8.cmx src/ocaml-output/bootlibs/FStar_BaseTypes.cmx src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Unionfind.cmx src/ocaml-output/bootlibs/FStar_All.cmx src/ocaml-output/bootlibs/FStar_ST.cmx src/ocaml-output/bootlibs/FStar_String.cmx src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/bootlibs/FStar_Option.cmx src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Parser_AST.cmx src/parser/ml/FStar_Parser_Util.cmx src/ocaml-output/FStar_Parser_Parse.cmx src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Fsdoc_Generator.cmx src/prettyprint/ml/FStar_Pprint.cmx src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Main.cmx src/fstar/ml/main.cmx -o src/fstar/ml/main.native
+# Parallel statistics: { count(total): 16(216), max: 5, min: 2, average(total): 2.500(1.111) }
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+ocamlbuild -I src -I lib -I parser -use-menhir -use-ocamlfind -classic-display -menhir "menhir --infer --explain" Kremlin.native Tests.native
+''ocamlfind ocamldep -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -modules src/Kremlin.ml > src/Kremlin.ml.depends
+''ocamlfind ocamldep -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -modules src/AstToCFlat.ml > src/AstToCFlat.ml.depends
+''ocamlfind ocamldep -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -modules src/CFlatToWasm.ml > src/CFlatToWasm.ml.depends
+''ocamlfind ocamldep -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -modules src/Simplify.ml > src/Simplify.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -strict-sequence -w @1-2-3@8..12@14..21@23..29-30@31..38-39@40-41@43@57 -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -I src -I parser -I lib -o src/Simplify.cmo src/Simplify.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -strict-sequence -w @1-2-3@8..12@14..21@23..29-30@31..38-39@40-41@43@57 -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -I src -I parser -I lib -o src/AstToCFlat.cmo src/AstToCFlat.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -strict-sequence -w @1-2-3@8..12@14..21@23..29-30@31..38-39@40-41@43@57 -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -I src -I parser -I lib -o src/CFlatToWasm.cmo src/CFlatToWasm.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -strict-sequence -w @1-2-3@8..12@14..21@23..29-30@31..38-39@40-41@43@57 -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -I src -I parser -I lib -o src/Kremlin.cmo src/Kremlin.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -strict-sequence -w @1-2-3@8..12@14..21@23..29-30@31..38-39@40-41@43@57 -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -I src -I parser -I lib -o src/Simplify.cmx src/Simplify.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -strict-sequence -w @1-2-3@8..12@14..21@23..29-30@31..38-39@40-41@43@57 -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -I src -I parser -I lib -o src/AstToCFlat.cmx src/AstToCFlat.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -strict-sequence -w @1-2-3@8..12@14..21@23..29-30@31..38-39@40-41@43@57 -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -I src -I parser -I lib -o src/CFlatToWasm.cmx src/CFlatToWasm.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -strict-sequence -w @1-2-3@8..12@14..21@23..29-30@31..38-39@40-41@43@57 -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm -I src -I parser -I lib -o src/Kremlin.cmx src/Kremlin.ml
+''ocamlfind ocamlopt -linkpkg -g -package ppx_deriving.std -package ppx_deriving_yojson -package zarith -package pprint -package unix -package menhirLib -package ulex -package process -package fix -package wasm lib/Ansi.cmx lib/KList.cmx lib/KPrint.cmx lib/KString.cmx lib/Option.cmx src/Bundle.cmx src/Flags.cmx parser/parser.cmx parser/Lexer.cmx lib/Utils.cmx src/Atom.cmx src/Common.cmx src/Constant.cmx src/Ast.cmx src/CFlat.cmx src/Idents.cmx src/PrintCommon.cmx src/PrintAst.cmx src/AstToCFlat.cmx src/CStar.cmx src/DeBruijn.cmx src/Location.cmx src/Warnings.cmx src/Checker.cmx src/AstToCStar.cmx src/Builtin.cmx src/Options.cmx src/Bundles.cmx src/C.cmx src/CFlatToWasm.cmx src/CStarToC.cmx src/GlobalNames.cmx src/Simplify.cmx src/Inlining.cmx src/DataTypes.cmx src/Driver.cmx src/InputAst.cmx src/InputAstToAst.cmx src/PrintC.cmx src/Output.cmx src/Print.cmx src/Kremlin.cmx -o src/Kremlin.native
+ln -sf Kremlin.native krml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+make extract-c
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+make -C ../code extract-c
+make -C ../crypto_proofs krml-test.exe
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code'
+make -C salsa-family extract-c
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/crypto_proofs'
+make[2]: 'krml-test.exe' is up to date.
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/crypto_proofs'
+make -C poly1305 extract-c
+make -C curve25519 extract-c
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/salsa-family'
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/poly1305'
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/curve25519'
+# Weird \* because of https://caml.inria.fr/mantis/view.php?id=7473
+# Weird \* because of https://caml.inria.fr/mantis/view.php?id=7473
+mkdir -p chacha-c
+mkdir -p salsa-c
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -tmpdir chacha-c \
+-I ../bignum -I ../lib/kremlin \
+Chacha20.fst Hacl.Test.Chacha20.fst -o chacha20.exe -no-prefix Hacl.Test.Chacha20 \
+-drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar -bundle Chacha20=Hacl.Symmetric.Chacha20 Chacha20.fst \
+C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' -ccopt -march=native -ccopt -std=gnu99
+mkdir -p x25519-c
+mkdir -p poly-c
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -tmpdir salsa-c \
+-I ../bignum -I ../lib/kremlin \
+Salsa20.fst Hacl.Test.Salsa20.fst -o salsa20.exe -no-prefix Hacl.Test.Salsa20 \
+-drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar  -bundle Salsa20=Hacl.Symmetric.Salsa20 \
+C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' -ldopt -flto -ccopt -march=native  -ccopt -std=gnu99
+mkdir -p hsalsa-c
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -tmpdir poly-c -ccopt -std=gnu99 \
+-I ../bignum -I ../lib/kremlin \
+Poly1305_64.fst Hacl.Test.Poly1305_64.fst \
+-drop 'Hacl.Endianness' \
+-drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar -bundle 'Poly1305_64=Hacl.Bignum.\*,Hacl.Impl.\*' \
+C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' \
+-no-prefix Hacl.Test.Poly1305_64 -ldopt -flto -ccopt -march=native -o poly1305.exe
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -tmpdir x25519-c -ccopt -std=gnu99 \
+-I ../bignum -I ../lib/kremlin \
+Curve25519.fst Hacl.Test.X25519.fst \
+-drop 'Hacl.Spec' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar -bundle 'Curve25519=Hacl.Bignum,Hacl.Bignum.\*,Hacl.EC,Hacl.EC.\*' \
+-bundle 'Hacl.Spec.\*' \
+C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' \
+-no-prefix Hacl.Test.X25519 -ldopt -flto -ccopt -march=native -o x25519.exe
+mkdir -p xsalsa-c
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -tmpdir hsalsa-c \
+-I ../bignum -I ../lib/kremlin \
+Hacl.Symmetric.HSalsa20.fst \
+-drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar \
+C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' -skip-compilation  -ccopt -std=gnu99
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -tmpdir xsalsa-c \
+-I ../bignum -I ../lib/kremlin \
+Hacl.Symmetric.XSalsa20.fst Hacl.Test.XSalsa20.fst -o xsalsa20.exe -no-prefix Hacl.Test.XSalsa20 \
+-drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar \
+C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' -ldopt -flto -ccopt -march=native  -ccopt -std=gnu99
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Checker.ml", line 367, characters 69-90
+Called from file "src/Checker.ml", line 291, characters 16-42
+Called from file "src/Checker.ml", line 190, characters 2-16
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/Checker.ml", line 147, characters 6-25
+Dropping Hacl_Spec_Poly1305 (at checking time)
+
+Warning 6: in the definition of mac, after the definition of macsize, in top-level declaration Hacl.Test.Poly1305_64.main, in file Hacl_Test_Poly1305_64: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[38;5;202m⚠[0m Dropped some files while checking
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Hacl.Test.Poly1305_64.main calls Hacl.Impl.Poly1305_64.crypto_onetimeauth -- removing the static qualifier from Hacl.Impl.Poly1305_64.crypto_onetimeauth
+KreMLin: writing out .c and .h files for Hacl_UInt64, Hacl_UInt128, Hacl_UInt8, Hacl_UInt32, Poly1305_64, Hacl_UInt16, Hacl_Test_Poly1305_64
+[38;5;81m⚙ KreMLin will drive the C compiler.[0m Here's what we found:
+[4mgcc is:[0m x86_64-w64-mingw32-gcc
+[4mx86_64-w64-mingw32-gcc options are:[0m -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native
+[38;5;81m⚡ Generating object files[0m
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+[38;5;203m✘[0m [CC,poly-c/Hacl_UInt64.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Hacl_UInt64.c -o poly-c/Hacl_UInt64.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,poly-c/Hacl_UInt128.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Hacl_UInt128.c -o poly-c/Hacl_UInt128.o
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+KreMLin: writing out .c and .h files for Hacl_UInt64, Hacl_UInt128, Hacl_UInt32, Hacl_UInt8, Hacl_Symmetric_HSalsa20
+[38;5;203m✘[0m [CC,poly-c/Hacl_UInt8.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Hacl_UInt8.c -o poly-c/Hacl_UInt8.o
+[38;5;203m✘[0m [CC,poly-c/Hacl_UInt32.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Hacl_UInt32.c -o poly-c/Hacl_UInt32.o
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.XSalsa20.main, in file Hacl_Test_XSalsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[38;5;203m✘[0m [CC,poly-c/Poly1305_64.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Poly1305_64.c -o poly-c/Poly1305_64.o
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+KreMLin: writing out .c and .h files for Hacl_UInt64, Hacl_UInt128, Hacl_UInt32, Hacl_UInt8, Hacl_UInt16, Hacl_Symmetric_HSalsa20, Hacl_Endianness, Hacl_Symmetric_Salsa20, Hacl_Symmetric_XSalsa20, Hacl_Test_XSalsa20
+[38;5;81m⚙ KreMLin will drive the C compiler.[0m Here's what we found:
+[4mgcc is:[0m x86_64-w64-mingw32-gcc
+[4mx86_64-w64-mingw32-gcc options are:[0m -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99
+[38;5;81m⚡ Generating object files[0m
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,poly-c/Hacl_UInt16.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Hacl_UInt16.c -o poly-c/Hacl_UInt16.o
+[38;5;203m✘[0m [CC,xsalsa-c/Hacl_UInt64.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_UInt64.c -o xsalsa-c/Hacl_UInt64.o
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Warning 6: in the definition of result, after the definition of keysize, in top-level declaration Hacl.Test.X25519.main, in file Hacl_Test_X25519: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[38;5;203m✘[0m [CC,poly-c/Hacl_Test_Poly1305_64.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Hacl_Test_Poly1305_64.c -o poly-c/Hacl_Test_Poly1305_64.o
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+KreMLin: writing out .c and .h files for Hacl_UInt64, Hacl_UInt128, Hacl_UInt8, Hacl_UInt32, Hacl_UInt16, Hacl_Endianness, Curve25519, Hacl_Test_X25519
+[38;5;81m⚙ KreMLin will drive the C compiler.[0m Here's what we found:
+[4mgcc is:[0m x86_64-w64-mingw32-gcc
+[4mx86_64-w64-mingw32-gcc options are:[0m -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native
+[38;5;81m⚡ Generating object files[0m
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,xsalsa-c/Hacl_UInt128.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_UInt128.c -o xsalsa-c/Hacl_UInt128.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c -o poly-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,x25519-c/Hacl_UInt64.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Hacl_UInt64.c -o x25519-c/Hacl_UInt64.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+[38;5;203m✘[0m [LD] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native poly-c/testlib.o -o poly1305.exe -flto
+[38;5;203mgcc failed at the final linking phase[0m
+make[3]: *** [Makefile:76: extract-c] Error 250
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/poly1305'
+make[2]: *** [Makefile:6: poly1305-c] Error 2
+make[2]: *** Waiting for unfinished jobs....
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,xsalsa-c/Hacl_UInt32.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_UInt32.c -o xsalsa-c/Hacl_UInt32.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,x25519-c/Hacl_UInt128.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Hacl_UInt128.c -o x25519-c/Hacl_UInt128.o
+[38;5;203m✘[0m [CC,xsalsa-c/Hacl_UInt8.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_UInt8.c -o xsalsa-c/Hacl_UInt8.o
+[38;5;203m✘[0m [CC,x25519-c/Hacl_UInt8.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Hacl_UInt8.c -o x25519-c/Hacl_UInt8.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,xsalsa-c/Hacl_UInt16.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_UInt16.c -o xsalsa-c/Hacl_UInt16.o
+[38;5;203m✘[0m [CC,x25519-c/Hacl_UInt32.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Hacl_UInt32.c -o x25519-c/Hacl_UInt32.o
+[38;5;203m✘[0m [CC,x25519-c/Hacl_UInt16.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Hacl_UInt16.c -o x25519-c/Hacl_UInt16.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,xsalsa-c/Hacl_Symmetric_HSalsa20.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Symmetric_HSalsa20.c -o xsalsa-c/Hacl_Symmetric_HSalsa20.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,x25519-c/Hacl_Endianness.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Hacl_Endianness.c -o x25519-c/Hacl_Endianness.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,xsalsa-c/Hacl_Endianness.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Endianness.c -o xsalsa-c/Hacl_Endianness.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,xsalsa-c/Hacl_Symmetric_Salsa20.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Symmetric_Salsa20.c -o xsalsa-c/Hacl_Symmetric_Salsa20.o
+[38;5;203m✘[0m [CC,x25519-c/Curve25519.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Curve25519.c -o x25519-c/Curve25519.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,xsalsa-c/Hacl_Symmetric_XSalsa20.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Symmetric_XSalsa20.c -o xsalsa-c/Hacl_Symmetric_XSalsa20.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,x25519-c/Hacl_Test_X25519.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Hacl_Test_X25519.c -o x25519-c/Hacl_Test_X25519.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,xsalsa-c/Hacl_Test_XSalsa20.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Test_XSalsa20.c -o xsalsa-c/Hacl_Test_XSalsa20.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c -o x25519-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+[38;5;203m✘[0m [LD] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native x25519-c/testlib.o -o x25519.exe -flto
+[38;5;203mgcc failed at the final linking phase[0m
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/curve25519'
+make[3]: *** [Makefile:99: extract-c] Error 250
+make[2]: *** [Makefile:6: curve25519-c] Error 2
+[38;5;203m✘[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c -o xsalsa-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+[38;5;203m✘[0m [LD] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 xsalsa-c/testlib.o -o xsalsa20.exe -flto
+[38;5;203mgcc failed at the final linking phase[0m
+make[3]: *** [Makefile:104: XSalsa20.c] Error 250
+make[3]: *** Waiting for unfinished jobs....
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Warning 6: in the definition of ciphertext, after the definition of len, in top-level declaration Hacl.Test.Chacha20.main, in file Hacl_Test_Chacha20: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+Warning 7: : After inlining, Hacl.Test.Chacha20.loop calls Hacl.Symmetric.Chacha20.chacha20_update -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_update
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_keysetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_keysetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_encrypt_bytes -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_encrypt_bytes
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha20_finish -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_finish
+KreMLin: writing out .c and .h files for Hacl_UInt8, Hacl_UInt32, Hacl_UInt64, Hacl_UInt128, Hacl_UInt16, Hacl_Endianness, Chacha20, Hacl_Test_Chacha20
+[38;5;81m⚙ KreMLin will drive the C compiler.[0m Here's what we found:
+[4mgcc is:[0m x86_64-w64-mingw32-gcc
+[4mx86_64-w64-mingw32-gcc options are:[0m -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99
+[38;5;81m⚡ Generating object files[0m
+[38;5;203m✘[0m [CC,chacha-c/Hacl_UInt8.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c chacha-c/Hacl_UInt8.c -o chacha-c/Hacl_UInt8.o
+[38;5;203m✘[0m [CC,chacha-c/Hacl_UInt32.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c chacha-c/Hacl_UInt32.c -o chacha-c/Hacl_UInt32.o
+[38;5;203m✘[0m [CC,chacha-c/Hacl_UInt64.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c chacha-c/Hacl_UInt64.c -o chacha-c/Hacl_UInt64.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,chacha-c/Hacl_UInt128.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c chacha-c/Hacl_UInt128.c -o chacha-c/Hacl_UInt128.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,chacha-c/Hacl_UInt16.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c chacha-c/Hacl_UInt16.c -o chacha-c/Hacl_UInt16.o
+[38;5;203m✘[0m [CC,chacha-c/Hacl_Endianness.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c chacha-c/Hacl_Endianness.c -o chacha-c/Hacl_Endianness.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,chacha-c/Chacha20.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c chacha-c/Chacha20.c -o chacha-c/Chacha20.o
+[38;5;203m✘[0m [CC,chacha-c/Hacl_Test_Chacha20.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c chacha-c/Hacl_Test_Chacha20.c -o chacha-c/Hacl_Test_Chacha20.o
+[38;5;203m✘[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c -o chacha-c/kremlib.o
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [LD] (use -verbose to see the output)
+[38;5;203mgcc failed at the final linking phase[0m
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 chacha-c/testlib.o -o chacha20.exe
+make[3]: *** [Makefile:65: Chacha20.c] Error 250
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of ciphertext, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of expected4, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of nonce, after the definition of key, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Hacl.Test.Salsa20.main calls Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor -- removing the static qualifier from Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor
+KreMLin: writing out .c and .h files for Hacl_UInt64, Hacl_UInt128, Hacl_UInt32, Hacl_UInt8, Hacl_UInt16, Hacl_Endianness, Salsa20, Hacl_Test_Salsa20
+[38;5;81m⚙ KreMLin will drive the C compiler.[0m Here's what we found:
+[4mgcc is:[0m x86_64-w64-mingw32-gcc
+[4mx86_64-w64-mingw32-gcc options are:[0m -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99
+[38;5;81m⚡ Generating object files[0m
+[38;5;203m✘[0m [CC,salsa-c/Hacl_UInt64.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Hacl_UInt64.c -o salsa-c/Hacl_UInt64.o
+[38;5;203m✘[0m [CC,salsa-c/Hacl_UInt128.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Hacl_UInt128.c -o salsa-c/Hacl_UInt128.o
+[38;5;203m✘[0m [CC,salsa-c/Hacl_UInt32.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Hacl_UInt32.c -o salsa-c/Hacl_UInt32.o
+[38;5;203m✘[0m [CC,salsa-c/Hacl_UInt8.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Hacl_UInt8.c -o salsa-c/Hacl_UInt8.o
+[38;5;203m✘[0m [CC,salsa-c/Hacl_UInt16.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Hacl_UInt16.c -o salsa-c/Hacl_UInt16.o
+[38;5;203m✘[0m [CC,salsa-c/Hacl_Endianness.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Hacl_Endianness.c -o salsa-c/Hacl_Endianness.o
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [CC,salsa-c/Salsa20.c] (use -verbose to see the output)
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Salsa20.c -o salsa-c/Salsa20.o
+[38;5;203m✘[0m [CC,salsa-c/Hacl_Test_Salsa20.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Hacl_Test_Salsa20.c -o salsa-c/Hacl_Test_Salsa20.o
+[38;5;203m✘[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c -o salsa-c/kremlib.o
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+Warning 3: run_or_warn: the following command failed:
+[38;5;203m✘[0m [LD] (use -verbose to see the output)
+[38;5;203mgcc failed at the final linking phase[0m
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 salsa-c/testlib.o -o salsa20.exe -flto
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/salsa-family'
+make[3]: *** [Makefile:85: Salsa20.c] Error 250
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code'
+make[2]: *** [Makefile:6: salsa-family-c] Error 2
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+make[1]: *** [Makefile:12: extract-c-code] Error 2
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+make: *** [Makefile:2: all] Error 2
