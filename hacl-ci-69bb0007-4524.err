@@ -1,0 +1,83 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Checker.ml", line 367, characters 69-90
+Called from file "src/Checker.ml", line 291, characters 16-42
+Called from file "src/Checker.ml", line 190, characters 2-16
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/Checker.ml", line 147, characters 6-25
+Dropping Hacl_Spec_Poly1305 (at checking time)
+
+Warning 6: in the definition of mac, after the definition of macsize, in top-level declaration Hacl.Test.Poly1305_64.main, in file Hacl_Test_Poly1305_64: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Poly1305_64.main calls Hacl.Impl.Poly1305_64.crypto_onetimeauth -- removing the static qualifier from Hacl.Impl.Poly1305_64.crypto_onetimeauth
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.XSalsa20.main, in file Hacl_Test_XSalsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of result, after the definition of keysize, in top-level declaration Hacl.Test.X25519.main, in file Hacl_Test_X25519: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning 6: in the definition of ciphertext, after the definition of len, in top-level declaration Hacl.Test.Chacha20.main, in file Hacl_Test_Chacha20: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Chacha20.loop calls Hacl.Symmetric.Chacha20.chacha20_update -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_update
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_keysetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_keysetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_encrypt_bytes -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_encrypt_bytes
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha20_finish -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_finish
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of ciphertext, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of expected4, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of nonce, after the definition of key, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Salsa20.main calls Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor -- removing the static qualifier from Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Checker.ml", line 367, characters 69-90
+Called from file "src/Checker.ml", line 291, characters 16-42
+Called from file "src/Checker.ml", line 190, characters 2-16
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/Checker.ml", line 147, characters 6-25
+Dropping Hacl_Spec_Poly1305 (at checking time)
+
+Warning 6: in the definition of k, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, after the definition of len, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @5 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.little_endian calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.big_endian calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.little_bytes calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Hacl.Impl.Poly1305_64.poly1305_update calls Hacl.Bignum.AddAndMultiply.add_and_multiply -- removing the static qualifier from Hacl.Bignum.AddAndMultiply.add_and_multiply
+Warning 7: : After inlining, Hacl.Impl.Poly1305_64.carry_last_unrolled calls Hacl.Bignum.Modulo.carry_top -- removing the static qualifier from Hacl.Bignum.Modulo.carry_top
+Warning 7: : After inlining, Hacl.Impl.Poly1305_64.carry_last_unrolled calls Hacl.Bignum.Fproduct.carry_0_to_1 -- removing the static qualifier from Hacl.Bignum.Fproduct.carry_0_to_1
+Warning 7: : After inlining, Hacl.Impl.Poly1305_64.poly1305_last_pass calls Hacl.Bignum.Fproduct.carry_limb_ -- removing the static qualifier from Hacl.Bignum.Fproduct.carry_limb_
+Warning 7: : After inlining, Crypto.Symmetric.MAC.encode_r calls Hacl.Impl.Poly1305_64.poly1305_encode_r -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_encode_r
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update calls Hacl.Impl.Poly1305_64.poly1305_update -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_update
+Warning 7: : After inlining, Crypto.Symmetric.MAC.finish calls Hacl.Impl.Poly1305_64.poly1305_finish_ -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_finish_
+Warning 7: : After inlining, Crypto.AEAD.Invariant.remaining_len_ok calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.AEAD.Encoding.add_bytes -- removing the static qualifier from Crypto.AEAD.Encoding.add_bytes
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.AEAD.Encoding.store_lengths_poly1305 -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_poly1305
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.AEAD.Encoding.store_lengths_ghash -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_ghash
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Hacl.Impl.Poly1305_64.poly1305_start -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_start
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.Symmetric.PRF.getBlock -- removing the static qualifier from Crypto.Symmetric.PRF.getBlock
+Warning: Unable to open hints file: C:\Build\Agent2\_work\13\s\code\bignum\Hacl.Spec.Bignum.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\13\s\code\bignum\Hacl.Spec.Bignum.Fmul.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\13\s\code\bignum\Hacl.Spec.Bignum.Fmul.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\13\s\code\bignum\Hacl.Bignum.Fmul.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\13\s\code\bignum\Hacl.Bignum.Fmul.fst.hints; ran without hints
