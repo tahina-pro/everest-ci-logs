@@ -1,0 +1,2000 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: fournet_wip
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc 6.1.0'.
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent2\_work\1\s\bin\basic.dll
+absyn -> C:\Build\Agent2\_work\1\s\bin\absyn.dll
+tc -> C:\Build\Agent2\_work\1\s\bin\tc.dll
+format -> C:\Build\Agent2\_work\1\s\bin\format.dll
+tosmt -> C:\Build\Agent2\_work\1\s\bin\tosmt.dll
+syntax -> C:\Build\Agent2\_work\1\s\bin\syntax.dll
+typechecker -> C:\Build\Agent2\_work\1\s\bin\typechecker.dll
+extraction -> C:\Build\Agent2\_work\1\s\bin\extraction.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent2\_work\1\s\bin\prettyprint.dll
+compiling to dfas (can take a while...)
+341 states
+writing output
+building tables
+computing first function...time: 00:00:00.2097511
+building kernels...time: 00:00:00.1445002
+building kernel table...time: 00:00:00.0182158
+computing lookahead relations................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.5021957
+building lookahead table...time: 00:00:00.2279933
+building action table...state 30: shift/reduce error on BAR
+state 410: shift/reduce error on SEMICOLON
+state 437: shift/reduce error on BAR
+state 440: shift/reduce error on BAR
+state 452: shift/reduce error on BAR
+state 528: shift/reduce error on COLON_EQUALS
+state 564: shift/reduce error on LBRACE
+time: 00:00:00.8193750
+building goto table...time: 00:00:00.2970976
+returning tables.
+7 shift/reduce conflicts
+717 states
+139 nonterminals
+139 terminals
+386 productions
+#rows in action table: 717
+parser -> C:\Build\Agent2\_work\1\s\bin\parser.dll
+fsdoc -> C:\Build\Agent2\_work\1\s\bin\fsdoc.dll
+smtencoding -> C:\Build\Agent2\_work\1\s\bin\smtencoding.dll
+fstar -> C:\Build\Agent2\_work\1\s\bin\fstar.exe
+tests -> C:\Build\Agent2\_work\1\s\bin\tests.exe
+chmod a+x ../bin/tests.exe
+chmod a+x ../bin/fstar.exe
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make fsharp-regressions
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+../bin/tests.exe
+Initializing ...
+Testing the normalizer
+0: ...
+1: ...
+2: ...
+3: ...
+4: ...
+5: ...
+6: ...
+7: ...
+8: ...
+9: ...
+10: ...
+11: ...
+12: ...
+13: ...
+14: ...
+15: ...
+16: ...
+17: ...
+18: ...
+19: ...
+20: ...
+21: ...
+22: ...
+23: ...
+Normalizer ok
+Testing the unifier
+0 ...
+Unify x
+and x
+
+1 ...
+Unify x
+and y
+
+2 ...
+Unify x
+and ((fun x -> x@0) x)
+
+3 ...
+Unify (fun x -> x@0)
+and (fun x -> x@0)
+
+4 ...
+Unify (fun x -> x@0)
+and (fun y -> y@0)
+
+5 ...
+Unify (fun x y -> x@1)
+and (fun a b -> a@1)
+
+6 ...
+Unify (fun x y z -> y@1)
+and (fun a b c -> b@1)
+
+7 ...
+Unify (fun x y -> y@0)
+and (fun x y -> x@1)
+
+8 ...
+Unify (fun x y z -> y@1)
+and (fun x y z -> z@0)
+
+9 ...
+Unify (fun x -> (?82822 x@0))
+and (fun x -> (tuple2 x@0 x@0))
+
+10 ...
+Unify (fun x -> (?82827 x@0))
+and (fun x y -> (op_Addition x@1 y@0))
+
+11 ...
+Unify (x:int -> y:(y#733425:int{(eq2 y@0 x@1)}) -> Tot bool)
+and (x:int -> y:int -> Tot bool)
+
+12 ...
+Unify (a:Type -> b:(_:a@0 -> Type) -> x:a@1 -> y:(b@1 x@0) -> Type)
+and (a:Type -> b:(_:a@0 -> Type) -> x:a@1 -> y:(b@1 x@0) -> Type)
+
+Unifier ok
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make -C ocaml-output
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src/ocaml-output'
+# TODO : call menhir directly when positions are fixed instead of
+cp ../parser/ml/parseit.ml FStar_Parser_ParseIt.ml
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+echo 'let version = "0.9.3.1-beta"' > FStar_Version.ml
+# (NOT the same as ../parser/parse.mly !)
+echo 'let platform = "Windows_x64"' >> FStar_Version.ml
+cp parse.mly ../parser/ml/
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+# We are opening the same module twice but we need these modules
+echo 'let date = "2017-02-09T08:09:44-08:00"' >> FStar_Version.ml
+echo "%{" > ../parser/parse.fsy
+# open for the definition of tokens
+echo 'let commit= "1bfd3de (dirty)"' >> FStar_Version.ml
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar_Absyn_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar_Absyn_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Absyn.Syntax" >> ../parser/parse.fsy
+echo "open FStar_Absyn_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Absyn.Const" >> ../parser/parse.fsy
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar.Absyn.Util" >> ../parser/parse.fsy
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+echo "open FStar.Ident" >> ../parser/parse.fsy
+# TODO: create a proper OCamlbuild rule for this production so that
+echo "open FStar.String" >> ../parser/parse.fsy
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+# menhir) and removes the production as needed.
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+ocamllex ../parser/ml/lex.mll -o FStar_Parser_LexFStar.ml
+236 states, 6512 transitions, table size 27464 bytes
+2470 additional bytes used for bindings
+cd ../../ && ocamlbuild -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I lib/ml -use-ocamlfind main.native
+mkdir 'C:\Build\Agent2\_work\1\s\src/ocaml-output/_build'
+mkdir src
+mkdir src/fstar
+mkdir src/fstar/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/fstar/ml/main.ml > src/fstar/ml/main.ml.depends
+mkdir src/ocaml-output
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_FStar.ml > src/ocaml-output/FStar_FStar.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Absyn_Syntax.ml > src/ocaml-output/FStar_Absyn_Syntax.ml.depends
+mkdir lib
+mkdir lib/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_All.ml > lib/ml/FStar_All.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Const.ml > src/ocaml-output/FStar_Const.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_BaseTypes.ml > lib/ml/FStar_BaseTypes.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Char.ml > lib/ml/FStar_Char.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Float.ml > lib/ml/FStar_Float.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Int16.ml > lib/ml/FStar_Int16.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Int32.ml > lib/ml/FStar_Int32.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Int64.ml > lib/ml/FStar_Int64.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Int8.ml > lib/ml/FStar_Int8.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_UInt16.ml > lib/ml/FStar_UInt16.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_UInt8.ml > lib/ml/FStar_UInt8.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Char.cmo lib/ml/FStar_Char.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Float.cmo lib/ml/FStar_Float.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int16.cmo lib/ml/FStar_Int16.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int32.cmo lib/ml/FStar_Int32.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int64.cmo lib/ml/FStar_Int64.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int8.cmo lib/ml/FStar_Int8.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_UInt16.cmo lib/ml/FStar_UInt16.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_UInt8.cmo lib/ml/FStar_UInt8.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Ident.ml > src/ocaml-output/FStar_Ident.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_All.cmo lib/ml/FStar_All.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_List.ml > lib/ml/FStar_List.ml.depends
+mkdir src/basic
+mkdir src/basic/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Range.ml > src/basic/ml/FStar_Range.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_BaseTypes.cmo lib/ml/FStar_BaseTypes.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Util.ml > src/basic/ml/FStar_Util.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_List.cmo lib/ml/FStar_List.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/prims.ml > lib/ml/prims.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/MkPrims.ml > lib/ml/MkPrims.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/MkPrims.cmo lib/ml/MkPrims.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/prims.cmo lib/ml/prims.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Util.cmo src/basic/ml/FStar_Util.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_ST.ml > lib/ml/FStar_ST.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_String.ml > lib/ml/FStar_String.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Range.cmo src/basic/ml/FStar_Range.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_ST.cmo lib/ml/FStar_ST.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_String.cmo lib/ml/FStar_String.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Ident.cmo src/ocaml-output/FStar_Ident.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Unionfind.ml > src/basic/ml/FStar_Unionfind.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Const.cmo src/ocaml-output/FStar_Const.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Unionfind.cmo src/basic/ml/FStar_Unionfind.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Absyn_Util.ml > src/ocaml-output/FStar_Absyn_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Absyn_Const.ml > src/ocaml-output/FStar_Absyn_Const.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Syntax.cmo src/ocaml-output/FStar_Absyn_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Absyn_Visit.ml > src/ocaml-output/FStar_Absyn_Visit.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Const.cmo src/ocaml-output/FStar_Absyn_Const.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Visit.cmo src/ocaml-output/FStar_Absyn_Visit.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_Kremlin.ml > src/ocaml-output/FStar_Extraction_Kremlin.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_ML_Code.ml > src/ocaml-output/FStar_Extraction_ML_Code.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Bytes.ml > src/basic/ml/FStar_Bytes.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_ML_Syntax.ml > src/ocaml-output/FStar_Extraction_ML_Syntax.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_Syntax.ml > src/ocaml-output/FStar_Syntax_Syntax.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Syntax.cmo src/ocaml-output/FStar_Syntax_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_ML_Util.ml > src/ocaml-output/FStar_Extraction_ML_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Absyn_Print.ml > src/ocaml-output/FStar_Absyn_Print.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Util.cmo src/ocaml-output/FStar_Absyn_Util.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Options.ml > src/ocaml-output/FStar_Options.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Getopt.ml > src/basic/ml/FStar_Getopt.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/basic/ml/FStar_Platform.ml > src/basic/ml/FStar_Platform.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Getopt.cmo src/basic/ml/FStar_Getopt.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Platform.cmo src/basic/ml/FStar_Platform.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Options.cmo src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_ML_Env.ml > src/ocaml-output/FStar_Extraction_ML_Env.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Print.cmo src/ocaml-output/FStar_Absyn_Print.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Syntax.cmo src/ocaml-output/FStar_Extraction_ML_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Env.ml > src/ocaml-output/FStar_Tc_Env.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Env.cmo src/ocaml-output/FStar_Tc_Env.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_ML_UEnv.ml > src/ocaml-output/FStar_Extraction_ML_UEnv.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_Const.ml > src/ocaml-output/FStar_Syntax_Const.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_Print.ml > src/ocaml-output/FStar_Syntax_Print.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Const.cmo src/ocaml-output/FStar_Syntax_Const.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_Subst.ml > src/ocaml-output/FStar_Syntax_Subst.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules lib/ml/FStar_Option.ml > lib/ml/FStar_Option.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Option.cmo lib/ml/FStar_Option.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_Util.ml > src/ocaml-output/FStar_Syntax_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_InstFV.ml > src/ocaml-output/FStar_Syntax_InstFV.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Subst.cmo src/ocaml-output/FStar_Syntax_Subst.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_InstFV.cmo src/ocaml-output/FStar_Syntax_InstFV.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Util.cmo src/ocaml-output/FStar_Syntax_Util.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_TypeChecker_Env.ml > src/ocaml-output/FStar_TypeChecker_Env.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Syntax_Free.ml > src/ocaml-output/FStar_Syntax_Free.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Print.cmo src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_TypeChecker_Common.ml > src/ocaml-output/FStar_TypeChecker_Common.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Free.cmo src/ocaml-output/FStar_Syntax_Free.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Common.cmo src/ocaml-output/FStar_TypeChecker_Common.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmo src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Recheck.ml > src/ocaml-output/FStar_Tc_Recheck.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Env.cmo src/ocaml-output/FStar_Extraction_ML_Env.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmo src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Recheck.cmo src/ocaml-output/FStar_Tc_Recheck.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Format.ml > src/ocaml-output/FStar_Format.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Bytes.cmo src/basic/ml/FStar_Bytes.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmo src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Format.cmo src/ocaml-output/FStar_Format.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmo src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_ML_ExtractMod.ml > src/ocaml-output/FStar_Extraction_ML_ExtractMod.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_ML_ExtractExp.ml > src/ocaml-output/FStar_Extraction_ML_ExtractExp.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_ML_ExtractTyp.ml > src/ocaml-output/FStar_Extraction_ML_ExtractTyp.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Normalize.ml > src/ocaml-output/FStar_Tc_Normalize.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Normalize.cmo src/ocaml-output/FStar_Tc_Normalize.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_ExtractTyp.cmo src/ocaml-output/FStar_Extraction_ML_ExtractTyp.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_ExtractExp.cmo src/ocaml-output/FStar_Extraction_ML_ExtractExp.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_ML_Modul.ml > src/ocaml-output/FStar_Extraction_ML_Modul.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Extraction_ML_Term.ml > src/ocaml-output/FStar_Extraction_ML_Term.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_TypeChecker_Normalize.ml > src/ocaml-output/FStar_TypeChecker_Normalize.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_TypeChecker_TcTerm.ml > src/ocaml-output/FStar_TypeChecker_TcTerm.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_TypeChecker_Errors.ml > src/ocaml-output/FStar_TypeChecker_Errors.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmo src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_TypeChecker_Rel.ml > src/ocaml-output/FStar_TypeChecker_Rel.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Errors.cmo src/ocaml-output/FStar_TypeChecker_Errors.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_TypeChecker_Util.ml > src/ocaml-output/FStar_TypeChecker_Util.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmo src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmo src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmo src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmo src/ocaml-output/FStar_Extraction_ML_Term.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Fsdoc_Generator.ml > src/ocaml-output/FStar_Fsdoc_Generator.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_AST.ml > src/ocaml-output/FStar_Parser_AST.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Errors.ml > src/ocaml-output/FStar_Tc_Errors.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Errors.cmo src/ocaml-output/FStar_Tc_Errors.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_Driver.ml > src/ocaml-output/FStar_Parser_Driver.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_AST.cmo src/ocaml-output/FStar_Parser_AST.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_ParseIt.ml > src/ocaml-output/FStar_Parser_ParseIt.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_LexFStar.ml > src/ocaml-output/FStar_Parser_LexFStar.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_Parse.ml > src/ocaml-output/FStar_Parser_Parse.ml.depends
+mkdir src/parser
+mkdir src/parser/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/parser/ml/FStar_Parser_Util.ml > src/parser/ml/FStar_Parser_Util.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/parser/ml/FStar_Parser_Util.cmo src/parser/ml/FStar_Parser_Util.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Parse.cmo src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_LexFStar.cmo src/ocaml-output/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_ParseIt.cmo src/ocaml-output/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Driver.cmo src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Interactive.ml > src/ocaml-output/FStar_Interactive.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_Dep.ml > src/ocaml-output/FStar_Parser_Dep.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_SMTEncoding_Solver.ml > src/ocaml-output/FStar_SMTEncoding_Solver.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_SMTEncoding_Encode.ml > src/ocaml-output/FStar_SMTEncoding_Encode.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml > src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_SMTEncoding_Term.ml > src/ocaml-output/FStar_SMTEncoding_Term.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_SMTEncoding_Util.ml > src/ocaml-output/FStar_SMTEncoding_Util.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmo src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_SMTEncoding_Z3.ml > src/ocaml-output/FStar_SMTEncoding_Z3.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmo src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmo src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmo src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml > src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmo src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmo src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Dep.cmo src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmo src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Stratified.ml > src/ocaml-output/FStar_Stratified.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Dependences.ml > src/ocaml-output/FStar_Dependences.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Interactive.cmo src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_Desugar.ml > src/ocaml-output/FStar_Parser_Desugar.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_DesugarEnv.ml > src/ocaml-output/FStar_Parser_DesugarEnv.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_DesugarEnv.cmo src/ocaml-output/FStar_Parser_DesugarEnv.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Tc.ml > src/ocaml-output/FStar_Tc_Tc.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Rel.ml > src/ocaml-output/FStar_Tc_Rel.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Tc_Util.ml > src/ocaml-output/FStar_Tc_Util.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Rel.cmo src/ocaml-output/FStar_Tc_Rel.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Util.cmo src/ocaml-output/FStar_Tc_Util.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_ToSMT_Encode.ml > src/ocaml-output/FStar_ToSMT_Encode.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_ToSMT_SplitQueryCases.ml > src/ocaml-output/FStar_ToSMT_SplitQueryCases.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_ToSMT_Term.ml > src/ocaml-output/FStar_ToSMT_Term.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_ToSMT_Term.cmo src/ocaml-output/FStar_ToSMT_Term.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_ToSMT_Z3.ml > src/ocaml-output/FStar_ToSMT_Z3.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_ToSMT_SplitQueryCases.cmo src/ocaml-output/FStar_ToSMT_SplitQueryCases.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_ToSMT_Z3.cmo src/ocaml-output/FStar_ToSMT_Z3.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Dependences.cmo src/ocaml-output/FStar_Dependences.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Desugar.cmo src/ocaml-output/FStar_Parser_Desugar.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Tc.cmo src/ocaml-output/FStar_Tc_Tc.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_ToSMT_Encode.cmo src/ocaml-output/FStar_ToSMT_Encode.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Universal.ml > src/ocaml-output/FStar_Universal.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_Env.ml > src/ocaml-output/FStar_Parser_Env.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_Interleave.ml > src/ocaml-output/FStar_Parser_Interleave.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_Parser_ToSyntax.ml > src/ocaml-output/FStar_Parser_ToSyntax.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Env.cmo src/ocaml-output/FStar_Parser_Env.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_TypeChecker_Tc.ml > src/ocaml-output/FStar_TypeChecker_Tc.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -modules src/ocaml-output/FStar_TypeChecker_DMFF.ml > src/ocaml-output/FStar_TypeChecker_DMFF.ml.depends
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmo src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Interleave.cmo src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_ToSyntax.cmo src/ocaml-output/FStar_Parser_ToSyntax.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmo src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmo src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_ExtractMod.cmo src/ocaml-output/FStar_Extraction_ML_ExtractMod.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmo src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmo src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Stratified.cmo src/ocaml-output/FStar_Stratified.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Universal.cmo src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_FStar.cmo src/ocaml-output/FStar_FStar.ml
+''ocamlfind ocamlc -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/basic/ml -I lib/ml -o src/fstar/ml/main.cmo src/fstar/ml/main.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Char.cmx lib/ml/FStar_Char.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Float.cmx lib/ml/FStar_Float.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int16.cmx lib/ml/FStar_Int16.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int32.cmx lib/ml/FStar_Int32.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int64.cmx lib/ml/FStar_Int64.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Int8.cmx lib/ml/FStar_Int8.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_UInt16.cmx lib/ml/FStar_UInt16.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_UInt8.cmx lib/ml/FStar_UInt8.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_All.cmx lib/ml/FStar_All.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_BaseTypes.cmx lib/ml/FStar_BaseTypes.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_List.cmx lib/ml/FStar_List.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/MkPrims.cmx lib/ml/MkPrims.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/prims.cmx lib/ml/prims.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Util.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Range.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_ST.cmx lib/ml/FStar_ST.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_String.cmx lib/ml/FStar_String.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Ident.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Const.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Unionfind.cmx src/basic/ml/FStar_Unionfind.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Syntax.cmx src/ocaml-output/FStar_Absyn_Syntax.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Const.cmx src/ocaml-output/FStar_Absyn_Const.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Visit.cmx src/ocaml-output/FStar_Absyn_Visit.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Syntax.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Util.cmx src/ocaml-output/FStar_Absyn_Util.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Getopt.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Platform.cmx src/basic/ml/FStar_Platform.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Absyn_Print.cmx src/ocaml-output/FStar_Absyn_Print.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Env.cmx src/ocaml-output/FStar_Tc_Env.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/FStar_Syntax_Const.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I lib/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o lib/ml/FStar_Option.cmx lib/ml/FStar_Option.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_Subst.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_InstFV.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Util.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_Syntax_Free.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Common.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Env.cmx src/ocaml-output/FStar_Extraction_ML_Env.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Recheck.cmx src/ocaml-output/FStar_Tc_Recheck.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I lib/ml -o src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Bytes.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Format.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Normalize.cmx src/ocaml-output/FStar_Tc_Normalize.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_ExtractTyp.cmx src/ocaml-output/FStar_Extraction_ML_ExtractTyp.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_ExtractExp.cmx src/ocaml-output/FStar_Extraction_ML_ExtractExp.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Errors.cmx src/ocaml-output/FStar_TypeChecker_Errors.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Term.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Errors.cmx src/ocaml-output/FStar_Tc_Errors.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_AST.cmx src/ocaml-output/FStar_Parser_AST.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/parser/ml/FStar_Parser_Util.cmx src/parser/ml/FStar_Parser_Util.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Parse.cmx src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_LexFStar.cmx src/ocaml-output/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_DesugarEnv.cmx src/ocaml-output/FStar_Parser_DesugarEnv.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Rel.cmx src/ocaml-output/FStar_Tc_Rel.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Util.cmx src/ocaml-output/FStar_Tc_Util.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_ToSMT_Term.cmx src/ocaml-output/FStar_ToSMT_Term.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_ToSMT_SplitQueryCases.cmx src/ocaml-output/FStar_ToSMT_SplitQueryCases.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_ToSMT_Z3.cmx src/ocaml-output/FStar_ToSMT_Z3.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Dependences.cmx src/ocaml-output/FStar_Dependences.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Desugar.cmx src/ocaml-output/FStar_Parser_Desugar.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Tc_Tc.cmx src/ocaml-output/FStar_Tc_Tc.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_ToSMT_Encode.cmx src/ocaml-output/FStar_ToSMT_Encode.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Env.cmx src/ocaml-output/FStar_Parser_Env.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Parser_ToSyntax.cmx src/ocaml-output/FStar_Parser_ToSyntax.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_ExtractMod.cmx src/ocaml-output/FStar_Extraction_ML_ExtractMod.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmx src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Stratified.cmx src/ocaml-output/FStar_Stratified.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -I lib/ml -o src/ocaml-output/FStar_FStar.cmx src/ocaml-output/FStar_FStar.ml
+''ocamlfind ocamlopt -c -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/basic/ml -I lib/ml -o src/fstar/ml/main.cmx src/fstar/ml/main.ml
+''ocamlfind ocamlopt -linkpkg -thread -package batteries -package zarith -package yojson lib/ml/FStar_All.cmx lib/ml/FStar_Char.cmx lib/ml/FStar_Float.cmx lib/ml/FStar_Int16.cmx lib/ml/FStar_Int32.cmx lib/ml/FStar_Int64.cmx lib/ml/FStar_Int8.cmx lib/ml/FStar_UInt16.cmx lib/ml/FStar_UInt8.cmx lib/ml/FStar_BaseTypes.cmx lib/ml/FStar_List.cmx lib/ml/FStar_Option.cmx lib/ml/FStar_ST.cmx lib/ml/FStar_String.cmx lib/ml/MkPrims.cmx lib/ml/prims.cmx src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Platform.cmx src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Unionfind.cmx src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Absyn_Syntax.cmx src/ocaml-output/FStar_Absyn_Const.cmx src/ocaml-output/FStar_Absyn_Visit.cmx src/ocaml-output/FStar_Absyn_Util.cmx src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Absyn_Print.cmx src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Tc_Env.cmx src/ocaml-output/FStar_Tc_Recheck.cmx src/ocaml-output/FStar_Tc_Normalize.cmx src/ocaml-output/FStar_Tc_Errors.cmx src/ocaml-output/FStar_Parser_AST.cmx src/parser/ml/FStar_Parser_Util.cmx src/ocaml-output/FStar_Parser_Parse.cmx src/ocaml-output/FStar_Parser_LexFStar.cmx src/ocaml-output/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Dependences.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Extraction_ML_Env.cmx src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_Extraction_ML_ExtractTyp.cmx src/ocaml-output/FStar_Extraction_ML_ExtractExp.cmx src/ocaml-output/FStar_Extraction_ML_ExtractMod.cmx src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Errors.cmx src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Fsdoc_Generator.cmx src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Parser_DesugarEnv.cmx src/ocaml-output/FStar_Parser_Desugar.cmx src/ocaml-output/FStar_Parser_Env.cmx src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_Parser_ToSyntax.cmx src/ocaml-output/FStar_Tc_Rel.cmx src/ocaml-output/FStar_Tc_Util.cmx src/ocaml-output/FStar_Tc_Tc.cmx src/ocaml-output/FStar_ToSMT_Term.cmx src/ocaml-output/FStar_ToSMT_SplitQueryCases.cmx src/ocaml-output/FStar_ToSMT_Z3.cmx src/ocaml-output/FStar_ToSMT_Encode.cmx src/ocaml-output/FStar_Stratified.cmx src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_FStar.cmx src/fstar/ml/main.cmx -o src/fstar/ml/main.native
+# Parallel statistics: { count(total): 30(226), max: 8, min: 2, average(total): 3.133(1.283) }
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src/ocaml-output'
+make fstar-ocaml
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make ocaml
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make clean_ocaml_prep
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+rm -rf boot_fsts boot_fstis
+mkdir boot_fsts boot_fstis
+cp basic/bytes.fsti boot_fstis/
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make extract_ocaml_prep
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+./tools/make_all_boot_fsts "basic/options.fs basic/ident.fs basic/const.fs format/formatml.fs absyn/syntax.fs absyn/const.fs absyn/visit.fs absyn/util.fs absyn/print.fs syntax/syntax.fsi syntax/syntax.fs syntax/const.fs syntax/subst.fsi syntax/subst.fs syntax/free.fsi syntax/free.fs syntax/instfv.fsi syntax/instfv.fs syntax/util.fs syntax/print.fsi syntax/print.fs tc/tcenv.fsi tc/tcenv.fs tc/recheck.fs tc/normalize.fsi tc/normalize.fs tc/errors.fs tc/rel.fsi tc/rel.fs tc/tcutil.fsi tc/tcutil.fs tc/tc.fs tosmt/term.fsi tosmt/term.fs tosmt/z3.fs tosmt/splitcases.fs tosmt/encode.fs parser/ast.fs parser/dsenv.fs parser/desugar.fs parser/env.fs parser/interleave.fs parser/tosyntax.fs parser/lexhelp.fs parser/parseit.fsi parser/driver.fs parser/dep.fs parser/todocument.fs typechecker/common.fs typechecker/env.fsi typechecker/env.fs typechecker/normalize.fsi typechecker/normalize.fs typechecker/errors.fs typechecker/rel.fsi typechecker/rel.fs typechecker/util.fsi typechecker/util.fs typechecker/dmff.fs typechecker/tcterm.fsi typechecker/tcterm.fs typechecker/tc.fsi typechecker/tc.fs extraction/ml-syntax.fs extraction/env.fs extraction/uenv.fs extraction/util.fs extraction/codegen.fsi extraction/codegen.fs extraction/extracttyp.fs extraction/extractexp.fs extraction/extractmod.fs extraction/term.fs extraction/modul.fs extraction/kremlin.fs fsdoc/generator.fs smtencoding/term.fsi smtencoding/term.fs smtencoding/util.fs smtencoding/z3.fs smtencoding/splitcases.fs smtencoding/errorReporting.fs smtencoding/encode.fs smtencoding/solver.fs fstar/dependences.fs fstar/interactive.fs fstar/stratified.fs fstar/universal.fs fstar/fstar.fs"
+[make_all_boot_fsts]: full_name=FStar.Options, noext_file=basic/options
+Found an .fs; also found an .fsi
+Found marker for basic/options.fs at line 44
+[make_all_boot_fsts]: full_name=FStar.Ident, noext_file=basic/ident
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Const, noext_file=basic/const
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Format, noext_file=format/formatml
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Absyn.Syntax, noext_file=absyn/syntax
+Found an .fs; also found an .fsi
+Found marker for absyn/syntax.fs at line 276
+[make_all_boot_fsts]: full_name=FStar.Absyn.Const, noext_file=absyn/const
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Absyn.Visit, noext_file=absyn/visit
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Absyn.Util, noext_file=absyn/util
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Absyn.Print, noext_file=absyn/print
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Syntax.Syntax, noext_file=syntax/syntax.fsi
+[make_all_boot_fsts]: full_name=FStar.Syntax.Syntax, noext_file=syntax/syntax
+Found an .fs; also found an .fsi
+Found marker for syntax/syntax.fs at line 343
+[make_all_boot_fsts]: full_name=FStar.Syntax.Const, noext_file=syntax/const
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Syntax.Subst, noext_file=syntax/subst.fsi
+[make_all_boot_fsts]: full_name=FStar.Syntax.Subst, noext_file=syntax/subst
+Found an .fs; also found an .fsi
+Found marker for syntax/subst.fs at line 27
+[make_all_boot_fsts]: full_name=FStar.Syntax.Free, noext_file=syntax/free.fsi
+[make_all_boot_fsts]: full_name=FStar.Syntax.Free, noext_file=syntax/free
+Found an .fs; also found an .fsi
+Found marker for syntax/free.fs at line 26
+[make_all_boot_fsts]: full_name=FStar.Syntax.InstFV, noext_file=syntax/instfv.fsi
+[make_all_boot_fsts]: full_name=FStar.Syntax.InstFV, noext_file=syntax/instfv
+Found an .fs; also found an .fsi
+Found marker for syntax/instfv.fs at line 27
+[make_all_boot_fsts]: full_name=FStar.Syntax.Util, noext_file=syntax/util
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Syntax.Print, noext_file=syntax/print.fsi
+[make_all_boot_fsts]: full_name=FStar.Syntax.Print, noext_file=syntax/print
+Found an .fs; also found an .fsi
+Found marker for syntax/print.fs at line 29
+[make_all_boot_fsts]: full_name=FStar.Tc.Env, noext_file=tc/tcenv.fsi
+[make_all_boot_fsts]: full_name=FStar.Tc.Env, noext_file=tc/tcenv
+Found an .fs; also found an .fsi
+Found marker for tc/tcenv.fs at line 103
+[make_all_boot_fsts]: full_name=FStar.Tc.Recheck, noext_file=tc/recheck
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Tc.Normalize, noext_file=tc/normalize.fsi
+[make_all_boot_fsts]: full_name=FStar.Tc.Normalize, noext_file=tc/normalize
+Found an .fs; also found an .fsi
+Found marker for tc/normalize.fs at line 55
+[make_all_boot_fsts]: full_name=FStar.Tc.Errors, noext_file=tc/errors
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Tc.Rel, noext_file=tc/rel.fsi
+[make_all_boot_fsts]: full_name=FStar.Tc.Rel, noext_file=tc/rel
+Found an .fs; also found an .fsi
+Found marker for tc/rel.fs at line 116
+[make_all_boot_fsts]: full_name=FStar.Tc.Util, noext_file=tc/tcutil.fsi
+[make_all_boot_fsts]: full_name=FStar.Tc.Util, noext_file=tc/tcutil
+Found an .fs; also found an .fsi
+Found marker for tc/tcutil.fs at line 34
+[make_all_boot_fsts]: full_name=FStar.Tc.Tc, noext_file=tc/tc
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.ToSMT.Term, noext_file=tosmt/term.fsi
+[make_all_boot_fsts]: full_name=FStar.ToSMT.Term, noext_file=tosmt/term
+Found an .fs; also found an .fsi
+Found marker for tosmt/term.fs at line 113
+[make_all_boot_fsts]: full_name=FStar.ToSMT.Z3, noext_file=tosmt/z3
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.ToSMT.SplitQueryCases, noext_file=tosmt/splitcases
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.ToSMT.Encode, noext_file=tosmt/encode
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Parser.AST, noext_file=parser/ast
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Parser.DesugarEnv, noext_file=parser/dsenv
+Found an .fs; also found an .fsi
+Found marker for parser/dsenv.fs at line 76
+[make_all_boot_fsts]: full_name=FStar.Parser.Desugar, noext_file=parser/desugar
+Found an .fs; also found an .fsi
+Found marker for parser/desugar.fs at line 30
+[make_all_boot_fsts]: full_name=FStar.Parser.Env, noext_file=parser/env
+Found an .fs; also found an .fsi
+Found marker for parser/env.fs at line 78
+[make_all_boot_fsts]: full_name=FStar.Parser.Interleave, noext_file=parser/interleave
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Parser.ToSyntax, noext_file=parser/tosyntax
+Found an .fs; also found an .fsi
+Found marker for parser/tosyntax.fs at line 34
+[make_all_boot_fsts]: full_name=FStar.Parser.Lexhelp, noext_file=parser/lexhelp
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Parser.ParseIt, noext_file=parser/parseit.fsi
+[make_all_boot_fsts]: full_name=FStar.Parser.Driver, noext_file=parser/driver
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Parser.Dep, noext_file=parser/dep
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Parser.ToDocument, noext_file=parser/todocument
+Found an .fs; also found an .fsi
+Found marker for parser/todocument.fs at line 27
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Common, noext_file=typechecker/common
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Env, noext_file=typechecker/env.fsi
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Env, noext_file=typechecker/env
+Found an .fs; also found an .fsi
+Found marker for typechecker/env.fs at line 107
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Normalize, noext_file=typechecker/normalize.fsi
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Normalize, noext_file=typechecker/normalize
+Found an .fs; also found an .fsi
+Found marker for typechecker/normalize.fs at line 98
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Errors, noext_file=typechecker/errors
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Rel, noext_file=typechecker/rel.fsi
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Rel, noext_file=typechecker/rel
+Found an .fs; also found an .fsi
+Found marker for typechecker/rel.fs at line 38
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Util, noext_file=typechecker/util.fsi
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Util, noext_file=typechecker/util
+Found an .fs; also found an .fsi
+Found marker for typechecker/util.fs at line 33
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.DMFF, noext_file=typechecker/dmff
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+typechecker/tcterm.fsi does not contain an FStar module
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.TcTerm, noext_file=typechecker/tcterm
+Found an .fs; also found an .fsi
+Found marker for typechecker/tcterm.fs at line 38
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Tc, noext_file=typechecker/tc.fsi
+[make_all_boot_fsts]: full_name=FStar.TypeChecker.Tc, noext_file=typechecker/tc
+Found an .fs; also found an .fsi
+Found marker for typechecker/tc.fs at line 39
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.Syntax, noext_file=extraction/ml-syntax
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.Env, noext_file=extraction/env
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.UEnv, noext_file=extraction/uenv
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.Util, noext_file=extraction/util
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.Code, noext_file=extraction/codegen.fsi
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.Code, noext_file=extraction/codegen
+Found an .fs; also found an .fsi
+Found marker for extraction/codegen.fs at line 29
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.ExtractTyp, noext_file=extraction/extracttyp
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.ExtractExp, noext_file=extraction/extractexp
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.ExtractMod, noext_file=extraction/extractmod
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.Term, noext_file=extraction/term
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Extraction.ML.Modul, noext_file=extraction/modul
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Extraction.Kremlin, noext_file=extraction/kremlin
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Fsdoc.Generator, noext_file=fsdoc/generator
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.SMTEncoding.Term, noext_file=smtencoding/term.fsi
+[make_all_boot_fsts]: full_name=FStar.SMTEncoding.Term, noext_file=smtencoding/term
+Found an .fs; also found an .fsi
+Found marker for smtencoding/term.fs at line 121
+[make_all_boot_fsts]: full_name=FStar.SMTEncoding.Util, noext_file=smtencoding/util
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.SMTEncoding.Z3, noext_file=smtencoding/z3
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.SMTEncoding.SplitQueryCases, noext_file=smtencoding/splitcases
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.SMTEncoding.ErrorReporting, noext_file=smtencoding/errorReporting
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.SMTEncoding.Encode, noext_file=smtencoding/encode
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.SMTEncoding.Solver, noext_file=smtencoding/solver
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Dependences, noext_file=fstar/dependences
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Interactive, noext_file=fstar/interactive
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Stratified, noext_file=fstar/stratified
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.Universal, noext_file=fstar/universal
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+[make_all_boot_fsts]: full_name=FStar.FStar, noext_file=fstar/fstar
+Found an .fs; found no .fsi, doing a .fs → .fst copy
+FStar.Options.fst FStar.Ident.fst FStar.Const.fst FStar.Format.fst FStar.Absyn.Syntax.fst FStar.Absyn.Const.fst FStar.Absyn.Visit.fst FStar.Absyn.Util.fst FStar.Absyn.Print.fst FStar.Syntax.Syntax.fst FStar.Syntax.Const.fst FStar.Syntax.Subst.fst FStar.Syntax.Free.fst FStar.Syntax.InstFV.fst FStar.Syntax.Util.fst FStar.Syntax.Print.fst FStar.Tc.Env.fst FStar.Tc.Recheck.fst FStar.Tc.Normalize.fst FStar.Tc.Errors.fst FStar.Tc.Rel.fst FStar.Tc.Util.fst FStar.Tc.Tc.fst FStar.ToSMT.Term.fst FStar.ToSMT.Z3.fst FStar.ToSMT.SplitQueryCases.fst FStar.ToSMT.Encode.fst FStar.Parser.AST.fst FStar.Parser.DesugarEnv.fst FStar.Parser.Desugar.fst FStar.Parser.Env.fst FStar.Parser.Interleave.fst FStar.Parser.ToSyntax.fst FStar.Parser.Lexhelp.fst FStar.Parser.Driver.fst FStar.Parser.Dep.fst FStar.Parser.ToDocument.fst FStar.TypeChecker.Common.fst FStar.TypeChecker.Env.fst FStar.TypeChecker.Normalize.fst FStar.TypeChecker.Errors.fst FStar.TypeChecker.Rel.fst FStar.TypeChecker.Util.fst FStar.TypeChecker.DMFF.fst FStar.TypeChecker.TcTerm.fst FStar.TypeChecker.Tc.fst FStar.Extraction.ML.Syntax.fst FStar.Extraction.ML.Env.fst FStar.Extraction.ML.UEnv.fst FStar.Extraction.ML.Util.fst FStar.Extraction.ML.Code.fst FStar.Extraction.ML.ExtractTyp.fst FStar.Extraction.ML.ExtractExp.fst FStar.Extraction.ML.ExtractMod.fst FStar.Extraction.ML.Term.fst FStar.Extraction.ML.Modul.fst FStar.Extraction.Kremlin.fst FStar.Fsdoc.Generator.fst FStar.SMTEncoding.Term.fst FStar.SMTEncoding.Util.fst FStar.SMTEncoding.Z3.fst FStar.SMTEncoding.SplitQueryCases.fst FStar.SMTEncoding.ErrorReporting.fst FStar.SMTEncoding.Encode.fst FStar.SMTEncoding.Solver.fst FStar.Dependences.fst FStar.Interactive.fst FStar.Stratified.fst FStar.Universal.fst FStar.FStar.fst
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make extract_ocaml
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+cat basic/util.fsi | sed 's/open System.IO//g' | sed 's/type time.*/new type time/g' | sed 's/type smap.*/new type smap : Type -> Type/g' | sed 's/type out_channel.*/new type out_channel/g' | sed 's/type file_handle.*/new type file_handle/g' | sed 's/type stream_reader.*/new type stream_reader/g' | sed 's/type string_builder.*/new type string_builder/g' | sed 's/type proc.*/new type proc/g' | sed 's/type set.*/new type set:Type -> Type/g' > ../lib/FStar.Util.fsti
+cp basic/getoptsimple.fsi ../lib/FStar.GetOpt.fsti
+cat basic/unionfind.fsi | sed 's/type cell.*//g' | sed 's/and contents.*//g' | sed 's/.*| Data.*//g' | sed 's/.*| Fwd.*//g' | sed 's/type uvar.*/new type uvar : Type -> Type/g' > ../lib/FStar.Unionfind.fsti
+cp basic/string.fsi boot_fstis/string.fsti
+cp basic/platform.fsi boot_fstis/platform.fsti
+cp basic/version.fsi boot_fstis/version.fsti
+cp basic/range.fsi boot_fstis/range.fsti
+cp prettyprint/prettyprint.fsti boot_fstis/FStar.Pprint.fsti
+head -n -12 parser/parse.fsi > boot_fsts/FStar.Parser.Parse.fsti
+cp parser/parseit.fsi boot_fsts/FStar.Parser.ParseIt.fsti
+sed -i 's/module FStar.Parser.Parse/module FStar.Parser.Parse open FStar.BaseTypes type bytes = array<byte>/' boot_fsts/FStar.Parser.Parse.fsti
+../bin/fstar.exe --stratified --explicit_deps --eager_inference \
+--lax --fs_typ_app --no_location_info --no_extract FStar.Int8 --no_extract FStar.UInt8 --no_extract FStar.Int16 --no_extract FStar.UInt16 --no_extract FStar.Int32 --no_extract FStar.UInt32 --no_extract FStar.Int64 --no_extract FStar.UInt64 --odir ocaml-output --MLish  --codegen OCaml ../lib/allboot.fsti ../lib/stboot.fsti ../lib/list.fsti ../lib/option.fsti ../lib/FStar.Float.fsti ../lib/FStar.Char.fsti ../lib/FStar.Int8.fst ../lib/FStar.UInt8.fst ../lib/FStar.Int16.fst ../lib/FStar.UInt16.fst ../lib/FStar.Int32.fst ../lib/FStar.UInt32.fst ../lib/FStar.Int64.fst ../lib/FStar.UInt64.fst ../lib/FStar.BaseTypes.fsti ../lib/FStar.Util.fsti ../lib/FStar.GetOpt.fsti ../lib/FStar.Unionfind.fsti boot_fstis/string.fsti boot_fstis/bytes.fsti boot_fstis/platform.fsti boot_fstis/version.fsti boot_fstis/range.fsti boot_fstis/FStar.Pprint.fsti boot_fsts/FStar.Options.fst boot_fsts/FStar.Ident.fst boot_fsts/FStar.Const.fst boot_fsts/FStar.Format.fst boot_fsts/FStar.Absyn.Syntax.fst boot_fsts/FStar.Absyn.Const.fst boot_fsts/FStar.Absyn.Visit.fst boot_fsts/FStar.Absyn.Util.fst boot_fsts/FStar.Absyn.Print.fst boot_fsts/FStar.Syntax.Syntax.fst boot_fsts/FStar.Syntax.Const.fst boot_fsts/FStar.Syntax.Subst.fst boot_fsts/FStar.Syntax.Free.fst boot_fsts/FStar.Syntax.InstFV.fst boot_fsts/FStar.Syntax.Util.fst boot_fsts/FStar.Syntax.Print.fst boot_fsts/FStar.Tc.Env.fst boot_fsts/FStar.Tc.Recheck.fst boot_fsts/FStar.Tc.Normalize.fst boot_fsts/FStar.Tc.Errors.fst boot_fsts/FStar.Tc.Rel.fst boot_fsts/FStar.Tc.Util.fst boot_fsts/FStar.Tc.Tc.fst boot_fsts/FStar.ToSMT.Term.fst boot_fsts/FStar.ToSMT.Z3.fst boot_fsts/FStar.ToSMT.SplitQueryCases.fst boot_fsts/FStar.ToSMT.Encode.fst boot_fsts/FStar.TypeChecker.Common.fst boot_fsts/FStar.TypeChecker.Env.fst boot_fsts/FStar.TypeChecker.Normalize.fst boot_fsts/FStar.TypeChecker.Errors.fst boot_fsts/FStar.TypeChecker.Rel.fst boot_fsts/FStar.TypeChecker.Util.fst boot_fsts/FStar.TypeChecker.DMFF.fst boot_fsts/FStar.TypeChecker.TcTerm.fst boot_fsts/FStar.TypeChecker.Tc.fst boot_fsts/FStar.Parser.AST.fst boot_fsts/FStar.Parser.DesugarEnv.fst boot_fsts/FStar.Parser.Desugar.fst boot_fsts/FStar.Parser.Env.fst boot_fsts/FStar.Parser.Interleave.fst boot_fsts/FStar.Parser.ToSyntax.fst boot_fsts/FStar.Parser.ToDocument.fst boot_fsts/FStar.Parser.Parse.fsti boot_fsts/FStar.Parser.Lexhelp.fst boot_fsts/FStar.Parser.ParseIt.fsti boot_fsts/FStar.Parser.Driver.fst boot_fsts/FStar.Parser.Dep.fst boot_fsts/FStar.Extraction.ML.Syntax.fst boot_fsts/FStar.Extraction.ML.Env.fst boot_fsts/FStar.Extraction.ML.UEnv.fst boot_fsts/FStar.Extraction.ML.Util.fst boot_fsts/FStar.Extraction.ML.Code.fst boot_fsts/FStar.Extraction.ML.ExtractTyp.fst boot_fsts/FStar.Extraction.ML.ExtractExp.fst boot_fsts/FStar.Extraction.ML.ExtractMod.fst boot_fsts/FStar.Extraction.ML.Term.fst boot_fsts/FStar.Extraction.ML.Modul.fst boot_fsts/FStar.Extraction.Kremlin.fst boot_fsts/FStar.Fsdoc.Generator.fst boot_fsts/FStar.SMTEncoding.Term.fst boot_fsts/FStar.SMTEncoding.Util.fst boot_fsts/FStar.SMTEncoding.Z3.fst boot_fsts/FStar.SMTEncoding.SplitQueryCases.fst boot_fsts/FStar.SMTEncoding.ErrorReporting.fst boot_fsts/FStar.SMTEncoding.Encode.fst boot_fsts/FStar.SMTEncoding.Solver.fst boot_fsts/FStar.Dependences.fst boot_fsts/FStar.Interactive.fst boot_fsts/FStar.Stratified.fst boot_fsts/FStar.Universal.fst boot_fsts/FStar.FStar.fst
+.\boot_fstis\FStar.Pprint.fsti(30,0-30,13) (Warning): Adding an implicit 'new' qualifier on document
+.\boot_fsts\FStar.Absyn.Syntax.fst(443,67-445,104): Warning: Annotation from val declaration overrides inline type annotation
+.\boot_fsts\FStar.Absyn.Syntax.fst(445,104-446,108): Warning: Annotation from val declaration overrides inline type annotation
+.\boot_fsts\FStar.Absyn.Syntax.fst(485,1-486,110): Warning: Annotation from val declaration overrides inline type annotation
+.\boot_fsts\FStar.Absyn.Syntax.fst(581,1-583,108): Warning: Annotation from val declaration overrides inline type annotation
+.\boot_fsts\FStar.Syntax.Syntax.fst(449,28-450,33): Warning: Annotation from val declaration overrides inline type annotation
+.\boot_fsts\FStar.Syntax.Syntax.fst(497,32-499,48): Warning: Annotation from val declaration overrides inline type annotation
+.\boot_fsts\FStar.Syntax.Syntax.fst(499,48-500,76): Warning: Annotation from val declaration overrides inline type annotation
+.\boot_fsts\FStar.Syntax.Syntax.fst(550,17-553,38): Warning: Annotation from val declaration overrides inline type annotation
+.\boot_fsts\FStar.TypeChecker.Env.fst(355,26-362,35): Warning: Annotation from val declaration overrides inline type annotation
+.\boot_fsts\FStar.TypeChecker.Util.fst(105,45-109,32): Warning: Annotation from val declaration overrides inline type annotation
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make boot-ocaml
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+# +make -C ocaml-output clean
+make -C ocaml-output all
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src/ocaml-output'
+cd ../../ && ocamlbuild -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I lib/ml -use-ocamlfind main.native
+# No parallelism done
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src/ocaml-output'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make uregressions
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make -C ../ulib
+make -C ../examples uall
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/ulib'
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples'
+make -C bug-reports uall
+make -C low-level uall
+make -C data_structures uall
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Int.fst
+make -C algorithms uall
+make -C crypto uall
+make -C termination uall
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/bug-reports'
+make[3]: Nothing to be done for 'uall'.
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/bug-reports'
+make -C software_foundations uall
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/low-level'
+make clean
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/data_structures'
+make -C ../doc/tutorial/code/exercises uall
+make -C ../doc/tutorial/code/solutions uall
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/algorithms'
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/crypto'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.ST.fst
+make[4]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/low-level'
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/termination'
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -C relational uall
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/software_foundations'
+make[3]: Nothing to be done for 'uall'.
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/software_foundations'
+make -C relational/new uall
+make -C voting uall
+make -C ../../ulib/ml clean
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module BinarySearchTree BinarySearchTree.fst
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/doc/tutorial/code/exercises'
+make -C maths uall
+make -C paradoxes uall
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/relational'
+make[3]: Nothing to be done for 'uall'.
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/relational'
+make -C printf uall
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module BinarySearch BinarySearch.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 AES.fst
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/doc/tutorial/code/solutions'
+make -C metatheory uall
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module wf wf.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.TwoLevelHeap.fst
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/relational/new'
+make -C verifythis uall
+make[5]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/ulib/ml'
+rm -f *.cmi *.cmo *.cmx *.exe *.o *.a *.cmxa *~ FStar_ST.cmx FStar_All.cmx FStar_ST.cmi FStar_All.cmi FStar_ST.o FStar_All.o
+make -C preorders uall
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/voting'
+make[3]: Nothing to be done for 'uall'.
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/voting'
+make -C dm4free uall
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/maths'
+make -C unit-tests uall
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/paradoxes'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module BinarySearchTree0 BinarySearchTree0.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex01a.fst
+rm -f ./extracted/*
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/printf'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 Encrypt_SymEnc.fst
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/verifythis'
+make[3]: Nothing to be done for 'uall'.
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/verifythis'
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/metatheory'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module IntSort IntSort.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Tcp.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex01a.fst
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/preorders'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error   --use_hints rel.fst whilelanguage.fst ifc.fst ifcExample.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Gcd Gcd.fst
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/unit-tests'
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/dm4free'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints PropositionalExtensionalityInconsistent.fst
+rm -f hyperstack/*.o hyperstack/*.cm*
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module BinarySearchTreeBasic BinarySearchTreeBasic.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module SimplePrintf SimplePrintf.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex02a.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module ParSubst ParSubst.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module ImmutableST ImmutableST.fst
+make[5]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/ulib/ml'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.MonadLaws.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module FirstProofs FirstProofs.fst
+make[4]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/low-level'
+make chacha-test aes-test aesgcm-test chacha-aead-test
+make[4]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/low-level'
+make -j 1 -C ../../ulib/ml MEM=HST clean all
+make[5]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/low-level'
+make[5]: warning: -jN forced in submake: disabling jobserver mode.
+rm -f *.cmi *.cmo *.cmx *.exe *.o *.a *.cmxa *~ ./extracted/FStar_TSet.cmx ./extracted/FStar_Map.cmx ./extracted/FStar_HyperHeap.cmx ./extracted/FStar_HyperStack.cmx hyperstack/FStar_ST.cmx hyperstack/FStar_All.cmx ./extracted/FStar_TSet.cmi ./extracted/FStar_Map.cmi ./extracted/FStar_HyperHeap.cmi ./extracted/FStar_HyperStack.cmi hyperstack/FStar_ST.cmi hyperstack/FStar_All.cmi ./extracted/FStar_TSet.o ./extracted/FStar_Map.o ./extracted/FStar_HyperHeap.o ./extracted/FStar_HyperStack.o hyperstack/FStar_ST.o hyperstack/FStar_All.o
+rm -f ./extracted/*
+rm -f hyperstack/*.o hyperstack/*.cm*
+make -C .. mgen
+make[6]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/ulib'
+mkdir -p ml/extracted
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --lax --codegen OCaml --odir ml/extracted FStar.Set.fst FStar.TSet.fst FStar.Map.fst FStar.HyperHeap.fst FStar.HyperStack.fst
+Verified module: Wf (408 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/termination'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module BinarySearchTreeFirst BinarySearchTreeFirst.fst
+Verified module: BinarySearchTree0 (713 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module RBTree RBTree.fst
+Extracting module FunctionalExtensionality
+Extracting module PropositionalExtensionality
+Extracting module PredicateExtensionality
+Extracting module TSet
+Extracting module Set
+Extracting module Tot
+Extracting module Heap
+Extracting module Map
+Extracting module HyperHeap
+Extracting module HyperStack
+All verification conditions discharged successfully
+make[6]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/ulib'
+make prims.o FStar_Mul.o FStar_Float.o FStar_Char.o FStar_Int8.o FStar_UInt8.o FStar_Int16.o FStar_UInt16.o FStar_Int32.o FStar_UInt32.o FStar_Int64.o FStar_UInt64.o FStar_UInt128.o FStar_Int_Cast.o FStar_BaseTypes.o FStar_IO.o FStar_Heap.o FStar_List.o FStar_Option.o FStar_String.o FStar_Set.o FStar_Buffer.o FStar_CommonST.o ./extracted/FStar_TSet.o ./extracted/FStar_Map.o ./extracted/FStar_HyperHeap.o ./extracted/FStar_HyperStack.o hyperstack/FStar_ST.o hyperstack/FStar_All.o
+make[6]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/ulib/ml'
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg prims.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Mul.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Float.ml
+Verified module: BinarySearchTree (1351 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --explicit_deps ArrayRealized.fst Vector.fst
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Char.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int8.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt8.ml
+Verified module: Gcd (449 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/maths'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints Effects.Def.fst
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int16.ml
+Verified module: ImmutableST (1392 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module AllocST AllocST.fst
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt16.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int32.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt32.ml
+Verified module: IntSort (1482 milliseconds)
+All verification conditions discharged successfully
+Verified module: SimplePrintf (2068 milliseconds)
+All verification conditions discharged successfully
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int64.ml
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/printf'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module InsertionSort InsertionSort.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03a.fst
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt64.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt128.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int_Cast.ml
+Verified module: ParSubst (2144 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module StlcCbvDbPntSubstNoLists StlcCbvDbPntSubstNoLists.fst
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_BaseTypes.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_IO.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Heap.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_List.ml
+Verified module: FirstProofs (2838 milliseconds)
+All verification conditions discharged successfully
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Option.ml
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module ShortCircuit ShortCircuit.fst
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_String.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Set.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Buffer.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_CommonST.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_TSet.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_Map.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_HyperHeap.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_HyperStack.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg hyperstack/FStar_ST.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg hyperstack/FStar_All.ml
+make[6]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/ulib/ml'
+ocamlopt -a prims.cmx FStar_Mul.cmx FStar_Float.cmx FStar_Char.cmx FStar_Int8.cmx FStar_UInt8.cmx FStar_Int16.cmx FStar_UInt16.cmx FStar_Int32.cmx FStar_UInt32.cmx FStar_Int64.cmx FStar_UInt64.cmx FStar_UInt128.cmx FStar_Int_Cast.cmx FStar_BaseTypes.cmx FStar_IO.cmx FStar_Heap.cmx FStar_List.cmx FStar_Option.cmx FStar_String.cmx FStar_Set.cmx FStar_Buffer.cmx FStar_CommonST.cmx ./extracted/FStar_TSet.cmx ./extracted/FStar_Map.cmx ./extracted/FStar_HyperHeap.cmx ./extracted/FStar_HyperStack.cmx hyperstack/FStar_ST.cmx hyperstack/FStar_All.cmx -o fstarlib.cmxa
+make[5]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/ulib/ml'
+mkdir -p chacha
+Verified module: FStar.ST (105 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 Encrypt_Sample.fst
+Verified module: BinarySearch (3490 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --lax --codegen OCaml --no_location_info --no_extract FStar.All --no_extract FStar.BaseTypes --no_extract FStar.Char --no_extract FStar.Float --no_extract FStar.Heap --no_extract FStar.Int8 --no_extract FStar.Int16 --no_extract FStar.Int32 --no_extract FStar.Int64 --no_extract FStar.UInt8 --no_extract FStar.UInt16 --no_extract FStar.UInt32 --no_extract FStar.UInt64 --no_extract FStar.Int_Cast --no_extract FStar.IO --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.Set --no_extract FStar.ST --no_extract FStar.String --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HST --no_extract FStar.Buffer --no_extract FStar.Mul --include ../../ulib/hyperstack --include crypto --include crypto/real crypto/Crypto.Symmetric.Chacha20.fst --odir chacha
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module MergeSort MergeSort.fst
+Verified module: Ex01a (284 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex02a.fst
+Verified module: Ex02a (184 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03b.fst
+Verified module: InsertionSort (721 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module QuickSort.List QuickSort.List.fst
+.\Ex01a.fst(64,28-67,48): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex01a (411 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03c.fst
+Verified module: AllocST (1231 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module NatHeap NatHeap.fst
+Verified module: BinarySearchTreeFirst (2706 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.IntST.fst
+Verified module: BinarySearchTreeBasic (5599 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.Exceptions.fst
+Verified module: FStar.DM4F.MonadLaws (1009 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03a.fst
+Verified module: PropositionalExtensionalityInconsistent (1079 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/paradoxes'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04a.fst
+Verified module: ShortCircuit (1347 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.Projectors1 Unit1.Projectors1.fst
+Verified module: FStar.TwoLevelHeap (2114 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Integers.fst
+Verified module: FStar.Int (4309 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.UInt63.fst
+.\ifc.fst(170,15-174,23): (Warning) Pattern misses at least one bound variable: env#16319
+Verified module: StlcCbvDbPntSubstNoLists (5418 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module StlcStrongDbParSubst StlcStrongDbParSubst.fst
+Verified module: Ex03a (182 milliseconds)
+All verification conditions discharged successfully
+Verified module: NatHeap (3722 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04b.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module ImmutableSTwHeaps ImmutableSTwHeaps.fst
+Verified module: AES (398 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 SHA1.fst
+Verified module: Ex02a (179 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03b.fst
+WARNING: (59191,26): pattern does not contain any variable.
+.\Encrypt_SymEnc.fst(24,78-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifc.fst(226,16-231,23): (Warning) Pattern misses at least one bound variable: env#28786
+.\ifc.fst(227,2-231,23): (Warning) Pattern misses at least one bound variable: env#30209
+Verified module: Encrypt_SymEnc (1650 milliseconds)
+All verification conditions discharged successfully
+Verified module: Effects.Def (2295 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 MAC.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.ExnSt.fst
+Verified module: MergeSort (6081 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module QuickSort.Seq QuickSort.Seq.fst
+Verified module: ArrayRealized (1906 milliseconds)
+Verified module: Vector (1944 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04c.fst
+Verified module: Ex03b (96 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module StlcCbvDbParSubst StlcCbvDbParSubst.fst
+Verified module: Ex04a (190 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04e.fst
+Verified module: Ex03c (250 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04f.fst
+Verified module: ImmutableSTwHeaps (732 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module ReifyTest ReifyTest.fst
+Verified module: FStar.Tcp (16 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Bytes.fst
+Verified module: Encrypt_Sample (33 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 Sig.fst
+Verified module: Ex03a (170 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex03c.fst
+Verified module: RBTree (11828 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/data_structures'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module AllocSTwHeaps AllocSTwHeaps.fst
+Verified module: FStar.DM4F.Exceptions (4261 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.StExn.fst
+Verified module: QuickSort.List (8662 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module QuickSort.Array QuickSort.Array.fst
+WARNING: (59191,26): pattern does not contain any variable.
+WARNING: (59409,26): pattern does not contain any variable.
+.\ifc.fst(171,2-174,23): (Warning) Pattern misses at least one bound variable: env#95146
+.\ifc.fst(227,2-231,23): (Warning) Pattern misses at least one bound variable: env#95833
+.\ifcExample.fst(6,15-9,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(9,15-10,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(10,15-11,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(11,15-12,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex04b (438 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04g.fst
+Verified module: AllocSTwHeaps (995 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Preorder Preorder.fst
+Verified module: Ex03b (105 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04a.fst
+Verified module: Unit1.Projectors1 (1268 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.Projectors2 Unit1.Projectors2.fst
+WARNING: (59170,26): pattern does not contain any variable.
+WARNING: (59376,26): pattern does not contain any variable.
+Verified module: FStar.DM4F.IntST (4560 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.ST.fst
+Verified module: Preorder (38 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module MRefHeap MRefHeap.fst
+Verified module: Ex04c (359 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04h.fst
+Verified module: StlcStrongDbParSubst (7418 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints LambdaOmega.fst --max_fuel 1 --max_ifuel 1 --initial_fuel 1
+Extracting module Squash
+Extracting module StrongExcludedMiddle
+Extracting module Tot
+Verified module: Ex04e (256 milliseconds)
+All verification conditions discharged successfully
+Extracting module Classical
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex05a.fst
+Extracting module ListProperties
+Extracting module Seq
+Extracting module SeqProperties
+Extracting module Lib
+Extracting module Lemmas
+Verified module: Ex04f (426 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex05b.fst
+Extracting module BitVector
+Extracting module UInt
+Extracting module Int
+Extracting module UInt63
+Verified module: Ex03c (341 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04b.fst
+Extracting module FunctionalExtensionality
+Extracting module PropositionalExtensionality
+Extracting module PredicateExtensionality
+Extracting module TSet
+Extracting module Map
+Extracting module Ghost
+Verified module: ReifyTest (4563 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module SnapshotST SnapshotST.fst
+Verified module: SHA1 (492 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 EtM.Plain.fst
+.\MAC.fst(43,17-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: StlcCbvDbParSubst (8333 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module StackMachine StackMachine.fst
+Verified module: MAC (1048 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 EtM.MAC.fst
+Verified module: QuickSort.Seq (6007 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module GC GC.fst
+Extracting module Int63
+Extracting module UInt128
+.\Ex04g.fst(5,4-5,6): Warning: Admitting tl without a definition
+.\Ex04g.fst(4,4-4,6): Warning: Admitting hd without a definition
+Extracting module Cast
+Extracting module Utils
+Verified module: Ex04g (26 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06a.fst
+Extracting module Chacha20
+Verified module: Ex04a (511 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04c.fst
+Verified module: FStar.DM4F.ExnSt (4841 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.Heap.fst
+.\Ex05a.fst(28,4-28,13): Warning: Admitting rev_is_ok without a definition
+Verified module: QuickSort.Array (3856 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unification Unification.fst
+Verified module: Sig (1364 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 EtM.CPA.fst
+All verification conditions discharged successfully
+mkdir -p aes
+Verified module: Unit1.Projectors2 (22 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --lax --codegen OCaml --no_location_info --no_extract FStar.All --no_extract FStar.BaseTypes --no_extract FStar.Char --no_extract FStar.Float --no_extract FStar.Heap --no_extract FStar.Int8 --no_extract FStar.Int16 --no_extract FStar.Int32 --no_extract FStar.Int64 --no_extract FStar.UInt8 --no_extract FStar.UInt16 --no_extract FStar.UInt32 --no_extract FStar.UInt64 --no_extract FStar.Int_Cast --no_extract FStar.IO --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.Set --no_extract FStar.ST --no_extract FStar.String --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HST --no_extract FStar.Buffer --no_extract FStar.Mul --include ../../ulib/hyperstack --include crypto --include crypto/real --include crypto/hacl/ crypto/Crypto.Symmetric.AES.fst --odir aes
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.UnificationTests Unit1.UnificationTests.fst
+Verified module: Ex05a (607 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06b.fst
+Verified module: MRefHeap (5715 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module ReifyTestTSST ReifyTestTSST.fst
+Verified module: FStar.DM4F.StExn (6371 milliseconds)
+All verification conditions discharged successfully
+Verified module: SnapshotST (3400 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.Heap.ST.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module MRefST MRefST.fst
+Verified module: FStar.Bytes (367 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Mul.fst
+Verified module: Ex04h (21 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06e.fst
+.\Unit1.UnificationTests.fst(1,29-2,20) (Warning): Adding an implicit 'assume new' qualifier on t
+Verified module: Unit1.UnificationTests (20 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module TestTwoLevelHeap TestTwoLevelHeap.fst
+Verified module: Ex05b (349 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07a.fst
+Verified module: ReifyTestTSST (869 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Reader.fst
+Verified module: Ex04b (375 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04e.fst
+Verified module: FStar.DM4F.ST (5065 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.StExnC.fst
+.\Ex06a.fst(5,4-5,13): Warning: Admitting partition without a definition
+Verified module: Ex06a (20 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07b.fst
+Verified module: FStar.UInt63 (10395 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Classical.fst
+Verified module: TestTwoLevelHeap (478 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module TestMRef TestMRef.fst
+Verified module: FStar.DM4F.Heap (2043 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.IFC.fst
+Verified module: WhileLanguage (2860 milliseconds)
+Verified module: Rel (1403 milliseconds)
+Verified module: Ifc (8544 milliseconds)
+Verified module: IfcExample (17300 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error   --use_hints bijection.fst random_tapes.fst
+Verified module: FStar.Mul (22 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Constructive.fst
+Verified module: GC (8791 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Huffman Huffman.fst
+.\TestMRef.fst(7,59-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex04c (1297 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04f.fst
+Verified module: TestMRef (1156 milliseconds)
+All verification conditions discharged successfully
+make -C universes
+make[4]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/unit-tests/universes'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.Basic Unit1.Basic.fst
+.\Ex07a.fst(228,4-228,14): Warning: Admitting typed_step without a definition
+.\Ex06e.fst(18,4-18,8): Warning: Admitting sort without a definition
+Verified module: EtM.Plain (22 milliseconds)
+All verification conditions discharged successfully
+Verified module: Ex06e (357 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07c.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 EtM.AE.fst
+Verified module: Ex04e (966 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04g.fst
+Verified module: FStar.Reader (1172 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Map.fst
+Verified module: Ex06b (7412 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07d.fst
+Verified module: MRefST (12217 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/preorders'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.Projectors2 Unit1.Projectors2.fst
+.\bijection.fst(5,32-5,45): (Warning) Pattern misses at least one bound variable: x#708
+WARNING: (4589,6): pattern does not contain all quantified variables.
+.\bijection.fst(5,32-5,45): (Warning) Pattern misses at least one bound variable: x#3554
+WARNING: (4582,6): pattern does not contain all quantified variables.
+WARNING: (4637,6): pattern does not contain all quantified variables.
+Verified module: FStar.Classical (2277 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.DM4F.Continuations.fst
+Verified module: Bijection (226 milliseconds)
+Verified module: Random_Tapes (852 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error   --use_hints recursive.fst
+Verified module: Unification (16409 milliseconds)
+All verification conditions discharged successfully
+mkdir -p aesgcm
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --lax --codegen OCaml --no_location_info --no_extract FStar.All --no_extract FStar.BaseTypes --no_extract FStar.Char --no_extract FStar.Float --no_extract FStar.Heap --no_extract FStar.Int8 --no_extract FStar.Int16 --no_extract FStar.Int32 --no_extract FStar.Int64 --no_extract FStar.UInt8 --no_extract FStar.UInt16 --no_extract FStar.UInt32 --no_extract FStar.UInt64 --no_extract FStar.Int_Cast --no_extract FStar.IO --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.Set --no_extract FStar.ST --no_extract FStar.String --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HST --no_extract FStar.Buffer --no_extract FStar.Mul --include ../../ulib/hyperstack --include crypto --include crypto/real --include crypto/hacl/ crypto/Crypto.AEAD.AES256GCM.fst --odir aesgcm
+Verified module: EtM.MAC (2743 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.RSA.fst
+Verified module: FStar.Constructive (1793 milliseconds)
+All verification conditions discharged successfully
+Verified module: Ex07a (9272 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.OrdSetProps.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex10a.fst
+Verified module: StackMachine (20268 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.WPsAndTriples Unit1.WPsAndTriples.fst
+Verified module: Ex04f (1323 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex04h.fst
+Verified module: EtM.CPA (2574 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.PlainPKE.fst
+Verified module: FStar.DM4F.Heap.ST (8690 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints delimcc.fst
+Verified module: Ex04g (432 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex05a.fst
+.\Ex07d.fst(225,4-225,8): Warning: Admitting eval without a definition
+Verified module: Unit1.WPsAndTriples (351 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.Parser Unit1.Parser.fst
+Verified module: FStar.DM4F.StExnC (12086 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.SquashEffect.fst
+Verified module: Ex07b (10083 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex10b.fst
+Verified module: FStar.DM4F.IFC (10891 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12a.Cap.fst
+Extracting module Squash
+Extracting module StrongExcludedMiddle
+Extracting module Tot
+Extracting module Classical
+Extracting module ListProperties
+Extracting module Seq
+Extracting module SeqProperties
+Extracting module Lib
+Extracting module Lemmas
+Verified module: Huffman (14131 milliseconds)
+All verification conditions discharged successfully
+Extracting module BitVector
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/algorithms'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.RefinementInference Unit1.RefinementInference.fst
+Extracting module UInt
+Extracting module Int
+Extracting module UInt63
+Extracting module Int63
+Extracting module FunctionalExtensionality
+Extracting module PropositionalExtensionality
+Extracting module PredicateExtensionality
+Extracting module TSet
+Extracting module Map
+Extracting module Ghost
+Verified module: Unit1.Parser (1312 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.WPsAndTriples_ST Unit1.WPsAndTriples_ST.fst
+Extracting module UInt128
+Verified module: Recursive (563 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/relational/new'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex05b.fst
+Extracting module Cast
+Extracting module Config
+Extracting module Indexing
+Extracting module Flag
+Verified module: FStar.Map (4957 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.FunctionalExtensionality.fst
+Verified module: FStar.Integers (29633 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.MarkovsPrinciple.fst
+Verified module: Unit1.Projectors2 (25 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.Projectors1 Unit1.Projectors1.fst
+Verified module: Ex04h (332 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06a.fst
+Verified module: Unit1.RefinementInference (128 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.UnificationTests Unit1.UnificationTests.fst
+Verified module: Unit1.WPsAndTriples_ST (296 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit1.RecursiveTypeFunctions Unit1.RecursiveTypeFunctions.fst
+Verified module: FStar.DM4F.Continuations (5001 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06b.fst
+Verified module: Ex07c (10481 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12d.Pad.fst
+Extracting module AES
+.\Ex10a.fst(25,16-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: FStar.OrdSetProps (934 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.List.fst
+Verified module: Ex10a (1263 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12e.Pad.fst
+Verified module: DelimCC (1648 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/dm4free'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12f.TMAC.fst
+Verified module: Unit1.UnificationTests (24 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Unit2 Unit2.fst
+Verified module: EtM.AE (4863 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.Plain.fst
+Verified module: Ex05a (1411 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06c.fst
+Verified module: Ex07d (10493 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12g.TMAC2.fst
+All verification conditions discharged successfully
+mkdir -p chacha_aead
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --lax --codegen OCaml --no_location_info --no_extract FStar.All --no_extract FStar.BaseTypes --no_extract FStar.Char --no_extract FStar.Float --no_extract FStar.Heap --no_extract FStar.Int8 --no_extract FStar.Int16 --no_extract FStar.Int32 --no_extract FStar.Int64 --no_extract FStar.UInt8 --no_extract FStar.UInt16 --no_extract FStar.UInt32 --no_extract FStar.UInt64 --no_extract FStar.Int_Cast --no_extract FStar.IO --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.Set --no_extract FStar.ST --no_extract FStar.String --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HST --no_extract FStar.Buffer --no_extract FStar.Mul --include ../../ulib/hyperstack --include crypto --include crypto/real --include crypto/hacl/ crypto/Crypto.Test.fst --odir chacha_aead --__temp_no_proj Crypto.Symmetric.MAC
+Verified module: FStar.SquashEffect (334 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Array.fst
+Verified module: Unit1.RecursiveTypeFunctions (1447 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module TestSet TestSet.fst
+Verified module: Ex10b (1333 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ulib/hyperheap Ex11a.fst
+Verified module: FStar.FunctionalExtensionality (193 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.BitVector.fst
+Verified module: Unit2 (1257 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module TestHeap TestHeap.fst
+Verified module: FStar.MarkovsPrinciple (20 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Set.fst
+Verified module: TestSet (221 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module ShortCircuit ShortCircuit.fst
+Verified module: Ex06a (151 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06d.fst
+Verified module: Ex05b (1977 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex06e.fst
+Verified module: TestHeap (1026 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module FirstProofs FirstProofs.fst
+Verified module: HyE.RSA (363 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.AE.fst
+.\Ex12a.Cap.fst(18,70-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex12a.Cap (270 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07a.fst
+Verified module: ShortCircuit (1383 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module TestMRef TestMRef.fst
+Verified module: Unit1.Basic (16898 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module TestTwoLevelHeap TestTwoLevelHeap.fst
+Verified module: Unit1.Projectors1 (1391 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Mac Mac.fst
+Verified module: FStar.List (3694 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.UInt32.fst
+Verified module: Ex06b (5019 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07b.fst
+Extracting module Squash
+Extracting module StrongExcludedMiddle
+Extracting module Tot
+Extracting module Classical
+Extracting module ListProperties
+Extracting module Seq
+Extracting module SeqProperties
+Extracting module Lib
+Extracting module Lemmas
+Extracting module BitVector
+Extracting module UInt
+.\TestMRef.fst(7,59-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+Extracting module Int
+Extracting module FunctionalExtensionality
+Extracting module PropositionalExtensionality
+Extracting module PredicateExtensionality
+Extracting module TSet
+Extracting module Map
+Extracting module Ghost
+Extracting module Bytes
+Extracting module UInt128
+Verified module: TestTwoLevelHeap (381 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module TestGhost TestGhost.fst
+Verified module: TestMRef (966 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --verify_module Normalization Normalization.fst
+Verified module: HyE.PlainPKE (201 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.CCA2.fst
+Verified module: FirstProofs (3130 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints NegativeTests.BST.fst NegativeTests.Heap.fst NegativeTests.ShortCircuiting.fst NegativeTests.Bug260.fst NegativeTests.Neg.fst NegativeTests.Termination.fst NegativeTests.False.fst NegativeTests.Set.fst NegativeTests.ImplicitFalse.fst 2>&1 | tee fstar_log
+Verified module: Ex12d.Pad (787 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Squash.fst
+Verified module: TestGhost (437 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07c.fst
+Extracting module Int63
+Verified module: FStar.Set (2375 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Heap.fst
+Extracting module UInt63
+Verified module: HyE.Plain (25 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../ulib/hyperstack \
+--include ../../ucontrib/Platform/fst \
+--include ../../ucontrib/CoreCrypto/fst \
+--z3rlimit 20 HyE.HCCA2.fst
+Extracting module Cast
+Extracting module Utils
+Extracting module Bytes
+Verified module: Ex06e (872 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex07d.fst
+Extracting module Spec
+Extracting module GF128
+Extracting module GCM
+.\Ex12f.TMAC.fst(26,4-26,10): Warning: Admitting verify without a definition
+.\Ex12f.TMAC.fst(25,4-25,7): Warning: Admitting mac without a definition
+.\Ex12f.TMAC.fst(24,4-24,10): Warning: Admitting keygen without a definition
+Verified module: Ex12f.TMAC (25 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.OrdSet.fst
+Verified module: Normalization (1836 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Crypto.fst
+Verified module: Ex12e.Pad (1028 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.TSet.fst
+.\Ex12g.TMAC2.fst(30,4-30,10): Warning: Admitting verify without a definition
+.\Ex12g.TMAC2.fst(29,4-29,7): Warning: Admitting mac without a definition
+Extracting module Config
+Extracting module Indexing
+Extracting module Flag
+Extracting module AES
+Verified module: Ex06d (4106 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Array (3459 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex10a.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.IndefiniteDescription.fst
+Verified module: Ex12g.TMAC2 (601 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex10b.fst
+.\Mac.fst(67,17-69,35): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: MAC (1444 milliseconds)
+All verification conditions discharged successfully
+Extracting module AES256GCM
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.ErasedLogic.fst
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12a.Cap.fst
+Verified module: FStar.BitVector (7539 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Int64.fst
+Verified i'face: FStar.Squash (23 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.SquashProperties.fst
+Verified module: Ex11a (10911 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/doc/tutorial/code/exercises'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.UInt8.fst
+Verified module: Ex06c (14431 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12b.RPC.fst
+Verified module: FStar.Heap (624 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.HyperHeap.fst
+Verified module: Ex07a (8088 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12d.Pad.fst
+Verified module: HyE.AE (2372 milliseconds)
+All verification conditions discharged successfully
+ocamlfind opt -package batteries,stdint,zarith -linkpkg -g ../../ulib/ml/fstarlib.cmxa -I ../../ulib/ml/extracted -I ../../ulib/ml/hyperstack -I ../../ulib/ml -w -8-20-26-28-10 -I crypto/ml -I chacha \
+chacha/Buffer_Utils.ml chacha/Crypto_Symmetric_Chacha20.ml \
+crypto/ml/test_chacha.ml -o test_chacha.exe
+.\Ex10a.fst(25,16-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: FStar.TSet (1452 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.OrdMap.fst
+Verified module: Ex10a (1305 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12e.Pad.fst
+ocamlfind opt -package batteries,stdint,zarith -linkpkg -g ../../ulib/ml/fstarlib.cmxa -I ../../ulib/ml/extracted -I ../../ulib/ml/hyperstack -I ../../ulib/ml -w -8-20-26-28-10 -I crypto/ml -I aes \
+aes/Crypto_Symmetric_AES.ml \
+crypto/ml/test_aes256.ml -o test_aes256.exe
+Verified module: FStar.IndefiniteDescription (1544 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.List.Tot.fst
+Verified module: Ex10b (2879 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12f.TMAC.fst
+Verified module: FStar.ErasedLogic (34 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.MRef.fst
+ocamlfind opt -package batteries,stdint,zarith -linkpkg -g ../../ulib/ml/fstarlib.cmxa -I ../../ulib/ml/extracted -I ../../ulib/ml/hyperstack -I ../../ulib/ml -w -8-20-26-28-10 -I crypto/ml -I aesgcm \
+aesgcm/FStar_List_Tot.ml aesgcm/FStar_Ghost.ml aesgcm/FStar_Seq.ml aesgcm/FStar_SeqProperties.ml aesgcm/Buffer_Utils.ml aesgcm/Crypto_Config.ml aesgcm/Crypto_Indexing.ml aesgcm/Crypto_Symmetric_Bytes.ml aesgcm/Crypto_Symmetric_AES.ml aesgcm/Crypto_Symmetric_GF128_Spec.ml aesgcm/Crypto_Symmetric_GF128.ml aesgcm/Crypto_Symmetric_GCM.ml aesgcm/Crypto_AEAD_AES256GCM.ml \
+crypto/ml/test_aes_gcm.ml -o test_aes_gcm.exe
+Verified module: FStar.SquashProperties (2253 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.PredicateExtensionality.fst
+Verified module: Ex07d (10031 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ucontrib/Platform/fst --include ../../../..//ucontrib/CoreCrypto/fst Ex12g.TMAC2.fst
+Verified module: FStar.OrdSet (9523 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Int32.fst
+.\Ex12a.Cap.fst(16,70-18,26): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex12a.Cap (381 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints --include ../../../..//ulib/hyperheap Ex11a.fst
+Verified module: HyE.CCA2 (2016 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Crypto (1157 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Int.Cast.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.All.fst
+./test_chacha.exe
+.\Ex12b.RPC.fst(5,13-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(20,27-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(52,35-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: FStar.UInt32 (9981 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.UInt128.fst
+.\Ex12b.RPC.fst(122,14-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Ex12b.RPC (1129 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Math.Lib.fst
+Verified module: FStar.MRef (512 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Int8.fst
+Verified module: LambdaOmega (68494 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/metatheory'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Relational.Relational.fst
+Verified module: Ex12d.Pad (903 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.OrdMapProps.fst
+Verified module: FStar.List.Tot (4861 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Axiomatic.Array.fst
+Verified module: HyE.HCCA2 (1450 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/crypto'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Int128.fst
+Verified module: FStar.PredicateExtensionality (111 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Math.Lemmas.fst
+Verified module: FStar.All (89 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.ListProperties.fst
+Elapsed time for 10.000 chacha iterations : 8.648000s
+Expected ciphertext:
+6E2E359A2568F98041BA0728DD0D6981E97E7AEC1D4360C20A27AFCCFD9FAE0BF91B65C5524733AB8F593DABCD62B3571639D624E65152AB8F530C359F0861D807CA0DBF500D6A6156A38E088A22B65E52BC514D16CCF806818CE91AB77937365AF90BBF74A35BE6B40B8EEDF2785E42874D
+Got ciphertext:
+6E2E359A2568F98041BA0728DD0D6981E97E7AEC1D4360C20A27AFCCFD9FAE0BF91B65C5524733AB8F593DABCD62B3571639D624E65152AB8F530C359F0861D807CA0DBF500D6A6156A38E088A22B65E52BC514D16CCF806818CE91AB77937365AF90BBF74A35BE6B40B8EEDF2785E42874D
+./test_aes256.exe
+Verified module: FStar.OrdMap (7831 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Relational.Comp.fst
+Initial plaintext:
+00112233
+44556677
+8899aabb
+ccddeeff
+
+Resulting ciphertext:
+8ea2b7ca
+516745bf
+eafc4990
+4b496089
+
+Decrypted plaintext:
+00112233
+44556677
+8899aabb
+ccddeeff
+
+./test_aes_gcm.exe
+
+
+-------------------------
+Testing Module GF128:
+-------------------------
+
+a = 
+7a2c9af0e07bdfbde688a796960066fa
+
+b = 
+5a4416e3bdb92f10cb50b62e57a6b76e
+
+Expect shift_right a = 
+3d164d78703defdef34453cb4b00337d
+
+Result shift_right a = 
+3d164d78703defdef34453cb4b00337d
+
+Expect a + b = 
+20688c135dc2f0ad2dd811b8c1a6d194
+
+Result a + b = 
+20688c135dc2f0ad2dd811b8c1a6d194
+
+Expect a * b = 
+0fb723221f467313aad48b409dbe0b4f
+
+Result a * b = 
+0fb723221f467313aad48b409dbe0b4f
+
+
+
+-------------------------
+Testing AES256GCM:
+-------------------------
+
+
+***     Testcase: 1    ***
+
+Ciphertext Answer:
+(empty string)
+
+Ciphertext Result:
+(empty string)
+
+Tag Answer:
+530f8afbc74536b9a963b4f1c4cb738b
+
+Tag Result:
+530f8afbc74536b9a963b4f1c4cb738b
+
+
+***     Testcase: 2    ***
+
+Ciphertext Answer:
+cea7403d4d606b6e074ec5d3baf39d18
+
+Ciphertext Result:
+cea7403d4d606b6e074ec5d3baf39d18
+
+Tag Answer:
+d0d1c8a799996bf0265b98b5d48ab919
+
+Tag Result:
+d0d1c8a799996bf0265b98b5d48ab919
+
+
+***     Testcase: 3    ***
+
+Ciphertext Answer:
+522dc1f099567d07f47f37a32a84427d
+643a8cdcbfe5c0c97598a2bd2555d1aa
+8cb08e48590dbb3da7b08b1056828838
+c5f61e6393ba7a0abcc9f662898015ad
+
+Ciphertext Result:
+522dc1f099567d07f47f37a32a84427d
+643a8cdcbfe5c0c97598a2bd2555d1aa
+8cb08e48590dbb3da7b08b1056828838
+c5f61e6393ba7a0abcc9f662898015ad
+
+Tag Answer:
+b094dac5d93471bdec1a502270e3cc6c
+
+Tag Result:
+b094dac5d93471bdec1a502270e3cc6c
+
+
+***     Testcase: 4    ***
+
+Ciphertext Answer:
+522dc1f099567d07f47f37a32a84427d
+643a8cdcbfe5c0c97598a2bd2555d1aa
+8cb08e48590dbb3da7b08b1056828838
+c5f61e6393ba7a0abcc9f662
+
+Ciphertext Result:
+522dc1f099567d07f47f37a32a84427d
+643a8cdcbfe5c0c97598a2bd2555d1aa
+8cb08e48590dbb3da7b08b1056828838
+c5f61e6393ba7a0abcc9f662
+
+Tag Answer:
+76fc6ece0f4e1768cddf8853bb2d551b
+
+Tag Result:
+76fc6ece0f4e1768cddf8853bb2d551b
+
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Seq.fst
+Verified module: FStar.Int64 (8834 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.UInt64.fst
+Verified module: Ex12f.TMAC (381 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.UInt.fst
+Verified module: Ex12e.Pad (1732 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Ghost.fst
+.\NegativeTests.False.fst(13,18-13,35): (Error) Expected type "(l_or l_True l_True)"; but "(Left T)" has type "(c_or (?109676 uu___) l_True)"
+.\NegativeTests.False.fst(13,36-13,54): (Error) Expected type "(l_or l_True l_True)"; but "(Right T)" has type "(c_or l_True (?109699 uu___))"
+Verified module: FStar.Axiomatic.Array (391 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Int63.fst
+Verified module: FStar.OrdMapProps (276 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.PropositionalExtensionality.fst
+Verified module: FStar.UInt8 (9730 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Relational.Relational (2339 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.SeqProperties.fst
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.HyperStack.fst
+.\NegativeTests.ImplicitFalse.fst(4,26-4,27): (Error) Failed to resolve implicit argument of type 'l_False' introduced in (?110639 uu___) because user-provided implicit term
+Verified module: FStar.HyperHeap (16353 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.UInt16.fst
+Verified module: Ex12g.TMAC2 (834 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Int16.fst
+Verified module: FStar.Math.Lib (6927 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Util.fst
+.\NegativeTests.BST.fst(21,38-21,42): (Error) Subtyping check failed; expected type (right#110:(option (tree 2)){(l_and (l_and (l_and (b2t (op_LessThanOrEqual 0 1)) (b2t (op_LessThanOrEqual 1 2))) (l_iff (b2t (uu___is_None right@0)) (b2t (op_Equality 1 2)))) (l_iff (b2t (uu___is_None (None ))) (b2t (op_Equality 1 0))))}); got type (option (tree 2)) (see .\NegativeTests.BST.fst(13,36-13,57))
+.\NegativeTests.BST.fst(22,61-22,65): (Error) Subtyping check failed; expected type (right#110:(option (tree (op_Addition l 1))){(l_and (l_and (l_and (b2t (op_LessThanOrEqual l l)) (b2t (op_LessThanOrEqual l (op_Addition l 1)))) (l_iff (b2t (uu___is_None right@0)) (b2t (op_Equality l (op_Addition l 1))))) (l_iff (b2t (uu___is_None (Some t))) (b2t (op_Equality l l))))}); got type (option (tree (op_Addition l 1))) (see .\NegativeTests.BST.fst(13,36-13,57))
+.\NegativeTests.BST.fst(23,78-23,87): (Error) Subtyping check failed; expected type (right#110:(option (tree (op_Addition l 1))){(l_and (l_and (l_and (b2t (op_LessThanOrEqual l (op_Addition l 1))) (b2t (op_LessThanOrEqual (op_Addition l 1) (op_Addition l 1)))) (l_iff (b2t (uu___is_None right@0)) (b2t (op_Equality (op_Addition l 1) (op_Addition l 1))))) (l_iff (b2t (uu___is_None (Some t1))) (b2t (op_Equality (op_Addition l 1) l))))}); got type (option (tree (op_Addition l 1))) (see .\NegativeTests.BST.fst(12,36-12,58))
+.\NegativeTests.Bug260.fst(9,12-9,19): (Error) Subtyping check failed; expected type (validity (S (S t))); got type (validity (S t)) (see .\NegativeTests.Bug260.fst(8,37-9,19))
+.\NegativeTests.False.fst(3,31-3,42): (Error) assertion failed
+.\NegativeTests.Heap.fst(10,14-10,20): (Error) assertion failed (see .\NegativeTests.Heap.fst(10,21-10,54))
+.\NegativeTests.Heap.fst(15,2-15,8): (Error) assertion failed (see .\NegativeTests.Heap.fst(15,9-15,14))
+.\NegativeTests.Neg.fst(6,8-6,10): (Error) Subtyping check failed; expected type nat; got type int (see C:\Build\Agent2\_work\1\s\bin\..\ulib\prims.fst(642,17-642,23))
+.\NegativeTests.Neg.fst(8,8-8,10): (Error) Subtyping check failed; expected type nat; got type int (see C:\Build\Agent2\_work\1\s\bin\..\ulib\prims.fst(642,17-642,23))
+.\NegativeTests.Neg.fst(10,23-10,29): (Error) assertion failed (see .\NegativeTests.Neg.fst(10,30-10,35))
+.\NegativeTests.Neg.fst(12,28-13,15): (Error) Patterns are incomplete
+.\NegativeTests.Neg.fst(19,32-19,42): (Error) assertion failed (see .\NegativeTests.Neg.fst(15,44-15,57))
+.\NegativeTests.Neg.fst(21,83-21,88): (Error) could not prove post-condition
+.\NegativeTests.Neg.fst(25,30-25,31): (Error) Subtyping check failed; expected type (uu___#9387:(option 'a){(b2t (uu___is_Some uu___@0))}); got type (option 'a) (see C:\Build\Agent2\_work\1\s\bin\..\ulib\prims.fst(252,4-252,8))
+.\NegativeTests.Neg.fst(28,41-28,43): (Error) Subtyping check failed; expected type (uu___#11958:(result int){(b2t (uu___is_V uu___@0))}); got type (result int) (see C:\Build\Agent2\_work\1\s\bin\..\ulib\prims.fst(259,4-259,5))
+.\NegativeTests.Neg.fst(32,25-32,26): (Error) Subtyping check failed; expected type nat; got type int (see C:\Build\Agent2\_work\1\s\bin\..\ulib\prims.fst(642,17-642,23))
+.\NegativeTests.Set.fst(12,2-12,8): (Error) assertion failed (see .\NegativeTests.Set.fst(12,9-12,30))
+.\NegativeTests.Set.fst(16,2-16,8): (Error) assertion failed (see .\NegativeTests.Set.fst(16,9-16,67))
+.\NegativeTests.Set.fst(20,2-20,8): (Error) assertion failed (see .\NegativeTests.Set.fst(20,9-20,52))
+.\NegativeTests.ShortCircuiting.fst(5,16-5,33): (Error) Subtyping check failed; expected type (b#22:bool{(bad_p b@0)}); got type bool (see .\NegativeTests.ShortCircuiting.fst(4,31-4,38))
+.\NegativeTests.Termination.fst(7,27-7,28): (Error) Subtyping check failed; expected type (z#147:int{(precedes (LexCons m (LexCons z@0 LexTop)) m)}); got type int (see .\NegativeTests.Termination.fst(4,35-7,29))
+.\NegativeTests.Termination.fst(13,26-13,35): (Error) Subtyping check failed; expected type (uu___#914:int{(precedes (LexCons n (LexCons uu___@0 LexTop)) (LexCons n (LexCons count LexTop)))}); got type int (see .\NegativeTests.Termination.fst(9,42-13,35))
+.\NegativeTests.Termination.fst(20,29-20,54): (Error) Subtyping check failed; expected type (n#1776:int{(precedes (LexCons (op_Subtraction m 1) (LexCons n@0 LexTop)) (LexCons m (LexCons n LexTop)))}); got type int (see .\NegativeTests.Termination.fst(16,44-20,54))
+.\NegativeTests.Termination.fst(25,28-25,29): (Error) Subtyping check failed; expected type (uu___#3781:(list 'a){(precedes uu___@0 l)}); got type (list 'a) (see .\NegativeTests.Termination.fst(22,34-25,29))
+.\NegativeTests.Termination.fst(37,15-37,29): (Error) Subtyping check failed; expected type (x:(x#4838:nat{(b2t (op_LessThanOrEqual x@0 v))}) -> Tot nat); got type (uu___:(uu___#6233:nat{(precedes uu___@0 v)}) -> Tot nat) (see .\NegativeTests.Termination.fst(33,34-37,29))
+.\NegativeTests.Termination.fst(48,19-48,29): (Error) Subtyping check failed; expected type (uu___#7436:snat{(precedes uu___@0 n)}); got type snat (see .\NegativeTests.Termination.fst(43,25-48,29))
+.\NegativeTests.Termination.fst(55,34-55,35): (Error) Subtyping check failed; expected type (uu___#8459:snat{(precedes (LexCons (S (S n')) (LexCons uu___@0 LexTop)) (LexCons n (LexCons m LexTop)))}); got type snat (see .\NegativeTests.Termination.fst(50,35-55,35))
+.\NegativeTests.Termination.fst(59,2-61,14): (Error) Patterns are incomplete
+.\NegativeTests.Termination.fst(67,29-67,31): (Error) Subtyping check failed; expected type (uu___#10547:snat{(precedes (LexCons (S n') (LexCons uu___@0 LexTop)) (LexCons n (LexCons m LexTop)))}); got type snat (see .\NegativeTests.Termination.fst(63,36-67,31))
+.\NegativeTests.Termination.fst(73,20-73,26): (Error) Subtyping check failed; expected type (uu___#12582:snat{(precedes uu___@0 n)}); got type snat (see .\NegativeTests.Termination.fst(69,26-73,26))
+C:\Build\Agent2\_work\1\s\bin\..\ulib\prims.fst(175,22-175,33): (Error) assertion failed (see C:\Build\Agent2\_work\1\s\bin\..\ulib\prims.fst(150,28-150,31))
+C:\Build\Agent2\_work\1\s\bin\..\ulib\prims.fst(175,22-175,33): (Error) assertion failed (see C:\Build\Agent2\_work\1\s\bin\..\ulib\prims.fst(150,28-150,31))
+Verified module: NegativeTests.ShortCircuiting (1491 milliseconds)
+Verified module: NegativeTests.BST (3988 milliseconds)
+Verified module: NegativeTests.Heap (2203 milliseconds)
+Verified module: NegativeTests.Termination (8168 milliseconds)
+Verified module: NegativeTests.Neg (7490 milliseconds)
+Verified module: NegativeTests.False (1739 milliseconds)
+Verified module: NegativeTests.Bug260 (1470 milliseconds)
+Verified module: NegativeTests.ImplicitFalse (1081 milliseconds)
+Verified module: NegativeTests.Set (1970 milliseconds)
+35 errors were reported (see above)
+Success: 35 failures were expected
+make[4]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/unit-tests/universes'
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/unit-tests'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.StrongExcludedMiddle.fst
+Verified module: FStar.Relational.Comp (389 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.IO.fsti
+Verified module: FStar.Ghost (768 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Squash.fsti
+Verified module: FStar.PropositionalExtensionality (13 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.String.fsti
+Verified module: Ex11a (11245 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Option.fsti
+Verified module: Ex07c (32079 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Matrix2.fsti
+Verified module: Ex07b (36420 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/doc/tutorial/code/solutions'
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Float.fsti
+Verified module: FStar.ListProperties (8449 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.BaseTypes.fsti
+Verified module: FStar.Int32 (8419 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Char.fsti
+Verified module: FStar.StrongExcludedMiddle (79 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Map.fst FStar.HyperHeap.fst hyperheap/FStar.ST.fst FStar.Util.fst
+Verified module: FStar.Util (28 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Map.fst FStar.HyperStack.fst hyperstack/FStar.ST.fst hyperstack/FStar.All.fst FStar.Monotonic.RRef.fst FStar.Monotonic.Seq.fst
+Verified module: FStar.Int8 (8472 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/1/s/bin/fstar.exe --trace_error --use_hints FStar.Map.fst FStar.HyperStack.fst hyperstack/FStar.ST.fst FStar.Buffer.fst FStar.Buffer.Quantifiers.fst
+Verified i'face: FStar.IO (19 milliseconds)
+All verification conditions discharged successfully
+Verified i'face: FStar.Squash (20 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.UInt128 (9855 milliseconds)
+All verification conditions discharged successfully
+Verified i'face: FStar.Option (16 milliseconds)
+All verification conditions discharged successfully
+Verified i'face: FStar.String (250 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Seq (9950 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Int128 (8758 milliseconds)
+All verification conditions discharged successfully
+Verified i'face: FStar.Float (12 milliseconds)
+All verification conditions discharged successfully
+Verified i'face: FStar.Char (213 milliseconds)
+All verification conditions discharged successfully
+Verified i'face: FStar.Matrix2 (2187 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.UInt64 (8872 milliseconds)
+All verification conditions discharged successfully
+C:\Build\Agent2\_work\1\s\examples\low-level\crypto\Crypto.AEAD.Encoding.fst(215,31-215,34) : (Error) Expected expression of type "some_ref"; got expression "acc" of type "(accBuffer i)"
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/low-level'
+make[4]: *** [Makefile:174: chacha-aead-extract] Error 1
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples/low-level'
+make[4]: Target 'chacha-aead-test' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/examples'
+make[3]: *** [Makefile:38: uall] Error 2
+make[2]: *** [Makefile:48: low-level.uall] Error 2
+make[2]: Target 'uall' not remade because of errors.
+make[1]: *** [Makefile:272: uexamples] Error 2
+Verified module: FStar.HyperStack (11312 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Int63 (7945 milliseconds)
+All verification conditions discharged successfully
+Verified i'face: FStar.BaseTypes (19 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Int.Cast (20308 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Int16 (8019 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.UInt16 (8632 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Map (3602 milliseconds)
+Verified module: FStar.HyperHeap (14811 milliseconds)
+Verified module: FStar.ST (1077 milliseconds)
+Verified module: FStar.Util (19 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.SeqProperties (28824 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Map (3508 milliseconds)
+Verified module: FStar.HyperStack (11858 milliseconds)
+Verified module: FStar.ST (10473 milliseconds)
+Verified module: FStar.Monotonic.RRef (1411 milliseconds)
+Verified module: FStar.Monotonic.Seq (13743 milliseconds)
+Verified module: FStar.All (61 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.UInt (63199 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Math.Lemmas (108438 milliseconds)
+All verification conditions discharged successfully
+Verified module: FStar.Map (4554 milliseconds)
+Verified module: FStar.HyperStack (15386 milliseconds)
+Verified module: FStar.ST (11756 milliseconds)
+Verified module: FStar.Buffer (178485 milliseconds)
+Verified module: FStar.Buffer.Quantifiers (4878 milliseconds)
+All verification conditions discharged successfully
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/ulib'
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: Target 'uregressions' not remade because of errors.
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make: *** [Makefile:249: utest] Error 2

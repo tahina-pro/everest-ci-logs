@@ -1,0 +1,56 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+6 shift/reduce conflicts.
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: warning: -jN forced in submake: disabling jobserver mode.
+.\Ex01a.fst(64,28-67,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifc.fst(170,15-174,23): (Warning) Pattern misses at least one bound variable: env#16319
+WARNING: (59191,26): pattern does not contain any variable.
+.\Encrypt_SymEnc.fst(24,78-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifc.fst(226,16-231,23): (Warning) Pattern misses at least one bound variable: env#28786
+.\ifc.fst(227,2-231,23): (Warning) Pattern misses at least one bound variable: env#30209
+WARNING: (59191,26): pattern does not contain any variable.
+WARNING: (59409,26): pattern does not contain any variable.
+.\ifc.fst(171,2-174,23): (Warning) Pattern misses at least one bound variable: env#95146
+.\ifc.fst(227,2-231,23): (Warning) Pattern misses at least one bound variable: env#95833
+.\ifcExample.fst(6,15-9,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(9,15-10,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(10,15-11,15): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ifcExample.fst(11,15-12,17): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (59170,26): pattern does not contain any variable.
+WARNING: (59376,26): pattern does not contain any variable.
+.\MAC.fst(43,17-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TestMRef.fst(7,59-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\bijection.fst(5,32-5,45): (Warning) Pattern misses at least one bound variable: x#708
+WARNING: (4589,6): pattern does not contain all quantified variables.
+.\bijection.fst(5,32-5,45): (Warning) Pattern misses at least one bound variable: x#3554
+WARNING: (4582,6): pattern does not contain all quantified variables.
+WARNING: (4637,6): pattern does not contain all quantified variables.
+.\Ex10a.fst(25,16-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(18,70-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TestMRef.fst(7,59-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(67,17-69,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(25,16-26,19): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(16,70-18,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(5,13-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(20,27-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(52,35-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(122,14-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+C:\Build\Agent2\_work\1\s\examples\low-level\crypto\Crypto.AEAD.Encoding.fst(215,31-215,34) : (Error) Expected expression of type "some_ref"; got expression "acc" of type "(accBuffer i)"
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[4]: *** [Makefile:174: chacha-aead-extract] Error 1
+make[4]: Target 'chacha-aead-test' not remade because of errors.
+make[3]: *** [Makefile:38: uall] Error 2
+make[2]: *** [Makefile:48: low-level.uall] Error 2
+make[2]: Target 'uall' not remade because of errors.
+make[1]: *** [Makefile:272: uexamples] Error 2
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:249: utest] Error 2
