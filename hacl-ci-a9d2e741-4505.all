@@ -1,0 +1,1004 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/13/s
+About to run: hacl_verify
+BUILD_SOURCEBRANCHNAME: jk_dev1
+BUILD_DEFINITIONNAME: Hacl*-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/src/ocaml-output'
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+cp parse.mly ../parser/ml/
+echo "%{" > ../parser/parse.fsy
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# We are opening the same module twice but we need these modules
+# open for the definition of tokens
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+# TODO: create a proper OCamlbuild rule for this production so that
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+echo 'let version = "0.9.4.0"' > FStar_Version.ml
+echo 'let platform = "Windows_x64"' >> FStar_Version.ml
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+echo 'let date = "2017-02-09T03:39:41-08:00"' >> FStar_Version.ml
+echo 'let commit= "f6c18d4 (dirty)"' >> FStar_Version.ml
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Errors.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_AST.cmx src/ocaml-output/FStar_Parser_AST.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Parse.cmx src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_ParseIt.cmx src/parser/ml/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Err.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Parser_ToDocument.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Dependencies.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_Syntax_MutRecTy.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmx src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Indent.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Main.cmx src/ocaml-output/FStar_Main.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/basic/ml -o src/fstar/ml/main.cmx src/fstar/ml/main.ml
+''ocamlfind ocamlopt -linkpkg -thread -package batteries -package zarith -package yojson -package pprint src/ocaml-output/bootlibs/FStar_List.cmx src/ocaml-output/bootlibs/MkPrims.cmx src/ocaml-output/bootlibs/prims.cmx src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Platform.cmx src/ocaml-output/bootlibs/FStar_Char.cmx src/ocaml-output/bootlibs/FStar_Float.cmx src/ocaml-output/bootlibs/FStar_Int16.cmx src/ocaml-output/bootlibs/FStar_Int32.cmx src/ocaml-output/bootlibs/FStar_Int64.cmx src/ocaml-output/bootlibs/FStar_Int8.cmx src/ocaml-output/bootlibs/FStar_UInt16.cmx src/ocaml-output/bootlibs/FStar_UInt8.cmx src/ocaml-output/bootlibs/FStar_BaseTypes.cmx src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Unionfind.cmx src/ocaml-output/bootlibs/FStar_All.cmx src/ocaml-output/bootlibs/FStar_ST.cmx src/ocaml-output/bootlibs/FStar_String.cmx src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/bootlibs/FStar_Option.cmx src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Parser_AST.cmx src/parser/ml/FStar_Parser_Util.cmx src/ocaml-output/FStar_Parser_Parse.cmx src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Fsdoc_Generator.cmx src/prettyprint/ml/FStar_Pprint.cmx src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Main.cmx src/fstar/ml/main.cmx -o src/fstar/ml/main.native
+# Parallel statistics: { count(total): 5(231), max: 5, min: 2, average(total): 2.800(1.039) }
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/dependencies/kremlin'
+ocamlbuild -I src -I lib -I parser -use-menhir -use-ocamlfind -classic-display -menhir "menhir --infer --explain" Kremlin.native Tests.native
+ln -sf Kremlin.native krml
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/dependencies/kremlin'
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/test'
+make extract-c
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/test'
+make -C ../code extract-c
+make -C ../crypto_proofs krml-test.exe
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code'
+make -C salsa-family extract-c
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/crypto_proofs'
+make[2]: 'krml-test.exe' is up to date.
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/crypto_proofs'
+make -C poly1305 extract-c
+make -C curve25519 extract-c
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/salsa-family'
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/poly1305'
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/curve25519'
+mkdir -p chacha-c
+# Weird \* because of https://caml.inria.fr/mantis/view.php?id=7473
+# Weird \* because of https://caml.inria.fr/mantis/view.php?id=7473
+mkdir -p salsa-c
+mkdir -p hsalsa-c
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/krml -tmpdir chacha-c \
+-I ../bignum -I ../lib/kremlin \
+Chacha20.fst Hacl.Test.Chacha20.fst -o chacha20.exe -no-prefix Hacl.Test.Chacha20 \
+-drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar -bundle Chacha20=Hacl.Symmetric.Chacha20 Chacha20.fst \
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' -ccopt -march=native -ccopt -std=gnu99
+mkdir -p x25519-c
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/krml -tmpdir salsa-c \
+-I ../bignum -I ../lib/kremlin \
+Salsa20.fst Hacl.Test.Salsa20.fst -o salsa20.exe -no-prefix Hacl.Test.Salsa20 \
+-drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar  -bundle Salsa20=Hacl.Symmetric.Salsa20 \
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' -ldopt -flto -ccopt -march=native  -ccopt -std=gnu99
+mkdir -p poly-c
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/krml -tmpdir hsalsa-c \
+-I ../bignum -I ../lib/kremlin \
+Hacl.Symmetric.HSalsa20.fst \
+-drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar \
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' -skip-compilation  -ccopt -std=gnu99
+mkdir -p xsalsa-c
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/krml -tmpdir x25519-c -ccopt -std=gnu99 \
+-I ../bignum -I ../lib/kremlin \
+Curve25519.fst Hacl.Test.X25519.fst \
+-drop 'Hacl.Spec' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar -bundle 'Curve25519=Hacl.Bignum,Hacl.Bignum.\*,Hacl.EC,Hacl.EC.\*' \
+-bundle 'Hacl.Spec.\*' \
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' \
+-no-prefix Hacl.Test.X25519 -ldopt -flto -ccopt -march=native -o x25519.exe
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/krml -tmpdir xsalsa-c \
+-I ../bignum -I ../lib/kremlin \
+Hacl.Symmetric.XSalsa20.fst Hacl.Test.XSalsa20.fst -o xsalsa20.exe -no-prefix Hacl.Test.XSalsa20 \
+-drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar \
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' -ldopt -flto -ccopt -march=native  -ccopt -std=gnu99
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/krml -tmpdir poly-c -ccopt -std=gnu99 \
+-I ../bignum -I ../lib/kremlin \
+Poly1305_64.fst Hacl.Test.Poly1305_64.fst \
+-drop 'Hacl.Endianness' \
+-drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' \
+-drop Prims -drop FStar -bundle 'Poly1305_64=Hacl.Bignum.\*,Hacl.Impl.\*' \
+C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' \
+-no-prefix Hacl.Test.Poly1305_64 -ldopt -flto -ccopt -march=native -o poly1305.exe
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent2/_work/13/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent2/_work/13/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent2/_work/13/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent2/_work/13/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent2/_work/13/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent2\_work\13\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent2/_work/13/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Checker.ml", line 367, characters 69-90
+Called from file "src/Checker.ml", line 291, characters 16-42
+Called from file "src/Checker.ml", line 190, characters 2-16
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/Checker.ml", line 147, characters 6-25
+Dropping Hacl_Spec_Poly1305 (at checking time)
+
+Warning 6: in the definition of mac, after the definition of macsize, in top-level declaration Hacl.Test.Poly1305_64.main, in file Hacl_Test_Poly1305_64: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[38;5;202m⚠[0m Dropped some files while checking
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Hacl.Test.Poly1305_64.main calls Hacl.Impl.Poly1305_64.crypto_onetimeauth -- removing the static qualifier from Hacl.Impl.Poly1305_64.crypto_onetimeauth
+KreMLin: writing out .c and .h files for Hacl_UInt64, Hacl_UInt128, Hacl_UInt8, Hacl_UInt32, Poly1305_64, Hacl_UInt16, Hacl_Test_Poly1305_64
+[38;5;81m⚙ KreMLin will drive the C compiler.[0m Here's what we found:
+[4mgcc is:[0m x86_64-w64-mingw32-gcc
+[4mx86_64-w64-mingw32-gcc options are:[0m -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native
+[38;5;81m⚡ Generating object files[0m
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,poly-c/Hacl_UInt64.c] (use -verbose to see the output)
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+KreMLin: writing out .c and .h files for Hacl_UInt64, Hacl_UInt128, Hacl_UInt32, Hacl_UInt8, Hacl_Symmetric_HSalsa20
+[38;5;119m✔[0m [CC,poly-c/Hacl_UInt128.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,poly-c/Hacl_UInt8.c] (use -verbose to see the output)
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.XSalsa20.main, in file Hacl_Test_XSalsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[38;5;119m✔[0m [CC,poly-c/Hacl_UInt32.c] (use -verbose to see the output)
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+[38;5;119m✔[0m [CC,poly-c/Poly1305_64.c] (use -verbose to see the output)
+KreMLin: writing out .c and .h files for Hacl_UInt64, Hacl_UInt128, Hacl_UInt32, Hacl_UInt8, Hacl_UInt16, Hacl_Symmetric_HSalsa20, Hacl_Endianness, Hacl_Symmetric_Salsa20, Hacl_Symmetric_XSalsa20, Hacl_Test_XSalsa20
+[38;5;81m⚙ KreMLin will drive the C compiler.[0m Here's what we found:
+[4mgcc is:[0m x86_64-w64-mingw32-gcc
+[4mx86_64-w64-mingw32-gcc options are:[0m -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99
+[38;5;81m⚡ Generating object files[0m
+[38;5;119m✔[0m [CC,poly-c/Hacl_UInt16.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,xsalsa-c/Hacl_UInt64.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,poly-c/Hacl_Test_Poly1305_64.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,xsalsa-c/Hacl_UInt128.c] (use -verbose to see the output)
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Warning 6: in the definition of result, after the definition of keysize, in top-level declaration Hacl.Test.X25519.main, in file Hacl_Test_X25519: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[38;5;119m✔[0m [CC,C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+KreMLin: writing out .c and .h files for Hacl_UInt64, Hacl_UInt128, Hacl_UInt8, Hacl_UInt32, Hacl_UInt16, Hacl_Endianness, Curve25519, Hacl_Test_X25519
+[38;5;81m⚙ KreMLin will drive the C compiler.[0m Here's what we found:
+[4mgcc is:[0m x86_64-w64-mingw32-gcc
+[4mx86_64-w64-mingw32-gcc options are:[0m -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native
+[38;5;81m⚡ Generating object files[0m
+[38;5;119m✔[0m [CC,C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+[38;5;119m✔[0m [LD] (use -verbose to see the output)
+[38;5;119mAll files linked successfully[0m 👍
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/poly1305'
+[38;5;119m✔[0m [CC,xsalsa-c/Hacl_UInt32.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,x25519-c/Hacl_UInt64.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,xsalsa-c/Hacl_UInt8.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,x25519-c/Hacl_UInt128.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,xsalsa-c/Hacl_UInt16.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,x25519-c/Hacl_UInt8.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,xsalsa-c/Hacl_Symmetric_HSalsa20.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,x25519-c/Hacl_UInt32.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,xsalsa-c/Hacl_Endianness.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,x25519-c/Hacl_UInt16.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,xsalsa-c/Hacl_Symmetric_Salsa20.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,x25519-c/Hacl_Endianness.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,xsalsa-c/Hacl_Symmetric_XSalsa20.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,xsalsa-c/Hacl_Test_XSalsa20.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,x25519-c/Curve25519.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+[38;5;119m✔[0m [LD] (use -verbose to see the output)
+[38;5;119mAll files linked successfully[0m 👍
+./xsalsa20.exe
+[38;5;119m✔[0m [CC,x25519-c/Hacl_Test_X25519.c] (use -verbose to see the output)
+[test] expected output xsalsa20 is 8e993b9f48681273c29650ba32fc76ce48332ea7164d96a4476fb8c531a1186ac0dfc17c98dce87b4da7f011ec48c97271d2c20f9b928fe2270d6fb863d51738b48eeee314a7cc8ab932164548e526ae90224368517acfeabd6bb3732bc0e9da99832b61ca01b6de56244a9e88d5f9b37973f622a43d14a6599b1f654cb45a74e355a5
+[test] computed output xsalsa20 is 8e993b9f48681273c29650ba32fc76ce48332ea7164d96a4476fb8c531a1186ac0dfc17c98dce87b4da7f011ec48c97271d2c20f9b928fe2270d6fb863d51738b48eeee314a7cc8ab932164548e526ae90224368517acfeabd6bb3732bc0e9da99832b61ca01b6de56244a9e88d5f9b37973f622a43d14a6599b1f654cb45a74e355a5
+[test] xsalsa20 is a success
+[38;5;119m✔[0m [CC,C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+[38;5;119m✔[0m [LD] (use -verbose to see the output)
+[38;5;119mAll files linked successfully[0m 👍
+./x25519.exe
+[test] expected output Curve25519 is c3da55379de9c6908e94ea4df28d084f32eccf03491c71f754b4075577a28552
+[test] computed output Curve25519 is c3da55379de9c6908e94ea4df28d084f32eccf03491c71f754b4075577a28552
+[test] Curve25519 is a success
+[test] expected output Curve25519 is 95cbde9476e8907d7aade45cb4b873f88b595a68799fa152e6f8f7647aac7957
+[test] computed output Curve25519 is 95cbde9476e8907d7aade45cb4b873f88b595a68799fa152e6f8f7647aac7957
+[test] Curve25519 is a success
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/curve25519'
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Warning 6: in the definition of ciphertext, after the definition of len, in top-level declaration Hacl.Test.Chacha20.main, in file Hacl_Test_Chacha20: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+Warning 7: : After inlining, Hacl.Test.Chacha20.loop calls Hacl.Symmetric.Chacha20.chacha20_update -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_update
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_keysetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_keysetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_encrypt_bytes -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_encrypt_bytes
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha20_finish -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_finish
+KreMLin: writing out .c and .h files for Hacl_UInt8, Hacl_UInt32, Hacl_UInt64, Hacl_UInt128, Hacl_UInt16, Hacl_Endianness, Chacha20, Hacl_Test_Chacha20
+[38;5;81m⚙ KreMLin will drive the C compiler.[0m Here's what we found:
+[4mgcc is:[0m x86_64-w64-mingw32-gcc
+[4mx86_64-w64-mingw32-gcc options are:[0m -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99
+[38;5;81m⚡ Generating object files[0m
+[38;5;119m✔[0m [CC,chacha-c/Hacl_UInt8.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,chacha-c/Hacl_UInt32.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,chacha-c/Hacl_UInt64.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,chacha-c/Hacl_UInt128.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,chacha-c/Hacl_UInt16.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,chacha-c/Hacl_Endianness.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,chacha-c/Chacha20.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,chacha-c/Hacl_Test_Chacha20.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+[38;5;119m✔[0m [LD] (use -verbose to see the output)
+[38;5;119mAll files linked successfully[0m 👍
+./chacha20.exe
+[test] expected output chacha20 is 6e2e359a2568f98041ba0728dd0d6981e97e7aec1d4360c20a27afccfd9fae0bf91b65c5524733ab8f593dabcd62b3571639d624e65152ab8f530c359f0861d807ca0dbf500d6a6156a38e088a22b65e52bc514d16ccf806818ce91ab77937365af90bbf74a35be6b40b8eedf2785e42874d
+[test] computed output chacha20 is 6e2e359a2568f98041ba0728dd0d6981e97e7aec1d4360c20a27afccfd9fae0bf91b65c5524733ab8f593dabcd62b3571639d624e65152ab8f530c359f0861d807ca0dbf500d6a6156a38e088a22b65e52bc514d16ccf806818ce91ab77937365af90bbf74a35be6b40b8eedf2785e42874d
+[test] chacha20 is a success
+[test] expected output chacha20 is 6e2e359a2568f98041ba0728dd0d6981e97e7aec1d4360c20a27afccfd9fae0bf91b65c5524733ab8f593dabcd62b3571639d624e65152ab8f530c359f0861d807ca0dbf500d6a6156a38e088a22b65e52bc514d16ccf806818ce91ab77937365af90bbf74a35be6b40b8eedf2785e42874d
+[test] computed output chacha20 is 6e2e359a2568f98041ba0728dd0d6981e97e7aec1d4360c20a27afccfd9fae0bf91b65c5524733ab8f593dabcd62b3571639d624e65152ab8f530c359f0861d807ca0dbf500d6a6156a38e088a22b65e52bc514d16ccf806818ce91ab77937365af90bbf74a35be6b40b8eedf2785e42874d
+[test] chacha20 is a success
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of ciphertext, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of expected4, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of nonce, after the definition of key, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Hacl.Test.Salsa20.main calls Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor -- removing the static qualifier from Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor
+KreMLin: writing out .c and .h files for Hacl_UInt64, Hacl_UInt128, Hacl_UInt32, Hacl_UInt8, Hacl_UInt16, Hacl_Endianness, Salsa20, Hacl_Test_Salsa20
+[38;5;81m⚙ KreMLin will drive the C compiler.[0m Here's what we found:
+[4mgcc is:[0m x86_64-w64-mingw32-gcc
+[4mx86_64-w64-mingw32-gcc options are:[0m -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99
+[38;5;81m⚡ Generating object files[0m
+[38;5;119m✔[0m [CC,salsa-c/Hacl_UInt64.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,salsa-c/Hacl_UInt128.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,salsa-c/Hacl_UInt32.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,salsa-c/Hacl_UInt8.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,salsa-c/Hacl_UInt16.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,salsa-c/Hacl_Endianness.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,salsa-c/Salsa20.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,salsa-c/Hacl_Test_Salsa20.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+[38;5;119m✔[0m [CC,C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+[38;5;119m✔[0m [LD] (use -verbose to see the output)
+[38;5;119mAll files linked successfully[0m 👍
+./salsa20.exe
+[test] expected output salsa20 is e3be8fdd8beca2e3ea8ef9475b29a6e7003951e1097a5c38d23b7a5fad9f6844b22c97559e2723c7cbbd3fe4fc8d9a0744652a83e72a9c461876af4d7ef1a117
+[test] computed output salsa20 is e3be8fdd8beca2e3ea8ef9475b29a6e7003951e1097a5c38d23b7a5fad9f6844b22c97559e2723c7cbbd3fe4fc8d9a0744652a83e72a9c461876af4d7ef1a117
+[test] salsa20 is a success
+[test] expected output salsa20 is 57be81f47b17d9ae7c4ff15429a73e10acf250ed3a90a93c711308a74c6216a9ed84cd126da7f28e8abf8bb63517e1ca98e712f4fb2e1a6aed9fdc73291faa17
+[test] computed output salsa20 is 57be81f47b17d9ae7c4ff15429a73e10acf250ed3a90a93c711308a74c6216a9ed84cd126da7f28e8abf8bb63517e1ca98e712f4fb2e1a6aed9fdc73291faa17
+[test] salsa20 is a success
+[test] expected output salsa20 is 958211c4ba2ebd5838c635edb81f513a91a294e194f1c039aeec657dce40aa7e7c0af57cacefa40c9f14b71a4b3456a63e162ec7d8d10b8ffb1810d71001b618
+[test] computed output salsa20 is 958211c4ba2ebd5838c635edb81f513a91a294e194f1c039aeec657dce40aa7e7c0af57cacefa40c9f14b71a4b3456a63e162ec7d8d10b8ffb1810d71001b618
+[test] salsa20 is a success
+[test] expected output salsa20 is 696afcfd0cddcc83c7e77f11a649d79acdc3354e9635ff137e929933a0bd6f5377efa105a3a4266b7c0d089d08f1e855cc32b15b93784a36e56a76cc64bc8477
+[test] computed output salsa20 is 696afcfd0cddcc83c7e77f11a649d79acdc3354e9635ff137e929933a0bd6f5377efa105a3a4266b7c0d089d08f1e855cc32b15b93784a36e56a76cc64bc8477
+[test] salsa20 is a success
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/salsa-family'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code'
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/test'
+make ct
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/test'
+make -C ../code ct
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code'
+make -C salsa-family all-ct
+make -C bignum all-ct
+make -C poly1305 all-ct
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/salsa-family'
+make -C curve25519 all-ct
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/bignum'
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/poly1305'
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/curve25519'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Symmetric.Chacha20.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Limb.fst --lax
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Symmetric.Salsa20.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Wide.fst --lax
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Symmetric.HSalsa20.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Field.fst --lax
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Field.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Symmetric.XSalsa20.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Bigint.fst --lax
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Limb.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Wide.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fsum.fst --lax
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Limb.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Bigint.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fdifference.fst --lax
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Field.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fsum.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fscalar.fst --lax
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fproduct.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Wide.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fproduct.fst --lax
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Bigint.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fmul.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fsum.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fdifference.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fsum.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fproduct.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fscalar.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fproduct.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.fst --lax
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fproduct.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fmul.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Constants.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Parameters.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fsum.fst
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Bignum.Modulo.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Bignum.AddAndMultiply.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fdifference.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fmul.fst
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fscalar.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Poly1305.fst
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Poly1305_64.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spe.Poly1305_64.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Modulo.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.AddAndMultiply.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Impl.Poly1305_64.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fscalar.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fproduct.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fmul.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Parameters.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Bignum.Modulo.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.AddAndDouble.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Bignum.Fsquare.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Bignum.Crecip.fst
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/bignum'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Modulo.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Fsum.fst
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/salsa-family'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Fdifference.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Fsquare.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Crecip.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.Point.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.EC.Point.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.AddAndDouble2.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.Format.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.EC.Format.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.EC.AddAndDouble.fst
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.Ladder.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.EC.Ladder.SmallLoop.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.EC.Ladder.BigLoop.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.EC.Ladder.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.fst
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib --lax Hacl.EC.fst
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/poly1305'
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/curve25519'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code'
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/test'
+make verify
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/test'
+make -C ../code ci
+make -C ../crypto_proofs all-ver
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code'
+make -C salsa-family all-ci
+make -C bignum all-ci
+make -C poly1305 all-ci
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/salsa-family'
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/crypto_proofs'
+make -C curve25519 all-ci
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/poly1305'
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/bignum'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Symmetric.Chacha20.fst --use_hints
+make[3]: Entering directory '/cygdrive/c/Build/Agent2/_work/13/s/code/curve25519'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Symmetric.HSalsa20.fst --use_hints
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Buffer.Utils \
+utils/Buffer.Utils.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Limb.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Symmetric.XSalsa20.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Field.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Wide.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Limb.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Field.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Wide.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Limb.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Bigint.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Bigint.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fsum.fst --use_hints
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Bytes \
+utils/Crypto.Symmetric.Bytes.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Field.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Fsum.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fdifference.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Wide.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Fproduct.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fscalar.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Bigint.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Fmul.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fproduct.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Field (1792 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fsum.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Field (5517 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Fsum.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Fdifference (2279 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fdifference.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Fsum (2436 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fscalar.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Fscalar (4390 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fproduct.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Bigint (6780 milliseconds)
+All verification conditions discharged successfully
+Verified module: Hacl.Bignum.Fsum (1058 milliseconds)
+All verification conditions discharged successfully
+Verified module: Hacl.Spec.Bignum.Field (13398 milliseconds)
+All verification conditions discharged successfully
+Verified module: Hacl.Bignum.Wide (8062 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.fst --use_hints
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.GF128 \
+primitives/Crypto.Symmetric.GF128.fst
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Fsum.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Fdifference.fst --use_hints
+Verified module: Hacl.Bignum.Limb (8750 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Fproduct.fst --use_hints
+Verified module: Hacl.Bignum.Fdifference (902 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Fmul.fst --use_hints
+Verified module: Hacl.Bignum.Fscalar (1210 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Fmul.fst --use_hints
+Verified module: Hacl.Symmetric.XSalsa20 (11864 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.AES \
+primitives/Crypto.Symmetric.AES.fst
+Verified module: Hacl.Spec.Bignum.Fsum (22125 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Bignum.Constants.fst --use_hints
+Verified module: Hacl.Bignum.Fproduct (9836 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Fscalar.fst --use_hints
+Verified module: Hacl.Bignum.Fsum (13643 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Bignum.Parameters.fst --use_hints
+Verified module: Hacl.Bignum.Constants (123 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.Bignum.Modulo.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Fdifference (13155 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.fst --use_hints
+Verified module: Buffer.Utils (38554 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.AES128 \
+primitives/Crypto.Symmetric.AES128.fst
+Verified module: Hacl.Spec.Bignum.Fsum (21447 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Fscalar.fst --use_hints
+Verified module: Hacl.Bignum.Wide (48656 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Fproduct.fst --use_hints
+Verified module: Hacl.Bignum.Wide (49540 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.Bignum.AddAndMultiply.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Bigint (59582 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Fmul.fst --use_hints
+Verified module: Hacl.Spec.Bignum (6726 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent2\_work\13\s\code\bignum\Hacl.Spec.Bignum.fst.hints; ran without hints
+Verified module: Hacl.Bignum.Limb (59711 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.fst --use_hints
+Verified module: Hacl.Bignum.Limb (58202 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Bignum.Parameters.fst --use_hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.Poly1305.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Bigint (62178 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.Poly1305_64.fst --use_hints
+Verified module: Hacl.Bignum (41205 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.EC.AddAndDouble.fst --use_hints
+Verified module: Hacl.Bignum.Fscalar (1682 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.Bignum.Crecip.fst --use_hints
+Verified module: Hacl.Symmetric.Chacha20 (68617 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Bignum.Modulo.fst --use_hints
+Verified module: Hacl.Bignum.Parameters (27493 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.Cipher \
+prf/Crypto.Symmetric.Cipher.fst
+Verified module: Hacl.Spec.Bignum.Modulo (26514 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Bignum.Modulo.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Fmul (76032 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent2\_work\13\s\code\bignum\Hacl.Spec.Bignum.Fmul.fst.hints; ran without hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Bignum.AddAndMultiply.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Crecip (2576 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Bignum.Fsquare.fst --use_hints
+Verified module: Hacl.Bignum.Modulo (6269 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Bignum.Crecip.fst --use_hints
+Verified module: Hacl.Bignum.Modulo (5597 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.EC.Point.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Fscalar (54429 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.EC.Point.fst --use_hints
+Verified module: Crypto.Symmetric.GF128 (76829 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.PRF \
+prf/Crypto.Symmetric.PRF.fst
+Verified module: Hacl.Spec.Poly1305 (28808 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.EC.AddAndDouble2.fst --use_hints
+Verified module: Crypto.Symmetric.AES (64683 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.MAC \
+uf1cma/Crypto.Symmetric.MAC.fst
+Verified module: Hacl.Bignum.AddAndMultiply (1300 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Symmetric.UF1CMA \
+uf1cma/Crypto.Symmetric.UF1CMA.fst
+Verified module: Hacl.Bignum.Parameters (30432 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.EC.Format.fst --use_hints
+Verified module: Hacl.Spec.Bignum.AddAndMultiply (43014 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt.Invariant \
+aead/Crypto.AEAD.Encrypt.Invariant.fst
+Verified module: Crypto.Symmetric.AES128 (62565 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encoding \
+aead/Crypto.AEAD.Encoding.fst
+Verified module: Hacl.Spec.Bignum.Fproduct (123563 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/bignum'
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Invariant \
+aead/Crypto.AEAD.Invariant.fst
+Verified module: Hacl.Bignum.Fmul (93426 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent2\_work\13\s\code\bignum\Hacl.Bignum.Fmul.fst.hints; ran without hints
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.BufferUtils \
+aead/Crypto.AEAD.BufferUtils.fst
+Verified module: Hacl.Spec.EC.Point (7237 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.EC.Ladder.fst --use_hints
+Verified module: Hacl.Spec.EC.AddAndDouble2 (4144 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.EC.Ladder.SmallLoop.fst --use_hints
+Verified module: Hacl.Spec.EC.Format (9241 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.EC.Ladder.BigLoop.fst --use_hints
+Verified module: Hacl.Bignum.Crecip (24643 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.EC.Ladder.fst --use_hints
+Verified module: Hacl.Spec.Bignum.Fmul (118501 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent2\_work\13\s\code\bignum\Hacl.Spec.Bignum.Fmul.fst.hints; ran without hints
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include ../lib/kremlin --include ../bignum --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.Spec.EC.fst --use_hints
+Verified module: Hacl.Spec.EC.Ladder (3483 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Enxor.Invariant \
+aead/Crypto.AEAD.Enxor.Invariant.fst
+Verified module: Hacl.Bignum.Fproduct (129562 milliseconds)
+All verification conditions discharged successfully
+Verified module: Hacl.Spec.EC.AddAndDouble (70304 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.CMA \
+aead/Crypto.AEAD.Wrappers.CMA.fst
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.Encoding \
+aead/Crypto.AEAD.Wrappers.Encoding.fst
+Verified module: Crypto.Symmetric.Cipher (67193 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.EnxorDexor \
+aead/Crypto.AEAD.EnxorDexor.fst
+Verified module: Hacl.EC.Point (41806 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Wrappers.PRF \
+aead/Crypto.AEAD.Wrappers.PRF.fst
+Verified module: Hacl.EC.Ladder.SmallLoop (9565 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Decrypt \
+aead/Crypto.AEAD.Decrypt.fst
+Verified module: Crypto.AEAD.Encrypt.Invariant (20634 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.MAC_Wrapper.Invariant \
+aead/Crypto.AEAD.MAC_Wrapper.Invariant.fst
+Verified module: Hacl.EC.Ladder.BigLoop (2444 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt.Ideal.Invariant \
+aead/Crypto.AEAD.Encrypt.Ideal.Invariant.fst
+Verified module: Hacl.Bignum.Fmul (94781 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent2\_work\13\s\code\bignum\Hacl.Bignum.Fmul.fst.hints; ran without hints
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD.Encrypt \
+aead/Crypto.AEAD.Encrypt.fst
+Verified module: Hacl.Spec.EC (869 milliseconds)
+All verification conditions discharged successfully
+Verified module: Hacl.Bignum (94078 milliseconds)
+All verification conditions discharged successfully
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.AEAD \
+aead/Crypto.AEAD.fst
+/cygdrive/c/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --trace_error --use_hints --fstar_home C:/Build/Agent2/_work/13/s/dependencies/FStar --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 0 --z3rlimit 20  --use_hints --trace_error \
+--include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib/hyperstack --include utils --include primitives --include prf --include uf1cma --include aead --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/lib/kremlin --include C:/Build/Agent2/_work/13/s/dependencies/FStar/../kremlin/kremlib/ \
+--__temp_no_proj Crypto.Symmetric.MAC \
+--verify_module Crypto.Plain \
+aead/Crypto.Plain.fst
+Verified module: Hacl.EC.Ladder (19904 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Plain (7801 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Wrappers.Encoding (16741 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.PRF (75457 milliseconds)
+All verification conditions discharged successfully
+Verified module: Hacl.Bignum.Fproduct (151333 milliseconds)
+All verification conditions discharged successfully
+Verified module: Hacl.Bignum.Fsquare (104102 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/curve25519'
+Verified module: Crypto.AEAD.Encrypt.Ideal.Invariant (9617 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD (2630 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Wrappers.PRF (30847 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Decrypt (17137 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.Bytes (239287 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.BufferUtils (107716 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.MAC_Wrapper.Invariant (32854 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.UF1CMA (118040 milliseconds)
+All verification conditions discharged successfully
+Verified module: Hacl.Spec.Bignum.Fproduct (263481 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Encrypt (37522 milliseconds)
+All verification conditions discharged successfully
+Verified module: Hacl.Spec.Poly1305_64 (200351 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/poly1305'
+Verified module: Crypto.AEAD.Invariant (216074 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.Symmetric.MAC (251939 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Enxor.Invariant (197300 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.EnxorDexor (283851 milliseconds)
+All verification conditions discharged successfully
+Verified module: Crypto.AEAD.Encoding (451987 milliseconds)
+All verification conditions discharged successfully
+Verified module: Hacl.Symmetric.HSalsa20 (704282 milliseconds)
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code/salsa-family'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/code'
+Verified module: Crypto.AEAD.Wrappers.CMA (646475 milliseconds)
+All verification conditions discharged successfully
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/crypto_proofs'
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/test'
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/13/s/test'
