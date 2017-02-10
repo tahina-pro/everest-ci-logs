@@ -1,0 +1,48 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Checker.ml", line 367, characters 69-90
+Called from file "src/Checker.ml", line 291, characters 16-42
+Called from file "src/Checker.ml", line 190, characters 2-16
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/Checker.ml", line 147, characters 6-25
+Dropping Spec_Poly1305 (at checking time)
+
+Warning 6: in the definition of mac, after the definition of macsize, in top-level declaration Hacl.Test.Poly1305_64.main, in file Hacl_Test_Poly1305_64: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Poly1305_64.main calls Hacl.Impl.Poly1305_64.crypto_onetimeauth -- removing the static qualifier from Hacl.Impl.Poly1305_64.crypto_onetimeauth
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.XSalsa20.main, in file Hacl_Test_XSalsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of result, after the definition of keysize, in top-level declaration Hacl.Test.X25519.main, in file Hacl_Test_X25519: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning 6: in the definition of ciphertext, after the definition of len, in top-level declaration Hacl.Test.Chacha20.main, in file Hacl_Test_Chacha20: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Chacha20.loop calls Hacl.Symmetric.Chacha20.chacha20_update -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_update
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_keysetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_keysetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_encrypt_bytes -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_encrypt_bytes
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha20_finish -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_finish
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of ciphertext, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of expected4, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of nonce, after the definition of key, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Salsa20.main calls Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor -- removing the static qualifier from Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\code\bignum\Hacl.Spec.Bignum.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\specs\Spec.Poly1305.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\code\bignum\Hacl.Spec.Bignum.Fmul.fst.hints; ran without hints
+.\..\bignum\Hacl.Spec.Bignum.Fmul.fst(76,0-93,32): (Error) Unknown assertion failed
+Verified module: Hacl.Spec.Bignum.Fmul (112221 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:57: ../bignum/Hacl.Spec.Bignum.Fmul.fst-verify] Error 1
+make[3]: *** Waiting for unfinished jobs....
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\code\bignum\Hacl.Spec.Bignum.Fmul.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\code\bignum\Hacl.Bignum.Fmul.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\37\s\code\bignum\Hacl.Bignum.Fmul.fst.hints; ran without hints
+make[2]: *** [Makefile:15: poly1305-ci] Error 2
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [Makefile:23: verify-code] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:4: all] Error 2
