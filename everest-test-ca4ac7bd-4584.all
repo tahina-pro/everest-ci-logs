@@ -1,0 +1,528 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/30/s
+About to run: ./everest --yes test
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: Everest-CI-Windows
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent/_work/30/s
+
+exported FSTAR_HOME=C:/Build/Agent/_work/30/s/FStar
+exported VALE_HOME=C:/Build/Agent/_work/30/s/vale
++ FStar/examples/low-level/krml-test.exe
+exported PATH=/cygdrive/c/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml/openssl:/cygdrive/c/Build/Agent/_work/30/s/FStar/bin:/cygdrive/c/Build/Agent/_work/30/s/kremlin:/home/everbld/everest/z3-4.5.0-x64-win/bin:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin/amd64:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin:/cygdrive/c/PROGRA~2/MIA713~1/F#/4.0/FRAMEW~1/v4.0/:/home/everbld/.opam/system/bin:/usr/x86_64-w64-mingw32/sys-root/mingw/bin/:/usr/local/bin:/usr/bin:/cygdrive/c/Build/Agent/externals/git/cmd:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/windows/system32:/cygdrive/c/windows:/cygdrive/c/windows/System32/Wbem:/cygdrive/c/windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:%USERPROFILE%/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Binaries/z3-4.5.0-x64-win/bin:/cygdrive/c/Binaries/scons/Scripts:/cygdrive/c/Python27:/cygdrive/c/Build/Agent/externals.2.104.2/nuget:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin:/cygdrive/c/Build/Agent/bin:/cygdrive/c/Build/Agent/bin
+================================================================================
+Running tests (commands shown below)
+[test] expected output cipher is d31a8d34648e60db7b86afbc53ef7ec2a4aded51296e08fea9e2b5a736ee62d63dbea45e8ca9671282fafb69da92728b1a71de0a9e060b2905d6a5b67ecd3b3692ddbd7f2d778b8c9803aee328091b58fab324e4fad675945585808b4831d7bc3ff4def08e4b7a9de576d26586cec64b61161ae10b594f09e26a7e902ecbd0600691
+[test] computed output cipher is d31a8d34648e60db7b86afbc53ef7ec2a4aded51296e08fea9e2b5a736ee62d63dbea45e8ca9671282fafb69da92728b1a71de0a9e060b2905d6a5b67ecd3b3692ddbd7f2d778b8c9803aee328091b58fab324e4fad675945585808b4831d7bc3ff4def08e4b7a9de576d26586cec64b61161ae10b594f09e26a7e902ecbd0600691
+[test] cipher is a success
++ FStar/examples/low-level/test-perf.exe
+[test] expected output decryption is 4c616469657320616e642047656e746c656d656e206f662074686520636c617373206f66202739393a204966204920636f756c64206f6666657220796f75206f6e6c79206f6e652074697020666f7220746865206675747572652c2073756e73637265656e20776f756c642062652069742e
+[test] computed output decryption is 4c616469657320616e642047656e746c656d656e206f662074686520636c617373206f66202739393a204966204920636f756c64206f6666657220796f75206f6e6c79206f6e652074697020666f7220746865206675747572652c2073756e73637265656e20776f756c642062652069742e
+[test] decryption is a success
+[test] expected output cipher is 58e2fccefa7e3061367f1d57a4e7455a
+[test] computed output cipher is 58e2fccefa7e3061367f1d57a4e7455a
+[test] cipher is a success
+[test] expected output decryption is 
+[test] computed output decryption is 
+[test] decryption is a success
+[test] expected output cipher is 530f8afbc74536b9a963b4f1c4cb738b
+[test] computed output cipher is 530f8afbc74536b9a963b4f1c4cb738b
+[test] cipher is a success
+[test] expected output decryption is 
+[test] computed output decryption is 
+[test] decryption is a success
+[test] expected output cipher is cea7403d4d606b6e074ec5d3baf39d18d0d1c8a799996bf0265b98b5d48ab919
+[test] computed output cipher is cea7403d4d606b6e074ec5d3baf39d18d0d1c8a799996bf0265b98b5d48ab919
+[test] cipher is a success
+[test] expected output decryption is 00000000000000000000000000000000
+[test] computed output decryption is 00000000000000000000000000000000
+[test] decryption is a success
+[test] expected output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f662898015adb094dac5d93471bdec1a502270e3cc6c
+[test] computed output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f662898015adb094dac5d93471bdec1a502270e3cc6c
+[test] cipher is a success
+[test] expected output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b391aafd255
+[test] computed output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b391aafd255
+[test] decryption is a success
+[test] expected output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f66276fc6ece0f4e1768cddf8853bb2d551b
+[test] computed output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f66276fc6ece0f4e1768cddf8853bb2d551b
+[test] cipher is a success
+[test] expected output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b39
+[test] computed output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b39
+[test] decryption is a success
+Testing: Kremlin-C-aes256-gcm
+Cycles for 10 2^14 bytes: 262832235 (1604.20cycles/byte)
+User time for 10 2^14 bytes: 0.114000 (0.695801ns/byte)
+Testing: Kremlin-C-chacha20-poly1305
+Cycles for 1000 2^14 bytes: 769247968 (46.95cycles/byte)
+User time for 1000 2^14 bytes: 0.336000 (0.020508ns/byte)
+Testing: openssl-aes-256-gcm
+Cycles for 1000 2^14 bytes: 18694768 (1.14cycles/byte)
+User time for 1000 2^14 bytes: 0.008000 (0.000488ns/byte)
+Testing: openssl-chacha20-poly1305
+Cycles for 1000 2^14 bytes: 31952224 (1.95cycles/byte)
+User time for 1000 2^14 bytes: 0.014000 (0.000854ns/byte)
+Testing: Kremlin-C-aes256
+Cycles for 1 2^14 bytes: 6482384 (395.65cycles/byte)
+User time for 1 2^14 bytes: 0.003000 (0.183105ns/byte)
+Testing: Kremlin-C-chacha20
+Cycles for 1000 2^14 bytes: 490691396 (29.95cycles/byte)
+User time for 1000 2^14 bytes: 0.213000 (0.013000ns/byte)
+Testing: Kremlin-C-gcm
+Cycles for 1 2^14 bytes: 14159510 (864.23cycles/byte)
+User time for 1 2^14 bytes: 0.007000 (0.427246ns/byte)
+Testing: Kremlin-C-poly1305
+Cycles for 1000 2^14 bytes: 154800367 (9.45cycles/byte)
+User time for 1000 2^14 bytes: 0.067000 (0.004089ns/byte)
++ cd mitls-fstar/src/tls
++ make test
+C:/Build/Agent/_work/30/s/FStar/bin/fstar.exe --version | grep ^commit | sed 's/commit=\([^ ]*\).*/\1/' > ../../.fstar_version
+mkdir -p output
+# Build ../../libs/ffi/FFICallbacks.cmxa
+make -C ../../libs/ffi
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/30/s/mitls-fstar/libs/ffi'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/30/s/mitls-fstar/libs/ffi'
+C:/Build/Agent/_work/30/s/FStar/bin/fstar.exe --fstar_home C:/Build/Agent/_work/30/s/FStar --trace_error --include C:/Build/Agent/_work/30/s/FStar/examples/low-level/crypto/spartan \
+--no_location_info --lax --codegen OCaml --__temp_no_proj TLSExtensions \
+--__temp_no_proj FStar.Heap --odir output --no_extract FStar.All --no_extract FStar.List.Tot.Base --no_extract FStar.List --no_extract FStar.Heap --no_extract FStar.Set --no_extract FStar.Map --no_extract FStar.ST --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.IO --no_extract Platform.Bytes --no_extract Platform.Date --no_extract Platform.Error --no_extract Platform.Tcp --no_extract SessionDB --no_extract DB --no_extract DHDB --no_extract CoreCrypto --no_extract LowCProvider --no_extract FFICallbacks \
+--codegen-lib CoreCrypto --codegen-lib LowCProvider --codegen-lib Platform --codegen-lib Classical --codegen-lib Seq --codegen-lib HyperHeap --codegen-lib HyperStack --codegen-lib FFICallbacks \
+--include C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent/_work/30/s/FStar/ucontrib/Platform/fst/ --include C:/Build/Agent/_work/30/s/FStar/examples/low-level/crypto/real --include C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider/fst --include C:/Build/Agent/_work/30/s/FStar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent/_work/30/s/FStar/ulib/hyperstack \
+--include concrete-flags \
+Flags.fst MonotoneMap.fst TLSError.fst TLSConstants.fst Transport.fst Nonce.fst RSAKey.fst DHGroup.fst ECGroup.fst CommonDH.fst PMS.fst Hashing.fst HashMAC.fst Cert.fst Signature.fst PSK.fst TLSInfo.fst IdNonce.fst TLSExtensions.fst Buffer.Utils.fst Crypto.Symmetric.Bytes.fst Crypto.Config.fst Crypto.Indexing.fst Flag.fst Spartan.fst Crypto.Symmetric.AES.fst Crypto.Symmetric.AES128.fst Crypto.Symmetric.Chacha20.fst Crypto.Symmetric.Cipher.fst Crypto.Symmetric.Poly1305.Bigint.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part1.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part2.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part3.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part4.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part5.fst Crypto.Symmetric.Poly1305.Bignum.Lemmas.Part6.fst Crypto.Symmetric.Poly1305.Bignum.fst Crypto.Symmetric.Poly1305.Spec.fst Crypto.Symmetric.Poly1305.fst Crypto.Symmetric.GF128.Spec.fst Crypto.Symmetric.GF128.fst Crypto.Symmetric.MAC.fst Crypto.Symmetric.UF1CMA.fst Crypto.Plain.fst Crypto.Symmetric.PRF.fst Crypto.AEAD.Encoding.fst Crypto.AEAD.Invariant.fst Crypto.AEAD.Wrappers.PRF.fst Crypto.AEAD.EnxorDexor.fst Crypto.AEAD.Wrappers.Encoding.fst Crypto.AEAD.Wrappers.CMA.fst Crypto.AEAD.fst Crypto.AEAD.Encrypt.fst Crypto.AEAD.Decrypt.fst AEADOpenssl.fst AEADProvider.fst Range.fst DataStream.fst Alert.fst Content.fst StreamPlain.fst StatefulPlain.fst LHAEPlain.fst StreamAE.fst AEAD_GCM.fst MAC.fst Encode.fst StatefulLHAE.fst ENC.fst HandshakeMessages.fst StAE.fst StreamDeltas.fst Record.fst HKDF.fst TLSPRF.fst MasterSecret.fst HandshakeLog.fst Negotiation.fst Epochs.fst KeySchedule.fst Handshake.fst Connection.fst ConnInvariant.fst TLS.fst FFI.fst test/TestRecord.fst test/TestDH.fst test/TestGCM.fst test/TestHandshake.fst test/TestFFI.fst test/TestAPI.fst
+.\KeySchedule.fst(526,4-526,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+Extracted module Mul
+Extracted module StrongExcludedMiddle
+Extracted module Classical
+Extracted module Properties
+Extracted module Tot
+Extracted module Base
+Extracted module Properties
+Extracted module Seq
+Extracted module Lib
+Extracted module Lemmas
+Extracted module BitVector
+Extracted module UInt
+Extracted module UInt32
+Extracted module Int
+Extracted module Int16
+Extracted module Ghost
+Extracted module FunctionalExtensionality
+Extracted module PropositionalExtensionality
+Extracted module PredicateExtensionality
+Extracted module TSet
+Extracted module Flags
+Extracted module RRef
+Extracted module MonotoneMap
+Extracted module TLSError
+Extracted module TLSConstants
+Extracted module Nonce
+Extracted module Hashing
+Extracted module ECGroup
+Extracted module Cert
+Extracted module DHGroup
+Extracted module CommonDH
+Extracted module Buffer
+Extracted module UInt8
+Extracted module BufferUtils
+Extracted module UInt64
+Extracted module Int64
+Extracted module Int63
+Extracted module Int32
+Extracted module Int8
+Extracted module UInt128
+Extracted module UInt63
+Extracted module UInt16
+Extracted module Cast
+Extracted module Utils
+Extracted module Chacha20
+Extracted module Config
+Extracted module PSK
+Extracted module RSAKey
+Extracted module PMS
+Extracted module TLSInfo
+Extracted module Indexing
+Extracted module Flag
+Extracted module AES
+Extracted module Spartan
+Extracted module AES128
+Extracted module Bytes
+Extracted module Bytes
+Extracted module Cipher
+Extracted module Parameters
+Extracted module Bigint
+Extracted module Lemmas
+Extracted module Spec
+Extracted module Part1
+Extracted module Part2
+Extracted module Part3
+Extracted module Part4
+Extracted module Part5
+Extracted module Quantifiers
+Extracted module Part6
+Extracted module Bignum
+Extracted module Poly1305
+Extracted module Spec
+Extracted module GF128
+Extracted module MAC
+Extracted module UF1CMA
+Extracted module Plain
+Extracted module PRF
+Extracted module Encoding
+Extracted module Invariant
+Extracted module Invariant
+Extracted module PRF
+Extracted module Encoding
+Extracted module CMA
+Extracted module EnxorDexor
+Extracted module Decrypt
+Extracted module Invariant
+Extracted module Invariant
+Extracted module Invariant
+Extracted module Encrypt
+Extracted module AEADOpenssl
+Extracted module AEAD
+Extracted module AEADProvider
+Extracted module Range
+Extracted module TLSExtensions
+Extracted module HandshakeMessages
+Extracted module HandshakeLog
+Extracted module IdNonce
+Extracted module Seq
+Extracted module Signature
+Extracted module HashMAC
+Extracted module TLSPRF
+Extracted module DataStream
+Extracted module Alert
+Extracted module Content
+Extracted module StreamPlain
+Extracted module StreamAE
+Extracted module StatefulPlain
+Extracted module LHAEPlain
+Extracted module AEAD_GCM
+Extracted module StatefulLHAE
+Extracted module StAE
+Extracted module Negotiation
+Extracted module Epochs
+Extracted module HKDF
+Extracted module KeySchedule
+Extracted module Handshake
+Extracted module MAC
+Extracted module Encode
+Extracted module ENC
+Extracted module TestRecord
+Extracted module Transport
+Extracted module Connection
+Extracted module Record
+Extracted module StreamDeltas
+Extracted module TLS
+Extracted module FFI
+Extracted module TestFFI
+Extracted module TestAPI
+Extracted module TestDH
+Extracted module TestGCM
+Extracted module MasterSecret
+Extracted module ConnInvariant
+Extracted module TestHandshake
+All verification conditions discharged successfully
+# Note (JP): the Makefile seems incorrect and we need to run make clean
+# first
+# Make OCaml version of F* libs.
+make -C C:/Build/Agent/_work/30/s/FStar/ulib/ml clean
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/ulib/ml'
+rm -f *.cmi *.cmo *.cmx *.exe *.o *.a *.cmxa *~ FStar_ST.cmx FStar_All.cmx FStar_ST.cmi FStar_All.cmi FStar_ST.o FStar_All.o
+rm -f ./extracted/*
+rm -f hyperstack/*.o hyperstack/*.cm*
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/ulib/ml'
+# Builds everything against prims, setting MEM=HST
+make -C C:/Build/Agent/_work/30/s/FStar/ulib/ml MEM=HST
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/ulib/ml'
+make -C .. mgen
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/ulib'
+mkdir -p ml/extracted
+/cygdrive/c/Build/Agent/_work/30/s/FStar/bin/fstar.exe --trace_error --use_hints --lax --codegen OCaml --odir ml/extracted FStar.Set.fst FStar.TSet.fst FStar.Map.fst FStar.HyperHeap.fst FStar.HyperStack.fst
+Extracted module Classical
+Extracted module Base
+Extracted module Properties
+Extracted module FunctionalExtensionality
+Extracted module PropositionalExtensionality
+Extracted module PredicateExtensionality
+Extracted module TSet
+Extracted module Set
+Extracted module Tot
+Extracted module Heap
+Extracted module Map
+Extracted module HyperHeap
+Extracted module HyperStack
+All verification conditions discharged successfully
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/ulib'
+make prims.o FStar_Mul.o FStar_Float.o FStar_Char.o FStar_Int8.o FStar_UInt8.o FStar_Int16.o FStar_UInt16.o FStar_Int32.o FStar_UInt32.o FStar_Int64.o FStar_UInt64.o FStar_UInt128.o FStar_Int_Cast.o FStar_BaseTypes.o FStar_IO.o FStar_Heap.o FStar_List_Tot_Base.o FStar_List.o FStar_Option.o FStar_String.o FStar_Set.o FStar_Buffer.o FStar_CommonST.o ./extracted/FStar_TSet.o ./extracted/FStar_Map.o ./extracted/FStar_HyperHeap.o ./extracted/FStar_HyperStack.o hyperstack/FStar_ST.o hyperstack/FStar_All.o
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/ulib/ml'
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg prims.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Mul.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Float.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Char.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int8.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt8.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int16.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt16.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int32.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt32.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int64.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt64.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_UInt128.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Int_Cast.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_BaseTypes.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_IO.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Heap.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_List_Tot_Base.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_List.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Option.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_String.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Set.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_Buffer.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg FStar_CommonST.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_TSet.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_Map.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_HyperHeap.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg extracted/FStar_HyperStack.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg hyperstack/FStar_ST.ml
+ocamlfind opt -thread -package batteries,zarith,stdint -linkpkg -g   -c -I  ./extracted -linkpkg hyperstack/FStar_All.ml
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/ulib/ml'
+ocamlopt -a prims.cmx FStar_Mul.cmx FStar_Float.cmx FStar_Char.cmx FStar_Int8.cmx FStar_UInt8.cmx FStar_Int16.cmx FStar_UInt16.cmx FStar_Int32.cmx FStar_UInt32.cmx FStar_Int64.cmx FStar_UInt64.cmx FStar_UInt128.cmx FStar_Int_Cast.cmx FStar_BaseTypes.cmx FStar_IO.cmx FStar_Heap.cmx FStar_List_Tot_Base.cmx FStar_List.cmx FStar_Option.cmx FStar_String.cmx FStar_Set.cmx FStar_Buffer.cmx FStar_CommonST.cmx ./extracted/FStar_TSet.cmx ./extracted/FStar_Map.cmx ./extracted/FStar_HyperHeap.cmx ./extracted/FStar_HyperStack.cmx hyperstack/FStar_ST.cmx hyperstack/FStar_All.cmx -o fstarlib.cmxa
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/ulib/ml'
+# Recursively builds everything in platform, etc.
+make -C C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml'
+# Low-level C record stack
+make -C C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider'
+ocamlfind dep *.ml *.mli > .depend
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider'
+# # All our .cmx files
+ocamlfind ocamlopt -package batteries,stdint,fileutils,sqlite3,zarith -linkpkg -g -thread -w a+A-27 -w -a -I C:/Build/Agent/_work/30/s/FStar/ulib/ml/extracted -I C:/Build/Agent/_work/30/s/FStar/ulib/ml/hyperstack -I C:/Build/Agent/_work/30/s/FStar/ulib/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/Platform/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml/db -I C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider -I ../../libs/ml -I ../../libs/ffi -I output -c output/FStar_Ghost.ml output/FStar_Seq_Base.ml output/FStar_List_Tot_Properties.ml output/FStar_List_Tot.ml output/FStar_BitVector.ml output/FStar_UInt.ml output/FStar_Seq_Properties.ml output/FStar_Seq.ml output/FStar_Monotonic_RRef.ml output/FStar_Monotonic_Seq.ml output/Flags.ml output/MonotoneMap.ml output/TLSError.ml output/TLSConstants.ml output/Transport.ml output/Nonce.ml output/RSAKey.ml output/DHGroup.ml output/ECGroup.ml output/CommonDH.ml output/PMS.ml output/Hashing.ml output/HashMAC.ml output/Cert.ml output/Signature.ml output/PSK.ml output/TLSInfo.ml output/IdNonce.ml output/TLSExtensions.ml output/Buffer_Utils.ml output/Crypto_Symmetric_Bytes.ml output/Crypto_Config.ml output/Crypto_Indexing.ml output/Flag.ml output/Spartan.ml output/Crypto_Symmetric_AES.ml output/Crypto_Symmetric_AES128.ml output/Crypto_Symmetric_Chacha20.ml output/Crypto_Symmetric_Cipher.ml output/Crypto_Symmetric_Poly1305_Bigint.ml output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part1.ml output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part2.ml output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part3.ml output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part4.ml output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part5.ml output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part6.ml output/Crypto_Symmetric_Poly1305_Bignum.ml output/Crypto_Symmetric_Poly1305_Spec.ml output/Crypto_Symmetric_Poly1305.ml output/Crypto_Symmetric_GF128_Spec.ml output/Crypto_Symmetric_GF128.ml output/Crypto_Symmetric_MAC.ml output/Crypto_Symmetric_UF1CMA.ml output/Crypto_Plain.ml output/Crypto_Symmetric_PRF.ml output/Crypto_AEAD_Encoding.ml output/Crypto_AEAD_Invariant.ml output/Crypto_AEAD_Wrappers_PRF.ml output/Crypto_AEAD_EnxorDexor.ml output/Crypto_AEAD_Wrappers_Encoding.ml output/Crypto_AEAD_Wrappers_CMA.ml output/Crypto_AEAD.ml output/Crypto_AEAD_Encrypt.ml output/Crypto_AEAD_Decrypt.ml output/AEADOpenssl.ml output/AEADProvider.ml output/Range.ml output/DataStream.ml output/Alert.ml output/Content.ml output/StreamPlain.ml output/StatefulPlain.ml output/LHAEPlain.ml output/StreamAE.ml output/AEAD_GCM.ml output/MAC.ml output/Encode.ml output/StatefulLHAE.ml output/ENC.ml output/HandshakeMessages.ml output/StAE.ml output/StreamDeltas.ml output/Record.ml output/HKDF.ml output/TLSPRF.ml output/MasterSecret.ml output/HandshakeLog.ml output/Negotiation.ml output/Epochs.ml output/KeySchedule.ml output/Handshake.ml output/Connection.ml output/ConnInvariant.ml output/TLS.ml output/FFI.ml output/TestRecord.ml output/TestDH.ml output/TestGCM.ml output/TestHandshake.ml output/TestFFI.ml output/TestAPI.ml ../../libs/ffi/FFIRegister.ml
+# A .cmxa with all the .cmx above
+ocamlfind ocamlopt -a -I C:/Build/Agent/_work/30/s/FStar/ulib/ml/extracted -I C:/Build/Agent/_work/30/s/FStar/ulib/ml/hyperstack -I C:/Build/Agent/_work/30/s/FStar/ulib/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/Platform/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml/db -I C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider -I ../../libs/ml -I ../../libs/ffi output/FStar_Ghost.cmx output/FStar_Seq_Base.cmx output/FStar_List_Tot_Properties.cmx output/FStar_List_Tot.cmx output/FStar_BitVector.cmx output/FStar_UInt.cmx output/FStar_Seq_Properties.cmx output/FStar_Seq.cmx output/FStar_Monotonic_RRef.cmx output/FStar_Monotonic_Seq.cmx output/Flags.cmx output/MonotoneMap.cmx output/TLSError.cmx output/TLSConstants.cmx output/Transport.cmx output/Nonce.cmx output/RSAKey.cmx output/DHGroup.cmx output/ECGroup.cmx output/CommonDH.cmx output/PMS.cmx output/Hashing.cmx output/HashMAC.cmx output/Cert.cmx output/Signature.cmx output/PSK.cmx output/TLSInfo.cmx output/IdNonce.cmx output/TLSExtensions.cmx output/Buffer_Utils.cmx output/Crypto_Symmetric_Bytes.cmx output/Crypto_Config.cmx output/Crypto_Indexing.cmx output/Flag.cmx output/Spartan.cmx output/Crypto_Symmetric_AES.cmx output/Crypto_Symmetric_AES128.cmx output/Crypto_Symmetric_Chacha20.cmx output/Crypto_Symmetric_Cipher.cmx output/Crypto_Symmetric_Poly1305_Bigint.cmx output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part1.cmx output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part2.cmx output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part3.cmx output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part4.cmx output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part5.cmx output/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part6.cmx output/Crypto_Symmetric_Poly1305_Bignum.cmx output/Crypto_Symmetric_Poly1305_Spec.cmx output/Crypto_Symmetric_Poly1305.cmx output/Crypto_Symmetric_GF128_Spec.cmx output/Crypto_Symmetric_GF128.cmx output/Crypto_Symmetric_MAC.cmx output/Crypto_Symmetric_UF1CMA.cmx output/Crypto_Plain.cmx output/Crypto_Symmetric_PRF.cmx output/Crypto_AEAD_Encoding.cmx output/Crypto_AEAD_Invariant.cmx output/Crypto_AEAD_Wrappers_PRF.cmx output/Crypto_AEAD_EnxorDexor.cmx output/Crypto_AEAD_Wrappers_Encoding.cmx output/Crypto_AEAD_Wrappers_CMA.cmx output/Crypto_AEAD.cmx output/Crypto_AEAD_Encrypt.cmx output/Crypto_AEAD_Decrypt.cmx output/AEADOpenssl.cmx output/AEADProvider.cmx output/Range.cmx output/DataStream.cmx output/Alert.cmx output/Content.cmx output/StreamPlain.cmx output/StatefulPlain.cmx output/LHAEPlain.cmx output/StreamAE.cmx output/AEAD_GCM.cmx output/MAC.cmx output/Encode.cmx output/StatefulLHAE.cmx output/ENC.cmx output/HandshakeMessages.cmx output/StAE.cmx output/StreamDeltas.cmx output/Record.cmx output/HKDF.cmx output/TLSPRF.cmx output/MasterSecret.cmx output/HandshakeLog.cmx output/Negotiation.cmx output/Epochs.cmx output/KeySchedule.cmx output/Handshake.cmx output/Connection.cmx output/ConnInvariant.cmx output/TLS.cmx output/FFI.cmx output/TestRecord.cmx output/TestDH.cmx output/TestGCM.cmx output/TestHandshake.cmx output/TestFFI.cmx output/TestAPI.cmx ../../libs/ffi/FFIRegister.cmx -I output -o mitls.cmxa
+ocamlfind ocamlopt -package batteries,stdint,fileutils,sqlite3,zarith -linkpkg -g -thread -w a+A-27 -I C:/Build/Agent/_work/30/s/FStar/ulib/ml/extracted -I C:/Build/Agent/_work/30/s/FStar/ulib/ml/hyperstack -I C:/Build/Agent/_work/30/s/FStar/ulib/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/Platform/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml/db -I C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider -I ../../libs/ml -I ../../libs/ffi -I output C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml/CoreCrypto.cmxa C:/Build/Agent/_work/30/s/FStar/ulib/ml/fstarlib.cmxa C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider/lowc_stub.o C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider/libllcrypto.a C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider/LowCProvider.cmx ../../libs/ffi/FFICallbacks.cmxa mitls.cmxa -I test/ test/parsing_test.ml test/test_hkdf.ml test/test_main.ml -o test.out
+ocamlfind ocamlopt -package batteries,stdint,fileutils,sqlite3,zarith -linkpkg -g -thread -w a+A-27 -I C:/Build/Agent/_work/30/s/FStar/ulib/ml/extracted -I C:/Build/Agent/_work/30/s/FStar/ulib/ml/hyperstack -I C:/Build/Agent/_work/30/s/FStar/ulib/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/Platform/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml -I C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml/db -I C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider -I ../../libs/ml -I ../../libs/ffi C:/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml/CoreCrypto.cmxa C:/Build/Agent/_work/30/s/FStar/ulib/ml/fstarlib.cmxa C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider/lowc_stub.o C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider/libllcrypto.a C:/Build/Agent/_work/30/s/FStar/examples/low-level/LowCProvider/LowCProvider.cmx ../../libs/ffi/FFICallbacks.cmxa -g mitls.cmxa \
+-I test/ -I output/ test/mitls.ml -o mitls.exe
+File "test/mitls.ml", line 58, characters 12-28:
+Warning 6: labels were omitted in the application of this function.
+File "test/mitls.ml", line 63, characters 12-28:
+Warning 6: labels were omitted in the application of this function.
+File "test/mitls.ml", line 68, characters 12-28:
+Warning 6: labels were omitted in the application of this function.
+File "test/mitls.ml", line 104, characters 2-656:
+Warning 4: this pattern-matching is fragile.
+It will remain exhaustive when constructors are added to type TLSConstants.protocolVersion.
+File "test/mitls.ml", line 104, characters 2-656:
+Warning 4: this pattern-matching is fragile.
+It will remain exhaustive when constructors are added to type TLSConstants.protocolVersion.
+# Unit tests from test/test_main.ml
+PATH="/usr/x86_64-w64-mingw32/sys-root/mingw/bin/:/cygdrive/c/Build/Agent/_work/30/s/FStar/ucontrib/CoreCrypto/ml/openssl:/cygdrive/c/Build/Agent/_work/30/s/FStar/bin:/cygdrive/c/Build/Agent/_work/30/s/kremlin:/home/everbld/everest/z3-4.5.0-x64-win/bin:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin/amd64:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin:/cygdrive/c/PROGRA~2/MIA713~1/F#/4.0/FRAMEW~1/v4.0/:/home/everbld/.opam/system/bin:/usr/x86_64-w64-mingw32/sys-root/mingw/bin/:/usr/local/bin:/usr/bin:/cygdrive/c/Build/Agent/externals/git/cmd:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/windows/system32:/cygdrive/c/windows:/cygdrive/c/windows/System32/Wbem:/cygdrive/c/windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:%USERPROFILE%/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Binaries/z3-4.5.0-x64-win/bin:/cygdrive/c/Binaries/scons/Scripts:/cygdrive/c/Python27:/cygdrive/c/Build/Agent/externals.2.104.2/nuget:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin:/cygdrive/c/Build/Agent/bin:/cygdrive/c/Build/Agent/bin" ./test.out
+Read 4066 characters
+Parsing client hello...
+...OK
+Serializing client hello...
+...OK
+Parsing server hello message...
+...OK
+Serializing server hello...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing server key exchange message...
+...OK
+Serializing server key exchange...OK
+Parsing server hello done message...
+...OK
+Parsing client key exchange message...
+...OK
+Serializing client key exchange...
+...OK
+Parsing finished message...
+...OK
+Serializing finished...
+...OK
+Parsing session ticket message...
+...OK
+Serializing session ticket...
+...OK
+Parsing finished message...
+...OK
+Serializing finished...
+...OK
+Parsed all messages
+
+********************************************
+Read 4660 characters
+Parsing client hello...
+...OK
+Serializing client hello...
+...OK
+Parsing server hello message...
+...OK
+Serializing server hello...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...OK
+Parsing server key exchange message...
+...OK
+Serializing server key exchange...OK
+Parsing certificate request message...
+...OK
+Serializing certificate request...
+WARNING: not an inverse of parsing. Got:
+3 1 2 40 0 1e 6 1 6 2 6 3 5 1 5 2 5 3 4 1 4 2 4 3 3 1 3 2 3 3 2 1 2 2 2 3 2 20 0 1a 30 18 31 16 30 14 6 3 55 4 3 13 d 41 6b 61 6d 61 69 50 4b 49 52 6f 6f 74 0 60 30 5e 31 13 30 11 6 a 9 92 26 89 93 f2 2c 64 1 19 16 3 63 6f 6d 31 16 30 14 6 a 9 92 26 89 93 f2 2c 64 1 19 16 6 61 6b 61 6d 61 69 31 14 30 12 6 a 9 92 26 89 93 f2 2c 64 1 19 16 4 63 6f 72 70 31 19 30 17 6 3 55 4 3 13 10 41 6b 61 6d 61 69 50 4b 49 49 73 73 75 69 6e 67 0 56 30 54 31 15 30 13 6 a 9 92 26 89 93 f2 2c 64 1 19 16 5 4c 6f 63 61 6c 31 18 30 16 6 a 9 92 26 89 93 f2 2c 64 1 19 16 8 41 69 72 57 61 74 63 68 31 21 30 1f 6 3 55 4 3 13 18 41 69 72 57 61 74 63 68 2d 41 54 4c 30 32 50 52 44 43 53 31 39 2d 43 41 0 16 30 14 31 12 30 10 6 3 55 4 3 13 9 52 43 41 2d 55 53 4d 41 31 0 41 30 3f 31 21 30 1f 6 3 55 4 a 13 18 41 6b 61 6d 61 69 20 54 65 63 68 6e 6f 6c 6f 67 69 65 73 20 49 6e 63 2e 31 1a 30 18 6 3 55 4 3 13 11 41 6b 61 6d 61 69 43 6f 72 70 52 6f 6f 74 2d 47 31 0 3e 30 3c 31 21 30 1f 6 3 55 4 a 13 18 41 6b 61 6d 61 69 20 54 65 63 68 6e 6f 6c 6f 67 69 65 73 20 49 6e 63 2e 31 17 30 15 6 3 55 4 3 13 e 41 6b 61 6d 61 69 43 6c 69 65 6e 74 43 41 0 56 30 54 31 15 30 13 6 a 9 92 26 89 93 f2 2c 64 1 19 16 5 4c 6f 63 61 6c 31 18 30 16 6 a 9 92 26 89 93 f2 2c 64 1 19 16 8 41 69 72 57 61 74 63 68 31 21 30 1f 6 3 55 4 3 13 18 41 69 72 57 61 74 63 68 2d 41 54 4c 30 34 50 52 44 43 53 33 32 2d 43 41 0 55 30 53 31 15 30 13 6 a 9 92 26 89 93 f2 2c 64 1 19 16 5 4c 6f 63 61 6c 31 18 30 16 6 a 9 92 26 89 93 f2 2c 64 1 19 16 8 41 69 72 57 61 74 63 68 31 20 30 1e 6 3 55 4 3 13 17 41 69 72 57 61 74 63 68 2d 55 53 30 32 50 52 44 43 53 33 35 2d 43 41 
+Serialized:
+2 1 2 0 1e 6 1 6 2 6 3 5 1 5 2 5 3 4 1 4 2 4 3 3 1 3 2 3 3 2 1 2 2 2 3 2 20 0 55 30 53 31 15 30 13 6 a 9 92 26 89 93 f2 2c 64 1 19 16 5 4c 6f 63 61 6c 31 18 30 16 6 a 9 92 26 89 93 f2 2c 64 1 19 16 8 41 69 72 57 61 74 63 68 31 20 30 1e 6 3 55 4 3 13 17 41 69 72 57 61 74 63 68 2d 55 53 30 32 50 52 44 43 53 33 35 2d 43 41 0 56 30 54 31 15 30 13 6 a 9 92 26 89 93 f2 2c 64 1 19 16 5 4c 6f 63 61 6c 31 18 30 16 6 a 9 92 26 89 93 f2 2c 64 1 19 16 8 41 69 72 57 61 74 63 68 31 21 30 1f 6 3 55 4 3 13 18 41 69 72 57 61 74 63 68 2d 41 54 4c 30 34 50 52 44 43 53 33 32 2d 43 41 0 3e 30 3c 31 21 30 1f 6 3 55 4 a 13 18 41 6b 61 6d 61 69 20 54 65 63 68 6e 6f 6c 6f 67 69 65 73 20 49 6e 63 2e 31 17 30 15 6 3 55 4 3 13 e 41 6b 61 6d 61 69 43 6c 69 65 6e 74 43 41 0 41 30 3f 31 21 30 1f 6 3 55 4 a 13 18 41 6b 61 6d 61 69 20 54 65 63 68 6e 6f 6c 6f 67 69 65 73 20 49 6e 63 2e 31 1a 30 18 6 3 55 4 3 13 11 41 6b 61 6d 61 69 43 6f 72 70 52 6f 6f 74 2d 47 31 0 16 30 14 31 12 30 10 6 3 55 4 3 13 9 52 43 41 2d 55 53 4d 41 31 0 56 30 54 31 15 30 13 6 a 9 92 26 89 93 f2 2c 64 1 19 16 5 4c 6f 63 61 6c 31 18 30 16 6 a 9 92 26 89 93 f2 2c 64 1 19 16 8 41 69 72 57 61 74 63 68 31 21 30 1f 6 3 55 4 3 13 18 41 69 72 57 61 74 63 68 2d 41 54 4c 30 32 50 52 44 43 53 31 39 2d 43 41 0 60 30 5e 31 13 30 11 6 a 9 92 26 89 93 f2 2c 64 1 19 16 3 63 6f 6d 31 16 30 14 6 a 9 92 26 89 93 f2 2c 64 1 19 16 6 61 6b 61 6d 61 69 31 14 30 12 6 a 9 92 26 89 93 f2 2c 64 1 19 16 4 63 6f 72 70 31 19 30 17 6 3 55 4 3 13 10 41 6b 61 6d 61 69 50 4b 49 49 73 73 75 69 6e 67 0 1a 30 18 31 16 30 14 6 3 55 4 3 13 d 41 6b 61 6d 61 69 50 4b 49 52 6f 6f 74 
+Parsing server hello done message...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing client key exchange message...
+...OK
+Serializing client key exchange...
+...OK
+Parsing finished message...
+...OK
+Serializing finished...
+...OK
+Parsed all messages
+
+********************************************
+Read 4638 characters
+Parsing client hello...
+...OK
+Serializing client hello...
+...OK
+Parsing server hello message...
+...OK
+Serializing server hello...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing server key exchange message...
+...OK
+Serializing server key exchange...OK
+Parsing server hello done message...
+...OK
+Parsing client key exchange message...
+...OK
+Serializing client key exchange...
+...OK
+Parsing next protocol message...
+...OK
+Serializing next protocol...
+...OK
+Parsed all messages
+
+********************************************
+Read 4638 characters
+Parsing client hello...
+...OK
+Serializing client hello...
+...OK
+Parsing server hello message...
+...OK
+Serializing server hello...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing server key exchange message...
+...OK
+Serializing server key exchange...OK
+Parsing certificate request message...
+...FAILED
+Parsing server hello done message...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing client key exchange message...
+...OK
+Serializing client key exchange...
+...OK
+Parsed all messages
+
+********************************************
+Read 7369 characters
+Parsing client hello...
+...FAILED:
+Decoding error:
+Failed to parse extensions length
+Error: parsing failed due to length not being appropriate:
+
+********************************************
+Read 7369 characters
+Parsing client hello...
+...OK
+Serializing client hello...
+...OK
+Parsing server hello message...
+...OK
+Serializing server hello...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing server key exchange message...
+...OK
+Serializing server key exchange...OK
+Parsing certificate request message...
+...FAILED
+Error: parsing failed due to length not being appropriate:
+
+********************************************
+Encryption test #1: OK
+Encryption test #2: OK
+Encryption test #3: OK
+DH exchange test: OK
+HKDF: 7/7 tests passed
+GCM test: OK
+# Run mitls.exe 1.2
+./mitls.exe www.google.com 443 -v 1.2
+===============================================
+Starting test TLS 1.2 client...
+Received HS(ServerHello)
+Logged message = Parsed message? yes
+Received HS(Certificate)
+Logged message = Parsed message? yes
+Received HS(ServerKeyExchange)
+Logged message = Parsed message? yes
+Received HS(ServerHelloDone)
+Logged message = Parsed message? yes
+Certificate validation status = OK
+***** USING EXTENDED MASTER SECRET ***** 
+Received CCS
+Received HS(Finished)
+Logged message = Parsed message? yes
+Recd fin = expected fin? yes
+Received Data:
+HTTP/1.1 200 OK
+Date: Fri, 10 Feb 2017 17:49:24 GMT
+Expires: -1
+Cache-Control: private, max-age=0
+Content-Type: text/html; charset=ISO-8859-1
+P3P: CP="This is not a P3P policy! See https://www.google.com/support/accounts/answer/151657?hl=en for more info."
+Server: gws
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: NID=96=D82hG4LQvioq7i0WhK-dAvjsqklmDx7GQDuDteCcQUXozOPxgZ_7B8ml6WTQHIruwuM5f0s4fwEOlOs2_ShIQuv314-ffI7wek_Ikt9m9XjcWwUev1mNGFJn4D9TRkAtqQUPoKzvIOEaed7Y1w; expires=Sat, 12-Aug-2017 17:49:24 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: quic=":443"; ma=2592000; v="35,34"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+
+8000
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for." name="description"><meta content="noodp" name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'JP2dWPOeH9jEjAPJtreABQ',kEXPI:'750722,1351903,1352240,1352381,1352690,3700244,3700347,4029815,4032678,4038012,4041899,4043492,4045841,4048347,4064904,4065
+# Run mitls.exe 1.3. Broken right now.
+# mitls-fstar/src/tls/mitls.exe tls13.crypto.mozilla.org 443
++ set +x
+================================================================================
