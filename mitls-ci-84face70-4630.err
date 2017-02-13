@@ -1,0 +1,31 @@
+From https://github.com/FStarLang/FStar
+* [new branch]      aseem_include_cygpath -> origin/aseem_include_cygpath
+813b456..bd76d60  c_relational-ci_r3 -> origin/c_relational-ci_r3
+b3e6a5b..20b1e6d  konrad_hye_example -> origin/konrad_hye_example
+aeeaf88..467086a  kyod_algebraic_presentation -> origin/kyod_algebraic_presentation
+ebf8f74..eada37d  master     -> origin/master
+a16ccf7..2467051  protz_failed_attempt_at_approximate_interactive_mode -> origin/protz_failed_attempt_at_approximate_interactive_mode
+* [new branch]      sishtiaq_fsdoc_nightly -> origin/sishtiaq_fsdoc_nightly
++ 526d750...1ba763f sishtiaq_mitls_iss69 -> origin/sishtiaq_mitls_iss69  (forced update)
+* [new branch]      taramana_seq_map2 -> origin/taramana_seq_map2
+e7f6191..6bc83c1  vdum_pprint_ocaml -> origin/vdum_pprint_ocaml
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
