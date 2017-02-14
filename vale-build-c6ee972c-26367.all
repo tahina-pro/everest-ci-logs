@@ -1,0 +1,54 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/38/s
+About to run: scons.bat -j 4
+BUILD_SOURCEBRANCHNAME:
+BUILD_DEFINITIONNAME:
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+
+scons: Building targets ...
+scons: warning: you do not seem to have the pywin32 extensions installed;
+parallel (-j) builds may not work reliably with open Python files.
+File "C:\Binaries\scons\Scripts\scons.py", line 199, in <module>
+C:\PROGRA~2\MIA713~1\F#\4.0\FRAMEW~1\v4.0\fsc.exe -g --platform:x86 --standalone --mlcompatibility -O tools\Vale\src\ast.fs tools\Vale\src\ast_util.fs tools\Vale\src\parse_util.fs obj\Vale\parse.fs obj\Vale\lex.fs tools\Vale\src\transform.fs tools\Vale\src\emit_common.fs tools\Vale\src\emit_dafny_text.fs tools\Vale\src\emit_dafny_direct.fs tools\Vale\src\emit_fstar_text.fs tools\Vale\src\emit_vale_text.fs tools\Vale\src\main.fs -o bin\vale.exe -r tools\Dafny\BoogieAbsInt.dll -r tools\Dafny\BoogieBasetypes.dll -r tools\Dafny\BoogieCodeContractsExtender.dll -r tools\Dafny\BoogieConcurrency.dll -r tools\Dafny\BoogieCore.dll -r tools\Dafny\BoogieDoomed.dll -r tools\Dafny\BoogieExecutionEngine.dll -r tools\Dafny\BoogieGraph.dll -r tools\Dafny\BoogieHoudini.dll -r tools\Dafny\BoogieModel.dll -r tools\Dafny\BoogieParserHelper.dll -r tools\Dafny\BoogieVCExpr.dll -r tools\Dafny\BoogieVCGeneration.dll -r tools\Dafny\DafnyPipeline.dll -r tools\Dafny\Dafny.exe -r bin\DafnyInterface.dll -r tools\Dafny\Newtonsoft.Json.dll -r tools\FsLexYacc\FsLexYacc.Runtime.6.1.0\lib\net40\FsLexYacc.Runtime.dll
+Copy file(s): "obj\lib\util\types.s.tmp" to "obj\lib\util\types.s.vdfy"
+Copy file(s): "obj\lib\collections\Seqs.s.tmp" to "obj\lib\collections\Seqs.s.vdfy"
+Copy file(s): "obj\lib\math\power2.s.tmp" to "obj\lib\math\power2.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\operations.s.dfy > obj\lib\util\operations.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\words_and_bytes.s.dfy > obj\lib\util\words_and_bytes.s.tmp
+Copy file(s): "obj\lib\math\power.s.tmp" to "obj\lib\math\power.s.vdfy"
+Copy file(s): "obj\lib\math\mul_nonlinear.i.tmp" to "obj\lib\math\mul_nonlinear.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mul_auto_proofs.i.dfy > obj\lib\math\mul_auto_proofs.i.tmp
+Microsoft (R) F# Compiler version 14.0.23413.0
+Copyright (c) Microsoft Corporation. All Rights Reserved.
+Copy file(s): "obj\lib\math\mul_auto_proofs.i.tmp" to "obj\lib\math\mul_auto_proofs.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mul_auto.i.dfy > obj\lib\math\mul_auto.i.tmp
+Copy file(s): "obj\lib\util\words_and_bytes.s.tmp" to "obj\lib\util\words_and_bytes.s.vdfy"
+Copy file(s): "obj\lib\math\div_def.i.tmp" to "obj\lib\math\div_def.i.vdfy"
+Copy file(s): "obj\lib\math\div_nonlinear.i.tmp" to "obj\lib\math\div_nonlinear.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\collections\Seqs.i.dfy > obj\lib\collections\Seqs.i.tmp
+Copy file(s): "obj\lib\math\mul_auto.i.tmp" to "obj\lib\math\mul_auto.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mul.i.dfy > obj\lib\math\mul.i.tmp
+Copy file(s): "obj\lib\util\operations.s.tmp" to "obj\lib\util\operations.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\aes.s.dfy > obj\crypto\aes\aes.s.tmp
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\arch\x86\decls.vad -out obj\arch\x86\decls.gen.dfy
+// parsing .\src\arch\x86\decls.vad
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\aes\aes.vad -out obj\crypto\aes\aes.gen.dfy
+// parsing .\src\crypto\aes\aes.vad
+// parsing .\src\crypto\aes\../../arch/x86/decls.vad
+Copy file(s): "obj\lib\util\dafny_wrappers.i.tmp" to "obj\lib\util\dafny_wrappers.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith /proverOpt:OPTIMIZE_FOR_BV=true src\lib\util\operations.i.dfy > obj\lib\util\operations.i.tmp
+Copy file(s): "obj\lib\collections\Seqs.i.tmp" to "obj\lib\collections\Seqs.i.vdfy"
+Copy file(s): "obj\lib\util\Io.s.tmp" to "obj\lib\util\Io.s.vdfy"
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\arch\arm\decls.vad -out obj\arch\arm\decls.gen.dfy
+// parsing .\src\arch\arm\decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\arm\def.s.dfy > obj\arch\arm\def.s.tmp
+Copy file(s): "obj\lib\math\mul.i.tmp" to "obj\lib\math\mul.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\power.i.dfy > obj\lib\math\power.i.tmp
+Copy file(s): "obj\lib\math\power.i.tmp" to "obj\lib\math\power.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\div_boogie.i.dfy > obj\lib\math\div_boogie.i.tmp
+Copy file(s): "obj\lib\math\div_boogie.i.tmp" to "obj\lib\math\div_boogie.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mod_auto_proofs.i.dfy > obj\lib\math\mod_auto_proofs.i.tmp
+Copy file(s): "obj\crypto\aes\aes.s.tmp" to "obj\crypto\aes\aes.s.vdfy"
+scons: *** [obj\arch\x86\def.s.tmp] C:\Build\Agent\_work\38\s\obj\arch\x86\def.s.tmp: The process cannot access the file because it is being used by another process
+scons: building terminated because of errors.
