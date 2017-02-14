@@ -1,0 +1,36 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /home/everbld/everest/vale
+About to run: scons.bat -j 4
+BUILD_SOURCEBRANCHNAME:
+BUILD_DEFINITIONNAME:
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+
+scons: Building targets ...
+scons: warning: you do not seem to have the pywin32 extensions installed;
+parallel (-j) builds may not work reliably with open Python files.
+File "C:\Binaries\scons\Scripts\scons.py", line 199, in <module>
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\poly1305\x64\poly1305.s.dfy > obj\crypto\poly1305\x64\poly1305.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\bitvectors64.i.dfy > obj\lib\math\bitvectors64.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\bitvectors128.i.dfy > obj\lib\math\bitvectors128.i.tmp
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\poly1305\x64\poly1305_decls.i.vad -out obj\crypto\poly1305\x64\poly1305_decls.i.gen.dfy
+// parsing .\src\crypto\poly1305\x64\poly1305_decls.i.vad
+// parsing .\src\crypto\poly1305\x64\../../../arch/x64/decls.vad
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\thirdPartyPorts\OpenSSL\poly1305\x64\poly1305.vad -out obj\thirdPartyPorts\OpenSSL\poly1305\x64\poly1305.gen.dfy
+// parsing .\src\thirdPartyPorts\OpenSSL\poly1305\x64\poly1305.vad
+// parsing .\src\thirdPartyPorts\OpenSSL\poly1305\x64\../../../../crypto/poly1305/x64/poly1305_decls.i.vad
+// parsing .\src\thirdPartyPorts\OpenSSL\poly1305\x64\..\..\..\..\crypto\poly1305\x64\../../../arch/x64/decls.vad
+Copy file(s): "obj\crypto\poly1305\x64\poly1305.s.tmp" to "obj\crypto\poly1305\x64\poly1305.s.vdfy"
+Copy file(s): "obj\lib\math\bitvectors128.i.tmp" to "obj\lib\math\bitvectors128.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\poly1305\x64\poly1305_util.i.dfy > obj\crypto\poly1305\x64\poly1305_util.i.tmp
+Copy file(s): "obj\lib\math\bitvectors64.i.tmp" to "obj\lib\math\bitvectors64.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\poly1305\x64\poly1305_bitvectors.i.dfy > obj\crypto\poly1305\x64\poly1305_bitvectors.i.tmp
+Copy file(s): "obj\crypto\poly1305\x64\poly1305_bitvectors.i.tmp" to "obj\crypto\poly1305\x64\poly1305_bitvectors.i.vdfy"
+Copy file(s): "obj\crypto\poly1305\x64\poly1305_util.i.tmp" to "obj\crypto\poly1305\x64\poly1305_util.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\poly1305\x64\poly1305_decls.i.gen.dfy > obj\crypto\poly1305\x64\poly1305_decls.i.gen.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\crypto\poly1305\x64\poly1305_decls.i.gen.dfy > obj\crypto\poly1305\x64\poly1305_decls.i.tmp
+Copy file(s): "obj\crypto\poly1305\x64\poly1305_decls.i.gen.tmp" to "obj\crypto\poly1305\x64\poly1305_decls.i.gen.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\thirdPartyPorts\OpenSSL\poly1305\x64\poly1305.gen.dfy > obj\thirdPartyPorts\OpenSSL\poly1305\x64\poly1305.tmp
+Copy file(s): "obj\crypto\poly1305\x64\poly1305_decls.i.tmp" to "obj\crypto\poly1305\x64\poly1305_decls.i.vdfy"
+Copy file(s): "obj\thirdPartyPorts\OpenSSL\poly1305\x64\poly1305.tmp" to "obj\thirdPartyPorts\OpenSSL\poly1305\x64\poly1305.vdfy"
+scons: done building targets.
