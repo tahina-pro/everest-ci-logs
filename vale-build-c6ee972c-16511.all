@@ -1,0 +1,19 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/38/s
+About to run: scons.bat vale -j 4
+BUILD_SOURCEBRANCHNAME:
+BUILD_DEFINITIONNAME:
+scons: Reading SConscript files ...
+EnvironmentError: FsLexYacc missing.  Please install to: "C:\Build\Agent\_work\38\s\tools\FsLexYacc\FsLexYacc.6.1.0\build\fslex.exe":
+File "C:\Build\Agent\_work\38\s\SConstruct", line 509:
+vale_tool_results = SConscript('tools/Vale/SConscript')
+File "C:\Python27\lib\site-packages\SCons\Script\SConscript.py", line 604:
+return method(*args, **kw)
+File "C:\Python27\lib\site-packages\SCons\Script\SConscript.py", line 541:
+return _SConscript(self.fs, *files, **subst_kw)
+File "C:\Python27\lib\site-packages\SCons\Script\SConscript.py", line 250:
+exec _file_ in call_stack[-1].globals
+File "C:\Build\Agent\_work\38\s\tools\Vale\SConscript", line 78:
+add_fslexyacc(env)
+File "C:\Build\Agent\_work\38\s\tools\Vale\SConscript", line 36:
+raise EnvironmentError('FsLexYacc missing.  Please install to: "%s"'%str(fslexfile))
