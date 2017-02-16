@@ -1,0 +1,13 @@
+EnvironmentError: FsLexYacc missing.  Please install to: "/home/vsts/everest/vale/tools/FsLexYacc/FsLexYacc.6.1.0/build/fslex.exe":
+File "/home/vsts/everest/vale/SConstruct", line 521:
+vale_tool_results = SConscript('tools/Vale/SConscript')
+File "/usr/lib/scons/SCons/Script/SConscript.py", line 614:
+return method(*args, **kw)
+File "/usr/lib/scons/SCons/Script/SConscript.py", line 551:
+return _SConscript(self.fs, *files, **subst_kw)
+File "/usr/lib/scons/SCons/Script/SConscript.py", line 260:
+exec _file_ in call_stack[-1].globals
+File "/home/vsts/everest/vale/tools/Vale/SConscript", line 78:
+add_fslexyacc(env)
+File "/home/vsts/everest/vale/tools/Vale/SConscript", line 36:
+raise EnvironmentError('FsLexYacc missing.  Please install to: "%s"'%str(fslexfile))
