@@ -1,0 +1,688 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/2/s
+About to run: mitls_verify
+BUILD_SOURCEBRANCHNAME: mitls_handshake
+BUILD_DEFINITIONNAME: miTLS-CI-Windows
+From https://github.com/FStarLang/FStar
+873cb23..3169788  c_relational-ci_r3 -> origin/c_relational-ci_r3
+dfa5037..5c8811e  taramana_struct -> origin/taramana_struct
+HEAD is now at e96cdcd Docker: bootstrap removed as it now consumes too much ressources for Dockerhub to handle
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+# JP: delete this line and the script once every member of the team has
+# run ./clean.sh once
+./clean.sh
+FStar_Parser_Parse.ml is not under version control, removing
+FStar_Version.ml is not under version control, removing
+rm -rf _build
+rm -f parse.mly FStar_Parser_Parse.ml FStar_Version.ml
+rm -f *.tar.gz *.zip
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+echo 'let version = "0.9.4.0"' > FStar_Version.ml
+echo 'let platform = "Windows_x64"' >> FStar_Version.ml
+cp parse.mly ../parser/ml/
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+echo "%{" > ../parser/parse.fsy
+# We are opening the same module twice but we need these modules
+echo 'let date = "2017-02-16T03:57:23-08:00"' >> FStar_Version.ml
+# open for the definition of tokens
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo 'let commit= "e96cdcd"' >> FStar_Version.ml
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO: create a proper OCamlbuild rule for this production so that
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+mkdir 'C:\Build\Agent2\_work\2\s\fstar\src/ocaml-output/_build'
+mkdir src
+mkdir src/fstar
+mkdir src/fstar/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/fstar/ml/main.ml > src/fstar/ml/main.ml.depends
+mkdir src/ocaml-output
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Main.ml > src/ocaml-output/FStar_Main.ml.depends
+mkdir src/ocaml-output/bootlibs
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_All.ml > src/ocaml-output/bootlibs/FStar_All.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Dependencies.ml > src/ocaml-output/FStar_Dependencies.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_All.cmo src/ocaml-output/bootlibs/FStar_All.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_List.ml > src/ocaml-output/bootlibs/FStar_List.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Options.ml > src/ocaml-output/FStar_Options.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_BaseTypes.ml > src/ocaml-output/bootlibs/FStar_BaseTypes.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Char.ml > src/ocaml-output/bootlibs/FStar_Char.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Float.ml > src/ocaml-output/bootlibs/FStar_Float.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Int16.ml > src/ocaml-output/bootlibs/FStar_Int16.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Int32.ml > src/ocaml-output/bootlibs/FStar_Int32.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Int64.ml > src/ocaml-output/bootlibs/FStar_Int64.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Int8.ml > src/ocaml-output/bootlibs/FStar_Int8.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_UInt16.ml > src/ocaml-output/bootlibs/FStar_UInt16.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_UInt8.ml > src/ocaml-output/bootlibs/FStar_UInt8.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Char.cmo src/ocaml-output/bootlibs/FStar_Char.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Float.cmo src/ocaml-output/bootlibs/FStar_Float.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int16.cmo src/ocaml-output/bootlibs/FStar_Int16.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int32.cmo src/ocaml-output/bootlibs/FStar_Int32.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int64.cmo src/ocaml-output/bootlibs/FStar_Int64.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int8.cmo src/ocaml-output/bootlibs/FStar_Int8.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_UInt16.cmo src/ocaml-output/bootlibs/FStar_UInt16.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_UInt8.cmo src/ocaml-output/bootlibs/FStar_UInt8.ml
+mkdir src/basic
+mkdir src/basic/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Getopt.ml > src/basic/ml/FStar_Getopt.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_List.cmo src/ocaml-output/bootlibs/FStar_List.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Platform.ml > src/basic/ml/FStar_Platform.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_ST.ml > src/ocaml-output/bootlibs/FStar_ST.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_String.ml > src/ocaml-output/bootlibs/FStar_String.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Util.ml > src/basic/ml/FStar_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/prims.ml > src/ocaml-output/bootlibs/prims.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/MkPrims.ml > src/ocaml-output/bootlibs/MkPrims.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/MkPrims.cmo src/ocaml-output/bootlibs/MkPrims.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/prims.cmo src/ocaml-output/bootlibs/prims.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_BaseTypes.cmo src/ocaml-output/bootlibs/FStar_BaseTypes.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Getopt.cmo src/basic/ml/FStar_Getopt.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Platform.cmo src/basic/ml/FStar_Platform.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_ST.cmo src/ocaml-output/bootlibs/FStar_ST.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_String.cmo src/ocaml-output/bootlibs/FStar_String.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Util.cmo src/basic/ml/FStar_Util.ml
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_Dep.ml > src/ocaml-output/FStar_Parser_Dep.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Const.ml > src/ocaml-output/FStar_Const.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Ident.ml > src/ocaml-output/FStar_Ident.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Range.ml > src/basic/ml/FStar_Range.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Range.cmo src/basic/ml/FStar_Range.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Ident.cmo src/ocaml-output/FStar_Ident.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Errors.ml > src/ocaml-output/FStar_Errors.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Options.cmo src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_AST.ml > src/ocaml-output/FStar_Parser_AST.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Const.cmo src/ocaml-output/FStar_Const.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Errors.cmo src/ocaml-output/FStar_Errors.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Const.ml > src/ocaml-output/FStar_Syntax_Const.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Syntax.ml > src/ocaml-output/FStar_Syntax_Syntax.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Unionfind.ml > src/basic/ml/FStar_Unionfind.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Unionfind.cmo src/basic/ml/FStar_Unionfind.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Syntax.cmo src/ocaml-output/FStar_Syntax_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Print.ml > src/ocaml-output/FStar_Syntax_Print.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Const.cmo src/ocaml-output/FStar_Syntax_Const.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Subst.ml > src/ocaml-output/FStar_Syntax_Subst.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/bootlibs/FStar_Option.ml > src/ocaml-output/bootlibs/FStar_Option.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Option.cmo src/ocaml-output/bootlibs/FStar_Option.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Util.ml > src/ocaml-output/FStar_Syntax_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_InstFV.ml > src/ocaml-output/FStar_Syntax_InstFV.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Subst.cmo src/ocaml-output/FStar_Syntax_Subst.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_InstFV.cmo src/ocaml-output/FStar_Syntax_InstFV.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Util.cmo src/ocaml-output/FStar_Syntax_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Print.cmo src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_Driver.ml > src/ocaml-output/FStar_Parser_Driver.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_AST.cmo src/ocaml-output/FStar_Parser_AST.ml
+mkdir src/parser
+mkdir src/parser/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/parser/ml/FStar_Parser_ParseIt.ml > src/parser/ml/FStar_Parser_ParseIt.ml.depends
+''ocamllex.opt -q src/parser/ml/FStar_Parser_LexFStar.mll
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/parser/ml/FStar_Parser_LexFStar.ml > src/parser/ml/FStar_Parser_LexFStar.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_Parse.ml > src/ocaml-output/FStar_Parser_Parse.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/parser/ml/FStar_Parser_Util.ml > src/parser/ml/FStar_Parser_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_Util.cmo src/parser/ml/FStar_Parser_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Parse.cmo src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_LexFStar.cmo src/parser/ml/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_ParseIt.cmo src/parser/ml/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Driver.cmo src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Dep.cmo src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_Kremlin.ml > src/ocaml-output/FStar_Extraction_Kremlin.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Code.ml > src/ocaml-output/FStar_Extraction_ML_Code.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/basic/ml/FStar_Bytes.ml > src/basic/ml/FStar_Bytes.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Syntax.ml > src/ocaml-output/FStar_Extraction_ML_Syntax.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Util.ml > src/ocaml-output/FStar_Extraction_ML_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Syntax.cmo src/ocaml-output/FStar_Extraction_ML_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_UEnv.ml > src/ocaml-output/FStar_Extraction_ML_UEnv.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Env.ml > src/ocaml-output/FStar_TypeChecker_Env.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_Free.ml > src/ocaml-output/FStar_Syntax_Free.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Common.ml > src/ocaml-output/FStar_TypeChecker_Common.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Free.cmo src/ocaml-output/FStar_Syntax_Free.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Common.cmo src/ocaml-output/FStar_TypeChecker_Common.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmo src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmo src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Format.ml > src/ocaml-output/FStar_Format.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Bytes.cmo src/basic/ml/FStar_Bytes.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmo src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Format.cmo src/ocaml-output/FStar_Format.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmo src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Modul.ml > src/ocaml-output/FStar_Extraction_ML_Modul.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Extraction_ML_Term.ml > src/ocaml-output/FStar_Extraction_ML_Term.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Normalize.ml > src/ocaml-output/FStar_TypeChecker_Normalize.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_TcTerm.ml > src/ocaml-output/FStar_TypeChecker_TcTerm.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Err.ml > src/ocaml-output/FStar_TypeChecker_Err.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmo src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Rel.ml > src/ocaml-output/FStar_TypeChecker_Rel.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Err.cmo src/ocaml-output/FStar_TypeChecker_Err.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Util.ml > src/ocaml-output/FStar_TypeChecker_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmo src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmo src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmo src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmo src/ocaml-output/FStar_Extraction_ML_Term.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Fsdoc_Generator.ml > src/ocaml-output/FStar_Fsdoc_Generator.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Indent.ml > src/ocaml-output/FStar_Indent.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_ToDocument.ml > src/ocaml-output/FStar_Parser_ToDocument.ml.depends
+mkdir src/prettyprint
+mkdir src/prettyprint/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/prettyprint/ml/FStar_Pprint.ml > src/prettyprint/ml/FStar_Pprint.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/prettyprint/ml -I src/ocaml-output -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/prettyprint/ml/FStar_Pprint.cmo src/prettyprint/ml/FStar_Pprint.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_ToDocument.cmo src/ocaml-output/FStar_Parser_ToDocument.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Interactive.ml > src/ocaml-output/FStar_Interactive.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Dependencies.cmo src/ocaml-output/FStar_Dependencies.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_Solver.ml > src/ocaml-output/FStar_SMTEncoding_Solver.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_Encode.ml > src/ocaml-output/FStar_SMTEncoding_Encode.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml > src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_Term.ml > src/ocaml-output/FStar_SMTEncoding_Term.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_Util.ml > src/ocaml-output/FStar_SMTEncoding_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmo src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_Z3.ml > src/ocaml-output/FStar_SMTEncoding_Z3.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmo src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmo src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmo src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml > src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmo src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmo src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_ToSyntax_Env.ml > src/ocaml-output/FStar_ToSyntax_Env.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Universal.ml > src/ocaml-output/FStar_Universal.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Parser_Interleave.ml > src/ocaml-output/FStar_Parser_Interleave.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmo src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_Env.cmo src/ocaml-output/FStar_ToSyntax_Env.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_ToSyntax_ToSyntax.ml > src/ocaml-output/FStar_ToSyntax_ToSyntax.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_Syntax_MutRecTy.ml > src/ocaml-output/FStar_Syntax_MutRecTy.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_MutRecTy.cmo src/ocaml-output/FStar_Syntax_MutRecTy.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_Tc.ml > src/ocaml-output/FStar_TypeChecker_Tc.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -modules src/ocaml-output/FStar_TypeChecker_DMFF.ml > src/ocaml-output/FStar_TypeChecker_DMFF.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmo src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Interleave.cmo src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_ToSyntax.cmo src/ocaml-output/FStar_ToSyntax_ToSyntax.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmo src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Universal.cmo src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmo src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmo src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmo src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Indent.cmo src/ocaml-output/FStar_Indent.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Interactive.cmo src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Main.cmo src/ocaml-output/FStar_Main.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/basic/ml -o src/fstar/ml/main.cmo src/fstar/ml/main.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_All.cmx src/ocaml-output/bootlibs/FStar_All.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Char.cmx src/ocaml-output/bootlibs/FStar_Char.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Float.cmx src/ocaml-output/bootlibs/FStar_Float.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int16.cmx src/ocaml-output/bootlibs/FStar_Int16.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int32.cmx src/ocaml-output/bootlibs/FStar_Int32.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int64.cmx src/ocaml-output/bootlibs/FStar_Int64.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int8.cmx src/ocaml-output/bootlibs/FStar_Int8.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_UInt16.cmx src/ocaml-output/bootlibs/FStar_UInt16.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_UInt8.cmx src/ocaml-output/bootlibs/FStar_UInt8.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_List.cmx src/ocaml-output/bootlibs/FStar_List.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/MkPrims.cmx src/ocaml-output/bootlibs/MkPrims.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/prims.cmx src/ocaml-output/bootlibs/prims.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_BaseTypes.cmx src/ocaml-output/bootlibs/FStar_BaseTypes.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Getopt.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Platform.cmx src/basic/ml/FStar_Platform.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_ST.cmx src/ocaml-output/bootlibs/FStar_ST.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_String.cmx src/ocaml-output/bootlibs/FStar_String.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Util.ml
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Range.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Ident.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Const.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Errors.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Unionfind.cmx src/basic/ml/FStar_Unionfind.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Syntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/FStar_Syntax_Const.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Option.cmx src/ocaml-output/bootlibs/FStar_Option.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_Subst.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_InstFV.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_AST.cmx src/ocaml-output/FStar_Parser_AST.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_Util.cmx src/parser/ml/FStar_Parser_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Parse.cmx src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_ParseIt.cmx src/parser/ml/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_Syntax_Free.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Common.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -o src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Bytes.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Format.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Err.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/prettyprint/ml -I src/ocaml-output -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/prettyprint/ml/FStar_Pprint.cmx src/prettyprint/ml/FStar_Pprint.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Parser_ToDocument.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Dependencies.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_Syntax_MutRecTy.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmx src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Indent.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/ocaml-output/FStar_Main.cmx src/ocaml-output/FStar_Main.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/basic/ml -o src/fstar/ml/main.cmx src/fstar/ml/main.ml
+''ocamlfind ocamlopt -linkpkg -thread -package batteries -package zarith -package yojson -package pprint src/ocaml-output/bootlibs/FStar_List.cmx src/ocaml-output/bootlibs/MkPrims.cmx src/ocaml-output/bootlibs/prims.cmx src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Platform.cmx src/ocaml-output/bootlibs/FStar_Char.cmx src/ocaml-output/bootlibs/FStar_Float.cmx src/ocaml-output/bootlibs/FStar_Int16.cmx src/ocaml-output/bootlibs/FStar_Int32.cmx src/ocaml-output/bootlibs/FStar_Int64.cmx src/ocaml-output/bootlibs/FStar_Int8.cmx src/ocaml-output/bootlibs/FStar_UInt16.cmx src/ocaml-output/bootlibs/FStar_UInt8.cmx src/ocaml-output/bootlibs/FStar_BaseTypes.cmx src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Unionfind.cmx src/ocaml-output/bootlibs/FStar_All.cmx src/ocaml-output/bootlibs/FStar_ST.cmx src/ocaml-output/bootlibs/FStar_String.cmx src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/bootlibs/FStar_Option.cmx src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Parser_AST.cmx src/parser/ml/FStar_Parser_Util.cmx src/ocaml-output/FStar_Parser_Parse.cmx src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Fsdoc_Generator.cmx src/prettyprint/ml/FStar_Pprint.cmx src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Main.cmx src/fstar/ml/main.cmx -o src/fstar/ml/main.native
+# Parallel statistics: { count(total): 16(189), max: 8, min: 2, average(total): 4.000(1.254) }
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/2/s/src/tls'
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --version | grep ^commit | sed 's/commit=\([^ ]*\).*/\1/' > ../../.fstar_version
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Flags \
+Flags.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MonotoneMap \
+MonotoneMap.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSError \
+TLSError.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSConstants \
+TLSConstants.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Transport \
+Transport.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Nonce \
+Nonce.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module RSAKey \
+RSAKey.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module DHGroup \
+DHGroup.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module ECGroup \
+ECGroup.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module CommonDH \
+CommonDH.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module PMS \
+PMS.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Hashing.Spec \
+Hashing.Spec.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Hashing.OpenSSL \
+Hashing.OpenSSL.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Hashing \
+Hashing.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Hashing.CRF \
+Hashing.CRF.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module HashMAC \
+HashMAC.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Cert \
+Cert.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Signature \
+Signature.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSInfo \
+TLSInfo.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module IdNonce \
+IdNonce.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSExtensions \
+TLSExtensions.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Range \
+Range.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module DataStream \
+DataStream.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Alert \
+Alert.fst
+Verified module: Flags (23 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Flags.fst.hints; ran without hints
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Content \
+Content.fst
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: TLSError (5302 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamPlain \
+StreamPlain.fst
+Verified module: MonotoneMap (5260 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamAE \
+StreamAE.fst
+Verified module: Hashing (1172 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MasterSecret \
+MasterSecret.fst
+Verified module: Transport (1811 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StatefulPlain \
+StatefulPlain.fst
+Verified module: Hashing.OpenSSL (1958 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.OpenSSL.fst.hints; ran without hints
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module LHAEPlain \
+LHAEPlain.fst
+Verified module: RSAKey (679 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module AEAD_GCM \
+AEAD_GCM.fst
+Verified module: Hashing.Spec (6898 milliseconds)
+All verification conditions discharged successfully
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.Spec.fst.hints; ran without hints
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC \
+MAC.fst
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Cert (3584 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StatefulLHAE \
+StatefulLHAE.fst
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.CRF.fst.hints; ran without hints
+.\Hashing.CRF.fst(28,8-28,80): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(43,8-43,56): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: HashMAC (4594 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Record \
+Record.fst
+.\CommonDH.fst(47,9-51,7): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Nonce (6302 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC_SHA256 \
+MAC_SHA256.fst
+Verified module: IdNonce (4031 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module MAC_SHA1 \
+MAC_SHA1.fst
+.\Signature.fst(108,0-108,67): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: PMS (9547 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StAE \
+StAE.fst
+.\Signature.fst(183,0-183,32): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: Hashing.CRF (17392 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module KeySchedule \
+KeySchedule.fst
+Verified module: MAC (5265 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module StreamDeltas \
+StreamDeltas.fst
+Verified module: TLSExtensions (23527 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module HKDF \
+HKDF.fst
+Verified module: Signature (28158 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Epochs \
+Epochs.fst
+Verified module: DHGroup (31007 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Connection \
+Connection.fst
+Verified module: ECGroup (31067 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module ConnInvariant \
+ConnInvariant.fst
+Verified i'face (or impl+i'face): HKDF (2541 milliseconds)
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\HKDF.fsti.hints; ran without hints
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module FFI \
+FFI.fst
+Verified module: Alert (5334 milliseconds)
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLS \
+TLS.fst
+Verified module: TLSInfo (67785 milliseconds)
+All verification conditions discharged successfully
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: DataStream (8896 milliseconds)
+All verification conditions discharged successfully
+Verified module: LHAEPlain (8192 milliseconds)
+All verification conditions discharged successfully
+Verified module: Content (24011 milliseconds)
+All verification conditions discharged successfully
+Verified module: StatefulPlain (9251 milliseconds)
+All verification conditions discharged successfully
+Verified module: CommonDH (93331 milliseconds)
+All verification conditions discharged successfully
+Verified module: Record (3059 milliseconds)
+All verification conditions discharged successfully
+Verified module: TLSConstants (108272 milliseconds)
+All verification conditions discharged successfully
+Verified module: StreamPlain (29272 milliseconds)
+All verification conditions discharged successfully
+Verified module: MasterSecret (29088 milliseconds)
+All verification conditions discharged successfully
+Verified module: StatefulLHAE (25770 milliseconds)
+All verification conditions discharged successfully
+Verified module: StreamDeltas (6042 milliseconds)
+All verification conditions discharged successfully
+.\KeySchedule.fst(528,4-528,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+.\KeySchedule.fst(528,4-528,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+.\KeySchedule.fst(528,4-528,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+Verified module: Range (57870 milliseconds)
+All verification conditions discharged successfully
+.\KeySchedule.fst(528,4-528,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+.\MAC_SHA256.fst(66,36-66,42): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(69,34-69,48))
+.\MAC_SHA256.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA256 (116812 milliseconds)
+2 errors were reported (see above)
+.\KeySchedule.fst(528,4-528,30): Warning: Admitting ks_server_13_1rtt_psk_init without a definition
+make: *** [Makefile:249: MAC_SHA256.fst-ver] Error 1
+.\MAC_SHA1.fst(66,36-66,42): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(69,34-69,48))
+.\MAC_SHA1.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA1 (116557 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA1.fst-ver] Error 1
+Verified module: StAE (40644 milliseconds)
+All verification conditions discharged successfully
+Verified module: Connection (6229 milliseconds)
+All verification conditions discharged successfully
+Verified module: KeySchedule (30423 milliseconds)
+All verification conditions discharged successfully
+Verified module: FFI (181 milliseconds)
+All verification conditions discharged successfully
+Verified module: Epochs (58632 milliseconds)
+All verification conditions discharged successfully
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
+Verified module: AEAD_GCM (218612 milliseconds)
+All verification conditions discharged successfully
+Verified module: TLS (207665 milliseconds)
+All verification conditions discharged successfully
+Verified module: ConnInvariant (347206 milliseconds)
+All verification conditions discharged successfully
+Verified module: StreamAE (421607 milliseconds)
+All verification conditions discharged successfully
+make: Target 'all-ver' not remade because of errors.
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/2/s/src/tls'
