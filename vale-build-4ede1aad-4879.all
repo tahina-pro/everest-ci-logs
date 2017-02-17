@@ -1,0 +1,53 @@
+This is /home/vsts/everest-ci/ci
+Working directory: /LinuxAgent/_work/13/s
+About to run: scons -j 4 --NOVERIFY
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: VALE-CI-Linux
+scons: Reading SConscript files ...
+***
+*** WARNING:  NOT VERIFYING ANY CODE
+***
+scons: done reading SConscript files.
+scons: Building targets ...
+Copy file(s): "tools/Dafny/Provers.SMTLib.dll" to "bin/Provers.SMTLib.dll"
+dmcs -t:library -out:bin/DafnyInterface.dll tools/Vale/DafnyInterface/Source/DafnyInterface/DafnyDriver.cs tools/Vale/DafnyInterface/Source/DafnyInterface/Properties/AssemblyInfo.cs -r:tools/Dafny/BoogieAbsInt.dll -r:tools/Dafny/BoogieConcurrency.dll -r:tools/Dafny/BoogieCore.dll -r:tools/Dafny/BoogieExecutionEngine.dll -r:tools/Dafny/BoogieParserHelper.dll -r:tools/Dafny/BoogieVCGeneration.dll -r:tools/Dafny/Dafny.exe -r:tools/Dafny/DafnyPipeline.dll -r:tools/Dafny/Provers.SMTLib.dll
+mono tools/FsLexYacc/FsLexYacc.6.1.0/build/fsyacc.exe --module "Parse" tools/Vale/src/parse.fsy -o obj/Vale/parse.fs
+mono tools/FsLexYacc/FsLexYacc.6.1.0/build/fslex.exe tools/Vale/src/lex.fsl -o obj/Vale/lex.fs
+Copy file(s): "tools/Dafny/DafnyRuntime.cs" to "bin/DafnyRuntime.cs"
+Copy file(s): "tools/Dafny/DafnyPrelude.bpl" to "bin/DafnyPrelude.bpl"
+Copy file(s): "tools/Dafny/Dafny.exe" to "bin/Dafny.exe"
+Copy file(s): "tools/Dafny/DafnyPipeline.dll" to "bin/DafnyPipeline.dll"
+Copy file(s): "tools/Dafny/BoogieVCGeneration.dll" to "bin/BoogieVCGeneration.dll"
+Copy file(s): "tools/Dafny/BoogieVCExpr.dll" to "bin/BoogieVCExpr.dll"
+Copy file(s): "tools/Dafny/BoogieParserHelper.dll" to "bin/BoogieParserHelper.dll"
+Copy file(s): "tools/Dafny/BoogieModel.dll" to "bin/BoogieModel.dll"
+Copy file(s): "tools/Dafny/BoogieHoudini.dll" to "bin/BoogieHoudini.dll"
+Copy file(s): "tools/Dafny/BoogieGraph.dll" to "bin/BoogieGraph.dll"
+Copy file(s): "tools/Dafny/BoogieExecutionEngine.dll" to "bin/BoogieExecutionEngine.dll"
+Copy file(s): "tools/Dafny/BoogieDoomed.dll" to "bin/BoogieDoomed.dll"
+Copy file(s): "tools/Dafny/BoogieCore.dll" to "bin/BoogieCore.dll"
+Copy file(s): "tools/Dafny/BoogieConcurrency.dll" to "bin/BoogieConcurrency.dll"
+Copy file(s): "tools/Dafny/BoogieCodeContractsExtender.dll" to "bin/BoogieCodeContractsExtender.dll"
+Copy file(s): "tools/Dafny/BoogieBasetypes.dll" to "bin/BoogieBasetypes.dll"
+Copy file(s): "tools/Dafny/BoogieAbsInt.dll" to "bin/BoogieAbsInt.dll"
+warning CS8001: SDK path could not be resolved
+scons: *** [obj/aes.exe] Implicit dependency `obj/crypto/aes/aes-x64/aes.gen.vdfy' not found, needed by target `obj/aes.exe'.
+compiling to dfas (can take a while...)
+building tables
+computing first function...Compilation succeeded - 1 warning(s)
+time: 00:00:00.0406872
+building kernels...time: 00:00:00.0402817
+building kernel table...time: 00:00:00.0082639
+computing lookahead relations.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.3844892
+building lookahead table...time: 00:00:00.0337089
+building action table...398 states
+writing output
+time: 00:00:00.4038941
+building goto table...time: 00:00:00.0366428
+returning tables.
+462 states
+55 nonterminals
+95 terminals
+207 productions
+#rows in action table: 462
+scons: building terminated because of errors.
