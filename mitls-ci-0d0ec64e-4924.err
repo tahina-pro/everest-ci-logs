@@ -1,0 +1,129 @@
+From https://github.com/FStarLang/FStar
+342c574..78b5805  c_relational-ci_r3 -> origin/c_relational-ci_r3
+* [new branch]      c_relational-ci_test -> origin/c_relational-ci_test
+3eeff99..2b1f02d  c_valedev_initial -> origin/c_valedev_initial
++ cb6f816...c55c5b9 cwinter_checked_hints -> origin/cwinter_checked_hints  (forced update)
+dca1fc3..8aace3e  konrad_hye_example -> origin/konrad_hye_example
+* [new branch]      kyod_reifiable_lifts -> origin/kyod_reifiable_lifts
+* [new branch]      kyod_remove_reifiable -> origin/kyod_remove_reifiable
+7cdd91c..5068e36  master     -> origin/master
+* [new branch]      nik_attemping_349 -> origin/nik_attemping_349
+* [new branch]      nik_attemping_sub_effecting_on_repr -> origin/nik_attemping_sub_effecting_on_repr
+1581038..ad2fdff  nik_private -> origin/nik_private
+122aebc..89b1529  santiago_rpc -> origin/santiago_rpc
+9f86daf..88eafb7  taramana_key_value -> origin/taramana_key_value
+* [new branch]      taramana_struct -> origin/taramana_struct
+0e60f49..7de73ca  vdum_pprint_ocaml -> origin/vdum_pprint_ocaml
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
+warning: CRLF will be replaced by LF in src/tls/AEAD_GCM.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Alert.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Cert.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/CommonDH.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/ConnInvariant.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Connection.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Content.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/DHGroup.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/DataStream.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/ECGroup.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Epochs.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/HKDF.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/HashMAC.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Hashing.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/IdNonce.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/KeySchedule.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/LHAEPlain.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/MAC.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/MAC_SHA1.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/MAC_SHA256.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/MasterSecret.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/MonotoneMap.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Nonce.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/PMS.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/RSAKey.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Range.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Record.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Signature.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/StAE.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/StatefulLHAE.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/StatefulPlain.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/StreamAE.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/StreamDeltas.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/StreamPlain.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/TLS.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/TLSConstants.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/TLSError.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/TLSExtensions.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/TLSInfo.fst.hints.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/tls/Transport.fst.hints.
+The file will have its original line endings in your working directory.
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+b43ca7b [CI] regenerate hints
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+git branch <new-branch-name> b43ca7b
+
+Switched to branch 'master'
+To git@github.com:mitls/mitls-fstar.git
+0d0ec64..b43ca7b  master -> master
