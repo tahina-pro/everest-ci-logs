@@ -1,0 +1,15 @@
+warning CS8001: SDK path could not be resolved
+In file included from obj/crypto/aes/testaes.c:4:0:
+src/crypto/aes/aes.h:8:1: warning: 'stdcall' attribute ignored [-Wattributes]
+void __stdcall KeyExpansionStdcall(const void * key_ptr, void *expanded_key_ptr);
+^
+src/crypto/aes/aes.h:9:1: warning: 'stdcall' attribute ignored [-Wattributes]
+void __stdcall KeyExpansionAndInversionStdcall();
+^
+src/crypto/aes/aes.h:10:1: warning: 'stdcall' attribute ignored [-Wattributes]
+void __stdcall AES128EncryptOneBlockStdcall(void *output_ptr, const void *input_ptr, const void *expanded_key_ptr);
+^
+obj/crypto/aes/testaes.c:27:1: warning: 'cdecl' attribute ignored [-Wattributes]
+{
+^
+scons: *** [obj/aes.exe] Error 2
