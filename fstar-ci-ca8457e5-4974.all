@@ -1,0 +1,68 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: c_valedev_initial
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc 6.1.0'.
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent\_work\1\s\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent\_work\1\s\bin\prettyprint.dll
+syntax -> C:\Build\Agent\_work\1\s\bin\syntax.dll
+typechecker -> C:\Build\Agent\_work\1\s\bin\typechecker.dll
+compiling to dfas (can take a while...)
+342 states
+writing output
+building tables
+computing first function...time: 00:00:00.2041016
+building kernels...time: 00:00:00.1399119
+building kernel table...time: 00:00:00.0175871
+computing lookahead relations...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.4767189
+building lookahead table...time: 00:00:00.2672636
+building action table...state 410: shift/reduce error on SEMICOLON
+state 437: shift/reduce error on BAR
+state 440: shift/reduce error on LBRACE
+state 441: shift/reduce error on BAR
+state 452: shift/reduce error on BAR
+state 528: shift/reduce error on COLON_EQUALS
+state 564: shift/reduce error on LBRACE
+time: 00:00:00.7572349
+building goto table...time: 00:00:00.2270098
+returning tables.
+7 shift/reduce conflicts
+720 states
+139 nonterminals
+141 terminals
+391 productions
+#rows in action table: 720
+parser -> C:\Build\Agent\_work\1\s\bin\parser.dll
+format -> C:\Build\Agent\_work\1\s\bin\format.dll
+extraction -> C:\Build\Agent\_work\1\s\bin\extraction.dll
+fsdoc -> C:\Build\Agent\_work\1\s\bin\fsdoc.dll
+smtencoding -> C:\Build\Agent\_work\1\s\bin\smtencoding.dll
+FSC : error FS0243: Unrecognized option: '--trace_error' [C:\Build\Agent\_work\1\s\src\tactics\tactics.fsproj]
+tosyntax -> C:\Build\Agent\_work\1\s\bin\tosyntax.dll
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: *** [Makefile:53: all] Error 1
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make: *** [Makefile:229: utest] Error 2
