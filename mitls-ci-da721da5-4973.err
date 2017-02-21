@@ -1,0 +1,186 @@
+From https://github.com/FStarLang/FStar
+c79d18b..8866852  c_relational-ci_r3 -> origin/c_relational-ci_r3
++ c55c5b9...c3b488e cwinter_checked_hints -> origin/cwinter_checked_hints  (forced update)
++ 802561c...ac3000b cwinter_smt_proofs -> origin/cwinter_smt_proofs  (forced update)
+a070b7c..984bca8  konrad_hye_example -> origin/konrad_hye_example
+6a96021..fbea944  master     -> origin/master
+b424e91..fbea944  vdum_pprint_ocaml -> origin/vdum_pprint_ocaml
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.OpenSSL.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.Spec.fst.hints; ran without hints
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.CRF.fst.hints; ran without hints
+.\Hashing.CRF.fst(28,8-28,80): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(43,8-43,56): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(47,9-51,7): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(108,0-108,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(183,0-183,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Alert.fst-ver] Error 1
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\HKDF.fsti.hints; ran without hints
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: StreamPlain.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: StatefulPlain.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: AEAD_GCM.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: StatefulLHAE.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Range.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: DataStream.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: StAE.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Content.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: StreamDeltas.fst-ver] Error 1
+make: *** [Makefile:249: MasterSecret.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: StreamAE.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: LHAEPlain.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Connection.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Record.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: KeySchedule.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: TLS.fst-ver] Error 1
+.\TLSInfo.fst(608,0-608,50): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(612,0-615,10): (Warning) Top-level let-bindings must be total; this term may have effects
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Epochs.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: ConnInvariant.fst-ver] Error 1
+.\AEADProvider.fst(62,78-62,83) : (Error) Expected a function; got an expression of type "Type"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: FFI.fst-ver] Error 1
+.\MAC_SHA1.fst(66,36-66,42): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(69,34-69,48))
+.\MAC_SHA1.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA1 (110470 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA1.fst-ver] Error 1
+.\MAC_SHA256.fst(66,36-66,42): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(69,34-69,48))
+.\MAC_SHA256.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA256 (122505 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA256.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
