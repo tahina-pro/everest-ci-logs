@@ -1,0 +1,725 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: cwinter_stable_topsort
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc 6.1.0'.
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent\_work\1\s\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent\_work\1\s\bin\prettyprint.dll
+syntax -> C:\Build\Agent\_work\1\s\bin\syntax.dll
+typechecker -> C:\Build\Agent\_work\1\s\bin\typechecker.dll
+compiling to dfas (can take a while...)
+342 states
+writing output
+building tables
+computing first function...time: 00:00:00.2075935
+building kernels...time: 00:00:00.1438942
+building kernel table...time: 00:00:00.0284992
+computing lookahead relations...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.4829740
+building lookahead table...time: 00:00:00.2732130
+building action table...state 410: shift/reduce error on SEMICOLON
+state 437: shift/reduce error on BAR
+state 440: shift/reduce error on LBRACE
+state 441: shift/reduce error on BAR
+state 452: shift/reduce error on BAR
+state 528: shift/reduce error on COLON_EQUALS
+state 564: shift/reduce error on LBRACE
+time: 00:00:00.7882884
+building goto table...time: 00:00:00.2306579
+returning tables.
+7 shift/reduce conflicts
+720 states
+139 nonterminals
+140 terminals
+391 productions
+#rows in action table: 720
+parser -> C:\Build\Agent\_work\1\s\bin\parser.dll
+format -> C:\Build\Agent\_work\1\s\bin\format.dll
+extraction -> C:\Build\Agent\_work\1\s\bin\extraction.dll
+fsdoc -> C:\Build\Agent\_work\1\s\bin\fsdoc.dll
+smtencoding -> C:\Build\Agent\_work\1\s\bin\smtencoding.dll
+tosyntax -> C:\Build\Agent\_work\1\s\bin\tosyntax.dll
+fstar -> C:\Build\Agent\_work\1\s\bin\fstar.exe
+tests -> C:\Build\Agent\_work\1\s\bin\tests.exe
+chmod a+x ../bin/tests.exe
+chmod a+x ../bin/fstar.exe
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make fsharp-regressions #normalizer failures on linux so only run on windows
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+../bin/tests.exe
+Initializing ...
+Testing the normalizer
+0: ...
+1: ...
+2: ...
+3: ...
+4: ...
+5: ...
+6: ...
+7: ...
+8: ...
+9: ...
+10: ...
+11: ...
+12: ...
+13: ...
+14: ...
+15: ...
+16: ...
+17: ...
+18: ...
+19: ...
+20: ...
+21: ...
+22: ...
+23: ...
+Normalizer ok
+Testing the unifier
+0 ...
+Unify x
+and x
+
+1 ...
+Unify x
+and y
+
+2 ...
+Unify x
+and ((fun x -> x@0) x)
+
+3 ...
+Unify (fun x -> x@0)
+and (fun x -> x@0)
+
+4 ...
+Unify (fun x -> x@0)
+and (fun y -> y@0)
+
+5 ...
+Unify (fun x y -> x@1)
+and (fun a b -> a@1)
+
+6 ...
+Unify (fun x y z -> y@1)
+and (fun a b c -> b@1)
+
+7 ...
+Unify (fun x y -> y@0)
+and (fun x y -> x@1)
+
+8 ...
+Unify (fun x y z -> y@1)
+and (fun x y z -> z@0)
+
+9 ...
+Unify (fun x -> (?20607 x@0))
+and (fun x -> (tuple2 x@0 x@0))
+
+10 ...
+Unify (fun x -> (?20612 x@0))
+and (fun x y -> (op_Addition x@1 y@0))
+
+11 ...
+Unify (x:int -> y:(y#162476:int{(eq2 y@0 x@1)}) -> Tot bool)
+and (x:int -> y:int -> Tot bool)
+
+12 ...
+Unify (a:Type -> b:(_:a@0 -> Type) -> x:a@1 -> y:(b@1 x@0) -> Type)
+and (a:Type -> b:(_:a@0 -> Type) -> x:a@1 -> y:(b@1 x@0) -> Type)
+
+Unifier ok
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make -C ocaml-output
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/ocaml-output'
+cp "../extraction/ml/FStar_Extraction_ML_PrintML_4.02.3.ml" ../extraction/ml/FStar_Extraction_ML_PrintML.ml
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+echo 'let version = "0.9.4.0"' > FStar_Version.ml
+echo 'let platform = "Windows_x64"' >> FStar_Version.ml
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+cp parse.mly ../parser/ml/
+echo 'let date = "2017-02-22T06:50:47-08:00"' >> FStar_Version.ml
+echo 'let commit= "f6ac2c2 (dirty)"' >> FStar_Version.ml
+echo "%{" > ../parser/parse.fsy
+# We are opening the same module twice but we need these modules
+# open for the definition of tokens
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO: create a proper OCamlbuild rule for this production so that
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+mkdir 'C:\Build\Agent\_work\1\s\src/ocaml-output/_build'
+mkdir src
+mkdir src/fstar
+mkdir src/fstar/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/fstar/ml/main.ml > src/fstar/ml/main.ml.depends
+mkdir src/ocaml-output
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Main.ml > src/ocaml-output/FStar_Main.ml.depends
+mkdir src/ocaml-output/bootlibs
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_All.ml > src/ocaml-output/bootlibs/FStar_All.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Dependencies.ml > src/ocaml-output/FStar_Dependencies.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_All.cmo src/ocaml-output/bootlibs/FStar_All.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_List.ml > src/ocaml-output/bootlibs/FStar_List.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Options.ml > src/ocaml-output/FStar_Options.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_BaseTypes.ml > src/ocaml-output/bootlibs/FStar_BaseTypes.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_Char.ml > src/ocaml-output/bootlibs/FStar_Char.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_Float.ml > src/ocaml-output/bootlibs/FStar_Float.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_Int16.ml > src/ocaml-output/bootlibs/FStar_Int16.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_Int32.ml > src/ocaml-output/bootlibs/FStar_Int32.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_Int64.ml > src/ocaml-output/bootlibs/FStar_Int64.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_Int8.ml > src/ocaml-output/bootlibs/FStar_Int8.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_UInt16.ml > src/ocaml-output/bootlibs/FStar_UInt16.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_UInt8.ml > src/ocaml-output/bootlibs/FStar_UInt8.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Char.cmo src/ocaml-output/bootlibs/FStar_Char.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Float.cmo src/ocaml-output/bootlibs/FStar_Float.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int16.cmo src/ocaml-output/bootlibs/FStar_Int16.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int32.cmo src/ocaml-output/bootlibs/FStar_Int32.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int64.cmo src/ocaml-output/bootlibs/FStar_Int64.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int8.cmo src/ocaml-output/bootlibs/FStar_Int8.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_UInt16.cmo src/ocaml-output/bootlibs/FStar_UInt16.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_UInt8.cmo src/ocaml-output/bootlibs/FStar_UInt8.ml
+mkdir src/basic
+mkdir src/basic/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/basic/ml/FStar_Getopt.ml > src/basic/ml/FStar_Getopt.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_List.cmo src/ocaml-output/bootlibs/FStar_List.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/basic/ml/FStar_Platform.ml > src/basic/ml/FStar_Platform.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_ST.ml > src/ocaml-output/bootlibs/FStar_ST.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_String.ml > src/ocaml-output/bootlibs/FStar_String.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/basic/ml/FStar_Util.ml > src/basic/ml/FStar_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/prims.ml > src/ocaml-output/bootlibs/prims.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/MkPrims.ml > src/ocaml-output/bootlibs/MkPrims.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/MkPrims.cmo src/ocaml-output/bootlibs/MkPrims.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/prims.cmo src/ocaml-output/bootlibs/prims.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_BaseTypes.cmo src/ocaml-output/bootlibs/FStar_BaseTypes.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Getopt.cmo src/basic/ml/FStar_Getopt.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Platform.cmo src/basic/ml/FStar_Platform.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_ST.cmo src/ocaml-output/bootlibs/FStar_ST.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_String.cmo src/ocaml-output/bootlibs/FStar_String.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Util.cmo src/basic/ml/FStar_Util.ml
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Parser_Dep.ml > src/ocaml-output/FStar_Parser_Dep.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Const.ml > src/ocaml-output/FStar_Const.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Ident.ml > src/ocaml-output/FStar_Ident.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/basic/ml/FStar_Range.ml > src/basic/ml/FStar_Range.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Range.cmo src/basic/ml/FStar_Range.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Ident.cmo src/ocaml-output/FStar_Ident.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Errors.ml > src/ocaml-output/FStar_Errors.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Options.cmo src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Parser_AST.ml > src/ocaml-output/FStar_Parser_AST.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Const.cmo src/ocaml-output/FStar_Const.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Errors.cmo src/ocaml-output/FStar_Errors.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Syntax_Const.ml > src/ocaml-output/FStar_Syntax_Const.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Syntax_Syntax.ml > src/ocaml-output/FStar_Syntax_Syntax.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/basic/ml/FStar_Unionfind.ml > src/basic/ml/FStar_Unionfind.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Unionfind.cmo src/basic/ml/FStar_Unionfind.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Syntax.cmo src/ocaml-output/FStar_Syntax_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Syntax_Print.ml > src/ocaml-output/FStar_Syntax_Print.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Const.cmo src/ocaml-output/FStar_Syntax_Const.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Syntax_Subst.ml > src/ocaml-output/FStar_Syntax_Subst.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/bootlibs/FStar_Option.ml > src/ocaml-output/bootlibs/FStar_Option.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Option.cmo src/ocaml-output/bootlibs/FStar_Option.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Syntax_Util.ml > src/ocaml-output/FStar_Syntax_Util.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Syntax_InstFV.ml > src/ocaml-output/FStar_Syntax_InstFV.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Subst.cmo src/ocaml-output/FStar_Syntax_Subst.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_InstFV.cmo src/ocaml-output/FStar_Syntax_InstFV.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Util.cmo src/ocaml-output/FStar_Syntax_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Print.cmo src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Parser_Driver.ml > src/ocaml-output/FStar_Parser_Driver.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_AST.cmo src/ocaml-output/FStar_Parser_AST.ml
+mkdir src/parser
+mkdir src/parser/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/parser/ml/FStar_Parser_ParseIt.ml > src/parser/ml/FStar_Parser_ParseIt.ml.depends
+''ocamllex.opt -q src/parser/ml/FStar_Parser_LexFStar.mll
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/parser/ml/FStar_Parser_LexFStar.ml > src/parser/ml/FStar_Parser_LexFStar.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Parser_Parse.ml > src/ocaml-output/FStar_Parser_Parse.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/parser/ml/FStar_Parser_Util.ml > src/parser/ml/FStar_Parser_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_Util.cmo src/parser/ml/FStar_Parser_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Parse.cmo src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_LexFStar.cmo src/parser/ml/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_ParseIt.cmo src/parser/ml/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Driver.cmo src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Dep.cmo src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Extraction_Kremlin.ml > src/ocaml-output/FStar_Extraction_Kremlin.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Extraction_ML_Code.ml > src/ocaml-output/FStar_Extraction_ML_Code.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/basic/ml/FStar_Bytes.ml > src/basic/ml/FStar_Bytes.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Extraction_ML_Syntax.ml > src/ocaml-output/FStar_Extraction_ML_Syntax.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Extraction_ML_Util.ml > src/ocaml-output/FStar_Extraction_ML_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Syntax.cmo src/ocaml-output/FStar_Extraction_ML_Syntax.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Extraction_ML_UEnv.ml > src/ocaml-output/FStar_Extraction_ML_UEnv.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_TypeChecker_Env.ml > src/ocaml-output/FStar_TypeChecker_Env.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Syntax_Free.ml > src/ocaml-output/FStar_Syntax_Free.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_TypeChecker_Common.ml > src/ocaml-output/FStar_TypeChecker_Common.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Free.cmo src/ocaml-output/FStar_Syntax_Free.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Common.cmo src/ocaml-output/FStar_TypeChecker_Common.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmo src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmo src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Format.ml > src/ocaml-output/FStar_Format.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Bytes.cmo src/basic/ml/FStar_Bytes.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmo src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Format.cmo src/ocaml-output/FStar_Format.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmo src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Extraction_ML_Modul.ml > src/ocaml-output/FStar_Extraction_ML_Modul.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Extraction_ML_Term.ml > src/ocaml-output/FStar_Extraction_ML_Term.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_TypeChecker_Normalize.ml > src/ocaml-output/FStar_TypeChecker_Normalize.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_TypeChecker_TcTerm.ml > src/ocaml-output/FStar_TypeChecker_TcTerm.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_TypeChecker_Err.ml > src/ocaml-output/FStar_TypeChecker_Err.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmo src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_TypeChecker_Rel.ml > src/ocaml-output/FStar_TypeChecker_Rel.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Err.cmo src/ocaml-output/FStar_TypeChecker_Err.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_TypeChecker_Util.ml > src/ocaml-output/FStar_TypeChecker_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmo src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmo src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmo src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmo src/ocaml-output/FStar_Extraction_ML_Term.ml
+mkdir src/extraction
+mkdir src/extraction/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/extraction/ml/FStar_Extraction_ML_PrintML.ml > src/extraction/ml/FStar_Extraction_ML_PrintML.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Fsdoc_Generator.ml > src/ocaml-output/FStar_Fsdoc_Generator.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Indent.ml > src/ocaml-output/FStar_Indent.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Parser_ToDocument.ml > src/ocaml-output/FStar_Parser_ToDocument.ml.depends
+mkdir src/prettyprint
+mkdir src/prettyprint/ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/prettyprint/ml/FStar_Pprint.ml > src/prettyprint/ml/FStar_Pprint.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/prettyprint/ml -I src/ocaml-output -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/prettyprint/ml/FStar_Pprint.cmo src/prettyprint/ml/FStar_Pprint.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_ToDocument.cmo src/ocaml-output/FStar_Parser_ToDocument.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Interactive.ml > src/ocaml-output/FStar_Interactive.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Dependencies.cmo src/ocaml-output/FStar_Dependencies.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_SMTEncoding_Solver.ml > src/ocaml-output/FStar_SMTEncoding_Solver.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_SMTEncoding_Encode.ml > src/ocaml-output/FStar_SMTEncoding_Encode.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml > src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_SMTEncoding_Term.ml > src/ocaml-output/FStar_SMTEncoding_Term.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_SMTEncoding_Util.ml > src/ocaml-output/FStar_SMTEncoding_Util.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmo src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_SMTEncoding_Z3.ml > src/ocaml-output/FStar_SMTEncoding_Z3.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmo src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmo src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmo src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml > src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmo src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmo src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_ToSyntax_Env.ml > src/ocaml-output/FStar_ToSyntax_Env.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Universal.ml > src/ocaml-output/FStar_Universal.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Parser_Interleave.ml > src/ocaml-output/FStar_Parser_Interleave.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmo src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_Env.cmo src/ocaml-output/FStar_ToSyntax_Env.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_ToSyntax_ToSyntax.ml > src/ocaml-output/FStar_ToSyntax_ToSyntax.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Syntax_MutRecTy.ml > src/ocaml-output/FStar_Syntax_MutRecTy.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_MutRecTy.cmo src/ocaml-output/FStar_Syntax_MutRecTy.ml
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_TypeChecker_Tc.ml > src/ocaml-output/FStar_TypeChecker_Tc.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_TypeChecker_DMFF.ml > src/ocaml-output/FStar_TypeChecker_DMFF.ml.depends
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_TypeChecker_TcInductive.ml > src/ocaml-output/FStar_TypeChecker_TcInductive.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmo src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcInductive.cmo src/ocaml-output/FStar_TypeChecker_TcInductive.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Interleave.cmo src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_ToSyntax.cmo src/ocaml-output/FStar_ToSyntax_ToSyntax.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmo src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Universal.cmo src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmo src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmo src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/extraction/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/extraction/ml/FStar_Extraction_ML_PrintML.cmo src/extraction/ml/FStar_Extraction_ML_PrintML.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmo src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Indent.cmo src/ocaml-output/FStar_Indent.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Interactive.cmo src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Main.cmo src/ocaml-output/FStar_Main.ml
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/extraction/ml -I src/basic/ml -o src/fstar/ml/main.cmo src/fstar/ml/main.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_All.cmx src/ocaml-output/bootlibs/FStar_All.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Char.cmx src/ocaml-output/bootlibs/FStar_Char.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Float.cmx src/ocaml-output/bootlibs/FStar_Float.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int16.cmx src/ocaml-output/bootlibs/FStar_Int16.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int32.cmx src/ocaml-output/bootlibs/FStar_Int32.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int64.cmx src/ocaml-output/bootlibs/FStar_Int64.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Int8.cmx src/ocaml-output/bootlibs/FStar_Int8.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_UInt16.cmx src/ocaml-output/bootlibs/FStar_UInt16.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_UInt8.cmx src/ocaml-output/bootlibs/FStar_UInt8.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_List.cmx src/ocaml-output/bootlibs/FStar_List.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/MkPrims.cmx src/ocaml-output/bootlibs/MkPrims.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/prims.cmx src/ocaml-output/bootlibs/prims.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_BaseTypes.cmx src/ocaml-output/bootlibs/FStar_BaseTypes.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Getopt.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Platform.cmx src/basic/ml/FStar_Platform.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_ST.cmx src/ocaml-output/bootlibs/FStar_ST.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_String.cmx src/ocaml-output/bootlibs/FStar_String.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Util.ml
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Range.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Ident.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Const.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Errors.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Unionfind.cmx src/basic/ml/FStar_Unionfind.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Syntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/FStar_Syntax_Const.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output/bootlibs -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/bootlibs/FStar_Option.cmx src/ocaml-output/bootlibs/FStar_Option.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_Subst.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_InstFV.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_AST.cmx src/ocaml-output/FStar_Parser_AST.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_Util.cmx src/parser/ml/FStar_Parser_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Parse.cmx src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_ParseIt.cmx src/parser/ml/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_Syntax_Free.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Common.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -o src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Bytes.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Format.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Err.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/prettyprint/ml -I src/ocaml-output -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/prettyprint/ml/FStar_Pprint.cmx src/prettyprint/ml/FStar_Pprint.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Parser_ToDocument.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Dependencies.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_Syntax_MutRecTy.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/extraction/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/extraction/ml/FStar_Extraction_ML_PrintML.cmx src/extraction/ml/FStar_Extraction_ML_PrintML.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmx src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Indent.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Main.cmx src/ocaml-output/FStar_Main.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/extraction/ml -I src/basic/ml -o src/fstar/ml/main.cmx src/fstar/ml/main.ml
+''ocamlfind ocamlopt -linkpkg -thread -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common src/ocaml-output/bootlibs/FStar_List.cmx src/ocaml-output/bootlibs/MkPrims.cmx src/ocaml-output/bootlibs/prims.cmx src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Platform.cmx src/ocaml-output/bootlibs/FStar_Char.cmx src/ocaml-output/bootlibs/FStar_Float.cmx src/ocaml-output/bootlibs/FStar_Int16.cmx src/ocaml-output/bootlibs/FStar_Int32.cmx src/ocaml-output/bootlibs/FStar_Int64.cmx src/ocaml-output/bootlibs/FStar_Int8.cmx src/ocaml-output/bootlibs/FStar_UInt16.cmx src/ocaml-output/bootlibs/FStar_UInt8.cmx src/ocaml-output/bootlibs/FStar_BaseTypes.cmx src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Unionfind.cmx src/ocaml-output/bootlibs/FStar_All.cmx src/ocaml-output/bootlibs/FStar_ST.cmx src/ocaml-output/bootlibs/FStar_String.cmx src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/bootlibs/FStar_Option.cmx src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Extraction_ML_Code.cmx src/extraction/ml/FStar_Extraction_ML_PrintML.cmx src/ocaml-output/FStar_Parser_AST.cmx src/parser/ml/FStar_Parser_Util.cmx src/ocaml-output/FStar_Parser_Parse.cmx src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Fsdoc_Generator.cmx src/prettyprint/ml/FStar_Pprint.cmx src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Main.cmx src/fstar/ml/main.cmx -o src/fstar/ml/main.native
+# Parallel statistics: { count(total): 18(191), max: 8, min: 2, average(total): 3.889(1.272) }
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/ocaml-output'
+make fstar-ocaml
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make ocaml
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+rm -rf boot_fstis u_boot_fsts u_ocaml-output
+mkdir boot_fstis u_boot_fsts u_ocaml-output
+make prep
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+cp basic/string.fsi boot_fstis/FStar.string.fsti
+cp basic/list.fsi boot_fstis/FStar.list.fst
+sed -i 's/open Prims/module ALL_TEMP = FStar.All/g' boot_fstis/FStar.list.fst
+sed -i 's/<.* when .* : equality>//g' boot_fstis/FStar.list.fst
+sed -i 's/val/assume val/g' boot_fstis/FStar.list.fst
+cp basic/util.fsi boot_fstis/FStar.util.fsti
+sed -i 's/open System.IO/module ALL_TMP = FStar.All/g' boot_fstis/FStar.util.fsti
+sed -i 's/type time.*/assume new type time/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type smap.*/assume new type smap : Type0 -> Type0/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type out_channel.*/assume new type out_channel/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type file_handle.*/assume new type file_handle/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type stream_reader.*/assume new type stream_reader/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type string_builder.*/assume new type string_builder/g'  boot_fstis/FStar.util.fsti
+sed -i 's/type proc.*/assume new type proc/g' boot_fstis/FStar.util.fsti
+sed -i 's/type set.*/assume new type set:Type0 -> Type0/g' boot_fstis/FStar.util.fsti
+cp basic/platform.fsi boot_fstis/FStar.platform.fsti
+cp basic/bytes.fsti boot_fstis/FStar.bytes.fst
+cp basic/range.fsi boot_fstis/FStar.range.fsti
+cp basic/version.fsi boot_fstis/FStar.version.fsti
+cp basic/getopt.fsi boot_fstis/FStar.getopt.fsti
+cp basic/unionfind.fsi boot_fstis/FStar.unionfind.fsti
+sed -i 's/type cell.*/module ALL_TMP = FStar.All/g' boot_fstis/FStar.unionfind.fsti
+sed -i 's/and contents.*//g' boot_fstis/FStar.unionfind.fsti
+sed -i 's/.*| Data.*//g' boot_fstis/FStar.unionfind.fsti
+sed -i 's/.*| Fwd.*//g' boot_fstis/FStar.unionfind.fsti
+sed -i 's/type uvar.*/assume new type uvar : Type0 -> Type0/g' boot_fstis/FStar.unionfind.fsti
+cp prettyprint/prettyprint.fsi boot_fstis/FStar.Pprint.fsti
+echo "#light \"off\"" > boot_fstis/FStar.Parser.Parse.fsti
+head -n -12 parser/parse.fsi >> boot_fstis/FStar.Parser.Parse.fsti
+sed -i 's/module FStar.Parser.Parse/module FStar.Parser.Parse\nopen FStar.All\nopen FStar.BaseTypes\ntype bytes = array<byte>/' boot_fstis/FStar.Parser.Parse.fsti
+make rename_as_fst
+make[4]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+./tools/rename_all_boot_fsts
+[rename_all_boot_fsts]: copying ./basic/FStar.Const.fs to u_boot_fsts/FStar.Const.fst
+[rename_all_boot_fsts]: copying ./basic/FStar.Errors.fs to u_boot_fsts/FStar.Errors.fst
+[rename_all_boot_fsts]: copying ./basic/FStar.Ident.fs to u_boot_fsts/FStar.Ident.fst
+[rename_all_boot_fsts]: copying ./basic/FStar.Options.fs to u_boot_fsts/FStar.Options.fst
+[rename_all_boot_fsts]: copying ./basic/FStar.Options.fsi to u_boot_fsts/FStar.Options.fsti
+./boot_fstis/FStar.bytes.fst is unrecognized
+./boot_fstis/FStar.getopt.fsti is unrecognized
+./boot_fstis/FStar.list.fst is unrecognized
+./boot_fstis/FStar.Parser.Parse.fsti is unrecognized
+./boot_fstis/FStar.platform.fsti is unrecognized
+./boot_fstis/FStar.Pprint.fsti is unrecognized
+./boot_fstis/FStar.range.fsti is unrecognized
+./boot_fstis/FStar.string.fsti is unrecognized
+./boot_fstis/FStar.unionfind.fsti is unrecognized
+./boot_fstis/FStar.util.fsti is unrecognized
+./boot_fstis/FStar.version.fsti is unrecognized
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.Kremlin.fs to u_boot_fsts/FStar.Extraction.Kremlin.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Code.fs to u_boot_fsts/FStar.Extraction.ML.Code.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Code.fsi to u_boot_fsts/FStar.Extraction.ML.Code.fsti
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Modul.fs to u_boot_fsts/FStar.Extraction.ML.Modul.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.PrintML.fs to u_boot_fsts/FStar.Extraction.ML.PrintML.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.PrintML.fsi to u_boot_fsts/FStar.Extraction.ML.PrintML.fsti
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Syntax.fs to u_boot_fsts/FStar.Extraction.ML.Syntax.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Term.fs to u_boot_fsts/FStar.Extraction.ML.Term.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.UEnv.fs to u_boot_fsts/FStar.Extraction.ML.UEnv.fst
+[rename_all_boot_fsts]: copying ./extraction/FStar.Extraction.ML.Util.fs to u_boot_fsts/FStar.Extraction.ML.Util.fst
+[rename_all_boot_fsts]: copying ./format/FStar.Format.fs to u_boot_fsts/FStar.Format.fst
+[rename_all_boot_fsts]: copying ./fsdoc/FStar.Fsdoc.Generator.fs to u_boot_fsts/FStar.Fsdoc.Generator.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Dependencies.fs to u_boot_fsts/FStar.Dependencies.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Indent.fs to u_boot_fsts/FStar.Indent.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Interactive.fs to u_boot_fsts/FStar.Interactive.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Main.fs to u_boot_fsts/FStar.Main.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Top.fs to u_boot_fsts/FStar.Top.fst
+[rename_all_boot_fsts]: copying ./fstar/FStar.Universal.fs to u_boot_fsts/FStar.Universal.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.AST.fs to u_boot_fsts/FStar.Parser.AST.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.Dep.fs to u_boot_fsts/FStar.Parser.Dep.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.Dep.fsi to u_boot_fsts/FStar.Parser.Dep.fsti
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.Driver.fs to u_boot_fsts/FStar.Parser.Driver.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.Interleave.fs to u_boot_fsts/FStar.Parser.Interleave.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.Lexhelp.fs to u_boot_fsts/FStar.Parser.Lexhelp.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.ToDocument.fs to u_boot_fsts/FStar.Parser.ToDocument.fst
+[rename_all_boot_fsts]: copying ./parser/FStar.Parser.ToDocument.fsi to u_boot_fsts/FStar.Parser.ToDocument.fsti
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Encode.fs to u_boot_fsts/FStar.SMTEncoding.Encode.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Encode.fsi to u_boot_fsts/FStar.SMTEncoding.Encode.fsti
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.ErrorReporting.fs to u_boot_fsts/FStar.SMTEncoding.ErrorReporting.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.ErrorReporting.fsi to u_boot_fsts/FStar.SMTEncoding.ErrorReporting.fsti
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Solver.fs to u_boot_fsts/FStar.SMTEncoding.Solver.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Solver.fsi to u_boot_fsts/FStar.SMTEncoding.Solver.fsti
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.SplitQueryCases.fs to u_boot_fsts/FStar.SMTEncoding.SplitQueryCases.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Term.fs to u_boot_fsts/FStar.SMTEncoding.Term.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Term.fsi to u_boot_fsts/FStar.SMTEncoding.Term.fsti
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Util.fs to u_boot_fsts/FStar.SMTEncoding.Util.fst
+[rename_all_boot_fsts]: copying ./smtencoding/FStar.SMTEncoding.Z3.fs to u_boot_fsts/FStar.SMTEncoding.Z3.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Const.fs to u_boot_fsts/FStar.Syntax.Const.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Free.fs to u_boot_fsts/FStar.Syntax.Free.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Free.fsi to u_boot_fsts/FStar.Syntax.Free.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.InstFV.fs to u_boot_fsts/FStar.Syntax.InstFV.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.InstFV.fsi to u_boot_fsts/FStar.Syntax.InstFV.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.MutRecTy.fs to u_boot_fsts/FStar.Syntax.MutRecTy.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.MutRecTy.fsi to u_boot_fsts/FStar.Syntax.MutRecTy.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Print.fs to u_boot_fsts/FStar.Syntax.Print.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Print.fsi to u_boot_fsts/FStar.Syntax.Print.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Subst.fs to u_boot_fsts/FStar.Syntax.Subst.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Subst.fsi to u_boot_fsts/FStar.Syntax.Subst.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Syntax.fs to u_boot_fsts/FStar.Syntax.Syntax.fst
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Syntax.fsi to u_boot_fsts/FStar.Syntax.Syntax.fsti
+[rename_all_boot_fsts]: copying ./syntax/FStar.Syntax.Util.fs to u_boot_fsts/FStar.Syntax.Util.fst
+[rename_all_boot_fsts]: copying ./tosyntax/FStar.ToSyntax.Env.fs to u_boot_fsts/FStar.ToSyntax.Env.fst
+[rename_all_boot_fsts]: copying ./tosyntax/FStar.ToSyntax.Env.fsi to u_boot_fsts/FStar.ToSyntax.Env.fsti
+[rename_all_boot_fsts]: copying ./tosyntax/FStar.ToSyntax.ToSyntax.fs to u_boot_fsts/FStar.ToSyntax.ToSyntax.fst
+[rename_all_boot_fsts]: copying ./tosyntax/FStar.ToSyntax.ToSyntax.fsi to u_boot_fsts/FStar.ToSyntax.ToSyntax.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Common.fs to u_boot_fsts/FStar.TypeChecker.Common.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.DMFF.fs to u_boot_fsts/FStar.TypeChecker.DMFF.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.DMFF.fsi to u_boot_fsts/FStar.TypeChecker.DMFF.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Env.fs to u_boot_fsts/FStar.TypeChecker.Env.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Env.fsi to u_boot_fsts/FStar.TypeChecker.Env.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Err.fs to u_boot_fsts/FStar.TypeChecker.Err.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Normalize.fs to u_boot_fsts/FStar.TypeChecker.Normalize.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Normalize.fsi to u_boot_fsts/FStar.TypeChecker.Normalize.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Rel.fs to u_boot_fsts/FStar.TypeChecker.Rel.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Rel.fsi to u_boot_fsts/FStar.TypeChecker.Rel.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Tc.fs to u_boot_fsts/FStar.TypeChecker.Tc.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Tc.fsi to u_boot_fsts/FStar.TypeChecker.Tc.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.TcInductive.fs to u_boot_fsts/FStar.TypeChecker.TcInductive.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.TcInductive.fsi to u_boot_fsts/FStar.TypeChecker.TcInductive.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.TcTerm.fs to u_boot_fsts/FStar.TypeChecker.TcTerm.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.TcTerm.fsi to u_boot_fsts/FStar.TypeChecker.TcTerm.fsti
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Util.fs to u_boot_fsts/FStar.TypeChecker.Util.fst
+[rename_all_boot_fsts]: copying ./typechecker/FStar.TypeChecker.Util.fsi to u_boot_fsts/FStar.TypeChecker.Util.fsti
+cp parser/parseit.fsi u_boot_fsts/FStar.Parser.Parseit.fsti
+make[4]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make u_extract_misc u_extract_syntax u_extract_parser \
+u_extract_typechecker u_extract_tosyntax u_extract_smtencoding \
+u_extract_extraction u_extract_fstar
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.Options.fst u_boot_fsts/FStar.Ident.fst u_boot_fsts/FStar.Errors.fst u_boot_fsts/FStar.Const.fst u_boot_fsts/FStar.Format.fst --extract_module FStar.Options --extract_module FStar.Ident --extract_module FStar.Errors --extract_module FStar.Const --extract_module FStar.Format
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.Syntax.Syntax.fst u_boot_fsts/FStar.Syntax.Const.fst u_boot_fsts/FStar.Syntax.Subst.fst u_boot_fsts/FStar.Syntax.Free.fst u_boot_fsts/FStar.Syntax.InstFV.fst u_boot_fsts/FStar.Syntax.Util.fst u_boot_fsts/FStar.Syntax.Print.fst u_boot_fsts/FStar.Syntax.MutRecTy.fst u_boot_fsts/FStar.Fsdoc.Generator.fst --extract_namespace FStar.Syntax --extract_namespace FStar.Fsdoc
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.Parser.AST.fst u_boot_fsts/FStar.Parser.Interleave.fst u_boot_fsts/FStar.Parser.Lexhelp.fst u_boot_fsts/FStar.Parser.Parseit.fsti u_boot_fsts/FStar.Parser.Driver.fst u_boot_fsts/FStar.Parser.Dep.fst u_boot_fsts/FStar.Parser.ToDocument.fst --extract_namespace FStar.Parser
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.Common.fst u_boot_fsts/FStar.TypeChecker.Env.fst u_boot_fsts/FStar.TypeChecker.Normalize.fst u_boot_fsts/FStar.TypeChecker.Err.fst --extract_namespace FStar.TypeChecker
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.Rel.fst --extract_module FStar.TypeChecker.Rel
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.Util.fst --extract_module FStar.TypeChecker.Util
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.DMFF.fst --extract_module FStar.TypeChecker.DMFF
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.TcTerm.fst --extract_module FStar.TypeChecker.TcTerm
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.TcInductive.fst --extract_module FStar.TypeChecker.TcInductive
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.TypeChecker.Tc.fst --extract_module FStar.TypeChecker.Tc
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.ToSyntax.Env.fst u_boot_fsts/FStar.ToSyntax.ToSyntax.fst --extract_namespace FStar.ToSyntax
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.SMTEncoding.Term.fst u_boot_fsts/FStar.SMTEncoding.Util.fst u_boot_fsts/FStar.SMTEncoding.Z3.fst u_boot_fsts/FStar.SMTEncoding.SplitQueryCases.fst u_boot_fsts/FStar.SMTEncoding.ErrorReporting.fst --extract_namespace FStar.SMTEncoding
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.SMTEncoding.Encode.fst --extract_module FStar.SMTEncoding.Encode
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.SMTEncoding.Solver.fst --extract_module FStar.SMTEncoding.Solver
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.Extraction.ML.Syntax.fst u_boot_fsts/FStar.Extraction.ML.UEnv.fst u_boot_fsts/FStar.Extraction.ML.Util.fst u_boot_fsts/FStar.Extraction.ML.Code.fst u_boot_fsts/FStar.Extraction.ML.Term.fst u_boot_fsts/FStar.Extraction.ML.Modul.fst u_boot_fsts/FStar.Extraction.Kremlin.fst --extract_namespace FStar.Extraction
+../bin/fstar.exe --trace_error --eager_inference --lax --MLish --no_location_info --odir u_ocaml-output --codegen OCaml --include ../ulib --include u_boot_fsts --include boot_fstis u_boot_fsts/FStar.Dependencies.fst u_boot_fsts/FStar.Interactive.fst u_boot_fsts/FStar.Universal.fst u_boot_fsts/FStar.Indent.fst u_boot_fsts/FStar.Main.fst --extract_module FStar.Dependencies --extract_module FStar.Interactive --extract_module FStar.Universal --extract_module FStar.Indent --extract_module FStar.Main
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(397,0-397,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(447,0-447,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(498,0-500,38): (Warning) Annotation from val declaration overrides inline type annotation
+Extracted module Options
+Extracted module Errors
+Extracted module Ident
+Extracted module Const
+Extracted module Format
+All verification conditions discharged successfully
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+C:\Build\Agent\_work\1\s\src\boot_fstis\FStar.Pprint.fsti(33,0-33,13) (Warning): Adding an implicit 'assume new' qualifier on document
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(274,0-278,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Parser.Dep.fst(672,10-672,14) : (Error) Identifier not found: [List.sort]
+Module List resolved into FStar.List, definition sort not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[3]: *** [Makefile:158: u_extract_parser] Error 1
+Extracted module Syntax
+Extracted module Subst
+Extracted module InstFV
+Extracted module Const
+Extracted module Util
+Extracted module TcInductive
+All verification conditions discharged successfully
+Extracted module Print
+Extracted module Generator
+Extracted module Free
+Extracted module MutRecTy
+All verification conditions discharged successfully
+Extracted module Term
+Extracted module Util
+Extracted module SplitQueryCases
+Extracted module Z3
+Extracted module ErrorReporting
+All verification conditions discharged successfully
+Extracted module Util
+All verification conditions discharged successfully
+Extracted module Common
+Extracted module Env
+Extracted module Normalize
+Extracted module Err
+All verification conditions discharged successfully
+Extracted module Syntax
+Extracted module UEnv
+Extracted module Util
+Extracted module Code
+Extracted module Term
+Extracted module Modul
+Extracted module Kremlin
+All verification conditions discharged successfully
+C:\Build\Agent\_work\1\s\src\boot_fstis\FStar.Pprint.fsti(33,0-33,13) (Warning): Adding an implicit 'assume new' qualifier on document
+Extracted module Solver
+All verification conditions discharged successfully
+Extracted module DMFF
+All verification conditions discharged successfully
+Extracted module Dependencies
+Extracted module Universal
+Extracted module Indent
+Extracted module Interactive
+Extracted module Tc
+All verification conditions discharged successfully
+Extracted module Main
+All verification conditions discharged successfully
+Extracted module Env
+Extracted module ToSyntax
+All verification conditions discharged successfully
+Extracted module TcTerm
+All verification conditions discharged successfully
+Extracted module Rel
+All verification conditions discharged successfully
+Extracted module Encode
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[2]: *** [Makefile:218: ocaml] Error 2
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: *** [Makefile:230: fstar-ocaml] Error 2
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make: *** [Makefile:244: utest] Error 2
