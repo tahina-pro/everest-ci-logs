@@ -1,0 +1,233 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/39/s
+About to run: scons.bat -j 4 --NOVERIFY
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: VALE-x64 CI-Windows
+
+C:\Build\Agent\_work\39\s>echo *********** 
+***********
+
+C:\Build\Agent\_work\39\s>set
+AGENT_BUILDDIRECTORY=C:\Build\Agent\_work\39
+AGENT_HOMEDIRECTORY=C:\Build\Agent
+AGENT_ID=4
+AGENT_JOBNAME=Build
+AGENT_JOBSTATUS=Succeeded
+AGENT_MACHINENAME=EVEREST-CI
+AGENT_NAME=EVEREST-CI
+AGENT_ROOTDIRECTORY=C:\Build\Agent\_work
+AGENT_SERVEROMDIRECTORY=C:\Build\Agent\externals\vstsom
+AGENT_WORKFOLDER=C:\Build\Agent\_work
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\everbld\AppData\Roaming
+AZURE_HTTP_USER_AGENT=VSTS_1242fa66-b132-4bb9-a608-b6b99e20eebc_build_67_5036
+BUILDPLATFORM=x64
+BUILD_ARTIFACTSTAGINGDIRECTORY=C:\Build\Agent\_work\39\a
+BUILD_BINARIESDIRECTORY=C:\Build\Agent\_work\39\b
+BUILD_BUILDID=5036
+BUILD_BUILDNUMBER=5036
+BUILD_BUILDURI=vstfs:///Build/Build/5036
+BUILD_CONTAINERID=1078134
+BUILD_DEFINITIONNAME=VALE-x64 CI-Windows
+BUILD_DEFINITIONVERSION=7
+BUILD_QUEUEDBY=[MSResearch-ext]\Project Collection Service Accounts
+BUILD_QUEUEDBYID=2b712f19-0b13-4724-8a27-d3cb3ed81518
+BUILD_REPOSITORY_CLEAN=true
+BUILD_REPOSITORY_GIT_SUBMODULECHECKOUT=False
+BUILD_REPOSITORY_ID=https://github.com/project-everest/vale.git
+BUILD_REPOSITORY_LOCALPATH=C:\Build\Agent\_work\39\s
+BUILD_REPOSITORY_NAME=project-everest/vale
+BUILD_REPOSITORY_PROVIDER=GitHub
+BUILD_REPOSITORY_URI=https://github.com/project-everest/vale.git
+BUILD_REQUESTEDFOR=Barry Bond
+BUILD_REQUESTEDFOREMAIL=barrybo@microsoft.com
+BUILD_REQUESTEDFORID=95346d45-3a2b-4361-bd2e-e5b92274ef0c
+BUILD_SOURCEBRANCH=refs/heads/master
+BUILD_SOURCEBRANCHNAME=master
+BUILD_SOURCESDIRECTORY=C:\Build\Agent\_work\39\s
+BUILD_SOURCEVERSION=dd5aced9ac1a2527dd806957499021e89b78808e
+BUILD_SOURCEVERSIONAUTHOR=BarryBo
+BUILD_SOURCEVERSIONMESSAGE=Merge remote-tracking branch 'origin/master' into barrybo_x64_cbc
+
+# Conflicts:
+#	SConstruct
+BUILD_STAGINGDIRECTORY=C:\Build\Agent\_work\39\a
+BuildLab=10586.th2_release_sec.161024-1825
+BuildLabEx=10586.672.amd64fre.th2_release_sec.161024-1825
+CAMLP4LIB=C:/OCaml/lib/camlp4
+CAML_LD_LIBRARY_PATH=/home/everbld/.opam/system/lib/stublibs:/cygdrive/c/OCaml/lib/stublibs
+CI_LOGS=/home/everbld/ci-logs
+COMMONPROGRAMFILES=C:\Program Files\Common Files
+COMMON_TESTRESULTSDIRECTORY=C:\Build\Agent\_work\39\TestResults
+COMPUTERNAME=EVEREST-CI
+COMSPEC=C:\windows\system32\cmd.exe
+CommandPromptType=Native
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+FSHARPINSTALLDIR=C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\
+Framework40Version=v4.0
+FrameworkDIR64=C:\windows\Microsoft.NET\Framework64
+FrameworkDir=C:\windows\Microsoft.NET\Framework64
+FrameworkVersion64=v4.0.30319
+FrameworkVersion=v4.0.30319
+HOME=C:\cygwin64\home\everbld
+HOMEDRIVE=C:
+HOMEPATH=\Users\everbld
+HOSTNAME=Everest-CI
+INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\\shared;C:\Program Files (x86)\Windows Kits\8.1\include\\um;C:\Program Files (x86)\Windows Kits\8.1\include\\winrt;
+INFOPATH=/usr/local/info:/usr/share/info:/usr/info
+KREMLIN_HOME=C:/Build/Agent/_work/39/s/kremlin
+LANG=en_US.UTF-8
+LIB=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\LIB\amd64;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\LIB\amd64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\lib\um\x64;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64;
+LIBPATH=C:\windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\LIB\amd64;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\LIB\amd64;C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral;\Microsoft.VCLibs\14.0\References\CommonConfiguration\neutral;
+LOCALAPPDATA=C:\Users\everbld\AppData\Local
+LOGONSERVER=\\CO1-RED-DC-14
+MANPATH=/home/everbld/.opam/system/man:
+MSDEPLOY_HTTP_USER_AGENT=VSTS_1242fa66-b132-4bb9-a608-b6b99e20eebc_build_67_5036
+NETFXSDKDir=C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\
+NUMBER_OF_PROCESSORS=36
+OCAMLLIB=C:\OCaml\lib
+OCAMLRUNPARAM=b
+OLDPWD=/home/everbld/everest-ci
+ORIGINAL_PATH=/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/CommonExtensions/Microsoft/TestWindow:/cygdrive/c/Program Files (x86)/MSBuild/14.0/bin/amd64:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/BIN/amd64:/cygdrive/c/windows/Microsoft.NET/Framework64/v4.0.30319:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/VCPackages:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/Tools:/cygdrive/c/Program Files (x86)/HTML Help Workshop:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Performance Tools/x64:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Performance Tools:/cygdrive/c/Program Files (x86)/Windows Kits/8.1/bin/x64:/cygdrive/c/Program Files (x86)/Windows Kits/8.1/bin/x86:/cygdrive/c/Program Files (x86)/Microsoft SDKs/Windows/v10.0A/bin/NETFX 4.6.1 Tools/x64:/cygdrive/c/Build/Agent/externals/git/cmd:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/windows/system32:/cygdrive/c/windows:/cygdrive/c/windows/System32/Wbem:/cygdrive/c/windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:%USERPROFILE%/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Binaries/z3-4.5.0-x64-win/bin:/cygdrive/c/Binaries/scons/Scripts:/cygdrive/c/Python27:/cygdrive/c/Build/Agent/externals.2.104.2/nuget:/cygdrive/c/Program Files (x86)/Pandoc:/cygdrive/c/Program Files/CMake/bin:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin:/cygdrive/c/Build/Agent/bin:/cygdrive/c/Build/Agent/bin
+OS=Windows_NT
+OTHERFLAGS=--trace_error
+OneDrive=C:\Users\everbld\OneDrive - Microsoft
+PATH=C;C:\cygwin64\Build\Agent\_work\39\s\kremlin;C:\cygwin64\home\everbld\everest\z3-4.5.0-x64-win\bin;C:\PROGRA~2\MICROS~1.0\VC\bin\amd64;C:\PROGRA~2\MICROS~1.0\VC\bin;C:\PROGRA~2\MIA713~1\F#\4.0\FRAMEW~1\v4.0\;C:\cygwin64\home\everbld\.opam\system\bin;C:\cygwin64\usr\x86_64-w64-mingw32\sys-root\mingw\bin\;C:\cygwin64\usr\local\bin;C:\cygwin64\bin;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\MSBuild\14.0\bin\amd64;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN\amd64;C:\windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\VCPackages;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Performance Tools\x64;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Performance Tools;C:\Program Files (x86)\Windows Kits\8.1\bin\x64;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64;C:\Build\Agent\externals\git\cmd;C:\Program Files\Docker\Docker\Resources\bin;C:\OCaml\bin;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;%USERPROFILE%\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm;C:\Program Files\Microsoft SQL Server\120\Tools\Binn;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Git\cmd;C:\cygwin64\bin;C:\Binaries\Boogie;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit;C:\Program Files (x86)\HP\HP Performance Advisor;C:\Binaries\z3-4.5.0-x64-win\bin;C:\Binaries\scons\Scripts;C:\Python27;C:\Build\Agent\externals.2.104.2\nuget;C:\Program Files (x86)\Pandoc;C:\Program Files\CMake\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Build\Agent\bin;C:\Build\Agent\bin
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PRINTER=99-4841-msr on research (redirected 2)
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 79 Stepping 1, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=4f01
+PROFILEREAD=true
+PROGRAMFILES=C:\Program Files
+PROMPT=$P$G
+PSModulePath=%ProgramFiles%\WindowsPowerShell\Modules;C:\windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+PWD=/cygdrive/c/Build/Agent/_work/39/s
+Platform=X64
+ProgramData=C:\ProgramData
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+SHELL=/bin/bash
+SHLVL=2
+SLACK_FSTAR_WEBHOOK=https://hooks.slack.com/services/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
+SYSTEM=build
+SYSTEMDRIVE=C:
+SYSTEMROOT=C:\windows
+SYSTEM_ARTIFACTSDIRECTORY=C:\Build\Agent\_work\39\a
+SYSTEM_COLLECTIONID=1242fa66-b132-4bb9-a608-b6b99e20eebc
+SYSTEM_CULTURE=en-US
+SYSTEM_DEBUG=false
+SYSTEM_DEFAULTWORKINGDIRECTORY=C:\Build\Agent\_work\39\s
+SYSTEM_DEFINITIONID=67
+SYSTEM_HOSTTYPE=build
+SYSTEM_ISSCHEDULED=False
+SYSTEM_JOBID=8600409c-0361-4915-aec5-fb8faef1d2f0
+SYSTEM_PLANID=4601cc09-0ea2-40ca-9c32-734c83636a74
+SYSTEM_TASKDEFINITIONSURI=https://msresearch-ext.visualstudio.com/
+SYSTEM_TEAMFOUNDATIONCOLLECTIONURI=https://msresearch-ext.visualstudio.com/
+SYSTEM_TEAMPROJECT=Everest
+SYSTEM_TEAMPROJECTID=83f09286-c288-4766-89cd-d267b6d93772
+SYSTEM_TIMELINEID=cc7d45fd-473b-48fc-96b3-d46e330b09fb
+SYSTEM_WORKFOLDER=C:\Build\Agent\_work
+TASK_DISPLAYNAME=Run bash
+TEMP=C:\cygwin64\tmp
+TERM=cygwin
+TF_BUILD=True
+TMP=C:\cygwin64\tmp
+TZ=America/Los_Angeles
+UATDATA=C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+UCRTVersion=10.0.10240.0
+USER=everbld
+USERDNSDOMAIN=REDMOND.CORP.MICROSOFT.COM
+USERDOMAIN=REDMOND
+USERDOMAIN_ROAMINGPROFILE=REDMOND
+USERNAME=everbld
+USERPROFILE=C:\Users\everbld
+UniversalCRTSdkDir=C:\Program Files (x86)\Windows Kits\10\
+VCINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\
+VS140COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
+VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio 14.0\
+VisualStudioVersion=14.0
+WINDIR=C:\windows
+WindowsLibPath=C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral
+WindowsSDKLibVersion=winv6.3\
+WindowsSDKVersion=\
+WindowsSDK_ExecutablePath_x64=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\
+WindowsSDK_ExecutablePath_x86=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\
+WindowsSdkDir=C:\Program Files (x86)\Windows Kits\8.1\
+_=/cygdrive/c/Binaries/scons/Scripts/scons.bat
+agent.jobstatus=Succeeded
+
+C:\Build\Agent\_work\39\s>echo *********** 
+***********
+scons: Reading SConscript files ...
+***
+*** WARNING:  NOT VERIFYING ANY CODE
+***
+scons: done reading SConscript files.
+scons: Building targets ...
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+parallel (-j) builds may not work reliably with open Python files.
+File "C:\Binaries\scons\Scripts\scons.py", line 199, in <module>
+Copy file(s): "tools\Dafny\z3.exe" to "bin\z3.exe"
+csc -t:library -out:bin\DafnyInterface.dll tools\Vale\DafnyInterface\Source\DafnyInterface\DafnyDriver.cs tools\Vale\DafnyInterface\Source\DafnyInterface\Properties\AssemblyInfo.cs -r:tools\Dafny\BoogieAbsInt.dll -r:tools\Dafny\BoogieConcurrency.dll -r:tools\Dafny\BoogieCore.dll -r:tools\Dafny\BoogieExecutionEngine.dll -r:tools\Dafny\BoogieParserHelper.dll -r:tools\Dafny\BoogieVCGeneration.dll -r:tools\Dafny\Dafny.exe -r:tools\Dafny\DafnyPipeline.dll -r:tools\Dafny\Provers.SMTLib.dll
+tools\FsLexYacc\FsLexYacc.6.1.0\build\fsyacc.exe --module "Parse" tools\Vale\src\parse.fsy -o obj\Vale\parse.fs
+tools\FsLexYacc\FsLexYacc.6.1.0\build\fslex.exe tools\Vale\src\lex.fsl -o obj\Vale\lex.fs
+Copy file(s): "tools\Dafny\Provers.SMTLib.dll" to "bin\Provers.SMTLib.dll"
+Copy file(s): "tools\Dafny\DafnyRuntime.cs" to "bin\DafnyRuntime.cs"
+Copy file(s): "tools\Dafny\DafnyPrelude.bpl" to "bin\DafnyPrelude.bpl"
+Copy file(s): "tools\Dafny\Dafny.exe" to "bin\Dafny.exe"
+Copy file(s): "tools\Dafny\DafnyPipeline.dll" to "bin\DafnyPipeline.dll"
+Copy file(s): "tools\Dafny\BoogieVCGeneration.dll" to "bin\BoogieVCGeneration.dll"
+Copy file(s): "tools\Dafny\BoogieVCExpr.dll" to "bin\BoogieVCExpr.dll"
+Copy file(s): "tools\Dafny\BoogieParserHelper.dll" to "bin\BoogieParserHelper.dll"
+Copy file(s): "tools\Dafny\BoogieModel.dll" to "bin\BoogieModel.dll"
+Copy file(s): "tools\Dafny\BoogieHoudini.dll" to "bin\BoogieHoudini.dll"
+Copy file(s): "tools\Dafny\BoogieGraph.dll" to "bin\BoogieGraph.dll"
+Copy file(s): "tools\Dafny\BoogieExecutionEngine.dll" to "bin\BoogieExecutionEngine.dll"
+Copy file(s): "tools\Dafny\BoogieDoomed.dll" to "bin\BoogieDoomed.dll"
+Copy file(s): "tools\Dafny\BoogieCore.dll" to "bin\BoogieCore.dll"
+Copy file(s): "tools\Dafny\BoogieConcurrency.dll" to "bin\BoogieConcurrency.dll"
+Copy file(s): "tools\Dafny\BoogieCodeContractsExtender.dll" to "bin\BoogieCodeContractsExtender.dll"
+Copy file(s): "tools\Dafny\BoogieBasetypes.dll" to "bin\BoogieBasetypes.dll"
+Copy file(s): "tools\Dafny\BoogieAbsInt.dll" to "bin\BoogieAbsInt.dll"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /noVerify /compile:2 src\lib\util\IoNative.cs src\crypto\aes\aes-x64\aes_main.i.dfy /out:obj\aes.exe
+building tables
+Microsoft (R) Visual C# Compiler version 4.6.1038.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+[TRACE] Using prover: C:\Build\Agent\_work\39\s\tools\Dafny\z3.exe
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /noVerify /compile:2 src\lib\util\IoNative.cs src\crypto\aes\aes-x64\cbc_main.i.dfy /out:obj\cbc.exe
+compiling to dfas (can take a while...)
+Parsing src\crypto\aes\aes-x64\aes_main.i.dfy
+computing first function...[TRACE] Using prover: C:\Build\Agent\_work\39\s\tools\Dafny\z3.exe
+time: src\crypto\aes\aes-x64\aes_main.i.dfy(1,8): Error: Unable to open included file
+Error opening file "src\crypto\aes\aes-x64\../../../../obj/crypto/aes/aes-x64/aes.gen.dfy": Could not find a part of the path 'C:\Build\Agent\_work\39\s\obj\crypto\aes\aes-x64\aes.gen.dfy'.
+scons: *** [obj\aes.exe] Error 2
+Parsing src\crypto\aes\aes-x64\cbc_main.i.dfy
+00:00:00.0823511
+building kernels...src\crypto\aes\aes-x64\cbc_main.i.dfy(1,8): Error: Unable to open included file
+Error opening file "src\crypto\aes\aes-x64\../../../../obj/crypto/aes/aes-x64/cbc.gen.dfy": Could not find a part of the path 'C:\Build\Agent\_work\39\s\obj\crypto\aes\aes-x64\cbc.gen.dfy'.
+scons: *** [obj\cbc.exe] Error 2
+time: 00:00:00.0772353
+building kernel table...time: 00:00:00.0162791
+computing lookahead relations.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.3813797
+building lookahead table...time: 00:00:00.0427309
+building action table...time: 00:00:00.3549662
+building goto table...time: 00:00:00.0334958
+returning tables.
+398 states
+writing output
+462 states
+55 nonterminals
+95 terminals
+207 productions
+#rows in action table: 462
+scons: building terminated because of errors.
