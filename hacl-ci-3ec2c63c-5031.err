@@ -1,0 +1,159 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Fatal error: exception Failure("Syntax error: Hacl.Spec.*Hacl.Spec.Symmetric.Chacha20.fst")
+Raised at file "pervasives.ml", line 30, characters 22-33
+Called from file "src/Kremlin.ml", line 114, characters 55-82
+Called from file "arg.ml", line 150, characters 12-33
+Called from file "arg.ml", line 201, characters 8-27
+Called from file "arg.ml", line 214, characters 2-73
+Called from file "src/Kremlin.ml", line 134, characters 2-616
+make[3]: *** [Makefile:91: Chacha.c] Error 2
+make[3]: *** Waiting for unfinished jobs....
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Checker.ml", line 552, characters 37-58
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "list.ml", line 55, characters 20-23
+Called from file "src/Checker.ml", line 435, characters 16-39
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "src/Checker.ml", line 216, characters 8-21
+Called from file "src/Checker.ml", line 193, characters 2-16
+Called from file "src/Checker.ml", line 152, characters 6-22
+Dropping Spec.Poly1305.msg (at checking time)
+
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Checker.ml", line 552, characters 37-58
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "list.ml", line 55, characters 20-23
+Called from file "src/Checker.ml", line 435, characters 16-39
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "src/Checker.ml", line 216, characters 8-21
+Called from file "src/Checker.ml", line 193, characters 2-16
+Called from file "src/Checker.ml", line 152, characters 6-22
+Dropping Spec.Poly1305.k (at checking time)
+
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Checker.ml", line 552, characters 37-58
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "list.ml", line 55, characters 20-23
+Called from file "src/Checker.ml", line 435, characters 16-39
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "src/Checker.ml", line 216, characters 8-21
+Called from file "src/Checker.ml", line 193, characters 2-16
+Called from file "src/Checker.ml", line 152, characters 6-22
+Dropping Spec.Poly1305.expected (at checking time)
+
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Checker.ml", line 552, characters 37-58
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "list.ml", line 55, characters 20-23
+Called from file "src/Checker.ml", line 435, characters 16-39
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "src/Checker.ml", line 216, characters 8-21
+Called from file "src/Checker.ml", line 193, characters 2-16
+Called from file "list.ml", line 110, characters 24-31
+Called from file "src/Checker.ml", line 446, characters 8-40
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "src/Checker.ml", line 216, characters 8-21
+Called from file "src/Checker.ml", line 193, characters 2-16
+Called from file "list.ml", line 110, characters 24-31
+Called from file "src/Checker.ml", line 446, characters 8-40
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "src/Checker.ml", line 216, characters 8-21
+Called from file "src/Checker.ml", line 193, characters 2-16
+Called from file "src/Checker.ml", line 152, characters 6-22
+Dropping Spec.Poly1305.test (at checking time)
+
+Warning 6: in the definition of mac, after the definition of macsize, in top-level declaration Hacl.Test.Poly1305_64.main, in file Hacl_Test_Poly1305_64: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Spec.Poly1305.little_endian calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I ../../specs -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Poly1305_64.c -o poly-c/Poly1305_64.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I ../../specs -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Hacl_Test_Poly1305_64.c -o poly-c/Hacl_Test_Poly1305_64.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I ../../specs -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c -o poly-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I ../../specs -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native poly-c/testlib.o -o poly1305.exe -flto
+make[3]: *** [Makefile:80: extract-c] Error 250
+make[2]: *** [Makefile:6: poly1305-c] Error 2
+make[2]: *** Waiting for unfinished jobs....
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.XSalsa20.main, in file Hacl_Test_XSalsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of result, after the definition of keysize, in top-level declaration Hacl.Test.X25519.main, in file Hacl_Test_X25519: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Symmetric_HSalsa20.c -o xsalsa-c/Hacl_Symmetric_HSalsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Symmetric_Salsa20.c -o xsalsa-c/Hacl_Symmetric_Salsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Symmetric_XSalsa20.c -o xsalsa-c/Hacl_Symmetric_XSalsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Curve25519.c -o x25519-c/Curve25519.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Test_XSalsa20.c -o xsalsa-c/Hacl_Test_XSalsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Hacl_Test_X25519.c -o x25519-c/Hacl_Test_X25519.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c -o xsalsa-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 xsalsa-c/testlib.o -o xsalsa20.exe
+make[3]: *** [Makefile:116: XSalsa20.c] Error 250
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c -o x25519-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native x25519-c/testlib.o -o x25519.exe -flto
+make[3]: *** [Makefile:96: extract-c] Error 250
+make[2]: *** [Makefile:6: curve25519-c] Error 2
+Warning 6: in the definition of ciphertext, after the definition of len, in top-level declaration Hacl.Test.Chacha20.main, in file Hacl_Test_Chacha20: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Chacha20.loop calls Hacl.Symmetric.Chacha20.chacha20_update -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_update
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_keysetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_keysetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_encrypt_bytes -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_encrypt_bytes
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha20_finish -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_finish
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c chacha-c/Chacha20.c -o chacha-c/Chacha20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c chacha-c/Hacl_Test_Chacha20.c -o chacha-c/Hacl_Test_Chacha20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 -c C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c -o chacha-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I chacha-c -march=native -std=gnu99 chacha-c/testlib.o -o chacha20.exe
+make[3]: *** [Makefile:71: Chacha20.c] Error 250
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of ciphertext, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of expected4, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of nonce, after the definition of key, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Salsa20.main calls Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor -- removing the static qualifier from Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Salsa20.c -o salsa-c/Salsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Hacl_Test_Salsa20.c -o salsa-c/Hacl_Test_Salsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c -o salsa-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 salsa-c/testlib.o -o salsa20.exe
+make[3]: *** [Makefile:98: Salsa20.c] Error 250
+make[2]: *** [Makefile:6: salsa-family-c] Error 2
+make[1]: *** [Makefile:18: extract-c-code] Error 2
+make: *** [Makefile:8: all] Error 2
