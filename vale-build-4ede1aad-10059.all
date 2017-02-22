@@ -1,0 +1,100 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /home/everbld/everest/vale
+About to run: scons.bat -j 4
+BUILD_SOURCEBRANCHNAME:
+BUILD_DEFINITIONNAME:
+
+C:\cygwin64\home\everbld\everest\vale>echo *********** 
+***********
+
+C:\cygwin64\home\everbld\everest\vale>set
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\everbld\AppData\Roaming
+BuildLab=10586.th2_release_sec.161024-1825
+BuildLabEx=10586.672.amd64fre.th2_release_sec.161024-1825
+CAMLP4LIB=C:/OCaml/lib/camlp4
+CAML_LD_LIBRARY_PATH=/home/everbld/.opam/system/lib/stublibs:/cygdrive/c/OCaml/lib/stublibs
+CI_LOGS=/home/everbld/ci-logs
+CLIENTNAME=DARRENGEZ820
+COMMONPROGRAMFILES=C:\Program Files\Common Files
+COMPUTERNAME=EVEREST-CI
+COMSPEC=C:\windows\system32\cmd.exe
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+EXECIGNORE=*.dll
+HOME=C:\cygwin64\home\everbld
+HOMEDRIVE=C:
+HOMEPATH=\Users\everbld
+HOSTNAME=Everest-CI
+INFOPATH=/usr/local/info:/usr/share/info:/usr/info
+KREMLIN_HOME=C:/cygwin64/home/everbld/everest/vale/dependencies/kremlin
+LANG=en_US.UTF-8
+LOCALAPPDATA=C:\Users\everbld\AppData\Local
+LOGONSERVER=\\CO1-RED-DC-14
+MANPATH=/home/everbld/.opam/system/man:/home/everbld/.opam/system/man:
+NUMBER_OF_PROCESSORS=36
+OCAMLLIB=C:\OCaml\lib
+OCAMLRUNPARAM=b
+OLDPWD=/home/everbld/everest-ci
+ORIGINAL_PATH=/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/windows/system32:/cygdrive/c/windows:/cygdrive/c/windows/System32/Wbem:/cygdrive/c/windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Users/everbld/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Binaries/z3-4.5.0-x64-win/bin:/cygdrive/c/Binaries/scons/Scripts:/cygdrive/c/Python27:/cygdrive/c/Build/Agent/externals.2.104.2/nuget:/cygdrive/c/Program Files (x86)/Pandoc:/cygdrive/c/Program Files/CMake/bin:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin
+OS=Windows_NT
+OTHERFLAGS=--trace_error
+OneDrive=C:\Users\everbld\OneDrive - Microsoft
+PATH=C:\cygwin64\home\everbld\everest\vale\kremlin;C:\cygwin64\home\everbld\everest\z3-4.5.0-x64-win\bin;C:\PROGRA~2\MICROS~1.0\VC\bin\amd64;C:\PROGRA~2\MICROS~1.0\VC\bin;C:\PROGRA~2\MIA713~1\F#\4.0\FRAMEW~1\v4.0\;C:\cygwin64\home\everbld\.opam\system\bin;C:\cygwin64\usr\x86_64-w64-mingw32\sys-root\mingw\bin\;C:\cygwin64\home\everbld\everest\z3-4.5.0-x64-win\bin;C:\PROGRA~2\MICROS~1.0\VC\bin\amd64;C:\PROGRA~2\MICROS~1.0\VC\bin;C:\PROGRA~2\MIA713~1\F#\4.0\FRAMEW~1\v4.0\;C:\cygwin64\home\everbld\.opam\system\bin;C:\cygwin64\usr\x86_64-w64-mingw32\sys-root\mingw\bin\;C:\Build\Agent\_work\30\s\nuget\bin;C:\Build\Agent\_work\30\s\nuget\bin;C:\Build\Agent\_work\30\s\nuget\bin;C:\Build\Agent\_work\31\s\nuget\bin;C:\Build\Agent\_work\31\s\nuget\bin;C:\Build\Agent\_work\30\s\nuget\bin;C:\Build\Agent\_work\30\s\nuget\bin;C:\Build\Agent2\_work\7\s\nuget\bin;C:\Build\Agent2\_work\7\s\nuget\bin;C:\Build\Agent\_work\30\s\nuget\bin;C:\Build\Agent\_work\30\s\nuget\bin;C:\Build\Agent\_work\30\s\nuget\bin;C:\Build\Agent\_work\30\s\nuget\bin;C:\Build\Agent2\_work\7\s\nuget\bin;C:\Build\Agent\_work\30\s\nuget\bin;C:\Build\Agent\_work\30\s\z3-4.5.0-x64-win\bin;C:\Build\Agent\_work\30\s\z3-4.5.0-x64-win\bin;C:\cygwin64\usr\local\bin;C:\cygwin64\bin;C:\Program Files\Docker\Docker\Resources\bin;C:\OCaml\bin;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\everbld\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm;C:\Program Files\Microsoft SQL Server\120\Tools\Binn;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Git\cmd;C:\cygwin64\bin;C:\Binaries\Boogie;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit;C:\Program Files (x86)\HP\HP Performance Advisor;C:\Binaries\z3-4.5.0-x64-win\bin;C:\Binaries\scons\Scripts;C:\Python27;C:\Build\Agent\externals.2.104.2\nuget;C:\Program Files (x86)\Pandoc;C:\Program Files\CMake\bin;C:\Program Files (x86)\Microsoft VS Code\bin
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PRINTER=99-4841-msr on research.redmond.corp.microsoft.com (redirected 2)
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 79 Stepping 1, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=4f01
+PROFILEREAD=true
+PROGRAMFILES=C:\Program Files
+PROMPT=$P$G
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+PWD=/home/everbld/everest/vale
+ProgramData=C:\ProgramData
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+SESSIONNAME=RDP-Tcp#112
+SHELL=/bin/bash
+SHLVL=2
+SLACK_FSTAR_WEBHOOK=https://hooks.slack.com/services/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
+SYSTEMDRIVE=C:
+SYSTEMROOT=C:\windows
+TEMP=C:\cygwin64\tmp
+TERM=xterm
+TMP=C:\cygwin64\tmp
+TZ=America/Los_Angeles
+UATDATA=C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USER=everbld
+USERDNSDOMAIN=REDMOND.CORP.MICROSOFT.COM
+USERDOMAIN=REDMOND
+USERDOMAIN_ROAMINGPROFILE=REDMOND
+USERNAME=everbld
+USERPROFILE=C:\Users\everbld
+VS140COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
+WINDIR=C:\windows
+_=/cygdrive/c/Binaries/scons/Scripts/scons.bat
+
+C:\cygwin64\home\everbld\everest\vale>echo *********** 
+***********
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+parallel (-j) builds may not work reliably with open Python files.
+File "C:\Binaries\scons\Scripts\scons.py", line 199, in <module>
+cl /Foobj\crypto\aes\testaes.obj /c obj\crypto\aes\testaes.c /nologo /Ox /Gz /Idependencies\kremlin\kremlib /Isrc\lib\util /Isrc\crypto\aes /Zi /Fdobj\crypto\aes\testaes.pdb
+cl /Foobj\crypto\aes\testcbc.obj /c obj\crypto\aes\testcbc.c /nologo /Ox /Gz /Idependencies\kremlin\kremlib /Isrc\lib\util /Zi /Fdobj\crypto\aes\testcbc.pdb
+testaes.c
+testcbc.c
+obj\crypto\aes\testaes.c(3): fatal error C1083: Cannot open include file: 'gcc_compat.h': No such file or directory
+obj\crypto\aes\testcbc.c(2): fatal error C1083: Cannot open include file: 'gcc_compat.h': No such file or directory
+cd obj\crypto\hashing && C:\cygwin64\home\everbld\everest\vale\dependencies\kremlin\_build\src\Kremlin.native -warn-error +1..4 -warn-error @4 -skip-compilation -add-include \"DafnyLib.h\" sha256_main.i.json
+The system cannot find the path specified.
+scons: *** [obj\crypto\aes\testaes.obj] Error 2
+scons: *** [obj\crypto\aes\testcbc.obj] Error 2
+scons: building terminated because of errors.
+scons: *** [obj\crypto\hashing\sha256_main_i.c] Error 1
