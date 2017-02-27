@@ -1,0 +1,352 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/37/s
+About to run: hacl_verify
+BUILD_SOURCEBRANCHNAME: jk_snap
+BUILD_DEFINITIONNAME: Hacl*-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+cp "../extraction/ml/FStar_Extraction_ML_PrintML_4.02.3.ml" ../extraction/ml/FStar_Extraction_ML_PrintML.ml
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+cp parse.mly ../parser/ml/
+echo "%{" > ../parser/parse.fsy
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# We are opening the same module twice but we need these modules
+# open for the definition of tokens
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+# TODO: create a proper OCamlbuild rule for this production so that
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+echo 'let version = "0.9.4.0"' > FStar_Version.ml
+echo 'let platform = "Windows_x64"' >> FStar_Version.ml
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+echo 'let date = "2017-02-27T11:45:33-08:00"' >> FStar_Version.ml
+echo 'let commit= "767e4bb (dirty)"' >> FStar_Version.ml
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Options.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Errors.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_Syntax_Print.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_AST.cmx src/ocaml-output/FStar_Parser_AST.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Parse.cmx src/ocaml-output/FStar_Parser_Parse.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_LexFStar.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/parser/ml -I src/ocaml-output -I src/prettyprint/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/parser/ml/FStar_Parser_ParseIt.cmx src/parser/ml/FStar_Parser_ParseIt.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Driver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Parser_Dep.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_TypeChecker_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Extraction_ML_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Code.cmx src/ocaml-output/FStar_Extraction_ML_Code.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Normalize.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Err.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Rel.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Parser_ToDocument.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Dependencies.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Term.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Util.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_Z3.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_Encode.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_SMTEncoding_Solver.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_Env.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_Syntax_MutRecTy.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_DMFF.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_Parser_Interleave.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_TypeChecker_Tc.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Universal.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_Extraction_Kremlin.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Extraction_ML_Modul.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/extraction/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/basic/ml -o src/extraction/ml/FStar_Extraction_ML_PrintML.cmx src/extraction/ml/FStar_Extraction_ML_PrintML.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Fsdoc_Generator.cmx src/ocaml-output/FStar_Fsdoc_Generator.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Indent.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Interactive.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Main.cmx src/ocaml-output/FStar_Main.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/fstar/ml -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/extraction/ml -I src/basic/ml -o src/fstar/ml/main.cmx src/fstar/ml/main.ml
+''ocamlfind ocamlopt -linkpkg -thread -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common src/ocaml-output/bootlibs/FStar_List.cmx src/ocaml-output/bootlibs/MkPrims.cmx src/ocaml-output/bootlibs/prims.cmx src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Platform.cmx src/ocaml-output/bootlibs/FStar_Char.cmx src/ocaml-output/bootlibs/FStar_Float.cmx src/ocaml-output/bootlibs/FStar_Int16.cmx src/ocaml-output/bootlibs/FStar_Int32.cmx src/ocaml-output/bootlibs/FStar_Int64.cmx src/ocaml-output/bootlibs/FStar_Int8.cmx src/ocaml-output/bootlibs/FStar_UInt16.cmx src/ocaml-output/bootlibs/FStar_UInt8.cmx src/ocaml-output/bootlibs/FStar_BaseTypes.cmx src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Unionfind.cmx src/ocaml-output/bootlibs/FStar_All.cmx src/ocaml-output/bootlibs/FStar_ST.cmx src/ocaml-output/bootlibs/FStar_String.cmx src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/bootlibs/FStar_Option.cmx src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Extraction_ML_Code.cmx src/extraction/ml/FStar_Extraction_ML_PrintML.cmx src/ocaml-output/FStar_Parser_AST.cmx src/parser/ml/FStar_Parser_Util.cmx src/ocaml-output/FStar_Parser_Parse.cmx src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Fsdoc_Generator.cmx src/prettyprint/ml/FStar_Pprint.cmx src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Main.cmx src/fstar/ml/main.cmx -o src/fstar/ml/main.native
+# Parallel statistics: { count(total): 5(233), max: 6, min: 2, average(total): 3.000(1.043) }
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+ocamlbuild -I src -I lib -I parser -use-menhir -use-ocamlfind -classic-display -menhir "menhir --infer --explain" Kremlin.native Tests.native
+ln -sf Kremlin.native krml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+make ct
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+make -C ../code ct
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code'
+make -C salsa-family all-ct
+make -C bignum all-ct
+make -C poly1305 all-ct
+make -C curve25519 all-ct
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/salsa-family'
+make -C api all-ct
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/bignum'
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/poly1305'
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/curve25519'
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/api'
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --include ../../specs --include ../../specs/generic --include ../../specs/experimental --lax Hacl.Impl.Chacha20.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --include ../../specs --include ../../specs/generic --include ../../specs/experimental --lax Hacl.Symmetric.Salsa20.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Limb.fst --lax
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Field.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Limb.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --include ../../specs --include ../../specs/generic --include ../../specs/experimental --lax Hacl.Impl.Salsa20.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Wide.fst --lax
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Limb.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --include ../../specs --include ../../specs/generic --include ../../specs/experimental --lax Hacl.Symmetric.HSalsa20.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Field.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Wide.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Field.fst --lax
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib/ --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305/interfaces --include ../../specs --include ../../specs/generic --include ../../specs/experimental  --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Constants.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Wide.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --include ../../specs --include ../../specs/generic --include ../../specs/experimental --lax Hacl.Symmetric.XSalsa20.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Bigint.fst --lax
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Bigint.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib/ --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305/interfaces --include ../../specs --include ../../specs/generic --include ../../specs/experimental  --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.AEAD.Chacha20Poly1305.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Bigint.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --include ../../specs --include ../../specs/generic --include ../../specs/experimental --lax Chacha20.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fsum.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib/ --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305/interfaces --include ../../specs --include ../../specs/generic --include ../../specs/experimental  --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.SecretBox.ZeroPad.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fsum.fst --lax
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fproduct.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fdifference.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fsum.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fproduct.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fscalar.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fproduct.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.Fmul.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fdifference.fst
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fmul.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Spec.Bignum.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fscalar.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.Fmul.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib/ --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305/interfaces --include ../../specs --include ../../specs/generic --include ../../specs/experimental  --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Box.ZeroPad.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fsum.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Spec.Bignum.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fproduct.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fmul.fst
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(25,0-25,34) (Warning): Adding an implicit 'assume new' qualifier on live_state
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(26,0-26,30) (Warning): Adding an implicit 'assume new' qualifier on stable
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(75,0-75,37) (Warning): Adding an implicit 'assume new' qualifier on before_finish
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fsum.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fdifference.fst --lax
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(25,0-25,34) (Warning): Adding an implicit 'assume new' qualifier on live_state
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(26,0-26,30) (Warning): Adding an implicit 'assume new' qualifier on stable
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(75,0-75,37) (Warning): Adding an implicit 'assume new' qualifier on before_finish
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Constants.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --include ../../specs --include ../../specs/generic --include ../../specs/experimental --lax Salsa20.fst
+.\Hacl.Impl.Chacha20.fst(379,11-379,39) : (Error) Inconsistent implicit qualifier
+make[3]: *** [Makefile:37: Hacl.Impl.Chacha20.fst-ct] Error 1
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Parameters.fst
+make[3]: *** Waiting for unfinished jobs....
+.\Hacl.Impl.Chacha20.fst(379,11-379,39) : (Error) Inconsistent implicit qualifier
+make[3]: *** [Makefile:37: Chacha20.fst-ct] Error 1
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fscalar.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Bignum.Modulo.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fproduct.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.Fmul.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include interfaces \
+--include ../lib Hacl.Bignum.fst --lax
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Bignum.AddAndMultiply.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fscalar.fst
+.\Hacl.Impl.Salsa20.fst(277,89-277,91) : (Error) Expected expression of type "t"; got expression "c0" of type "(b#2496:t{(b2t (op_Equality (v b@0) (op_Modulus (v c) (pow2 32))))})"
+make[3]: *** [Makefile:37: Hacl.Impl.Salsa20.fst-ct] Error 1
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../../specs/Spec.Poly1305.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Poly1305_64.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fproduct.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spe.Poly1305_64.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Modulo.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.AddAndMultiply.fst
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.Fmul.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax ../bignum/Hacl.Bignum.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Impl.Poly1305_64.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Standalone.Poly1305_64.fst
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(25,0-25,34) (Warning): Adding an implicit 'assume new' qualifier on live_state
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(26,0-26,30) (Warning): Adding an implicit 'assume new' qualifier on stable
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(75,0-75,37) (Warning): Adding an implicit 'assume new' qualifier on before_finish
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Parameters.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Poly1305_64.fst
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/api'
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Bignum.Modulo.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.AddAndDouble.fst
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Bignum.Fsquare.fst
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.Bignum.Crecip.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Modulo.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Fsum.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Fdifference.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Fsquare.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Bignum.Crecip.fst
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/salsa-family'
+make[2]: *** [Makefile:12: salsa-family-ct] Error 2
+make[2]: *** Waiting for unfinished jobs....
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.Point.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.EC.Point.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.AddAndDouble2.fst
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/bignum'
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.Format.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.EC.Format.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.EC.AddAndDouble.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.Ladder.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.EC.Ladder.SmallLoop.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.EC.Ladder.BigLoop.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.EC.Ladder.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.Spec.EC.fst
+All verification conditions discharged successfully
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib/hyperstack --include ../lib --include ../bignum --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib --lax Hacl.EC.fst
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/poly1305'
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+All verification conditions discharged successfully
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/curve25519'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code'
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+make[1]: *** [Makefile:23: ct] Error 2
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+make: *** [Makefile:8: all] Error 2

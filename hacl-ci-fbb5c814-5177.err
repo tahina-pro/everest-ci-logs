@@ -1,0 +1,16 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+.\Hacl.Impl.Chacha20.fst(379,11-379,39) : (Error) Inconsistent implicit qualifier
+make[3]: *** [Makefile:37: Hacl.Impl.Chacha20.fst-ct] Error 1
+make[3]: *** Waiting for unfinished jobs....
+.\Hacl.Impl.Chacha20.fst(379,11-379,39) : (Error) Inconsistent implicit qualifier
+make[3]: *** [Makefile:37: Chacha20.fst-ct] Error 1
+.\Hacl.Impl.Salsa20.fst(277,89-277,91) : (Error) Expected expression of type "t"; got expression "c0" of type "(b#2496:t{(b2t (op_Equality (v b@0) (op_Modulus (v c) (pow2 32))))})"
+make[3]: *** [Makefile:37: Hacl.Impl.Salsa20.fst-ct] Error 1
+make[2]: *** [Makefile:12: salsa-family-ct] Error 2
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [Makefile:23: ct] Error 2
+make: *** [Makefile:8: all] Error 2
