@@ -1,0 +1,99 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+Fatal error: exception Failure("Syntax error: Hacl.Spec.*Hacl.Spec.Symmetric.Chacha20.fst")
+Raised at file "pervasives.ml", line 30, characters 22-33
+Called from file "src/Kremlin.ml", line 114, characters 55-82
+Called from file "arg.ml", line 150, characters 12-33
+Called from file "arg.ml", line 201, characters 8-27
+Called from file "arg.ml", line 214, characters 2-73
+Called from file "src/Kremlin.ml", line 134, characters 2-616
+make[3]: *** [Makefile:80: Chacha20.c] Error 2
+make[3]: *** Waiting for unfinished jobs....
+Fatal error: exception Failure("Syntax error: Hacl.Spec.*Hacl.Spec.Symmetric.Chacha20.fst")
+Raised at file "pervasives.ml", line 30, characters 22-33
+Called from file "src/Kremlin.ml", line 114, characters 55-82
+Called from file "arg.ml", line 150, characters 12-33
+Called from file "arg.ml", line 201, characters 8-27
+Called from file "arg.ml", line 214, characters 2-73
+Called from file "src/Kremlin.ml", line 134, characters 2-616
+make[3]: *** [Makefile:94: Salsa.c] Error 2
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --odir poly-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Poly1305_64.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Driver.ml", line 239, characters 6-29
+Called from file "src/Kremlin.ml", line 168, characters 6-66
+make[3]: *** [Makefile:97: extract-c] Error 2
+make[2]: *** [Makefile:6: poly1305-c] Error 2
+make[2]: *** Waiting for unfinished jobs....
+Fatal error: exception Sys_error("No space left on device")
+Raised by primitive operation at file "pervasives.ml", line 420, characters 51-63
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/Driver.ml", line 203, characters 8-38
+Called from file "src/Driver.ml", line 238, characters 11-51
+Called from file "src/Kremlin.ml", line 168, characters 6-66
+Fatal error: exception Sys_error("No space left on device")
+Raised by primitive operation at file "pervasives.ml", line 420, characters 51-63
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/Driver.ml", line 203, characters 8-38
+Called from file "src/Driver.ml", line 238, characters 11-51
+Called from file "src/Kremlin.ml", line 168, characters 6-66
+make[3]: *** [Makefile:68: extract-api] Error 2
+make[3]: *** Waiting for unfinished jobs....
+make[3]: *** [Makefile:78: extract-box] Error 2
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent2/_work/13/s/dependencies/FStar/bin/fstar.exe --odir aead-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent2/_work/13/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305 --include ../../specs --include ../salsa-family --include ../poly1305 --include ../bignum --include ../../specs --include ../../specs/generic --include ../../specs/experimental --include C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib Hacl.AEAD.Chacha20Poly1305.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 10-39
+Called from file "src/Driver.ml", line 239, characters 6-29
+Called from file "src/Kremlin.ml", line 168, characters 6-66
+make[3]: *** [Makefile:89: extract-aead] Error 2
+make[2]: *** [Makefile:6: api-c] Error 2
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.XSalsa20.main, in file Hacl_Test_XSalsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Symmetric_HSalsa20.c -o xsalsa-c/Hacl_Symmetric_HSalsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Symmetric_Salsa20.c -o xsalsa-c/Hacl_Symmetric_Salsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Symmetric_XSalsa20.c -o xsalsa-c/Hacl_Symmetric_XSalsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c xsalsa-c/Hacl_Test_XSalsa20.c -o xsalsa-c/Hacl_Test_XSalsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 -c C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c -o xsalsa-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I xsalsa-c -march=native -std=gnu99 xsalsa-c/testlib.o -o xsalsa20.exe
+make[3]: *** [Makefile:119: XSalsa20.c] Error 250
+Warning 6: in the definition of result, after the definition of keysize, in top-level declaration Hacl.Test.X25519.main, in file Hacl_Test_X25519: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Curve25519.c -o x25519-c/Curve25519.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c x25519-c/Hacl_Test_X25519.c -o x25519-c/Hacl_Test_X25519.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native -c C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c -o x25519-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I x25519-c -std=gnu99 -march=native x25519-c/testlib.o -o x25519.exe -flto
+make[3]: *** [Makefile:96: extract-c] Error 250
+make[2]: *** [Makefile:6: curve25519-c] Error 2
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of ciphertext, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of expected4, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of nonce, after the definition of key, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Salsa20.main calls Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor -- removing the static qualifier from Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Salsa20.c -o salsa-c/Salsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c salsa-c/Hacl_Test_Salsa20.c -o salsa-c/Hacl_Test_Salsa20.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 -c C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib/kremlib.c -o salsa-c/kremlib.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -I FSTAR_LIB/hyperstack -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -I ../../specs/generic -I C:/Build/Agent2/_work/13/s/dependencies/kremlin/kremlib -I salsa-c -march=native -std=gnu99 salsa-c/testlib.o -o salsa20.exe
+make[3]: *** [Makefile:101: Salsa20.c] Error 250
+make[2]: *** [Makefile:6: salsa-family-c] Error 2
+make[1]: *** [Makefile:18: extract-c-code] Error 2
+make: *** [Makefile:8: all] Error 2
