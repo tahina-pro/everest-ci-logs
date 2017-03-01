@@ -1,0 +1,206 @@
+Cloning into 'fstar'...
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+./TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+./TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+./Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+./IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+./Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+./Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+./Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 932, characters 8-14
+Called from file "unix.ml", line 978, characters 4-126
+Re-raised at file "unix.ml", line 985, characters 4-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1677, characters 0-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2410, characters 17-33
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2446, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2536, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml" (inlined), line 2724, characters 17-45
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2757, characters 17-33
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 174, characters 16-101
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml" (inlined), line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 170, characters 16-373
+Called from file "src/ocaml-output/FStar_Universal.ml", line 297, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 322, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 333, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 374, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 932, characters 8-14
+Called from file "unix.ml", line 978, characters 4-126
+Re-raised at file "unix.ml", line 985, characters 4-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1677, characters 0-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2410, characters 17-33
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2446, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2536, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml" (inlined), line 2724, characters 17-45
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2757, characters 17-33
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 174, characters 16-101
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml" (inlined), line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 170, characters 16-373
+Called from file "src/ocaml-output/FStar_Universal.ml", line 297, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 322, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 333, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 374, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+make: *** [DataStream.fst-ver] Error 1
+make: *** [Alert.fst-ver] Error 1
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 932, characters 8-14
+Called from file "unix.ml", line 978, characters 4-126
+Re-raised at file "unix.ml", line 985, characters 4-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2706, characters 0-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml" (inlined), line 2726, characters 37-97
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2757, characters 17-33
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 174, characters 16-101
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml" (inlined), line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 170, characters 16-373
+Called from file "src/ocaml-output/FStar_Universal.ml", line 297, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 322, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 333, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 374, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+make: *** [AEAD_GCM.fst-ver] Error 1
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 932, characters 8-14
+Called from file "unix.ml", line 978, characters 4-126
+Re-raised at file "unix.ml", line 985, characters 4-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1677, characters 0-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2410, characters 17-33
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2446, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2536, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml" (inlined), line 2724, characters 17-45
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2757, characters 17-33
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 174, characters 16-101
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml" (inlined), line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 170, characters 16-373
+Called from file "src/ocaml-output/FStar_Universal.ml", line 297, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 322, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 333, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 374, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+make: *** [StreamAE.fst-ver] Error 1
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 932, characters 8-14
+Called from file "unix.ml", line 978, characters 4-126
+Re-raised at file "unix.ml", line 985, characters 4-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1677, characters 0-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2410, characters 17-33
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2446, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2536, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml" (inlined), line 2724, characters 17-45
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2757, characters 17-33
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 174, characters 16-101
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml" (inlined), line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 170, characters 16-373
+Called from file "src/ocaml-output/FStar_Universal.ml", line 297, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 322, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 333, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 374, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+make: *** [Connection.fst-ver] Error 1
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 932, characters 8-14
+Called from file "unix.ml", line 978, characters 4-126
+Re-raised at file "unix.ml", line 985, characters 4-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1677, characters 0-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2410, characters 17-33
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2446, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2536, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml" (inlined), line 2724, characters 17-45
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2757, characters 17-33
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 174, characters 16-101
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml" (inlined), line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 170, characters 16-373
+Called from file "src/ocaml-output/FStar_Universal.ml", line 297, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 322, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 333, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 374, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+make: *** [StAE.fst-ver] Error 1
+Unexpected error
+Unix.Unix_error(Unix.ENOMEM, "fork", "")
+Raised by primitive operation at file "unix.ml", line 932, characters 8-14
+Called from file "unix.ml", line 978, characters 4-126
+Re-raised at file "unix.ml", line 985, characters 4-11
+Called from file "src/basic/ml/FStar_Util.ml", line 83, characters 19-44
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 453, characters 19-34
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 964, characters 63-86
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1677, characters 0-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2410, characters 17-33
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2446, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2536, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml" (inlined), line 2724, characters 17-45
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 2757, characters 17-33
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 174, characters 16-101
+Called from file "list.ml", line 88, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml" (inlined), line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 170, characters 16-373
+Called from file "src/ocaml-output/FStar_Universal.ml", line 297, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 322, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 333, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 374, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+make: *** [TLS.fst-ver] Error 1
+./MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+./ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
+make: Target 'all-ver' not remade because of errors.
