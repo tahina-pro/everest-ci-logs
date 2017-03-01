@@ -1,0 +1,175 @@
+Cloning into 'vale'...
+Already on 'master'
+Cloning into 'mitls-fstar'...
+Already on 'master'
+Cloning into 'FStar'...
+Already on 'master'
+Cloning into 'hacl-star'...
+Already on 'master'
+Cloning into 'kremlin'...
+Already on 'master'
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 4-39
+Called from file "src/Checker.ml", line 552, characters 37-58
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "list.ml", line 59, characters 20-23
+Called from file "src/Checker.ml", line 435, characters 16-39
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "src/Checker.ml", line 216, characters 8-21
+Called from file "src/Checker.ml", line 193, characters 2-16
+Called from file "src/Checker.ml", line 152, characters 6-22
+Dropping Spec.Poly1305.clamp_mask (at checking time)
+
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 4-39
+Called from file "src/Checker.ml", line 297, characters 37-58
+Called from file "src/Checker.ml", line 193, characters 2-16
+Called from file "src/Checker.ml", line 152, characters 6-22
+Dropping Spec.Poly1305.mask_list (at checking time)
+
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 46, characters 4-39
+Called from file "src/Checker.ml", line 297, characters 37-58
+Called from file "src/Checker.ml" (inlined), line 193, characters 2-16
+Called from file "src/Checker.ml", line 446, characters 19-30
+Called from file "list.ml", line 114, characters 24-31
+Called from file "src/Checker.ml", line 446, characters 8-40
+Called from file "src/Checker.ml", line 384, characters 10-22
+Called from file "src/Checker.ml", line 216, characters 8-21
+Called from file "src/Checker.ml", line 193, characters 2-16
+Called from file "src/Checker.ml", line 152, characters 6-22
+Dropping Spec.Poly1305.r_mask (at checking time)
+
+Warning 6: in the definition of mac, after the definition of macsize, in top-level declaration Hacl.Test.Poly1305_64.main, in file Hacl_Test_Poly1305_64: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Poly1305_64.main calls Hacl.Impl.Poly1305_64.crypto_onetimeauth -- removing the static qualifier from Hacl.Impl.Poly1305_64.crypto_onetimeauth
+Warning 3: run_or_warn: the following command failed:
+gcc-5 -Wno-unused-but-set-variable -std=c11 -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I ../../specs -I /home/everest/vsts-agent/_work/2/s/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Spec_Poly1305.c -o poly-c/Spec_Poly1305.o
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.XSalsa20.main, in file Hacl_Test_XSalsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of result, after the definition of keysize, in top-level declaration Hacl.Test.X25519.main, in file Hacl_Test_X25519: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning 6: in the definition of ciphertext, after the definition of len, in top-level declaration Hacl.Test.Chacha20.main, in file Hacl_Test_Chacha20: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Chacha20.loop calls Hacl.Symmetric.Chacha20.chacha20_update -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_update
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_keysetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_keysetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_encrypt_bytes -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_encrypt_bytes
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha20_finish -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_finish
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of ciphertext, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of expected4, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of nonce, after the definition of key, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Salsa20.main calls Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor -- removing the static qualifier from Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor
+warning CS8001: SDK path could not be resolved
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Submodule 'ucontrib/CoreCrypto/ml/openssl' (https://github.com/openssl/openssl) registered for path 'ucontrib/CoreCrypto/ml/ucontrib/CoreCrypto/ml/openssl'
+Cloning into '/home/everest/vsts-agent/_work/2/s/FStar/ucontrib/CoreCrypto/ml/openssl'...
+make[2]: *** No rule to make target 'build_libs'.  Stop.
+make[1]: *** [openssl/libcrypto.a] Error 2
+make: *** [CoreCrypto.cmxa] Error 2
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.inv_cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.inv_cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Symmetric.MAC.rcreate, in file Crypto_Symmetric_MAC: eternal newbuf 0uint8 Crypto.Symmetric.MAC.wlen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, after the definition of len, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @5 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Poly1305.Spec.field_mul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt calls Crypto.AEAD.Encoding.add_bytes -- removing the static qualifier from Crypto.AEAD.Encoding.add_bytes
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt calls Crypto.AEAD.Encoding.store_lengths_poly1305 -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_poly1305
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt calls Crypto.AEAD.Encoding.store_lengths_ghash -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_ghash
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt calls Crypto.Symmetric.PRF.getBlock -- removing the static qualifier from Crypto.Symmetric.PRF.getBlock
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.inv_cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.inv_cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Symmetric.MAC.rcreate, in file Crypto_Symmetric_MAC: eternal newbuf 0uint8 Crypto.Symmetric.MAC.wlen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, after the definition of len, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @5 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Poly1305.Spec.field_mul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt calls Crypto.AEAD.Encoding.add_bytes -- removing the static qualifier from Crypto.AEAD.Encoding.add_bytes
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt calls Crypto.AEAD.Encoding.store_lengths_poly1305 -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_poly1305
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt calls Crypto.AEAD.Encoding.store_lengths_ghash -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_ghash
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt calls Crypto.Symmetric.PRF.getBlock -- removing the static qualifier from Crypto.Symmetric.PRF.getBlock
+Warning 3: run_or_warn: the following command failed:
+gcc-5 -Wno-unused-but-set-variable -std=c11 -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I ../../../kremlin/kremlib -I ../../../kremlin/test -I ../../../kremlin/kremlib -I ../../../kremlin/test -I ../../ucontrib/CoreCrypto/ml/openssl/include -I /home/everest/vsts-agent/_work/2/s/kremlin/kremlib -I tmp-test-perf -maes -fPIC -Ofast -m64 -march=native -mtune=native -funroll-loops -fomit-frame-pointer -Wno-int-conversion -c crypto/test_perf.c -o tmp-test-perf/test_perf.o
+Warning 3: run_or_warn: the following command failed:
+gcc-5 -Wno-unused-but-set-variable -std=c11 -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I ../../../kremlin/kremlib -I ../../../kremlin/test -I ../../../kremlin/kremlib -I ../../../kremlin/test -I ../../ucontrib/CoreCrypto/ml/openssl/include -I /home/everest/vsts-agent/_work/2/s/kremlin/kremlib -I tmp-test-perf -maes -fPIC -Ofast -m64 -march=native -mtune=native -funroll-loops -fomit-frame-pointer -Wno-int-conversion tmp-test-perf/Prims.o tmp-test-perf/Buffer_Utils.o tmp-test-perf/Crypto_AEAD_BufferUtils.o tmp-test-perf/Crypto_Symmetric_Chacha20.o tmp-test-perf/Crypto_Config.o tmp-test-perf/Crypto_Indexing.o tmp-test-perf/Flag.o tmp-test-perf/Crypto_Symmetric_AES.o tmp-test-perf/Spartan.o tmp-test-perf/Crypto_Symmetric_AES128.o tmp-test-perf/FStar.o tmp-test-perf/Crypto_Symmetric_Bytes.o tmp-test-perf/Crypto_Symmetric_Cipher.o tmp-test-perf/Crypto_Symmetric_Poly1305_Parameters.o tmp-test-perf/Crypto_Symmetric_Poly1305_Bigint.o tmp-test-perf/Crypto_Symmetric_Poly1305_Lemmas.o tmp-test-perf/Crypto_Symmetric_Poly1305_Spec.o tmp-test-perf/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part1.o tmp-test-perf/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part2.o tmp-test-perf/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part3.o tmp-test-perf/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part4.o tmp-test-perf/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part5.o tmp-test-perf/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part6.o tmp-test-perf/Crypto_Symmetric_Poly1305_Bignum.o tmp-test-perf/Crypto_Symmetric_Poly1305.o tmp-test-perf/Crypto_Symmetric_GF128_Spec.o tmp-test-perf/Crypto_Symmetric_GF128.o tmp-test-perf/Crypto_Symmetric_MAC.o tmp-test-perf/Crypto_Symmetric_UF1CMA.o tmp-test-perf/Crypto_Plain.o tmp-test-perf/Crypto_Symmetric_PRF.o tmp-test-perf/Crypto_AEAD_Encoding.o tmp-test-perf/Crypto_AEAD_Invariant.o tmp-test-perf/Crypto_AEAD_Encrypt_Invariant.o tmp-test-perf/Crypto_AEAD_Wrappers_PRF.o tmp-test-perf/Crypto_AEAD_EnxorDexor.o tmp-test-perf/Crypto_AEAD.o tmp-test-perf/Crypto_AEAD_Wrappers_Encoding.o tmp-test-perf/Crypto_AEAD_Wrappers_CMA.o tmp-test-perf/Crypto_AEAD_Decrypt.o tmp-test-perf/Crypto_AEAD_Encrypt_Ideal_Invariant.o tmp-test-perf/Crypto_AEAD_MAC_Wrapper_Invariant.o tmp-test-perf/Crypto_AEAD_Enxor_Invariant.o tmp-test-perf/Crypto_AEAD_Encrypt.o tmp-test-perf/kremlib.o tmp-test-perf/spartan_stub.o tmp-test-perf/test_hacks.o tmp-test-perf/testlib.o spartan_aes/aes.o -o test-perf.exe -flto -L ../../ucontrib/CoreCrypto/ml/openssl/lib -L ../../ucontrib/CoreCrypto/ml/openssl -lcrypto
+make: *** [test-perf.exe] Error 250
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Big_int_Z, and its interface was not compiled with -opaque
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+File "FStar_String.ml", line 16, characters 16-32:
+Warning 3: deprecated: String.lowercase
+Use String.lowercase_ascii instead.
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+make[4]: *** No rule to make target 'build_libs'.  Stop.
+make[3]: *** [openssl/libcrypto.a] Error 2
+make[2]: *** [CoreCrypto.cmxa] Error 2
+make[1]: *** [mitls.cmxa] Error 2
+make: *** [build] Error 2
