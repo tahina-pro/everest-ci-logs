@@ -1,0 +1,69 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: c_ppdev_initial
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Installing 'FsLexYacc 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent2\_work\1\s\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent2\_work\1\s\bin\prettyprint.dll
+C:\Build\Agent2\_work\1\s\src\syntax\FStar.Syntax.Print.fs(487,36): warning FS0025: Incomplete pattern matches on this expression. For example, the value 'Sig_pragma (LightOff, _)' may indicate a case not covered by the pattern(s). [C:\Build\Agent2\_work\1\s\src\syntax\syntax.fsproj]
+syntax -> C:\Build\Agent2\_work\1\s\bin\syntax.dll
+typechecker -> C:\Build\Agent2\_work\1\s\bin\typechecker.dll
+compiling to dfas (can take a while...)
+342 states
+writing output
+building tables
+computing first function...time: 00:00:00.1890643
+building kernels...time: 00:00:00.1307710
+building kernel table...time: 00:00:00.0165388
+computing lookahead relations...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.4632178
+building lookahead table...time: 00:00:00.2452678
+building action table...state 410: shift/reduce error on SEMICOLON
+state 437: shift/reduce error on BAR
+state 440: shift/reduce error on LBRACE
+state 441: shift/reduce error on BAR
+state 452: shift/reduce error on BAR
+state 528: shift/reduce error on COLON_EQUALS
+state 564: shift/reduce error on LBRACE
+time: 00:00:00.6971385
+building goto table...time: 00:00:00.2133794
+returning tables.
+7 shift/reduce conflicts
+720 states
+139 nonterminals
+141 terminals
+391 productions
+#rows in action table: 720
+parser -> C:\Build\Agent2\_work\1\s\bin\parser.dll
+format -> C:\Build\Agent2\_work\1\s\bin\format.dll
+extraction -> C:\Build\Agent2\_work\1\s\bin\extraction.dll
+fsdoc -> C:\Build\Agent2\_work\1\s\bin\fsdoc.dll
+smtencoding -> C:\Build\Agent2\_work\1\s\bin\smtencoding.dll
+C:\Build\Agent2\_work\1\s\src\tosyntax\FStar.ToSyntax.Resugar.fs(335,21): error FS0039: The value, constructor, namespace or type 'open_bv' is not defined [C:\Build\Agent2\_work\1\s\src\tosyntax\tosyntax.fsproj]
+C:\Build\Agent2\_work\1\s\src\tosyntax\FStar.ToSyntax.Resugar.fs(486,31): error FS0039: The value, constructor, namespace or type 'open_bv' is not defined [C:\Build\Agent2\_work\1\s\src\tosyntax\tosyntax.fsproj]
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: *** [Makefile:53: all] Error 1
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make: *** [Makefile:229: utest] Error 2
