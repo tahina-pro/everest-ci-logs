@@ -1,0 +1,83 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/41/s
+About to run: docker_from_scratch
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: Everest-Nightly-Windows
+Login Succeeded
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM projecteverest/everest-chomolungma
+---> 12fcc422287a
+Step 2 : ARG parallel_opt
+---> Using cache
+---> 7e98de2b18cb
+Step 3 : RUN ./everest --yes $parallel_opt check pull make test verify
+---> Using cache
+---> c4775cf500c5
+Successfully built c4775cf500c5
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+PIPESTATUS=0
+Pushing projecteverest/everest to Docker Hub
+The push refers to a repository [docker.io/projecteverest/everest]
+21d429f39e2b: Preparing
+afefa2ca24e8: Preparing
+efdf856d7218: Preparing
+cbe1694d51bd: Preparing
+3cc44067b529: Preparing
+fa184e875bd0: Preparing
+f2242ac2f6f2: Preparing
+19ac7ab35beb: Preparing
+ff06bfbba527: Preparing
+89f263368a82: Preparing
+e4e732730ad6: Preparing
+97e169478641: Preparing
+e9d16260a27a: Preparing
+956dc6949a38: Preparing
+3c307f482b24: Preparing
+c60da03a5725: Preparing
+7daf11b973b2: Preparing
+56827159aa8b: Preparing
+440e02c3dcde: Preparing
+29660d0e5bb2: Preparing
+fa184e875bd0: Waiting
+85782553e37a: Preparing
+e4e732730ad6: Waiting
+745f5be9952c: Preparing
+97e169478641: Waiting
+f2242ac2f6f2: Waiting
+e9d16260a27a: Waiting
+19ac7ab35beb: Waiting
+956dc6949a38: Waiting
+3c307f482b24: Waiting
+ff06bfbba527: Waiting
+89f263368a82: Waiting
+c60da03a5725: Waiting
+7daf11b973b2: Waiting
+56827159aa8b: Waiting
+440e02c3dcde: Waiting
+29660d0e5bb2: Waiting
+85782553e37a: Waiting
+745f5be9952c: Waiting
+efdf856d7218: Layer already exists
+21d429f39e2b: Layer already exists
+3cc44067b529: Layer already exists
+afefa2ca24e8: Layer already exists
+cbe1694d51bd: Layer already exists
+f2242ac2f6f2: Layer already exists
+89f263368a82: Layer already exists
+fa184e875bd0: Layer already exists
+19ac7ab35beb: Layer already exists
+ff06bfbba527: Layer already exists
+e4e732730ad6: Layer already exists
+97e169478641: Layer already exists
+e9d16260a27a: Layer already exists
+956dc6949a38: Layer already exists
+3c307f482b24: Layer already exists
+c60da03a5725: Layer already exists
+440e02c3dcde: Layer already exists
+56827159aa8b: Layer already exists
+7daf11b973b2: Layer already exists
+29660d0e5bb2: Layer already exists
+85782553e37a: Layer already exists
+745f5be9952c: Layer already exists
+latest: digest: sha256:4668e6f530012c4d686a76cfc7c7392859bb7374b4a59d369b7d942dd64bda8a size: 4927
+Remove login credentials for https://index.docker.io/v1/
