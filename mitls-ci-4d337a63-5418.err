@@ -1,0 +1,29 @@
+From https://github.com/FStarLang/FStar
+* [new branch]      beurdouche_uints -> origin/beurdouche_uints
+5e44ea9..637bf9a  c_ppdev_initial -> origin/c_ppdev_initial
+9ba3ca5..3e787a2  c_relational-ci_r3 -> origin/c_relational-ci_r3
+9a33718..63c330d  c_valedev_initial -> origin/c_valedev_initial
++ 7bfb310...f05c66a cwinter_checked_hints -> origin/cwinter_checked_hints  (forced update)
+7b53297..cdf33b2  cwinter_search_logs -> origin/cwinter_search_logs
+c496a5d..52145e3  master     -> origin/master
+4018d41..ee79601  nik_private -> origin/nik_private
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
