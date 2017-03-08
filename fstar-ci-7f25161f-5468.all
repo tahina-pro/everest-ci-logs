@@ -1,0 +1,44 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: cwinter_cloud_verify
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+WARNING: 'Microsoft.Rest.ClientRuntime.Azure' already has a dependency defined for 'NETStandard.Library'.
+WARNING: 'Microsoft.Rest.ClientRuntime' already has a dependency defined for 'Newtonsoft.Json'.
+Installing 'Microsoft.Data.Services.Client 5.8.2'.
+Installing 'Azure.Batch 6.1.0'.
+Installing 'FsLexYacc 6.1.0'.
+Installing 'System.Spatial 5.8.2'.
+Installing 'Microsoft.Data.Edm 5.8.2'.
+Installing 'Microsoft.Azure.KeyVault.Core 2.0.4'.
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Installing 'Newtonsoft.Json 9.0.1'.
+Installing 'Microsoft.Data.OData 5.8.2'.
+Successfully installed 'Microsoft.Azure.KeyVault.Core 2.0.4'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+Successfully installed 'Azure.Batch 6.1.0'.
+Successfully installed 'Newtonsoft.Json 9.0.1'.
+Successfully installed 'System.Spatial 5.8.2'.
+Successfully installed 'Microsoft.Data.Edm 5.8.2'.
+Successfully installed 'Microsoft.Data.Services.Client 5.8.2'.
+Successfully installed 'Microsoft.Data.OData 5.8.2'.
+Installing 'Microsoft.Rest.ClientRuntime 2.3.5'.
+Installing 'Microsoft.Rest.ClientRuntime.Azure 3.3.5'.
+'Microsoft.Rest.ClientRuntime' already has a dependency defined for 'Newtonsoft.Json'.
+'Microsoft.Rest.ClientRuntime.Azure' already has a dependency defined for 'NETStandard.Library'.
+The 'System.ComponentModel.EventBasedAsync 4.3.0' package requires NuGet client version '2.12' or above, but the current NuGet version is '2.8.60717.93'.
+The 'System.Dynamic.Runtime 4.3.0' package requires NuGet client version '2.12' or above, but the current NuGet version is '2.8.60717.93'.
+The 'System.Linq.Queryable 4.3.0' package requires NuGet client version '2.12' or above, but the current NuGet version is '2.8.60717.93'.
+The 'System.Net.Requests 4.3.0' package requires NuGet client version '2.12' or above, but the current NuGet version is '2.8.60717.93'.
+The 'WindowsAzure.Storage 8.1.1' package requires NuGet client version '2.12' or above, but the current NuGet version is '2.8.60717.93'.
+make[1]: *** [Makefile:65: nuget-restore] Error 1
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: Target 'all' not remade because of errors.
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make: *** [Makefile:242: utest] Error 2
