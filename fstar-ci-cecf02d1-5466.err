@@ -1,0 +1,11 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+'Microsoft.Rest.ClientRuntime' already has a dependency defined for 'Newtonsoft.Json'.
+'Microsoft.Rest.ClientRuntime.Azure' already has a dependency defined for 'NETStandard.Library'.
+The 'System.ComponentModel.EventBasedAsync 4.3.0' package requires NuGet client version '2.12' or above, but the current NuGet version is '2.8.60717.93'.
+The 'System.Dynamic.Runtime 4.3.0' package requires NuGet client version '2.12' or above, but the current NuGet version is '2.8.60717.93'.
+The 'System.Linq.Queryable 4.3.0' package requires NuGet client version '2.12' or above, but the current NuGet version is '2.8.60717.93'.
+The 'System.Net.Requests 4.3.0' package requires NuGet client version '2.12' or above, but the current NuGet version is '2.8.60717.93'.
+The 'WindowsAzure.Storage 8.1.1' package requires NuGet client version '2.12' or above, but the current NuGet version is '2.8.60717.93'.
+make[1]: *** [Makefile:64: nuget-restore] Error 1
+make[1]: Target 'all' not remade because of errors.
+make: *** [Makefile:241: utest] Error 2
