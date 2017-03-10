@@ -1,0 +1,109 @@
+From https://github.com/FStarLang/FStar
+df7b098..09c9ec0  c_valedev_initial -> origin/c_valedev_initial
+95c407d..882883b  master     -> origin/master
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.OpenSSL.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.Spec.fst.hints; ran without hints
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\Hashing.CRF.fst.hints; ran without hints
+.\Hashing.CRF.fst(28,8-28,80): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(43,8-43,56): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(47,9-51,7): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Signature.fst-ver] Error 1
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+Fatal error: out of memory.
+Fatal error: out of memory.
+make: *** [Makefile:249: MasterSecret.fst-ver] Error 2
+make: *** [Makefile:249: Alert.fst-ver] Error 2
+Fatal error: out of memory.
+make: *** [Makefile:249: Content.fst-ver] Error 2
+Fatal error: out of memory.
+make: *** [Makefile:249: StatefulPlain.fst-ver] Error 2
+Fatal error: out of memory.
+make: *** [Makefile:249: DataStream.fst-ver] Error 2
+Fatal error: out of memory.
+make: *** [Makefile:249: StreamDeltas.fst-ver] Error 2
+Fatal error: out of memory.
+make: *** [Makefile:249: Epochs.fst-ver] Error 2
+Error: Unable to open file: .\Handshake.fst
+Unexpected error
+FStar_Errors.Err("Unable to open file: .\\Handshake.fst\n")
+Raised at file "src/batString.mlv", line 148, characters 12-21
+Called from file "src/batReturn.ml", line 29, characters 6-29
+Called from file "src/batString.mlv", line 335, characters 19-43
+
+make: *** [Makefile:249: Connection.fst-ver] Error 1
+Fatal error: out of memory.
+make: *** [Makefile:249: ConnInvariant.fst-ver] Error 2
+Fatal error: out of memory.
+make: *** [Makefile:249: FFI.fst-ver] Error 2
+Fatal error: out of memory.
+make: *** [Makefile:249: Record.fst-ver] Error 2
+Unexpected error
+Out of memory
+Raised by primitive operation at file "string.ml", line 51, characters 14-55
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 680, characters 1-55
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5692, characters 0-87
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5800, characters 18-116
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5818, characters 17-83
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 51, characters 0-49
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 90, characters 170-202
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3881, characters 17-33
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3917, characters 17-771
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4007, characters 17-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4195, characters 17-45
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 174, characters 16-101
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 165, characters 13-19
+Called from file "src/ocaml-output/FStar_Universal.ml", line 296, characters 14-64
+Called from file "src/ocaml-output/FStar_Universal.ml", line 321, characters 16-59
+Called from file "src/ocaml-output/FStar_Universal.ml", line 332, characters 16-73
+Called from file "src/ocaml-output/FStar_Universal.ml", line 373, characters 16-60
+Called from file "src/ocaml-output/FStar_Main.ml", line 310, characters 16-57
+Called from file "src/ocaml-output/FStar_Main.ml", line 340, characters 1-8
+
+Fatal error: out of memory.
+Fatal error: out of memory.
+Fatal error: out of memory.
+make: *** [Makefile:249: TLS.fst-ver] Error 2
+make: *** [Makefile:249: KeySchedule.fst-ver] Error 2
+make: *** [Makefile:249: Range.fst-ver] Error 1
+make: *** [Makefile:249: StreamPlain.fst-ver] Error 2
+Warning: Unable to open hints file: C:\Build\Agent2\_work\2\s\src\tls\HKDF.fsti.hints; ran without hints
+.\MAC_SHA256.fst(66,36-66,42): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(69,34-69,48))
+.\MAC_SHA256.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA256 (67655 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA256.fst-ver] Error 1
+.\MAC_SHA1.fst(66,36-66,42): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(69,34-69,48))
+.\MAC_SHA1.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA1 (73950 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA1.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
