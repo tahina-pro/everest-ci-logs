@@ -1,0 +1,127 @@
+From https://github.com/FStarLang/FStar
+a49062b..0065224  c_relational-ci_r3 -> origin/c_relational-ci_r3
+aeaccb8..45e850f  c_valedev_initial -> origin/c_valedev_initial
+0cfdfab..21b8fd2  cwinter_batch_errors -> origin/cwinter_batch_errors
++ 7f25161...6e0c254 cwinter_cloud_verify -> origin/cwinter_cloud_verify  (forced update)
+fb1c2b6..a720446  master     -> origin/master
+ee79601..528fc24  nik_private -> origin/nik_private
+* [new branch]      santiago_uf1cma -> origin/santiago_uf1cma
+* [new branch]      shaolintl_log_queries_problem -> origin/shaolintl_log_queries_problem
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Flags.fst.hints; ran without hints
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.OpenSSL.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.Spec.fst.hints; ran without hints
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.CRF.fst.hints; ran without hints
+.\Hashing.CRF.fst(28,8-28,80): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(43,8-43,56): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(47,9-51,7): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Signature.fst-ver] Error 1
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\HKDF.fsti.hints; ran without hints
+.\MAC_SHA256.fst(60,4-60,53): (Error) could not prove post-condition
+.\MAC_SHA256.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA256 (77098 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA256.fst-ver] Error 1
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Connection.fst-ver] Error 1
+.\MAC_SHA1.fst(66,36-66,42): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(69,34-69,48))
+.\MAC_SHA1.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA1 (72484 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA1.fst-ver] Error 1
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: ConnInvariant.fst-ver] Error 1
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: FFI.fst-ver] Error 1
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: TLS.fst-ver] Error 1
+.\Epochs.fst(248,58-248,59): (Error) Failed to verify implicit argument: Subtyping check failed; expected type (i#2998:id{(b2t (op_Equality (nonce_of_id i@0) n))}); got type id (see .\Epochs.fst(47,17-47,34))
+.\Epochs.fst(249,14-249,16): (Error) Subtyping check failed; expected type (w#3109:(writer i){(epoch_region_inv' hs_rgn rd w@0)}); got type (writer i) (see .\Epochs.fst(50,24-50,52))
+Verified module: Epochs (231485 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: Epochs.fst-ver] Error 1
+.\KeySchedule.fst(116,2-119,41): (Error) Patterns are incomplete
+.\KeySchedule.fst(333,17-333,27): (Error) Subtyping check failed; expected type clientKeyShare; got type (list (tuple2 namedGroup bytes)) (see .\TLSConstants.fst(1724,48-1724,74))
+.\KeySchedule.fst(355,2-355,35): (Error) assertion failed (see C:\Build\Agent\_work\3\s\fstar\ulib\hyperstack\FStar.ST.fst(206,22-206,36))
+.\KeySchedule.fst(377,2-415,21): (Error) Patterns are incomplete
+.\KeySchedule.fst(421,26-421,34): (Error) could not prove post-condition
+.\KeySchedule.fst(454,2-454,22): (Error) assertion failed (see C:\Build\Agent\_work\3\s\fstar\ulib\hyperstack\FStar.ST.fst(206,22-206,36))
+.\KeySchedule.fst(467,7-467,65): (Error) could not prove post-condition
+.\KeySchedule.fst(563,2-570,4): (Error) Patterns are incomplete
+.\KeySchedule.fst(597,72-597,73): (Error) Subtyping check failed; expected type (label#458:string{(b2t (op_LessThan (length (abytes label@0)) (op_Subtraction 256 9)))}); got type string (see .\HKDF.fsti(87,19-87,50))
+.\KeySchedule.fst(648,26-648,28): (Error) Subtyping check failed; expected type (share g); got type (keyshare g) (see unknown(0,0-0,0))
+.\KeySchedule.fst(684,2-684,49): (Error) assertion failed (see C:\Build\Agent\_work\3\s\fstar\ulib\hyperstack\FStar.ST.fst(206,22-206,36))
+.\KeySchedule.fst(703,5-703,9): (Error) Patterns are incomplete
+.\KeySchedule.fst(713,113-713,115): (Error) Subtyping check failed; expected type (list (dtuple2 group (fun x -> (share g)))); got type (list (dtuple2 group (fun g -> (keyshare g@0)))) (see .\KeySchedule.fst(208,129-713,75))
+.\KeySchedule.fst(777,17-777,20): (Error) Subtyping check failed; expected type (hkey h); got type (fink uu___) (see .\KeySchedule.fst(157,54-777,16))
+.\KeySchedule.fst(784,26-784,34): (Error) could not prove post-condition
+.\KeySchedule.fst(797,27-797,34): (Error) Failed to verify implicit argument: Subtyping check failed; expected type (a#6697:Type{(hasEq a@0)}); got type Type (see C:\Build\Agent\_work\3\s\fstar\ulib\prims.fst(224,36-224,43))
+.\KeySchedule.fst(797,27-797,34): (Error) Failed to verify implicit argument: Subtyping check failed; expected type (a#6697:Type{(hasEq a@0)}); got type Type (see C:\Build\Agent\_work\3\s\fstar\ulib\prims.fst(224,36-224,43))
+.\KeySchedule.fst(802,17-802,20): (Error) Subtyping check failed; expected type (hkey h); got type (fink sfkId) (see .\KeySchedule.fst(157,54-802,16))
+.\KeySchedule.fst(809,27-809,34): (Error) Failed to verify implicit argument: Subtyping check failed; expected type (a#6697:Type{(hasEq a@0)}); got type Type (see C:\Build\Agent\_work\3\s\fstar\ulib\prims.fst(224,36-224,43))
+.\KeySchedule.fst(809,27-809,34): (Error) Failed to verify implicit argument: Subtyping check failed; expected type (a#6697:Type{(hasEq a@0)}); got type Type (see C:\Build\Agent\_work\3\s\fstar\ulib\prims.fst(224,36-224,43))
+.\KeySchedule.fst(814,17-814,20): (Error) Subtyping check failed; expected type (hkey h); got type (fink uu___) (see .\KeySchedule.fst(157,54-814,16))
+.\KeySchedule.fst(841,45-841,48): (Error) Subtyping check failed; expected type (hkey h); got type (ams asId) (see .\KeySchedule.fst(160,46-841,44))
+.\KeySchedule.fst(869,34-869,37): (Error) Subtyping check failed; expected type (uu___#29741:ks_state{(b2t (uu___is_C uu___@0))}); got type ks_state (see .\KeySchedule.fst(227,2-227,3))
+.\KeySchedule.fst(932,49-932,52): (Error) Subtyping check failed; expected type (hkey h); got type (ams asId) (see .\KeySchedule.fst(160,46-932,48))
+.\KeySchedule.fst(974,26-974,28): (Error) Subtyping check failed; expected type (cs#9111:cipherSuite{(l_imp (b2t (op_Equality pv TLS_1p2)) (l_and (l_not (l_or (b2t (uu___is_NullCipherSuite cs@0)) (b2t (uu___is_SCSV cs@0)))) (b2t (uu___is_Some (prfMacAlg_of_ciphersuite_aux cs@0)))))}); got type cipherSuite (see .\TLSInfo.fst(303,66-303,100))
+.\KeySchedule.fst(1011,22-1011,29): (Error) assertion failed (see C:\Build\Agent\_work\3\s\fstar\ulib\hyperstack\FStar.ST.fst(50,121-50,127))
+.\KeySchedule.fst(1014,2-1014,12): (Error) assertion failed (see C:\Build\Agent\_work\3\s\fstar\ulib\hyperstack\FStar.ST.fst(206,22-206,36))
+.\KeySchedule.fst(1029,2-1038,41): (Error) Patterns are incomplete
+.\KeySchedule.fst(1066,22-1066,24): (Error) Subtyping check failed; expected type (cs#9469:cipherSuite{(l_imp (b2t (op_Equality pv TLS_1p2)) (l_and (l_not (l_or (b2t (uu___is_NullCipherSuite cs@0)) (b2t (uu___is_SCSV cs@0)))) (b2t (uu___is_Some (prfMacAlg_of_ciphersuite_aux cs@0)))))}); got type cipherSuite (see .\TLSInfo.fst(312,104-312,143))
+.\KeySchedule.fst(1093,26-1093,34): (Error) could not prove post-condition
+.\KeySchedule.fst(1108,26-1108,34): (Error) could not prove post-condition
+.\KeySchedule.fst(1134,2-1134,16): (Error) assertion failed (see C:\Build\Agent\_work\3\s\fstar\ulib\hyperstack\FStar.ST.fst(206,22-206,36))
+.\KeySchedule.fst(1153,2-1153,16): (Error) assertion failed (see C:\Build\Agent\_work\3\s\fstar\ulib\hyperstack\FStar.ST.fst(206,22-206,36))
+.\KeySchedule.fst(1157,36-1157,37): (Error) Subtyping check failed; expected type id; got type id (see .\LHAEPlain.fst(19,17-19,24))
+Verified module: KeySchedule (3202348 milliseconds)
+34 errors were reported (see above)
+make: *** [Makefile:249: KeySchedule.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
