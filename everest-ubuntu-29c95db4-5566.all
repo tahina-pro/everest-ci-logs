@@ -1,0 +1,104 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/41/s
+About to run: docker_from_scratch
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: Everest-Nightly-Windows
+Login Succeeded
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM projecteverest/everest-chomolungma
+latest: Pulling from projecteverest/everest-chomolungma
+d54efb8db41d: Already exists
+f8b845f45a87: Already exists
+e8db7bf7c39f: Already exists
+9654c40e9079: Already exists
+6d9ef359eaaa: Already exists
+a49c1d67ac30: Pulling fs layer
+6c4948436606: Pulling fs layer
+c4f277c5e2d7: Pulling fs layer
+19412fddec8d: Pulling fs layer
+697eb6e84122: Pulling fs layer
+26a1b4f0efdc: Pulling fs layer
+1fbe447632fe: Pulling fs layer
+7b2a63cfe73f: Pulling fs layer
+946aeb43f458: Pulling fs layer
+538aecd08bf2: Pulling fs layer
+3cca0af9f46c: Pulling fs layer
+308fc7b1031b: Pulling fs layer
+4f9ff8d467dd: Pulling fs layer
+bcfd7fa7a886: Pulling fs layer
+a6a8c1ca0780: Pulling fs layer
+288067b1716a: Pulling fs layer
+1fbe447632fe: Waiting
+19412fddec8d: Waiting
+7b2a63cfe73f: Waiting
+946aeb43f458: Waiting
+697eb6e84122: Waiting
+26a1b4f0efdc: Waiting
+538aecd08bf2: Waiting
+bcfd7fa7a886: Waiting
+4f9ff8d467dd: Waiting
+a6a8c1ca0780: Waiting
+3cca0af9f46c: Waiting
+308fc7b1031b: Waiting
+a49c1d67ac30: Verifying Checksum
+a49c1d67ac30: Download complete
+6c4948436606: Verifying Checksum
+6c4948436606: Download complete
+a49c1d67ac30: Pull complete
+c4f277c5e2d7: Download complete
+6c4948436606: Pull complete
+c4f277c5e2d7: Pull complete
+26a1b4f0efdc: Download complete
+1fbe447632fe: Download complete
+697eb6e84122: Verifying Checksum
+697eb6e84122: Download complete
+19412fddec8d: Verifying Checksum
+19412fddec8d: Download complete
+946aeb43f458: Verifying Checksum
+946aeb43f458: Download complete
+538aecd08bf2: Verifying Checksum
+538aecd08bf2: Download complete
+308fc7b1031b: Verifying Checksum
+308fc7b1031b: Download complete
+19412fddec8d: Pull complete
+697eb6e84122: Pull complete
+26a1b4f0efdc: Pull complete
+1fbe447632fe: Pull complete
+3cca0af9f46c: Verifying Checksum
+3cca0af9f46c: Download complete
+4f9ff8d467dd: Verifying Checksum
+4f9ff8d467dd: Download complete
+a6a8c1ca0780: Verifying Checksum
+a6a8c1ca0780: Download complete
+bcfd7fa7a886: Verifying Checksum
+bcfd7fa7a886: Download complete
+7b2a63cfe73f: Verifying Checksum
+7b2a63cfe73f: Download complete
+288067b1716a: Verifying Checksum
+288067b1716a: Download complete
+7b2a63cfe73f: Pull complete
+946aeb43f458: Pull complete
+538aecd08bf2: Pull complete
+3cca0af9f46c: Pull complete
+308fc7b1031b: Pull complete
+4f9ff8d467dd: Pull complete
+bcfd7fa7a886: Pull complete
+a6a8c1ca0780: Pull complete
+288067b1716a: Pull complete
+Digest: sha256:e99734b9269cf9beee134ad97e2241d4fe9d21c7a3a7091a9de83a22b402e7e7
+Status: Downloaded newer image for projecteverest/everest-chomolungma:latest
+---> f52d37edf266
+Step 2 : ARG PARALLEL_OPT
+---> Running in 545f135706b5
+---> 5a9968239f70
+Removing intermediate container 545f135706b5
+Step 3 : RUN ./everest --yes check pull $PARALLEL_OPT make test verify
+---> Running in 229799a85a2d
+# Switching to the everest directory ... now in /home/everest/everest
+
+Checking environment
+... which found
+Warning: git client not configured with the proper ssh credentials
+Hint: check which git you're running, and make sure you have the same SSH key in ~/.ssh and github.com
+[91m./everest: line 341: cannot create temp file for here-document: No space left on device
+The command '/bin/bash --login -c ./everest --yes check pull $PARALLEL_OPT make test verify' returned a non-zero code: 1
