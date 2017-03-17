@@ -1,0 +1,25 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+
+Unhandled Exception: FStar.Errors+Error: Exception of type 'FStar.Errors+Error' was thrown.
+at FStar.ToSyntax.Env.fail_or$cont@1001[a](env env, lident lid, Unit unitVar) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.Env.fs:line 1033
+at FStar.ToSyntax.ToSyntax.desugar_name(FSharpFunc`2 mk, FSharpFunc`2 setpos, env env, lident l) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 615
+at FStar.ToSyntax.ToSyntax.aux@855-20[d](env env, term top, FSharpList`1 args, term e) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 858
+at FStar.ToSyntax.ToSyntax.aux@461-10(FSharpFunc`2 push_bv_maybe_mut, FSharpList`1 loc, env env, pattern p) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 490
+at FStar.ToSyntax.ToSyntax.desugar_data_pat(env env, pattern p, Boolean is_mut) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 452
+at FStar.ToSyntax.ToSyntax.desugar_binding_pat_maybe_top(Boolean top, env env, pattern p, Boolean is_mut) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 578
+at FStar.ToSyntax.ToSyntax.aux@800-22(term top, term body, env env, FSharpList`1 bs, FSharpOption`1 sc_pat_opt, FSharpList`1 _arg3) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 811
+at FStar.ToSyntax.ToSyntax.desugar_term_maybe_top(Boolean top_level, env env, term top) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 789
+at FStar.ToSyntax.ToSyntax.desugar_one_def@928-1.Invoke(either`2 lbname, Tuple`2 tupledArg) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 953
+at Microsoft.FSharp.Primitives.Basics.List.map2[T1,T2,TResult](FSharpFunc`2 mapping, FSharpList`1 xs1, FSharpList`1 xs2)
+at FStar.ToSyntax.ToSyntax.ds_let_rec_or_app@874[d](Boolean top_level, env env, term top, FSharpTypeFunc mk, pattern pat, term body, FSharpList`1 _tl, term _snd, Boolean is_rec, Unit unitVar0) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 960
+at FStar.ToSyntax.ToSyntax.desugar_decl(env env, decl d) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 1835
+at FStar.ToSyntax.ToSyntax.desugar_decls@1969-1.Invoke(decl d) in C:\Build\Agent\_work\1\s\src\tosyntax\FStar.ToSyntax.ToSyntax.fs:line 1970
+at Microsoft.FSharp.Collections.ListModule.loop@242-28[T,TState](FSharpFunc`3 f, TState s, FSharpList`1 xs)
+at FStar.Universal.tc_one_fragment(FSharpOption`1 curmod, env dsenv, env env, input_frag frag) in C:\Build\Agent\_work\1\s\src\fstar\FStar.Universal.fs:line 126
+at FStar.Interactive.check_frag(env dsenv, env env, FSharpOption`1 curmod, input_frag text) in C:\Build\Agent\_work\1\s\src\fstar\FStar.Interactive.fs:line 109
+at FStar.Tests.Pars.pars_and_tc_fragment(String s) in C:\Build\Agent\_work\1\s\src\tests\pars.fs:line 144
+at FStar.Tests.Norm.run_all() in C:\Build\Agent\_work\1\s\src\tests\norm.fs:line 100
+at FStar.Tests.Test.main(String[] argv) in C:\Build\Agent\_work\1\s\src\tests\test.fs:line 22
+make[1]: *** [Makefile:255: fsharp-regressions] Error 127
+make: *** [Makefile:242: utest] Error 2
