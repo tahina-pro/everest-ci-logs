@@ -1,0 +1,71 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Checker.ml", line 581, characters 37-58
+Called from file "src/Checker.ml", line 413, characters 10-22
+Called from file "list.ml", line 55, characters 20-23
+Called from file "src/Checker.ml", line 464, characters 16-39
+Called from file "src/Checker.ml", line 413, characters 10-22
+Called from file "src/Checker.ml", line 243, characters 8-21
+Called from file "src/Checker.ml", line 218, characters 2-16
+Called from file "src/Checker.ml", line 176, characters 6-22
+Dropping Spec.Poly1305.clamp_mask (at checking time)
+
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Checker.ml", line 326, characters 37-58
+Called from file "src/Checker.ml", line 218, characters 2-16
+Called from file "src/Checker.ml", line 176, characters 6-22
+Dropping Spec.Poly1305.mask_list (at checking time)
+
+[Checker.lookup_type] internal error Prims.list not found
+Warning 4: <toplevel>: Malformed input:
+Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Checker.ml", line 326, characters 37-58
+Called from file "src/Checker.ml", line 218, characters 2-16
+Called from file "list.ml", line 110, characters 24-31
+Called from file "src/Checker.ml", line 475, characters 8-40
+Called from file "src/Checker.ml", line 413, characters 10-22
+Called from file "src/Checker.ml", line 243, characters 8-21
+Called from file "src/Checker.ml", line 218, characters 2-16
+Called from file "src/Checker.ml", line 176, characters 6-22
+Dropping Spec.Poly1305.r_mask (at checking time)
+
+Warning 6: in the definition of mac, after the definition of macsize, in top-level declaration Hacl.Test.Poly1305_64.main, in file Hacl_Test_Poly1305_64: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Poly1305_64.main calls Hacl.Impl.Poly1305_64.crypto_onetimeauth -- removing the static qualifier from Hacl.Impl.Poly1305_64.crypto_onetimeauth
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -Wno-unused-but-set-variable -std=c11 -D__USE_MINGW_ANSI_STDIO -Wall -Werror -Wno-parentheses -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -I FSTAR_LIB/hyperstack -I ../bignum -I ../lib/kremlin -I ../../specs -I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib -I poly-c -std=gnu99 -march=native -c poly-c/Spec_Poly1305.c -o poly-c/Spec_Poly1305.o
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.XSalsa20.main, in file Hacl_Test_XSalsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 8: : After inlining, Hacl.Symmetric.XSalsa20.crypto_stream_xsalsa20 calls Hacl.Symmetric.Salsa20.crypto_stream_salsa20. This is a call across translation units but Hacl.Symmetric.Salsa20.crypto_stream_salsa20 has a C "inline" qualifier. The C standard allows removing Hacl.Symmetric.Salsa20.crypto_stream_salsa20 from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Symmetric.XSalsa20.crypto_stream_xsalsa20_xor_ic calls Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor_ic. This is a call across translation units but Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor_ic has a C "inline" qualifier. The C standard allows removing Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor_ic from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 6: in the definition of result, after the definition of keysize, in top-level declaration Hacl.Test.X25519.main, in file Hacl_Test_X25519: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning 6: in the definition of ciphertext, after the definition of len, in top-level declaration Hacl.Test.Chacha20.main, in file Hacl_Test_Chacha20: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Chacha20.loop calls Hacl.Symmetric.Chacha20.chacha20_update -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_update
+Warning 8: : After inlining, Hacl.Test.Chacha20.loop calls Hacl.Symmetric.Chacha20.chacha20_update. This is a call across translation units but Hacl.Symmetric.Chacha20.chacha20_update has a C "inline" qualifier. The C standard allows removing Hacl.Symmetric.Chacha20.chacha20_update from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_keysetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_keysetup
+Warning 8: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_keysetup. This is a call across translation units but Hacl.Symmetric.Chacha20.chacha_keysetup has a C "inline" qualifier. The C standard allows removing Hacl.Symmetric.Chacha20.chacha_keysetup from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup
+Warning 8: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup. This is a call across translation units but Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup has a C "inline" qualifier. The C standard allows removing Hacl.Symmetric.Chacha20.chacha_ietf_ivsetup from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha_encrypt_bytes -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha_encrypt_bytes
+Warning 7: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha20_finish -- removing the static qualifier from Hacl.Symmetric.Chacha20.chacha20_finish
+Warning 8: : After inlining, Hacl.Test.Chacha20.main calls Hacl.Symmetric.Chacha20.chacha20_finish. This is a call across translation units but Hacl.Symmetric.Chacha20.chacha20_finish has a C "inline" qualifier. The C standard allows removing Hacl.Symmetric.Chacha20.chacha20_finish from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 6: in the definition of ciphertext, after the definition of noncesize, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of ciphertext, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of expected4, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of nonce, after the definition of key, in top-level declaration Hacl.Test.Salsa20.main, in file Hacl_Test_Salsa20: stack newbuf 0uint8 @7 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.Salsa20.main calls Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor -- removing the static qualifier from Hacl.Symmetric.Salsa20.crypto_stream_salsa20_xor
+.\Hacl.Spec.Bignum.Fmul.fst(92,2-92,5): (Error) assertion failed (see .\Hacl.Spec.Bignum.Fmul.fst(92,6-92,90))
+Verified module: Hacl.Spec.Bignum.Fmul (1015930 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:38: Hacl.Spec.Bignum.Fmul.fst-verify] Error 1
+make[2]: *** [Makefile:15: bignum-ci] Error 2
+make[1]: *** [Makefile:24: verify-code] Error 2
+make: *** [Makefile:4: all] Error 2
