@@ -1,691 +1,0 @@
-Removing FStar/
-Removing Spartan/
-Removing hacl-star/
-Removing kremlin/
-Removing mitls-fstar/
-# Switching to the everest directory ... now in /cygdrive/c/Build/Agent2/_work/7/s
-
-Checking environment
-... which found
-... no suspicious bash
-... 64-bit cygwin
-... no suspicious cygwin packages
-... all 41 cygwin packages seem to be installed
-... proper mingw directory seems to be in PATH
-... github.com access ok
-... ocaml minimum version requirements met
-... flexdll ok
-... opam found
-... all 15 ocamlfind packages found
-... found fsc.exe
-... found nmake.exe
-... found ml64.exe
-... fsc found in PATH
-... correct z3 version detected
-
-Remember to run source ~/.bashrc if it was modified!
-Note: you *may* want to add /cygdrive/c/Build/Agent2/_work/7/s/FStar/bin and /cygdrive/c/Build/Agent2/_work/7/s/kremlin to your PATH
-Note: you *may* want to export FSTAR_HOME=/cygdrive/c/Build/Agent2/_work/7/s/FStar
-
-Pulling mitls-fstar
-Note: you're welcome to create symbolic links if you already have cloned the repository elsewhere
-Do you want to run: try_git_clone git@github.com:mitls/mitls-fstar.git mitls-fstar? [Yn]
-Cloning into 'mitls-fstar'...
-Switched to a new branch 'adl_lowlevel_merge'
-Branch adl_lowlevel_merge set up to track remote branch adl_lowlevel_merge from origin.
-HEAD is now at 8086422 Temporarily disable client test
-
-Pulling Spartan
-Do you want to run: try_git_clone ssh://msresearch@msresearch.visualstudio.com/DefaultCollection/Ironclad/_git/Spartan Spartan? [Yn]
-Cloning into 'Spartan'...
-Checking out files:  28% (304/1078)   Checking out files:  29% (313/1078)   Checking out files:  30% (324/1078)   Checking out files:  31% (335/1078)   Checking out files:  32% (345/1078)   Checking out files:  33% (356/1078)   Checking out files:  34% (367/1078)   Checking out files:  35% (378/1078)   Checking out files:  36% (389/1078)   Checking out files:  37% (399/1078)   Checking out files:  38% (410/1078)   Checking out files:  39% (421/1078)   Checking out files:  40% (432/1078)   Checking out files:  41% (442/1078)   Checking out files:  42% (453/1078)   Checking out files:  43% (464/1078)   Checking out files:  44% (475/1078)   Checking out files:  45% (486/1078)   Checking out files:  46% (496/1078)   Checking out files:  47% (507/1078)   Checking out files:  48% (518/1078)   Checking out files:  49% (529/1078)   Checking out files:  50% (539/1078)   Checking out files:  51% (550/1078)   Checking out files:  52% (561/1078)   Checking out files:  53% (572/1078)   Checking out files:  54% (583/1078)   Checking out files:  54% (589/1078)   Checking out files:  55% (593/1078)   Checking out files:  56% (604/1078)   Checking out files:  57% (615/1078)   Checking out files:  58% (626/1078)   Checking out files:  59% (637/1078)   Checking out files:  60% (647/1078)   Checking out files:  61% (658/1078)   Checking out files:  62% (669/1078)   Checking out files:  63% (680/1078)   Checking out files:  64% (690/1078)   Checking out files:  65% (701/1078)   Checking out files:  66% (712/1078)   Checking out files:  67% (723/1078)   Checking out files:  68% (734/1078)   Checking out files:  69% (744/1078)   Checking out files:  70% (755/1078)   Checking out files:  71% (766/1078)   Checking out files:  72% (777/1078)   Checking out files:  73% (787/1078)   Checking out files:  74% (798/1078)   Checking out files:  75% (809/1078)   Checking out files:  76% (820/1078)   Checking out files:  77% (831/1078)   Checking out files:  78% (841/1078)   Checking out files:  79% (852/1078)   Checking out files:  80% (863/1078)   Checking out files:  81% (874/1078)   Checking out files:  82% (884/1078)   Checking out files:  83% (895/1078)   Checking out files:  84% (906/1078)   Checking out files:  85% (917/1078)   Checking out files:  86% (928/1078)   Checking out files:  87% (938/1078)   Checking out files:  88% (949/1078)   Checking out files:  89% (960/1078)   Checking out files:  90% (971/1078)   Checking out files:  91% (981/1078)   Checking out files:  92% (992/1078)   Checking out files:  93% (1003/1078)   Checking out files:  94% (1014/1078)   Checking out files:  95% (1025/1078)   Checking out files:  96% (1035/1078)   Checking out files:  97% (1046/1078)   Checking out files:  98% (1057/1078)   Checking out files:  99% (1068/1078)   Checking out files: 100% (1078/1078)   Checking out files: 100% (1078/1078), done.
-Already on 'master'
-Your branch is up-to-date with 'origin/master'.
-HEAD is now at 0e468a8 Update build opts for operations.i.dfy
-
-Pulling FStar
-Do you want to run: try_git_clone git@github.com:FStarLang/FStar.git FStar? [Yn]
-Cloning into 'FStar'...
-Checking out files:  39% (938/2390)   Checking out files:  40% (956/2390)   Checking out files:  41% (980/2390)   Checking out files:  42% (1004/2390)   Checking out files:  43% (1028/2390)   Checking out files:  44% (1052/2390)   Checking out files:  45% (1076/2390)   Checking out files:  46% (1100/2390)   Checking out files:  47% (1124/2390)   Checking out files:  48% (1148/2390)   Checking out files:  49% (1172/2390)   Checking out files:  50% (1195/2390)   Checking out files:  51% (1219/2390)   Checking out files:  52% (1243/2390)   Checking out files:  53% (1267/2390)   Checking out files:  54% (1291/2390)   Checking out files:  55% (1315/2390)   Checking out files:  56% (1339/2390)   Checking out files:  57% (1363/2390)   Checking out files:  58% (1387/2390)   Checking out files:  59% (1411/2390)   Checking out files:  60% (1434/2390)   Checking out files:  61% (1458/2390)   Checking out files:  62% (1482/2390)   Checking out files:  63% (1506/2390)   Checking out files:  64% (1530/2390)   Checking out files:  65% (1554/2390)   Checking out files:  66% (1578/2390)   Checking out files:  67% (1602/2390)   Checking out files:  68% (1626/2390)   Checking out files:  69% (1650/2390)   Checking out files:  70% (1673/2390)   Checking out files:  71% (1697/2390)   Checking out files:  72% (1721/2390)   Checking out files:  73% (1745/2390)   Checking out files:  74% (1769/2390)   Checking out files:  75% (1793/2390)   Checking out files:  76% (1817/2390)   Checking out files:  77% (1841/2390)   Checking out files:  78% (1865/2390)   Checking out files:  79% (1889/2390)   Checking out files:  80% (1912/2390)   Checking out files:  81% (1936/2390)   Checking out files:  82% (1960/2390)   Checking out files:  83% (1984/2390)   Checking out files:  83% (1996/2390)   Checking out files:  84% (2008/2390)   Checking out files:  85% (2032/2390)   Checking out files:  86% (2056/2390)   Checking out files:  87% (2080/2390)   Checking out files:  88% (2104/2390)   Checking out files:  89% (2128/2390)   Checking out files:  90% (2151/2390)   Checking out files:  91% (2175/2390)   Checking out files:  92% (2199/2390)   Checking out files:  93% (2223/2390)   Checking out files:  94% (2247/2390)   Checking out files:  95% (2271/2390)   Checking out files:  96% (2295/2390)   Checking out files:  97% (2319/2390)   Checking out files:  98% (2343/2390)   Checking out files:  99% (2367/2390)   Checking out files: 100% (2390/2390)   Checking out files: 100% (2390/2390), done.
-Switched to a new branch 'c_record_aead'
-Branch c_record_aead set up to track remote branch c_record_aead from origin.
-HEAD is now at 398666d Fix a bug in the implementation of FStar.UInt128
-
-Pulling hacl-star
-Do you want to run: try_git_clone git@github.com:mitls/hacl-star.git hacl-star? [Yn]
-Cloning into 'hacl-star'...
-Switched to a new branch 'jk_low_level_crypto'
-Branch jk_low_level_crypto set up to track remote branch jk_low_level_crypto from origin.
-HEAD is now at 0bdd09e udated makefile
-
-Pulling kremlin
-Do you want to run: try_git_clone git@github.com:FStarLang/kremlin.git kremlin? [Yn]
-Cloning into 'kremlin'...
-Already on 'master'
-Your branch is up-to-date with 'origin/master'.
-HEAD is now at 6051d1b Restore signature for compare_and_print
-exported FSTAR_HOME=C:/Build/Agent2/_work/7/s/FStar
-exported SPARTAN_HOME=C:/Build/Agent2/_work/7/s/Spartan
-Rebuilding FStar
-Running make -C FStar/src/ocaml-output -j 15
-Warning: you are using the standard library and/or the %inline keyword. We
-recommend switching on --infer in order to avoid obscure type error messages.
-6 shift/reduce conflicts.
-1 lines of output2 lines of output3 lines of output4 lines of output5 lines of output6 lines of output7 lines of output8 lines of output9 lines of output10 lines of output11 lines of output12 lines of output13 lines of output14 lines of output15 lines of output16 lines of output17 lines of output18 lines of output19 lines of output20 lines of output21 lines of output22 lines of output23 lines of output24 lines of output25 lines of output26 lines of output27 lines of output28 lines of output29 lines of output30 lines of output31 lines of output32 lines of output33 lines of output34 lines of output35 lines of output36 lines of output37 lines of output38 lines of output39 lines of output40 lines of output41 lines of output42 lines of output43 lines of output44 lines of output45 lines of output46 lines of output47 lines of output48 lines of output49 lines of output50 lines of output51 lines of output52 lines of output53 lines of output54 lines of output55 lines of output56 lines of output57 lines of output58 lines of output59 lines of output60 lines of output61 lines of output62 lines of output63 lines of output64 lines of output65 lines of output66 lines of output67 lines of output68 lines of output69 lines of output70 lines of output71 lines of output72 lines of output73 lines of output74 lines of output75 lines of output76 lines of output77 lines of output78 lines of output79 lines of output80 lines of output81 lines of output82 lines of output83 lines of output84 lines of output85 lines of output86 lines of output87 lines of output88 lines of output89 lines of output90 lines of output91 lines of output92 lines of output93 lines of output94 lines of output95 lines of output96 lines of output97 lines of output98 lines of output99 lines of output100 lines of output101 lines of output102 lines of output103 lines of output104 lines of output105 lines of output106 lines of output107 lines of output108 lines of output109 lines of output110 lines of output111 lines of output112 lines of output113 lines of output114 lines of output115 lines of output116 lines of output117 lines of output118 lines of output119 lines of output120 lines of output121 lines of output122 lines of output123 lines of output124 lines of output125 lines of output126 lines of output127 lines of output128 lines of output129 lines of output130 lines of output131 lines of output132 lines of output133 lines of output134 lines of output135 lines of output136 lines of output137 lines of output138 lines of output139 lines of output140 lines of output141 lines of output142 lines of output143 lines of output144 lines of output145 lines of output146 lines of output147 lines of output148 lines of output149 lines of output150 lines of output151 lines of output152 lines of output153 lines of output154 lines of output155 lines of output156 lines of output157 lines of output158 lines of output159 lines of output160 lines of output161 lines of output162 lines of output163 lines of output164 lines of output165 lines of output166 lines of output167 lines of output168 lines of output169 lines of output170 lines of output171 lines of output172 lines of output173 lines of output174 lines of output175 lines of output176 lines of output177 lines of output178 lines of output179 lines of output180 lines of output181 lines of output182 lines of output183 lines of output184 lines of output185 lines of output186 lines of output187 lines of output188 lines of output189 lines of output190 lines of output191 lines of output192 lines of output193 lines of output194 lines of output195 lines of output196 lines of output197 lines of output198 lines of output199 lines of output200 lines of output201 lines of output202 lines of output203 lines of output204 lines of output205 lines of output206 lines of output207 lines of output208 lines of output209 lines of output210 lines of output211 lines of output212 lines of output213 lines of output214 lines of output215 lines of output216 lines of output217 lines of output218 lines of output219 lines of output220 lines of output221 lines of output222 lines of output223 lines of output224 lines of output225 lines of output226 lines of output227 lines of output228 lines of output229 lines of output230 lines of output231 lines of output232 lines of output233 lines of output234 lines of output235 lines of output236 lines of output237 lines of output238 lines of output239 lines of output240 lines of output241 lines of output242 lines of output243 lines of output244 lines of output245 lines of output246 lines of output247 lines of output248 lines of output249 lines of output250 lines of output251 lines of output252 lines of output253 lines of output254 lines of output255 lines of output256 lines of output257 lines of output258 lines of output259 lines of output260 lines of output261 lines of output262 lines of output263 lines of output264 lines of output265 lines of output266 lines of output267 lines of output268 lines of output269 lines of output270 lines of output271 lines of output272 lines of output273 lines of output274 lines of output275 lines of output276 lines of output277 lines of output278 lines of output279 lines of output280 lines of output281 lines of output282 lines of output283 lines of output284 lines of output285 lines of output286 lines of output287 lines of output288 lines of output289 lines of output290 lines of output291 lines of output292 lines of output293 lines of output294 lines of output295 lines of output296 lines of output297 lines of output298 lines of output299 lines of output300 lines of output301 lines of output302 lines of output303 lines of output304 lines of output305 lines of output306 lines of output307 lines of output308 lines of output309 lines of output310 lines of output311 lines of output312 lines of output313 lines of output314 lines of output315 lines of output316 lines of output317 lines of output318 lines of output319 lines of output320 lines of output321 lines of output322 lines of output323 lines of output324 lines of output325 lines of output326 lines of output327 lines of output328 lines of output329 lines of output330 lines of output331 lines of output332 lines of output333 lines of output334 lines of output335 lines of output336 lines of output337 lines of output338 lines of output339 lines of output340 lines of output341 lines of output342 lines of output343 lines of output344 lines of output345 lines of output346 lines of output347 lines of output348 lines of output349 lines of output350 lines of output351 lines of output352 lines of output353 lines of output354 lines of output355 lines of output356 lines of output357 lines of output358 lines of output359 lines of output
-log written to log/fstar
-
-Rebuilding KreMLin
-Running make -C kremlin -j 15
-1 lines of output2 lines of output3 lines of output4 lines of output5 lines of output6 lines of output7 lines of output8 lines of output9 lines of output10 lines of output11 lines of output12 lines of output13 lines of output14 lines of output15 lines of output16 lines of output17 lines of output18 lines of output19 lines of output20 lines of output21 lines of output22 lines of output23 lines of output24 lines of output25 lines of output26 lines of output27 lines of output28 lines of output29 lines of output30 lines of output31 lines of output32 lines of output33 lines of output34 lines of output35 lines of output36 lines of output37 lines of output38 lines of output39 lines of output40 lines of output41 lines of output42 lines of output43 lines of output44 lines of output45 lines of output46 lines of output47 lines of output48 lines of output49 lines of output50 lines of output51 lines of output52 lines of output53 lines of output54 lines of output55 lines of output56 lines of output57 lines of output58 lines of output59 lines of output60 lines of output61 lines of output62 lines of output63 lines of output64 lines of output65 lines of output66 lines of output67 lines of output68 lines of output69 lines of output70 lines of output71 lines of output72 lines of output73 lines of output74 lines of output75 lines of output76 lines of output77 lines of output78 lines of output79 lines of output80 lines of output81 lines of output82 lines of output83 lines of output84 lines of output85 lines of output86 lines of output87 lines of output88 lines of output89 lines of output90 lines of output91 lines of output92 lines of output93 lines of output94 lines of output95 lines of output96 lines of output97 lines of output98 lines of output99 lines of output100 lines of output101 lines of output102 lines of output103 lines of output104 lines of output105 lines of output106 lines of output107 lines of output108 lines of output109 lines of output110 lines of output111 lines of output112 lines of output113 lines of output114 lines of output115 lines of output116 lines of output117 lines of output118 lines of output119 lines of output120 lines of output121 lines of output122 lines of output123 lines of output124 lines of output125 lines of output126 lines of output127 lines of output128 lines of output129 lines of output130 lines of output131 lines of output
-log written to log/kremlin
-
-Rebuilding Spartan
-Running build_spartan
-
-Microsoft (R) Program Maintenance Utility Version 14.00.24210.0
-Copyright (C) Microsoft Corporation.  All rights reserved.
-
-
-Microsoft (R) Program Maintenance Utility Version 14.00.24210.0
-Copyright (C) Microsoft Corporation.  All rights reserved.
-
-
-warning FS2011: Assembly 'Newtonsoft.Json' was referenced transitively and the assembly could not be resolved automatically. Static linking will assume this DLL has no dependencies on the F# library or other statically linked DLLs. Consider adding an explicit reference to this DLL.
-
-Microsoft (R) Program Maintenance Utility Version 14.00.24210.0
-Copyright (C) Microsoft Corporation.  All rights reserved.
-
-Could Not Find C:\Build\Agent2\_work\7\s\Spartan\obj\sha256_main_i.c
-warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
-The file will have its original line endings in your working directory.
-1 lines of output2 lines of output3 lines of output4 lines of output5 lines of output6 lines of output7 lines of output8 lines of output9 lines of output10 lines of output11 lines of output12 lines of output13 lines of output14 lines of output15 lines of output16 lines of output17 lines of output18 lines of output19 lines of output20 lines of output21 lines of output22 lines of output23 lines of output24 lines of output25 lines of output26 lines of output27 lines of output28 lines of output29 lines of output30 lines of output31 lines of output32 lines of output33 lines of output34 lines of output35 lines of output36 lines of output37 lines of output38 lines of output39 lines of output40 lines of output41 lines of output42 lines of output43 lines of output44 lines of output45 lines of output46 lines of output47 lines of output48 lines of output49 lines of output50 lines of output51 lines of output52 lines of output53 lines of output54 lines of output55 lines of output56 lines of output57 lines of output58 lines of output59 lines of output60 lines of output61 lines of output62 lines of output63 lines of output64 lines of output65 lines of output66 lines of output67 lines of output68 lines of output69 lines of output70 lines of output71 lines of output72 lines of output73 lines of output74 lines of output75 lines of output76 lines of output77 lines of output78 lines of output79 lines of output80 lines of output81 lines of output82 lines of output83 lines of output84 lines of output85 lines of output86 lines of output87 lines of output88 lines of output89 lines of output90 lines of output91 lines of output92 lines of output93 lines of output94 lines of output95 lines of output96 lines of output97 lines of output98 lines of output99 lines of output100 lines of output101 lines of output102 lines of output103 lines of output104 lines of output105 lines of output106 lines of output107 lines of output108 lines of output109 lines of output110 lines of output111 lines of output112 lines of output113 lines of output114 lines of output115 lines of output116 lines of output117 lines of output118 lines of output119 lines of output120 lines of output121 lines of output122 lines of output123 lines of output124 lines of output125 lines of output126 lines of output127 lines of output128 lines of output129 lines of output130 lines of output131 lines of output132 lines of output133 lines of output134 lines of output135 lines of output136 lines of output137 lines of output138 lines of output139 lines of output140 lines of output141 lines of output142 lines of output143 lines of output144 lines of output145 lines of output146 lines of output147 lines of output148 lines of output149 lines of output150 lines of output151 lines of output152 lines of output153 lines of output154 lines of output155 lines of output156 lines of output157 lines of output158 lines of output159 lines of output160 lines of output161 lines of output162 lines of output163 lines of output164 lines of output165 lines of output166 lines of output167 lines of output168 lines of output169 lines of output170 lines of output171 lines of output172 lines of output173 lines of output174 lines of output175 lines of output176 lines of output177 lines of output178 lines of output179 lines of output180 lines of output181 lines of output182 lines of output183 lines of output184 lines of output185 lines of output186 lines of output187 lines of output188 lines of output189 lines of output190 lines of output191 lines of output192 lines of output193 lines of output194 lines of output195 lines of output196 lines of output197 lines of output198 lines of output199 lines of output200 lines of output201 lines of output202 lines of output203 lines of output204 lines of output205 lines of output206 lines of output207 lines of output208 lines of output209 lines of output210 lines of output211 lines of output212 lines of output213 lines of output214 lines of output215 lines of output216 lines of output217 lines of output218 lines of output219 lines of output220 lines of output221 lines of output222 lines of output223 lines of output224 lines of output225 lines of output226 lines of output227 lines of output228 lines of output229 lines of output230 lines of output231 lines of output232 lines of output233 lines of output234 lines of output235 lines of output236 lines of output237 lines of output238 lines of output239 lines of output240 lines of output241 lines of output242 lines of output243 lines of output244 lines of output245 lines of output246 lines of output247 lines of output248 lines of output249 lines of output250 lines of output251 lines of output252 lines of output253 lines of output254 lines of output255 lines of output256 lines of output257 lines of output258 lines of output259 lines of output260 lines of output261 lines of output262 lines of output263 lines of output264 lines of output265 lines of output266 lines of output267 lines of output268 lines of output269 lines of output270 lines of output271 lines of output272 lines of output273 lines of output274 lines of output275 lines of output276 lines of output277 lines of output278 lines of output279 lines of output280 lines of output281 lines of output282 lines of output283 lines of output284 lines of output285 lines of output286 lines of output287 lines of output288 lines of output289 lines of output290 lines of output291 lines of output292 lines of output293 lines of output294 lines of output295 lines of output296 lines of output297 lines of output298 lines of output299 lines of output300 lines of output301 lines of output302 lines of output303 lines of output304 lines of output305 lines of output306 lines of output307 lines of output308 lines of output309 lines of output310 lines of output311 lines of output312 lines of output313 lines of output314 lines of output315 lines of output316 lines of output317 lines of output318 lines of output319 lines of output320 lines of output321 lines of output322 lines of output323 lines of output324 lines of output325 lines of output326 lines of output327 lines of output328 lines of output329 lines of output330 lines of output331 lines of output332 lines of output333 lines of output334 lines of output335 lines of output336 lines of output337 lines of output338 lines of output339 lines of output340 lines of output341 lines of output342 lines of output343 lines of output344 lines of output345 lines of output346 lines of output347 lines of output348 lines of output349 lines of output350 lines of output351 lines of output352 lines of output353 lines of output354 lines of output355 lines of output356 lines of output357 lines of output358 lines of output359 lines of output360 lines of output361 lines of output362 lines of output363 lines of output364 lines of output365 lines of output366 lines of output367 lines of output368 lines of output369 lines of output370 lines of output371 lines of output372 lines of output373 lines of output374 lines of output375 lines of output376 lines of output377 lines of output378 lines of output379 lines of output380 lines of output381 lines of output382 lines of output383 lines of output384 lines of output385 lines of output386 lines of output387 lines of output388 lines of output389 lines of output390 lines of output391 lines of output392 lines of output393 lines of output394 lines of output395 lines of output396 lines of output397 lines of output398 lines of output399 lines of output400 lines of output401 lines of output402 lines of output403 lines of output404 lines of output405 lines of output406 lines of output407 lines of output408 lines of output409 lines of output410 lines of output411 lines of output412 lines of output413 lines of output414 lines of output415 lines of output416 lines of output417 lines of output418 lines of output419 lines of output420 lines of output421 lines of output422 lines of output423 lines of output424 lines of output425 lines of output426 lines of output427 lines of output428 lines of output429 lines of output430 lines of output431 lines of output432 lines of output433 lines of output434 lines of output435 lines of output436 lines of output437 lines of output438 lines of output439 lines of output440 lines of output441 lines of output442 lines of output443 lines of output444 lines of output445 lines of output446 lines of output447 lines of output448 lines of output449 lines of output450 lines of output451 lines of output452 lines of output453 lines of output454 lines of output455 lines of output456 lines of output457 lines of output458 lines of output459 lines of output460 lines of output461 lines of output462 lines of output463 lines of output464 lines of output465 lines of output466 lines of output467 lines of output468 lines of output469 lines of output470 lines of output471 lines of output472 lines of output473 lines of output474 lines of output475 lines of output476 lines of output477 lines of output478 lines of output479 lines of output480 lines of output481 lines of output482 lines of output483 lines of output484 lines of output485 lines of output486 lines of output487 lines of output488 lines of output489 lines of output
-log written to log/spartan
-
-Rebuilding FStar / CoreCrypto
-Running make -C FStar/ucontrib/CoreCrypto/ml -j 15
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-Cloning into '/cygdrive/c/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/openssl'...
-crypto/bio/b_sock.c: In function 'BIO_get_accept_socket':
-crypto/bio/b_sock.c:214:13: warning: overflow in implicit constant conversion [-Woverflow]
-int s = INVALID_SOCKET;
-^
-crypto/bio/b_sock.c:219:16: warning: overflow in implicit constant conversion [-Woverflow]
-return INVALID_SOCKET;
-^
-crypto/bio/b_sock.c:222:16: warning: overflow in implicit constant conversion [-Woverflow]
-return INVALID_SOCKET;
-^
-crypto/bio/b_sock.c:229:13: warning: overflow in implicit constant conversion [-Woverflow]
-s = INVALID_SOCKET;
-^
-crypto/bio/b_sock.c:236:13: warning: overflow in implicit constant conversion [-Woverflow]
-s = INVALID_SOCKET;
-^
-crypto/bio/b_sock2.c: In function 'BIO_socket':
-crypto/bio/b_sock2.c:45:16: warning: overflow in implicit constant conversion [-Woverflow]
-return INVALID_SOCKET;
-^
-crypto/bio/b_sock2.c:51:16: warning: overflow in implicit constant conversion [-Woverflow]
-return INVALID_SOCKET;
-^
-crypto/bio/b_sock2.c: In function 'BIO_connect':
-crypto/bio/b_sock2.c:90:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
-if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
-^
-In file included from ./e_os.h:190:0,
-from crypto/bio/bio_lcl.h:11,
-from crypto/bio/b_sock2.c:14:
-/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
-WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
-^
-crypto/bio/b_sock2.c:98:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
-if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
-^
-In file included from ./e_os.h:190:0,
-from crypto/bio/bio_lcl.h:11,
-from crypto/bio/b_sock2.c:14:
-/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
-WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
-^
-crypto/bio/b_sock2.c: In function 'BIO_listen':
-crypto/bio/b_sock2.c:164:47: warning: passing argument 4 of 'getsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
-if (getsockopt(sock, SOL_SOCKET, SO_TYPE, &socktype, &socktype_len) != 0
-^
-In file included from ./e_os.h:190:0,
-from crypto/bio/bio_lcl.h:11,
-from crypto/bio/b_sock2.c:14:
-/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:980:34: note: expected 'char *' but argument is of type 'int *'
-WINSOCK_API_LINKAGE int WSAAPI getsockopt(SOCKET s,int level,int optname,char *optval,int *optlen);
-^
-crypto/bio/b_sock2.c:187:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
-if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
-^
-In file included from ./e_os.h:190:0,
-from crypto/bio/bio_lcl.h:11,
-from crypto/bio/b_sock2.c:14:
-/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
-WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
-^
-crypto/bio/b_sock2.c:195:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
-if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
-^
-In file included from ./e_os.h:190:0,
-from crypto/bio/bio_lcl.h:11,
-from crypto/bio/b_sock2.c:14:
-/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
-WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
-^
-crypto/bio/b_sock2.c:204:57: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
-if (setsockopt(sock, IPPROTO_IPV6, IPV6_V6ONLY, &on, sizeof(on)) != 0) {
-^
-In file included from ./e_os.h:190:0,
-from crypto/bio/bio_lcl.h:11,
-from crypto/bio/b_sock2.c:14:
-/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
-WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
-^
-crypto/bio/b_sock2.c: In function 'BIO_accept_ex':
-crypto/bio/b_sock2.c:249:16: warning: overflow in implicit constant conversion [-Woverflow]
-return INVALID_SOCKET;
-^
-crypto/bio/b_sock2.c:254:16: warning: overflow in implicit constant conversion [-Woverflow]
-return INVALID_SOCKET;
-^
-In file included from crypto/bn/bn_print.c:15:0:
-crypto/bn/bn_print.c: In function 'BN_bn2dec':
-crypto/bn/bn_lcl.h:94:27: warning: unknown conversion type character 'l' in format [-Wformat=]
-#  define BN_DEC_FMT1     "%llu"
-^
-crypto/bn/bn_print.c:106:37: note: in expansion of macro 'BN_DEC_FMT1'
-BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
-^
-crypto/bn/bn_lcl.h:94:27: warning: too many arguments for format [-Wformat-extra-args]
-#  define BN_DEC_FMT1     "%llu"
-^
-crypto/bn/bn_print.c:106:37: note: in expansion of macro 'BN_DEC_FMT1'
-BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
-^
-crypto/bn/bn_lcl.h:95:27: warning: unknown conversion type character 'l' in format [-Wformat=]
-#  define BN_DEC_FMT2     "%019llu"
-^
-crypto/bn/bn_print.c:111:41: note: in expansion of macro 'BN_DEC_FMT2'
-BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
-^
-crypto/bn/bn_lcl.h:95:27: warning: too many arguments for format [-Wformat-extra-args]
-#  define BN_DEC_FMT2     "%019llu"
-^
-crypto/bn/bn_print.c:111:41: note: in expansion of macro 'BN_DEC_FMT2'
-BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
-^
-crypto/threads_win.c: In function 'CRYPTO_atomic_add':
-crypto/threads_win.c:132:35: warning: passing argument 1 of '_InterlockedExchangeAdd' from incompatible pointer type [-Wincompatible-pointer-types]
-*ret = InterlockedExchangeAdd(val, amount) + amount;
-^
-In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/winnt.h:27:0,
-from /usr/x86_64-w64-mingw32/sys-root/mingw/include/minwindef.h:163,
-from /usr/x86_64-w64-mingw32/sys-root/mingw/include/windef.h:8,
-from /usr/x86_64-w64-mingw32/sys-root/mingw/include/windows.h:69,
-from crypto/threads_win.c:11:
-/usr/x86_64-w64-mingw32/sys-root/mingw/include/psdk_inc/intrin-impl.h:1026:10: note: expected 'volatile long int *' but argument is of type 'int *'
-__LONG32 _InterlockedExchangeAdd(__LONG32 volatile *Addend, __LONG32 Value) {
-^
-ar: creating libssl.a
-ar: creating libcrypto.a
-openssl_stub.c: In function ‘ocaml_openssl_init’:
-openssl_stub.c:93:3: warning: implicit declaration of function ‘OPENSSL_config’ [-Wimplicit-function-declaration]
-OPENSSL_config("CoreCrypto");
-^
-openssl_stub.c: In function ‘ocaml_rsa_gen_key’:
-openssl_stub.c:668:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:668:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:668:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c: In function ‘ocaml_rsa_get_key’:
-openssl_stub.c:779:21: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:779:27: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:779:33: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c: In function ‘ocaml_rsa_encrypt’:
-openssl_stub.c:823:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:823:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:823:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c: In function ‘ocaml_rsa_decrypt’:
-openssl_stub.c:878:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:878:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:878:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c: In function ‘ocaml_rsa_sign’:
-openssl_stub.c:922:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:922:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:922:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c: In function ‘ocaml_rsa_verify’:
-openssl_stub.c:975:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:975:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c:975:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-RSA_get0_key(rsa, &b_n, &b_e, &b_d);
-^
-In file included from openssl_stub.c:22:0:
-openssl/include/openssl/rsa.h:181:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void RSA_get0_key(const RSA *r,
-^
-openssl_stub.c: In function ‘ocaml_dsa_gen_params’:
-openssl_stub.c:1087:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1087:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1087:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c: In function ‘ocaml_dsa_gen_key’:
-openssl_stub.c:1144:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_key(dsa, &b_pub, &b_priv);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_key(const DSA *d,
-^
-openssl_stub.c:1144:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_key(dsa, &b_pub, &b_priv);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_key(const DSA *d,
-^
-openssl_stub.c: In function ‘ocaml_dsa_get_key’:
-openssl_stub.c:1183:21: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1183:27: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1183:33: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1190:21: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_key(dsa, &b_pub, &b_priv);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_key(const DSA *d,
-^
-openssl_stub.c:1190:29: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_key(dsa, &b_pub, &b_priv);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_key(const DSA *d,
-^
-openssl_stub.c: In function ‘ocaml_dsa_set_key’:
-openssl_stub.c:1235:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1235:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1235:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1236:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_key(dsa, &b_pub, &b_priv);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_key(const DSA *d,
-^
-openssl_stub.c:1236:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_key(dsa, &b_pub, &b_priv);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_key(const DSA *d,
-^
-openssl_stub.c: In function ‘ocaml_dsa_sign’:
-openssl_stub.c:1325:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1325:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1325:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1326:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_key(dsa, &b_pub, &b_priv);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_key(const DSA *d,
-^
-openssl_stub.c:1326:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_key(dsa, &b_pub, &b_priv);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_key(const DSA *d,
-^
-openssl_stub.c: In function ‘ocaml_dsa_verify’:
-openssl_stub.c:1368:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1368:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1368:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_pqg(const DSA *d,
-^
-openssl_stub.c:1369:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_key(dsa, &b_pub, &b_priv);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_key(const DSA *d,
-^
-openssl_stub.c:1369:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DSA_get0_key(dsa, &b_pub, &b_priv);
-^
-In file included from openssl_stub.c:23:0:
-openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DSA_get0_key(const DSA *d,
-^
-openssl_stub.c: In function ‘ocaml_dh_gen_params’:
-openssl_stub.c:1473:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DH_get0_pqg(dh, &b_p, &b_q, &b_g);
-^
-In file included from openssl/include/openssl/dsa.h:31:0,
-from openssl_stub.c:23:
-openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DH_get0_pqg(const DH *dh,
-^
-openssl_stub.c:1473:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DH_get0_pqg(dh, &b_p, &b_q, &b_g);
-^
-In file included from openssl/include/openssl/dsa.h:31:0,
-from openssl_stub.c:23:
-openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DH_get0_pqg(const DH *dh,
-^
-openssl_stub.c:1473:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DH_get0_pqg(dh, &b_p, &b_q, &b_g);
-^
-In file included from openssl/include/openssl/dsa.h:31:0,
-from openssl_stub.c:23:
-openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DH_get0_pqg(const DH *dh,
-^
-openssl_stub.c: In function ‘ocaml_dh_params_of_string’:
-openssl_stub.c:1506:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DH_get0_pqg(dh, &b_p, &b_q, &b_g);
-^
-In file included from openssl/include/openssl/dsa.h:31:0,
-from openssl_stub.c:23:
-openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DH_get0_pqg(const DH *dh,
-^
-openssl_stub.c:1506:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DH_get0_pqg(dh, &b_p, &b_q, &b_g);
-^
-In file included from openssl/include/openssl/dsa.h:31:0,
-from openssl_stub.c:23:
-openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DH_get0_pqg(const DH *dh,
-^
-openssl_stub.c:1506:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
-DH_get0_pqg(dh, &b_p, &b_q, &b_g);
-^
-In file included from openssl/include/openssl/dsa.h:31:0,
-from openssl_stub.c:23:
-openssl/include/openssl/dh.h:154:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DH_get0_pqg(const DH *dh,
-^
-openssl_stub.c: In function ‘ocaml_dh_gen_key’:
-openssl_stub.c:1561:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DH_get0_key(dh, &b_pub, &b_prv);
-^
-In file included from openssl/include/openssl/dsa.h:31:0,
-from openssl_stub.c:23:
-openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DH_get0_key(const DH *dh,
-^
-openssl_stub.c:1561:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DH_get0_key(dh, &b_pub, &b_prv);
-^
-In file included from openssl/include/openssl/dsa.h:31:0,
-from openssl_stub.c:23:
-openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DH_get0_key(const DH *dh,
-^
-openssl_stub.c: In function ‘ocaml_dh_compute’:
-openssl_stub.c:1672:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DH_get0_key(dh, &b_pub, &b_prv);
-^
-In file included from openssl/include/openssl/dsa.h:31:0,
-from openssl_stub.c:23:
-openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DH_get0_key(const DH *dh,
-^
-openssl_stub.c:1672:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
-DH_get0_key(dh, &b_pub, &b_prv);
-^
-In file included from openssl/include/openssl/dsa.h:31:0,
-from openssl_stub.c:23:
-openssl/include/openssl/dh.h:157:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
-void DH_get0_key(const DH *dh,
-^
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-1 lines of output2 lines of output3 lines of output4 lines of output5 lines of output6 lines of output7 lines of output8 lines of output9 lines of output10 lines of output11 lines of output12 lines of output13 lines of output14 lines of output15 lines of output16 lines of output17 lines of output18 lines of output19 lines of output20 lines of output21 lines of output22 lines of output23 lines of output24 lines of output25 lines of output26 lines of output27 lines of output28 lines of output29 lines of output30 lines of output31 lines of output32 lines of output33 lines of output34 lines of output35 lines of output36 lines of output37 lines of output38 lines of output39 lines of output40 lines of output41 lines of output42 lines of output43 lines of output44 lines of output45 lines of output46 lines of output47 lines of output48 lines of output49 lines of output50 lines of output51 lines of output52 lines of output53 lines of output54 lines of output55 lines of output56 lines of output57 lines of output58 lines of output59 lines of output60 lines of output61 lines of output62 lines of output63 lines of output64 lines of output65 lines of output66 lines of output67 lines of output68 lines of output69 lines of output70 lines of output71 lines of output72 lines of output73 lines of output74 lines of output75 lines of output76 lines of output77 lines of output78 lines of output79 lines of output80 lines of output81 lines of output82 lines of output83 lines of output84 lines of output85 lines of output86 lines of output87 lines of output88 lines of output89 lines of output90 lines of output91 lines of output92 lines of output93 lines of output94 lines of output95 lines of output96 lines of output97 lines of output98 lines of output99 lines of output100 lines of output101 lines of output102 lines of output103 lines of output104 lines of output105 lines of output106 lines of output107 lines of output108 lines of output109 lines of output110 lines of output111 lines of output112 lines of output113 lines of output114 lines of output115 lines of output116 lines of output117 lines of output118 lines of output119 lines of output120 lines of output121 lines of output122 lines of output123 lines of output124 lines of output125 lines of output126 lines of output127 lines of output128 lines of output129 lines of output130 lines of output131 lines of output132 lines of output133 lines of output134 lines of output135 lines of output136 lines of output137 lines of output138 lines of output139 lines of output140 lines of output141 lines of output142 lines of output143 lines of output144 lines of output145 lines of output146 lines of output147 lines of output148 lines of output149 lines of output150 lines of output151 lines of output152 lines of output153 lines of output154 lines of output155 lines of output156 lines of output157 lines of output158 lines of output159 lines of output160 lines of output161 lines of output162 lines of output163 lines of output164 lines of output165 lines of output166 lines of output167 lines of output168 lines of output169 lines of output170 lines of output171 lines of output172 lines of output173 lines of output174 lines of output175 lines of output176 lines of output177 lines of output178 lines of output179 lines of output180 lines of output181 lines of output182 lines of output183 lines of output184 lines of output185 lines of output186 lines of output187 lines of output188 lines of output189 lines of output190 lines of output191 lines of output192 lines of output193 lines of output194 lines of output195 lines of output196 lines of output197 lines of output198 lines of output199 lines of output200 lines of output201 lines of output202 lines of output203 lines of output204 lines of output205 lines of output206 lines of output207 lines of output208 lines of output209 lines of output210 lines of output211 lines of output212 lines of output213 lines of output214 lines of output215 lines of output216 lines of output217 lines of output218 lines of output219 lines of output220 lines of output221 lines of output222 lines of output223 lines of output224 lines of output225 lines of output226 lines of output227 lines of output228 lines of output229 lines of output230 lines of output231 lines of output232 lines of output233 lines of output234 lines of output235 lines of output236 lines of output237 lines of output238 lines of output239 lines of output240 lines of output241 lines of output242 lines of output243 lines of output244 lines of output245 lines of output246 lines of output247 lines of output248 lines of output249 lines of output250 lines of output251 lines of output252 lines of output253 lines of output254 lines of output255 lines of output256 lines of output257 lines of output258 lines of output259 lines of output260 lines of output261 lines of output262 lines of output263 lines of output264 lines of output265 lines of output266 lines of output267 lines of output268 lines of output269 lines of output270 lines of output271 lines of output272 lines of output273 lines of output274 lines of output275 lines of output276 lines of output277 lines of output278 lines of output279 lines of output280 lines of output281 lines of output282 lines of output283 lines of output284 lines of output285 lines of output286 lines of output287 lines of output288 lines of output289 lines of output290 lines of output291 lines of output292 lines of output293 lines of output294 lines of output295 lines of output296 lines of output297 lines of output298 lines of output299 lines of output300 lines of output301 lines of output302 lines of output303 lines of output304 lines of output305 lines of output306 lines of output307 lines of output308 lines of output309 lines of output310 lines of output311 lines of output312 lines of output313 lines of output314 lines of output315 lines of output316 lines of output317 lines of output318 lines of output319 lines of output320 lines of output321 lines of output322 lines of output323 lines of output324 lines of output325 lines of output326 lines of output327 lines of output328 lines of output329 lines of output330 lines of output331 lines of output332 lines of output333 lines of output334 lines of output335 lines of output336 lines of output337 lines of output338 lines of output339 lines of output340 lines of output341 lines of output342 lines of output343 lines of output344 lines of output345 lines of output346 lines of output347 lines of output348 lines of output349 lines of output350 lines of output351 lines of output352 lines of output353 lines of output354 lines of output355 lines of output356 lines of output357 lines of output358 lines of output359 lines of output360 lines of output361 lines of output362 lines of output363 lines of output364 lines of output365 lines of output366 lines of output367 lines of output368 lines of output369 lines of output370 lines of output371 lines of output372 lines of output373 lines of output374 lines of output375 lines of output376 lines of output377 lines of output378 lines of output379 lines of output380 lines of output381 lines of output382 lines of output383 lines of output384 lines of output385 lines of output386 lines of output387 lines of output388 lines of output389 lines of output390 lines of output391 lines of output392 lines of output393 lines of output394 lines of output395 lines of output396 lines of output397 lines of output398 lines of output399 lines of output400 lines of output401 lines of output402 lines of output403 lines of output404 lines of output405 lines of output406 lines of output407 lines of output408 lines of output409 lines of output410 lines of output411 lines of output412 lines of output413 lines of output414 lines of output415 lines of output416 lines of output417 lines of output418 lines of output419 lines of output420 lines of output421 lines of output422 lines of output423 lines of output424 lines of output425 lines of output426 lines of output427 lines of output428 lines of output429 lines of output430 lines of output431 lines of output432 lines of output433 lines of output434 lines of output435 lines of output436 lines of output437 lines of output438 lines of output439 lines of output440 lines of output441 lines of output442 lines of output443 lines of output444 lines of output445 lines of output446 lines of output447 lines of output448 lines of output449 lines of output450 lines of output451 lines of output452 lines of output453 lines of output454 lines of output455 lines of output456 lines of output457 lines of output458 lines of output459 lines of output460 lines of output461 lines of output462 lines of output463 lines of output464 lines of output465 lines of output466 lines of output467 lines of output468 lines of output469 lines of output470 lines of output471 lines of output472 lines of output473 lines of output474 lines of output475 lines of output476 lines of output477 lines of output478 lines of output479 lines of output480 lines of output481 lines of output482 lines of output483 lines of output484 lines of output485 lines of output486 lines of output487 lines of output488 lines of output489 lines of output490 lines of output491 lines of output492 lines of output493 lines of output494 lines of output495 lines of output496 lines of output497 lines of output498 lines of output499 lines of output500 lines of output501 lines of output502 lines of output503 lines of output504 lines of output505 lines of output506 lines of output507 lines of output508 lines of output509 lines of output510 lines of output511 lines of output512 lines of output513 lines of output514 lines of output515 lines of output516 lines of output517 lines of output518 lines of output519 lines of output520 lines of output521 lines of output522 lines of output523 lines of output524 lines of output525 lines of output526 lines of output527 lines of output528 lines of output529 lines of output530 lines of output531 lines of output532 lines of output533 lines of output534 lines of output535 lines of output536 lines of output537 lines of output538 lines of output539 lines of output540 lines of output541 lines of output542 lines of output543 lines of output544 lines of output545 lines of output546 lines of output547 lines of output548 lines of output549 lines of output550 lines of output551 lines of output552 lines of output553 lines of output554 lines of output555 lines of output556 lines of output557 lines of output558 lines of output559 lines of output560 lines of output561 lines of output562 lines of output563 lines of output564 lines of output565 lines of output566 lines of output567 lines of output568 lines of output569 lines of output570 lines of output571 lines of output572 lines of output573 lines of output574 lines of output575 lines of output576 lines of output577 lines of output578 lines of output579 lines of output580 lines of output581 lines of output582 lines of output583 lines of output584 lines of output585 lines of output586 lines of output587 lines of output588 lines of output589 lines of output590 lines of output591 lines of output592 lines of output593 lines of output594 lines of output595 lines of output596 lines of output597 lines of output598 lines of output599 lines of output600 lines of output601 lines of output602 lines of output603 lines of output604 lines of output605 lines of output606 lines of output607 lines of output608 lines of output609 lines of output610 lines of output611 lines of output612 lines of output613 lines of output614 lines of output615 lines of output616 lines of output617 lines of output618 lines of output619 lines of output620 lines of output621 lines of output622 lines of output623 lines of output624 lines of output625 lines of output626 lines of output627 lines of output628 lines of output629 lines of output630 lines of output631 lines of output632 lines of output633 lines of output634 lines of output635 lines of output636 lines of output637 lines of output638 lines of output639 lines of output640 lines of output641 lines of output642 lines of output643 lines of output644 lines of output645 lines of output646 lines of output647 lines of output648 lines of output649 lines of output650 lines of output651 lines of output652 lines of output653 lines of output654 lines of output655 lines of output656 lines of output657 lines of output658 lines of output659 lines of output660 lines of output661 lines of output662 lines of output663 lines of output664 lines of output665 lines of output666 lines of output667 lines of output668 lines of output669 lines of output670 lines of output671 lines of output672 lines of output673 lines of output674 lines of output675 lines of output676 lines of output677 lines of output678 lines of output679 lines of output680 lines of output681 lines of output682 lines of output683 lines of output684 lines of output685 lines of output686 lines of output687 lines of output688 lines of output689 lines of output690 lines of output691 lines of output692 lines of output693 lines of output694 lines of output695 lines of output696 lines of output697 lines of output698 lines of output699 lines of output700 lines of output701 lines of output702 lines of output703 lines of output704 lines of output705 lines of output706 lines of output707 lines of output708 lines of output709 lines of output710 lines of output711 lines of output712 lines of output713 lines of output714 lines of output715 lines of output716 lines of output717 lines of output718 lines of output719 lines of output720 lines of output721 lines of output722 lines of output723 lines of output724 lines of output725 lines of output726 lines of output727 lines of output728 lines of output729 lines of output730 lines of output731 lines of output732 lines of output733 lines of output734 lines of output735 lines of output736 lines of output737 lines of output738 lines of output739 lines of output740 lines of output741 lines of output742 lines of output743 lines of output744 lines of output745 lines of output746 lines of output747 lines of output748 lines of output749 lines of output750 lines of output751 lines of output752 lines of output753 lines of output754 lines of output755 lines of output756 lines of output757 lines of output758 lines of output759 lines of output760 lines of output761 lines of output762 lines of output763 lines of output764 lines of output765 lines of output766 lines of output767 lines of output768 lines of output769 lines of output770 lines of output771 lines of output772 lines of output773 lines of output774 lines of output775 lines of output776 lines of output777 lines of output778 lines of output779 lines of output780 lines of output781 lines of output782 lines of output783 lines of output784 lines of output785 lines of output786 lines of output787 lines of output788 lines of output789 lines of output790 lines of output791 lines of output792 lines of output793 lines of output794 lines of output795 lines of output796 lines of output797 lines of output798 lines of output799 lines of output800 lines of output801 lines of output802 lines of output803 lines of output804 lines of output805 lines of output806 lines of output807 lines of output808 lines of output809 lines of output810 lines of output811 lines of output812 lines of output813 lines of output814 lines of output815 lines of output816 lines of output
-log written to log/fstar-corecrypto
-
-Building mixed C/ASM Crypto
-Running make -C FStar/examples/low-level krml-test.exe
-Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.inv_cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.inv_cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in top-level declaration Crypto.Symmetric.MAC.rcreate, in file Crypto_Symmetric_MAC: eternal newbuf 0uint8 Crypto.Symmetric.MAC.wlen is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of k, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of k, after the definition of len, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of keyBuffer, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @6 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of cipher, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
-1 lines of output2 lines of output3 lines of output4 lines of output5 lines of output6 lines of output7 lines of output8 lines of output9 lines of output10 lines of output11 lines of output12 lines of output13 lines of output14 lines of output15 lines of output16 lines of output17 lines of output18 lines of output19 lines of output20 lines of output21 lines of output22 lines of output23 lines of output24 lines of output25 lines of output26 lines of output27 lines of output28 lines of output29 lines of output30 lines of output31 lines of output32 lines of output33 lines of output34 lines of output35 lines of output36 lines of output37 lines of output38 lines of output39 lines of output40 lines of output41 lines of output42 lines of output43 lines of output44 lines of output45 lines of output46 lines of output47 lines of output48 lines of output49 lines of output50 lines of output51 lines of output52 lines of output53 lines of output54 lines of output55 lines of output56 lines of output57 lines of output58 lines of output59 lines of output60 lines of output61 lines of output62 lines of output63 lines of output64 lines of output65 lines of output66 lines of output67 lines of output68 lines of output69 lines of output70 lines of output71 lines of output72 lines of output73 lines of output74 lines of output75 lines of output76 lines of output77 lines of output78 lines of output79 lines of output80 lines of output81 lines of output82 lines of output83 lines of output84 lines of output85 lines of output86 lines of output87 lines of output88 lines of output89 lines of output90 lines of output91 lines of output92 lines of output93 lines of output94 lines of output95 lines of output96 lines of output97 lines of output98 lines of output99 lines of output100 lines of output101 lines of output102 lines of output103 lines of output104 lines of output105 lines of output106 lines of output107 lines of output108 lines of output109 lines of output110 lines of output111 lines of output112 lines of output113 lines of output114 lines of output115 lines of output116 lines of output117 lines of output118 lines of output119 lines of output120 lines of output121 lines of output122 lines of output123 lines of output124 lines of output125 lines of output126 lines of output127 lines of output128 lines of output129 lines of output130 lines of output131 lines of output132 lines of output133 lines of output134 lines of output135 lines of output136 lines of output137 lines of output138 lines of output139 lines of output140 lines of output141 lines of output142 lines of output143 lines of output144 lines of output145 lines of output146 lines of output147 lines of output148 lines of output149 lines of output150 lines of output151 lines of output152 lines of output153 lines of output154 lines of output155 lines of output156 lines of output157 lines of output158 lines of output159 lines of output160 lines of output161 lines of output162 lines of output163 lines of output164 lines of output165 lines of output166 lines of output167 lines of output168 lines of output169 lines of output170 lines of output171 lines of output172 lines of output173 lines of output174 lines of output175 lines of output176 lines of output177 lines of output178 lines of output179 lines of output180 lines of output181 lines of output182 lines of output183 lines of output184 lines of output185 lines of output186 lines of output187 lines of output188 lines of output189 lines of output190 lines of output191 lines of output192 lines of output193 lines of output194 lines of output195 lines of output196 lines of output197 lines of output198 lines of output199 lines of output200 lines of output201 lines of output202 lines of output203 lines of output204 lines of output205 lines of output206 lines of output207 lines of output208 lines of output209 lines of output210 lines of output211 lines of output212 lines of output213 lines of output214 lines of output215 lines of output216 lines of output217 lines of output218 lines of output219 lines of output220 lines of output221 lines of output222 lines of output223 lines of output224 lines of output225 lines of output226 lines of output227 lines of output228 lines of output229 lines of output230 lines of output231 lines of output232 lines of output233 lines of output234 lines of output235 lines of output236 lines of output237 lines of output238 lines of output239 lines of output240 lines of output241 lines of output242 lines of output243 lines of output244 lines of output245 lines of output246 lines of output247 lines of output248 lines of output249 lines of output250 lines of output251 lines of output252 lines of output253 lines of output254 lines of output255 lines of output256 lines of output257 lines of output258 lines of output259 lines of output260 lines of output261 lines of output262 lines of output263 lines of output264 lines of output265 lines of output266 lines of output267 lines of output268 lines of output269 lines of output270 lines of output271 lines of output272 lines of output273 lines of output274 lines of output275 lines of output276 lines of output277 lines of output278 lines of output279 lines of output280 lines of output281 lines of output282 lines of output283 lines of output284 lines of output285 lines of output286 lines of output287 lines of output288 lines of output289 lines of output290 lines of output291 lines of output292 lines of output293 lines of output294 lines of output295 lines of output296 lines of output297 lines of output298 lines of output299 lines of output300 lines of output301 lines of output302 lines of output303 lines of output304 lines of output305 lines of output306 lines of output307 lines of output308 lines of output309 lines of output310 lines of output311 lines of output312 lines of output313 lines of output314 lines of output315 lines of output316 lines of output317 lines of output318 lines of output319 lines of output320 lines of output321 lines of output322 lines of output323 lines of output324 lines of output325 lines of output326 lines of output327 lines of output328 lines of output329 lines of output330 lines of output331 lines of output332 lines of output333 lines of output334 lines of output335 lines of output336 lines of output337 lines of output338 lines of output339 lines of output340 lines of output341 lines of output342 lines of output343 lines of output344 lines of output345 lines of output346 lines of output347 lines of output348 lines of output349 lines of output350 lines of output351 lines of output352 lines of output353 lines of output354 lines of output355 lines of output356 lines of output357 lines of output358 lines of output359 lines of output360 lines of output361 lines of output362 lines of output363 lines of output364 lines of output365 lines of output366 lines of output367 lines of output368 lines of output369 lines of output370 lines of output371 lines of output372 lines of output373 lines of output374 lines of output375 lines of output376 lines of output377 lines of output378 lines of output379 lines of output380 lines of output381 lines of output382 lines of output383 lines of output384 lines of output385 lines of output386 lines of output387 lines of output388 lines of output389 lines of output390 lines of output391 lines of output392 lines of output393 lines of output394 lines of output395 lines of output396 lines of output397 lines of output398 lines of output399 lines of output400 lines of output401 lines of output402 lines of output403 lines of output404 lines of output405 lines of output406 lines of output407 lines of output408 lines of output409 lines of output410 lines of output411 lines of output412 lines of output413 lines of output414 lines of output415 lines of output416 lines of output417 lines of output418 lines of output419 lines of output420 lines of output421 lines of output422 lines of output423 lines of output424 lines of output425 lines of output426 lines of output427 lines of output428 lines of output429 lines of output430 lines of output431 lines of output432 lines of output433 lines of output434 lines of output435 lines of output436 lines of output437 lines of output438 lines of output439 lines of output440 lines of output441 lines of output442 lines of output443 lines of output444 lines of output445 lines of output446 lines of output447 lines of output448 lines of output449 lines of output450 lines of output451 lines of output452 lines of output453 lines of output454 lines of output455 lines of output456 lines of output457 lines of output458 lines of output459 lines of output460 lines of output461 lines of output462 lines of output463 lines of output464 lines of output465 lines of output466 lines of output467 lines of output468 lines of output469 lines of output470 lines of output471 lines of output472 lines of output473 lines of output474 lines of output475 lines of output476 lines of output477 lines of output478 lines of output479 lines of output480 lines of output481 lines of output482 lines of output483 lines of output484 lines of output485 lines of output486 lines of output487 lines of output488 lines of output489 lines of output490 lines of output491 lines of output492 lines of output493 lines of output494 lines of output495 lines of output496 lines of output497 lines of output498 lines of output499 lines of output500 lines of output501 lines of output502 lines of output503 lines of output504 lines of output505 lines of output506 lines of output507 lines of output508 lines of output509 lines of output510 lines of output511 lines of output512 lines of output513 lines of output514 lines of output515 lines of output516 lines of output517 lines of output518 lines of output519 lines of output520 lines of output521 lines of output522 lines of output523 lines of output524 lines of output525 lines of output526 lines of output527 lines of output528 lines of output529 lines of output530 lines of output531 lines of output532 lines of output533 lines of output534 lines of output535 lines of output536 lines of output537 lines of output538 lines of output539 lines of output540 lines of output541 lines of output542 lines of output543 lines of output544 lines of output545 lines of output546 lines of output547 lines of output548 lines of output549 lines of output550 lines of output551 lines of output552 lines of output553 lines of output554 lines of output555 lines of output556 lines of output557 lines of output558 lines of output559 lines of output560 lines of output561 lines of output562 lines of output563 lines of output564 lines of output565 lines of output566 lines of output567 lines of output568 lines of output569 lines of output570 lines of output571 lines of output572 lines of output573 lines of output574 lines of output575 lines of output576 lines of output577 lines of output578 lines of output579 lines of output580 lines of output581 lines of output582 lines of output583 lines of output584 lines of output585 lines of output586 lines of output587 lines of output588 lines of output589 lines of output590 lines of output591 lines of output592 lines of output593 lines of output594 lines of output595 lines of output596 lines of output597 lines of output598 lines of output599 lines of output600 lines of output601 lines of output602 lines of output603 lines of output604 lines of output605 lines of output606 lines of output607 lines of output608 lines of output609 lines of output610 lines of output611 lines of output612 lines of output613 lines of output614 lines of output615 lines of output616 lines of output617 lines of output618 lines of output619 lines of output620 lines of output621 lines of output622 lines of output623 lines of output624 lines of output625 lines of output626 lines of output627 lines of output628 lines of output629 lines of output630 lines of output631 lines of output632 lines of output633 lines of output634 lines of output635 lines of output636 lines of output637 lines of output638 lines of output639 lines of output640 lines of output641 lines of output642 lines of output643 lines of output644 lines of output645 lines of output646 lines of output647 lines of output648 lines of output649 lines of output650 lines of output651 lines of output652 lines of output653 lines of output654 lines of output655 lines of output656 lines of output657 lines of output658 lines of output659 lines of output660 lines of output661 lines of output662 lines of output663 lines of output664 lines of output665 lines of output666 lines of output667 lines of output668 lines of output669 lines of output670 lines of output671 lines of output672 lines of output673 lines of output674 lines of output675 lines of output676 lines of output677 lines of output678 lines of output679 lines of output680 lines of output681 lines of output682 lines of output683 lines of output684 lines of output685 lines of output686 lines of output687 lines of output688 lines of output689 lines of output690 lines of output691 lines of output692 lines of output693 lines of output694 lines of output695 lines of output696 lines of output697 lines of output698 lines of output699 lines of output700 lines of output701 lines of output702 lines of output703 lines of output704 lines of output705 lines of output706 lines of output707 lines of output708 lines of output709 lines of output710 lines of output711 lines of output712 lines of output713 lines of output714 lines of output715 lines of output716 lines of output717 lines of output718 lines of output719 lines of output720 lines of output721 lines of output722 lines of output723 lines of output724 lines of output725 lines of output726 lines of output727 lines of output728 lines of output729 lines of output730 lines of output731 lines of output732 lines of output733 lines of output734 lines of output735 lines of output736 lines of output737 lines of output738 lines of output739 lines of output740 lines of output741 lines of output742 lines of output743 lines of output744 lines of output745 lines of output746 lines of output747 lines of output748 lines of output749 lines of output750 lines of output751 lines of output752 lines of output753 lines of output754 lines of output755 lines of output756 lines of output757 lines of output758 lines of output759 lines of output760 lines of output761 lines of output762 lines of output763 lines of output764 lines of output765 lines of output766 lines of output767 lines of output768 lines of output769 lines of output770 lines of output771 lines of output772 lines of output773 lines of output774 lines of output775 lines of output776 lines of output777 lines of output778 lines of output779 lines of output780 lines of output781 lines of output782 lines of output783 lines of output784 lines of output785 lines of output786 lines of output787 lines of output788 lines of output789 lines of output790 lines of output791 lines of output792 lines of output793 lines of output794 lines of output795 lines of output796 lines of output797 lines of output798 lines of output799 lines of output800 lines of output801 lines of output802 lines of output803 lines of output804 lines of output805 lines of output806 lines of output807 lines of output808 lines of output809 lines of output810 lines of output811 lines of output812 lines of output813 lines of output814 lines of output815 lines of output816 lines of output817 lines of output818 lines of output819 lines of output820 lines of output821 lines of output822 lines of output823 lines of output824 lines of output825 lines of output826 lines of output827 lines of output828 lines of output829 lines of output830 lines of output831 lines of output832 lines of output833 lines of output834 lines of output835 lines of output836 lines of output837 lines of output838 lines of output839 lines of output840 lines of output841 lines of output842 lines of output843 lines of output844 lines of output845 lines of output846 lines of output847 lines of output848 lines of output849 lines of output850 lines of output851 lines of output852 lines of output853 lines of output854 lines of output855 lines of output856 lines of output857 lines of output858 lines of output859 lines of output860 lines of output861 lines of output862 lines of output863 lines of output864 lines of output865 lines of output866 lines of output867 lines of output868 lines of output869 lines of output870 lines of output871 lines of output872 lines of output873 lines of output874 lines of output875 lines of output876 lines of output877 lines of output878 lines of output879 lines of output880 lines of output881 lines of output882 lines of output883 lines of output884 lines of output885 lines of output886 lines of output887 lines of output888 lines of output889 lines of output890 lines of output891 lines of output892 lines of output893 lines of output894 lines of output895 lines of output896 lines of output897 lines of output898 lines of output899 lines of output900 lines of output901 lines of output902 lines of output903 lines of output904 lines of output905 lines of output906 lines of output907 lines of output908 lines of output909 lines of output910 lines of output911 lines of output912 lines of output913 lines of output914 lines of output915 lines of output916 lines of output917 lines of output918 lines of output919 lines of output920 lines of output921 lines of output922 lines of output923 lines of output924 lines of output925 lines of output926 lines of output927 lines of output928 lines of output929 lines of output930 lines of output931 lines of output932 lines of output933 lines of output934 lines of output935 lines of output936 lines of output937 lines of output938 lines of output939 lines of output940 lines of output941 lines of output942 lines of output943 lines of output944 lines of output945 lines of output946 lines of output947 lines of output948 lines of output949 lines of output950 lines of output951 lines of output952 lines of output953 lines of output954 lines of output955 lines of output956 lines of output957 lines of output958 lines of output959 lines of output960 lines of output961 lines of output962 lines of output963 lines of output964 lines of output965 lines of output966 lines of output967 lines of output968 lines of output969 lines of output970 lines of output971 lines of output972 lines of output973 lines of output974 lines of output975 lines of output976 lines of output977 lines of output978 lines of output979 lines of output980 lines of output981 lines of output982 lines of output983 lines of output984 lines of output985 lines of output986 lines of output987 lines of output988 lines of output989 lines of output990 lines of output991 lines of output992 lines of output993 lines of output994 lines of output995 lines of output996 lines of output997 lines of output998 lines of output999 lines of output1000 lines of output1001 lines of output1002 lines of output1003 lines of output1004 lines of output1005 lines of output1006 lines of output1007 lines of output1008 lines of output1009 lines of output1010 lines of output1011 lines of output1012 lines of output1013 lines of output1014 lines of output1015 lines of output1016 lines of output1017 lines of output1018 lines of output1019 lines of output1020 lines of output1021 lines of output1022 lines of output1023 lines of output1024 lines of output1025 lines of output1026 lines of output1027 lines of output1028 lines of output1029 lines of output1030 lines of output1031 lines of output1032 lines of output1033 lines of output1034 lines of output1035 lines of output1036 lines of output1037 lines of output1038 lines of output1039 lines of output1040 lines of output1041 lines of output1042 lines of output1043 lines of output1044 lines of output1045 lines of output1046 lines of output1047 lines of output1048 lines of output1049 lines of output1050 lines of output1051 lines of output1052 lines of output1053 lines of output1054 lines of output1055 lines of output1056 lines of output1057 lines of output1058 lines of output1059 lines of output1060 lines of output1061 lines of output1062 lines of output1063 lines of output1064 lines of output1065 lines of output1066 lines of output1067 lines of output1068 lines of output1069 lines of output1070 lines of output1071 lines of output1072 lines of output1073 lines of output1074 lines of output1075 lines of output1076 lines of output1077 lines of output1078 lines of output1079 lines of output1080 lines of output1081 lines of output1082 lines of output1083 lines of output1084 lines of output1085 lines of output1086 lines of output1087 lines of output1088 lines of output1089 lines of output1090 lines of output1091 lines of output1092 lines of output1093 lines of output1094 lines of output1095 lines of output1096 lines of output1097 lines of output1098 lines of output1099 lines of output1100 lines of output1101 lines of output1102 lines of output1103 lines of output1104 lines of output1105 lines of output1106 lines of output1107 lines of output1108 lines of output1109 lines of output1110 lines of output1111 lines of output1112 lines of output1113 lines of output1114 lines of output1115 lines of output1116 lines of output1117 lines of output1118 lines of output1119 lines of output1120 lines of output1121 lines of output1122 lines of output1123 lines of output1124 lines of output1125 lines of output1126 lines of output1127 lines of output1128 lines of output1129 lines of output1130 lines of output1131 lines of output1132 lines of output1133 lines of output1134 lines of output1135 lines of output1136 lines of output1137 lines of output1138 lines of output1139 lines of output1140 lines of output1141 lines of output1142 lines of output1143 lines of output1144 lines of output1145 lines of output1146 lines of output1147 lines of output1148 lines of output1149 lines of output
-log written to log/krml-test
-
-Rebuilding miTLS
-Running make -C mitls-fstar/src/tls mitls.exe
-ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
-#include <stdio.h>
-^
-File "test/mitls.ml", line 58, characters 12-28:
-Warning 6: labels were omitted in the application of this function.
-File "test/mitls.ml", line 63, characters 12-28:
-Warning 6: labels were omitted in the application of this function.
-File "test/mitls.ml", line 68, characters 12-28:
-Warning 6: labels were omitted in the application of this function.
-File "test/mitls.ml", line 104, characters 2-656:
-Warning 4: this pattern-matching is fragile.
-It will remain exhaustive when constructors are added to type TLSConstants.protocolVersion.
-File "test/mitls.ml", line 104, characters 2-656:
-Warning 4: this pattern-matching is fragile.
-It will remain exhaustive when constructors are added to type TLSConstants.protocolVersion.
-1 lines of output2 lines of output3 lines of output4 lines of output5 lines of output6 lines of output7 lines of output8 lines of output9 lines of output10 lines of output11 lines of output12 lines of output13 lines of output14 lines of output15 lines of output16 lines of output17 lines of output18 lines of output19 lines of output20 lines of output21 lines of output22 lines of output23 lines of output24 lines of output25 lines of output26 lines of output27 lines of output28 lines of output29 lines of output30 lines of output31 lines of output32 lines of output33 lines of output34 lines of output35 lines of output36 lines of output37 lines of output38 lines of output39 lines of output40 lines of output41 lines of output42 lines of output43 lines of output44 lines of output45 lines of output46 lines of output47 lines of output48 lines of output49 lines of output50 lines of output51 lines of output52 lines of output53 lines of output54 lines of output55 lines of output56 lines of output57 lines of output58 lines of output59 lines of output60 lines of output61 lines of output62 lines of output63 lines of output64 lines of output65 lines of output66 lines of output67 lines of output68 lines of output69 lines of output70 lines of output71 lines of output72 lines of output73 lines of output74 lines of output75 lines of output76 lines of output77 lines of output78 lines of output79 lines of output80 lines of output81 lines of output82 lines of output83 lines of output84 lines of output85 lines of output86 lines of output87 lines of output88 lines of output89 lines of output90 lines of output91 lines of output92 lines of output93 lines of output94 lines of output95 lines of output96 lines of output97 lines of output98 lines of output99 lines of output100 lines of output101 lines of output102 lines of output103 lines of output104 lines of output105 lines of output106 lines of output107 lines of output108 lines of output109 lines of output110 lines of output111 lines of output112 lines of output113 lines of output114 lines of output115 lines of output116 lines of output117 lines of output118 lines of output119 lines of output120 lines of output121 lines of output122 lines of output123 lines of output124 lines of output125 lines of output126 lines of output127 lines of output128 lines of output129 lines of output130 lines of output131 lines of output132 lines of output133 lines of output134 lines of output135 lines of output136 lines of output137 lines of output138 lines of output139 lines of output140 lines of output141 lines of output142 lines of output143 lines of output144 lines of output145 lines of output146 lines of output147 lines of output148 lines of output149 lines of output150 lines of output151 lines of output152 lines of output153 lines of output154 lines of output155 lines of output156 lines of output157 lines of output158 lines of output159 lines of output160 lines of output161 lines of output162 lines of output163 lines of output164 lines of output165 lines of output166 lines of output167 lines of output168 lines of output169 lines of output170 lines of output171 lines of output172 lines of output173 lines of output174 lines of output175 lines of output176 lines of output177 lines of output178 lines of output179 lines of output180 lines of output181 lines of output182 lines of output183 lines of output184 lines of output185 lines of output186 lines of output187 lines of output188 lines of output189 lines of output190 lines of output191 lines of output192 lines of output193 lines of output194 lines of output195 lines of output196 lines of output197 lines of output198 lines of output199 lines of output200 lines of output201 lines of output202 lines of output203 lines of output204 lines of output205 lines of output206 lines of output207 lines of output208 lines of output209 lines of output210 lines of output211 lines of output212 lines of output213 lines of output214 lines of output215 lines of output216 lines of output217 lines of output218 lines of output219 lines of output220 lines of output221 lines of output222 lines of output223 lines of output224 lines of output225 lines of output226 lines of output
-log written to log/mitls-exe
-SUCCESS
-./everest: line 664: $1: unbound variable
