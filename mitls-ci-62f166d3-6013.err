@@ -1,0 +1,86 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Flags.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.OpenSSL.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.Spec.fst.hints; ran without hints
+.\CommonDH.fst(43,8-43,56): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(47,9-51,7): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.CRF.fst.hints; ran without hints
+.\Hashing.CRF.fst(28,8-28,80): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Signature.fst-ver] Error 1
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Extensions.fst.hints; ran without hints
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\HKDF.fsti.hints; ran without hints
+.\TLSInfo.fst(629,0-629,50): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(633,0-636,10): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MAC_SHA256.fst(66,36-66,42): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(69,34-69,48))
+.\MAC_SHA256.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA256 (70539 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA256.fst-ver] Error 1
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: Connection.fst-ver] Error 1
+.\MAC_SHA1.fst(60,4-60,53): (Error) could not prove post-condition
+.\MAC_SHA1.fst(79,34-79,40): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HashMAC.fst(77,40-77,54))
+Verified module: MAC_SHA1 (85414 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: MAC_SHA1.fst-ver] Error 1
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: ConnInvariant.fst-ver] Error 1
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: TLS.fst-ver] Error 1
+.\Signature.fst(149,37-149,41) : (Error) Identifier not found: [List.Tot.memP]
+Module List.Tot resolved into FStar.List.Tot, definition memP not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:249: FFI.fst-ver] Error 1
+.\TLSInfo.fst(756,42-756,44): (Error) Subtyping check failed; expected type (x#24154:logInfo{(l_not (b2t (uu___is_LogInfo_CH x@0)))}); got type logInfo (see .\TLSInfo.fst(467,27-467,43))
+Verified module: TLSInfo (169661 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:249: TLSInfo.fst-ver] Error 1
+.\Epochs.fst(248,58-248,59): (Error) Failed to verify implicit argument: Subtyping check failed; expected type (i#2998:id{(b2t (op_Equality (nonce_of_id i@0) n))}); got type id (see .\Epochs.fst(47,17-47,34))
+.\Epochs.fst(249,11-249,13): (Error) Subtyping check failed; expected type (reader (peerId i)); got type (reader i) (see .\Epochs.fst(49,21-248,59))
+Verified module: Epochs (853221 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:249: Epochs.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
