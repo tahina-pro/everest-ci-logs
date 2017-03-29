@@ -1,0 +1,1841 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/37/s
+About to run: hacl_test
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: Hacl*-CI-Windows
+Submodule path 'dependencies/FStar': checked out 'd7e3c0eca1c2c29f3025a74da769d2783d5cec73'
+Submodule path 'dependencies/FStar/ucontrib/CoreCrypto/ml/openssl': checked out '6828358c6565af0e31ac1a9ff9c54c94a04bec75'
+Submodule path 'dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/boringssl': checked out '2070f8ad9151dc8f3a73bffaa146b5e6937a583f'
+Submodule path 'dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/pyca-cryptography': checked out '722235c46721acfe8b601e7846730c3c1fa588c5'
+Submodule path 'dependencies/kremlin': checked out '74f6c4b4dc2658ab1478e6da205cb44a554bea37'
+Submodule path 'other_providers/libsodium': checked out '70170c28c844a4786e75efc626e1aeebc93caebc'
+Submodule path 'other_providers/openssl': checked out '6828358c6565af0e31ac1a9ff9c54c94a04bec75'
+Submodule path 'other_providers/openssl/boringssl': checked out '2070f8ad9151dc8f3a73bffaa146b5e6937a583f'
+Submodule path 'other_providers/openssl/pyca-cryptography': checked out '722235c46721acfe8b601e7846730c3c1fa588c5'
+Submodule path 'other_providers/vale': checked out '0b6e605237f12fe2fb22d8fecb27142ecd1132fe'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+cp "../extraction/ml/FStar_Extraction_ML_PrintML_4.02.3.ml" ../extraction/ml/FStar_Extraction_ML_PrintML.ml
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+echo 'let dummy () = ();;' > FStar_Version.ml
+cp parse.mly ../parser/ml/
+echo 'FStar_Options._version := "0.9.4.2";;' >> FStar_Version.ml
+echo "%{" > ../parser/parse.fsy
+echo 'FStar_Options._platform := "Windows_x64";;' >> FStar_Version.ml
+# We are opening the same module twice but we need these modules
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo 'FStar_Options._compiler := "OCaml 4.02.3";;' >> FStar_Version.ml
+# open for the definition of tokens
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo 'FStar_Options._date := "2017-03-29T11:54:05-07:00";;' >> FStar_Version.ml
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo 'FStar_Options._commit:= "d7e3c0e";;' >> FStar_Version.ml
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO: create a proper OCamlbuild rule for this production so that
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+# OCamlbuild knows how to generate parse.mly first (possibly using
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+''ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+''ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I src/prettyprint/ml -I src/parser/ml -I src/ocaml-output/bootlibs -I src/fstar/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Version.ml
+''ocamlfind ocamlopt -linkpkg -thread -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common src/ocaml-output/bootlibs/FStar_List.cmx src/ocaml-output/bootlibs/MkPrims.cmx src/ocaml-output/bootlibs/prims.cmx src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Platform.cmx src/ocaml-output/bootlibs/FStar_Char.cmx src/ocaml-output/bootlibs/FStar_Float.cmx src/ocaml-output/bootlibs/FStar_Int16.cmx src/ocaml-output/bootlibs/FStar_Int32.cmx src/ocaml-output/bootlibs/FStar_Int64.cmx src/ocaml-output/bootlibs/FStar_Int8.cmx src/ocaml-output/bootlibs/FStar_UInt16.cmx src/ocaml-output/bootlibs/FStar_UInt8.cmx src/ocaml-output/bootlibs/FStar_BaseTypes.cmx src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Unionfind.cmx src/ocaml-output/bootlibs/FStar_All.cmx src/ocaml-output/bootlibs/FStar_ST.cmx src/ocaml-output/bootlibs/FStar_String.cmx src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/bootlibs/FStar_Option.cmx src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Extraction_ML_Code.cmx src/extraction/ml/FStar_Extraction_ML_PrintML.cmx src/ocaml-output/FStar_Common.cmx src/ocaml-output/FStar_Parser_AST.cmx src/parser/ml/FStar_Parser_Util.cmx src/ocaml-output/FStar_Parser_Parse.cmx src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Fsdoc_Generator.cmx src/prettyprint/ml/FStar_Pprint.cmx src/ocaml-output/FStar_Parser_ToDocument.cmx src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_Parser_Interleave.cmx src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_SplitQueryCases.cmx src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Main.cmx src/fstar/ml/main.cmx -o src/fstar/ml/main.native
+# No parallelism done
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/ucontrib/CoreCrypto/ml'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/FStar/ucontrib/CoreCrypto/ml'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+ocamlbuild -I src -I lib -I parser -use-menhir -use-ocamlfind -classic-display -menhir "menhir --infer --explain" Kremlin.native Tests.native
+ln -sf Kremlin.native krml
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/dependencies/kremlin'
+make: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+if false; then make extract-c KREMLIN_ARGS="-cc compcert"; fi
+if true; then make extract-c KREMLIN_ARGS="-cc msvc"; fi
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+make -C ../code extract-c
+make -C ../secure_api krml-test-vale.exe
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code'
+make -C salsa-family extract-c
+make -C poly1305 extract-c
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/secure_api'
+make[2]: 'krml-test-vale.exe' is up to date.
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/secure_api'
+make -C ../secure_api krml-test-hacl.exe
+make -C curve25519 extract-c
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/salsa-family'
+make -C api extract-c
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/poly1305'
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/secure_api'
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/curve25519'
+make[2]: 'krml-test-hacl.exe' is up to date.
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/secure_api'
+make[3]: Entering directory '/cygdrive/c/Build/Agent/_work/37/s/code/api'
+mkdir -p chacha-c
+# Weird \* because of https://caml.inria.fr/mantis/view.php?id=7473
+# Weird \* because of https://caml.inria.fr/mantis/view.php?id=7473
+mkdir -p salsa-c
+# Weird \* because of https://caml.inria.fr/mantis/view.php?id=7473
+mkdir -p api-c
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -drop FStar -drop Prims C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' -drop 'Hacl.UInt8' -cc msvc -drop 'Hacl.UInt16' -drop 'Hacl.UInt32' -drop 'Hacl.UInt64' -drop 'Hacl.UInt128' -drop 'Hacl.Endianness' -drop 'Hacl.Cast' -tmpdir chacha-c \
+-bundle 'Chacha20=Hacl.Impl.\*,Chacha20,Hacl.Lib.\*' \
+-drop "C.Loops" -drop "Hacl.Spec.\*" -drop "Spec.\*" -drop "Seq.\*" \
+Chacha20.fst -verbose -skip-linking
+mkdir -p box-c
+mkdir -p poly-c
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -I ../lib/kremlin -I ../../specs -I ../../specs/experimental -drop FStar -drop Prims C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' -drop 'Hacl.UInt8' -cc msvc -drop 'Hacl.UInt16' -drop 'Hacl.UInt32' -drop 'Hacl.UInt64' -drop 'Hacl.UInt128' -drop 'Hacl.Endianness' -drop 'Hacl.Cast' -cc msvc -tmpdir salsa-c -I . -skip-compilation \
+-bundle 'Salsa20=Salsa20,Hacl.Impl.\*,Hacl.Lib.\*' \
+-drop "C.Loops" -drop "Hacl.Spec.\*" -drop "Spec.\*" -drop "Seq.\*" \
+Hacl.Impl.Salsa20.fst Salsa20.fst
+mkdir -p aead-c
+mkdir -p poly-c
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -I ../lib/kremlin -I ../salsa-family/interfaces -I ../curve25519/interfaces -I ../poly1305/interfaces -I ../../specs -drop FStar -drop Hacl.Spec -drop Prims -drop Hacl.Cast -drop Hacl.UInt8 -drop Hacl.UInt16 -drop Hacl.UInt32 -drop Hacl.UInt64 -drop Hacl.UInt128 -drop Hacl.Types -tmpdir api-c NaCl.fst -verbose -skip-compilation \
+-drop 'Spec.\*' -drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Impl.\*' -drop "Seq.\*" -drop Hacl.Constants -drop Hacl.Endianness \
+-bundle "NaCl=NaCl,Hacl.SecretBox,Hacl.Box"
+mkdir -p x25519-c
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -tmpdir poly-c -cc msvc \
+-I ../bignum -I ../lib/kremlin -I ../../specs \
+Poly1305_64.fst \
+-drop 'Combinators' -drop 'Hacl.Endianness' -drop 'Spec.\*' \
+-bundle 'Hacl.Spec.\*' -bundle 'Hacl.Spe.\*' \
+-drop 'Hacl.Bignum.Parameters' -drop 'Hacl.Endianness' \
+-drop 'Hacl.Spec' -drop 'Hacl.Spe' -drop 'Hacl.Cast' \
+-drop 'Hacl.UInt8' -drop 'Hacl.UInt16' -drop 'Hacl.UInt32' -drop 'Hacl.UInt64' -drop 'Hacl.UInt128' \
+-drop Prims -drop FStar -bundle 'Poly1305_64=Hacl.Bignum.\*,Hacl.Impl.\*,Hacl.Standalone.\*,Poly1305_64,Hacl.Spec.\*,Hacl.Spe.\*' \
+C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' \
+-skip-linking
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -I ../lib/kremlin -I ../salsa-family/interfaces -I ../curve25519/interfaces -I ../poly1305/interfaces -I ../../specs -drop FStar -drop Hacl.Spec -drop Prims -drop Hacl.Cast -drop Hacl.UInt8 -drop Hacl.UInt16 -drop Hacl.UInt32 -drop Hacl.UInt64 -drop Hacl.UInt128 -drop Hacl.Types -tmpdir box-c NaCl.fst -verbose -skip-compilation \
+-drop 'Spec.\*' -drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Impl.\*' -drop "Seq.\*" -drop Hacl.Constants -drop Hacl.Endianness \
+-bundle "NaCl=NaCl,Hacl.SecretBox.ZeroPad,Hacl.Box.ZeroPad"
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -tmpdir poly-c -cc msvc \
+-I ../bignum -I ../lib/kremlin -I ../../specs \
+AEAD.Poly1305_64.fst \
+-drop 'Combinators' -drop 'Hacl.Endianness' -drop 'Spec.\*' \
+-bundle 'Hacl.Spec.\*' -bundle 'Hacl.Spe.\*' \
+-drop 'Hacl.Bignum.Parameters' -drop 'Hacl.Endianness' \
+-drop 'Hacl.Spec' -drop 'Hacl.Spe' -drop 'Hacl.Cast' \
+-drop 'Hacl.UInt8' -drop 'Hacl.UInt16' -drop 'Hacl.UInt32' -drop 'Hacl.UInt64' -drop 'Hacl.UInt128' \
+-drop Prims -drop FStar -bundle 'AEAD.Poly1305_64=Hacl.Bignum.\*,Hacl.Impl.\*,Hacl.Standalone.\*,AEAD.Poly1305_64,Hacl.Spec.\*,Hacl.Spe.\*' \
+C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' \
+-skip-linking
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -I ../lib/kremlin -I ../salsa-family/interfaces -I ../curve25519/interfaces -I ../poly1305 -I ../../specs -drop FStar -drop Hacl.Spec -drop Prims -drop Hacl.Cast -drop Hacl.UInt8 -drop Hacl.UInt16 -drop Hacl.UInt32 -drop Hacl.UInt64 -drop Hacl.UInt128 -drop Hacl.Types -tmpdir aead-c Chacha20Poly1305.fst -verbose \
+-drop Hacl.Bignum.Constants -drop Hacl.Bignum.Parameters -drop Hacl.Bignum.Limb -drop Hacl.Bignum.Wide \
+-drop Hacl.UInt16 -drop Hacl.Types -drop 'Spec.\*' -drop 'Hacl.Spec.\*' -drop 'Hacl.Spe.\*' -drop 'Hacl.Impl.\*' \
+-drop Hacl.Constants -drop "Hacl.Endianness" -drop 'Combinators' \
+-drop "Hacl.Bignum.\*" -drop "Hacl.Spe.\*" -drop "Hacl.Impl.\*" -drop "Hacl.Standalone.\*" \
+-add-include '"testlib.h"' -skip-compilation -add-include '"Chacha20.h"' \
+-add-include '"AEAD_Poly1305_64.h"' -I ../salsa-family -I ../poly1305 -I ../bignum -I ../../specs
+C:/Build/Agent/_work/37/s/dependencies/kremlin/krml -tmpdir x25519-c -cc msvc \
+-I ../bignum -I ../lib/kremlin -I ../../specs \
+Curve25519.fst Hacl.Test.X25519.fst \
+-drop 'Hacl.Spec' -drop 'Hacl.Cast' -drop 'Hacl.UInt.\*' -drop 'Hacl.Endianness' \
+-drop 'Hacl.UInt8' -drop 'Hacl.UInt16' -drop 'Hacl.UInt32' -drop 'Hacl.UInt64' -drop 'Hacl.UInt128' \
+-drop Prims -drop FStar -bundle 'Curve25519=Hacl.Bignum,Hacl.Bignum.\*,Hacl.EC,Hacl.EC.\*' \
+-bundle 'Hacl.Spec.\*' -drop "Spec.\*" \
+C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c -add-include '"testlib.h"' \
+-no-prefix Hacl.Test.X25519 -o x25519.exe
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../../specs --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --odir chacha-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../../specs --include ../../specs/experimental --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib Chacha20.fst
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../../specs --include ../../specs/experimental --include . --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305/interfaces --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --odir box-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305/interfaces --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib NaCl.fst
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305/interfaces --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --odir api-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305/interfaces --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib NaCl.fst
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305 --include ../../specs --include ../salsa-family --include ../poly1305 --include ../bignum --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --odir aead-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305 --include ../../specs --include ../salsa-family --include ../poly1305 --include ../bignum --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib Chacha20Poly1305.fst
+[38;5;81m⚙ KreMLin auto-detecting tools.[0m Here's what we found:
+[4mreadlink is:[0m readlink
+[4mKreMLin called via:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mthe Kremlin executable is:[0m C:\Build\Agent\_work\37\s\dependencies\kremlin\_build\src\Kremlin.native
+[4mKreMLin home is:[0m C:/Build/Agent/_work/37/s/dependencies/kremlin
+[38;5;81m⚙ KreMLin will drive F*.[0m Here's what we found:
+read FSTAR_HOME via the environment
+[4mfstar converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe
+[4mfstar home converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar
+[4mfstar lib converted to windows path:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/ulib
+[4mfstar is:[0m C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib
+[38;5;81m⚡ Calling F*[0m
+[38;5;119m✔[0m [F*,extract]
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(25,0-25,34) (Warning): Adding an implicit 'assume new' qualifier on live_state
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(26,0-26,30) (Warning): Adding an implicit 'assume new' qualifier on stable
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(75,0-75,37) (Warning): Adding an implicit 'assume new' qualifier on before_finish
+Extracted module Mul
+Extracted module Squash
+Extracted module StrongExcludedMiddle
+Extracted module Classical
+Extracted module Base
+Extracted module Properties
+Extracted module Tot
+Extracted module Properties
+Extracted module Seq
+Extracted module Lemmas
+Extracted module BitVector
+Extracted module UInt
+Extracted module Int
+Extracted module FunctionalExtensionality
+Extracted module PropositionalExtensionality
+Extracted module PredicateExtensionality
+Extracted module TSet
+Extracted module Heap
+Extracted module Set
+Extracted module Map
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Ghost
+Extracted module Buffer
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module C
+Extracted module UInt8
+Extracted module Quantifiers
+Extracted module Curve25519
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Cast
+Extracted module Endianness
+Extracted module UInt64
+Extracted module UInt128
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module UInt32
+Extracted module UInt16
+Extracted module Types
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Policies
+Extracted module Lemmas
+Extracted module Loops
+Extracted module Lib
+Extracted module CTR
+Extracted module Create
+Extracted module Salsa20
+Extracted module HSalsa20
+Extracted module Endianness
+Extracted module Endianness
+Extracted module Salsa20
+Extracted module Lemmas
+Extracted module Poly1305
+Extracted module Poly1305_64
+Extracted module AddAndMultiply
+Extracted module Poly1305_64
+Extracted module Cast
+Extracted module Constants
+Extracted module ZeroPad
+Extracted module ZeroPad
+Extracted module NaCl
+Attempting to translate module FStar.Mul
+Attempting to translate module FStar.Squash
+Attempting to translate module FStar.StrongExcludedMiddle
+Attempting to translate module FStar.Classical
+Warning: not translating definition for excluded_middle (and possibly others)
+Type scheme is: forall 'Ap. Prims.unit
+Attempting to translate module FStar.List.Tot.Base
+Warning: not translating definition for tl (and possibly others)
+Type scheme is: forall 'a. 'a Prims.list  ->  'a Prims.list
+Warning: writing a stub for length (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for nth (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for index (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for count (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mapi_init (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mapi (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for bool_of_compare (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for compare_of_bool (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Attempting to translate module FStar.List.Tot.Properties
+Warning: writing a stub for sorted (Failure("todo: translate_pat [MLP_Branch]"))
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning: not translating definition for noRepeats_nil (and possibly others)
+Type scheme is: forall 'Aa. Prims.unit
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Attempting to translate module FStar.List.Tot
+Attempting to translate module FStar.Seq.Properties
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: writing a stub for head (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for tail (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for last (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for cons (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for split (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for count (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mem (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for sorted (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for split_5 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for splice (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for snoc (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: writing a stub for find_l (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for un_snoc (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for find_r (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_find_aux (Failure("todo: translate_branch"))
+Warning: writing a stub for seq_to_list (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_of_list (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for lemma_contains_empty (and possibly others)
+Type scheme is: forall 'Aa. Prims.unit
+Attempting to translate module FStar.Seq
+Attempting to translate module FStar.Math.Lemmas
+Attempting to translate module FStar.BitVector
+Warning: writing a stub for logand_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for logxor_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for logor_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for lognot_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for shift_left_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for shift_right_vec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.UInt
+Warning: writing a stub for max_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for min_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for zero (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for one (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for incr (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for incr_underspec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr_underspec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for incr_mod (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr_mod (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for to_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for from_vec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.Int
+Warning: writing a stub for op_Slash (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for div_eucl (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for op_At_Percent (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for max_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for min_int (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.FunctionalExtensionality
+Attempting to translate module FStar.PropositionalExtensionality
+Attempting to translate module FStar.PredicateExtensionality
+Attempting to translate module FStar.TSet
+Attempting to translate module FStar.Heap
+Warning: not translating definition for emp (Failure("todo: translate_expr [MLC_String]"))
+Attempting to translate module FStar.Set
+Attempting to translate module FStar.Map
+Warning: writing a stub for sel (Failure("todo: translate_expr [MLE_App] (head is: m.FStar_Map.mappings)"))
+Warning: writing a stub for upd (Failure("todo: translate_expr [MLE_App] (head is: m.FStar_Map.mappings)"))
+Warning: writing a stub for concat (Failure("todo: translate_expr [MLE_App] (head is: m2.FStar_Map.mappings)"))
+Attempting to translate module FStar.Ghost
+Attempting to translate module FStar.Buffer
+Attempting to translate module C
+Warning: not translating definition for exit_success (Failure("todo: translate_expr [MLC_String]"))
+Warning: not translating definition for exit_failure (Failure("todo: translate_expr [MLC_String]"))
+Attempting to translate module Hacl.UInt8
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.Buffer.Quantifiers
+Attempting to translate module Curve25519
+Attempting to translate module FStar.Int.Cast
+Attempting to translate module FStar.Endianness
+Warning: writing a stub for little_endian (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for big_endian (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for little_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for big_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt64
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt128
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt32
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt16
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Types
+Attempting to translate module Hacl.Policies
+Attempting to translate module Spec.CTR.Lemmas
+Attempting to translate module Spec.Loops
+Warning: writing a stub for seq_map (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_map2 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for repeat_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for repeat_range_spec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.Lib
+Warning: writing a stub for singleton (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for tuple (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_from_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_to_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_from_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_to_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_from_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_to_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_from_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_to_be (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.CTR
+Warning: writing a stub for counter_mode (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Seq.Create
+Warning: writing a stub for create_1 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for create_2 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_3 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_4 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_5 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_6 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_7 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_8 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_9 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_10 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_11 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_12 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_13 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_14 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_15 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_16 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Attempting to translate module Spec.Salsa20
+Warning: not translating definition for keylen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for blocklen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for noncelen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for column_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for row_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for rounds (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for setup (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for salsa20_block (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for salsa20_ctx (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for test_quarter_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for test_row_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for test_column_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for test_salsa20_core (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.HSalsa20
+Warning: not translating definition for keylen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for blocklen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for noncelen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for setup (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for hsalsa20 (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Endianness
+Attempting to translate module Hacl.Endianness
+Attempting to translate module Salsa20
+Attempting to translate module Spec.Poly1305.Lemmas
+Attempting to translate module Spec.Poly1305
+Warning: not translating definition for prime (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for zero (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for one (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for op_Amp_Bar (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for encode (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for poly (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for encode_r (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for finish (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for encode_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for poly1305 (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Impl.Poly1305_64
+Attempting to translate module Hacl.Spec.Bignum.AddAndMultiply
+Warning: not translating definition for p42 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p43 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p44 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p45 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p46 (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Poly1305_64
+Attempting to translate module Hacl.Cast
+Attempting to translate module Hacl.Constants
+Warning: not translating definition for crypto_box_NONCEBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_PUBLICKEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_SECRETKEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_MACBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_NONCEBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_KEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_MACBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.SecretBox.ZeroPad
+Attempting to translate module Hacl.Box.ZeroPad
+Attempting to translate module NaCl
+Warning: not translating definition for crypto_box_NONCEBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_PUBLICKEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_SECRETKEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_MACBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_NONCEBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_KEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_MACBYTES (Failure("todo: translate_expr [MLC_Int]"))
+All verification conditions discharged successfully
+
+Dropping inline_for_extraction from store32_le because it is not a pure function
+Dropping inline_for_extraction from store32_be because it is not a pure function
+Dropping inline_for_extraction from store64_le because it is not a pure function
+Dropping inline_for_extraction from store64_be because it is not a pure function
+Dropping inline_for_extraction from store128_le because it is not a pure function
+Dropping inline_for_extraction from store128_be because it is not a pure function
+Dropping inline_for_extraction from load32_le because it is not a pure function
+Dropping inline_for_extraction from load32_be because it is not a pure function
+Dropping inline_for_extraction from load64_le because it is not a pure function
+Dropping inline_for_extraction from load64_be because it is not a pure function
+Dropping inline_for_extraction from load128_le because it is not a pure function
+Dropping inline_for_extraction from load128_be because it is not a pure function
+Dropping inline_for_extraction from hstore32_le because it is not a pure function
+Dropping inline_for_extraction from hstore32_be because it is not a pure function
+Dropping inline_for_extraction from hstore64_le because it is not a pure function
+Dropping inline_for_extraction from hstore64_be because it is not a pure function
+Dropping inline_for_extraction from hstore128_le because it is not a pure function
+Dropping inline_for_extraction from hstore128_be because it is not a pure function
+Dropping inline_for_extraction from hload32_le because it is not a pure function
+Dropping inline_for_extraction from hload32_be because it is not a pure function
+Dropping inline_for_extraction from hload64_le because it is not a pure function
+Dropping inline_for_extraction from hload64_be because it is not a pure function
+Dropping inline_for_extraction from hload128_le because it is not a pure function
+Dropping inline_for_extraction from hload128_be because it is not a pure function
+
+[38;5;202m⚠[0m Dropped some declarations while checking
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+KreMLin: writing out .c and .h files for Curve25519, Hacl_Policies, Salsa20, Poly1305_64, NaCl
+[38;5;119m✔[0m [F*,extract]
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(25,0-25,34) (Warning): Adding an implicit 'assume new' qualifier on live_state
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(26,0-26,30) (Warning): Adding an implicit 'assume new' qualifier on stable
+C:\Build\Agent\_work\37\s\code\poly1305\interfaces\Poly1305_64.fsti(75,0-75,37) (Warning): Adding an implicit 'assume new' qualifier on before_finish
+Extracted module Mul
+Extracted module Squash
+Extracted module StrongExcludedMiddle
+Extracted module Classical
+Extracted module Base
+Extracted module Properties
+Extracted module Tot
+Extracted module Properties
+Extracted module Seq
+Extracted module Lemmas
+Extracted module BitVector
+Extracted module UInt
+Extracted module Int
+Extracted module FunctionalExtensionality
+Extracted module PropositionalExtensionality
+Extracted module PredicateExtensionality
+Extracted module TSet
+Extracted module Heap
+Extracted module Set
+Extracted module Map
+Extracted module Ghost
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Buffer
+Extracted module C
+Extracted module UInt8
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Quantifiers
+Extracted module Curve25519
+Extracted module Cast
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Endianness
+Extracted module UInt64
+Extracted module UInt128
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module UInt32
+Extracted module UInt16
+Extracted module Types
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Policies
+Extracted module Lemmas
+Extracted module Loops
+Extracted module Lib
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module CTR
+Extracted module Create
+Extracted module Salsa20
+Extracted module HSalsa20
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Endianness
+Extracted module Endianness
+Extracted module Salsa20
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Lemmas
+Extracted module Poly1305
+Extracted module Poly1305_64
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module AddAndMultiply
+Extracted module Poly1305_64
+Extracted module Cast
+Extracted module Constants
+Extracted module ZeroPad
+Extracted module ZeroPad
+Extracted module NaCl
+Attempting to translate module FStar.Mul
+Attempting to translate module FStar.Squash
+Attempting to translate module FStar.StrongExcludedMiddle
+Attempting to translate module FStar.Classical
+Warning: not translating definition for excluded_middle (and possibly others)
+Type scheme is: forall 'Ap. Prims.unit
+Attempting to translate module FStar.List.Tot.Base
+Warning: not translating definition for tl (and possibly others)
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Type scheme is: forall 'a. 'a Prims.list  ->  'a Prims.list
+Warning: writing a stub for length (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for nth (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning: writing a stub for index (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for count (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning: writing a stub for mapi_init (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mapi (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: writing a stub for bool_of_compare (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for compare_of_bool (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.List.Tot.Properties
+Warning: writing a stub for sorted (Failure("todo: translate_pat [MLP_Branch]"))
+Warning: not translating definition for noRepeats_nil (and possibly others)
+Type scheme is: forall 'Aa. Prims.unit
+Attempting to translate module FStar.List.Tot
+Attempting to translate module FStar.Seq.Properties
+Warning: writing a stub for head (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: writing a stub for tail (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for last (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for cons (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for split (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for count (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mem (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for sorted (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for split_5 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for splice (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for snoc (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for find_l (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for un_snoc (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for find_r (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_find_aux (Failure("todo: translate_branch"))
+Warning: writing a stub for seq_to_list (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: writing a stub for seq_of_list (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for lemma_contains_empty (and possibly others)
+Type scheme is: forall 'Aa. Prims.unit
+Attempting to translate module FStar.Seq
+Attempting to translate module FStar.Math.Lemmas
+Attempting to translate module FStar.BitVector
+Warning: writing a stub for logand_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for logxor_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for logor_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for lognot_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for shift_left_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for shift_right_vec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.UInt
+Warning: writing a stub for max_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for min_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for zero (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for one (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for incr (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for incr_underspec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr_underspec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for incr_mod (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr_mod (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for to_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for from_vec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.Int
+Warning: writing a stub for op_Slash (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for div_eucl (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for op_At_Percent (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for max_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for min_int (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.FunctionalExtensionality
+Attempting to translate module FStar.PropositionalExtensionality
+Attempting to translate module FStar.PredicateExtensionality
+Attempting to translate module FStar.TSet
+Attempting to translate module FStar.Heap
+Warning: not translating definition for emp (Failure("todo: translate_expr [MLC_String]"))
+Attempting to translate module FStar.Set
+Attempting to translate module FStar.Map
+Warning: writing a stub for sel (Failure("todo: translate_expr [MLE_App] (head is: m.FStar_Map.mappings)"))
+Warning: writing a stub for upd (Failure("todo: translate_expr [MLE_App] (head is: m.FStar_Map.mappings)"))
+Warning: writing a stub for concat (Failure("todo: translate_expr [MLE_App] (head is: m2.FStar_Map.mappings)"))
+Attempting to translate module FStar.Ghost
+Attempting to translate module FStar.Buffer
+Attempting to translate module C
+Warning: not translating definition for exit_success (Failure("todo: translate_expr [MLC_String]"))
+Warning: not translating definition for exit_failure (Failure("todo: translate_expr [MLC_String]"))
+Attempting to translate module Hacl.UInt8
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.Buffer.Quantifiers
+Attempting to translate module Curve25519
+Attempting to translate module FStar.Int.Cast
+Attempting to translate module FStar.Endianness
+Warning: writing a stub for little_endian (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for big_endian (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for little_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for big_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt64
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt128
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt32
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt16
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Types
+Attempting to translate module Hacl.Policies
+Attempting to translate module Spec.CTR.Lemmas
+Attempting to translate module Spec.Loops
+Warning: writing a stub for seq_map (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_map2 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for repeat_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for repeat_range_spec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.Lib
+Warning: writing a stub for singleton (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for tuple (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_from_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_to_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_from_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_to_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_from_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_to_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_from_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_to_be (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.CTR
+Warning: writing a stub for counter_mode (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Seq.Create
+Warning: writing a stub for create_1 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for create_2 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_3 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_4 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_5 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_6 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_7 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_8 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_9 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_10 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_11 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_12 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_13 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_14 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_15 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_16 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Attempting to translate module Spec.Salsa20
+Warning: not translating definition for keylen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for blocklen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for noncelen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for column_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for row_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for rounds (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for setup (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for salsa20_block (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for salsa20_ctx (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for test_quarter_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for test_row_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for test_column_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for test_salsa20_core (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.HSalsa20
+Warning: not translating definition for keylen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for blocklen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for noncelen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for setup (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for hsalsa20 (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Endianness
+Attempting to translate module Hacl.Endianness
+Attempting to translate module Salsa20
+Attempting to translate module Spec.Poly1305.Lemmas
+Attempting to translate module Spec.Poly1305
+Warning: not translating definition for prime (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for zero (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for one (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for op_Amp_Bar (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for encode (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for poly (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for encode_r (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for finish (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for encode_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for poly1305 (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Impl.Poly1305_64
+Attempting to translate module Hacl.Spec.Bignum.AddAndMultiply
+Warning: not translating definition for p42 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p43 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p44 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p45 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p46 (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Poly1305_64
+Attempting to translate module Hacl.Cast
+Attempting to translate module Hacl.Constants
+Warning: not translating definition for crypto_box_NONCEBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_PUBLICKEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_SECRETKEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_MACBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_NONCEBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_KEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_MACBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.SecretBox.ZeroPad
+Attempting to translate module Hacl.Box.ZeroPad
+Attempting to translate module NaCl
+Warning: not translating definition for crypto_box_NONCEBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_PUBLICKEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_SECRETKEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_MACBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_NONCEBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_KEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_MACBYTES (Failure("todo: translate_expr [MLC_Int]"))
+All verification conditions discharged successfully
+
+Dropping inline_for_extraction from store32_le because it is not a pure function
+Dropping inline_for_extraction from store32_be because it is not a pure function
+Dropping inline_for_extraction from store64_le because it is not a pure function
+Dropping inline_for_extraction from store64_be because it is not a pure function
+Dropping inline_for_extraction from store128_le because it is not a pure function
+Dropping inline_for_extraction from store128_be because it is not a pure function
+Dropping inline_for_extraction from load32_le because it is not a pure function
+Dropping inline_for_extraction from load32_be because it is not a pure function
+Dropping inline_for_extraction from load64_le because it is not a pure function
+Dropping inline_for_extraction from load64_be because it is not a pure function
+Dropping inline_for_extraction from load128_le because it is not a pure function
+Dropping inline_for_extraction from load128_be because it is not a pure function
+Dropping inline_for_extraction from hstore32_le because it is not a pure function
+Dropping inline_for_extraction from hstore32_be because it is not a pure function
+Dropping inline_for_extraction from hstore64_le because it is not a pure function
+Dropping inline_for_extraction from hstore64_be because it is not a pure function
+Dropping inline_for_extraction from hstore128_le because it is not a pure function
+Dropping inline_for_extraction from hstore128_be because it is not a pure function
+Dropping inline_for_extraction from hload32_le because it is not a pure function
+Dropping inline_for_extraction from hload32_be because it is not a pure function
+Dropping inline_for_extraction from hload64_le because it is not a pure function
+Dropping inline_for_extraction from hload64_be because it is not a pure function
+Dropping inline_for_extraction from hload128_le because it is not a pure function
+Dropping inline_for_extraction from hload128_be because it is not a pure function
+
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Dropping inline_for_extraction from reduce because it is not a pure function
+Dropping inline_for_extraction from get_seq because it is not a pure function
+Dropping inline_for_extraction from add_and_multiply because it is not a pure function
+Dropping inline_for_extraction from store32_le because it is not a pure function
+Dropping inline_for_extraction from store32_be because it is not a pure function
+Dropping inline_for_extraction from store64_le because it is not a pure function
+Dropping inline_for_extraction from store64_be because it is not a pure function
+Dropping inline_for_extraction from store128_le because it is not a pure function
+Dropping inline_for_extraction from store128_be because it is not a pure function
+Dropping inline_for_extraction from load32_le because it is not a pure function
+Dropping inline_for_extraction from load32_be because it is not a pure function
+Dropping inline_for_extraction from load64_le because it is not a pure function
+Dropping inline_for_extraction from load64_be because it is not a pure function
+Dropping inline_for_extraction from load128_le because it is not a pure function
+Dropping inline_for_extraction from load128_be because it is not a pure function
+Dropping inline_for_extraction from hstore32_le because it is not a pure function
+Dropping inline_for_extraction from hstore32_be because it is not a pure function
+Dropping inline_for_extraction from hstore64_le because it is not a pure function
+Dropping inline_for_extraction from hstore64_be because it is not a pure function
+Dropping inline_for_extraction from hstore128_le because it is not a pure function
+Dropping inline_for_extraction from hstore128_be because it is not a pure function
+Dropping inline_for_extraction from hload32_le because it is not a pure function
+Dropping inline_for_extraction from hload32_be because it is not a pure function
+Dropping inline_for_extraction from hload64_le because it is not a pure function
+Dropping inline_for_extraction from hload64_be because it is not a pure function
+Dropping inline_for_extraction from hload128_le because it is not a pure function
+Dropping inline_for_extraction from hload128_be because it is not a pure function
+Dropping inline_for_extraction from upd_3 because it is not a pure function
+Dropping inline_for_extraction from poly1305_concat because it is not a pure function
+Dropping inline_for_extraction from poly1305_finish__ because it is not a pure function
+
+[38;5;202m⚠[0m Dropped some declarations while checking
+[38;5;202m⚠[0m Dropped some declarations while checking
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+KreMLin: writing out .c and .h files for Curve25519, Hacl_Policies, Salsa20, Poly1305_64, Hacl_SecretBox_ZeroPad, Hacl_Box_ZeroPad, NaCl
+[38;5;119m✔[0m Simplify + inlining successfully checked
+KreMLin: writing out .c and .h files for Poly1305_64
+[38;5;81m⚡ Generating object files[0m
+[38;5;119m✔[0m [F*,extract]
+Extracted module Mul
+Extracted module Squash
+Extracted module StrongExcludedMiddle
+Extracted module Classical
+Extracted module Base
+Extracted module Properties
+Extracted module Tot
+Extracted module Properties
+Extracted module Seq
+Extracted module Lemmas
+Extracted module BitVector
+Extracted module UInt
+Extracted module Int
+Extracted module FunctionalExtensionality
+Extracted module PropositionalExtensionality
+Extracted module PredicateExtensionality
+Extracted module TSet
+Extracted module Heap
+Extracted module Set
+Extracted module Map
+Extracted module Ghost
+Extracted module Buffer
+Extracted module C
+Extracted module Loops
+Extracted module Loops
+Extracted module Lemmas
+Extracted module Cast
+Extracted module Endianness
+Extracted module Lib
+Extracted module CTR
+Extracted module Lemmas
+Extracted module Chacha20
+Extracted module Create
+Extracted module Lemmas
+Extracted module UInt8
+Extracted module UInt64
+Extracted module UInt128
+Extracted module UInt32
+Extracted module UInt16
+Extracted module Endianness
+Extracted module Endianness
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module LoadStore32
+Extracted module Cast
+Extracted module Chacha20
+Extracted module Chacha20
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Attempting to translate module FStar.Mul
+Attempting to translate module FStar.Squash
+Attempting to translate module FStar.StrongExcludedMiddle
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Attempting to translate module FStar.Classical
+Warning: not translating definition for excluded_middle (and possibly others)
+Type scheme is: forall 'Ap. Prims.unit
+Attempting to translate module FStar.List.Tot.Base
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: not translating definition for tl (and possibly others)
+Type scheme is: forall 'a. 'a Prims.list  ->  'a Prims.list
+Warning: writing a stub for length (Failure("todo: translate_expr [MLC_Int]"))
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: writing a stub for nth (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for index (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for count (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mapi_init (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mapi (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for bool_of_compare (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for compare_of_bool (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.List.Tot.Properties
+Warning: writing a stub for sorted (Failure("todo: translate_pat [MLP_Branch]"))
+Warning: not translating definition for noRepeats_nil (and possibly others)
+Type scheme is: forall 'Aa. Prims.unit
+Attempting to translate module FStar.List.Tot
+Attempting to translate module FStar.Seq.Properties
+Warning: writing a stub for head (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for tail (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for last (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for cons (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for split (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for count (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mem (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for sorted (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for split_5 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for splice (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning: writing a stub for snoc (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for find_l (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for un_snoc (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning: writing a stub for find_r (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_find_aux (Failure("todo: translate_branch"))
+Warning: writing a stub for seq_to_list (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning: writing a stub for seq_of_list (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for lemma_contains_empty (and possibly others)
+Type scheme is: forall 'Aa. Prims.unit
+Attempting to translate module FStar.Seq
+Attempting to translate module FStar.Math.Lemmas
+Attempting to translate module FStar.BitVector
+Warning: writing a stub for logand_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for logxor_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for logor_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for lognot_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for shift_left_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for shift_right_vec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.UInt
+Warning: writing a stub for max_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: writing a stub for min_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for zero (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for one (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for incr (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for incr_underspec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr_underspec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for incr_mod (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr_mod (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for to_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for from_vec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.Int
+Warning: writing a stub for op_Slash (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for div_eucl (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for op_At_Percent (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for max_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for min_int (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.FunctionalExtensionality
+Attempting to translate module FStar.PropositionalExtensionality
+Attempting to translate module FStar.PredicateExtensionality
+Attempting to translate module FStar.TSet
+Attempting to translate module FStar.Heap
+Warning: not translating definition for emp (Failure("todo: translate_expr [MLC_String]"))
+Attempting to translate module FStar.Set
+Attempting to translate module FStar.Map
+Warning: writing a stub for sel (Failure("todo: translate_expr [MLE_App] (head is: m.FStar_Map.mappings)"))
+Warning: writing a stub for upd (Failure("todo: translate_expr [MLE_App] (head is: m.FStar_Map.mappings)"))
+Warning: writing a stub for concat (Failure("todo: translate_expr [MLE_App] (head is: m2.FStar_Map.mappings)"))
+Attempting to translate module FStar.Ghost
+Attempting to translate module FStar.Buffer
+Attempting to translate module C
+Warning: not translating definition for exit_success (Failure("todo: translate_expr [MLC_String]"))
+Warning: not translating definition for exit_failure (Failure("todo: translate_expr [MLC_String]"))
+Attempting to translate module Spec.Loops
+Warning: writing a stub for seq_map (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_map2 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for repeat_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for repeat_range_spec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module C.Loops
+Attempting to translate module Spec.CTR.Lemmas
+Attempting to translate module FStar.Int.Cast
+Attempting to translate module FStar.Endianness
+Warning: writing a stub for little_endian (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for big_endian (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for little_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for big_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.Lib
+Warning: writing a stub for singleton (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for tuple (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_from_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_to_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_from_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_to_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_from_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_to_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_from_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_to_be (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.CTR
+Warning: writing a stub for counter_mode (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.Chacha20.Lemmas
+Attempting to translate module Spec.Chacha20
+Warning: not translating definition for keylen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for blocklen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for noncelen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for column_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for diagonal_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for rounds (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for setup (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for chacha20_block (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for chacha20_ctx (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for test_counter (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for test (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Seq.Create
+Warning: writing a stub for create_1 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for create_2 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_3 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_4 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_5 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_6 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_7 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_8 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_9 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_10 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_11 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_12 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_13 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_14 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_15 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Warning: writing a stub for create_16 (Failure("todo: translate_expr [MLE_App] (head is: (Seq_Create.op_String_Assignment ()))"))
+Attempting to translate module Hacl.Impl.Xor.Lemmas
+Attempting to translate module Hacl.UInt8
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt64
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt128
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt32
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt16
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Endianness
+Attempting to translate module Hacl.Endianness
+Attempting to translate module Hacl.Lib.LoadStore32
+Attempting to translate module Hacl.Cast
+Attempting to translate module Hacl.Impl.Chacha20
+Attempting to translate module Chacha20
+All verification conditions discharged successfully
+
+Dropping inline_for_extraction from store32_le because it is not a pure function
+Dropping inline_for_extraction from store32_be because it is not a pure function
+Dropping inline_for_extraction from store64_le because it is not a pure function
+Dropping inline_for_extraction from store64_be because it is not a pure function
+Dropping inline_for_extraction from store128_le because it is not a pure function
+Dropping inline_for_extraction from store128_be because it is not a pure function
+Dropping inline_for_extraction from load32_le because it is not a pure function
+Dropping inline_for_extraction from load32_be because it is not a pure function
+Dropping inline_for_extraction from load64_le because it is not a pure function
+Dropping inline_for_extraction from load64_be because it is not a pure function
+Dropping inline_for_extraction from load128_le because it is not a pure function
+Dropping inline_for_extraction from load128_be because it is not a pure function
+Dropping inline_for_extraction from hstore32_le because it is not a pure function
+Dropping inline_for_extraction from hstore32_be because it is not a pure function
+Dropping inline_for_extraction from hstore64_le because it is not a pure function
+Dropping inline_for_extraction from hstore64_be because it is not a pure function
+Dropping inline_for_extraction from hstore128_le because it is not a pure function
+Dropping inline_for_extraction from hstore128_be because it is not a pure function
+Dropping inline_for_extraction from hload32_le because it is not a pure function
+Dropping inline_for_extraction from hload32_be because it is not a pure function
+Dropping inline_for_extraction from hload64_le because it is not a pure function
+Dropping inline_for_extraction from hload64_be because it is not a pure function
+Dropping inline_for_extraction from hload128_le because it is not a pure function
+Dropping inline_for_extraction from hload128_be because it is not a pure function
+
+[38;5;202m⚠[0m Dropped some declarations while checking
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+KreMLin: writing out .c and .h files for Chacha20
+[38;5;81m⚡ Generating object files[0m
+C:/Build/Agent/_work/37/s/dependencies/kremlin/misc/cl-wrapper.bat /I FSTAR_LIB/hyperstack /I ../lib/kremlin /I ../../specs /I ../../specs/experimental /I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib /I chacha-c /c chacha-c/Chacha20.c /Fo: chacha-c/Chacha20.obj
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Dropping inline_for_extraction from store32_le because it is not a pure function
+Dropping inline_for_extraction from store32_be because it is not a pure function
+Dropping inline_for_extraction from store64_le because it is not a pure function
+Dropping inline_for_extraction from store64_be because it is not a pure function
+Dropping inline_for_extraction from store128_le because it is not a pure function
+Dropping inline_for_extraction from store128_be because it is not a pure function
+Dropping inline_for_extraction from load32_le because it is not a pure function
+Dropping inline_for_extraction from load32_be because it is not a pure function
+Dropping inline_for_extraction from load64_le because it is not a pure function
+Dropping inline_for_extraction from load64_be because it is not a pure function
+Dropping inline_for_extraction from load128_le because it is not a pure function
+Dropping inline_for_extraction from load128_be because it is not a pure function
+Dropping inline_for_extraction from hstore32_le because it is not a pure function
+Dropping inline_for_extraction from hstore32_be because it is not a pure function
+Dropping inline_for_extraction from hstore64_le because it is not a pure function
+Dropping inline_for_extraction from hstore64_be because it is not a pure function
+Dropping inline_for_extraction from hstore128_le because it is not a pure function
+Dropping inline_for_extraction from hstore128_be because it is not a pure function
+Dropping inline_for_extraction from hload32_le because it is not a pure function
+Dropping inline_for_extraction from hload32_be because it is not a pure function
+Dropping inline_for_extraction from hload64_le because it is not a pure function
+Dropping inline_for_extraction from hload64_be because it is not a pure function
+Dropping inline_for_extraction from hload128_le because it is not a pure function
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Dropping inline_for_extraction from hload128_be because it is not a pure function
+
+[38;5;202m⚠[0m Dropped some declarations while checking
+[38;5;119m✔[0m Pattern compilation successfully checked
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+KreMLin: writing out .c and .h files for Salsa20
+[38;5;119m✔[0m [CC,poly-c/Poly1305_64.c] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+[38;5;119m✔[0m [CC,chacha-c/Chacha20.c]
+Chacha20.c
+
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+C:/Build/Agent/_work/37/s/dependencies/kremlin/misc/cl-wrapper.bat /I FSTAR_LIB/hyperstack /I ../lib/kremlin /I ../../specs /I ../../specs/experimental /I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib /I chacha-c /c C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c /Fo: chacha-c/kremlib.obj
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c]
+kremlib.c
+
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+C:/Build/Agent/_work/37/s/dependencies/kremlin/misc/cl-wrapper.bat /I FSTAR_LIB/hyperstack /I ../lib/kremlin /I ../../specs /I ../../specs/experimental /I C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib /I chacha-c /c C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c /Fo: chacha-c/testlib.obj
+[38;5;119m✔[0m [F*,extract]
+Extracted module Mul
+Extracted module Squash
+Extracted module StrongExcludedMiddle
+Extracted module Classical
+Extracted module Base
+Extracted module Properties
+Extracted module Tot
+Extracted module Properties
+Extracted module Seq
+Extracted module Lemmas
+Extracted module BitVector
+Extracted module UInt
+Extracted module UInt64
+Extracted module UInt128
+Extracted module UInt8
+Extracted module Constants
+Extracted module UInt32
+Extracted module Int
+Extracted module Cast
+Extracted module Cast
+Extracted module FunctionalExtensionality
+Extracted module PropositionalExtensionality
+Extracted module PredicateExtensionality
+Extracted module TSet
+Extracted module Set
+Extracted module Map
+Extracted module Heap
+Extracted module Ghost
+Extracted module Buffer
+Extracted module Parameters
+Extracted module Wide
+Extracted module Limb
+Extracted module Field
+Extracted module Bigint
+Extracted module Modulo
+Extracted module Fproduct
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Fmul
+Extracted module Fsum
+Extracted module AddAndMultiply
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Endianness
+Extracted module Lemmas
+Extracted module Poly1305
+Extracted module Lemmas
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Loops
+Extracted module Lib
+Extracted module CTR
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Lemmas
+Extracted module Chacha20
+Extracted module Chacha20Poly1305
+Extracted module Lemmas1
+Extracted module UInt16
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Endianness
+Extracted module Poly1305_64
+Extracted module Poly1305_64
+Extracted module Modulo
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Fproduct
+Extracted module Fmul
+Extracted module Fsum
+Extracted module AddAndMultiply
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module C
+Extracted module Endianness
+Extracted module Poly1305_64
+Extracted module Poly1305_64
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Poly1305_64
+Extracted module Chacha20
+Extracted module Types
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Extracted module Policies
+Extracted module Constants
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Extracted module Chacha20Poly1305
+Type annotation is not an lid but any
+Attempting to translate module FStar.Mul
+Attempting to translate module FStar.Squash
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+Attempting to translate module FStar.StrongExcludedMiddle
+
+Attempting to translate module FStar.Classical
+Warning: not translating definition for excluded_middle (and possibly others)
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Type scheme is: forall 'Ap. Prims.unit
+Attempting to translate module FStar.List.Tot.Base
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: not translating definition for tl (and possibly others)
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Type scheme is: forall 'a. 'a Prims.list  ->  'a Prims.list
+Warning: writing a stub for length (Failure("todo: translate_expr [MLC_Int]"))
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: writing a stub for nth (Failure("todo: translate_expr [MLC_Int]"))
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: writing a stub for index (Failure("todo: translate_expr [MLC_Int]"))
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: writing a stub for count (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mapi_init (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mapi (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for bool_of_compare (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for compare_of_bool (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.List.Tot.Properties
+Warning: writing a stub for sorted (Failure("todo: translate_pat [MLP_Branch]"))
+Warning: not translating definition for noRepeats_nil (and possibly others)
+Type scheme is: forall 'Aa. Prims.unit
+Attempting to translate module FStar.List.Tot
+Attempting to translate module FStar.Seq.Properties
+Warning: writing a stub for head (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for tail (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for last (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for cons (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for split (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for count (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mem (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for sorted (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for split_5 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for splice (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for snoc (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for find_l (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for un_snoc (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for find_r (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_find_aux (Failure("todo: translate_branch"))
+Warning: writing a stub for seq_to_list (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_of_list (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for lemma_contains_empty (and possibly others)
+Type scheme is: forall 'Aa. Prims.unit
+Attempting to translate module FStar.Seq
+Attempting to translate module FStar.Math.Lemmas
+Attempting to translate module FStar.BitVector
+Warning: writing a stub for logand_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: writing a stub for logxor_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning: writing a stub for logor_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning: writing a stub for lognot_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for shift_left_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning: writing a stub for shift_right_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Attempting to translate module FStar.UInt
+Warning: writing a stub for max_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning 8: : After inlining, Hacl.Bignum.Fmul.shift_reduce calls Hacl.Bignum.Fproduct.shift. This is a call across translation units but Hacl.Bignum.Fproduct.shift has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.shift from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: writing a stub for min_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for zero (Failure("todo: translate_expr [MLC_Int]"))
+Warning 8: : After inlining, Hacl.Bignum.Fmul.shift_reduce calls Hacl.Bignum.Modulo.reduce. This is a call across translation units but Hacl.Bignum.Modulo.reduce has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.reduce from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: writing a stub for one (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for incr (Failure("todo: translate_expr [MLC_Int]"))
+Warning 8: : After inlining, Hacl.Bignum.Fmul.mul_shift_reduce_ calls Hacl.Bignum.Fproduct.sum_scalar_multiplication_. This is a call across translation units but Hacl.Bignum.Fproduct.sum_scalar_multiplication_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.sum_scalar_multiplication_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: writing a stub for decr (Failure("todo: translate_expr [MLC_Int]"))
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.carry_wide_. This is a call across translation units but Hacl.Bignum.Fproduct.carry_wide_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_wide_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: writing a stub for incr_underspec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr_underspec (Failure("todo: translate_expr [MLC_Int]"))
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Modulo.carry_top_wide. This is a call across translation units but Hacl.Bignum.Modulo.carry_top_wide has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.carry_top_wide from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: writing a stub for incr_mod (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for decr_mod (Failure("todo: translate_expr [MLC_Int]"))
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.copy_from_wide_. This is a call across translation units but Hacl.Bignum.Fproduct.copy_from_wide_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.copy_from_wide_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: writing a stub for to_vec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for from_vec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt64
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.carry_0_to_1. This is a call across translation units but Hacl.Bignum.Fproduct.carry_0_to_1 has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_0_to_1 from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt128
+Warning 8: : After inlining, Hacl.Bignum.AddAndMultiply.add_and_multiply calls Hacl.Bignum.Fsum.fsum_. This is a call across translation units but Hacl.Bignum.Fsum.fsum_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fsum.fsum_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt8
+Warning 8: : After inlining, Hacl.Bignum.AddAndMultiply.add_and_multiply calls Hacl.Bignum.Fmul.fmul. This is a call across translation units but Hacl.Bignum.Fmul.fmul has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fmul.fmul from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Bignum.Constants
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.poly1305_update calls Hacl.Bignum.AddAndMultiply.add_and_multiply. This is a call across translation units but Hacl.Bignum.AddAndMultiply.add_and_multiply has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.AddAndMultiply.add_and_multiply from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: not translating definition for prime (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for word_size (Failure("todo: translate_expr [MLC_Int]"))
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.carry_last_unrolled calls Hacl.Bignum.Modulo.carry_top. This is a call across translation units but Hacl.Bignum.Modulo.carry_top has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.carry_top from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: not translating definition for len (Failure("todo: translate_expr [MLC_Int]"))
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.poly1305_last_pass calls Hacl.Bignum.Fproduct.carry_limb_. This is a call across translation units but Hacl.Bignum.Fproduct.carry_limb_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_limb_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning: not translating definition for limb_size (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.UInt32
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Warning 8: : After inlining, Hacl.Standalone.Poly1305_64.poly1305_blocks calls Hacl.Impl.Poly1305_64.poly1305_update. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_update has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_update from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Attempting to translate module FStar.Int
+Warning: writing a stub for op_Slash (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for div_eucl (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for op_At_Percent (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for max_int (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for min_int (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.Int.Cast
+Warning 8: : After inlining, Hacl.Standalone.Poly1305_64.poly1305_complete calls Hacl.Impl.Poly1305_64.poly1305_process_last_block. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_process_last_block has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_process_last_block from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Attempting to translate module Hacl.Cast
+Attempting to translate module FStar.FunctionalExtensionality
+Attempting to translate module FStar.PropositionalExtensionality
+Attempting to translate module FStar.PredicateExtensionality
+Attempting to translate module FStar.TSet
+Attempting to translate module FStar.Set
+Attempting to translate module FStar.Map
+Warning: writing a stub for sel (Failure("todo: translate_expr [MLE_App] (head is: m.FStar_Map.mappings)"))
+Warning: writing a stub for upd (Failure("todo: translate_expr [MLE_App] (head is: m.FStar_Map.mappings)"))
+Warning: writing a stub for concat (Failure("todo: translate_expr [MLE_App] (head is: m2.FStar_Map.mappings)"))
+Attempting to translate module FStar.Heap
+Warning: not translating definition for emp (Failure("todo: translate_expr [MLC_String]"))
+Attempting to translate module FStar.Ghost
+Attempting to translate module FStar.Buffer
+Attempting to translate module Hacl.Bignum.Parameters
+Warning: not translating definition for prime (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for word_size (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for len (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for limb_n (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for wide_n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Bignum.Wide
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Bignum.Limb
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Bignum.Field
+Warning: not translating definition for zero (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for one (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for addition (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for multiplication (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for opposite (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for scalarmult (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for exp (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for inverse (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Bignum.Bigint
+Warning: writing a stub for bitweight (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Bignum.Modulo
+Warning: writing a stub for reduce_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for carry_top_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for carry_top_wide_spec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Bignum.Fproduct
+Warning: writing a stub for copy_from_wide_spec_ (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for copy_from_wide_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for shift_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for sum_scalar_multiplication_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for carry_wide_step (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for carry_wide_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for carry_limb_step (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for carry_limb_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for carry_0_to_1_spec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Bignum.Fmul
+Warning: writing a stub for mul_shift_reduce_spec_ (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mul_shift_reduce_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for fmul_spec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Bignum.Fsum
+Warning: writing a stub for fsum_spec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Bignum.AddAndMultiply
+Warning: not translating definition for p42 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p43 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p44 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p45 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p46 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for fsum_unrolled (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mul_shift_reduce_unrolled__ (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p90 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mul_shift_reduce_unrolled_0 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mul_shift_reduce_unrolled_1 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for mul_shift_reduce_unrolled_ (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for shift_reduce_unrolled (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for carry_wide_spec_unrolled (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p84 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p20 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for add_and_multiply_tot (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for carry_spec_unrolled (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module FStar.Endianness
+Warning: writing a stub for little_endian (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for big_endian (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for little_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for big_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.Poly1305.Lemmas
+Attempting to translate module Spec.Poly1305
+Warning: not translating definition for prime (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for zero (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for one (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for op_Amp_Bar (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for encode (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for poly (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for encode_r (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for finish (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for encode_bytes (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for poly1305 (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.CTR.Lemmas
+Attempting to translate module Spec.Loops
+Warning: writing a stub for seq_map (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_map2 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for repeat_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for repeat_range_spec (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.Lib
+Warning: writing a stub for singleton (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for tuple (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_from_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_to_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_from_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_to_le (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_from_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint32s_to_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_from_be (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for uint64s_to_be (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.CTR
+Warning: writing a stub for counter_mode (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.Chacha20.Lemmas
+Attempting to translate module Spec.Chacha20
+Warning: not translating definition for keylen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for blocklen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for noncelen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for column_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for diagonal_round (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for rounds (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for setup (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for chacha20_block (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for chacha20_ctx (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for test_counter (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for test (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Spec.Chacha20Poly1305
+Warning: not translating definition for keylen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for noncelen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for pad_16 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for poly1305_aad (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for aead_chacha20_poly1305_encrypt (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for aead_chacha20_poly1305_decrypt (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Poly1305_64.Lemmas1
+Attempting to translate module Hacl.UInt16
+Warning: not translating definition for n (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spec.Endianness
+Attempting to translate module Hacl.Spec.Poly1305_64
+Warning: not translating definition for p42 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for p44 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for create_3 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for poly1305_start_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for seq_upd_3 (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for poly1305_last_pass_spec_ (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for carry_limb_unrolled (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for poly1305_last_pass_spec (Failure("todo: translate_expr [MLC_Int]"))
+Warning: writing a stub for bignum_to_128 (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Hacl.Spe.Poly1305_64
+Attempting to translate module Hacl.Bignum.Modulo
+Attempting to translate module Hacl.Bignum.Fproduct
+Attempting to translate module Hacl.Bignum.Fmul
+Attempting to translate module Hacl.Bignum.Fsum
+Attempting to translate module Hacl.Bignum.AddAndMultiply
+Attempting to translate module C
+Warning: not translating definition for exit_success (Failure("todo: translate_expr [MLC_String]"))
+Warning: not translating definition for exit_failure (Failure("todo: translate_expr [MLC_String]"))
+Attempting to translate module Hacl.Endianness
+Attempting to translate module Hacl.Impl.Poly1305_64
+Attempting to translate module Hacl.Standalone.Poly1305_64
+Attempting to translate module AEAD.Poly1305_64
+Attempting to translate module Chacha20
+Attempting to translate module Hacl.Types
+Attempting to translate module Hacl.Policies
+Attempting to translate module Hacl.Constants
+Warning: not translating definition for crypto_box_NONCEBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_PUBLICKEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_SECRETKEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_box_MACBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_NONCEBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_KEYBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for crypto_secretbox_MACBYTES (Failure("todo: translate_expr [MLC_Int]"))
+Attempting to translate module Chacha20Poly1305
+Warning: not translating definition for noncelen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for keylen (Failure("todo: translate_expr [MLC_Int]"))
+Warning: not translating definition for maclen (Failure("todo: translate_expr [MLC_Int]"))
+All verification conditions discharged successfully
+
+Dropping inline_for_extraction from reduce because it is not a pure function
+Dropping inline_for_extraction from get_seq because it is not a pure function
+Dropping inline_for_extraction from add_and_multiply because it is not a pure function
+Dropping inline_for_extraction from store32_le because it is not a pure function
+Dropping inline_for_extraction from store32_be because it is not a pure function
+Dropping inline_for_extraction from store64_le because it is not a pure function
+Dropping inline_for_extraction from store64_be because it is not a pure function
+Dropping inline_for_extraction from store128_le because it is not a pure function
+Dropping inline_for_extraction from store128_be because it is not a pure function
+Dropping inline_for_extraction from load32_le because it is not a pure function
+Dropping inline_for_extraction from load32_be because it is not a pure function
+Dropping inline_for_extraction from load64_le because it is not a pure function
+Dropping inline_for_extraction from load64_be because it is not a pure function
+Dropping inline_for_extraction from load128_le because it is not a pure function
+Dropping inline_for_extraction from load128_be because it is not a pure function
+Dropping inline_for_extraction from hstore32_le because it is not a pure function
+Dropping inline_for_extraction from hstore32_be because it is not a pure function
+Dropping inline_for_extraction from hstore64_le because it is not a pure function
+Dropping inline_for_extraction from hstore64_be because it is not a pure function
+Dropping inline_for_extraction from hstore128_le because it is not a pure function
+Dropping inline_for_extraction from hstore128_be because it is not a pure function
+Dropping inline_for_extraction from hload32_le because it is not a pure function
+Dropping inline_for_extraction from hload32_be because it is not a pure function
+Dropping inline_for_extraction from hload64_le because it is not a pure function
+Dropping inline_for_extraction from hload64_be because it is not a pure function
+Dropping inline_for_extraction from hload128_le because it is not a pure function
+Dropping inline_for_extraction from hload128_be because it is not a pure function
+Dropping inline_for_extraction from upd_3 because it is not a pure function
+Dropping inline_for_extraction from poly1305_concat because it is not a pure function
+Dropping inline_for_extraction from poly1305_finish__ because it is not a pure function
+
+[38;5;202m⚠[0m Dropped some declarations while checking
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+KreMLin: writing out .c and .h files for AEAD_Poly1305_64, Chacha20, Hacl_Policies, Chacha20Poly1305
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/api'
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Dropping inline_for_extraction from reduce because it is not a pure function
+Dropping inline_for_extraction from get_seq because it is not a pure function
+Dropping inline_for_extraction from add_and_multiply because it is not a pure function
+Dropping inline_for_extraction from store32_le because it is not a pure function
+Dropping inline_for_extraction from store32_be because it is not a pure function
+Dropping inline_for_extraction from store64_le because it is not a pure function
+Dropping inline_for_extraction from store64_be because it is not a pure function
+Dropping inline_for_extraction from store128_le because it is not a pure function
+Dropping inline_for_extraction from store128_be because it is not a pure function
+Dropping inline_for_extraction from load32_le because it is not a pure function
+Dropping inline_for_extraction from load32_be because it is not a pure function
+Dropping inline_for_extraction from load64_le because it is not a pure function
+Dropping inline_for_extraction from load64_be because it is not a pure function
+Dropping inline_for_extraction from load128_le because it is not a pure function
+Dropping inline_for_extraction from load128_be because it is not a pure function
+Dropping inline_for_extraction from hstore32_le because it is not a pure function
+Dropping inline_for_extraction from hstore32_be because it is not a pure function
+Dropping inline_for_extraction from hstore64_le because it is not a pure function
+Dropping inline_for_extraction from hstore64_be because it is not a pure function
+Dropping inline_for_extraction from hstore128_le because it is not a pure function
+Dropping inline_for_extraction from hstore128_be because it is not a pure function
+Dropping inline_for_extraction from hload32_le because it is not a pure function
+Dropping inline_for_extraction from hload32_be because it is not a pure function
+Dropping inline_for_extraction from hload64_le because it is not a pure function
+Dropping inline_for_extraction from hload64_be because it is not a pure function
+Dropping inline_for_extraction from hload128_le because it is not a pure function
+Dropping inline_for_extraction from hload128_be because it is not a pure function
+Dropping inline_for_extraction from upd_3 because it is not a pure function
+Dropping inline_for_extraction from poly1305_concat because it is not a pure function
+Dropping inline_for_extraction from poly1305_finish__ because it is not a pure function
+
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+[38;5;202m⚠[0m Dropped some declarations while checking
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+[38;5;119m✔[0m Pattern compilation successfully checked
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+KreMLin: writing out .c and .h files for AEAD_Poly1305_64
+[38;5;81m⚡ Generating object files[0m
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c]
+testlib.c
+
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/salsa-family'
+[38;5;119m✔[0m [CC,poly-c/AEAD_Poly1305_64.c] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/poly1305'
+[38;5;119m✔[0m [F*,extract] (use -verbose to see the output)
+Dropping inline_for_extraction from store32_le because it is not a pure function
+Dropping inline_for_extraction from store32_be because it is not a pure function
+Dropping inline_for_extraction from store64_le because it is not a pure function
+Dropping inline_for_extraction from store64_be because it is not a pure function
+Dropping inline_for_extraction from store128_le because it is not a pure function
+Dropping inline_for_extraction from store128_be because it is not a pure function
+Dropping inline_for_extraction from load32_le because it is not a pure function
+Dropping inline_for_extraction from load32_be because it is not a pure function
+Dropping inline_for_extraction from load64_le because it is not a pure function
+Dropping inline_for_extraction from load64_be because it is not a pure function
+Dropping inline_for_extraction from load128_le because it is not a pure function
+Dropping inline_for_extraction from load128_be because it is not a pure function
+Dropping inline_for_extraction from hstore32_le because it is not a pure function
+Dropping inline_for_extraction from hstore32_be because it is not a pure function
+Dropping inline_for_extraction from hstore64_le because it is not a pure function
+Dropping inline_for_extraction from hstore64_be because it is not a pure function
+Dropping inline_for_extraction from hstore128_le because it is not a pure function
+Dropping inline_for_extraction from hstore128_be because it is not a pure function
+Dropping inline_for_extraction from hload32_le because it is not a pure function
+Dropping inline_for_extraction from hload32_be because it is not a pure function
+Dropping inline_for_extraction from hload64_le because it is not a pure function
+Dropping inline_for_extraction from hload64_be because it is not a pure function
+Dropping inline_for_extraction from hload128_le because it is not a pure function
+Dropping inline_for_extraction from hload128_be because it is not a pure function
+Dropping inline_for_extraction from add_zero_ because it is not a pure function
+Dropping inline_for_extraction from add_zero because it is not a pure function
+Dropping inline_for_extraction from carry_top because it is not a pure function
+Dropping inline_for_extraction from reduce because it is not a pure function
+Dropping inline_for_extraction from carry_top_wide because it is not a pure function
+Dropping inline_for_extraction from get_seq because it is not a pure function
+Dropping inline_for_extraction from upd_5 because it is not a pure function
+Dropping inline_for_extraction from fsquare__ because it is not a pure function
+Dropping inline_for_extraction from fsquare_ because it is not a pure function
+Dropping inline_for_extraction from fsquare_times because it is not a pure function
+Dropping inline_for_extraction from fsquare_times_inplace because it is not a pure function
+Dropping inline_for_extraction from fmul because it is not a pure function
+Dropping inline_for_extraction from fsquare_times because it is not a pure function
+Dropping inline_for_extraction from fsquare_times_inplace because it is not a pure function
+Dropping inline_for_extraction from crecip_1 because it is not a pure function
+Dropping inline_for_extraction from crecip_2 because it is not a pure function
+Dropping inline_for_extraction from crecip_3 because it is not a pure function
+Dropping inline_for_extraction from fdifference_ because it is not a pure function
+Warning: Spec.Curve25519.expected2, Spec.Curve25519.expected1, Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Dropping inline_for_extraction from fsum_ because it is not a pure function
+Dropping inline_for_extraction from swap_conditional_step because it is not a pure function
+Dropping inline_for_extraction from copy because it is not a pure function
+Dropping inline_for_extraction from fmonty__1 because it is not a pure function
+Warning: Spec.Curve25519.expected1, Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Dropping inline_for_extraction from fmonty__2 because it is not a pure function
+Dropping inline_for_extraction from fmonty__3 because it is not a pure function
+Dropping inline_for_extraction from fmonty__ because it is not a pure function
+Warning: Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Dropping inline_for_extraction from cmult_small_loop_step_1 because it is not a pure function
+Dropping inline_for_extraction from cmult_small_loop_step_2 because it is not a pure function
+Dropping inline_for_extraction from cmult_small_loop_step because it is not a pure function
+Warning: Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Dropping inline_for_extraction from cmult_small_loop_double_step because it is not a pure function
+Dropping inline_for_extraction from cmult_ because it is not a pure function
+Dropping inline_for_extraction from upd_5 because it is not a pure function
+Warning: Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Dropping inline_for_extraction from upd_5' because it is not a pure function
+Dropping inline_for_extraction from crypto_scalarmult__ because it is not a pure function
+Dropping inline_for_extraction from crypto_scalarmult_ because it is not a pure function
+
+Warning: Spec.Curve25519.scalar1 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+[38;5;202m⚠[0m Dropped some declarations while checking
+[38;5;119m✔[0m Pattern compilation successfully checked
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Curve25519.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+[38;5;119m✔[0m Simplify + inlining successfully checked
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+KreMLin: writing out .c and .h files for Curve25519, Hacl_Test_X25519
+[38;5;81m⚡ Generating object files[0m
+[38;5;119m✔[0m [CC,x25519-c/Curve25519.c] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+[38;5;119m✔[0m [CC,x25519-c/Hacl_Test_X25519.c] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/kremlib.c] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+[38;5;119m✔[0m [CC,C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib/testlib.c] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+[38;5;119m✔[0m [LD] (use -verbose to see the output)
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+[38;5;119mAll files linked successfully[0m 👍
+./x25519.exe
+[test] expected output Curve25519 is c3da55379de9c6908e94ea4df28d084f32eccf03491c71f754b4075577a28552
+[test] computed output Curve25519 is c3da55379de9c6908e94ea4df28d084f32eccf03491c71f754b4075577a28552
+[test] Curve25519 is a success
+[test] expected output Curve25519 is 95cbde9476e8907d7aade45cb4b873f88b595a68799fa152e6f8f7647aac7957
+[test] computed output Curve25519 is 95cbde9476e8907d7aade45cb4b873f88b595a68799fa152e6f8f7647aac7957
+[test] Curve25519 is a success
+make[3]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code/curve25519'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/code'
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/test'
+#make -C openssl-engine
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/37/s/test'
