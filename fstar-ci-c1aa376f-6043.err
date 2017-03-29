@@ -1,0 +1,189 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+7 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(398,0-398,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(447,0-447,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(448,0-448,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(499,0-501,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(717,0-719,39): (Warning) Annotation from val declaration overrides inline type annotation
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+.\hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#1090
+.\propImpredicativeAndNonStrictlyPositiveinductives.fst(28,87-28,98): (Error) could not prove post-condition
+Verified module: PropImpredicativeAndNonStrictlyPositiveInductives (2333 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:12: propImpredicative] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:34: paradoxes.all] Error 2
+<input>(2,14-2,15): (Error) Expected expression of type "int"; got expression ""hello"" of type "string"
+<input>(2,14-2,15): (Error) Expected expression of type "int"; got expression ""hello"" of type "string"
+.\SimplePrintf.fst(93,2-93,13): (Error) assertion failed (see .\SimplePrintf.fst(93,14-93,67))
+.\SimplePrintf.fst(98,4-98,15): (Error) assertion failed (see .\SimplePrintf.fst(98,16-98,69))
+.\SimplePrintf.fst(119,2-119,13): (Error) assertion failed (see .\SimplePrintf.fst(119,14-119,82))
+.\SimplePrintf.fst(129,2-129,9): (Error) assertion failed (see .\SimplePrintf.fst(86,72-86,133))
+Verified module: SimplePrintf (8015 milliseconds)
+4 errors were reported (see above)
+make[3]: *** [../Makefile.include:15: SimplePrintf.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:34: printf.all] Error 2
+<input>(2,14-2,15): (Error) Expected expression of type "int"; got expression ""hello"" of type "string"
+WARNING: (6668,66): pattern does not contain any variable.
+WARNING: (67723,66): pattern does not contain any variable.
+.\FStar.Int.fst(27,11-27,22): (Error) assertion failed (see .\FStar.Int.fst(27,23-27,56))
+Verified module: FStar.Int (14964 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:28: FStar.Int.fst-ver] Error 1
+WARNING: (6930,66): pattern does not contain any variable.
+WARNING: (6590,66): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#40264
+.\Platform.Bytes.fst(257,156-260,30): (Warning) Pattern misses at least one bound variable: i#42394
+WARNING: (6926,66): pattern does not contain any variable.
+.\Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (67723,66): pattern does not contain any variable.
+WARNING: (71252,6): pattern does not contain all quantified variables.
+WARNING: (67723,66): pattern does not contain any variable.
+WARNING: (71252,6): pattern does not contain all quantified variables.
+WARNING: (67723,66): pattern does not contain any variable.
+WARNING: (71252,6): pattern does not contain all quantified variables.
+WARNING: (67723,66): pattern does not contain any variable.
+WARNING: (71252,6): pattern does not contain all quantified variables.
+WARNING: (4171,6): pattern does not contain all quantified variables.
+.\QuickSort.List.fst(85,0-89,46): (Error) Unknown assertion failed
+Verified module: QuickSort.List (13006 milliseconds)
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: QuickSort.List.uver] Error 1
+WARNING: (67723,66): pattern does not contain any variable.
+WARNING: (71252,6): pattern does not contain all quantified variables.
+WARNING: (67723,66): pattern does not contain any variable.
+WARNING: (71252,6): pattern does not contain all quantified variables.
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\micro-benchmarks\TestHeap.fst.hints; ran without hints
+WARNING: (67723,66): pattern does not contain any variable.
+WARNING: (71252,6): pattern does not contain all quantified variables.
+WARNING: (67723,66): pattern does not contain any variable.
+WARNING: (71252,6): pattern does not contain all quantified variables.
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\micro-benchmarks\TestMRef.fst.hints; ran without hints
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\1\s\examples\micro-benchmarks\TestGhost.fst.hints; ran without hints
+WARNING: (67723,66): pattern does not contain any variable.
+WARNING: (71252,6): pattern does not contain all quantified variables.
+WARNING: (67723,66): pattern does not contain any variable.
+WARNING: (71252,6): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#79852
+.\Platform.Bytes.fst(257,156-260,30): (Warning) Pattern misses at least one bound variable: i#89299
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Normalization.fst(12,14-12,25): (Error) assertion failed (see .\Normalization.fst(12,26-12,41))
+.\Normalization.fst(37,11-37,22): (Error) assertion failed (see .\Normalization.fst(37,23-37,56))
+.\Normalization.fst(43,16-43,27): (Error) assertion failed (see C:\Build\Agent\_work\1\s\bin\..\ulib\prims.fst(82,20-82,31))
+Verified module: Normalization (6632 milliseconds)
+3 errors were reported (see above)
+make[3]: *** [../Makefile.include:15: Normalization.uver] Error 1
+.\Ex10a.fst(27,0-27,19): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(21,0-21,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(27,0-27,19): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:34: algorithms.all] Error 2
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(19,0-19,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:34: micro-benchmarks.all] Error 2
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(158,0-174,5): (Warning) Top-level let-bindings must be total; this term may have effects
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\FStar.DM4F.Heap.Random.fst(39,6-39,20): (Error) assertion failed (see C:\Build\Agent\_work\1\s\ulib\FStar.Seq.Base.fst(212,87-212,113))
+Verified module: FStar.DM4F.Heap.Random (5528 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:32: FStar.DM4F.Heap.Random.uver] Error 1
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: [Makefile:66: Ex01a-ocaml] Error 2 (ignored)
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:34: dm4free.all] Error 2
+.\FStar.Seq.Base.fst(232,7-232,27): (Error) assertion failed (see .\FStar.List.Tot.Properties.fst(687,41-687,65))
+.\FStar.Seq.Base.fst(267,43-267,96): (Error) could not prove post-condition
+Verified module: FStar.Seq.Base (35737 milliseconds)
+2 errors were reported (see above)
+make[2]: *** [Makefile:28: FStar.Seq.Base.fst-ver] Error 1
+.\FStar.HyperStack.fst(90,5-90,7): (Error) Subtyping check failed; expected type hh; got type (t rid heap) (see .\FStar.HyperStack.fst(32,37-32,55))
+Verified module: FStar.HyperStack (21151 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:28: FStar.HyperStack.fst-ver] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:267: uexamples] Error 2
+.\FStar.HyperStack.fst(90,5-90,7): (Error) Subtyping check failed; expected type hh; got type (t rid heap) (see .\FStar.HyperStack.fst(32,37-32,55))
+Verified module: FStar.Map (4644 milliseconds)
+Verified module: FStar.HyperStack (17400 milliseconds)
+Verified module: FStar.ST (10489 milliseconds)
+Verified module: FStar.All (37 milliseconds)
+Verified module: FStar.Monotonic.RRef (1216 milliseconds)
+Verified module: FStar.Monotonic.Seq (13469 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:57: m_rref] Error 1
+.\FStar.Math.Lemmas.fst(310,0-319,22): (Error) Unknown assertion failed
+Verified module: FStar.Math.Lemmas (74548 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:28: FStar.Math.Lemmas.fst-ver] Error 1
+.\FStar.UInt.fst(32,12-32,23): (Error) assertion failed (see .\.\prims.fst(82,20-82,31))
+.\FStar.UInt.fst(359,2-359,16): (Error) assertion failed (see .\FStar.UInt.fst(203,18-203,45))
+Verified module: FStar.UInt (81925 milliseconds)
+2 errors were reported (see above)
+make[2]: *** [Makefile:28: FStar.UInt.fst-ver] Error 1
+.\FStar.HyperStack.fst(90,5-90,7): (Error) Subtyping check failed; expected type hh; got type (t rid heap) (see .\FStar.HyperStack.fst(32,37-32,55))
+Verified module: FStar.Map (5531 milliseconds)
+Verified module: FStar.HyperStack (22035 milliseconds)
+Verified module: FStar.ST (11590 milliseconds)
+Verified module: FStar.Buffer (137772 milliseconds)
+Verified module: FStar.Buffer.Quantifiers (4177 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:66: bufferq] Error 1
+unknown(0,0-0,0): (Warning) FStar.Struct: Unexpected output from Z3: (error "line 138987 column 43: unknown constant @x26")
+
+.\FStar.HyperStack.fst(90,5-90,7): (Error) Subtyping check failed; expected type hh; got type (t rid heap) (see .\FStar.HyperStack.fst(32,37-32,55))
+Verified module: FStar.Map (4993 milliseconds)
+Verified module: FStar.HyperStack (17226 milliseconds)
+Verified module: FStar.ST (10380 milliseconds)
+Verified module: FStar.All (41 milliseconds)
+Verified module: FStar.Buffer (142505 milliseconds)
+Verified module: FStar.Struct (48853 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:63: struct] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:264: ulib] Error 2
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:248: utest] Error 2
