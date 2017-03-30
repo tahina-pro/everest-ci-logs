@@ -1,0 +1,14 @@
+Submodule 'ucontrib/CoreCrypto/ml/openssl' (https://github.com/openssl/openssl) registered for path 'ucontrib/CoreCrypto/ml/openssl'
+Cloning into '/home/everest/vsts-agent/_work/3/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl'...
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: *** [openssl/libcrypto.a] Error 1
+make: *** [CoreCrypto.cmxa] Error 2
