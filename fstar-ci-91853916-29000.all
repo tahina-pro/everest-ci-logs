@@ -1,0 +1,178 @@
+This is /home/darrenge/everest-ci/ci
+Working directory: /home/darrenge/FStar
+About to run: make -C src utest  -k
+BUILD_SOURCEBRANCHNAME:
+BUILD_DEFINITIONNAME:
+make: Entering directory '/home/darrenge/FStar/src'
+make all
+make[1]: Entering directory '/home/darrenge/FStar/src'
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+All packages listed in packages.config are already installed.
+make -C VS install-packages
+make[2]: Entering directory '/home/darrenge/FStar/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/home/darrenge/FStar/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\cygwin\home\darrenge\FStar\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\cygwin\home\darrenge\FStar\bin\prettyprint.dll
+syntax -> C:\cygwin\home\darrenge\FStar\bin\syntax.dll
+parser -> C:\cygwin\home\darrenge\FStar\bin\parser.dll
+typechecker -> C:\cygwin\home\darrenge\FStar\bin\typechecker.dll
+format -> C:\cygwin\home\darrenge\FStar\bin\format.dll
+extraction -> C:\cygwin\home\darrenge\FStar\bin\extraction.dll
+fsdoc -> C:\cygwin\home\darrenge\FStar\bin\fsdoc.dll
+smtencoding -> C:\cygwin\home\darrenge\FStar\bin\smtencoding.dll
+tactics -> C:\cygwin\home\darrenge\FStar\src\tactics\bin\Release\tactics.dll
+tosyntax -> C:\cygwin\home\darrenge\FStar\bin\tosyntax.dll
+fstar -> C:\cygwin\home\darrenge\FStar\bin\fstar.exe
+tests -> C:\cygwin\home\darrenge\FStar\bin\tests.exe
+chmod a+x ../bin/tests.exe
+chmod a+x ../bin/fstar.exe
+make[1]: Leaving directory '/home/darrenge/FStar/src'
+make fsharp-regressions #normalizer failures on linux so only run on windows
+make[1]: Entering directory '/home/darrenge/FStar/src'
+../bin/tests.exe
+Initializing ...
+Goal is (l_Forall (fun x -> (l_imp (eq2 x@0 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x@1 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x@1 z@0))))))))
+TAC (ngoals=1, maingoal=(l_Forall (fun x -> (l_imp (eq2 x@0 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x@1 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x@1 z@0)))))))), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(l_Forall (fun x -> (l_imp (eq2 x@0 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x@1 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x@1 z@0)))))))) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(l_Forall (fun x -> (l_imp (eq2 x@0 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x@1 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x@1 z@0)))))))), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(l_Forall (fun x -> (l_imp (eq2 x@0 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x@1 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x@1 z@0)))))))), rest=):
+TAC>> intros
+intros: x
+TAC (ngoals=1, maingoal=(l_imp (eq2 x 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x z@0)))))), rest=):
+TAC>> or_else: trying simplify_eq_impl
+TAC (ngoals=1, maingoal=(l_imp (eq2 x 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x z@0)))))), rest=):
+TAC>> imp_intro
+imp_intro: uu___#170786
+TAC (ngoals=1, maingoal=(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x z@0))))), rest=):
+TAC>> rewrite
++++Rewrite uu___#170786 : (eq2 x 0)
+TAC (ngoals=1, maingoal=(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))), rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))), rest=):
+TAC>> or_else: trying simplify_eq_impl
+make[1]: *** No targets specified and no makefile found.  Stop.
+(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))) is not an equality imp
+make: *** [Makefile:246: utest] Error 2
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))), rest=):
+TAC>> split
+TAC (ngoals=2, maingoal=(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))), rest=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))):
+TAC>> debug
+TAC (ngoals=2, maingoal=(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))), rest=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))):
+TAC>> map
+TAC (ngoals=1, maingoal=(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))), rest=):
+TAC>> intros
+intros: y
+TAC (ngoals=1, maingoal=(l_imp (eq2 y 0) (eq2 0 y)), rest=):
+TAC>> or_else: trying simplify_eq_impl
+TAC (ngoals=1, maingoal=(l_imp (eq2 y 0) (eq2 0 y)), rest=):
+TAC>> imp_intro
+imp_intro: uu___#170790
+TAC (ngoals=1, maingoal=(eq2 0 y), rest=):
+TAC>> rewrite
++++Rewrite uu___#170790 : (eq2 y 0)
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(eq2 0 0) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: trying trivial
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert
+reverting y#170789
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> inner
+After reverting intros, goal is x |- l_True
+TAC (ngoals=1, maingoal=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0)))), rest=):
+TAC>> map
+TAC (ngoals=1, maingoal=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0)))), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0)))) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0)))), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0)))), rest=):
+TAC>> intros
+intros: z
+TAC (ngoals=1, maingoal=(l_imp (eq2 z 0) (eq2 0 z)), rest=):
+TAC>> or_else: trying simplify_eq_impl
+TAC (ngoals=1, maingoal=(l_imp (eq2 z 0) (eq2 0 z)), rest=):
+TAC>> imp_intro
+imp_intro: uu___#170794
+TAC (ngoals=1, maingoal=(eq2 0 z), rest=):
+TAC>> rewrite
++++Rewrite uu___#170794 : (eq2 z 0)
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(eq2 0 0) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: trying trivial
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert
+reverting z#170793
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> inner
+After reverting intros, goal is x |- l_True
+TAC (ngoals=2, maingoal=l_True, rest=l_True):
+TAC>> merge_sub_goals
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert
+reverting x#170785
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> inner
+After reverting intros, goal is  |- l_True
+Goal: l_True
+make[1]: Leaving directory '/home/darrenge/FStar/src'
+make -C ocaml-output
+make[1]: Entering directory '/home/darrenge/FStar/src/ocaml-output'
+make[1]: Leaving directory '/home/darrenge/FStar/src/ocaml-output'
+make: Leaving directory '/home/darrenge/FStar/src'
