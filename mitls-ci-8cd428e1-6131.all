@@ -1,0 +1,929 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/2/s
+About to run: mitls_verify
+BUILD_SOURCEBRANCHNAME: barrybo_working
+BUILD_DEFINITIONNAME: miTLS-CI-Windows
+From https://github.com/FStarLang/FStar
+* [new branch]      shaolintl_922 -> origin/shaolintl_922
+2c9771a..75696de  shaolintl_two_phase_experiment -> origin/shaolintl_two_phase_experiment
+69528aa..1e2c9bc  taramana_modifies -> origin/taramana_modifies
+289075d..7f537db  vdum_uf    -> origin/vdum_uf
+HEAD is now at e96cdcd Docker: bootstrap removed as it now consumes too much ressources for Dockerhub to handle
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+# JP: delete this line and the script once every member of the team has
+# run ./clean.sh once
+./clean.sh
+FStar_Parser_Parse.ml is not under version control, removing
+FStar_Version.ml is not under version control, removing
+rm -rf _build
+rm -f parse.mly FStar_Parser_Parse.ml FStar_Version.ml
+rm -f *.tar.gz *.zip
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+echo 'let version = "0.9.4.0"' > FStar_Version.ml
+cp parse.mly ../parser/ml/
+echo 'let platform = "Windows_x64"' >> FStar_Version.ml
+echo "%{" > ../parser/parse.fsy
+echo 'let compiler = "OCaml 4.02.3"' >> FStar_Version.ml
+# We are opening the same module twice but we need these modules
+echo "#light \"off\"" >> ../parser/parse.fsy
+# open for the definition of tokens
+echo 'let date = "2017-03-31T09:33:50-07:00"' >> FStar_Version.ml
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo "open Prims" > FStar_Parser_Parse.ml
+echo 'let commit= "e96cdcd"' >> FStar_Version.ml
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Ident" >> ../parser/parse.fsy
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+echo "open FStar.String" >> ../parser/parse.fsy
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+# TODO: create a proper OCamlbuild rule for this production so that
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# menhir) and removes the production as needed.
+ocamlyacc parse.mly
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+mkdir 'C:\Build\Agent2\_work\2\s\fstar\src/ocaml-output/_build'
+SANITIZE: a total of 324 files that should probably not be in your source
+tree has been found. A script shell file
+"C:\\Build\\Agent2\\_work\\2\\s\\fstar\\src/ocaml-output/_build/sanitize.sh"
+is being created. Check this script and run it to remove unwanted files or
+use other options (such as defining hygiene exceptions or using the
+make: *** [Makefile:94: fstar.exe] Error 1
+-no-hygiene option).
+IMPORTANT: I cannot work with leftover compiled files.
+ERROR: Leftover object files:
+File main.o in src/ocaml-output has suffix .o
+File FStar_Version.o in src/ocaml-output has suffix .o
+File FStar_Util.o in src/ocaml-output has suffix .o
+File FStar_Universal.o in src/ocaml-output has suffix .o
+File FStar_Unionfind.o in src/ocaml-output has suffix .o
+File FStar_TypeChecker_Util.o in src/ocaml-output has suffix .o
+File FStar_TypeChecker_TcTerm.o in src/ocaml-output has suffix .o
+File FStar_TypeChecker_Tc.o in src/ocaml-output has suffix .o
+File FStar_TypeChecker_Rel.o in src/ocaml-output has suffix .o
+File FStar_TypeChecker_Normalize.o in src/ocaml-output has suffix .o
+File FStar_TypeChecker_Errors.o in src/ocaml-output has suffix .o
+File FStar_TypeChecker_Env.o in src/ocaml-output has suffix .o
+File FStar_TypeChecker_DMFF.o in src/ocaml-output has suffix .o
+File FStar_TypeChecker_Common.o in src/ocaml-output has suffix .o
+File FStar_ToSMT_Z3.o in src/ocaml-output has suffix .o
+File FStar_ToSMT_Term.o in src/ocaml-output has suffix .o
+File FStar_ToSMT_SplitQueryCases.o in src/ocaml-output has suffix .o
+File FStar_ToSMT_Encode.o in src/ocaml-output has suffix .o
+File FStar_Tc_Util.o in src/ocaml-output has suffix .o
+File FStar_Tc_Tc.o in src/ocaml-output has suffix .o
+File FStar_Tc_Rel.o in src/ocaml-output has suffix .o
+File FStar_Tc_Recheck.o in src/ocaml-output has suffix .o
+File FStar_Tc_Normalize.o in src/ocaml-output has suffix .o
+File FStar_Tc_Errors.o in src/ocaml-output has suffix .o
+File FStar_Tc_Env.o in src/ocaml-output has suffix .o
+File FStar_Syntax_Util.o in src/ocaml-output has suffix .o
+File FStar_Syntax_Syntax.o in src/ocaml-output has suffix .o
+File FStar_Syntax_Subst.o in src/ocaml-output has suffix .o
+File FStar_Syntax_Print.o in src/ocaml-output has suffix .o
+File FStar_Syntax_InstFV.o in src/ocaml-output has suffix .o
+File FStar_Syntax_Free.o in src/ocaml-output has suffix .o
+File FStar_Syntax_Const.o in src/ocaml-output has suffix .o
+File FStar_Stratified.o in src/ocaml-output has suffix .o
+File FStar_SMTEncoding_Z3.o in src/ocaml-output has suffix .o
+File FStar_SMTEncoding_Util.o in src/ocaml-output has suffix .o
+File FStar_SMTEncoding_Term.o in src/ocaml-output has suffix .o
+File FStar_SMTEncoding_SplitQueryCases.o in src/ocaml-output has suffix .o
+File FStar_SMTEncoding_Solver.o in src/ocaml-output has suffix .o
+File FStar_SMTEncoding_ErrorReporting.o in src/ocaml-output has suffix .o
+File FStar_SMTEncoding_Encode.o in src/ocaml-output has suffix .o
+File FStar_Range.o in src/ocaml-output has suffix .o
+File FStar_Platform.o in src/ocaml-output has suffix .o
+File FStar_Parser_Util.o in src/ocaml-output has suffix .o
+File FStar_Parser_ToSyntax.o in src/ocaml-output has suffix .o
+File FStar_Parser_ParseIt.o in src/ocaml-output has suffix .o
+File FStar_Parser_Parse.o in src/ocaml-output has suffix .o
+File FStar_Parser_Lexhelp.o in src/ocaml-output has suffix .o
+File FStar_Parser_LexFStar.o in src/ocaml-output has suffix .o
+File FStar_Parser_Interleave.o in src/ocaml-output has suffix .o
+File FStar_Parser_Env.o in src/ocaml-output has suffix .o
+File FStar_Parser_Driver.o in src/ocaml-output has suffix .o
+File FStar_Parser_DesugarEnv.o in src/ocaml-output has suffix .o
+File FStar_Parser_Desugar.o in src/ocaml-output has suffix .o
+File FStar_Parser_Dep.o in src/ocaml-output has suffix .o
+File FStar_Parser_AST.o in src/ocaml-output has suffix .o
+File FStar_Options.o in src/ocaml-output has suffix .o
+File FStar_Interactive.o in src/ocaml-output has suffix .o
+File FStar_Ident.o in src/ocaml-output has suffix .o
+File FStar_Getopt.o in src/ocaml-output has suffix .o
+File FStar_FStar.o in src/ocaml-output has suffix .o
+File FStar_Fsdoc_Generator.o in src/ocaml-output has suffix .o
+File FStar_Format.o in src/ocaml-output has suffix .o
+File FStar_Extraction_ML_Util.o in src/ocaml-output has suffix .o
+File FStar_Extraction_ML_UEnv.o in src/ocaml-output has suffix .o
+File FStar_Extraction_ML_Term.o in src/ocaml-output has suffix .o
+File FStar_Extraction_ML_Syntax.o in src/ocaml-output has suffix .o
+File FStar_Extraction_ML_Modul.o in src/ocaml-output has suffix .o
+File FStar_Extraction_ML_ExtractTyp.o in src/ocaml-output has suffix .o
+File FStar_Extraction_ML_ExtractMod.o in src/ocaml-output has suffix .o
+File FStar_Extraction_ML_ExtractExp.o in src/ocaml-output has suffix .o
+File FStar_Extraction_ML_Env.o in src/ocaml-output has suffix .o
+File FStar_Extraction_ML_Code.o in src/ocaml-output has suffix .o
+File FStar_Extraction_Kremlin.o in src/ocaml-output has suffix .o
+File FStar_Dependences.o in src/ocaml-output has suffix .o
+File FStar_Const.o in src/ocaml-output has suffix .o
+File FStar_Bytes.o in src/ocaml-output has suffix .o
+File FStar_Absyn_Visit.o in src/ocaml-output has suffix .o
+File FStar_Absyn_Util.o in src/ocaml-output has suffix .o
+File FStar_Absyn_Syntax.o in src/ocaml-output has suffix .o
+File FStar_Absyn_Print.o in src/ocaml-output has suffix .o
+File FStar_Absyn_Const.o in src/ocaml-output has suffix .o
+Warning: Leftover OCaml type annotation files:
+File main.annot in src/ocaml-output has suffix .annot
+File FStar_Version.annot in src/ocaml-output has suffix .annot
+File FStar_Util.annot in src/ocaml-output has suffix .annot
+File FStar_Universal.annot in src/ocaml-output has suffix .annot
+File FStar_Unionfind.annot in src/ocaml-output has suffix .annot
+File FStar_TypeChecker_Util.annot in src/ocaml-output has suffix .annot
+File FStar_TypeChecker_TcTerm.annot in src/ocaml-output has suffix .annot
+File FStar_TypeChecker_Tc.annot in src/ocaml-output has suffix .annot
+File FStar_TypeChecker_Rel.annot in src/ocaml-output has suffix .annot
+File FStar_TypeChecker_Normalize.annot in src/ocaml-output has suffix .annot
+File FStar_TypeChecker_Errors.annot in src/ocaml-output has suffix .annot
+File FStar_TypeChecker_Env.annot in src/ocaml-output has suffix .annot
+File FStar_TypeChecker_DMFF.annot in src/ocaml-output has suffix .annot
+File FStar_TypeChecker_Common.annot in src/ocaml-output has suffix .annot
+File FStar_ToSMT_Z3.annot in src/ocaml-output has suffix .annot
+File FStar_ToSMT_Term.annot in src/ocaml-output has suffix .annot
+File FStar_ToSMT_SplitQueryCases.annot in src/ocaml-output has suffix .annot
+File FStar_ToSMT_Encode.annot in src/ocaml-output has suffix .annot
+File FStar_Tc_Util.annot in src/ocaml-output has suffix .annot
+File FStar_Tc_Tc.annot in src/ocaml-output has suffix .annot
+File FStar_Tc_Rel.annot in src/ocaml-output has suffix .annot
+File FStar_Tc_Recheck.annot in src/ocaml-output has suffix .annot
+File FStar_Tc_Normalize.annot in src/ocaml-output has suffix .annot
+File FStar_Tc_Errors.annot in src/ocaml-output has suffix .annot
+File FStar_Tc_Env.annot in src/ocaml-output has suffix .annot
+File FStar_Syntax_Util.annot in src/ocaml-output has suffix .annot
+File FStar_Syntax_Syntax.annot in src/ocaml-output has suffix .annot
+File FStar_Syntax_Subst.annot in src/ocaml-output has suffix .annot
+File FStar_Syntax_Print.annot in src/ocaml-output has suffix .annot
+File FStar_Syntax_InstFV.annot in src/ocaml-output has suffix .annot
+File FStar_Syntax_Free.annot in src/ocaml-output has suffix .annot
+File FStar_Syntax_Const.annot in src/ocaml-output has suffix .annot
+File FStar_Stratified.annot in src/ocaml-output has suffix .annot
+File FStar_SMTEncoding_Z3.annot in src/ocaml-output has suffix .annot
+File FStar_SMTEncoding_Util.annot in src/ocaml-output has suffix .annot
+File FStar_SMTEncoding_Term.annot in src/ocaml-output has suffix .annot
+File FStar_SMTEncoding_SplitQueryCases.annot in src/ocaml-output has suffix .annot
+File FStar_SMTEncoding_Solver.annot in src/ocaml-output has suffix .annot
+File FStar_SMTEncoding_ErrorReporting.annot in src/ocaml-output has suffix .annot
+File FStar_SMTEncoding_Encode.annot in src/ocaml-output has suffix .annot
+File FStar_Range.annot in src/ocaml-output has suffix .annot
+File FStar_Platform.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_Util.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_ToSyntax.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_ParseIt.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_Parse.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_Lexhelp.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_LexFStar.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_Interleave.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_Env.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_Driver.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_DesugarEnv.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_Desugar.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_Dep.annot in src/ocaml-output has suffix .annot
+File FStar_Parser_AST.annot in src/ocaml-output has suffix .annot
+File FStar_Options.annot in src/ocaml-output has suffix .annot
+File FStar_Interactive.annot in src/ocaml-output has suffix .annot
+File FStar_Ident.annot in src/ocaml-output has suffix .annot
+File FStar_Getopt.annot in src/ocaml-output has suffix .annot
+File FStar_FStar.annot in src/ocaml-output has suffix .annot
+File FStar_Fsdoc_Generator.annot in src/ocaml-output has suffix .annot
+File FStar_Format.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_ML_Util.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_ML_UEnv.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_ML_Term.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_ML_Syntax.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_ML_Modul.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_ML_ExtractTyp.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_ML_ExtractMod.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_ML_ExtractExp.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_ML_Env.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_ML_Code.annot in src/ocaml-output has suffix .annot
+File FStar_Extraction_Kremlin.annot in src/ocaml-output has suffix .annot
+File FStar_Dependences.annot in src/ocaml-output has suffix .annot
+File FStar_Const.annot in src/ocaml-output has suffix .annot
+File FStar_Bytes.annot in src/ocaml-output has suffix .annot
+File FStar_Absyn_Visit.annot in src/ocaml-output has suffix .annot
+File FStar_Absyn_Util.annot in src/ocaml-output has suffix .annot
+File FStar_Absyn_Syntax.annot in src/ocaml-output has suffix .annot
+File FStar_Absyn_Print.annot in src/ocaml-output has suffix .annot
+File FStar_Absyn_Const.annot in src/ocaml-output has suffix .annot
+ERROR: Leftover OCaml compilation files:
+File main.cmi in src/ocaml-output has suffix .cmi
+File FStar_Version.cmi in src/ocaml-output has suffix .cmi
+File FStar_Util.cmi in src/ocaml-output has suffix .cmi
+File FStar_Universal.cmi in src/ocaml-output has suffix .cmi
+File FStar_Unionfind.cmi in src/ocaml-output has suffix .cmi
+File FStar_TypeChecker_Util.cmi in src/ocaml-output has suffix .cmi
+File FStar_TypeChecker_TcTerm.cmi in src/ocaml-output has suffix .cmi
+File FStar_TypeChecker_Tc.cmi in src/ocaml-output has suffix .cmi
+File FStar_TypeChecker_Rel.cmi in src/ocaml-output has suffix .cmi
+File FStar_TypeChecker_Normalize.cmi in src/ocaml-output has suffix .cmi
+File FStar_TypeChecker_Errors.cmi in src/ocaml-output has suffix .cmi
+File FStar_TypeChecker_Env.cmi in src/ocaml-output has suffix .cmi
+File FStar_TypeChecker_DMFF.cmi in src/ocaml-output has suffix .cmi
+File FStar_TypeChecker_Common.cmi in src/ocaml-output has suffix .cmi
+File FStar_ToSMT_Z3.cmi in src/ocaml-output has suffix .cmi
+File FStar_ToSMT_Term.cmi in src/ocaml-output has suffix .cmi
+File FStar_ToSMT_SplitQueryCases.cmi in src/ocaml-output has suffix .cmi
+File FStar_ToSMT_Encode.cmi in src/ocaml-output has suffix .cmi
+File FStar_Tc_Util.cmi in src/ocaml-output has suffix .cmi
+File FStar_Tc_Tc.cmi in src/ocaml-output has suffix .cmi
+File FStar_Tc_Rel.cmi in src/ocaml-output has suffix .cmi
+File FStar_Tc_Recheck.cmi in src/ocaml-output has suffix .cmi
+File FStar_Tc_Normalize.cmi in src/ocaml-output has suffix .cmi
+File FStar_Tc_Errors.cmi in src/ocaml-output has suffix .cmi
+File FStar_Tc_Env.cmi in src/ocaml-output has suffix .cmi
+File FStar_Syntax_Util.cmi in src/ocaml-output has suffix .cmi
+File FStar_Syntax_Syntax.cmi in src/ocaml-output has suffix .cmi
+File FStar_Syntax_Subst.cmi in src/ocaml-output has suffix .cmi
+File FStar_Syntax_Print.cmi in src/ocaml-output has suffix .cmi
+File FStar_Syntax_InstFV.cmi in src/ocaml-output has suffix .cmi
+File FStar_Syntax_Free.cmi in src/ocaml-output has suffix .cmi
+File FStar_Syntax_Const.cmi in src/ocaml-output has suffix .cmi
+File FStar_Stratified.cmi in src/ocaml-output has suffix .cmi
+File FStar_SMTEncoding_Z3.cmi in src/ocaml-output has suffix .cmi
+File FStar_SMTEncoding_Util.cmi in src/ocaml-output has suffix .cmi
+File FStar_SMTEncoding_Term.cmi in src/ocaml-output has suffix .cmi
+File FStar_SMTEncoding_SplitQueryCases.cmi in src/ocaml-output has suffix .cmi
+File FStar_SMTEncoding_Solver.cmi in src/ocaml-output has suffix .cmi
+File FStar_SMTEncoding_ErrorReporting.cmi in src/ocaml-output has suffix .cmi
+File FStar_SMTEncoding_Encode.cmi in src/ocaml-output has suffix .cmi
+File FStar_Range.cmi in src/ocaml-output has suffix .cmi
+File FStar_Platform.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_Util.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_ToSyntax.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_ParseIt.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_Parse.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_Lexhelp.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_LexFStar.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_Interleave.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_Env.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_Driver.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_DesugarEnv.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_Desugar.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_Dep.cmi in src/ocaml-output has suffix .cmi
+File FStar_Parser_AST.cmi in src/ocaml-output has suffix .cmi
+File FStar_Options.cmi in src/ocaml-output has suffix .cmi
+File FStar_Interactive.cmi in src/ocaml-output has suffix .cmi
+File FStar_Ident.cmi in src/ocaml-output has suffix .cmi
+File FStar_Getopt.cmi in src/ocaml-output has suffix .cmi
+File FStar_FStar.cmi in src/ocaml-output has suffix .cmi
+File FStar_Fsdoc_Generator.cmi in src/ocaml-output has suffix .cmi
+File FStar_Format.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_ML_Util.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_ML_UEnv.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_ML_Term.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_ML_Syntax.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_ML_Modul.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_ML_ExtractTyp.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_ML_ExtractMod.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_ML_ExtractExp.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_ML_Env.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_ML_Code.cmi in src/ocaml-output has suffix .cmi
+File FStar_Extraction_Kremlin.cmi in src/ocaml-output has suffix .cmi
+File FStar_Dependences.cmi in src/ocaml-output has suffix .cmi
+File FStar_Const.cmi in src/ocaml-output has suffix .cmi
+File FStar_Bytes.cmi in src/ocaml-output has suffix .cmi
+File FStar_Absyn_Visit.cmi in src/ocaml-output has suffix .cmi
+File FStar_Absyn_Util.cmi in src/ocaml-output has suffix .cmi
+File FStar_Absyn_Syntax.cmi in src/ocaml-output has suffix .cmi
+File FStar_Absyn_Print.cmi in src/ocaml-output has suffix .cmi
+File FStar_Absyn_Const.cmi in src/ocaml-output has suffix .cmi
+File main.cmx in src/ocaml-output has suffix .cmx
+File FStar_Version.cmx in src/ocaml-output has suffix .cmx
+File FStar_Util.cmx in src/ocaml-output has suffix .cmx
+File FStar_Universal.cmx in src/ocaml-output has suffix .cmx
+File FStar_Unionfind.cmx in src/ocaml-output has suffix .cmx
+File FStar_TypeChecker_Util.cmx in src/ocaml-output has suffix .cmx
+File FStar_TypeChecker_TcTerm.cmx in src/ocaml-output has suffix .cmx
+File FStar_TypeChecker_Tc.cmx in src/ocaml-output has suffix .cmx
+File FStar_TypeChecker_Rel.cmx in src/ocaml-output has suffix .cmx
+File FStar_TypeChecker_Normalize.cmx in src/ocaml-output has suffix .cmx
+File FStar_TypeChecker_Errors.cmx in src/ocaml-output has suffix .cmx
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+File FStar_TypeChecker_Env.cmx in src/ocaml-output has suffix .cmx
+Unexpected error
+File FStar_TypeChecker_DMFF.cmx in src/ocaml-output has suffix .cmx
+File FStar_TypeChecker_Common.cmx in src/ocaml-output has suffix .cmx
+FStar_Syntax_Syntax.Error(_)
+File FStar_ToSMT_Z3.cmx in src/ocaml-output has suffix .cmx
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+File FStar_ToSMT_Term.cmx in src/ocaml-output has suffix .cmx
+File FStar_ToSMT_SplitQueryCases.cmx in src/ocaml-output has suffix .cmx
+Called from file "src/batReturn.ml", line 29, characters 6-29
+File FStar_ToSMT_Encode.cmx in src/ocaml-output has suffix .cmx
+
+File FStar_Tc_Util.cmx in src/ocaml-output has suffix .cmx
+File FStar_Tc_Tc.cmx in src/ocaml-output has suffix .cmx
+make: *** [Makefile:257: Flags.fst-ver] Error 1
+File FStar_Tc_Rel.cmx in src/ocaml-output has suffix .cmx
+File FStar_Tc_Recheck.cmx in src/ocaml-output has suffix .cmx
+File FStar_Tc_Normalize.cmx in src/ocaml-output has suffix .cmx
+File FStar_Tc_Errors.cmx in src/ocaml-output has suffix .cmx
+File FStar_Tc_Env.cmx in src/ocaml-output has suffix .cmx
+File FStar_Syntax_Util.cmx in src/ocaml-output has suffix .cmx
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+File FStar_Syntax_Syntax.cmx in src/ocaml-output has suffix .cmx
+Unexpected error
+File FStar_Syntax_Subst.cmx in src/ocaml-output has suffix .cmx
+FStar_Syntax_Syntax.Error(_)
+File FStar_Syntax_Print.cmx in src/ocaml-output has suffix .cmx
+File FStar_Syntax_InstFV.cmx in src/ocaml-output has suffix .cmx
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+File FStar_Syntax_Free.cmx in src/ocaml-output has suffix .cmx
+Called from file "src/batReturn.ml", line 29, characters 6-29
+File FStar_Syntax_Const.cmx in src/ocaml-output has suffix .cmx
+
+File FStar_Stratified.cmx in src/ocaml-output has suffix .cmx
+File FStar_SMTEncoding_Z3.cmx in src/ocaml-output has suffix .cmx
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+File FStar_SMTEncoding_Util.cmx in src/ocaml-output has suffix .cmx
+Unexpected error
+File FStar_SMTEncoding_Term.cmx in src/ocaml-output has suffix .cmx
+FStar_Syntax_Syntax.Error(_)
+File FStar_SMTEncoding_SplitQueryCases.cmx in src/ocaml-output has suffix .cmx
+File FStar_SMTEncoding_Solver.cmx in src/ocaml-output has suffix .cmx
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+File FStar_SMTEncoding_ErrorReporting.cmx in src/ocaml-output has suffix .cmx
+Called from file "src/batReturn.ml", line 29, characters 6-29
+File FStar_SMTEncoding_Encode.cmx in src/ocaml-output has suffix .cmx
+
+File FStar_Range.cmx in src/ocaml-output has suffix .cmx
+make: *** [Makefile:257: TLSError.fst-ver] Error 1
+File FStar_Platform.cmx in src/ocaml-output has suffix .cmx
+File FStar_Parser_Util.cmx in src/ocaml-output has suffix .cmx
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+File FStar_Parser_ToSyntax.cmx in src/ocaml-output has suffix .cmx
+Unexpected error
+File FStar_Parser_ParseIt.cmx in src/ocaml-output has suffix .cmx
+FStar_Syntax_Syntax.Error(_)
+File FStar_Parser_Parse.cmx in src/ocaml-output has suffix .cmx
+File FStar_Parser_Lexhelp.cmx in src/ocaml-output has suffix .cmx
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+File FStar_Parser_LexFStar.cmx in src/ocaml-output has suffix .cmx
+Called from file "src/batReturn.ml", line 29, characters 6-29
+File FStar_Parser_Interleave.cmx in src/ocaml-output has suffix .cmx
+
+File FStar_Parser_Env.cmx in src/ocaml-output has suffix .cmx
+make: *** [Makefile:257: MonotoneMap.fst-ver] Error 1
+File FStar_Parser_Driver.cmx in src/ocaml-output has suffix .cmx
+File FStar_Parser_DesugarEnv.cmx in src/ocaml-output has suffix .cmx
+make: *** [Makefile:257: TLSConstants.fst-ver] Error 1
+File FStar_Parser_Desugar.cmx in src/ocaml-output has suffix .cmx
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+File FStar_Parser_Dep.cmx in src/ocaml-output has suffix .cmx
+Unexpected error
+File FStar_Parser_AST.cmx in src/ocaml-output has suffix .cmx
+FStar_Syntax_Syntax.Error(_)
+File FStar_Options.cmx in src/ocaml-output has suffix .cmx
+File FStar_Interactive.cmx in src/ocaml-output has suffix .cmx
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+File FStar_Ident.cmx in src/ocaml-output has suffix .cmx
+Called from file "src/batReturn.ml", line 29, characters 6-29
+File FStar_Getopt.cmx in src/ocaml-output has suffix .cmx
+
+File FStar_FStar.cmx in src/ocaml-output has suffix .cmx
+File FStar_Fsdoc_Generator.cmx in src/ocaml-output has suffix .cmx
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+File FStar_Format.cmx in src/ocaml-output has suffix .cmx
+Unexpected error
+File FStar_Extraction_ML_Util.cmx in src/ocaml-output has suffix .cmx
+FStar_Syntax_Syntax.Error(_)
+File FStar_Extraction_ML_UEnv.cmx in src/ocaml-output has suffix .cmx
+File FStar_Extraction_ML_Term.cmx in src/ocaml-output has suffix .cmx
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+File FStar_Extraction_ML_Syntax.cmx in src/ocaml-output has suffix .cmx
+Called from file "src/batReturn.ml", line 29, characters 6-29
+File FStar_Extraction_ML_Modul.cmx in src/ocaml-output has suffix .cmx
+
+File FStar_Extraction_ML_ExtractTyp.cmx in src/ocaml-output has suffix .cmx
+File FStar_Extraction_ML_ExtractMod.cmx in src/ocaml-output has suffix .cmx
+make: *** [Makefile:257: Transport.fst-ver] Error 1
+File FStar_Extraction_ML_ExtractExp.cmx in src/ocaml-output has suffix .cmx
+make: *** [Makefile:257: Nonce.fst-ver] Error 1
+File FStar_Extraction_ML_Env.cmx in src/ocaml-output has suffix .cmx
+File FStar_Extraction_ML_Code.cmx in src/ocaml-output has suffix .cmx
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+File FStar_Extraction_Kremlin.cmx in src/ocaml-output has suffix .cmx
+Unexpected error
+File FStar_Dependences.cmx in src/ocaml-output has suffix .cmx
+FStar_Syntax_Syntax.Error(_)
+File FStar_Const.cmx in src/ocaml-output has suffix .cmx
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+File FStar_Bytes.cmx in src/ocaml-output has suffix .cmx
+File FStar_Absyn_Visit.cmx in src/ocaml-output has suffix .cmx
+Called from file "src/batReturn.ml", line 29, characters 6-29
+File FStar_Absyn_Util.cmx in src/ocaml-output has suffix .cmx
+
+File FStar_Absyn_Syntax.cmx in src/ocaml-output has suffix .cmx
+File FStar_Absyn_Print.cmx in src/ocaml-output has suffix .cmx
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+File FStar_Absyn_Const.cmx in src/ocaml-output has suffix .cmx
+Unexpected error
+Exiting due to hygiene violations.
+FStar_Syntax_Syntax.Error(_)
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/2/s/fstar/src/ocaml-output'
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/2/s/src/tls'
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --version | grep ^commit | sed 's/commit=\([^ ]*\).*/\1/' > ../../.fstar_version
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:257: DHGroup.fst-ver] Error 1
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+Unexpected error
+--verify_module Flags \
+FStar_Syntax_Syntax.Error(_)
+Flags.fst
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+make: *** [Makefile:257: RSAKey.fst-ver] Error 1
+--verify_module MonotoneMap \
+make: *** [Makefile:257: ECGroup.fst-ver] Error 1
+MonotoneMap.fst
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--verify_module TLSError \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+TLSError.fst
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:257: CommonDH.fst-ver] Error 1
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module TLSConstants \
+TLSConstants.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Transport \
+Transport.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+--verify_module Nonce \
+Nonce.fst
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+FStar_Syntax_Syntax.Error(_)
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--include ideal-flags \
+--verify_module RSAKey \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+RSAKey.fst
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+FStar_Syntax_Syntax.Error(_)
+--include ideal-flags \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--verify_module DHGroup \
+DHGroup.fst
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+Unexpected error
+--include ideal-flags \
+FStar_Syntax_Syntax.Error(_)
+--verify_module ECGroup \
+ECGroup.fst
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+Unexpected error
+--verify_module CommonDH \
+CommonDH.fst
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+make: *** [Makefile:257: PMS.fst-ver] Error 1
+--verify_module PMS \
+make: *** [Makefile:257: Hashing.fst-ver] Error 1
+PMS.fst
+make: *** [Makefile:257: HashMAC.fst-ver] Error 1
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:257: Cert.fst-ver] Error 1
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+Unexpected error
+--verify_module Hashing \
+FStar_Syntax_Syntax.Error(_)
+Hashing.fst
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--verify_module HashMAC \
+Unexpected error
+HashMAC.fst
+FStar_Syntax_Syntax.Error(_)
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+
+--verify_module Cert \
+Cert.fst
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+--include ideal-flags \
+--verify_module Signature \
+
+Signature.fst
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--verify_module TLSInfo \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+TLSInfo.fst
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:257: Signature.fst-ver] Error 1
+make: *** [Makefile:257: IdNonce.fst-ver] Error 1
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--verify_module IdNonce \
+IdNonce.fst
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+
+--verify_module TLSExtensions \
+make: *** [Makefile:257: TLSExtensions.fst-ver] Error 1
+TLSExtensions.fst
+make: *** [Makefile:257: TLSInfo.fst-ver] Error 1
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:257: Range.fst-ver] Error 1
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+Unexpected error
+--verify_module Range \
+FStar_Syntax_Syntax.Error(_)
+Range.fst
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+make: *** [Makefile:257: DataStream.fst-ver] Error 1
+--include ideal-flags \
+--verify_module DataStream \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+DataStream.fst
+Unexpected error
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+--verify_module Alert \
+
+Alert.fst
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--verify_module Content \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+Content.fst
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:257: Alert.fst-ver] Error 1
+make: *** [Makefile:257: Content.fst-ver] Error 1
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--verify_module StreamPlain \
+Unexpected error
+StreamPlain.fst
+FStar_Syntax_Syntax.Error(_)
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+
+--verify_module StreamAE \
+make: *** [Makefile:257: StreamPlain.fst-ver] Error 1
+StreamAE.fst
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--verify_module MasterSecret \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+MasterSecret.fst
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:257: StreamAE.fst-ver] Error 1
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+Unexpected error
+--include ideal-flags \
+--verify_module StatefulPlain \
+FStar_Syntax_Syntax.Error(_)
+StatefulPlain.fst
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--include ideal-flags \
+Unexpected error
+--verify_module LHAEPlain \
+LHAEPlain.fst
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+
+--include ideal-flags \
+make: *** [Makefile:257: StatefulPlain.fst-ver] Error 1
+--verify_module AEAD_GCM \
+AEAD_GCM.fst
+make: *** [Makefile:257: MasterSecret.fst-ver] Error 1
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Unexpected error
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+FStar_Syntax_Syntax.Error(_)
+--include ideal-flags \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--verify_module MAC \
+MAC.fst
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+make: *** [Makefile:257: LHAEPlain.fst-ver] Error 1
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--include ideal-flags \
+Unexpected error
+--verify_module StatefulLHAE \
+StatefulLHAE.fst
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+
+--include ideal-flags \
+--verify_module Record \
+make: *** [Makefile:257: AEAD_GCM.fst-ver] Error 1
+Record.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+FStar_Syntax_Syntax.Error(_)
+--include ideal-flags \
+--verify_module MAC_SHA256 \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+MAC_SHA256.fst
+Called from file "src/batReturn.ml", line 29, characters 6-29
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--verify_module MAC_SHA1 \
+MAC_SHA1.fst
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+--include ideal-flags \
+
+--verify_module StAE \
+make: *** [Makefile:257: MAC.fst-ver] Error 1
+StAE.fst
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+Unexpected error
+--include ideal-flags \
+--verify_module KeySchedule \
+FStar_Syntax_Syntax.Error(_)
+KeySchedule.fst
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+--include ideal-flags \
+make: *** [Makefile:257: StatefulLHAE.fst-ver] Error 1
+--verify_module StreamDeltas \
+StreamDeltas.fst
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+--include ideal-flags \
+
+--verify_module HKDF \
+HKDF.fst
+make: *** [Makefile:257: Record.fst-ver] Error 1
+make: *** [Makefile:257: MAC_SHA256.fst-ver] Error 1
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+Unexpected error
+--include ideal-flags \
+--verify_module Epochs \
+FStar_Syntax_Syntax.Error(_)
+Epochs.fst
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+FStar_Syntax_Syntax.Error(_)
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--include ideal-flags \
+--verify_module Connection \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+Connection.fst
+
+make: *** [Makefile:257: StAE.fst-ver] Error 1
+make: *** [Makefile:257: MAC_SHA1.fst-ver] Error 1
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+FStar_Syntax_Syntax.Error(_)
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+--include ideal-flags \
+--verify_module ConnInvariant \
+Called from file "src/batReturn.ml", line 29, characters 6-29
+ConnInvariant.fst
+
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+
+--include ideal-flags \
+--verify_module FFI \
+make: *** [Makefile:257: KeySchedule.fst-ver] Error 1
+FFI.fst
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+C:/Build/Agent2/_work/2/s/fstar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/2/s/fstar --trace_error --max_fuel 4 --initial_fuel 0 --max_ifuel 2 --initial_ifuel 1 --z3rlimit 20 --__temp_no_proj Handshake --__temp_no_proj Connection --use_hints --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/hacl \
+
+--include C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/2/s/fstar/ucontrib/Platform/fst/ --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto/real --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/LowCProvider/fst --include C:/Build/Agent2/_work/2/s/fstar/examples/low-level/crypto --include ../../libs/ffi --include C:/Build/Agent2/_work/2/s/fstar/ulib/hyperstack \
+make: *** [Makefile:257: HKDF.fst-ver] Error 1
+--include ideal-flags \
+--verify_module TLS \
+make: *** [Makefile:257: StreamDeltas.fst-ver] Error 1
+TLS.fst
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:257: Epochs.fst-ver] Error 1
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:257: Connection.fst-ver] Error 1
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:257: ConnInvariant.fst-ver] Error 1
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/2/s/src/tls'
+
+C:\Build\Agent2\_work\2\s\fstar\ulib\prims.fst(266,27-266,37) : (Error) Identifier not found: [attributes]
+Unexpected error
+FStar_Syntax_Syntax.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:257: TLS.fst-ver] Error 1
+make: *** [Makefile:257: FFI.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
