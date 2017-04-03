@@ -1,0 +1,83 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+7 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(399,0-399,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(448,0-448,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(449,0-449,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(500,0-502,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+make[3]: *** [Makefile:174: u_extract_tcterm] Segmentation fault
+make[3]: *** [Makefile:188: u_extract_extraction] Segmentation fault
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(717,0-719,39): (Warning) Annotation from val declaration overrides inline type annotation
+C:\Build\Agent2\_work\1\s\src\u_boot_fsts\FStar.Extraction.ML.Term.fst(289,66-289,72) : (Error) Name "FStar.TypeChecker.Common.t_unit" not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make[3]: *** [Makefile:211: u_extract_fstar] Error 1
+make[3]: *** [Makefile:156: u_extract_syntax] Segmentation fault
+Unexpected error
+Failure("file_of_file_idx: invalid argument: n = 64\n")
+Raised at file "pervasives.ml", line 30, characters 22-33
+Called from file "src/basic/ml/FStar_Range.ml", line 120, characters 56-132
+Called from file "src/ocaml-output/FStar_Extraction_ML_Util.ml", line 497, characters 20-47
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 2187, characters 30-127
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1204, characters 23-42
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 2281, characters 52-132
+Called from file "src/basic/ml/FStar_Util.ml", line 525, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 526, characters 20-56
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1204, characters 23-42
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1251, characters 27-46
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1234, characters 27-57
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1826, characters 28-59
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1204, characters 23-42
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1251, characters 27-46
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1234, characters 27-57
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1826, characters 28-59
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1204, characters 23-42
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1431, characters 38-62
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1204, characters 23-42
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1251, characters 27-46
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1234, characters 27-57
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 2128, characters 24-64
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Extraction_ML_Term.ml", line 1204, characters 23-42
+Called from file "src/ocaml-output/FStar_Extraction_ML_Modul.ml", line 465, characters 28-74
+Called from file "src/basic/ml/FStar_Util.ml", line 525, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 526, characters 20-56
+Called from file "src/ocaml-output/FStar_Extraction_ML_Modul.ml", line 736, characters 9-89
+Called from file "src/basic/ml/FStar_Util.ml", line 525, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 526, characters 20-56
+Called from file "src/ocaml-output/FStar_Main.ml", line 84, characters 14-99
+Called from file "src/ocaml-output/FStar_Main.ml", line 217, characters 31-48
+Called from file "src/ocaml-output/FStar_Main.ml", line 222, characters 6-11
+
+make[3]: *** [Makefile:197: u_extract_smtencoding_base] Error 1
+make[3]: Target 'u_extract_all' not remade because of errors.
+make[2]: *** [Makefile:223: ocaml] Error 2
+make[1]: *** [Makefile:233: fstar-ocaml] Error 2
+make: *** [Makefile:247: utest] Error 2
