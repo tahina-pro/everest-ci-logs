@@ -1,0 +1,100 @@
+From https://github.com/FStarLang/FStar
+e593678..80c1378  aseem_serialization_experiment -> origin/aseem_serialization_experiment
+fatal: ambiguous argument 'f953975': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+7 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.OpenSSL.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.Spec.fst.hints; ran without hints
+.\CommonDH.fst(43,8-43,56): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(47,9-51,7): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.CRF.fst.hints; ran without hints
+.\Hashing.CRF.fst(28,8-28,80): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Malformed JSON hints file: C:\Build\Agent\_work\3\s\src\tls\HMAC.fst.hints; ran without hints
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Hashing.CRF.fst(64,4-64,64): (Error) could not prove post-condition
+Verified module: Hashing.CRF (15052 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:248: Hashing.CRF.fst-ver] Error 1
+.\Signature.fst(106,0-106,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(171,0-171,32): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Extensions.fst.hints; ran without hints
+.\TLSInfo.fst(629,0-629,50): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(633,0-636,10): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\HKDF.fsti.hints; ran without hints
+.\MAC_SHA256.fst(66,33-66,39): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HMAC.fst(69,34-69,48))
+.\MAC_SHA256.fst(79,31-79,37): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HMAC.fst(77,40-77,54))
+Verified module: MAC_SHA256 (74065 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:248: MAC_SHA256.fst-ver] Error 1
+.\TLSInfo.fst(756,42-756,44): (Error) Subtyping check failed; expected type (x#23557:TLSInfo.logInfo{(Prims.l_not (Prims.b2t (TLSInfo.uu___is_LogInfo_CH x@0)))}); got type TLSInfo.logInfo (see .\TLSInfo.fst(467,27-467,43))
+Verified module: TLSInfo (172699 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:248: TLSInfo.fst-ver] Error 1
+.\MAC_SHA1.fst(66,33-66,39): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HMAC.fst(69,34-69,48))
+.\MAC_SHA1.fst(79,31-79,37): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HMAC.fst(77,40-77,54))
+Verified module: MAC_SHA1 (96268 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:248: MAC_SHA1.fst-ver] Error 1
+.\KeySchedule.fst(623,2-623,12) : (Error) (?847881 ks) is not equal to the expected type (tuple2 (?847872 ks uu___ region st uu___ uu___ ci cfk si sfk uu___) (?847873 ks uu___ region st uu___ uu___ ci cfk si sfk uu___))
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:248: KeySchedule.fst-ver] Error 1
+.\KeySchedule.fst(623,2-623,12) : (Error) (?847405 ks) is not equal to the expected type (tuple2 (?847396 ks uu___ region st uu___ uu___ ci cfk si sfk uu___) (?847397 ks uu___ region st uu___ uu___ ci cfk si sfk uu___))
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:248: Epochs.fst-ver] Error 1
+.\KeySchedule.fst(623,2-623,12) : (Error) (?915215 ks) is not equal to the expected type (tuple2 (?915206 ks uu___ region st uu___ uu___ ci cfk si sfk uu___) (?915207 ks uu___ region st uu___ uu___ ci cfk si sfk uu___))
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:248: Connection.fst-ver] Error 1
+.\KeySchedule.fst(623,2-623,12) : (Error) (?915215 ks) is not equal to the expected type (tuple2 (?915206 ks uu___ region st uu___ uu___ ci cfk si sfk uu___) (?915207 ks uu___ region st uu___ uu___ ci cfk si sfk uu___))
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+.\KeySchedule.fst(623,2-623,12) : (Error) (?915215 ks) is not equal to the expected type (tuple2 (?915206 ks uu___ region st uu___ uu___ ci cfk si sfk uu___) (?915207 ks uu___ region st uu___ uu___ ci cfk si sfk uu___))
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:248: TLS.fst-ver] Error 1
+make: *** [Makefile:248: ConnInvariant.fst-ver] Error 1
+.\KeySchedule.fst(623,2-623,12) : (Error) (?915215 ks) is not equal to the expected type (tuple2 (?915206 ks uu___ region st uu___ uu___ ci cfk si sfk uu___) (?915207 ks uu___ region st uu___ uu___ ci cfk si sfk uu___))
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:248: FFI.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
