@@ -1,0 +1,17 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+
+Unhandled Exception: System.Exception: Impossible
+at FStar.TypeChecker.TcTerm.universe_of_aux(env env, syntax`2 e) in C:\Build\Agent\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs:line 2029
+at FStar.TypeChecker.TcTerm.universe_of(env env, syntax`2 e) in C:\Build\Agent\_work\1\s\src\typechecker\FStar.TypeChecker.TcTerm.fs:line 2106
+at FStar.TypeChecker.Rel.close_forall@110-1.Invoke(syntax`2 f) in C:\Build\Agent\_work\1\s\src\typechecker\FStar.TypeChecker.Rel.fs:line 113
+at FStar.TypeChecker.Rel.aux@1491-22(prob orig, FSharpFunc`2 rhs, FSharpList`1 scope, env env, FSharpList`1 subst, FSharpList`1 xs, FSharpList`1 ys) in C:\Build\Agent\_work\1\s\src\typechecker\FStar.TypeChecker.Rel.fs:line 1507
+at FStar.TypeChecker.Rel.solve_binders(env env, FSharpList`1 bs1, FSharpList`1 bs2, prob orig, worklist wl, FSharpFunc`2 rhs) in C:\Build\Agent\_work\1\s\src\typechecker\FStar.TypeChecker.Rel.fs:line 1491
+at FStar.TypeChecker.Rel.solve_and_commit(env env, worklist probs, FSharpFunc`2 err) in C:\Build\Agent\_work\1\s\src\typechecker\FStar.TypeChecker.Rel.fs:line 2421
+at FStar.TypeChecker.Rel.try_teq(Boolean smt_ok, env env, syntax`2 t1, syntax`2 t2) in C:\Build\Agent\_work\1\s\src\typechecker\FStar.TypeChecker.Rel.fs:line 2450
+at FStar.TypeChecker.Rel.teq(env env, syntax`2 t1, syntax`2 t2) in C:\Build\Agent\_work\1\s\src\typechecker\FStar.TypeChecker.Rel.fs:line 2456
+at FStar.Tests.Unif.unify(Int32 i, syntax`2 x, syntax`2 y, guard_formula g') in C:\Build\Agent\_work\1\s\src\tests\unif.fs:line 51
+at FStar.Tests.Unif.run_all() in C:\Build\Agent\_work\1\s\src\tests\unif.fs:line 104
+at FStar.Tests.Test.main(String[] argv) in C:\Build\Agent\_work\1\s\src\tests\test.fs:line 24
+make[1]: *** [Makefile:268: fsharp-regressions] Error 127
+make: *** [Makefile:255: utest] Error 2
