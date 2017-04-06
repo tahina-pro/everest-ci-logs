@@ -1,0 +1,48 @@
+From https://github.com/FStarLang/FStar
+5f90c25..2d87c14  master     -> origin/master
+d3e5d15..ea2aa66  aseem_env_changes -> origin/aseem_env_changes
+afe2e65..d866f4c  aseem_serialization_experiment -> origin/aseem_serialization_experiment
+b8549ca..ddf3cfc  c_ppdev_initial -> origin/c_ppdev_initial
++ 0a1d57b...1332066 cpitclaudel_info_docs -> origin/cpitclaudel_info_docs  (forced update)
++ 89b197d...02cdf50 cpitclaudel_show_match -> origin/cpitclaudel_show_match  (forced update)
+1cddae7..13ad575  darrenge_fstar -> origin/darrenge_fstar
+ffcb6fa..041c0f4  nik_indexed_effects -> origin/nik_indexed_effects
+0299b1e..39ed4ae  taramana_modifies -> origin/taramana_modifies
+* [new branch]      vdum_extract_dm4f_effects -> origin/vdum_extract_dm4f_effects
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+7 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+4126e24 [CI] regenerate hints
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+git branch <new-branch-name> 4126e24
+
+Switched to branch 'master'
+To git@github.com:mitls/mitls-fstar.git
+5589d44..4126e24  master -> master
