@@ -1,0 +1,56 @@
+From https://github.com/FStarLang/FStar
+b590fde..d745b45  master     -> origin/master
+* [new branch]      aseem_env_changes -> origin/aseem_env_changes
+afe2e65..d866f4c  aseem_serialization_experiment -> origin/aseem_serialization_experiment
+b8549ca..ddf3cfc  c_ppdev_initial -> origin/c_ppdev_initial
+074264e..746c4da  c_valedev_initial -> origin/c_valedev_initial
++ ad2177d...02cdf50 cpitclaudel_show_match -> origin/cpitclaudel_show_match  (forced update)
++ 5944569...4aa60c5 cwinter_custom_stack_size -> origin/cwinter_custom_stack_size  (forced update)
+1cddae7..a563381  darrenge_fstar -> origin/darrenge_fstar
+964a9e3..197c18d  kyod_tmp0  -> origin/kyod_tmp0
+* [new branch]      kyod_update_dm4f -> origin/kyod_update_dm4f
+ffcb6fa..d1db126  nik_indexed_effects -> origin/nik_indexed_effects
+4123e2a..1470e4c  nik_private -> origin/nik_private
+* [new branch]      taramana_936 -> origin/taramana_936
+3a3fb9b..f0217c7  taramana_modifies -> origin/taramana_modifies
+* [new branch]      vdum_extract_dm4f_effects -> origin/vdum_extract_dm4f_effects
+a10e76d..5dc87e3  vdum_uf    -> origin/vdum_uf
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+7 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
+From https://github.com/mitls/mitls-fstar
+8159eee..bcc5dd9  mitls_handshake -> origin/mitls_handshake
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+6b8f1f4 [CI] regenerate hints
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+git branch <new-branch-name> 6b8f1f4
+
+Switched to branch 'master'
+To git@github.com:mitls/mitls-fstar.git
+4126e24..6b8f1f4  master -> master
