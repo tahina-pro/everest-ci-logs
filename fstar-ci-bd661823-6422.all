@@ -1,0 +1,103 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: aseem_serialization_experiment
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc 6.1.0'.
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent2\_work\1\s\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent2\_work\1\s\bin\prettyprint.dll
+syntax -> C:\Build\Agent2\_work\1\s\bin\syntax.dll
+compiling to dfas (can take a while...)
+339 states
+writing output
+building tables
+computing first function...time: 00:00:00.2326701
+building kernels...time: 00:00:00.1522619
+building kernel table...time: 00:00:00.0187473
+computing lookahead relations..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.5024222
+building lookahead table...time: 00:00:00.2843475
+building action table...state 406: shift/reduce error on SEMICOLON
+state 412: shift/reduce error on BY
+state 434: shift/reduce error on BAR
+state 437: shift/reduce error on LBRACE
+state 438: shift/reduce error on BAR
+state 449: shift/reduce error on BAR
+state 525: shift/reduce error on COLON_EQUALS
+state 561: shift/reduce error on LBRACE
+time: 00:00:00.8387939
+building goto table...time: 00:00:00.2477194
+returning tables.
+8 shift/reduce conflicts
+715 states
+137 nonterminals
+138 terminals
+386 productions
+#rows in action table: 715
+parser -> C:\Build\Agent2\_work\1\s\bin\parser.dll
+typechecker -> C:\Build\Agent2\_work\1\s\bin\typechecker.dll
+format -> C:\Build\Agent2\_work\1\s\bin\format.dll
+extraction -> C:\Build\Agent2\_work\1\s\bin\extraction.dll
+fsdoc -> C:\Build\Agent2\_work\1\s\bin\fsdoc.dll
+smtencoding -> C:\Build\Agent2\_work\1\s\bin\smtencoding.dll
+tactics -> C:\Build\Agent2\_work\1\s\src\tactics\bin\Release\tactics.dll
+tosyntax -> C:\Build\Agent2\_work\1\s\bin\tosyntax.dll
+fstar -> C:\Build\Agent2\_work\1\s\bin\fstar.exe
+C:\Build\Agent2\_work\1\s\src\tests\tactics.fs(53,19): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'. [C:\Build\Agent2\_work\1\s\src\tests\tests.fsproj]
+tests -> C:\Build\Agent2\_work\1\s\bin\tests.exe
+chmod a+x ../bin/tests.exe
+chmod a+x ../bin/fstar.exe
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make fsharp-regressions #normalizer failures on linux so only run on windows
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+../bin/tests.exe
+Initializing ...
+
+Unhandled Exception: System.Exception: Universe variable not found
+at FStar.TypeChecker.Normalize.aux@190-5(cfg cfg, FSharpList`1 env, universe u) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Normalize.fs:line 201
+at FStar.TypeChecker.Normalize.norm_universe(cfg cfg, FSharpList`1 env, universe u) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Normalize.fs:line 228
+at FStar.TypeChecker.Normalize.norm(cfg cfg, FSharpList`1 env, FSharpList`1 stack, syntax`2 t) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Normalize.fs:line 752
+at FStar.TypeChecker.Normalize.norm_binder(cfg cfg, FSharpList`1 env, bv x, FSharpOption`1 imp) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Normalize.fs:line 1333
+at FStar.TypeChecker.Normalize.norm_binders@1337-1.Invoke(Tuple`2 tupledArg) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Normalize.fs:line 1339
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+make: Leaving directory '/cygdrive/c/Build/Agent2/_work/1/s/src'
+at Microsoft.FSharp.Collections.ListModule.loop@242-28[T,TState](FSharpFunc`3 f, TState s, FSharpList`1 xs)
+at FStar.TypeChecker.Normalize.norm_binders(cfg cfg, FSharpList`1 env, FSharpList`1 bs) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Normalize.fs:line 1337
+at FStar.TypeChecker.Normalize.norm(cfg cfg, FSharpList`1 env, FSharpList`1 stack, syntax`2 t) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Normalize.fs:line 918
+at FStar.TypeChecker.Tc.post_process_term(env env, syntax`2 t) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Tc.fs:line 1298
+at FStar.TypeChecker.Tc.post_process_sigel(env env, sigelt' se) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Tc.fs:line 1280
+at FStar.TypeChecker.Tc.ses'@1424.Invoke(sigelt se) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Tc.fs:line 1424
+at Microsoft.FSharp.Primitives.Basics.List.map[T,TResult](FSharpFunc`2 mapping, FSharpList`1 x)
+at FStar.TypeChecker.Tc.process_one_decl@1420-1.Invoke(sigelt se) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Tc.fs:line 1424
+at FStar.Util.fold_flatten[a,b](FSharpFunc`2 f, a acc, FSharpList`1 l) in C:\Build\Agent2\_work\1\s\src\basic\util.fs:line 538
+at FStar.TypeChecker.Tc.tc_decls(env env, FSharpList`1 ses) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Tc.fs:line 1419
+at FStar.TypeChecker.Tc.tc_partial_modul(env env, modul modul) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Tc.fs:line 1457
+at FStar.TypeChecker.Tc.tc_modul(env env, modul modul) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Tc.fs:line 1554
+at FStar.TypeChecker.Tc.check_module(env env, modul m) in C:\Build\Agent2\_work\1\s\src\typechecker\FStar.TypeChecker.Tc.fs:line 1570
+at FStar.Tests.Pars.init_once() in C:\Build\Agent2\_work\1\s\src\tests\pars.fs:line 47
+at FStar.Tests.Pars.init() in C:\Build\Agent2\_work\1\s\src\tests\pars.fs:line 57
+at FStar.Tests.Test.main(String[] argv) in C:\Build\Agent2\_work\1\s\src\tests\test.fs:line 24
+make[1]: *** [Makefile:265: fsharp-regressions] Error 127
+make: *** [Makefile:252: utest] Error 2
