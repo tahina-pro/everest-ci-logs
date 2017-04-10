@@ -1,0 +1,91 @@
+From https://github.com/FStarLang/FStar
+1494b6f..9094d9e  master     -> origin/master
+* [new branch]      aseem_836  -> origin/aseem_836
+26ad191..93fc474  aseem_serialization_experiment -> origin/aseem_serialization_experiment
+* [new branch]      cpitclaudel_refactored_errors -> origin/cpitclaudel_refactored_errors
+* [new branch]      cpitclaudel_syntax_check -> origin/cpitclaudel_syntax_check
++ 21b8fd2...2d5087f cwinter_batch_errors -> origin/cwinter_batch_errors  (forced update)
++ 52fae3b...af10f02 cwinter_cloud_verify -> origin/cwinter_cloud_verify  (forced update)
+* [new branch]      cwinter_gh926 -> origin/cwinter_gh926
+197c18d..91c434f  kyod_tmp0  -> origin/kyod_tmp0
+* [new branch]      santiago_bugs -> origin/santiago_bugs
+4089e8e..17ab358  taramana_modifies -> origin/taramana_modifies
+* [new branch]      vdum_bugs  -> origin/vdum_bugs
+fatal: ambiguous argument '68c4013': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+7 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.OpenSSL.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.Spec.fst.hints; ran without hints
+.\CommonDH.fst(43,8-43,56): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(47,9-51,7): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Hashing.CRF.fst.hints; ran without hints
+.\Hashing.CRF.fst(28,8-28,80): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Malformed JSON hints file: C:\Build\Agent\_work\3\s\src\tls\HMAC.fst.hints; ran without hints
+.\Hashing.CRF.fst(64,4-64,64): (Error) could not prove post-condition
+Verified module: Hashing.CRF (16099 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:251: Hashing.CRF.fst-ver] Error 1
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(106,0-106,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(171,0-171,32): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\Extensions.fst.hints; ran without hints
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(629,0-629,50): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(633,0-636,10): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent\_work\3\s\src\tls\HKDF.fsti.hints; ran without hints
+.\TLSInfo.fst(756,42-756,44): (Error) Subtyping check failed; expected type (x#23557:TLSInfo.logInfo{(Prims.l_not (Prims.b2t (TLSInfo.uu___is_LogInfo_CH x@0)))}); got type TLSInfo.logInfo (see .\TLSInfo.fst(467,27-467,43))
+Verified module: TLSInfo (172311 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:251: TLSInfo.fst-ver] Error 1
+.\MAC_SHA1.fst(66,33-66,39): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HMAC.fst(69,34-69,48))
+.\MAC_SHA1.fst(79,31-79,37): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HMAC.fst(77,40-77,54))
+Verified module: MAC_SHA1 (88986 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:251: MAC_SHA1.fst-ver] Error 1
+.\MAC_SHA256.fst(60,4-60,53): (Error) could not prove post-condition
+.\MAC_SHA256.fst(79,31-79,37): (Error) Subtyping check failed; expected type (lbytes (macKeySize a)); got type (key i) (see .\HMAC.fst(77,40-77,54))
+Verified module: MAC_SHA256 (108239 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:251: MAC_SHA256.fst-ver] Error 1
+.\ConnInvariant.fst(24,31-24,41) : (Error) Data constructor or effect HS not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:251: ConnInvariant.fst-ver] Error 1
+.\TLS.fst(96,9-96,11): (Error) Subtyping check failed; expected type (hs#289:hs{(l_and (b2t (extends (region_of hs@0) m)) (b2t (is_hs_rgn (region_of hs@0))))}); got type hs (see .\Connection.fst(46,48-46,72))
+.\TLS.fst(234,27-234,38): (Error) could not prove post-condition
+Verified module: TLS (765724 milliseconds)
+2 errors were reported (see above)
+make: *** [Makefile:251: TLS.fst-ver] Error 1
+.\Epochs.fst(141,0-147,18): (Error) Unknown assertion failed
+.\Epochs.fst(266,67-266,68): (Error) Failed to verify implicit argument: Subtyping check failed; expected type (i#2768:TLSInfo.id{(Prims.b2t (Prims.op_Equality<0> (TLSInfo.nonce_of_id i@0) n#110694))}); got type TLSInfo.id (see .\Epochs.fst(57,17-57,34))
+.\Epochs.fst(266,87-266,89): (Error) Subtyping check failed; expected type (StAE.reader (TLSInfo.peerId i#110702)); got type (StAE.reader i#110702) (see .\Epochs.fst(59,16-266,68))
+Verified module: Epochs (1073749 milliseconds)
+3 errors were reported (see above)
+make: *** [Makefile:251: Epochs.fst-ver] Error 1
+.\AEAD_GCM.fst(242,0-265,3): (Error) Unknown assertion failed
+Verified module: AEAD_GCM (1248058 milliseconds)
+1 error was reported (see above)
+make: *** [Makefile:251: AEAD_GCM.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
