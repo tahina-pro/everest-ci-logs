@@ -1,0 +1,78 @@
+From https://github.com/FStarLang/FStar
+86cf12e..194d99d  master     -> origin/master
+* [new branch]      adl_fix_967 -> origin/adl_fix_967
+* [new branch]      aseem_844  -> origin/aseem_844
+* [new branch]      cpitclaudel_json -> origin/cpitclaudel_json
++ 6737d0a...3104a3a cpitclaudel_refactored_errors -> origin/cpitclaudel_refactored_errors  (forced update)
+* [new branch]      fournet_eagain -> origin/fournet_eagain
+* [new branch]      guido_bughunt -> origin/guido_bughunt
+* [new branch]      kyod_fsdoc -> origin/kyod_fsdoc
+* [new branch]      santiago_insert -> origin/santiago_insert
+* [new branch]      shaolintl_documentation -> origin/shaolintl_documentation
+75696de..fc20988  shaolintl_two_phase_experiment -> origin/shaolintl_two_phase_experiment
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+7 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+.\Transport.fst(15,23-15,34) : (Error) Identifier not found: [recv_result]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:257: Transport.fst-ver] Error 1
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Transport.fst(15,23-15,34) : (Error) Identifier not found: [recv_result]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:257: Record.fst-ver] Error 1
+.\Transport.fst(15,23-15,34) : (Error) Identifier not found: [recv_result]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:257: Connection.fst-ver] Error 1
+.\Transport.fst(15,23-15,34) : (Error) Identifier not found: [recv_result]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:257: ConnInvariant.fst-ver] Error 1
+.\Transport.fst(15,23-15,34) : (Error) Identifier not found: [recv_result]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:257: FFI.fst-ver] Error 1
+.\Transport.fst(15,23-15,34) : (Error) Identifier not found: [recv_result]
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/batString.mlv", line 145, characters 30-54
+Called from file "src/batReturn.ml", line 29, characters 6-29
+
+make: *** [Makefile:257: TLS.fst-ver] Error 1
+make: Target 'all-ver' not remade because of errors.
