@@ -1,0 +1,64 @@
+From https://github.com/FStarLang/FStar
+2d87c14..6c2f970  master     -> origin/master
+* [new branch]      aseem_836  -> origin/aseem_836
+d866f4c..93fc474  aseem_serialization_experiment -> origin/aseem_serialization_experiment
+* [new branch]      cpitclaudel_argnames -> origin/cpitclaudel_argnames
+* [new branch]      cpitclaudel_json -> origin/cpitclaudel_json
+* [new branch]      cpitclaudel_refactored_errors -> origin/cpitclaudel_refactored_errors
++ 02cdf50...45f3476 cpitclaudel_show_match -> origin/cpitclaudel_show_match  (forced update)
+* [new branch]      cpitclaudel_syntax_check -> origin/cpitclaudel_syntax_check
++ 21b8fd2...2d5087f cwinter_batch_errors -> origin/cwinter_batch_errors  (forced update)
++ 52fae3b...af10f02 cwinter_cloud_verify -> origin/cwinter_cloud_verify  (forced update)
++ 5944569...4aa60c5 cwinter_custom_stack_size -> origin/cwinter_custom_stack_size  (forced update)
+* [new branch]      cwinter_gh926 -> origin/cwinter_gh926
+13ad575..36152c7  darrenge_fstar -> origin/darrenge_fstar
+* [new branch]      guido_bughunt -> origin/guido_bughunt
+* [new branch]      kyod_fsdoc -> origin/kyod_fsdoc
+* [new branch]      kyod_list_additions -> origin/kyod_list_additions
+a653ae0..25c0ee7  kyod_pemfstar -> origin/kyod_pemfstar
+5eb4cf5..709c91f  kyod_private -> origin/kyod_private
+964a9e3..91c434f  kyod_tmp0  -> origin/kyod_tmp0
+041c0f4..d1db126  nik_indexed_effects -> origin/nik_indexed_effects
+4123e2a..7c3f61b  nik_private -> origin/nik_private
+* [new branch]      protz_z3_cygpath -> origin/protz_z3_cygpath
+* [new branch]      santiago_bugs -> origin/santiago_bugs
+39ed4ae..17ab358  taramana_modifies -> origin/taramana_modifies
+* [new branch]      vdum_bugs  -> origin/vdum_bugs
+6e6acaf..5dc87e3  vdum_uf    -> origin/vdum_uf
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+7 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+.\TLSConstants.fst(44,0-44,63): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSConstants.fst(46,0-47,25): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(105,0-105,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(180,0-180,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(90,0-91,64): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+bfeeadd [CI] regenerate hints
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+git branch <new-branch-name> bfeeadd
+
+Switched to branch 'master'
+To git@github.com:mitls/mitls-fstar.git
+a620bcd..bfeeadd  master -> master
