@@ -1,0 +1,1141 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(396,0-396,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(447,0-447,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(498,0-500,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(718,0-720,39): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+.\hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#1090
+.\Equivalence.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?43151 s uu___ uu___-x@1 s0-x@0) (?43152 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: Equivalence.uver] Error 1
+<input>(2,14-2,15): (Error) Expected expression of type "int"; got expression ""hello"" of type "string"
+<input>(2,14-2,15): (Error) Expected expression of type "int"; got expression ""hello"" of type "string"
+.\FStar.DM4F.IntST.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?33135 s uu___ uu___-x@1 s0-x@0) (?33136 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.IntST.uver] Error 1
+.\IfcDeclassify.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?33135 s uu___ uu___-x@1 s0-x@0) (?33136 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: IfcDeclassify.uver] Error 1
+<input>(2,14-2,15): (Error) Expected expression of type "int"; got expression ""hello"" of type "string"
+.\ReifyTest.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> x-x:heap -> Tot (ISTATE_repr (?35045 uu___ uu___-x@1 x-x@0) (?35046 uu___ uu___-x@1 x-x@0)))"; got type "(uu___-x:unit -> x-x:heap -> PURE ((tuple2 heap heap)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: ReifyTest.uver] Error 1
+WARNING: (6801,46): pattern does not contain any variable.
+WARNING: (73076,46): pattern does not contain any variable.
+.\IfcComposeReify.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+WARNING: (7017,46): pattern does not contain any variable.
+make[3]: *** [../Makefile.include:15: IfcComposeReify.uver] Error 1
+WARNING: (6700,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#40244
+.\Platform.Bytes.fst(257,156-260,30): (Warning) Pattern misses at least one bound variable: i#42374
+.\FStar.DM4F.ExnSt.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?33135 s uu___ uu___-x@1 s0-x@0) (?33136 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+WARNING: (7006,46): pattern does not contain any variable.
+make[3]: *** [Makefile:32: FStar.DM4F.ExnSt.uver] Error 1
+.\Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (73076,46): pattern does not contain any variable.
+WARNING: (76952,43): pattern does not contain all quantified variables.
+.\IfcDelimitedReleaseReify.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: IfcDelimitedReleaseReify.uver] Error 1
+WARNING: (73076,46): pattern does not contain any variable.
+WARNING: (76952,43): pattern does not contain all quantified variables.
+.\FStar.DM4F.StExn.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:int -> Tot (STEXN_repr (?42386 uu___ uu___-x@1 s0-x@0) (?42387 uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:int -> PURE ((tuple2 (option int) int)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.StExn.uver] Error 1
+.\MRefST.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> x-x:heap -> Tot (ISTATE_repr (?38675 uu___ uu___-x@1 x-x@0) (?38676 uu___ uu___-x@1 x-x@0)))"; got type "(uu___-x:unit -> x-x:heap -> PURE ((tuple2 heap heap)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: MRefST.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:34: preorders.all] Error 2
+.\IfcExampleReify0.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: IfcExampleReify0.uver] Error 1
+WARNING: (73076,46): pattern does not contain any variable.
+WARNING: (76952,43): pattern does not contain all quantified variables.
+WARNING: (73076,46): pattern does not contain any variable.
+WARNING: (76952,43): pattern does not contain all quantified variables.
+.\FStar.DM4F.ST.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?37493 s uu___ uu___-x@1 s0-x@0) (?37494 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.ST.uver] Error 1
+WARNING: (73076,46): pattern does not contain any variable.
+WARNING: (76952,43): pattern does not contain all quantified variables.
+WARNING: (73076,46): pattern does not contain any variable.
+WARNING: (76952,43): pattern does not contain all quantified variables.
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IfcExampleReify1.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: IfcExampleReify1.uver] Error 1
+WARNING: (73076,46): pattern does not contain any variable.
+WARNING: (76952,43): pattern does not contain all quantified variables.
+.\IfcExampleReify2.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?118291 uu___ uu___-x@1 store-x@0) (?118292 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: IfcExampleReify2.uver] Error 1
+WARNING: (73076,46): pattern does not contain any variable.
+WARNING: (76952,43): pattern does not contain all quantified variables.
+WARNING: (73076,46): pattern does not contain any variable.
+WARNING: (76952,43): pattern does not contain all quantified variables.
+WARNING: (73076,46): pattern does not contain any variable.
+WARNING: (76952,43): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#79854
+WARNING: (4240,51): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(257,156-260,30): (Warning) Pattern misses at least one bound variable: i#89301
+.\IfcExampleReify3.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: IfcExampleReify3.uver] Error 1
+.\FStar.DM4F.Heap.ST.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?47917 s uu___ uu___-x@1 s0-x@0) (?47918 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.Heap.ST.uver] Error 1
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IfcRecursiveHeapReify.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: *** [../Makefile.include:15: IfcRecursiveHeapReify.uver] Error 1
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IfcReificationRegressionTest.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?33135 s uu___ uu___-x@1 s0-x@0) (?33136 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: IfcReificationRegressionTest.uver] Error 1
+.\FStar.DM4F.StExnC.fst(0,0-0,0) : (Error) Expected type "(a-x:Type -> s0-x:int -> Tot (STEXNC_repr (?53239 uu___ a-x@1 s0-x@0) (?53240 uu___ a-x@1 s0-x@0)))"; got type "(a-x:Type -> s0-x:int -> PURE ((tuple2 (option a-x@1) (tuple2 int int))))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.StExnC.uver] Error 1
+.\IfcRecursiveReify.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: IfcRecursiveReify.uver] Error 1
+.\FStar.DM4F.IFC.fst(0,0-0,0) : (Error) Expected type "(l-x:label -> l0-x:label -> Tot (IFC_repr (?50964 uu___ l-x@1 l0-x@0) (?50965 uu___ l-x@1 l0-x@0)))"; got type "(l-x:label -> l0-x:label -> PURE ((option (tuple2 bool label))))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.IFC.uver] Error 1
+.\IfcRulesReify.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: IfcRulesReify.uver] Error 1
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Loops.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?47917 s uu___ uu___-x@1 s0-x@0) (?47918 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: Loops.uver] Error 1
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(158,0-174,5): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IfcTypechecker.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?118291 uu___ uu___-x@1 store-x@0) (?118292 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: IfcTypechecker.uver] Error 1
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\OneTimePad.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:(tuple2 int (uu___:int -> Tot (tuple4 bool bool bool bool))) -> Tot (RANDOM_repr (?48101 uu___ uu___-x@1 store-x@0) (?48102 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:(tuple2 int (uu___:int -> Tot (tuple4 bool bool bool bool))) -> PURE ((tuple2 (tuple4 bool bool bool bool) int)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: OneTimePad.uver] Error 1
+.\Memo.fst(0,0-0,0) : (Error) Expected type "(x-x:int -> h-x:(list (tuple2 int int)) -> Tot (MEMO_repr (?94728 uu___ x-x@1 h-x@0) (?94729 uu___ x-x@1 h-x@0)))"; got type "(x-x:int -> h-x:(list (tuple2 int int)) -> PURE ((tuple2 (option int) (list (tuple2 int int)))))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: Memo.uver] Error 1
+.\FStar.DM4F.IntStore.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:(seq int) -> Tot (INT_STORE_repr (?117440 uu___ uu___-x@1 store-x@0) (?117441 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:(seq int) -> PURE ((tuple2 (option (seq int)) (seq int))))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.IntStore.uver] Error 1
+.\Point.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?47917 s uu___ uu___-x@1 s0-x@0) (?47918 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: Point.uver] Error 1
+.\FStar.DM4F.IntStoreFixedReader.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?101877 uu___ uu___-x@1 store-x@0) (?101878 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.IntStoreFixedReader.uver] Error 1
+.\Ex10a.fst(27,0-27,19): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ProgramEquivalence.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?47917 s uu___ uu___-x@1 s0-x@0) (?47918 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: ProgramEquivalence.uver] Error 1
+.\FStar.DM4F.IntStoreFixed.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.IntStoreFixed.uver] Error 1
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\FStar.DM4F.IntStoreExcFixed.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.IntStoreExcFixed.uver] Error 1
+.\ProgramOptimizations.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: ProgramOptimizations.uver] Error 1
+.\Ex12a.Cap.fst(21,0-21,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Swap.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?47917 s uu___ uu___-x@1 s0-x@0) (?47918 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: Swap.uver] Error 1
+.\FStar.DM4F.Random.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s-x:(tuple2 id tape) -> Tot (RAND_repr (?123436 uu___ uu___-x@1 s-x@0) (?123437 uu___ uu___-x@1 s-x@0)))"; got type "(uu___-x:unit -> s-x:(tuple2 id tape) -> PURE ((tuple2 (option (tuple2 id tape)) id)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:32: FStar.DM4F.Random.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:34: dm4free.all] Error 2
+.\ReifyLong.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: ReifyLong.uver] Error 1
+.\UnionFind.Forest.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?47917 s uu___ uu___-x@1 s0-x@0) (?47918 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: UnionFind.Forest.uver] Error 1
+.\UnionFind.Functions.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?47917 s uu___ uu___-x@1 s0-x@0) (?47918 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: UnionFind.Functions.uver] Error 1
+.\UnionFind.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s0-x:s -> Tot (STATE_h_repr s (?47917 s uu___ uu___-x@1 s0-x@0) (?47918 s uu___ uu___-x@1 s0-x@0)))"; got type "(uu___-x:unit -> s0-x:s -> PURE ((tuple2 s s)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: UnionFind.uver] Error 1
+.\WhileReify.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> store-x:heap -> Tot (INT_STORE_READER_repr (?100606 uu___ uu___-x@1 store-x@0) (?100607 uu___ uu___-x@1 store-x@0)))"; got type "(uu___-x:unit -> store-x:heap -> PURE (heap))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: WhileReify.uver] Error 1
+.\ElGamal.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s-x:(tuple2 id tape) -> Tot (RAND_repr (?111992 uu___ uu___-x@1 s-x@0) (?111993 uu___ uu___-x@1 s-x@0)))"; got type "(uu___-x:unit -> s-x:(tuple2 id tape) -> PURE ((tuple2 (option (tuple2 id tape)) id)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: ElGamal.uver] Error 1
+.\OTP.fst(0,0-0,0) : (Error) Expected type "(uu___-x:unit -> s-x:(tuple2 id tape) -> Tot (RAND_repr (?111992 uu___ uu___-x@1 s-x@0) (?111993 uu___ uu___-x@1 s-x@0)))"; got type "(uu___-x:unit -> s-x:(tuple2 id tape) -> PURE ((tuple2 (option (tuple2 id tape)) id)))"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 5858, characters 12-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 1230, characters 54-216
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3021, characters 21-40
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3963, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 553, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4009, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4364, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [../Makefile.include:15: OTP.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:34: rel.all] Error 2
+.\Ex10a.fst(27,0-27,19): (Warning) Top-level let-bindings must be total; this term may have effects
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\Ex12a.Cap.fst(19,0-19,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: [Makefile:66: Ex01a-ocaml] Error 2 (ignored)
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:277: uexamples] Error 2
+.\hyperstack\FStar.ST.fst(0,0-0,0): (Warning) FStar.Struct: Unexpected output from Z3: (error "line 150625 column 43: unknown constant @x26")
+
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:258: utest] Error 2
