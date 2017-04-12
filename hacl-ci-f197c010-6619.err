@@ -1,0 +1,77 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+7 shift/reduce conflicts.
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --odir poly-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib Poly1305_64.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 239, characters 6-29
+Called from file "src/Kremlin.ml", line 173, characters 6-66
+make[3]: *** [Makefile:122: Poly1305_64.c] Error 2
+make[3]: *** Waiting for unfinished jobs....
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --odir poly-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib AEAD.Poly1305_64.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 239, characters 6-29
+Called from file "src/Kremlin.ml", line 173, characters 6-66
+make[3]: *** [Makefile:137: AEAD_Poly1305_64.c] Error 2
+make[2]: *** [Makefile:6: poly1305-c] Error 2
+make[2]: *** Waiting for unfinished jobs....
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --odir x25519-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../bignum --include ../lib/kremlin --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib Hacl.Test.X25519.fst Curve25519.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 239, characters 6-29
+Called from file "src/Kremlin.ml", line 173, characters 6-66
+make[3]: *** [Makefile:118: extract-c] Error 2
+make[2]: *** [Makefile:6: curve25519-c] Error 2
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent/_work/37/s/dependencies/FStar/bin/fstar.exe --odir aead-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent/_work/37/s/dependencies/FStar/ulib//hyperstack --include ../lib/kremlin --include ../salsa-family/interfaces --include ../curve25519/interfaces --include ../poly1305 --include ../../specs --include ../salsa-family --include ../poly1305 --include ../bignum --include ../../specs --include C:/Build/Agent/_work/37/s/dependencies/kremlin/kremlib Chacha20Poly1305.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 239, characters 6-29
+Called from file "src/Kremlin.ml", line 173, characters 6-66
+make[3]: *** [Makefile:85: extract-aead] Error 2
+make[3]: *** Waiting for unfinished jobs....
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+make[2]: *** [Makefile:6: api-c] Error 2
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+make[1]: *** [Makefile:24: extract-c-code] Error 2
+make: *** [Makefile:11: all] Error 2
