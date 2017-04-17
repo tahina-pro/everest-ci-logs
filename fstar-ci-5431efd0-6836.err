@@ -1,0 +1,61 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 677, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 677, characters 2-13:
+Warning 10: this expression should have type unit.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(396,0-396,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(447,0-447,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(498,0-500,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(718,0-720,39): (Warning) Annotation from val declaration overrides inline type annotation
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/bootlibs/MkPrims.ml", line 89, characters 22-23
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 795, characters 10-111
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2465, characters 25-75
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2291, characters 24-43
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2319, characters 36-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1900, characters 35-57
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2261, characters 36-58
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2279, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4863, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5258, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5308, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5355, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5387, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5382, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 207, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 334, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 353, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 369, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 409, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 201, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 223, characters 6-11
+
+.\u_boot_fsts\FStar.Interactive.fst(76,29-76,40): (Error) Identifier not found: [syntax_only]
+1 error was reported (see above)
+make[3]: *** [Makefile:221: u_extract_fstar] Error 1
+make[3]: Target 'u_extract_all' not remade because of errors.
+make[2]: *** [Makefile:233: ocaml] Error 2
+make[1]: *** [Makefile:243: fstar-ocaml] Error 2
+make: *** [Makefile:257: utest] Error 2
