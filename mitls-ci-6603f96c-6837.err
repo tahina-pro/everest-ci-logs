@@ -1,0 +1,51 @@
+From https://github.com/FStarLang/FStar
+02e44a9..e1f20ce  master     -> origin/master
+d595be3..d83774e  aseem_heap_modeling -> origin/aseem_heap_modeling
+e3d3364..7ffe8ee  c_ppdev_initial -> origin/c_ppdev_initial
+* [new branch]      cpitclaudel_extra_queries -> origin/cpitclaudel_extra_queries
++ 3420b45...f226ab6 cpitclaudel_json -> origin/cpitclaudel_json  (forced update)
++ 7e64483...2657a3d cpitclaudel_refactored_errors -> origin/cpitclaudel_refactored_errors  (forced update)
+ea31ce1..7878d26  cwinter_checked_hints -> origin/cwinter_checked_hints
+36152c7..1efb466  darrenge_fstar -> origin/darrenge_fstar
+b572678..1d484a7  guido_bughunt -> origin/guido_bughunt
++ f77a9bb...b1c44d9 guido_tactics -> origin/guido_tactics  (forced update)
+25c0ee7..6aac06d  kyod_pemfstar -> origin/kyod_pemfstar
+dff96af..156303c  kyod_tmp0  -> origin/kyod_tmp0
+* [new branch]      santiago_989 -> origin/santiago_989
+ae38688..bd7198e  taramana_modifies -> origin/taramana_modifies
+3b48b07..385d60b  vdum_extract_dm4f_effects -> origin/vdum_extract_dm4f_effects
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 660, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 660, characters 2-13:
+Warning 10: this expression should have type unit.
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+Error: not a valid include directory: C:\Build\Agent2\_work\2\hacl-star\secure_api\LowCProvider\fst
+Unexpected error
+FStar_Errors.Err("not a valid include directory: C:\\Build\\Agent2\\_work\\2\\hacl-star\\secure_api\\LowCProvider\\fst\n")
+Raised by primitive operation at file "src/ocaml-output/FStar_Parser_Dep.ml", line 119, characters 12-33
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 98, characters 4-877
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 615, characters 14-33
+Called from file "src/ocaml-output/FStar_Dependencies.ml", line 12, characters 24-66
+Called from file "src/ocaml-output/FStar_Main.ml", line 195, characters 27-116
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[2]: *** [Makefile:387: mitls.cmxa] Error 1
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:12: build] Error 2
+make: *** [Makefile:8: all] Error 2
