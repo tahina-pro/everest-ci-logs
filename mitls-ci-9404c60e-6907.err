@@ -1,0 +1,47 @@
+From https://github.com/FStarLang/FStar
+e1f20ce..3f0124c  master     -> origin/master
+d83774e..4d7e916  aseem_heap_modeling -> origin/aseem_heap_modeling
+* [new branch]      beurdouche_ocaml_4-04-1 -> origin/beurdouche_ocaml_4-04-1
+* [new branch]      catalin_bug866 -> origin/catalin_bug866
++ 5431efd...1250a4d cpitclaudel_extra_queries -> origin/cpitclaudel_extra_queries  (forced update)
++ f226ab6...5fc26cd cpitclaudel_json -> origin/cpitclaudel_json  (forced update)
++ 2657a3d...918e4d7 cpitclaudel_refactored_errors -> origin/cpitclaudel_refactored_errors  (forced update)
+1efb466..fe57051  darrenge_fstar -> origin/darrenge_fstar
+b1c44d9..8404e12  guido_tactics -> origin/guido_tactics
+156303c..3f0124c  kyod_tmp0  -> origin/kyod_tmp0
+2be3721..058b325  nik_private -> origin/nik_private
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 660, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 660, characters 2-13:
+Warning 10: this expression should have type unit.
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+Error: not a valid include directory: C:\Build\Agent2\_work\2\hacl-star\secure_api\LowCProvider\fst
+Unexpected error
+FStar_Errors.Err("not a valid include directory: C:\\Build\\Agent2\\_work\\2\\hacl-star\\secure_api\\LowCProvider\\fst\n")
+Raised by primitive operation at file "src/ocaml-output/FStar_Parser_Dep.ml", line 132, characters 12-33
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 110, characters 4-900
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 669, characters 14-33
+Called from file "src/ocaml-output/FStar_Dependencies.ml", line 12, characters 24-66
+Called from file "src/ocaml-output/FStar_Main.ml", line 210, characters 27-116
+Called from file "src/ocaml-output/FStar_Main.ml", line 239, characters 6-11
+
+make[2]: *** [Makefile:389: mitls.cmxa] Error 1
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:12: build] Error 2
+make: *** [Makefile:8: all] Error 2
