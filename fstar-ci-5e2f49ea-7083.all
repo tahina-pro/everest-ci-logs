@@ -1,0 +1,99 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: cwinter_cloud_verify
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+# make -C VS update-nuget
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+MSBuild auto-detection: using msbuild version '14.0' from 'C:\Program Files (x86)\MSBuild\14.0\bin'.
+Restoring NuGet package FsLexYacc.6.1.0.
+Restoring NuGet package FsLexYacc.Runtime.6.1.0.
+Adding package 'FsLexYacc.Runtime.6.1.0' to folder 'C:\Build\Agent\_work\1\s\src\VS\packages'
+Adding package 'FsLexYacc.6.1.0' to folder 'C:\Build\Agent\_work\1\s\src\VS\packages'
+Added package 'FsLexYacc.Runtime.6.1.0' to folder 'C:\Build\Agent\_work\1\s\src\VS\packages'
+Added package 'FsLexYacc.6.1.0' to folder 'C:\Build\Agent\_work\1\s\src\VS\packages'
+
+NuGet Config files used:
+C:\Build\Agent\_work\1\s\src\VS\.nuget\NuGet.Config
+C:\Users\everbld\AppData\Roaming\NuGet\NuGet.Config
+C:\ProgramData\nuget\Config\Microsoft.VisualStudio.Offline.config
+
+Feeds used:
+C:\Users\everbld\.nuget\packages\
+https://api.nuget.org/v3/index.json
+C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
+
+Installed:
+2 package(s) to packages.config projects
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+MSBuild auto-detection: using msbuild version '14.0' from 'C:\Program Files (x86)\MSBuild\14.0\bin'.
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent\_work\1\s\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+Feeds used:
+C:\Users\everbld\.nuget\packages\
+https://api.nuget.org/v3/index.json
+C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
+
+All packages listed in C:\Build\Agent\_work\1\s\src\parser\packages.config are already installed.
+prettyprint -> C:\Build\Agent\_work\1\s\bin\prettyprint.dll
+syntax -> C:\Build\Agent\_work\1\s\bin\syntax.dll
+compiling to dfas (can take a while...)
+339 states
+writing output
+building tables
+computing first function...time: 00:00:00.2330958
+building kernels...time: 00:00:00.1487927
+building kernel table...time: 00:00:00.0189374
+computing lookahead relations..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.4928278
+building lookahead table...time: 00:00:00.2751597
+building action table...state 406: shift/reduce error on SEMICOLON
+state 412: shift/reduce error on BY
+state 434: shift/reduce error on BAR
+state 437: shift/reduce error on LBRACE
+state 438: shift/reduce error on BAR
+state 449: shift/reduce error on BAR
+state 525: shift/reduce error on COLON_EQUALS
+state 561: shift/reduce error on LBRACE
+time: 00:00:00.8061865
+building goto table...time: 00:00:00.2367243
+returning tables.
+8 shift/reduce conflicts
+715 states
+137 nonterminals
+138 terminals
+386 productions
+#rows in action table: 715
+parser -> C:\Build\Agent\_work\1\s\bin\parser.dll
+typechecker -> C:\Build\Agent\_work\1\s\bin\typechecker.dll
+format -> C:\Build\Agent\_work\1\s\bin\format.dll
+extraction -> C:\Build\Agent\_work\1\s\bin\extraction.dll
+fsdoc -> C:\Build\Agent\_work\1\s\bin\fsdoc.dll
+smtencoding -> C:\Build\Agent\_work\1\s\bin\smtencoding.dll
+tactics -> C:\Build\Agent\_work\1\s\src\tactics\bin\Release\tactics.dll
+tosyntax -> C:\Build\Agent\_work\1\s\bin\tosyntax.dll
+fstar -> C:\Build\Agent\_work\1\s\bin\fstar.exe
+C:\Build\Agent\_work\1\s\src\tests\tactics.fs(53,19): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'. [C:\Build\Agent\_work\1\s\src\tests\tests.fsproj]
+tests -> C:\Build\Agent\_work\1\s\bin\tests.exe
+chmod a+x ../bin/tests.exe
+chmod a+x ../bin/fstar.exe
+chmod a+x ../bin/fabc-make.exe
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+chmod: cannot access '../bin/fabc-make.exe': No such file or directory
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: *** [Makefile:56: all] Error 1
+make: *** [Makefile:253: utest] Error 2
