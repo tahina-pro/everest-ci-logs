@@ -1,0 +1,96 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 660, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 660, characters 2-13:
+Warning 10: this expression should have type unit.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(396,0-396,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(447,0-447,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(498,0-500,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(718,0-720,39): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Tactics.Interpreter.fst(205,16-205,17) : (Error) Expected expression of type "Type"; got expression "0" of type "int"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3415, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 331, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3420, characters 47-61
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1468, characters 22-108
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4724, characters 12-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4749, characters 22-44
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4749, characters 22-44
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1053, characters 23-44
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2765, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4554, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3653, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4017, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 554, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4063, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4151, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4418, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:204: u_extract_tactics] Error 1
+C:\Build\Agent\_work\1\s\src\u_boot_fsts\FStar.Tactics.Interpreter.fst(205,16-205,17) : (Error) Expected expression of type "Type"; got expression "0" of type "int"
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3415, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 331, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3420, characters 47-61
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1468, characters 22-108
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4724, characters 12-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4749, characters 22-44
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4749, characters 22-44
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1053, characters 23-44
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2765, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4554, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3653, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4017, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 554, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4063, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4151, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4418, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 208, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:221: u_extract_fstar] Error 1
+make[3]: Target 'u_extract_all' not remade because of errors.
+make[2]: *** [Makefile:233: ocaml] Error 2
+make[1]: *** [Makefile:243: fstar-ocaml] Error 2
+make: *** [Makefile:257: utest] Error 2
