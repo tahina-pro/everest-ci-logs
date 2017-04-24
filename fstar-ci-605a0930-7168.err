@@ -1,0 +1,106 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 660, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 660, characters 2-13:
+Warning 10: this expression should have type unit.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(396,0-396,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(447,0-447,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(498,0-500,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(718,0-720,39): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Tactics.Interpreter.fst(209,21-209,25) : (Error) Identifier not found: [List.fold]
+Module List resolved into FStar.List, definition fold not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/bootlibs/MkPrims.ml", line 89, characters 22-23
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1440, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2078, characters 30-48
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2291, characters 24-43
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2319, characters 36-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2434, characters 32-51
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2439, characters 33-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2319, characters 36-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2319, characters 36-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2319, characters 36-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2456, characters 33-51
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1900, characters 35-57
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2261, characters 36-58
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2279, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4863, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5258, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5308, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5358, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5390, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5385, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 196, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:204: u_extract_tactics] Error 1
+C:\Build\Agent\_work\1\s\src\u_boot_fsts\FStar.Tactics.Interpreter.fst(209,21-209,25) : (Error) Identifier not found: [List.fold]
+Module List resolved into FStar.List, definition fold not found
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/bootlibs/MkPrims.ml", line 89, characters 22-23
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1440, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2078, characters 30-48
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2291, characters 24-43
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2319, characters 36-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2434, characters 32-51
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2439, characters 33-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2319, characters 36-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2319, characters 36-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2319, characters 36-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2456, characters 33-51
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1900, characters 35-57
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2261, characters 36-58
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2279, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4863, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5258, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5308, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5358, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5390, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5385, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 196, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 323, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 342, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 358, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 398, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 198, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 220, characters 6-11
+
+make[3]: *** [Makefile:221: u_extract_fstar] Error 1
+make[3]: Target 'u_extract_all' not remade because of errors.
+make[2]: *** [Makefile:233: ocaml] Error 2
+make[1]: *** [Makefile:243: fstar-ocaml] Error 2
+make: *** [Makefile:257: utest] Error 2
