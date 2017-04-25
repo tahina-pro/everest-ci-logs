@@ -1,0 +1,1300 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+/bin/sh: 1: 6: not found
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "CoreCrypto.ml", line 526, characters 24-144:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+ECC_X448
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+ar: creating libcrypto.a
+ar: creating libssl.a
+openssl_stub.c: In function 'ocaml_openssl_init':
+openssl_stub.c:93:3: warning: implicit declaration of function 'OPENSSL_config' [-Wimplicit-function-declaration]
+OPENSSL_config("CoreCrypto");
+^
+openssl_stub.c: In function 'ocaml_rsa_gen_key':
+openssl_stub.c:668:23: warning: passing argument 2 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:29: warning: passing argument 3 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:35: warning: passing argument 4 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function 'ocaml_rsa_get_key':
+openssl_stub.c:779:21: warning: passing argument 2 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:27: warning: passing argument 3 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:33: warning: passing argument 4 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function 'ocaml_rsa_encrypt':
+openssl_stub.c:823:23: warning: passing argument 2 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:29: warning: passing argument 3 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:35: warning: passing argument 4 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function 'ocaml_rsa_decrypt':
+openssl_stub.c:878:23: warning: passing argument 2 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:29: warning: passing argument 3 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:35: warning: passing argument 4 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function 'ocaml_rsa_sign':
+openssl_stub.c:922:23: warning: passing argument 2 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:29: warning: passing argument 3 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:35: warning: passing argument 4 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function 'ocaml_rsa_verify':
+openssl_stub.c:975:23: warning: passing argument 2 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:29: warning: passing argument 3 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:35: warning: passing argument 4 of 'RSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function 'ocaml_dsa_gen_params':
+openssl_stub.c:1087:23: warning: passing argument 2 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:29: warning: passing argument 3 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:35: warning: passing argument 4 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c: In function 'ocaml_dsa_gen_key':
+openssl_stub.c:1144:23: warning: passing argument 2 of 'DSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1144:31: warning: passing argument 3 of 'DSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function 'ocaml_dsa_get_key':
+openssl_stub.c:1183:21: warning: passing argument 2 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:27: warning: passing argument 3 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:33: warning: passing argument 4 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1190:21: warning: passing argument 2 of 'DSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1190:29: warning: passing argument 3 of 'DSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function 'ocaml_dsa_set_key':
+openssl_stub.c:1235:23: warning: passing argument 2 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:29: warning: passing argument 3 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:35: warning: passing argument 4 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1236:23: warning: passing argument 2 of 'DSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1236:31: warning: passing argument 3 of 'DSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function 'ocaml_dsa_sign':
+openssl_stub.c:1325:23: warning: passing argument 2 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:29: warning: passing argument 3 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:35: warning: passing argument 4 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1326:23: warning: passing argument 2 of 'DSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1326:31: warning: passing argument 3 of 'DSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function 'ocaml_dsa_verify':
+openssl_stub.c:1368:23: warning: passing argument 2 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:29: warning: passing argument 3 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:35: warning: passing argument 4 of 'DSA_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1369:23: warning: passing argument 2 of 'DSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1369:31: warning: passing argument 3 of 'DSA_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function 'ocaml_dh_gen_params':
+openssl_stub.c:1473:21: warning: passing argument 2 of 'DH_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:27: warning: passing argument 3 of 'DH_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:33: warning: passing argument 4 of 'DH_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function 'ocaml_dh_params_of_string':
+openssl_stub.c:1506:21: warning: passing argument 2 of 'DH_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:27: warning: passing argument 3 of 'DH_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:33: warning: passing argument 4 of 'DH_get0_pqg' from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function 'ocaml_dh_gen_key':
+openssl_stub.c:1561:21: warning: passing argument 2 of 'DH_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1561:29: warning: passing argument 3 of 'DH_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c: In function 'ocaml_dh_compute':
+openssl_stub.c:1672:21: warning: passing argument 2 of 'DH_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1672:29: warning: passing argument 3 of 'DH_get0_key' from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected 'const BIGNUM ** {aka const struct bignum_st **}' but argument is of type 'BIGNUM ** {aka struct bignum_st **}'
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c: In function 'ocaml_load_chain':
+openssl_stub.c:2198:16: warning: variable 'first' set but not used [-Wunused-but-set-variable]
+X509 *x509, *first = NULL;
+^
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Z, and its interface was not compiled with -opaque
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: Spec.Curve25519.expected2, Spec.Curve25519.expected1, Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.expected1, Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.scalar1 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Curve25519.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 8: : After inlining, Hacl.Bignum.Fmul.shift_reduce calls Hacl.Bignum.Fproduct.shift. This is a call across translation units but Hacl.Bignum.Fproduct.shift has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.shift from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.shift_reduce calls Hacl.Bignum.Modulo.reduce. This is a call across translation units but Hacl.Bignum.Modulo.reduce has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.reduce from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.mul_shift_reduce_ calls Hacl.Bignum.Fproduct.sum_scalar_multiplication_. This is a call across translation units but Hacl.Bignum.Fproduct.sum_scalar_multiplication_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.sum_scalar_multiplication_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.carry_wide_. This is a call across translation units but Hacl.Bignum.Fproduct.carry_wide_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_wide_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Modulo.carry_top_wide. This is a call across translation units but Hacl.Bignum.Modulo.carry_top_wide has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.carry_top_wide from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.copy_from_wide_. This is a call across translation units but Hacl.Bignum.Fproduct.copy_from_wide_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.copy_from_wide_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.carry_0_to_1. This is a call across translation units but Hacl.Bignum.Fproduct.carry_0_to_1 has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_0_to_1 from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.AddAndMultiply.add_and_multiply calls Hacl.Bignum.Fsum.fsum_. This is a call across translation units but Hacl.Bignum.Fsum.fsum_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fsum.fsum_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.AddAndMultiply.add_and_multiply calls Hacl.Bignum.Fmul.fmul. This is a call across translation units but Hacl.Bignum.Fmul.fmul has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fmul.fmul from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.poly1305_update calls Hacl.Bignum.AddAndMultiply.add_and_multiply. This is a call across translation units but Hacl.Bignum.AddAndMultiply.add_and_multiply has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.AddAndMultiply.add_and_multiply from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.carry_last_unrolled calls Hacl.Bignum.Modulo.carry_top. This is a call across translation units but Hacl.Bignum.Modulo.carry_top has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.carry_top from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.poly1305_last_pass calls Hacl.Bignum.Fproduct.carry_limb_. This is a call across translation units but Hacl.Bignum.Fproduct.carry_limb_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_limb_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Standalone.Poly1305_64.poly1305_blocks calls Hacl.Impl.Poly1305_64.poly1305_update. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_update has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_update from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Standalone.Poly1305_64.poly1305_complete calls Hacl.Impl.Poly1305_64.poly1305_process_last_block. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_process_last_block has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_process_last_block from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.GF128.test, Spec.GF128.expected, Spec.GF128.h and Spec.GF128.info mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.GF128.expected, Spec.GF128.h and Spec.GF128.info mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.GF128.h and Spec.GF128.info mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.GF128.info mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 6: in the definition of k1, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k1, after the definition of len1, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of h0, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @6 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.setup -- removing the static qualifier from Hacl.Impl.Chacha20.setup
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.setup. This is a call across translation units but Hacl.Impl.Chacha20.setup has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.setup from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.copy_state -- removing the static qualifier from Hacl.Impl.Chacha20.copy_state
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.copy_state. This is a call across translation units but Hacl.Impl.Chacha20.copy_state has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.copy_state from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.rounds -- removing the static qualifier from Hacl.Impl.Chacha20.rounds
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.rounds. This is a call across translation units but Hacl.Impl.Chacha20.rounds has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.rounds from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.sum_states -- removing the static qualifier from Hacl.Impl.Chacha20.sum_states
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.sum_states. This is a call across translation units but Hacl.Impl.Chacha20.sum_states has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.sum_states from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Lib.LoadStore32.uint32s_to_le_bytes -- removing the static qualifier from Hacl.Lib.LoadStore32.uint32s_to_le_bytes
+Warning 7: : After inlining, Spec.GaloisField.to_felem calls FStar.UInt.to_vec -- removing the static qualifier from FStar.UInt.to_vec
+Warning 7: : After inlining, Spec.GaloisField.from_felem calls FStar.UInt.from_vec -- removing the static qualifier from FStar.UInt.from_vec
+Warning 7: : After inlining, Spec.GaloisField.zero calls FStar.BitVector.zero_vec -- removing the static qualifier from FStar.BitVector.zero_vec
+Warning 7: : After inlining, Spec.GaloisField.fadd calls FStar.BitVector.logxor_vec -- removing the static qualifier from FStar.BitVector.logxor_vec
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update calls Hacl.Impl.Poly1305_64.poly1305_update -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_update
+Warning 8: : After inlining, Crypto.Symmetric.MAC.update calls Hacl.Impl.Poly1305_64.poly1305_update. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_update has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_update from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update calls Hacl.Impl.Poly1305_64.mk_state -- removing the static qualifier from Hacl.Impl.Poly1305_64.mk_state
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify calls FStar.Monotonic.RRef.m_recall -- removing the static qualifier from FStar.Monotonic.RRef.m_recall
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify calls Hacl.Impl.Poly1305_64.poly1305_last_pass -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_last_pass
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify calls Hacl.Impl.Poly1305_64.poly1305_process_last_block -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_process_last_block
+Warning 8: : After inlining, Crypto.Symmetric.UF1CMA.verify calls Hacl.Impl.Poly1305_64.poly1305_process_last_block. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_process_last_block has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_process_last_block from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.Symmetric.UF1CMA.__proj__Acc__item__a -- removing the static qualifier from Crypto.Symmetric.UF1CMA.__proj__Acc__item__a
+Warning 7: : After inlining, Crypto.KrmlTest.test calls Crypto.AEAD.Encrypt.encrypt -- removing the static qualifier from Crypto.AEAD.Encrypt.encrypt
+Warning 7: : After inlining, Crypto.KrmlTest.test calls Crypto.AEAD.Decrypt.decrypt -- removing the static qualifier from Crypto.AEAD.Decrypt.decrypt
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.GF128.test, Spec.GF128.expected, Spec.GF128.h and Spec.GF128.info mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.GF128.expected, Spec.GF128.h and Spec.GF128.info mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.GF128.h and Spec.GF128.info mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.GF128.info mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 6: in the definition of k1, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k1, after the definition of len1, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of h0, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @6 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @3 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.setup -- removing the static qualifier from Hacl.Impl.Chacha20.setup
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.setup. This is a call across translation units but Hacl.Impl.Chacha20.setup has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.setup from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.copy_state -- removing the static qualifier from Hacl.Impl.Chacha20.copy_state
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.copy_state. This is a call across translation units but Hacl.Impl.Chacha20.copy_state has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.copy_state from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.rounds -- removing the static qualifier from Hacl.Impl.Chacha20.rounds
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.rounds. This is a call across translation units but Hacl.Impl.Chacha20.rounds has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.rounds from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.sum_states -- removing the static qualifier from Hacl.Impl.Chacha20.sum_states
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Impl.Chacha20.sum_states. This is a call across translation units but Hacl.Impl.Chacha20.sum_states has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.sum_states from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute calls Hacl.Lib.LoadStore32.uint32s_to_le_bytes -- removing the static qualifier from Hacl.Lib.LoadStore32.uint32s_to_le_bytes
+Warning 7: : After inlining, Spec.GaloisField.to_felem calls FStar.UInt.to_vec -- removing the static qualifier from FStar.UInt.to_vec
+Warning 7: : After inlining, Spec.GaloisField.from_felem calls FStar.UInt.from_vec -- removing the static qualifier from FStar.UInt.from_vec
+Warning 7: : After inlining, Spec.GaloisField.zero calls FStar.BitVector.zero_vec -- removing the static qualifier from FStar.BitVector.zero_vec
+Warning 7: : After inlining, Spec.GaloisField.fadd calls FStar.BitVector.logxor_vec -- removing the static qualifier from FStar.BitVector.logxor_vec
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update calls Hacl.Impl.Poly1305_64.poly1305_update -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_update
+Warning 8: : After inlining, Crypto.Symmetric.MAC.update calls Hacl.Impl.Poly1305_64.poly1305_update. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_update has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_update from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update calls Hacl.Impl.Poly1305_64.mk_state -- removing the static qualifier from Hacl.Impl.Poly1305_64.mk_state
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify calls FStar.Monotonic.RRef.m_recall -- removing the static qualifier from FStar.Monotonic.RRef.m_recall
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify calls Hacl.Impl.Poly1305_64.poly1305_last_pass -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_last_pass
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify calls Hacl.Impl.Poly1305_64.poly1305_process_last_block -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_process_last_block
+Warning 8: : After inlining, Crypto.Symmetric.UF1CMA.verify calls Hacl.Impl.Poly1305_64.poly1305_process_last_block. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_process_last_block has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_process_last_block from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt calls Crypto.Symmetric.UF1CMA.__proj__Acc__item__a -- removing the static qualifier from Crypto.Symmetric.UF1CMA.__proj__Acc__item__a
+Warning 7: : After inlining, Crypto.KrmlTest.test calls Crypto.AEAD.Encrypt.encrypt -- removing the static qualifier from Crypto.AEAD.Encrypt.encrypt
+Warning 7: : After inlining, Crypto.KrmlTest.test calls Crypto.AEAD.Decrypt.decrypt -- removing the static qualifier from Crypto.AEAD.Decrypt.decrypt
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: Spec.Curve25519.expected2, Spec.Curve25519.expected1, Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.expected1, Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.scalar1 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Curve25519.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 8: : After inlining, Hacl.Bignum.Fmul.shift_reduce calls Hacl.Bignum.Fproduct.shift. This is a call across translation units but Hacl.Bignum.Fproduct.shift has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.shift from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.shift_reduce calls Hacl.Bignum.Modulo.reduce. This is a call across translation units but Hacl.Bignum.Modulo.reduce has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.reduce from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.mul_shift_reduce_ calls Hacl.Bignum.Fproduct.sum_scalar_multiplication_. This is a call across translation units but Hacl.Bignum.Fproduct.sum_scalar_multiplication_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.sum_scalar_multiplication_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.carry_wide_. This is a call across translation units but Hacl.Bignum.Fproduct.carry_wide_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_wide_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Modulo.carry_top_wide. This is a call across translation units but Hacl.Bignum.Modulo.carry_top_wide has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.carry_top_wide from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.copy_from_wide_. This is a call across translation units but Hacl.Bignum.Fproduct.copy_from_wide_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.copy_from_wide_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.carry_0_to_1. This is a call across translation units but Hacl.Bignum.Fproduct.carry_0_to_1 has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_0_to_1 from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.AddAndMultiply.add_and_multiply calls Hacl.Bignum.Fsum.fsum_. This is a call across translation units but Hacl.Bignum.Fsum.fsum_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fsum.fsum_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Bignum.AddAndMultiply.add_and_multiply calls Hacl.Bignum.Fmul.fmul. This is a call across translation units but Hacl.Bignum.Fmul.fmul has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fmul.fmul from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.poly1305_update calls Hacl.Bignum.AddAndMultiply.add_and_multiply. This is a call across translation units but Hacl.Bignum.AddAndMultiply.add_and_multiply has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.AddAndMultiply.add_and_multiply from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.carry_last_unrolled calls Hacl.Bignum.Modulo.carry_top. This is a call across translation units but Hacl.Bignum.Modulo.carry_top has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.carry_top from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.poly1305_last_pass calls Hacl.Bignum.Fproduct.carry_limb_. This is a call across translation units but Hacl.Bignum.Fproduct.carry_limb_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_limb_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Standalone.Poly1305_64.poly1305_blocks calls Hacl.Impl.Poly1305_64.poly1305_update. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_update has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_update from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+Warning 8: : After inlining, Hacl.Standalone.Poly1305_64.poly1305_complete calls Hacl.Impl.Poly1305_64.poly1305_process_last_block. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_process_last_block has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_process_last_block from its translation unit (see C11 6.7.3 §5), and CompCert will do it.
+HACLEngine.c: In function 'Everest_create_all_the_things':
+HACLEngine.c:332:24: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+hacl_chacha20_cipher = EVP_chacha20();
+^
+HACLEngine.c: In function 'Wrapper_Chacha20_Cipher':
+HACLEngine.c:127:26: warning: passing argument 2 of 'Chacha20_chacha20' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+Chacha20_chacha20(out, in, len, my_ctx, my_ctx + CHACHA20_KEY_SIZE, 0);
+^
+In file included from HACLEngine.c:23:0:
+../../code/salsa-family/chacha-c/Chacha20.h:39:1: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'const unsigned char *'
+Chacha20_chacha20(
+^
+HACLEngine.c: In function 'hacl_poly1305_init':
+HACLEngine.c:148:20: error: incompatible type for argument 1 of 'Poly1305_64_init'
+Poly1305_64_init(*state, poly1305_dummy_key);
+^
+In file included from HACLEngine.c:22:0:
+../../code/poly1305/poly-c/Poly1305_64.h:88:6: note: expected 'Hacl_Impl_Poly1305_64_poly1305_state * {aka struct <anonymous> *}' but argument is of type 'Poly1305_64_state {aka struct <anonymous>}'
+void Poly1305_64_init(Hacl_Impl_Poly1305_64_poly1305_state *st, uint8_t *k1);
+^
+HACLEngine.c: In function 'hacl_poly1305_update':
+HACLEngine.c:167:22: error: incompatible type for argument 1 of 'Poly1305_64_update'
+Poly1305_64_update(*state, (uint8_t *) data, (uint32_t) n_blocks);
+^
+In file included from HACLEngine.c:22:0:
+../../code/poly1305/poly-c/Poly1305_64.h:94:6: note: expected 'Hacl_Impl_Poly1305_64_poly1305_state * {aka struct <anonymous> *}' but argument is of type 'Poly1305_64_state {aka struct <anonymous>}'
+void Poly1305_64_update(Hacl_Impl_Poly1305_64_poly1305_state *st, uint8_t *m, uint32_t len1);
+^
+HACLEngine.c: In function 'hacl_poly1305_final':
+HACLEngine.c:177:27: error: incompatible type for argument 1 of 'Poly1305_64_update_last'
+Poly1305_64_update_last(*state, NULL, 0);
+^
+In file included from HACLEngine.c:22:0:
+../../code/poly1305/poly-c/Poly1305_64.h:97:1: note: expected 'Hacl_Impl_Poly1305_64_poly1305_state * {aka struct <anonymous> *}' but argument is of type 'Poly1305_64_state {aka struct <anonymous>}'
+Poly1305_64_update_last(Hacl_Impl_Poly1305_64_poly1305_state *st, uint8_t *m, uint32_t len1);
+^
+HACLEngine.c:178:22: error: incompatible type for argument 1 of 'Poly1305_64_finish'
+Poly1305_64_finish(*state, md, poly1305_dummy_key + 16);
+^
+In file included from HACLEngine.c:22:0:
+../../code/poly1305/poly-c/Poly1305_64.h:99:6: note: expected 'Hacl_Impl_Poly1305_64_poly1305_state * {aka struct <anonymous> *}' but argument is of type 'Poly1305_64_state {aka struct <anonymous>}'
+void Poly1305_64_finish(Hacl_Impl_Poly1305_64_poly1305_state *st, uint8_t *mac, uint8_t *k1);
+^
+../../code/curve25519/x25519-c/Curve25519.c: In function 'Hacl_Bignum_Modulo_carry_top_wide':
+../../code/curve25519/x25519-c/Curve25519.c:26:55: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )1, &ret0);
+^
+../../code/curve25519/x25519-c/Curve25519.c:26:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128((uint64_t )1, &ret0);
+^
+../../code/curve25519/x25519-c/Curve25519.c:26:3: note: each undeclared identifier is reported only once for each function it appears in
+../../code/curve25519/x25519-c/Curve25519.c:30:55: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )1, &ret2);
+^
+../../code/curve25519/x25519-c/Curve25519.c:32:53: error: macro "FStar_UInt128_shift_left" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_left(&s0, (uint32_t )51, &ret1);
+^
+../../code/curve25519/x25519-c/Curve25519.c:32:3: error: 'FStar_UInt128_shift_left' undeclared (first use in this function)
+FStar_UInt128_shift_left(&s0, (uint32_t )51, &ret1);
+^
+../../code/curve25519/x25519-c/Curve25519.c:34:37: error: macro "FStar_UInt128_sub" passed 3 arguments, but takes just 2
+FStar_UInt128_sub(&s00, &s1, &mask);
+^
+../../code/curve25519/x25519-c/Curve25519.c:34:3: error: 'FStar_UInt128_sub' undeclared (first use in this function)
+FStar_UInt128_sub(&s00, &s1, &mask);
+^
+../../code/curve25519/x25519-c/Curve25519.c:36:40: error: macro "FStar_UInt128_logand" passed 3 arguments, but takes just 2
+FStar_UInt128_logand(&b4, &mask, &b4_);
+^
+../../code/curve25519/x25519-c/Curve25519.c:36:3: error: 'FStar_UInt128_logand' undeclared (first use in this function)
+FStar_UInt128_logand(&b4, &mask, &b4_);
+^
+../../code/curve25519/x25519-c/Curve25519.c:40:53: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&b4, (uint32_t )51, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c:40:3: error: 'FStar_UInt128_shift_right' undeclared (first use in this function)
+FStar_UInt128_shift_right(&b4, (uint32_t )51, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c:42:86: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide((uint64_t )19, FStar_Int_Cast_uint128_to_uint64(&s01), &ret3);
+^
+../../code/curve25519/x25519-c/Curve25519.c:42:3: error: 'FStar_UInt128_mul_wide' undeclared (first use in this function)
+FStar_UInt128_mul_wide((uint64_t )19, FStar_Int_Cast_uint128_to_uint64(&s01), &ret3);
+^
+../../code/curve25519/x25519-c/Curve25519.c:44:36: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&b0, &s10, &b0_);
+^
+../../code/curve25519/x25519-c/Curve25519.c:44:3: error: 'FStar_UInt128_add' undeclared (first use in this function)
+FStar_UInt128_add(&b0, &s10, &b0_);
+^
+../../code/curve25519/x25519-c/Curve25519.c: In function 'Hacl_Bignum_Fproduct_sum_scalar_multiplication_':
+../../code/curve25519/x25519-c/Curve25519.c:90:46: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(uu____766, s, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c:90:5: error: 'FStar_UInt128_mul_wide' undeclared (first use in this function)
+FStar_UInt128_mul_wide(uu____766, s, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c:92:54: error: macro "FStar_UInt128_add_mod" passed 3 arguments, but takes just 2
+FStar_UInt128_add_mod(&uu____763, &s1, &uu____762);
+^
+../../code/curve25519/x25519-c/Curve25519.c:92:5: error: 'FStar_UInt128_add_mod' undeclared (first use in this function)
+FStar_UInt128_add_mod(&uu____763, &s1, &uu____762);
+^
+../../code/curve25519/x25519-c/Curve25519.c: In function 'Hacl_Bignum_Fproduct_carry_wide_':
+../../code/curve25519/x25519-c/Curve25519.c:107:55: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&tctr, (uint32_t )51, &c);
+^
+../../code/curve25519/x25519-c/Curve25519.c:107:5: error: 'FStar_UInt128_shift_right' undeclared (first use in this function)
+FStar_UInt128_shift_right(&tctr, (uint32_t )51, &c);
+^
+../../code/curve25519/x25519-c/Curve25519.c:108:51: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128(r0, &tmp[ctr]);
+^
+../../code/curve25519/x25519-c/Curve25519.c:108:5: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128(r0, &tmp[ctr]);
+^
+../../code/curve25519/x25519-c/Curve25519.c:109:60: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&tctrp1, &c, &tmp[ctr + (uint32_t )1]);
+^
+../../code/curve25519/x25519-c/Curve25519.c:109:5: error: 'FStar_UInt128_add' undeclared (first use in this function)
+FStar_UInt128_add(&tctrp1, &c, &tmp[ctr + (uint32_t )1]);
+^
+../../code/curve25519/x25519-c/Curve25519.c: In function 'Hacl_Bignum_Fmul_fmul_':
+../../code/curve25519/x25519-c/Curve25519.c:148:54: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c:148:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c: In function 'Hacl_Bignum_Fsquare_fsquare__':
+../../code/curve25519/x25519-c/Curve25519.c:198:39: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(d2, r3, &ret0);
+^
+../../code/curve25519/x25519-c/Curve25519.c:198:3: error: 'FStar_UInt128_mul_wide' undeclared (first use in this function)
+FStar_UInt128_mul_wide(d2, r3, &ret0);
+^
+../../code/curve25519/x25519-c/Curve25519.c:202:39: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(d4, r1, &ret2);
+^
+../../code/curve25519/x25519-c/Curve25519.c:205:39: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(r0, r0, &ret3);
+^
+../../code/curve25519/x25519-c/Curve25519.c:207:38: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&s00, &s10, &ret1);
+^
+../../code/curve25519/x25519-c/Curve25519.c:207:3: error: 'FStar_UInt128_add' undeclared (first use in this function)
+FStar_UInt128_add(&s00, &s10, &ret1);
+^
+../../code/curve25519/x25519-c/Curve25519.c:209:35: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&s01, &s1, &s0);
+^
+../../code/curve25519/x25519-c/Curve25519.c:212:55: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(r3 * (uint64_t )19, r3, &ret4);
+^
+../../code/curve25519/x25519-c/Curve25519.c:216:39: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(d4, r2, &ret6);
+^
+../../code/curve25519/x25519-c/Curve25519.c:219:39: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(d0, r1, &ret7);
+^
+../../code/curve25519/x25519-c/Curve25519.c:221:38: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&s02, &s13, &ret5);
+^
+../../code/curve25519/x25519-c/Curve25519.c:223:37: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&s03, &s12, &s11);
+^
+../../code/curve25519/x25519-c/Curve25519.c:226:39: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(d4, r3, &ret8);
+^
+../../code/curve25519/x25519-c/Curve25519.c:230:40: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(r1, r1, &ret10);
+^
+../../code/curve25519/x25519-c/Curve25519.c:233:40: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(d0, r2, &ret11);
+^
+../../code/curve25519/x25519-c/Curve25519.c:235:38: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&s04, &s15, &ret9);
+^
+../../code/curve25519/x25519-c/Curve25519.c:237:36: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&s05, &s14, &s2);
+^
+../../code/curve25519/x25519-c/Curve25519.c:240:42: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(r4, d419, &ret12);
+^
+../../code/curve25519/x25519-c/Curve25519.c:244:40: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(d1, r2, &ret14);
+^
+../../code/curve25519/x25519-c/Curve25519.c:247:40: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(d0, r3, &ret15);
+^
+../../code/curve25519/x25519-c/Curve25519.c:249:39: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&s06, &s17, &ret13);
+^
+../../code/curve25519/x25519-c/Curve25519.c:251:36: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&s07, &s16, &s3);
+^
+../../code/curve25519/x25519-c/Curve25519.c:254:40: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(r2, r2, &ret16);
+^
+../../code/curve25519/x25519-c/Curve25519.c:258:40: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(d1, r3, &ret18);
+^
+../../code/curve25519/x25519-c/Curve25519.c:261:38: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(d0, r4, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c:263:39: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&s08, &s19, &ret17);
+^
+../../code/curve25519/x25519-c/Curve25519.c:265:36: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&s09, &s18, &s4);
+^
+../../code/curve25519/x25519-c/Curve25519.c: In function 'Hacl_Bignum_Fsquare_fsquare_times':
+../../code/curve25519/x25519-c/Curve25519.c:301:54: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c:301:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c: In function 'Hacl_Bignum_Fsquare_fsquare_times_inplace':
+../../code/curve25519/x25519-c/Curve25519.c:313:54: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c:313:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c: In function 'Hacl_Bignum_Fscalar_fscalar':
+../../code/curve25519/x25519-c/Curve25519.c:389:52: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(uu____381, s, &uu____380);
+^
+../../code/curve25519/x25519-c/Curve25519.c:389:5: error: 'FStar_UInt128_mul_wide' undeclared (first use in this function)
+FStar_UInt128_mul_wide(uu____381, s, &uu____380);
+^
+../../code/curve25519/x25519-c/Curve25519.c: In function 'Hacl_Bignum_fscalar':
+../../code/curve25519/x25519-c/Curve25519.c:420:54: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0, &ret);
+^
+../../code/curve25519/x25519-c/Curve25519.c:420:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Hacl_Bignum_Modulo_carry_top_wide':
+../../code/poly1305/poly-c/Poly1305_64.c:24:67: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0x3ffffffffff, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:24:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0x3ffffffffff, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:24:3: note: each undeclared identifier is reported only once for each function it appears in
+../../code/poly1305/poly-c/Poly1305_64.c:26:38: error: macro "FStar_UInt128_logand" passed 3 arguments, but takes just 2
+FStar_UInt128_logand(&b2, &s1, &b2_);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:26:3: error: 'FStar_UInt128_logand' undeclared (first use in this function)
+FStar_UInt128_logand(&b2, &s1, &b2_);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:28:54: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&b2, (uint32_t )42, &ret1);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:28:3: error: 'FStar_UInt128_shift_right' undeclared (first use in this function)
+FStar_UInt128_shift_right(&b2, (uint32_t )42, &ret1);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:33:73: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((b2_42 << (uint32_t )2) + b2_42, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:35:36: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&b0, &s10, &b0_);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:35:3: error: 'FStar_UInt128_add' undeclared (first use in this function)
+FStar_UInt128_add(&b0, &s10, &b0_);
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Hacl_Bignum_Fproduct_sum_scalar_multiplication_':
+../../code/poly1305/poly-c/Poly1305_64.c:81:46: error: macro "FStar_UInt128_mul_wide" passed 3 arguments, but takes just 2
+FStar_UInt128_mul_wide(uu____766, s, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:81:5: error: 'FStar_UInt128_mul_wide' undeclared (first use in this function)
+FStar_UInt128_mul_wide(uu____766, s, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:83:54: error: macro "FStar_UInt128_add_mod" passed 3 arguments, but takes just 2
+FStar_UInt128_add_mod(&uu____763, &s1, &uu____762);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:83:5: error: 'FStar_UInt128_add_mod' undeclared (first use in this function)
+FStar_UInt128_add_mod(&uu____763, &s1, &uu____762);
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Hacl_Bignum_Fproduct_carry_wide_':
+../../code/poly1305/poly-c/Poly1305_64.c:98:55: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&tctr, (uint32_t )44, &c);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:98:5: error: 'FStar_UInt128_shift_right' undeclared (first use in this function)
+FStar_UInt128_shift_right(&tctr, (uint32_t )44, &c);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:99:51: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128(r0, &tmp[ctr]);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:99:5: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128(r0, &tmp[ctr]);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:100:60: error: macro "FStar_UInt128_add" passed 3 arguments, but takes just 2
+FStar_UInt128_add(&tctrp1, &c, &tmp[ctr + (uint32_t )1]);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:100:5: error: 'FStar_UInt128_add' undeclared (first use in this function)
+FStar_UInt128_add(&tctrp1, &c, &tmp[ctr + (uint32_t )1]);
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Hacl_Bignum_Fmul_fmul_':
+../../code/poly1305/poly-c/Poly1305_64.c:153:54: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:153:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Hacl_Impl_Poly1305_64_poly1305_update':
+../../code/poly1305/poly-c/Poly1305_64.c:202:3: error: too many arguments to function 'load128_le'
+load128_le(m, &m0);
+^
+In file included from ../../code/poly1305/poly-c/Poly1305_64.h:7:0,
+from ../../code/poly1305/poly-c/Poly1305_64.c:1:
+/home/everest/vsts-agent/_work/3/s/dependencies/kremlin/kremlib/kremlib.h:353:25: note: declared here
+static inline uint128_t load128_le(uint8_t *b) {
+^
+../../code/poly1305/poly-c/Poly1305_64.c:205:54: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&m0, (uint32_t )44, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:205:3: error: 'FStar_UInt128_shift_right' undeclared (first use in this function)
+FStar_UInt128_shift_right(&m0, (uint32_t )44, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:209:53: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&m0, (uint32_t )88, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Hacl_Impl_Poly1305_64_poly1305_process_last_block_':
+../../code/poly1305/poly-c/Poly1305_64.c:233:3: error: too many arguments to function 'load128_le'
+load128_le(block, &m0);
+^
+In file included from ../../code/poly1305/poly-c/Poly1305_64.h:7:0,
+from ../../code/poly1305/poly-c/Poly1305_64.c:1:
+/home/everest/vsts-agent/_work/3/s/dependencies/kremlin/kremlib/kremlib.h:353:25: note: declared here
+static inline uint128_t load128_le(uint8_t *b) {
+^
+../../code/poly1305/poly-c/Poly1305_64.c:236:54: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&m0, (uint32_t )44, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:236:3: error: 'FStar_UInt128_shift_right' undeclared (first use in this function)
+FStar_UInt128_shift_right(&m0, (uint32_t )44, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:240:53: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&m0, (uint32_t )88, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Hacl_Standalone_Poly1305_64_poly1305_blocks':
+../../code/poly1305/poly-c/Poly1305_64.c:328:9: warning: variable 'ite' set but not used [-Wunused-but-set-variable]
+void *ite;
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Hacl_Standalone_Poly1305_64_poly1305_partial':
+../../code/poly1305/poly-c/Poly1305_64.c:362:3: error: too many arguments to function 'load128_le'
+load128_le(x1, &k1);
+^
+In file included from ../../code/poly1305/poly-c/Poly1305_64.h:7:0,
+from ../../code/poly1305/poly-c/Poly1305_64.c:1:
+/home/everest/vsts-agent/_work/3/s/dependencies/kremlin/kremlib/kremlib.h:353:25: note: declared here
+static inline uint128_t load128_le(uint8_t *b) {
+^
+../../code/poly1305/poly-c/Poly1305_64.c:366:72: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0x0ffffffc0fffffff, &ret1);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:366:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0x0ffffffc0fffffff, &ret1);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:370:72: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0x0ffffffc0ffffffc, &ret3);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:372:53: error: macro "FStar_UInt128_shift_left" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_left(&s0, (uint32_t )64, &ret2);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:372:3: error: 'FStar_UInt128_shift_left' undeclared (first use in this function)
+FStar_UInt128_shift_left(&s0, (uint32_t )64, &ret2);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:374:39: error: macro "FStar_UInt128_logor" passed 3 arguments, but takes just 2
+FStar_UInt128_logor(&s00, &s1, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:374:3: error: 'FStar_UInt128_logor' undeclared (first use in this function)
+FStar_UInt128_logor(&s00, &s1, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:376:45: error: macro "FStar_UInt128_logand" passed 3 arguments, but takes just 2
+FStar_UInt128_logand(&k1, &s10, &k_clamped);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:376:3: error: 'FStar_UInt128_logand' undeclared (first use in this function)
+FStar_UInt128_logand(&k1, &s10, &k_clamped);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:379:61: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&k_clamped, (uint32_t )44, &ret4);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:379:3: error: 'FStar_UInt128_shift_right' undeclared (first use in this function)
+FStar_UInt128_shift_right(&k_clamped, (uint32_t )44, &ret4);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:383:60: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&k_clamped, (uint32_t )88, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Hacl_Standalone_Poly1305_64_crypto_onetimeauth_':
+../../code/poly1305/poly-c/Poly1305_64.c:457:3: error: too many arguments to function 'load128_le'
+load128_le(key_s, &k_);
+^
+In file included from ../../code/poly1305/poly-c/Poly1305_64.h:7:0,
+from ../../code/poly1305/poly-c/Poly1305_64.c:1:
+/home/everest/vsts-agent/_work/3/s/dependencies/kremlin/kremlib/kremlib.h:353:25: note: declared here
+static inline uint128_t load128_le(uint8_t *b) {
+^
+../../code/poly1305/poly-c/Poly1305_64.c:463:67: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128(h1 << (uint32_t )44 | h0, &ret1);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:463:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128(h1 << (uint32_t )44 | h0, &ret1);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:467:83: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128(h2 << (uint32_t )24 | h1 >> (uint32_t )20, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:469:53: error: macro "FStar_UInt128_shift_left" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_left(&s0, (uint32_t )64, &ret2);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:469:3: error: 'FStar_UInt128_shift_left' undeclared (first use in this function)
+FStar_UInt128_shift_left(&s0, (uint32_t )64, &ret2);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:471:39: error: macro "FStar_UInt128_logor" passed 3 arguments, but takes just 2
+FStar_UInt128_logor(&s00, &s1, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:471:3: error: 'FStar_UInt128_logor' undeclared (first use in this function)
+FStar_UInt128_logor(&s00, &s1, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:474:42: error: macro "FStar_UInt128_add_mod" passed 3 arguments, but takes just 2
+FStar_UInt128_add_mod(&acc_, &k_, &mac_);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:474:3: error: 'FStar_UInt128_add_mod' undeclared (first use in this function)
+FStar_UInt128_add_mod(&acc_, &k_, &mac_);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:475:23: warning: passing argument 2 of 'store128_le' makes integer from pointer without a cast [-Wint-conversion]
+store128_le(output, &mac_);
+^
+In file included from ../../code/poly1305/poly-c/Poly1305_64.h:7:0,
+from ../../code/poly1305/poly-c/Poly1305_64.c:1:
+/home/everest/vsts-agent/_work/3/s/dependencies/kremlin/kremlib/kremlib.h:359:20: note: expected 'uint128_t {aka __int128 unsigned}' but argument is of type 'FStar_UInt128_t * {aka __int128 unsigned *}'
+static inline void store128_le(uint8_t *b, uint128_t n) {
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Poly1305_64_init':
+../../code/poly1305/poly-c/Poly1305_64.c:503:3: error: too many arguments to function 'load128_le'
+load128_le(x10, &k10);
+^
+In file included from ../../code/poly1305/poly-c/Poly1305_64.h:7:0,
+from ../../code/poly1305/poly-c/Poly1305_64.c:1:
+/home/everest/vsts-agent/_work/3/s/dependencies/kremlin/kremlib/kremlib.h:353:25: note: declared here
+static inline uint128_t load128_le(uint8_t *b) {
+^
+../../code/poly1305/poly-c/Poly1305_64.c:507:72: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0x0ffffffc0fffffff, &ret1);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:507:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0x0ffffffc0fffffff, &ret1);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:511:72: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128((uint64_t )0x0ffffffc0ffffffc, &ret3);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:513:53: error: macro "FStar_UInt128_shift_left" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_left(&s0, (uint32_t )64, &ret2);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:513:3: error: 'FStar_UInt128_shift_left' undeclared (first use in this function)
+FStar_UInt128_shift_left(&s0, (uint32_t )64, &ret2);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:515:39: error: macro "FStar_UInt128_logor" passed 3 arguments, but takes just 2
+FStar_UInt128_logor(&s00, &s1, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:515:3: error: 'FStar_UInt128_logor' undeclared (first use in this function)
+FStar_UInt128_logor(&s00, &s1, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:517:46: error: macro "FStar_UInt128_logand" passed 3 arguments, but takes just 2
+FStar_UInt128_logand(&k10, &s10, &k_clamped);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:517:3: error: 'FStar_UInt128_logand' undeclared (first use in this function)
+FStar_UInt128_logand(&k10, &s10, &k_clamped);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:520:61: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&k_clamped, (uint32_t )44, &ret4);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:520:3: error: 'FStar_UInt128_shift_right' undeclared (first use in this function)
+FStar_UInt128_shift_right(&k_clamped, (uint32_t )44, &ret4);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:524:60: error: macro "FStar_UInt128_shift_right" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_right(&k_clamped, (uint32_t )88, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c: In function 'Poly1305_64_finish':
+../../code/poly1305/poly-c/Poly1305_64.c:586:3: error: too many arguments to function 'load128_le'
+load128_le(k1, &k_);
+^
+In file included from ../../code/poly1305/poly-c/Poly1305_64.h:7:0,
+from ../../code/poly1305/poly-c/Poly1305_64.c:1:
+/home/everest/vsts-agent/_work/3/s/dependencies/kremlin/kremlib/kremlib.h:353:25: note: declared here
+static inline uint128_t load128_le(uint8_t *b) {
+^
+../../code/poly1305/poly-c/Poly1305_64.c:592:67: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128(h1 << (uint32_t )44 | h0, &ret1);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:592:3: error: 'FStar_Int_Cast_uint64_to_uint128' undeclared (first use in this function)
+FStar_Int_Cast_uint64_to_uint128(h1 << (uint32_t )44 | h0, &ret1);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:596:83: error: macro "FStar_Int_Cast_uint64_to_uint128" passed 2 arguments, but takes just 1
+FStar_Int_Cast_uint64_to_uint128(h2 << (uint32_t )24 | h1 >> (uint32_t )20, &ret);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:598:53: error: macro "FStar_UInt128_shift_left" passed 3 arguments, but takes just 2
+FStar_UInt128_shift_left(&s0, (uint32_t )64, &ret2);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:598:3: error: 'FStar_UInt128_shift_left' undeclared (first use in this function)
+FStar_UInt128_shift_left(&s0, (uint32_t )64, &ret2);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:600:39: error: macro "FStar_UInt128_logor" passed 3 arguments, but takes just 2
+FStar_UInt128_logor(&s00, &s1, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:600:3: error: 'FStar_UInt128_logor' undeclared (first use in this function)
+FStar_UInt128_logor(&s00, &s1, &ret0);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:603:42: error: macro "FStar_UInt128_add_mod" passed 3 arguments, but takes just 2
+FStar_UInt128_add_mod(&acc_, &k_, &mac_);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:603:3: error: 'FStar_UInt128_add_mod' undeclared (first use in this function)
+FStar_UInt128_add_mod(&acc_, &k_, &mac_);
+^
+../../code/poly1305/poly-c/Poly1305_64.c:604:20: warning: passing argument 2 of 'store128_le' makes integer from pointer without a cast [-Wint-conversion]
+store128_le(mac, &mac_);
+^
+In file included from ../../code/poly1305/poly-c/Poly1305_64.h:7:0,
+from ../../code/poly1305/poly-c/Poly1305_64.c:1:
+/home/everest/vsts-agent/_work/3/s/dependencies/kremlin/kremlib/kremlib.h:359:20: note: expected 'uint128_t {aka __int128 unsigned}' but argument is of type 'FStar_UInt128_t * {aka __int128 unsigned *}'
+static inline void store128_le(uint8_t *b, uint128_t n) {
+^
+make[1]: *** [HaclEngine.so] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2
