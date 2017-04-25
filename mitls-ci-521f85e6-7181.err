@@ -1,0 +1,48 @@
+From https://github.com/FStarLang/FStar
+9469a5a..c1d7086  master     -> origin/master
+5206988..9d41d92  aseem_heap_modeling -> origin/aseem_heap_modeling
++ 8ffd786...2a84382 cwinter_checked_hints -> origin/cwinter_checked_hints  (forced update)
++ af10f02...44cdb57 cwinter_cloud_verify -> origin/cwinter_cloud_verify  (forced update)
+bcef8de..8aa6fb9  danel_mrefs -> origin/danel_mrefs
+c37c2e0..676f8d0  darrenge_binarybuild -> origin/darrenge_binarybuild
+0057477..c1d7086  guido_bughunt -> origin/guido_bughunt
+e690e57..d1f8b96  guido_tactics -> origin/guido_tactics
+3f0124c..63dc05e  kyod_tmp0  -> origin/kyod_tmp0
+9469a5a..a840368  nik_private -> origin/nik_private
+398cce7..f52c1c7  vdum_extract_dm4f_effects -> origin/vdum_extract_dm4f_effects
+Fetching submodule ucontrib/CoreCrypto/ml/openssl
+From https://github.com/openssl/openssl
+e8f2e2f..b99f102  OpenSSL_1_0_2-stable -> origin/OpenSSL_1_0_2-stable
+48e017b..1e0b1ae  OpenSSL_1_1_0-stable -> origin/OpenSSL_1_1_0-stable
+424aa35..b3c42fc  master     -> origin/master
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+7 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 659, characters 2-13:
+Warning 10: this expression should have type unit.
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[4]: ../../../kremlin/krml: Command not found
+make[4]: *** [Makefile:209: krml-test.exe] Error 127
+make[3]: *** [Makefile:54: ../krml-test.exe] Error 2
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:358: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:12: build] Error 2
+make: *** [Makefile:8: all] Error 2
