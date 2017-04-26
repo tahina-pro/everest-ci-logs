@@ -1,0 +1,166 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: kyod_fsdoc
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Installing 'FsLexYacc 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent\_work\1\s\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent\_work\1\s\bin\prettyprint.dll
+syntax -> C:\Build\Agent\_work\1\s\bin\syntax.dll
+compiling to dfas (can take a while...)
+339 states
+writing output
+building tables
+computing first function...time: 00:00:00.1968136
+building kernels...time: 00:00:00.1690712
+building kernel table...time: 00:00:00.0154629
+computing lookahead relations...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.4599844
+building lookahead table...time: 00:00:00.2383035
+building action table...state 417: shift/reduce error on SEMICOLON
+state 445: shift/reduce error on BAR
+state 448: shift/reduce error on LBRACE
+state 449: shift/reduce error on BAR
+state 460: shift/reduce error on BAR
+state 536: shift/reduce error on COLON_EQUALS
+state 572: shift/reduce error on LBRACE
+time: 00:00:00.7230101
+building goto table...time: 00:00:00.2146608
+returning tables.
+7 shift/reduce conflicts
+732 states
+137 nonterminals
+136 terminals
+394 productions
+#rows in action table: 732
+C:\Build\Agent\_work\1\s\src\parser\FStar.Parser.AST.fs(770,5): warning FS0026: This rule will never be matched [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(228,52): error FS0039: The record label 'level' is not defined [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(620,50): error FS0039: The record label 'level' is not defined [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(648,64): error FS0001: This expression was expected to have type    tycon    but here has type    'a * 'b [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(651,44): error FS0001: This expression was expected to have type    tycon    but here has type    'a * 'b [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(659,45): error FS0001: Type mismatch. Expecting a    letbinding list    but given a    ('a * term) list    The type 'letbinding' does not match the type ''a * term' [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(666,40): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(695,45): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(699,59): error FS0039: The value or constructor 'check_id' is not defined [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(699,72): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(702,55): error FS0039: The value or constructor 'check_id' is not defined [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(702,80): error FS0001: This expression was expected to have type    term    but here has type    'a * 'b * 'c * 'd [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(705,54): error FS0039: The value or constructor 'check_id' is not defined [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(705,79): error FS0001: This expression was expected to have type    record_field list    but here has type    'a * 'b * 'c * 'd [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(708,52): error FS0039: The value or constructor 'check_id' is not defined [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(708,65): error FS0019: This constructor is applied to 4 argument(s) but expects 2 [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(716,42): error FS0001: This expression was expected to have type    fsdoc list    but here has type    'a option [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(717,50): error FS0039: The value or constructor 'parse_state' is not defined [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(726,44): error FS0001: This expression was expected to have type    fsdoc list    but here has type    'a option [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(727,52): error FS0039: The value or constructor 'parse_state' is not defined [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(734,44): error FS0001: This expression was expected to have type    fsdoc list    but here has type    'a option [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(735,52): error FS0039: The value or constructor 'parse_state' is not defined [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(777,52): error FS0001: This expression was expected to have type    tycon    but here has type    'a * 'b [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1165,29): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1169,37): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1415,54): error FS1129: The type 'term' does not contain a field 'level' [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1423,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1431,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1442,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1454,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1458,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1461,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1464,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1467,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1471,39): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1472,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1482,31): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1492,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1496,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1501,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1516,45): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1519,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1534,41): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1545,41): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1571,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1612,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1620,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1638,41): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1641,29): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1655,41): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1658,29): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1674,41): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1677,29): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1696,41): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1699,29): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1713,41): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1716,29): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1732,41): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1735,29): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1744,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1752,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1769,37): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1772,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1775,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1778,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1785,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1792,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1799,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1806,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1813,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1820,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1840,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1844,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1847,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1850,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1853,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1859,53): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1860,33): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1867,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1880,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1883,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1897,45): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1936,34): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1959,38): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1965,28): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1971,39): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1975,37): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1978,40): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1981,39): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1984,37): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1987,38): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(1997,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(2004,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(2011,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(2022,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(2033,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(2044,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(2055,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(2066,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(2077,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+C:\Build\Agent\_work\1\s\src\parser\parse.fsy(2084,30): error FS0003: This value is not a function and cannot be applied [C:\Build\Agent\_work\1\s\src\parser\parser.fsproj]
+typechecker -> C:\Build\Agent\_work\1\s\bin\typechecker.dll
+format -> C:\Build\Agent\_work\1\s\bin\format.dll
+extraction -> C:\Build\Agent\_work\1\s\bin\extraction.dll
+smtencoding -> C:\Build\Agent\_work\1\s\bin\smtencoding.dll
+tactics -> C:\Build\Agent\_work\1\s\src\tactics\bin\Release\tactics.dll
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: *** [Makefile:54: all] Error 1
+make: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make: *** [Makefile:255: utest] Error 2
