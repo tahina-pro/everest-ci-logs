@@ -1,0 +1,158 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/31/s
+About to run: everest_move
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: Everest-Nightly Upgrade-Windows
+warning: failed to remove vale/obj/arch/x86/leakage-helpers.i.tmp
+Removing FStar/
+Removing hacl-star/
+Removing kremlin/
+Removing log/
+Removing mitls-fstar/
+Removing test/_build/
+Removing test/test.native
+Removing vale/obj/arch/x86/decls.gen.dfy
+Removing vale/obj/arch/x86/decls.gen.tmp
+Removing vale/obj/arch/x86/decls.gen.vdfy
+Removing vale/obj/arch/x86/def.s.tmp
+Removing vale/obj/arch/x86/def.s.vdfy
+Removing vale/obj/arch/x86/leakage.s.tmp
+Removing vale/obj/arch/x86/leakage.s.vdfy
+Removing vale/obj/arch/x86/vale.i.tmp
+Removing vale/obj/arch/x86/vale.i.vdfy
+Removing vale/obj/arch/arm
+Removing vale/obj/arch/x64
+Removing vale/obj/aes-gcc.S
+Removing vale/obj/aes-linux.S
+Removing vale/obj/aes-macos.S
+Removing vale/obj/aes.asm
+Removing vale/obj/aes.cs
+Removing vale/obj/aes.exe
+Removing vale/obj/aes.obj
+Removing vale/obj/aes.pdb
+Removing vale/obj/cbc-gcc.S
+Removing vale/obj/cbc-linux.S
+Removing vale/obj/cbc-macos.S
+Removing vale/obj/cbc.asm
+Removing vale/obj/cbc.cs
+Removing vale/obj/cbc.exe
+Removing vale/obj/cbc.obj
+Removing vale/obj/cbc.pdb
+Removing vale/obj/crypto
+Removing vale/obj/lib
+Removing vale/obj/poly1305-gcc.S
+Removing vale/obj/poly1305-linux.S
+Removing vale/obj/poly1305-macos.S
+Removing vale/obj/poly1305.asm
+Removing vale/obj/poly1305.cs
+Removing vale/obj/poly1305.exe
+Removing vale/obj/poly1305.obj
+Removing vale/obj/poly1305.pdb
+Removing vale/obj/sha256-gcc.S
+Removing vale/obj/sha256-linux.S
+Removing vale/obj/sha256-macos.S
+Removing vale/obj/sha256.asm
+Removing vale/obj/sha256.cs
+Removing vale/obj/sha256.exe
+Removing vale/obj/sha256.obj
+Removing vale/obj/sha256.pdb
+Removing vale/obj/testaes.exe
+Removing vale/obj/testaes.ilk
+Removing vale/obj/testaes.pdb
+Removing vale/obj/testaes.txt
+Removing vale/obj/testcbc.exe
+Removing vale/obj/testcbc.ilk
+Removing vale/obj/testcbc.pdb
+Removing vale/obj/testcbc.txt
+Removing vale/obj/testpoly1305.exe
+Removing vale/obj/testpoly1305.ilk
+Removing vale/obj/testpoly1305.pdb
+Removing vale/obj/testpoly1305.txt
+Removing vale/obj/testsha256.exe
+Removing vale/obj/testsha256.ilk
+Removing vale/obj/testsha256.pdb
+Removing vale/obj/testsha256.txt
+Removing vale/obj/thirdPartyPorts
+Removing vale/obj/Vale
+Removing vale/.git
+Removing vale/.gitignore
+Removing vale/.sconsign.dblite
+Removing vale/bin
+Removing vale/CODE.md
+Removing vale/doc
+Removing vale/INSTALL.md
+Removing vale/LICENSE
+Removing vale/README.md
+Removing vale/SConscript
+Removing vale/SConstruct
+Removing vale/src
+Removing vale/tools
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent/_work/31/s
+
+Checking environment
+... which found
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+... all 41 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... all 15 ocamlfind packages found
+... sample ocamlbuild project compiles successfully
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+... correct z3 version detected
+... nuget found in PATH
+... Python 2.7 found
+... scons.bat found in PATH
+
+Remember to run source ~/.bashrc if it was modified!
+Note: you *may* want to add /cygdrive/c/Build/Agent/_work/31/s/FStar/bin and /cygdrive/c/Build/Agent/_work/31/s/kremlin to your PATH
+Note: you *may* want to export FSTAR_HOME=/cygdrive/c/Build/Agent/_work/31/s/FStar
+
+Pulling vale
+fatal: ref HEAD is not a symbolic ref
+Switched to a new branch 'master'
+Branch master set up to track remote branch master from origin.
+error: no such commit 8af38afa9ff1f093ba100e3e470462e5f20ca2b1
+usage: git branch [<options>] [-r | -a] [--merged | --no-merged]
+or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+or: git branch [<options>] [-r | -a] [--points-at]
+
+Generic options
+-v, --verbose         show hash and subject, give twice for upstream branch
+ERROR: in repository vale, the hash 8af38afa9ff1f093ba100e3e470462e5f20ca2b1 claims to belong to branch master, but master pulls from origin/master which does not contain 8af38afa9ff1f093ba100e3e470462e5f20ca2b1
+-q, --quiet           suppress informational messages
+-t, --track           set up tracking mode (see git-pull(1))
+--set-upstream        change upstream info
+-u, --set-upstream-to <upstream>
+change the upstream info
+--unset-upstream      Unset the upstream info
+--color[=<when>]      use colored output
+-r, --remotes         act on remote-tracking branches
+--contains <commit>   print only branches that contain the commit
+--abbrev[=<n>]        use <n> digits to display SHA-1s
+
+Specific git-branch actions:
+-a, --all             list both remote-tracking and local branches
+-d, --delete          delete fully merged branch
+-D                    delete branch (even if not merged)
+-m, --move            move/rename a branch and its reflog
+-M                    move/rename a branch, even if target exists
+--list                list branch names
+-l, --create-reflog   create the branch's reflog
+--edit-description    edit the description for the branch
+-f, --force           force creation, move/rename, deletion
+--merged <commit>     print only branches that are merged
+--no-merged <commit>  print only branches that are not merged
+--column[=<style>]    list branches in columns
+--sort <key>          field name to sort on
+--points-at <object>  print only branches of the object
+
