@@ -1,0 +1,74 @@
+This is /home/everest/everest-ci/ci
+Working directory: /home/everest/vsts-agent/_work/4/s
+About to run: make -C src utest -j 6 -k
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: FStar-Nightly-Linux
+make: Entering directory '/home/everest/vsts-agent/_work/4/s/src'
+make all
+make[1]: Entering directory '/home/everest/vsts-agent/_work/4/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+mono VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Installing 'FsLexYacc 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+Installing 'FSPowerPack.Community 3.0.0.0'.
+Installing 'FSPowerPack.Parallel.Seq.Community 2.0.0.0'.
+Installing 'PPrintForFSharp 0.0.2'.
+Installing 'FSharp.Compatibility.OCaml 0.1.10'.
+Installing 'FSPowerPack.Linq.Community 2.0.0.0'.
+Installing 'FSPowerPack.Metadata.Community 2.0.0.0'.
+Installing 'FSPowerPack.Core.Community 2.0.0.0'.
+Successfully installed 'FSPowerPack.Community 3.0.0.0'.
+Successfully installed 'PPrintForFSharp 0.0.2'.
+Successfully installed 'FSharp.Compatibility.OCaml 0.1.10'.
+Successfully installed 'FSPowerPack.Linq.Community 2.0.0.0'.
+Successfully installed 'FSPowerPack.Metadata.Community 2.0.0.0'.
+Successfully installed 'FSPowerPack.Core.Community 2.0.0.0'.
+Successfully installed 'FSPowerPack.Parallel.Seq.Community 2.0.0.0'.
+make -C VS install-packages
+make[2]: Entering directory '/home/everest/vsts-agent/_work/4/s/src/VS'
+[ -d packages ] || make update-nuget
+mono .nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/home/everest/vsts-agent/_work/4/s/src/VS'
+xbuild /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+XBuild Engine Version 12.0
+Mono, Version 4.2.1.0
+Copyright (C) 2005-2013 Various Mono authors
+Configuration: Release Platform: AnyCPU
+/usr/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'FSharp.PowerPack' not resolved
+/usr/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'FSharp.PowerPack.Linq' not resolved
+/usr/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'FSharp.PowerPack.Metadata' not resolved
+/usr/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'FSharp.PowerPack.Parallel.Seq' not resolved
+/usr/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'FSharp.PPrint' not resolved
+Configuration: Release Platform: AnyCPU
+/usr/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'FSharp.PowerPack' not resolved
+/usr/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'FSharp.PowerPack.Linq' not resolved
+/usr/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'FSharp.PowerPack.Metadata' not resolved
+/usr/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'FSharp.PowerPack.Parallel.Seq' not resolved
+/usr/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'FSharp.PPrint' not resolved
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(6,13): error FS0039: The namespace 'PPrint' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(10,19): error FS0039: The namespace or module 'PPrint' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(10,19): error FS0039: The namespace or module 'PPrint' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(13,20): error FS0039: The namespace or module 'Engine' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(14,20): error FS0039: The namespace or module 'Engine' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(17,30): error FS0039: The namespace or module 'Engine' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(18,26): error FS0039: The namespace or module 'Engine' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(21,32): error FS0039: The namespace or module 'Engine' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(28,10): error FS0039: The namespace or module 'Combinators' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(30,35): error FS0039: The namespace or module 'Combinators' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(32,35): error FS0039: The namespace or module 'Combinators' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(35,34): error FS0039: The namespace or module 'Engine' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(42,32): error FS0039: The namespace or module 'Engine' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(50,31): error FS0039: The namespace or module 'Engine' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(52,8): error FS0039: The namespace or module 'Combinators' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(64,10): error FS0039: The namespace or module 'Engine' is not defined
+/home/everest/vsts-agent/_work/4/s/src/format/format.fs(69,10): error FS0039: The namespace or module 'Engine' is not defined
+Makefile:53: recipe for target 'all' failed
+make[1]: *** [all] Error 1
+make[1]: Leaving directory '/home/everest/vsts-agent/_work/4/s/src'
+make: *** [utest] Error 2
+Makefile:255: recipe for target 'utest' failed
+make: Leaving directory '/home/everest/vsts-agent/_work/4/s/src'
