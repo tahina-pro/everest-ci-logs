@@ -1,0 +1,76 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent1/_work/3/s
+About to run: hacl_test
+BUILD_SOURCEBRANCHNAME: dev
+BUILD_DEFINITIONNAME: Hacl*-CI-Windows
+Submodule path 'ucontrib/CoreCrypto/ml/openssl': checked out 'cb2a6eb76ef7304a1b76ac5e2578cd9d5f59af28'
+make: Entering directory '/cygdrive/c/Build/Agent1/_work/3/s/dependencies/FStar/src/ocaml-output'
+cp "../extraction/ml/FStar_Extraction_ML_PrintML_4.02.3.ml" ../extraction/ml/FStar_Extraction_ML_PrintML.ml
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+# Save a copy of the dumb parse.mly for whoever doesn't have menhir.
+echo 'let dummy () = ();;' > FStar_Version.ml
+echo 'FStar_Options._version := "0.9.4.3";;' >> FStar_Version.ml
+true parse.mly
+cp parse.mly ../parser/ml/
+echo 'FStar_Options._platform := "Windows_x64";;' >> FStar_Version.ml
+echo "%{" > ../parser/parse.fsy
+# We are opening the same module twice but we need these modules
+echo 'FStar_Options._compiler := "OCaml 4.02.3";;' >> FStar_Version.ml
+# open for the definition of tokens
+echo 'FStar_Options._date := "2017-04-28T10:08:37-07:00";;' >> FStar_Version.ml
+echo "#light \"off\"" >> ../parser/parse.fsy
+echo "open Prims" > FStar_Parser_Parse.ml
+echo "// (c) Microsoft Corporation. All rights reserved" >> ../parser/parse.fsy
+echo 'FStar_Options._commit:= "98b2b6c (dirty)";;' >> FStar_Version.ml
+echo "open FStar_Errors" >> FStar_Parser_Parse.ml
+echo "open Prims" >> ../parser/parse.fsy
+echo "open FStar_List" >> FStar_Parser_Parse.ml
+echo "open FStar.Errors" >> ../parser/parse.fsy
+echo "open FStar_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.List" >> ../parser/parse.fsy
+echo "open FStar_Range" >> FStar_Parser_Parse.ml
+echo "open FStar.Util" >> ../parser/parse.fsy
+echo "open FStar_Options" >> FStar_Parser_Parse.ml
+echo "open FStar.Range" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Syntax" >> FStar_Parser_Parse.ml
+echo "open FStar.Options" >> ../parser/parse.fsy
+echo "open FStar.Syntax.Syntax" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Const" >> ../parser/parse.fsy
+echo "open FStar_Syntax_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Syntax.Util" >> ../parser/parse.fsy
+echo "open FStar_Parser_AST" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.AST" >> ../parser/parse.fsy
+echo "open FStar_Parser_Util" >> FStar_Parser_Parse.ml
+echo "open FStar.Parser.Util" >> ../parser/parse.fsy
+echo "open FStar_Const" >> FStar_Parser_Parse.ml
+echo "open FStar.Const" >> ../parser/parse.fsy
+echo "open FStar_Ident" >> FStar_Parser_Parse.ml
+echo "open FStar_String" >> FStar_Parser_Parse.ml
+echo "open FStar.Ident" >> ../parser/parse.fsy
+# TODO: create a proper OCamlbuild rule for this production so that
+echo "open FStar.String" >> ../parser/parse.fsy
+# OCamlbuild knows how to generate parse.mly first (possibly using
+# TODO : fsyacc seems to complain as soon as there is an arrow -> in a %type declaration...
+# menhir) and removes the production as needed.
+cat parse.mly | sed -e '/%{/d' \
+-e '/^open /d' \
+-e '/%token/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%type/s/[a-zA-Z0-9_]*\.//g' \
+-e '/%token.*->.*/d' \
+-e '/%type.*->.*/d' \
+>> ../parser/parse.fsy
+ocamlyacc parse.mly 2> yac-log
+cat yac-log
+6 shift/reduce conflicts.
+cat parse.ml >> FStar_Parser_Parse.ml
+rm parse.ml parse.mli
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml -I src/ocaml-output/bootlibs -use-ocamlfind main.native
+Exception
+Sys_error("C:\\Build\\Agent1\\_work\\3\\s\\dependencies\\FStar/src/extraction/ml/FStar_Extraction_ML_PrintML.ml: Permission denied").
+make: Leaving directory '/cygdrive/c/Build/Agent1/_work/3/s/dependencies/FStar/src/ocaml-output'
+make: *** [Makefile:102: fstar.exe] Error 100
