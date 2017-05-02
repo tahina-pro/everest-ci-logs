@@ -1,0 +1,129 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(394,0-394,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(497,0-499,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(718,0-720,39): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+.\hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (7795,51): pattern does not contain all quantified variables.
+WARNING: (7795,51): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#1098
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (7753,46): pattern does not contain any variable.
+WARNING: (7935,46): pattern does not contain any variable.
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\examples\tactics\UserTactics.fst.hints; ran without hints
+WARNING: (7652,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#41711
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#43904 (see also .\Platform.Bytes.fst(257,156-260,30))
+WARNING: (7958,46): pattern does not contain any variable.
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\examples\tactics\Syntax.fst.hints; ran without hints
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5167, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5259, characters 30-125
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5169, characters 10-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4866, characters 37-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Syntax.fst(36,23-36,34): (Error) Only function literals with arrow types can be defined recursively; got fix1 blah' : uu___4025:term -> Prims.Tot (tactic term)
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: Syntax.uver] Error 1
+WARNING: (76702,46): pattern does not contain any variable.
+WARNING: (80459,43): pattern does not contain all quantified variables.
+WARNING: (76702,46): pattern does not contain any variable.
+WARNING: (80459,43): pattern does not contain all quantified variables.
+WARNING: (76702,46): pattern does not contain any variable.
+WARNING: (80459,43): pattern does not contain all quantified variables.
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: tactics.all] Error 2
+WARNING: (76702,46): pattern does not contain any variable.
+WARNING: (80459,43): pattern does not contain all quantified variables.
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(27,0-27,22): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (76702,46): pattern does not contain any variable.
+WARNING: (80459,43): pattern does not contain all quantified variables.
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (76702,46): pattern does not contain any variable.
+WARNING: (80459,43): pattern does not contain all quantified variables.
+WARNING: (76702,46): pattern does not contain any variable.
+WARNING: (80459,43): pattern does not contain all quantified variables.
+WARNING: (76702,46): pattern does not contain any variable.
+WARNING: (80459,43): pattern does not contain all quantified variables.
+WARNING: (76702,46): pattern does not contain any variable.
+WARNING: (80459,43): pattern does not contain all quantified variables.
+.\Ex12a.Cap.fst(21,0-21,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#82832
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#92279 (see also .\Platform.Bytes.fst(257,156-260,30))
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(172,0-188,5): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\ulib\FStar.Order.fst.hints; ran without hints
+.\Ex10a.fst(27,0-27,22): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(19,0-19,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\ulib\FStar.Tactics.fst.hints; ran without hints
+.\FStar.Tactics.fst(286,35-286,43): (Error) Subtyping check failed; expected type (callback:tactic u#0 unit{ LexTop u#_ << LexTop u#_ }); got type tactic u#0 unit (see also .\FStar.Tactics.fst(285,0-286,44))
+Verified module: FStar.Tactics (10508 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:28: FStar.Tactics.fst-ver] Error 1
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: [Makefile:66: Ex01a-ocaml] Error 2 (ignored)
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:275: uexamples] Error 2
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:272: ulib] Error 2
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:256: utest] Error 2
