@@ -1,0 +1,488 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:184: u_extract_tcterm] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:190: u_extract_tc] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:213: u_extract_solver] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:210: u_extract_encode] Error 1
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(394,0-394,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(497,0-499,38): (Warning) Annotation from val declaration overrides inline type annotation
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:166: u_extract_syntax] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:178: u_extract_util] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:187: u_extract_tcinductive] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:181: u_extract_dmff] Error 1
+make[3]: *** [Makefile:175: u_extract_rel] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:172: u_extract_normalizer] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:201: u_extract_tactics] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:204: u_extract_smtencoding_base] Error 1
+make[3]: *** [Makefile:198: u_extract_extraction] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:195: u_extract_tosyntax] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 2200, characters 14-36
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 477, characters 22-75
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1050, characters 28-114
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2756, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5692, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5366, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4869, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3700, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4082, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4128, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4483, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Syntax.Formula.fst(23,70-27,16): (Error) Computed type "bool" and effect "ALL" is not compatible with the annotated type "bool" effect "Tot"
+1 error was reported (see above)
+make[3]: *** [Makefile:218: u_extract_fstar] Error 1
+make[3]: Target 'u_extract_all' not remade because of errors.
+make[2]: *** [Makefile:230: ocaml] Error 2
+make[1]: *** [Makefile:240: fstar-ocaml] Error 2
+make: *** [Makefile:255: utest] Error 2
