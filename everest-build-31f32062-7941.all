@@ -1,0 +1,678 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent1/_work/12/s
+About to run: everest_rebuild
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: Everest-CI-Windows
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent1/_work/12/s
+
+Checking environment
+... which found
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+Cygwin setup not found, downloading it
+--2017-05-09 11:17:17--  https://cygwin.com/setup-x86_64.exe
+Resolving cygwin.com (cygwin.com)... 209.132.180.131
+Connecting to cygwin.com (cygwin.com)|209.132.180.131|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 916499 (895K) [application/octet-stream]
+Saving to: ‘setup-x86_64.exe’
+
+0K .......... .......... .......... .......... ..........  5% 13.9M 0s
+50K .......... .......... .......... .......... .......... 11% 11.7M 0s
+100K .......... .......... .......... .......... .......... 16% 1.22M 0s
+150K .......... .......... .......... .......... .......... 22% 1.24M 0s
+200K .......... .......... .......... .......... .......... 27% 1.27M 0s
+250K .......... .......... .......... .......... .......... 33% 1.25M 0s
+300K .......... .......... .......... .......... .......... 39% 1.21M 0s
+350K .......... .......... .......... .......... .......... 44% 1.29M 0s
+400K .......... .......... .......... .......... .......... 50% 1.30M 0s
+450K .......... .......... .......... .......... .......... 55% 36.0M 0s
+500K .......... .......... .......... .......... .......... 61% 1.31M 0s
+550K .......... .......... .......... .......... .......... 67% 36.9M 0s
+600K .......... .......... .......... .......... .......... 72% 1.21M 0s
+650K .......... .......... .......... .......... .......... 78% 24.1M 0s
+700K .......... .......... .......... .......... .......... 83% 1.38M 0s
+750K .......... .......... .......... .......... .......... 89% 35.9M 0s
+800K .......... .......... .......... .......... .......... 94% 30.0M 0s
+850K .......... .......... .......... .......... .....     100% 1.23M=0.4s
+
+2017-05-09 11:17:18 (2.00 MB/s) - ‘setup-x86_64.exe’ saved [916499/916499]
+
+Cygwin package gcc is missing
+Do you want to run: ./setup-x86_64.exe --no-desktop --no-shortcuts --no-startmenu --wait --quiet-mode --packages=gcc,mingw64-i686-binutils,mingw64-i686-gcc-core,mingw64-i686-gcc-g++,mingw64-i686-gmp,mingw64-i686-headers,mingw64-i686-libffi,mingw64-i686-openssl,mingw64-i686-pkg-config,mingw64-i686-runtime,mingw64-i686-sqlite3,mingw64-i686-windows-default-manifest,mingw64-i686-winpthreads,mingw64-i686-zlib,mingw64-x86_64-binutils,mingw64-x86_64-bzip2,mingw64-x86_64-gcc-core,mingw64-x86_64-gcc-g++,mingw64-x86_64-gmp,mingw64-x86_64-headers,mingw64-x86_64-libffi,mingw64-x86_64-openssl,mingw64-x86_64-pcre,mingw64-x86_64-pcre2,mingw64-x86_64-pkg-config,mingw64-x86_64-runtime,mingw64-x86_64-sqlite3,mingw64-x86_64-windows-default-manifest,mingw64-x86_64-winpthreads,mingw64-x86_64-zlib,automake,findutils,m4,make,patch,patchutils,rlwrap,unzip,wget,which,xz,zip,? [Yn]
+Starting cygwin install, version 2.877
+User has backup/restore rights
+Current Directory: C:\Users\vkanne\Downloads
+Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+root: C:\cygwin64 system
+Selected local directory: C:\Users\vkanne\Downloads
+net: Direct
+site: http://www.gtlib.gatech.edu/pub/cygwin/
+Adding required dependency libgc1: Selecting version 7.2d-2 for installation.
+Adding required dependency libguile2.0_22: Selecting version 2.0.14-1 for installation.
+Adding required dependency publicsuffix-list-dafsa: Selecting version 20170424-1 for installation.
+Adding required dependency python2: Selecting version 2.7.13-1 for installation.
+Adding required dependency tzcode: Selecting version 2016j-1 for installation.
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/libgc/libgc1/libgc1-7.2d-2.tar.bz2
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/guile/libguile2.0_22/libguile2.0_22-2.0.14-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/m4/m4-1.4.18-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/make/make-4.2.1-2.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/mingw64-i686-gcc/mingw64-i686-gcc-core/mingw64-i686-gcc-core-5.4.0-4.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/mingw64-i686-gcc/mingw64-i686-gcc-g++/mingw64-i686-gcc-g++-5.4.0-4.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-gmp/mingw64-i686-gmp-6.1.2-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-headers/mingw64-i686-headers-5.0.2-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-openssl/mingw64-i686-openssl-1.0.2k-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-runtime/mingw64-i686-runtime-5.0.2-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-winpthreads/mingw64-i686-winpthreads-5.0.2-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-zlib/mingw64-i686-zlib-1.2.11-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-gmp/mingw64-x86_64-gmp-6.1.2-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-headers/mingw64-x86_64-headers-5.0.2-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-openssl/mingw64-x86_64-openssl-1.0.2k-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-pcre/mingw64-x86_64-pcre-8.40-3.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-pcre2/mingw64-x86_64-pcre2-10.23-2.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-runtime/mingw64-x86_64-runtime-5.0.2-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-winpthreads/mingw64-x86_64-winpthreads-5.0.2-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-zlib/mingw64-x86_64-zlib-1.2.11-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/publicsuffix-list/publicsuffix-list-dafsa/publicsuffix-list-dafsa-20170424-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/python2/python2-2.7.13-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/tzcode/tzcode-2016j-1.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/unzip/unzip-6.0-16.tar.xz
+Downloaded C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/wget/wget-1.19.1-1.tar.xz
+running: C:\cygwin64\bin\bash.exe --norc --noprofile "/etc/preremove/wget.sh"
+Uninstalling m4
+Uninstalling make
+Uninstalling mingw64-i686-gcc-core
+Uninstalling mingw64-i686-gcc-g++
+Uninstalling mingw64-i686-gmp
+Uninstalling mingw64-i686-headers
+Uninstalling mingw64-i686-openssl
+Uninstalling mingw64-i686-runtime
+Uninstalling mingw64-i686-winpthreads
+Uninstalling mingw64-i686-zlib
+Uninstalling mingw64-x86_64-gmp
+Uninstalling mingw64-x86_64-headers
+Uninstalling mingw64-x86_64-openssl
+Uninstalling mingw64-x86_64-pcre
+Uninstalling mingw64-x86_64-pcre2
+Uninstalling mingw64-x86_64-runtime
+Uninstalling mingw64-x86_64-winpthreads
+Uninstalling mingw64-x86_64-zlib
+Uninstalling unzip
+Uninstalling wget
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/libgc/libgc1/libgc1-7.2d-2.tar.bz2
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/guile/libguile2.0_22/libguile2.0_22-2.0.14-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/m4/m4-1.4.18-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/make/make-4.2.1-2.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/mingw64-i686-gcc/mingw64-i686-gcc-core/mingw64-i686-gcc-core-5.4.0-4.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/mingw64-i686-gcc/mingw64-i686-gcc-g++/mingw64-i686-gcc-g++-5.4.0-4.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-gmp/mingw64-i686-gmp-6.1.2-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-headers/mingw64-i686-headers-5.0.2-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-openssl/mingw64-i686-openssl-1.0.2k-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-runtime/mingw64-i686-runtime-5.0.2-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-winpthreads/mingw64-i686-winpthreads-5.0.2-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-i686-zlib/mingw64-i686-zlib-1.2.11-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-gmp/mingw64-x86_64-gmp-6.1.2-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-headers/mingw64-x86_64-headers-5.0.2-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-openssl/mingw64-x86_64-openssl-1.0.2k-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-pcre/mingw64-x86_64-pcre-8.40-3.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-pcre2/mingw64-x86_64-pcre2-10.23-2.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-runtime/mingw64-x86_64-runtime-5.0.2-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-winpthreads/mingw64-x86_64-winpthreads-5.0.2-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/mingw64-x86_64-zlib/mingw64-x86_64-zlib-1.2.11-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/noarch/release/publicsuffix-list/publicsuffix-list-dafsa/publicsuffix-list-dafsa-20170424-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/python2/python2-2.7.13-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/tzcode/tzcode-2016j-1.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/unzip/unzip-6.0-16.tar.xz
+Extracting from file://C:\Users\vkanne\Downloads/http%3a%2f%2fwww.gtlib.gatech.edu%2fpub%2fcygwin%2f/x86_64/release/wget/wget-1.19.1-1.tar.xz
+Changing gid back to original
+running: C:\cygwin64\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+running: C:\cygwin64\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+running: C:\cygwin64\bin\bash.exe --norc --noprofile "/etc/postinstall/wget.sh"
+running: C:\cygwin64\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+running: C:\cygwin64\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+running: C:\cygwin64\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+running: C:\cygwin64\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+Changing gid to Administrators
+Ending cygwin install
+... all 42 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... all 15 ocamlfind packages found
+... sample ocamlbuild project compiles successfully
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+... correct z3 version detected
+... nuget found in PATH
+... Python 2.7 found
+... scons.bat found in PATH
+
+Remember to run source ~/.bashrc if it was modified!
+Note: you *may* want to add /cygdrive/c/Build/Agent1/_work/12/s/FStar/bin and /cygdrive/c/Build/Agent1/_work/12/s/kremlin to your PATH
+Note: you *may* want to export FSTAR_HOME=/cygdrive/c/Build/Agent1/_work/12/s/FStar
+
+Pulling vale
+Note: you're welcome to create symbolic links if you already have cloned the repository elsewhere
+Cloning into 'vale'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 8af38af Fix typo
+
+Pulling mitls-fstar
+Cloning into 'mitls-fstar'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at a620bcd [CI] regenerate hints
+
+Pulling FStar
+Cloning into 'FStar'...
+Checking out files:  49% (987/1999)   Checking out files:  50% (1000/1999)   Checking out files:  51% (1020/1999)   Checking out files:  52% (1040/1999)   Checking out files:  53% (1060/1999)   Checking out files:  54% (1080/1999)   Checking out files:  55% (1100/1999)   Checking out files:  56% (1120/1999)   Checking out files:  57% (1140/1999)   Checking out files:  58% (1160/1999)   Checking out files:  59% (1180/1999)   Checking out files:  60% (1200/1999)   Checking out files:  61% (1220/1999)   Checking out files:  62% (1240/1999)   Checking out files:  63% (1260/1999)   Checking out files:  64% (1280/1999)   Checking out files:  65% (1300/1999)   Checking out files:  66% (1320/1999)   Checking out files:  67% (1340/1999)   Checking out files:  68% (1360/1999)   Checking out files:  69% (1380/1999)   Checking out files:  70% (1400/1999)   Checking out files:  71% (1420/1999)   Checking out files:  72% (1440/1999)   Checking out files:  73% (1460/1999)   Checking out files:  74% (1480/1999)   Checking out files:  75% (1500/1999)   Checking out files:  76% (1520/1999)   Checking out files:  77% (1540/1999)   Checking out files:  78% (1560/1999)   Checking out files:  79% (1580/1999)   Checking out files:  80% (1600/1999)   Checking out files:  81% (1620/1999)   Checking out files:  82% (1640/1999)   Checking out files:  83% (1660/1999)   Checking out files:  84% (1680/1999)   Checking out files:  85% (1700/1999)   Checking out files:  86% (1720/1999)   Checking out files:  87% (1740/1999)   Checking out files:  88% (1760/1999)   Checking out files:  89% (1780/1999)   Checking out files:  90% (1800/1999)   Checking out files:  91% (1820/1999)   Checking out files:  91% (1830/1999)   Checking out files:  92% (1840/1999)   Checking out files:  93% (1860/1999)   Checking out files:  94% (1880/1999)   Checking out files:  95% (1900/1999)   Checking out files:  96% (1920/1999)   Checking out files:  97% (1940/1999)   Checking out files:  98% (1960/1999)   Checking out files:  99% (1980/1999)   Checking out files: 100% (1999/1999)   Checking out files: 100% (1999/1999), done.
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 461c0ff Fix #935
+
+Pulling hacl-star
+Cloning into 'hacl-star'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 0759fb3 [CI] regenerate hints
+
+Pulling kremlin
+Cloning into 'kremlin'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 1cff9e3 New -funroll-loops option
+exported FSTAR_HOME=C:/Build/Agent1/_work/12/s/FStar
+exported OPENSSL_HOME=C:/Build/Agent1/_work/12/s/FStar/ucontrib/CoreCrypto/ml/openssl
+exported KREMLIN_HOME=C:/Build/Agent1/_work/12/s/kremlin
+exported VALE_HOME=C:/Build/Agent1/_work/12/s/vale
+exported PATH=/cygdrive/c/Build/Agent1/_work/12/s/FStar/ucontrib/CoreCrypto/ml/openssl:/cygdrive/c/Build/Agent1/_work/12/s/FStar/bin:/cygdrive/c/Build/Agent1/_work/12/s/kremlin:/home/everbld/bin:/home/everbld/everest/z3-4.5.0-x64-win/bin:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin/amd64:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin:/cygdrive/c/PROGRA~2/MIA713~1/F#/4.0/FRAMEW~1/v4.0/:/home/everbld/.opam/system/bin:/usr/x86_64-w64-mingw32/sys-root/mingw/bin/:/usr/local/bin:/usr/bin:/cygdrive/c/Build/Agent1/externals/git/cmd:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/windows:/cygdrive/c/windows/System32/Wbem:/cygdrive/c/windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:%USERPROFILE%/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Binaries/z3-4.5.0-x64-win/bin:/cygdrive/c/Binaries/scons/Scripts:/cygdrive/c/Python27:/cygdrive/c/Build/Agent/externals.2.104.2/nuget:/cygdrive/c/Program Files (x86)/Pandoc:/cygdrive/c/Program Files/CMake/bin:/cygdrive/c/windows/system32:/home/everbld/.opam/system/bin:/cygdrive/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/usr/x86_64-w64-mingw32/sys-root/mingw/bin:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin:/cygdrive/c/Build/Agent1/bin:/cygdrive/c/Build/Agent1/bin
+================================================================================
+Rebuilding FStar
+Running make -C FStar/src/ocaml-output -j 24
+================================================================================
+
+
+
+================================================================================
+Rebuilding KreMLin
+Running make -C kremlin -j 24
+================================================================================
+
+
+
+================================================================================
+Rebuilding HACL*
+Running make -C hacl-star/code extract-c -j 24
+================================================================================
+
+
+
+================================================================================
+Rebuilding Vale
+Running build_vale
+Restoring NuGet package FsLexYacc.6.1.0.
+Restoring NuGet package FsLexYacc.Runtime.6.1.0.
+Adding package 'FsLexYacc.6.1.0' to folder 'C:\Build\Agent1\_work\12\s\vale\tools\FsLexYacc'
+Adding package 'FsLexYacc.Runtime.6.1.0' to folder 'C:\Build\Agent1\_work\12\s\vale\tools\FsLexYacc'
+Added package 'FsLexYacc.Runtime.6.1.0' to folder 'C:\Build\Agent1\_work\12\s\vale\tools\FsLexYacc'
+Added package 'FsLexYacc.6.1.0' to folder 'C:\Build\Agent1\_work\12\s\vale\tools\FsLexYacc'
+
+NuGet Config files used:
+C:\Users\everbld\AppData\Roaming\NuGet\NuGet.Config
+C:\ProgramData\nuget\Config\Microsoft.VisualStudio.Offline.config
+
+Feeds used:
+C:\Users\everbld\.nuget\packages\
+https://api.nuget.org/v3/index.json
+C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
+
+Installed:
+2 package(s) to packages.config projects
+
+C:\Build\Agent1\_work\12\s\vale>echo *********** 
+***********
+
+C:\Build\Agent1\_work\12\s\vale>set
+AGENT_BUILDDIRECTORY=C:\Build\Agent1\_work\12
+AGENT_HOMEDIRECTORY=C:\Build\Agent1
+AGENT_ID=15
+AGENT_JOBNAME=Build
+AGENT_JOBSTATUS=Succeeded
+AGENT_MACHINENAME=EVEREST-CI
+AGENT_NAME=EVEREST-CI-1
+AGENT_ROOTDIRECTORY=C:\Build\Agent1\_work
+AGENT_SERVEROMDIRECTORY=C:\Build\Agent1\externals\vstsom
+AGENT_TEMPDIRECTORY=C:\Build\Agent1\_work\_temp
+AGENT_TOOLSDIRECTORY=C:\Build\Agent1\_work\_tool
+AGENT_VERSION=2.115.0
+AGENT_WORKFOLDER=C:\Build\Agent1\_work
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\everbld\AppData\Roaming
+AZURE_HTTP_USER_AGENT=VSTS_1242fa66-b132-4bb9-a608-b6b99e20eebc_build_55_7941
+BUILD_ARTIFACTSTAGINGDIRECTORY=C:\Build\Agent1\_work\12\a
+BUILD_BINARIESDIRECTORY=C:\Build\Agent1\_work\12\b
+BUILD_BUILDID=7941
+BUILD_BUILDNUMBER=7941
+BUILD_BUILDURI=vstfs:///Build/Build/7941
+BUILD_CONTAINERID=1119580
+BUILD_DEFINITIONNAME=Everest-CI-Windows
+BUILD_DEFINITIONVERSION=13
+BUILD_QUEUEDBY=Microsoft.VisualStudio.Services.TFS
+BUILD_QUEUEDBYID=00000002-0000-8888-8000-000000000000
+BUILD_REASON=IndividualCI
+BUILD_REPOSITORY_CLEAN=true
+BUILD_REPOSITORY_GIT_SUBMODULECHECKOUT=False
+BUILD_REPOSITORY_ID=https://github.com/project-everest/everest.git
+BUILD_REPOSITORY_LOCALPATH=C:\Build\Agent1\_work\12\s
+BUILD_REPOSITORY_NAME=project-everest/everest
+BUILD_REPOSITORY_PROVIDER=GitHub
+BUILD_REPOSITORY_URI=https://github.com/project-everest/everest.git
+BUILD_REQUESTEDFOR=Jonathan Protzenko
+BUILD_REQUESTEDFOREMAIL=protz@microsoft.com
+BUILD_REQUESTEDFORID=1f3ace0a-e71b-4127-a0b5-eae550eb38b3
+BUILD_SOURCEBRANCH=refs/heads/master
+BUILD_SOURCEBRANCHNAME=master
+BUILD_SOURCESDIRECTORY=C:\Build\Agent1\_work\12\s
+BUILD_SOURCEVERSION=31f32062b517f6050409c859d8f3cf9f5a77a209
+BUILD_SOURCEVERSIONAUTHOR=Jonathan Protzenko
+BUILD_SOURCEVERSIONMESSAGE=Checks following Zarko's suggestions
+BUILD_STAGINGDIRECTORY=C:\Build\Agent1\_work\12\a
+CAMLP4LIB=C:/OCaml/lib/camlp4
+CAML_LD_LIBRARY_PATH=/home/everbld/.opam/system/lib/stublibs:/cygdrive/c/OCaml/lib/stublibs
+CI_LOGS=/home/everbld/ci-logs
+CommandPromptType=Native
+COMMONPROGRAMFILES=C:\Program Files\Common Files
+COMMON_TESTRESULTSDIRECTORY=C:\Build\Agent1\_work\12\TestResults
+COMPUTERNAME=EVEREST-CI
+COMSPEC=C:\windows\system32\cmd.exe
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+Framework40Version=v4.0
+FrameworkDir=C:\windows\Microsoft.NET\Framework64
+FrameworkDIR64=C:\windows\Microsoft.NET\Framework64
+FrameworkVersion=v4.0.30319
+FrameworkVersion64=v4.0.30319
+FSHARPINSTALLDIR=C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\
+FSTAR_HOME=C:/Build/Agent1/_work/12/s/FStar
+GIT_SSH_COMMAND=ssh -oBatchMode=yes
+GIT_TERMINAL_PROMPT=0
+HOME=C:\cygwin64\home\everbld
+HOSTNAME=Everest-CI
+INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.10586.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\10\include\10.0.10586.0\shared;C:\Program Files (x86)\Windows Kits\10\include\10.0.10586.0\um;C:\Program Files (x86)\Windows Kits\10\include\10.0.10586.0\winrt;
+INFOPATH=/usr/local/info:/usr/share/info:/usr/info
+KREMLIN_HOME=C:/Build/Agent1/_work/12/s/kremlin
+LANG=en_US.UTF-8
+LIB=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\LIB\amd64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10586.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\lib\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10586.0\um\x64;
+LIBPATH=C:\windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\LIB\amd64;C:\Program Files (x86)\Windows Kits\10\UnionMetadata;C:\Program Files (x86)\Windows Kits\10\References;\Microsoft.VCLibs\14.0\References\CommonConfiguration\neutral;
+LOCALAPPDATA=C:\Users\everbld\AppData\Local
+MANPATH=/home/everbld/.opam/system/man:
+MSDEPLOY_HTTP_USER_AGENT=VSTS_1242fa66-b132-4bb9-a608-b6b99e20eebc_build_55_7941
+NETFXSDKDir=C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\
+NUMBER_OF_PROCESSORS=36
+OCAMLLIB=C:\OCaml\lib
+OCAMLRUNPARAM=b
+OLDPWD=/cygdrive/c/Build/Agent1/_work/12/s/kremlin
+OPENSSL_HOME=C:/Build/Agent1/_work/12/s/FStar/ucontrib/CoreCrypto/ml/openssl
+ORIGINAL_PATH=/cygdrive/c/Build/Agent1/externals/git/cmd:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/windows:/cygdrive/c/windows/System32/Wbem:/cygdrive/c/windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:%USERPROFILE%/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Binaries/z3-4.5.0-x64-win/bin:/cygdrive/c/Binaries/scons/Scripts:/cygdrive/c/Python27:/cygdrive/c/Build/Agent/externals.2.104.2/nuget:/cygdrive/c/Program Files (x86)/Pandoc:/cygdrive/c/Program Files/CMake/bin:/cygdrive/c/windows/system32:/home/everbld/.opam/system/bin:/cygdrive/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/usr/x86_64-w64-mingw32/sys-root/mingw/bin:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin:/cygdrive/c/Build/Agent1/bin:/cygdrive/c/Build/Agent1/bin
+OS=Windows_NT
+OTHERFLAGS=--trace_error
+OneDrive=C:\Users\everbld\OneDrive - Microsoft
+PATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\MSBuild\14.0\bin\amd64;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN\amd64;C:\windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\VCPackages;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Performance Tools\x64;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Performance Tools;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files (x86)\Windows Kits\10\bin\x86;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\;C:\Build\Agent1\_work\12\s\FStar\ucontrib\CoreCrypto\ml\openssl;C:\Build\Agent1\_work\12\s\FStar\bin;C:\Build\Agent1\_work\12\s\kremlin;C:\cygwin64\home\everbld\bin;C:\cygwin64\home\everbld\everest\z3-4.5.0-x64-win\bin;C:\PROGRA~2\MICROS~1.0\VC\bin\amd64;C:\PROGRA~2\MICROS~1.0\VC\bin;C:\PROGRA~2\MIA713~1\F#\4.0\FRAMEW~1\v4.0\;C:\cygwin64\home\everbld\.opam\system\bin;C:\cygwin64\usr\x86_64-w64-mingw32\sys-root\mingw\bin\;C:\cygwin64\usr\local\bin;C:\cygwin64\bin;C:\Build\Agent1\externals\git\cmd;C:\Program Files\Docker\Docker\Resources\bin;C:\OCaml\bin;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;%USERPROFILE%\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm;C:\Program Files\Microsoft SQL Server\120\Tools\Binn;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Git\cmd;C:\cygwin64\bin;C:\Binaries\Boogie;C:\Program Files (x86)\HP\HP Performance Advisor;C:\Binaries\z3-4.5.0-x64-win\bin;C:\Binaries\scons\Scripts;C:\Python27;C:\Build\Agent\externals.2.104.2\nuget;C:\Program Files (x86)\Pandoc;C:\Program Files\CMake\bin;C:\windows\system32;C:\cygwin64\home\everbld\.opam\system\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit;C:\cygwin64\usr\x86_64-w64-mingw32\sys-root\mingw\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Build\Agent1\bin;C:\Build\Agent1\bin
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+Platform=X64
+PRINTER=Microsoft Print to PDF
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 79 Stepping 1, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=4f01
+PROFILEREAD=true
+PROGRAMFILES=C:\Program Files
+PROMPT=$P$G
+PSModulePath=%ProgramFiles%\WindowsPowerShell\Modules;C:\windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+PWD=/cygdrive/c/Build/Agent1/_work/12/s
+ProgramData=C:\ProgramData
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+SHELL=/bin/bash
+SHLVL=3
+SLACK_FSTAR_WEBHOOK=https://hooks.slack.com/services/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
+SYSTEM=build
+SYSTEMDRIVE=C:
+SYSTEMROOT=C:\windows
+SYSTEM_ARTIFACTSDIRECTORY=C:\Build\Agent1\_work\12\a
+SYSTEM_COLLECTIONID=1242fa66-b132-4bb9-a608-b6b99e20eebc
+SYSTEM_CULTURE=en-US
+SYSTEM_DEBUG=false
+SYSTEM_DEFAULTWORKINGDIRECTORY=C:\Build\Agent1\_work\12\s
+SYSTEM_DEFINITIONID=55
+SYSTEM_HOSTTYPE=build
+SYSTEM_ISSCHEDULED=False
+SYSTEM_JOBID=b0605063-4075-416e-b108-62a4e5db6b3b
+SYSTEM_PLANID=6098c284-6c35-4807-92c2-24bdd79fa60b
+SYSTEM_TASKDEFINITIONSURI=https://msresearch-ext.visualstudio.com/
+SYSTEM_TEAMFOUNDATIONCOLLECTIONURI=https://msresearch-ext.visualstudio.com/
+SYSTEM_TEAMFOUNDATIONSERVERURI=https://msresearch-ext.visualstudio.com/
+SYSTEM_TEAMPROJECT=Everest
+SYSTEM_TEAMPROJECTID=83f09286-c288-4766-89cd-d267b6d93772
+SYSTEM_TIMELINEID=8b8a2023-4ec2-444d-92b5-ebca09c96b7c
+SYSTEM_WORKFOLDER=C:\Build\Agent1\_work
+TASK_DISPLAYNAME=Run bash
+TEMP=C:\cygwin64\tmp
+TERM=cygwin
+TF_BUILD=True
+TMP=C:\cygwin64\tmp
+TZ=America/Los_Angeles
+UATDATA=C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+UCRTVersion=10.0.10586.0
+UniversalCRTSdkDir=C:\Program Files (x86)\Windows Kits\10\
+USER=everbld
+USERDNSDOMAIN=REDMOND.CORP.MICROSOFT.COM
+USERDOMAIN=REDMOND
+USERNAME=everbld
+USERPROFILE=C:\Users\everbld
+VALE_HOME=C:/Build/Agent1/_work/12/s/vale
+VCINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\
+VisualStudioVersion=14.0
+VS140COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
+VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio 14.0\
+VSSDK140Install=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VSSDK\
+WINDIR=C:\windows
+WindowsLibPath=C:\Program Files (x86)\Windows Kits\10\UnionMetadata;C:\Program Files (x86)\Windows Kits\10\References
+WindowsSdkDir=C:\Program Files (x86)\Windows Kits\10\
+WindowsSDKLibVersion=10.0.10586.0\
+WindowsSDKVersion=10.0.10586.0\
+WindowsSDK_ExecutablePath_x64=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\
+WindowsSDK_ExecutablePath_x86=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\
+_=/cygdrive/c/windows/system32/cmd.exe
+agent.jobstatus=Succeeded
+
+C:\Build\Agent1\_work\12\s\vale>echo *********** 
+***********
+scons: Reading SConscript files ...
+***
+*** WARNING:  NOT VERIFYING ANY CODE
+***
+scons: done reading SConscript files.
+scons: Building targets ...
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+parallel (-j) builds may not work reliably with open Python files.
+File "C:\Binaries\scons\Scripts\scons.py", line 199, in <module>
+Copy file(s): "tools\Dafny\z3.exe" to "bin\z3.exe"
+csc -t:library -out:bin\DafnyInterface.dll tools\Vale\DafnyInterface\Source\DafnyInterface\DafnyDriver.cs tools\Vale\DafnyInterface\Source\DafnyInterface\Properties\AssemblyInfo.cs -r:tools\Dafny\BoogieAbsInt.dll -r:tools\Dafny\BoogieConcurrency.dll -r:tools\Dafny\BoogieCore.dll -r:tools\Dafny\BoogieExecutionEngine.dll -r:tools\Dafny\BoogieParserHelper.dll -r:tools\Dafny\BoogieVCGeneration.dll -r:tools\Dafny\Dafny.exe -r:tools\Dafny\DafnyPipeline.dll -r:tools\Dafny\Provers.SMTLib.dll
+tools\FsLexYacc\FsLexYacc.6.1.0\build\fsyacc.exe --module "Parse" tools\Vale\src\parse.fsy -o obj\Vale\parse.fs
+tools\FsLexYacc\FsLexYacc.6.1.0\build\fslex.exe tools\Vale\src\lex.fsl -o obj\Vale\lex.fs
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\types.s.dfy /noVerify > obj\lib\util\types.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\collections\Seqs.s.dfy /noVerify > obj\lib\collections\Seqs.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\Io.s.dfy /noVerify > obj\lib\util\Io.s.tmp
+Copy file(s): "src\crypto\aes\testaes.c" to "obj\crypto\aes\testaes.c"
+Copy file(s): "src\crypto\aes\testcbc.c" to "obj\crypto\aes\testcbc.c"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace src\lib\math\mul_nonlinear.i.dfy /noVerify > obj\lib\math\mul_nonlinear.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace src\lib\math\div_nonlinear.i.dfy /noVerify > obj\lib\math\div_nonlinear.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\power2.s.dfy /noVerify > obj\lib\math\power2.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\power.s.dfy /noVerify > obj\lib\math\power.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\div_def.i.dfy /noVerify > obj\lib\math\div_def.i.tmp
+Copy file(s): "src\crypto\hashing\testsha256.c" to "obj\crypto\hashing\testsha256.c"
+Copy file(s): "src\crypto\poly1305\testpoly1305.c" to "obj\crypto\poly1305\testpoly1305.c"
+Microsoft (R) Visual C# Compiler version 4.6.1038.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+compiling to dfas (can take a while...)
+building tables
+cl /Foobj\crypto\poly1305\testpoly1305.obj /c obj\crypto\poly1305\testpoly1305.c /nologo /Ox /Gz /DKRML_NOUINT128 /IC:\Build\Agent1\_work\12\s\kremlin\kremlib /Isrc\lib\util /Isrc\crypto\poly1305 /Zi /Fdobj\crypto\poly1305\testpoly1305.pdb
+cl /Foobj\crypto\aes\testcbc.obj /c obj\crypto\aes\testcbc.c /nologo /Ox /Gz /DKRML_NOUINT128 /IC:\Build\Agent1\_work\12\s\kremlin\kremlib /Isrc\lib\util /Zi /Fdobj\crypto\aes\testcbc.pdb
+computing first function...Copy file(s): "tools\Dafny\Provers.SMTLib.dll" to "bin\Provers.SMTLib.dll"
+cl /Foobj\crypto\aes\testaes.obj /c obj\crypto\aes\testaes.c /nologo /Ox /Gz /DKRML_NOUINT128 /IC:\Build\Agent1\_work\12\s\kremlin\kremlib /Isrc\lib\util /Isrc\crypto\aes /Zi /Fdobj\crypto\aes\testaes.pdb
+testpoly1305.c
+Copy file(s): "tools\Dafny\DafnyRuntime.cs" to "bin\DafnyRuntime.cs"
+Copy file(s): "tools\Dafny\DafnyPrelude.bpl" to "bin\DafnyPrelude.bpl"
+Copy file(s): "tools\Dafny\Dafny.exe" to "bin\Dafny.exe"
+testcbc.c
+Copy file(s): "tools\Dafny\DafnyPipeline.dll" to "bin\DafnyPipeline.dll"
+Copy file(s): "tools\Dafny\BoogieVCGeneration.dll" to "bin\BoogieVCGeneration.dll"
+testaes.c
+Copy file(s): "tools\Dafny\BoogieVCExpr.dll" to "bin\BoogieVCExpr.dll"
+Copy file(s): "tools\Dafny\BoogieParserHelper.dll" to "bin\BoogieParserHelper.dll"
+Copy file(s): "tools\Dafny\BoogieModel.dll" to "bin\BoogieModel.dll"
+Copy file(s): "tools\Dafny\BoogieHoudini.dll" to "bin\BoogieHoudini.dll"
+time: Copy file(s): "tools\Dafny\BoogieGraph.dll" to "bin\BoogieGraph.dll"
+Copy file(s): "tools\Dafny\BoogieExecutionEngine.dll" to "bin\BoogieExecutionEngine.dll"
+Copy file(s): "tools\Dafny\BoogieDoomed.dll" to "bin\BoogieDoomed.dll"
+Copy file(s): "tools\Dafny\BoogieCore.dll" to "bin\BoogieCore.dll"
+Copy file(s): "tools\Dafny\BoogieConcurrency.dll" to "bin\BoogieConcurrency.dll"
+Copy file(s): "tools\Dafny\BoogieCodeContractsExtender.dll" to "bin\BoogieCodeContractsExtender.dll"
+Copy file(s): "tools\Dafny\BoogieBasetypes.dll" to "bin\BoogieBasetypes.dll"
+Copy file(s): "tools\Dafny\BoogieAbsInt.dll" to "bin\BoogieAbsInt.dll"
+00:00:00.0858117
+building kernels...time: 00:00:00.0751298
+building kernel table...time: 00:00:00.0159444
+computing lookahead relations......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.3264304
+building lookahead table...time: 00:00:00.0382050
+building action table...387 states
+writing output
+time: 00:00:00.3520741
+building goto table...time: 00:00:00.0335583
+returning tables.
+467 states
+55 nonterminals
+94 terminals
+208 productions
+#rows in action table: 467
+Copy file(s): "obj\lib\collections\Seqs.s.tmp" to "obj\lib\collections\Seqs.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\collections\Seqs.i.dfy /noVerify > obj\lib\collections\Seqs.i.tmp
+Copy file(s): "obj\lib\util\Io.s.tmp" to "obj\lib\util\Io.s.vdfy"
+C:\PROGRA~2\MIA713~1\F#\4.0\FRAMEW~1\v4.0\fsc.exe -g --platform:x86 --standalone --mlcompatibility -O tools\Vale\src\ast.fs tools\Vale\src\ast_util.fs tools\Vale\src\parse_util.fs obj\Vale\parse.fs obj\Vale\lex.fs tools\Vale\src\transform.fs tools\Vale\src\emit_common.fs tools\Vale\src\emit_dafny_text.fs tools\Vale\src\emit_dafny_direct.fs tools\Vale\src\emit_fstar_text.fs tools\Vale\src\emit_vale_text.fs tools\Vale\src\main.fs -o bin\vale.exe -r tools\Dafny\BoogieAbsInt.dll -r tools\Dafny\BoogieBasetypes.dll -r tools\Dafny\BoogieCodeContractsExtender.dll -r tools\Dafny\BoogieConcurrency.dll -r tools\Dafny\BoogieCore.dll -r tools\Dafny\BoogieDoomed.dll -r tools\Dafny\BoogieExecutionEngine.dll -r tools\Dafny\BoogieGraph.dll -r tools\Dafny\BoogieHoudini.dll -r tools\Dafny\BoogieModel.dll -r tools\Dafny\BoogieParserHelper.dll -r tools\Dafny\BoogieVCExpr.dll -r tools\Dafny\BoogieVCGeneration.dll -r tools\Dafny\DafnyPipeline.dll -r tools\Dafny\Dafny.exe -r bin\DafnyInterface.dll -r tools\Dafny\Newtonsoft.Json.dll -r tools\FsLexYacc\FsLexYacc.Runtime.6.1.0\lib\net40\FsLexYacc.Runtime.dll
+Copy file(s): "obj\lib\math\power.s.tmp" to "obj\lib\math\power.s.vdfy"
+Copy file(s): "obj\lib\math\div_def.i.tmp" to "obj\lib\math\div_def.i.vdfy"
+Copy file(s): "obj\lib\math\mul_nonlinear.i.tmp" to "obj\lib\math\mul_nonlinear.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mul_auto_proofs.i.dfy /noVerify > obj\lib\math\mul_auto_proofs.i.tmp
+Copy file(s): "obj\lib\util\types.s.tmp" to "obj\lib\util\types.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\operations.s.dfy /noVerify > obj\lib\util\operations.s.tmp
+Microsoft (R) F# Compiler version 14.0.23413.0
+Copyright (c) Microsoft Corporation. All Rights Reserved.
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\types.i.dfy /noVerify > obj\lib\util\types.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\words_and_bytes.s.dfy /noVerify > obj\lib\util\words_and_bytes.s.tmp
+Copy file(s): "obj\lib\math\div_nonlinear.i.tmp" to "obj\lib\math\div_nonlinear.i.vdfy"
+Copy file(s): "obj\lib\math\power2.s.tmp" to "obj\lib\math\power2.s.vdfy"
+Copy file(s): "obj\lib\math\mul_auto_proofs.i.tmp" to "obj\lib\math\mul_auto_proofs.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mul_auto.i.dfy /noVerify > obj\lib\math\mul_auto.i.tmp
+Copy file(s): "obj\lib\util\operations.s.tmp" to "obj\lib\util\operations.s.vdfy"
+Copy file(s): "obj\lib\util\words_and_bytes.s.tmp" to "obj\lib\util\words_and_bytes.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha_common.s.dfy /noVerify > obj\crypto\hashing\sha_common.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\aes.s.dfy /noVerify > obj\crypto\aes\aes.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\hmac_common.s.dfy /noVerify > obj\crypto\hashing\hmac_common.s.tmp
+Copy file(s): "obj\lib\util\types.i.tmp" to "obj\lib\util\types.i.vdfy"
+Copy file(s): "obj\lib\collections\Seqs.i.tmp" to "obj\lib\collections\Seqs.i.vdfy"
+Copy file(s): "obj\lib\math\mul_auto.i.tmp" to "obj\lib\math\mul_auto.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mul.i.dfy /noVerify > obj\lib\math\mul.i.tmp
+Copy file(s): "obj\crypto\hashing\hmac_common.s.tmp" to "obj\crypto\hashing\hmac_common.s.vdfy"
+Copy file(s): "obj\crypto\hashing\sha_common.s.tmp" to "obj\crypto\hashing\sha_common.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256.s.dfy /noVerify > obj\crypto\hashing\sha256.s.tmp
+Copy file(s): "obj\crypto\aes\aes.s.tmp" to "obj\crypto\aes\aes.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\def.s.dfy /noVerify > obj\arch\x64\def.s.tmp
+Copy file(s): "obj\lib\math\mul.i.tmp" to "obj\lib\math\mul.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\div_boogie.i.dfy /noVerify > obj\lib\math\div_boogie.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\power.i.dfy /noVerify > obj\lib\math\power.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mod_auto_proofs.i.dfy /noVerify > obj\lib\math\mod_auto_proofs.i.tmp
+Copy file(s): "obj\crypto\hashing\sha256.s.tmp" to "obj\crypto\hashing\sha256.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256.i.dfy /noVerify > obj\crypto\hashing\sha256.i.tmp
+Copy file(s): "obj\lib\math\div_boogie.i.tmp" to "obj\lib\math\div_boogie.i.vdfy"
+Copy file(s): "obj\lib\math\power.i.tmp" to "obj\lib\math\power.i.vdfy"
+Copy file(s): "obj\lib\math\mod_auto_proofs.i.tmp" to "obj\lib\math\mod_auto_proofs.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\mod_auto.i.dfy /noVerify > obj\lib\math\mod_auto.i.tmp
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\calc.vad -out obj\Vale\test\calc.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\arch\x86\decls.vad -out obj\arch\x86\decls.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\common.vad -out obj\Vale\test\common.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\hashing\sha-x64\sha256.vad -out obj\crypto\hashing\sha-x64\sha256.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\inline-if.vad -out obj\Vale\test\inline-if.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\thirdPartyPorts\OpenSSL\sha\arm\sha256.vad -out obj\thirdPartyPorts\OpenSSL\sha\arm\sha256.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\assert-by.vad -out obj\Vale\test\assert-by.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\aes\aes.vad -out obj\crypto\aes\aes.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\aes\cbc.vad -out obj\crypto\aes\cbc.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\thirdPartyPorts\OpenSSL\poly1305\x64\poly1305.vad -out obj\thirdPartyPorts\OpenSSL\poly1305\x64\poly1305.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\refined3.vad -out obj\Vale\test\refined3.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\arch\x64\decls64.vad -out obj\arch\x64\decls64.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\DottedNames.vad -out obj\Vale\test\DottedNames.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\hashing\sha256.vad -out obj\crypto\hashing\sha256.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\arch\arm\decls.vad -out obj\arch\arm\decls.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\refined2.vad -out obj\Vale\test\refined2.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in tools\Vale\test\test1.vad -out obj\Vale\test\test1.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\arch\x64\decls.vad -out obj\arch\x64\decls.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\aes\aes-x64\aes.vad -out obj\crypto\aes\aes-x64\aes.gen.dfy
+bin\vale.exe -includeSuffix .vad .gen.dfy -in src\crypto\aes\aes-x64\cbc.vad -out obj\crypto\aes\aes-x64\cbc.gen.dfy
+// parsing .\tools\Vale\test\calc.vad// parsing .\tools\Vale\test\common.vad// parsing .\src\arch\x86\decls.vad
+
+
+// parsing .\src\crypto\hashing\sha-x64\sha256.vad
+// parsing .\tools\Vale\test\inline-if.vad
+// parsing .\tools\Vale\test\assert-by.vad
+// parsing .\src\crypto\aes\aes.vad
+// parsing .\src\thirdPartyPorts\OpenSSL\sha\arm\sha256.vad
+// parsing .\src\thirdPartyPorts\OpenSSL\poly1305\x64\poly1305.vad
+// parsing .\src\crypto\aes\cbc.vad
+// parsing .\tools\Vale\test\refined3.vad
+// parsing .\src\arch\x64\decls64.vad
+// parsing .\src\crypto\hashing\sha256.vad
+// parsing .\tools\Vale\test\DottedNames.vad
+// parsing .\src\arch\arm\decls.vad
+// parsing .\tools\Vale\test\refined2.vad
+// parsing .\src\crypto\aes\aes-x64\cbc.vad
+// parsing .\tools\Vale\test\test1.vad
+// parsing .\tools\Vale\test\common.vad
+// parsing .\src\arch\x64\decls.vad
+// parsing .\src\crypto\aes\aes-x64\aes.vad
+// parsing .\tools\Vale\test\common.vad
+// parsing .\tools\Vale\test\common.vad
+// parsing .\src\crypto\hashing\sha-x64\../../../arch/x64/decls.vad
+// parsing .\src\crypto\aes\../../arch/x86/decls.vad
+// parsing .\src\crypto\aes\../../arch/x86/decls.vad
+// parsing .\tools\Vale\test\common.vad
+// parsing .\tools\Vale\test\common.vad
+// parsing .\src\thirdPartyPorts\OpenSSL\sha\arm\../../../../arch/arm/decls.vad
+// parsing .\src\crypto\aes\aes-x64\../../../arch/x64/decls.vad
+// parsing .\src\thirdPartyPorts\OpenSSL\poly1305\x64\../../../../arch/x64/decls.vad
+// parsing .\src\arch\x64\decls.vad
+// parsing .\src\crypto\aes\aes.vad
+// parsing .\src\thirdPartyPorts\OpenSSL\poly1305\x64\../../../../arch/x64/decls64.vad
+Copy file(s): "obj\arch\x64\def.s.tmp" to "obj\arch\x64\def.s.vdfy"
+// parsing .\src\crypto\aes\aes-x64\aes.vad
+// parsing .\src\crypto\hashing\../../arch/x86/decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\printGcc.s.dfy /noVerify > obj\arch\x64\printGcc.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\printMasm.s.dfy /noVerify > obj\arch\x64\printMasm.s.tmp
+// parsing .\src\crypto\aes\aes-x64\../../../arch/x64/decls.vad
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\bitvectors128.s.dfy /noVerify > obj\lib\math\bitvectors128.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\poly1305\x64\poly1305_common.i.dfy /noVerify > obj\crypto\poly1305\x64\poly1305_common.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\bitvectors64.s.dfy /noVerify > obj\lib\math\bitvectors64.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /proverOpt:OPTIMIZE_FOR_BV=true src\lib\util\operations.i.dfy /noVerify > obj\lib\util\operations.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\dafny_wrappers.i.dfy /noVerify > obj\lib\util\dafny_wrappers.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\cbc.s.dfy /noVerify > obj\crypto\aes\cbc.s.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\collections\Sets.i.dfy /noVerify > obj\lib\collections\Sets.i.tmp
+Copy file(s): "obj\crypto\hashing\sha256.i.tmp" to "obj\crypto\hashing\sha256.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256_context.i.dfy /noVerify > obj\crypto\hashing\sha256_context.i.tmp
+Copy file(s): "obj\lib\math\mod_auto.i.tmp" to "obj\lib\math\mod_auto.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\div_auto_proofs.i.dfy /noVerify > obj\lib\math\div_auto_proofs.i.tmp
+Copy file(s): "obj\crypto\poly1305\x64\poly1305_common.i.tmp" to "obj\crypto\poly1305\x64\poly1305_common.i.vdfy"
+Copy file(s): "obj\lib\util\dafny_wrappers.i.tmp" to "obj\lib\util\dafny_wrappers.i.vdfy"
+Copy file(s): "obj\lib\math\bitvectors128.s.tmp" to "obj\lib\math\bitvectors128.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\poly1305\x64\poly1305.s.dfy /noVerify > obj\crypto\poly1305\x64\poly1305.s.tmp
+Copy file(s): "obj\lib\collections\Sets.i.tmp" to "obj\lib\collections\Sets.i.vdfy"
+Copy file(s): "obj\lib\math\bitvectors64.s.tmp" to "obj\lib\math\bitvectors64.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\bitvectors128.i.dfy /noVerify > obj\lib\math\bitvectors128.i.tmp
+Copy file(s): "obj\lib\util\operations.i.tmp" to "obj\lib\util\operations.i.vdfy"
+Copy file(s): "obj\crypto\aes\cbc.s.tmp" to "obj\crypto\aes\cbc.s.vdfy"
+Copy file(s): "obj\arch\x64\printGcc.s.tmp" to "obj\arch\x64\printGcc.s.vdfy"
+Copy file(s): "obj\arch\x64\printMasm.s.tmp" to "obj\arch\x64\printMasm.s.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\print.s.dfy /noVerify > obj\arch\x64\print.s.tmp
+Copy file(s): "obj\lib\math\div_auto_proofs.i.tmp" to "obj\lib\math\div_auto_proofs.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\div_auto.i.dfy /noVerify > obj\lib\math\div_auto.i.tmp
+Copy file(s): "obj\crypto\poly1305\x64\poly1305.s.tmp" to "obj\crypto\poly1305\x64\poly1305.s.vdfy"
+Copy file(s): "obj\crypto\hashing\sha256_context.i.tmp" to "obj\crypto\hashing\sha256_context.i.vdfy"
+Copy file(s): "obj\lib\math\bitvectors128.i.tmp" to "obj\lib\math\bitvectors128.i.vdfy"
+Copy file(s): "obj\lib\math\div_auto.i.tmp" to "obj\lib\math\div_auto.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /timeLimit:60 src\lib\math\div.i.dfy /noVerify > obj\lib\math\div.i.tmp
+Copy file(s): "obj\arch\x64\print.s.tmp" to "obj\arch\x64\print.s.vdfy"
+Copy file(s): "obj\lib\math\div.i.tmp" to "obj\lib\math\div.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\poly1305\x64\poly1305_math.i.dfy /noVerify > obj\crypto\poly1305\x64\poly1305_math.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\bitvectors64.i.dfy /noVerify > obj\lib\math\bitvectors64.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\math\power2.i.dfy /noVerify > obj\lib\math\power2.i.tmp
+Copy file(s): "obj\crypto\poly1305\x64\poly1305_math.i.tmp" to "obj\crypto\poly1305\x64\poly1305_math.i.vdfy"
+Copy file(s): "obj\lib\math\power2.i.tmp" to "obj\lib\math\power2.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\words_and_bytes.i.dfy /noVerify > obj\lib\util\words_and_bytes.i.tmp
+Copy file(s): "obj\lib\math\bitvectors64.i.tmp" to "obj\lib\math\bitvectors64.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\poly1305\x64\poly1305_bitvectors.i.dfy /noVerify > obj\crypto\poly1305\x64\poly1305_bitvectors.i.tmp
+Copy file(s): "obj\lib\util\words_and_bytes.i.tmp" to "obj\lib\util\words_and_bytes.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256_unique.i.dfy /noVerify > obj\crypto\hashing\sha256_unique.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\aes_helpers.i.dfy /noVerify > obj\crypto\aes\aes_helpers.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\hashing\sha256_helpers.i.dfy /noVerify > obj\crypto\hashing\sha256_helpers.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\vale.i.dfy /noVerify > obj\arch\x64\vale.i.tmp
+Copy file(s): "obj\crypto\poly1305\x64\poly1305_bitvectors.i.tmp" to "obj\crypto\poly1305\x64\poly1305_bitvectors.i.vdfy"
+Copy file(s): "obj\crypto\hashing\sha256_unique.i.tmp" to "obj\crypto\hashing\sha256_unique.i.vdfy"
+Copy file(s): "obj\crypto\hashing\sha256_helpers.i.tmp" to "obj\crypto\hashing\sha256_helpers.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /kremlin /noVerify /compile:2 /spillTargetCode:1 src\crypto\hashing\sha256_main.i.dfy /out:obj\crypto\hashing\sha256_main.i.json
+[TRACE] Using prover: C:\Build\Agent1\_work\12\s\vale\tools\Dafny\z3.exe
+Parsing src\crypto\hashing\sha256_main.i.dfy
+Copy file(s): "obj\crypto\aes\aes_helpers.i.tmp" to "obj\crypto\aes\aes_helpers.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\aes_lemmas.i.dfy /noVerify > obj\crypto\aes\aes_lemmas.i.tmp
+Copy file(s): "obj\arch\x64\vale.i.tmp" to "obj\arch\x64\vale.i.vdfy"
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\crypto\aes\aes-x64\cbc_helpers.i.dfy /noVerify > obj\crypto\aes\aes-x64\cbc_helpers.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\arch\x64\vale64.i.dfy /noVerify > obj\arch\x64\vale64.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith src\lib\util\heaplets64.i.dfy /noVerify > obj\lib\util\heaplets64.i.tmp
+tools\Dafny\Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith obj\arch\x64\decls.gen.dfy /noVerify > obj\arch\x64\decls.gen.tmp
+Coalescing blocks...
+Inlining...
+
+Running abstract interpretation...
+[0.1609991 s]
+
+Dafny program verifier finished with 0 verified, 0 errors
+Compiled program written to sha256_main.i.json
+cd obj\crypto\hashing && C:\Build\Agent1\_work\12\s\kremlin\_build\src\Kremlin.native -warn-error +1..4 -warn-error @4 -skip-compilation -add-include \"DafnyLib.h\" -cc msvc sha256_main.i.json
+The system cannot find the path specified.
+scons: *** [obj\crypto\hashing\sha256_main_i.c] Error 1
+scons: building terminated because of errors.
+================================================================================
+
+
+
+================================================================================
+Rebuilding FStar / CoreCrypto
+Using git: /usr/bin/git
+Running make -C FStar/ucontrib/CoreCrypto/ml -j 24
+================================================================================
+
+
+
+================================================================================
+Building mixed C/ASM Crypto
+Using git: /usr/bin/git
+Running make -C FStar/examples/low-level krml-test.exe test-perf.exe
+================================================================================
+
+
+
+================================================================================
+Rebuilding miTLS
+Running make -C mitls-fstar/src/tls -j 24 build
+================================================================================
+
+
+
+ERROR: build failed for one or more projects
+FStar
+KreMLin
+HACL*
+Vale
+CoreCrypto
+krml-test
+miTLS
+
