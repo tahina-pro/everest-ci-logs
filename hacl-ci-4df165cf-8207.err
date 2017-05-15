@@ -1,0 +1,560 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "CoreCrypto.ml", line 526, characters 24-144:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+ECC_X448
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+openssl_stub.c: In function ‘ocaml_openssl_init’:
+openssl_stub.c:93:3: warning: implicit declaration of function ‘OPENSSL_config’ [-Wimplicit-function-declaration]
+OPENSSL_config("CoreCrypto");
+^
+openssl_stub.c: In function ‘ocaml_rsa_gen_key’:
+openssl_stub.c:668:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_get_key’:
+openssl_stub.c:779:21: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:27: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:33: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_encrypt’:
+openssl_stub.c:823:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_decrypt’:
+openssl_stub.c:878:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_sign’:
+openssl_stub.c:922:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_verify’:
+openssl_stub.c:975:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_dsa_gen_params’:
+openssl_stub.c:1087:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_gen_key’:
+openssl_stub.c:1144:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1144:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_get_key’:
+openssl_stub.c:1183:21: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:27: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:33: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1190:21: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1190:29: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_set_key’:
+openssl_stub.c:1235:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1236:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1236:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_sign’:
+openssl_stub.c:1325:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1326:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv); 
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1326:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv); 
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_verify’:
+openssl_stub.c:1368:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1369:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1369:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dh_gen_params’:
+openssl_stub.c:1473:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_params_of_string’:
+openssl_stub.c:1506:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_gen_key’:
+openssl_stub.c:1561:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1561:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_compute’:
+openssl_stub.c:1672:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1672:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Hacl.Test.X25519.main (going into Hacl_Test_X25519) calls Hacl.EC.crypto_scalarmult (going into Curve25519) -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext and Spec.Chacha20.test_plaintext mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Hacl.Test.X25519.main (going into Hacl_Test_X25519) calls Hacl.EC.crypto_scalarmult (going into Curve25519) -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+WARNING: (29475,16): '=' cannot be used in patterns.
+WARNING: (29475,16): 'if' cannot be used in patterns.
+WARNING: (29792,16): '=' cannot be used in patterns.
+WARNING: (29792,16): 'if' cannot be used in patterns.
+WARNING: (35139,16): '=' cannot be used in patterns.
+WARNING: (35139,16): 'if' cannot be used in patterns.
+WARNING: (35397,16): '=' cannot be used in patterns.
+WARNING: (35397,16): 'if' cannot be used in patterns.
+WARNING: (281106,16): '=' cannot be used in patterns.
+WARNING: (281106,16): 'if' cannot be used in patterns.
+WARNING: (281364,16): '=' cannot be used in patterns.
+WARNING: (281364,16): 'if' cannot be used in patterns.
+WARNING: (32686,16): '=' cannot be used in patterns.
+WARNING: (32686,16): 'if' cannot be used in patterns.
+WARNING: (32944,16): '=' cannot be used in patterns.
+WARNING: (32944,16): 'if' cannot be used in patterns.
+WARNING: (278321,16): '=' cannot be used in patterns.
+WARNING: (278321,16): 'if' cannot be used in patterns.
+WARNING: (278579,16): '=' cannot be used in patterns.
+WARNING: (278579,16): 'if' cannot be used in patterns.
+WARNING: (29089,16): '=' cannot be used in patterns.
+WARNING: (29089,16): 'if' cannot be used in patterns.
+Checking out files:   9% (431/4478)   Checking out files:  10% (448/4478)   Checking out files:  11% (493/4478)   Checking out files:  12% (538/4478)   Checking out files:  13% (583/4478)   Checking out files:  14% (627/4478)   Checking out files:  15% (672/4478)   Checking out files:  16% (717/4478)   Checking out files:  17% (762/4478)   Checking out files:  18% (807/4478)   Checking out files:  19% (851/4478)   Checking out files:  19% (863/4478)   Checking out files:  20% (896/4478)   Checking out files:  21% (941/4478)   Checking out files:  22% (986/4478)   Checking out files:  23% (1030/4478)   Checking out files:  24% (1075/4478)   Checking out files:  25% (1120/4478)   Checking out files:  26% (1165/4478)   Checking out files:  27% (1210/4478)   Checking out files:  28% (1254/4478)   Checking out files:  28% (1291/4478)   Checking out files:  29% (1299/4478)   Checking out files:  30% (1344/4478)   Checking out files:  31% (1389/4478)   Checking out files:  32% (1433/4478)   Checking out files:  33% (1478/4478)   Checking out files:  34% (1523/4478)   Checking out files:  35% (1568/4478)   Checking out files:  36% (1613/4478)   Checking out files:  37% (1657/4478)   Checking out files:  37% (1699/4478)   Checking out files:  38% (1702/4478)   Checking out files:  39% (1747/4478)   Checking out files:  40% (1792/4478)   Checking out files:  41% (1836/4478)   Checking out files:  42% (1881/4478)   Checking out files:  43% (1926/4478)   Checking out files:  44% (1971/4478)   Checking out files:  45% (2016/4478)   Checking out files:  46% (2060/4478)   Checking out files:  47% (2105/4478)   Checking out files:  47% (2115/4478)   Checking out files:  48% (2150/4478)   Checking out files:  49% (2195/4478)   Checking out files:  50% (2239/4478)   Checking out files:  51% (2284/4478)   Checking out files:  52% (2329/4478)   Checking out files:  53% (2374/4478)   Checking out files:  54% (2419/4478)   Checking out files:  55% (2463/4478)   Checking out files:  56% (2508/4478)   Checking out files:  56% (2549/4478)   Checking out files:  57% (2553/4478)   Checking out files:  58% (2598/4478)   Checking out files:  59% (2643/4478)   Checking out files:  60% (2687/4478)   Checking out files:  61% (2732/4478)   Checking out files:  62% (2777/4478)   Checking out files:  63% (2822/4478)   Checking out files:  64% (2866/4478)   Checking out files:  65% (2911/4478)   Checking out files:  66% (2956/4478)   Checking out files:  66% (2976/4478)   Checking out files:  67% (3001/4478)   Checking out files:  68% (3046/4478)   Checking out files:  69% (3090/4478)   Checking out files:  70% (3135/4478)   Checking out files:  71% (3180/4478)   Checking out files:  72% (3225/4478)   Checking out files:  73% (3269/4478)   Checking out files:  74% (3314/4478)   Checking out files:  75% (3359/4478)   Checking out files:  75% (3398/4478)   Checking out files:  76% (3404/4478)   Checking out files:  77% (3449/4478)   Checking out files:  78% (3493/4478)   Checking out files:  79% (3538/4478)   Checking out files:  80% (3583/4478)   Checking out files:  81% (3628/4478)   Checking out files:  82% (3672/4478)   Checking out files:  83% (3717/4478)   Checking out files:  84% (3762/4478)   Checking out files:  85% (3807/4478)   Checking out files:  85% (3835/4478)   Checking out files:  86% (3852/4478)   Checking out files:  87% (3896/4478)   Checking out files:  88% (3941/4478)   Checking out files:  89% (3986/4478)   Checking out files:  90% (4031/4478)   Checking out files:  91% (4075/4478)   Checking out files:  92% (4120/4478)   Checking out files:  93% (4165/4478)   Checking out files:  94% (4210/4478)   Checking out files:  95% (4255/4478)   Checking out files:  95% (4257/4478)   Checking out files:  96% (4299/4478)   Checking out files:  97% (4344/4478)   Checking out files:  98% (4389/4478)   Checking out files:  99% (4434/4478)   Checking out files: 100% (4478/4478)   Checking out files: 100% (4478/4478), done.
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+35825df4 [CI] regenerate hints
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+git branch <new-branch-name> 35825df4
+
+Switched to a new branch 'jk_ed_ct'
+To github.com:mitls/hacl-star.git
+4df165cf..35825df4  jk_ed_ct -> jk_ed_ct
