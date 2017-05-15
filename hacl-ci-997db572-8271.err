@@ -1,0 +1,19 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+6 shift/reduce conflicts.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: *** No rule to make target 'include/internal/refcount.h', needed by 'crypto/asn1/a_sign.o'.  Stop.
+make[3]: *** Waiting for unfinished jobs....
+make[2]: *** [Makefile:127: build_libs] Error 2
+make[1]: *** [Makefile:76: openssl/libcrypto.a] Error 2
+make: *** [Makefile:85: CoreCrypto.cmxa] Error 2
