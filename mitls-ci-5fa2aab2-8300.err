@@ -1,0 +1,101 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make: *** [Makefile:66: libllcrypto.a] Error 1
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:193: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:195: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:193: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:195: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:193: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:195: warning: ignoring old recipe for target 'mitls.exe'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:193: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:195: warning: ignoring old recipe for target 'mitls.exe'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:193: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:195: warning: ignoring old recipe for target 'mitls.exe'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:193: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:195: warning: ignoring old recipe for target 'mitls.exe'
+x86_64-w64-mingw32-ar: fstarlib.a: Permission denied
+File "_none_", line 1:
+Error: Error while creating the library fstarlib.a
+make[4]: *** [Makefile:30: all] Error 2
+make[3]: *** [Extracted.mk:53: C:/Build/Agent2/_work/2/s/fstar/ulib/ml/fstarlib.cmxa] Error 2
+x86_64-w64-mingw32-ar: unable to rename 'fstarlib.a'; reason: Permission denied
+File "_none_", line 1:
+Error: Error while creating the library fstarlib.a
+make[4]: *** [Makefile:30: all] Error 2
+make[3]: *** [Extracted.mk:53: C:/Build/Agent2/_work/2/s/fstar/ulib/ml/fstarlib.cmxa] Error 2
+x86_64-w64-mingw32-ranlib: 'fstarlib.a': No such file
+File "_none_", line 1:
+Error: Error while creating the library fstarlib.a
+make[4]: *** [Makefile:30: all] Error 2
+make[3]: *** [Extracted.mk:53: C:/Build/Agent2/_work/2/s/fstar/ulib/ml/fstarlib.cmxa] Error 2
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make[4]: *** [Makefile:66: libllcrypto.a] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make[4]: *** [Makefile:66: libllcrypto.a] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make[4]: *** [Makefile:66: libllcrypto.a] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+** Error: End_of_file
+make[4]: *** [Makefile:13: FFICallbacks.cmxa] Error 2
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:66: ../../libs/ffi/FFICallbacks.cmxa] Error 2
+** Error: End_of_file
+make[4]: *** [Makefile:13: FFICallbacks.cmxa] Error 2
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:66: ../../libs/ffi/FFICallbacks.cmxa] Error 2
+make[3]: Circular C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+make[3]: Target 'mitls.exe' not remade because of errors.
+make[2]: *** [Makefile:199: ../../libs/ffi/FFICallbacks.cmxa] Error 2
+make[3]: Target 'mitls.exe' not remade because of errors.
+make[2]: *** [Makefile:199: C:/Build/Agent2/_work/2/s/fstar/ulib/ml/fstarlib.cmxa] Error 2
+make[3]: Target 'mitls.exe' not remade because of errors.
+make[2]: *** [Makefile:199: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
