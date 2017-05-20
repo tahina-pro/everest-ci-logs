@@ -1,0 +1,108 @@
+This is /home/everest/everest-ci/ci
+Working directory: /home/everest/vsts-agent/_work/1/s
+About to run: ./.scripts/process_build.sh
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: FStar-BinaryBuild-Linux
+*** Clean up log files ***
+*** Make package ***
+cp "../extraction/ml/FStar_Extraction_ML_PrintML_4.04.0.ml" ../extraction/ml/FStar_Extraction_ML_PrintML.ml
+echo 'open FStar_Util' > FStar_Version.ml
+echo 'let dummy () = ();;' >> FStar_Version.ml
+echo 'FStar_Options._version := "0.9.4.3";;' >> FStar_Version.ml
+echo 'FStar_Options._platform := "Linux_x86_64";;' >> FStar_Version.ml
+echo 'FStar_Options._compiler := "OCaml 4.04.0";;' >> FStar_Version.ml
+echo 'FStar_Options._date := "2017-05-20T10:43:47+00:00";;' >> FStar_Version.ml
+echo 'FStar_Options._commit:= "2e6d02877 (dirty)";;' >> FStar_Version.ml
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml  -I ulib/ml -use-ocamlfind main.native
+SANITIZE: a total of 80 files that should probably not be in your source tree
+has been found. A script shell file
+"/home/everest/vsts-agent/_work/1/s/src/ocaml-output/_build/sanitize.sh" is
+being created. Check this script and run it to remove unwanted files or use
+other options (such as defining hygiene exceptions or using the -no-hygiene
+option).
+IMPORTANT: I cannot work with leftover compiled files.
+ERROR: Leftover object files:
+File FStar_ST.o in ulib/ml has suffix .o
+File FStar_Int64.o in ulib/ml has suffix .o
+make: *** [fstar.exe] Error 1
+File FStar_UInt32.o in ulib/ml has suffix .o
+File FStar_UInt64.o in ulib/ml has suffix .o
+File FStar_IO.o in ulib/ml has suffix .o
+File FStar_List_Tot_Base.o in ulib/ml has suffix .o
+File FStar_UInt8.o in ulib/ml has suffix .o
+File FStar_Float.o in ulib/ml has suffix .o
+File prims.o in ulib/ml has suffix .o
+File FStar_Heap.o in ulib/ml has suffix .o
+File FStar_List.o in ulib/ml has suffix .o
+File FStar_Int_Cast.o in ulib/ml has suffix .o
+File FStar_Option.o in ulib/ml has suffix .o
+File FStar_Mul.o in ulib/ml has suffix .o
+File FStar_Int8.o in ulib/ml has suffix .o
+File FStar_Buffer.o in ulib/ml has suffix .o
+File FStar_UInt16.o in ulib/ml has suffix .o
+File FStar_Char.o in ulib/ml has suffix .o
+File FStar_All.o in ulib/ml has suffix .o
+File FStar_UInt128.o in ulib/ml has suffix .o
+File FStar_Int32.o in ulib/ml has suffix .o
+File FStar_Int16.o in ulib/ml has suffix .o
+File FStar_Set.o in ulib/ml has suffix .o
+File FStar_String.o in ulib/ml has suffix .o
+File FStar_BaseTypes.o in ulib/ml has suffix .o
+File FStar_CommonST.o in ulib/ml has suffix .o
+File fstarlib.a in ulib/ml has suffix .a
+ERROR: Leftover OCaml compilation files:
+File FStar_Set.cmi in ulib/ml has suffix .cmi
+File FStar_Int16.cmi in ulib/ml has suffix .cmi
+File FStar_UInt128.cmi in ulib/ml has suffix .cmi
+File FStar_List_Tot_Base.cmi in ulib/ml has suffix .cmi
+File FStar_List.cmi in ulib/ml has suffix .cmi
+File FStar_Int8.cmi in ulib/ml has suffix .cmi
+File FStar_UInt32.cmi in ulib/ml has suffix .cmi
+File FStar_All.cmi in ulib/ml has suffix .cmi
+File FStar_Option.cmi in ulib/ml has suffix .cmi
+File FStar_String.cmi in ulib/ml has suffix .cmi
+File FStar_Buffer.cmi in ulib/ml has suffix .cmi
+File FStar_Int64.cmi in ulib/ml has suffix .cmi
+File FStar_UInt16.cmi in ulib/ml has suffix .cmi
+File FStar_ST.cmi in ulib/ml has suffix .cmi
+File prims.cmi in ulib/ml has suffix .cmi
+File FStar_Int_Cast.cmi in ulib/ml has suffix .cmi
+File FStar_Float.cmi in ulib/ml has suffix .cmi
+File FStar_UInt8.cmi in ulib/ml has suffix .cmi
+File FStar_Heap.cmi in ulib/ml has suffix .cmi
+File FStar_CommonST.cmi in ulib/ml has suffix .cmi
+File FStar_Int32.cmi in ulib/ml has suffix .cmi
+File FStar_IO.cmi in ulib/ml has suffix .cmi
+File FStar_Char.cmi in ulib/ml has suffix .cmi
+File FStar_UInt64.cmi in ulib/ml has suffix .cmi
+File FStar_Mul.cmi in ulib/ml has suffix .cmi
+File FStar_BaseTypes.cmi in ulib/ml has suffix .cmi
+File FStar_UInt128.cmx in ulib/ml has suffix .cmx
+File FStar_Char.cmx in ulib/ml has suffix .cmx
+File FStar_Set.cmx in ulib/ml has suffix .cmx
+File FStar_UInt16.cmx in ulib/ml has suffix .cmx
+File FStar_List_Tot_Base.cmx in ulib/ml has suffix .cmx
+File FStar_Int32.cmx in ulib/ml has suffix .cmx
+File FStar_ST.cmx in ulib/ml has suffix .cmx
+File FStar_String.cmx in ulib/ml has suffix .cmx
+File FStar_Option.cmx in ulib/ml has suffix .cmx
+File FStar_Int16.cmx in ulib/ml has suffix .cmx
+File FStar_All.cmx in ulib/ml has suffix .cmx
+File prims.cmx in ulib/ml has suffix .cmx
+File FStar_Float.cmx in ulib/ml has suffix .cmx
+File FStar_CommonST.cmx in ulib/ml has suffix .cmx
+File FStar_BaseTypes.cmx in ulib/ml has suffix .cmx
+File FStar_Buffer.cmx in ulib/ml has suffix .cmx
+File FStar_UInt32.cmx in ulib/ml has suffix .cmx
+File FStar_Mul.cmx in ulib/ml has suffix .cmx
+File FStar_UInt64.cmx in ulib/ml has suffix .cmx
+File FStar_Int8.cmx in ulib/ml has suffix .cmx
+File FStar_IO.cmx in ulib/ml has suffix .cmx
+File FStar_UInt8.cmx in ulib/ml has suffix .cmx
+File FStar_Heap.cmx in ulib/ml has suffix .cmx
+File FStar_Int64.cmx in ulib/ml has suffix .cmx
+File FStar_List.cmx in ulib/ml has suffix .cmx
+File FStar_Int_Cast.cmx in ulib/ml has suffix .cmx
+File fstarlib.cmxa in ulib/ml has suffix .cmxa
+Exiting due to hygiene violations.
+Makefile:102: recipe for target 'fstar.exe' failed
