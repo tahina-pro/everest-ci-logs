@@ -1,0 +1,117 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/17/s
+About to run: ./.scripts/process_build.sh
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: FStar-BinaryBuild-Windows
+*** Clean up log files ***
+*** Make package ***
+cp "../extraction/ml/FStar_Extraction_ML_PrintML_4.02.3.ml" ../extraction/ml/FStar_Extraction_ML_PrintML.ml
+warning: CRLF will be replaced by LF in doc/slides/popl2015/intro-tiny-fstar.mdk.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in doc/slides/popl2015/overview-presentation.mdk.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+echo 'open FStar_Util' > FStar_Version.ml
+echo 'let dummy () = ();;' >> FStar_Version.ml
+echo 'FStar_Options._version := "0.9.4.3";;' >> FStar_Version.ml
+echo 'FStar_Options._platform := "Windows_x64";;' >> FStar_Version.ml
+echo 'FStar_Options._compiler := "OCaml 4.02.3";;' >> FStar_Version.ml
+echo 'FStar_Options._date := "2017-05-21T01:11:10-07:00";;' >> FStar_Version.ml
+echo 'FStar_Options._commit:= "e266981c7 (dirty)";;' >> FStar_Version.ml
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml  -I ulib/ml -use-ocamlfind main.native
+SANITIZE: a total of 80 files that should probably not be in your source tree
+has been found. A script shell file
+"C:\\Build\\Agent2\\_work\\17\\s\\src/ocaml-output/_build/sanitize.sh" is
+being created. Check this script and run it to remove unwanted files or use
+other options (such as defining hygiene exceptions or using the -no-hygiene
+option).
+IMPORTANT: I cannot work with leftover compiled files.
+ERROR: Leftover object files:
+make: *** [Makefile:102: fstar.exe] Error 1
+File prims.o in ulib/ml has suffix .o
+File FStar_UInt8.o in ulib/ml has suffix .o
+File FStar_UInt64.o in ulib/ml has suffix .o
+File FStar_UInt32.o in ulib/ml has suffix .o
+File FStar_UInt16.o in ulib/ml has suffix .o
+File FStar_UInt128.o in ulib/ml has suffix .o
+File FStar_String.o in ulib/ml has suffix .o
+File FStar_ST.o in ulib/ml has suffix .o
+File FStar_Set.o in ulib/ml has suffix .o
+File FStar_Option.o in ulib/ml has suffix .o
+File FStar_Mul.o in ulib/ml has suffix .o
+File FStar_List_Tot_Base.o in ulib/ml has suffix .o
+File FStar_List.o in ulib/ml has suffix .o
+File FStar_IO.o in ulib/ml has suffix .o
+File FStar_Int_Cast.o in ulib/ml has suffix .o
+File FStar_Int8.o in ulib/ml has suffix .o
+File FStar_Int64.o in ulib/ml has suffix .o
+File FStar_Int32.o in ulib/ml has suffix .o
+File FStar_Int16.o in ulib/ml has suffix .o
+File FStar_Heap.o in ulib/ml has suffix .o
+File FStar_Float.o in ulib/ml has suffix .o
+File FStar_CommonST.o in ulib/ml has suffix .o
+File FStar_Char.o in ulib/ml has suffix .o
+File FStar_Buffer.o in ulib/ml has suffix .o
+File FStar_BaseTypes.o in ulib/ml has suffix .o
+File FStar_All.o in ulib/ml has suffix .o
+File fstarlib.a in ulib/ml has suffix .a
+ERROR: Leftover OCaml compilation files:
+File prims.cmi in ulib/ml has suffix .cmi
+File FStar_UInt8.cmi in ulib/ml has suffix .cmi
+File FStar_UInt64.cmi in ulib/ml has suffix .cmi
+File FStar_UInt32.cmi in ulib/ml has suffix .cmi
+File FStar_UInt16.cmi in ulib/ml has suffix .cmi
+File FStar_UInt128.cmi in ulib/ml has suffix .cmi
+File FStar_String.cmi in ulib/ml has suffix .cmi
+File FStar_ST.cmi in ulib/ml has suffix .cmi
+File FStar_Set.cmi in ulib/ml has suffix .cmi
+File FStar_Option.cmi in ulib/ml has suffix .cmi
+File FStar_Mul.cmi in ulib/ml has suffix .cmi
+File FStar_List_Tot_Base.cmi in ulib/ml has suffix .cmi
+File FStar_List.cmi in ulib/ml has suffix .cmi
+File FStar_IO.cmi in ulib/ml has suffix .cmi
+File FStar_Int_Cast.cmi in ulib/ml has suffix .cmi
+File FStar_Int8.cmi in ulib/ml has suffix .cmi
+File FStar_Int64.cmi in ulib/ml has suffix .cmi
+File FStar_Int32.cmi in ulib/ml has suffix .cmi
+File FStar_Int16.cmi in ulib/ml has suffix .cmi
+File FStar_Heap.cmi in ulib/ml has suffix .cmi
+File FStar_Float.cmi in ulib/ml has suffix .cmi
+File FStar_CommonST.cmi in ulib/ml has suffix .cmi
+File FStar_Char.cmi in ulib/ml has suffix .cmi
+File FStar_Buffer.cmi in ulib/ml has suffix .cmi
+File FStar_BaseTypes.cmi in ulib/ml has suffix .cmi
+File FStar_All.cmi in ulib/ml has suffix .cmi
+File prims.cmx in ulib/ml has suffix .cmx
+File FStar_UInt8.cmx in ulib/ml has suffix .cmx
+File FStar_UInt64.cmx in ulib/ml has suffix .cmx
+File FStar_UInt32.cmx in ulib/ml has suffix .cmx
+File FStar_UInt16.cmx in ulib/ml has suffix .cmx
+File FStar_UInt128.cmx in ulib/ml has suffix .cmx
+File FStar_String.cmx in ulib/ml has suffix .cmx
+File FStar_ST.cmx in ulib/ml has suffix .cmx
+File FStar_Set.cmx in ulib/ml has suffix .cmx
+File FStar_Option.cmx in ulib/ml has suffix .cmx
+File FStar_Mul.cmx in ulib/ml has suffix .cmx
+File FStar_List_Tot_Base.cmx in ulib/ml has suffix .cmx
+File FStar_List.cmx in ulib/ml has suffix .cmx
+File FStar_IO.cmx in ulib/ml has suffix .cmx
+File FStar_Int_Cast.cmx in ulib/ml has suffix .cmx
+File FStar_Int8.cmx in ulib/ml has suffix .cmx
+File FStar_Int64.cmx in ulib/ml has suffix .cmx
+File FStar_Int32.cmx in ulib/ml has suffix .cmx
+File FStar_Int16.cmx in ulib/ml has suffix .cmx
+File FStar_Heap.cmx in ulib/ml has suffix .cmx
+File FStar_Float.cmx in ulib/ml has suffix .cmx
+File FStar_CommonST.cmx in ulib/ml has suffix .cmx
+File FStar_Char.cmx in ulib/ml has suffix .cmx
+File FStar_Buffer.cmx in ulib/ml has suffix .cmx
+File FStar_BaseTypes.cmx in ulib/ml has suffix .cmx
+File FStar_All.cmx in ulib/ml has suffix .cmx
+File fstarlib.cmxa in ulib/ml has suffix .cmxa
+Exiting due to hygiene violations.
