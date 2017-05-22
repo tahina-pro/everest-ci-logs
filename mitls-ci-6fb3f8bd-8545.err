@@ -1,0 +1,402 @@
+From https://github.com/FStarLang/FStar
+beef9661b..be470b450  master      -> origin/master
+603969606..0628d3d01  nik_private -> origin/nik_private
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make: *** [Makefile:66: libllcrypto.a] Error 1
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:194: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:196: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:199: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:201: warning: ignoring old recipe for target 'cmitls.exe'
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:194: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:196: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:199: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:201: warning: ignoring old recipe for target 'cmitls.exe'
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:194: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:196: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:199: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:201: warning: ignoring old recipe for target 'cmitls.exe'
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 540049" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 540049" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 540049" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 545758" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 545758" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 545758" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 545758" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 545758" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 545758" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 545758" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 545758" of type "Type0"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised by primitive operation at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5760, characters 13-35
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6369, characters 26-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6455, characters 6-66
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Negotiation.fst(38,0-40,58): (Error) Implicit argument: Expected expression of type "uu___1580:Platform.Bytes.lbytes 2 -> Prims.Tot Type0"; got expression "uu___unification_ 545758" of type "Type0"
+1 error was reported (see above)
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make[4]: *** [Makefile:66: libllcrypto.a] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make[4]: *** [Makefile:66: libllcrypto.a] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make[4]: *** [Makefile:66: libllcrypto.a] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+x86_64-w64-mingw32-ranlib: unable to rename 'FFICallbacks.a'; reason: Permission denied
+File "_none_", line 1:
+Error: Error while creating the library FFICallbacks.a
+make[4]: *** [Makefile:13: FFICallbacks.cmxa] Error 2
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:66: ../../libs/ffi/FFICallbacks.cmxa] Error 2
+make[3]: *** No rule to make target 'output/FFI.ml', needed by 'output/FFI.cmx'.
+make[3]: *** No rule to make target 'output/TestAPI.ml', needed by 'output/TestAPI.cmx'.
+make[3]: *** No rule to make target 'output/TestFFI.ml', needed by 'output/TestFFI.cmx'.
+x86_64-w64-mingw32-ranlib: 'FFICallbacks.a': No such file
+File "_none_", line 1:
+Error: Error while creating the library FFICallbacks.a
+make[4]: *** [Makefile:13: FFICallbacks.cmxa] Error 2
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:66: ../../libs/ffi/FFICallbacks.cmxa] Error 2
+make[3]: *** No rule to make target 'output/FFI.ml', needed by 'output/FFI.cmx'.
+make[3]: *** No rule to make target 'output/TestAPI.ml', needed by 'output/TestAPI.cmx'.
+make[3]: *** No rule to make target 'output/TestFFI.ml', needed by 'output/TestFFI.cmx'.
+File "test/mitls.ml", line 2, characters 5-17:
+Error: Unbound module TLSConstants
+make[3]: *** [Extracted.mk:72: test/mitls.cmx] Error 2
+make[3]: Target 'mitls.exe' not remade because of errors.
+make[2]: *** [Makefile:206: ../../libs/ffi/FFICallbacks.cmxa] Error 2
+File "test/mitls.ml", line 2, characters 5-17:
+Error: Unbound module TLSConstants
+make[3]: *** [Extracted.mk:72: test/mitls.cmx] Error 2
+make[3]: Target 'mitls.exe' not remade because of errors.
+make[2]: *** [Makefile:206: C:/Build/Agent2/_work/2/s/fstar/ulib/ml/fstarlib.cmxa] Error 2
+make[3]: *** No rule to make target 'output/FFI.ml', needed by 'output/FFI.cmx'.
+make[3]: *** No rule to make target 'output/TestAPI.ml', needed by 'output/TestAPI.cmx'.
+make[3]: *** No rule to make target 'output/TestFFI.ml', needed by 'output/TestFFI.cmx'.
+File "test/mitls.ml", line 2, characters 5-17:
+Error: Unbound module TLSConstants
+make[3]: *** [Extracted.mk:72: test/mitls.cmx] Error 2
+make[3]: Target 'mitls.exe' not remade because of errors.
+make[2]: *** [Makefile:206: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
