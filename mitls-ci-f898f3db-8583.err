@@ -1,0 +1,86 @@
+From https://github.com/FStarLang/FStar
+be470b450..43925d40f  master           -> origin/master
+18980f494..2536a1a41  aseem_pervasives -> origin/aseem_pervasives
+ea1e610b6..555d476f6  catalin_private  -> origin/catalin_private
+* [new branch]          cpitclaudel_bintree_enum -> origin/cpitclaudel_bintree_enum
+f8a6b60dc..2536a1a41  cwinter_stats    -> origin/cwinter_stats
+a674b55f1..d3834ef5b  guido_tactics    -> origin/guido_tactics
+* [new branch]          jk_private       -> origin/jk_private
+0628d3d01..2eed8a189  nik_private      -> origin/nik_private
+43ac13ca1..8e96fce51  vdum_extract_dm4f_effects -> origin/vdum_extract_dm4f_effects
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:194: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:196: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:199: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:201: warning: ignoring old recipe for target 'cmitls.exe'
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:194: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:196: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:199: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:201: warning: ignoring old recipe for target 'cmitls.exe'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:194: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:196: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:199: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:201: warning: ignoring old recipe for target 'cmitls.exe'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:194: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:196: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:199: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:201: warning: ignoring old recipe for target 'cmitls.exe'
+x86_64-w64-mingw32-ranlib: unable to rename 'fstarlib.a'; reason: Permission denied
+File "_none_", line 1:
+Error: Error while creating the library fstarlib.a
+make[4]: *** [Makefile:30: all] Error 2
+make[3]: *** [Extracted.mk:53: C:/Build/Agent1/_work/5/s/fstar/ulib/ml/fstarlib.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+x86_64-w64-mingw32-ar: unable to rename '.\libFFICallbacks.a'; reason: Permission denied
+make[4]: *** [Makefile:13: FFICallbacks.cmxa] Error 2
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:66: ../../libs/ffi/FFICallbacks.cmxa] Error 2
+make[3]: Circular C:/Build/Agent1/_work/5/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent1/_work/5/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular C:/Build/Agent1/_work/5/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent1/_work/5/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+File "_none_", line 1:
+Error: Files output/TLSError.cmx and output/TLSError.cmx
+both define a module named TLSError
+make[3]: Target 'mitls.exe' not remade because of errors.
+make[3]: *** [Extracted.mk:101: mitls.cmxa] Error 2
+make[2]: *** [Makefile:206: C:/Build/Agent1/_work/5/s/fstar/ulib/ml/fstarlib.cmxa] Error 2
+make[3]: Target 'mitls.exe' not remade because of errors.
+make[2]: *** [Makefile:206: ../../libs/ffi/FFICallbacks.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
