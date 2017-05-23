@@ -1,0 +1,14 @@
+This is /home/everest/everest-ci/ci
+Working directory: /home/everest/vsts-agent/_work/2/s
+About to run: scons -j 8 --NOVERIFY
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: VALE-CI-Linux
+scons: Reading SConscript files ...
+***
+*** WARNING:  NOT VERIFYING ANY CODE
+***
+Not building Poly1305 for this target architecture
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: *** [bin/Provers.SMTLib.dll] Source `tools/Vale/tools/Dafny/Provers.SMTLib.dll' not found, needed by target `bin/Provers.SMTLib.dll'.
+scons: building terminated because of errors.
