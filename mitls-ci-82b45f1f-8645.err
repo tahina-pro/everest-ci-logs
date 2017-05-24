@@ -1,0 +1,55 @@
+From https://github.com/FStarLang/FStar
+43925d40f..386cb604f  master              -> origin/master
+* [new branch]          aseem_kremlin_extraction -> origin/aseem_kremlin_extraction
+2536a1a41..bf92d4a17  aseem_pervasives    -> origin/aseem_pervasives
+1fb9e2697..af3cf3864  cpitclaudel_bintree_enum -> origin/cpitclaudel_bintree_enum
+* [new branch]          cpitclaudel_related_ranges -> origin/cpitclaudel_related_ranges
+d3834ef5b..57bc80cb0  guido_tactics       -> origin/guido_tactics
+7acb15a66..de4d7fb8b  kyod_fstarlib       -> origin/kyod_fstarlib
+* [new branch]          nik_ghost_interface -> origin/nik_ghost_interface
+2eed8a189..2aeb56883  nik_private         -> origin/nik_private
+8e96fce51..5be602e2b  vdum_extract_dm4f_effects -> origin/vdum_extract_dm4f_effects
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make: *** [Makefile:66: libllcrypto.a] Error 1
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make[4]: *** [Makefile:66: libllcrypto.a] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[3]: Circular C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+make[3]: Target 'mitls.cmxa' not remade because of errors.
+make[2]: *** [Makefile:190: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
