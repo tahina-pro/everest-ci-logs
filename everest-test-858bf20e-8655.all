@@ -1,0 +1,145 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/7/s
+About to run: ./everest --yes -j 24 test
+BUILD_SOURCEBRANCHNAME: handshake
+BUILD_DEFINITIONNAME: Everest-CI-Windows
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent2/_work/7/s
+
+exported FSTAR_HOME=C:/Build/Agent2/_work/7/s/FStar
+exported OPENSSL_HOME=C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/openssl
+exported KREMLIN_HOME=C:/Build/Agent2/_work/7/s/kremlin
+exported VALE_HOME=C:/Build/Agent2/_work/7/s/vale
++ FStar/examples/low-level/krml-test.exe
+exported PATH=/cygdrive/c/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/openssl:/cygdrive/c/Build/Agent2/_work/7/s/FStar/bin:/cygdrive/c/Build/Agent2/_work/7/s/kremlin:/home/everbld/bin:/home/everbld/everest/z3-4.5.0-x64-win/bin:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin/amd64:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin:/cygdrive/c/PROGRA~2/MIA713~1/F#/4.0/FRAMEW~1/v4.0/:/home/everbld/.opam/system/bin:/usr/x86_64-w64-mingw32/sys-root/mingw/bin/:/usr/local/bin:/usr/bin:/cygdrive/c/Build/Agent2/externals/git/cmd:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/WINDOWS:/cygdrive/c/WINDOWS/System32/Wbem:/cygdrive/c/WINDOWS/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:%USERPROFILE%/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Binaries/z3-4.5.0-x64-win/bin:/cygdrive/c/Binaries/scons/Scripts:/cygdrive/c/Python27:/cygdrive/c/Build/Agent/externals.2.104.2/nuget:/cygdrive/c/Program Files (x86)/Pandoc:/cygdrive/c/Program Files/CMake/bin:/cygdrive/c/WINDOWS/system32:/home/everbld/.opam/system/bin:/cygdrive/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/usr/x86_64-w64-mingw32/sys-root/mingw/bin:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin:/cygdrive/c/Users/everbld/AppData/Local/Microsoft/WindowsApps:/cygdrive/c/Build/Agent2/bin:/cygdrive/c/Build/Agent2/bin
+================================================================================
+Running tests (commands shown below)
+[test] expected output cipher is d31a8d34648e60db7b86afbc53ef7ec2a4aded51296e08fea9e2b5a736ee62d63dbea45e8ca9671282fafb69da92728b1a71de0a9e060b2905d6a5b67ecd3b3692ddbd7f2d778b8c9803aee328091b58fab324e4fad675945585808b4831d7bc3ff4def08e4b7a9de576d26586cec64b61161ae10b594f09e26a7e902ecbd0600691
+[test] computed output cipher is d31a8d34648e60db7b86afbc53ef7ec2a4aded51296e08fea9e2b5a736ee62d63dbea45e8ca9671282fafb69da92728b1a71de0a9e060b2905d6a5b67ecd3b3692ddbd7f2d778b8c9803aee328091b58fab324e4fad675945585808b4831d7bc3ff4def08e4b7a9de576d26586cec64b61161ae10b594f09e26a7e902ecbd0600691
+[test] cipher is a success
++ FStar/examples/low-level/test-perf.exe
+[test] expected output decryption is 4c616469657320616e642047656e746c656d656e206f662074686520636c617373206f66202739393a204966204920636f756c64206f6666657220796f75206f6e6c79206f6e652074697020666f7220746865206675747572652c2073756e73637265656e20776f756c642062652069742e
+[test] computed output decryption is 4c616469657320616e642047656e746c656d656e206f662074686520636c617373206f66202739393a204966204920636f756c64206f6666657220796f75206f6e6c79206f6e652074697020666f7220746865206675747572652c2073756e73637265656e20776f756c642062652069742e
+[test] decryption is a success
+[test] expected output cipher is 58e2fccefa7e3061367f1d57a4e7455a
+[test] computed output cipher is 58e2fccefa7e3061367f1d57a4e7455a
+[test] cipher is a success
+[test] expected output decryption is 
+[test] computed output decryption is 
+[test] decryption is a success
+[test] expected output cipher is 530f8afbc74536b9a963b4f1c4cb738b
+[test] computed output cipher is 530f8afbc74536b9a963b4f1c4cb738b
+[test] cipher is a success
+[test] expected output decryption is 
+[test] computed output decryption is 
+[test] decryption is a success
+[test] expected output cipher is cea7403d4d606b6e074ec5d3baf39d18d0d1c8a799996bf0265b98b5d48ab919
+[test] computed output cipher is cea7403d4d606b6e074ec5d3baf39d18d0d1c8a799996bf0265b98b5d48ab919
+[test] cipher is a success
+[test] expected output decryption is 00000000000000000000000000000000
+[test] computed output decryption is 00000000000000000000000000000000
+[test] decryption is a success
+[test] expected output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f662898015adb094dac5d93471bdec1a502270e3cc6c
+[test] computed output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f662898015adb094dac5d93471bdec1a502270e3cc6c
+[test] cipher is a success
+[test] expected output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b391aafd255
+[test] computed output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b391aafd255
+[test] decryption is a success
+[test] expected output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f66276fc6ece0f4e1768cddf8853bb2d551b
+[test] computed output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f66276fc6ece0f4e1768cddf8853bb2d551b
+[test] cipher is a success
+[test] expected output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b39
+[test] computed output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b39
+[test] decryption is a success
+Testing: Kremlin-C-aes256-gcm
+Cycles for 10 2^14 bytes: 235699469 (1438.60cycles/byte)
+User time for 10 2^14 bytes: 0.102000 (0.622559ns/byte)
+Testing: Kremlin-C-chacha20-poly1305
+Cycles for 1000 2^14 bytes: 666927781 (40.71cycles/byte)
+User time for 1000 2^14 bytes: 0.291000 (0.017761ns/byte)
+Testing: openssl-aes-256-gcm
+Cycles for 1000 2^14 bytes: 13775522 (0.84cycles/byte)
+User time for 1000 2^14 bytes: 0.006000 (0.000366ns/byte)
+Testing: openssl-chacha20-poly1305
+Cycles for 1000 2^14 bytes: 24905922 (1.52cycles/byte)
+User time for 1000 2^14 bytes: 0.011000 (0.000671ns/byte)
+Testing: Kremlin-C-aes256
+Cycles for 1 2^14 bytes: 5137363 (313.56cycles/byte)
+User time for 1 2^14 bytes: 0.002000 (0.122070ns/byte)
+Testing: Kremlin-C-chacha20
+Cycles for 1000 2^14 bytes: 406164981 (24.79cycles/byte)
+User time for 1000 2^14 bytes: 0.177000 (0.010803ns/byte)
+Testing: Kremlin-C-gcm
+Cycles for 1 2^14 bytes: 12291900 (750.24cycles/byte)
+User time for 1 2^14 bytes: 0.005000 (0.305176ns/byte)
+Testing: Kremlin-C-poly1305
+Cycles for 1000 2^14 bytes: 137960196 (8.42cycles/byte)
+User time for 1000 2^14 bytes: 0.061000 (0.003723ns/byte)
++ cd mitls-fstar/src/tls
++ make -j 24 test
+make -f Extracted.mk test
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/7/s/mitls-fstar/src/tls'
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[1]: Circular C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[1]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+C:/Build/Agent2/_work/7/s/FStar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/7/s/FStar --trace_error --print_z3_statistics --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/Platform/fst/ --include ../../../hacl-star/secure_api/LowCProvider/fst --include C:/Build/Agent2/_work/7/s/kremlin/kremlib --include ../../../hacl-star/specs --include ../../../hacl-star/code/lib/kremlin --include ../../../hacl-star/code/bignum --include ../../../hacl-star/code/experimental/aesgcm --include ../../../hacl-star/code/poly1305 --include ../../../hacl-star/code/salsa-family --include ../../../hacl-star/secure_api/test --include ../../../hacl-star/secure_api/utils --include ../../../hacl-star/secure_api/vale --include ../../../hacl-star/secure_api/uf1cma --include ../../../hacl-star/secure_api/prf --include ../../../hacl-star/secure_api/aead --include ../../libs/ffi --include C:/Build/Agent2/_work/7/s/FStar/ulib/hyperstack --lax --codegen OCaml \
+--odir output --no_extract Prims --no_extract FStar.Pervasives --no_extract FStar.Mul --no_extract FStar.Float --no_extract FStar.Char --no_extract FStar.Int8 --no_extract FStar.UInt8 --no_extract FStar.Int16 --no_extract FStar.UInt16 --no_extract FStar.Int32 --no_extract FStar.UInt32 --no_extract FStar.Int64 --no_extract FStar.UInt64 --no_extract FStar.UInt128 --no_extract FStar.Int.Cast --no_extract FStar.BaseTypes --no_extract FStar.IO --no_extract FStar.Heap --no_extract FStar.List.Tot.Base --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.String --no_extract FStar.Set --no_extract FStar.Buffer --no_extract FStar.CommonST --no_extract FStar.TSet --no_extract FStar.Map --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.All --no_extract Platform.Bytes --no_extract Platform.Date --no_extract Platform.Error --no_extract Platform.Tcp --no_extract CoreCrypto --no_extract DHDB --no_extract LowCProvider --no_extract FFICallbacks \
+--codegen-lib Platform \
+--include concrete-flags --extract_module TestKS test/TestKS.fst
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/bootlibs/MkPrims.ml", line 89, characters 22-23
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1417, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2276, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4914, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5329, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5379, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5426, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5458, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5453, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\test\TestKS.fst(42,35-42,57): (Error) Identifier not found: [KS.ks_client_13_1rtt_init]
+Module KS resolved into KeySchedule, definition ks_client_13_1rtt_init not found
+1 error was reported (see above)
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/7/s/mitls-fstar/src/tls'
+make[1]: *** [Extracted.mk:26: output/TestKS.ml] Error 1
+make: *** [Makefile:202: test] Error 2

@@ -1,0 +1,64 @@
++ FStar/examples/low-level/krml-test.exe
++ FStar/examples/low-level/test-perf.exe
++ cd mitls-fstar/src/tls
++ make -j 24 test
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[1]: Circular C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[1]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/bootlibs/MkPrims.ml", line 89, characters 22-23
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1417, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2276, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4914, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5329, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5379, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5426, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5458, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5453, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\test\TestKS.fst(42,35-42,57): (Error) Identifier not found: [KS.ks_client_13_1rtt_init]
+Module KS resolved into KeySchedule, definition ks_client_13_1rtt_init not found
+1 error was reported (see above)
+make[1]: *** [Extracted.mk:26: output/TestKS.ml] Error 1
+make: *** [Makefile:202: test] Error 2
