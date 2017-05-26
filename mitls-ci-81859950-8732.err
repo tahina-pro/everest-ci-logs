@@ -1,0 +1,69 @@
+From https://github.com/FStarLang/FStar
+aa1d773f1..ee4d8e54c  master                  -> origin/master
+13280f95c..730a89fbd  aseem_vale_memory_model -> origin/aseem_vale_memory_model
+* [new branch]          c_fstar-build_two_phase_checker -> origin/c_fstar-build_two_phase_checker
+af3cf3864..227088277  cpitclaudel_bintree_enum -> origin/cpitclaudel_bintree_enum
+c59829688..d085248ba  cwinter_cloud_verify    -> origin/cwinter_cloud_verify
+* [new branch]          cwinter_z3nightly       -> origin/cwinter_z3nightly
+5417a94a2..ee4d8e54c  guido_bughunt           -> origin/guido_bughunt
+1ca6e892c..f757f5b31  guido_tactics           -> origin/guido_tactics
+* [new branch]          jroesch_lean_tactic     -> origin/jroesch_lean_tactic
+aa1d773f1..445155837  nik_private             -> origin/nik_private
+2228b02dd..ebb01095e  vdum_extract_dm4f_effects -> origin/vdum_extract_dm4f_effects
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make: *** [Makefile:66: libllcrypto.a] Error 1
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of uu____661, in top-level declaration Crypto.Symmetric.MAC.rcreate, in file Crypto_Symmetric_MAC: eternal newbuf 0uint8 Crypto.Symmetric.MAC.wlen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, after the definition of len1, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @4 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Poly1305.Spec.field_mul (going into Crypto_Symmetric_Poly1305_Spec) calls FStar.Mul.op_Star (going into FStar) -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls FStar.Monotonic.RRef.m_recall (going into FStar) -- removing the static qualifier from FStar.Monotonic.RRef.m_recall
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt (going into Crypto_AEAD_Decrypt) calls Crypto.AEAD.Encoding.add_bytes (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.add_bytes
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt (going into Crypto_AEAD_Decrypt) calls Crypto.AEAD.Encoding.store_lengths_poly1305 (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_poly1305
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt (going into Crypto_AEAD_Decrypt) calls Crypto.AEAD.Encoding.store_lengths_ghash (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_ghash
+The gcc command doesn't look like GCC!
+Usage: x86_64-w64-mingw32-gcc [options] file...
+Please use -cc clang if you're on OSX, or run brew install gcc
+make[4]: *** [Makefile:209: krml-test.exe] Error 1
+make[3]: *** [Makefile:54: ../krml-test.exe] Error 2
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:358: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:12: build] Error 2
+make: *** [Makefile:8: all] Error 2
