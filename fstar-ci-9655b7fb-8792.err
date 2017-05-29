@@ -1,0 +1,448 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in doc/slides/popl2015/intro-tiny-fstar.mdk.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in doc/slides/popl2015/overview-presentation.mdk.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:178: u_extract_util] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:175: u_extract_rel] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:181: u_extract_dmff] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:187: u_extract_tcinductive] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:184: u_extract_tcterm] Error 1
+make[3]: *** [Makefile:190: u_extract_tc] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:213: u_extract_solver] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:210: u_extract_encode] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:161: u_extract_misc] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:201: u_extract_tactics] Error 1
+make[3]: *** [Makefile:172: u_extract_normalizer] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:169: u_extract_parser] Error 1
+make[3]: *** [Makefile:195: u_extract_tosyntax] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:204: u_extract_smtencoding_base] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:198: u_extract_extraction] Error 1
+make[3]: *** [Makefile:218: u_extract_fstar] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3604, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 319, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5623, characters 19-99
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5661, characters 29-45
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2035, characters 37-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5714, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5780, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 186, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 231, characters 4-9
+
+C:\Build\Agent2\_work\1\s\ulib\prims.fst(25,19-25,23): (Error) Expected expression of type "Type u#_"; got expression "Type" of type "Type u#(1 + _)"
+1 error was reported (see above)
+make[3]: *** [Makefile:166: u_extract_syntax] Error 1
+make[3]: Target 'u_extract_all' not remade because of errors.
+make[2]: *** [Makefile:230: ocaml] Error 2
+make[1]: *** [Makefile:240: fstar-ocaml] Error 2
+make: *** [Makefile:255: utest] Error 2
