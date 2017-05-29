@@ -1,0 +1,65 @@
+From https://github.com/FStarLang/FStar
+ee4d8e54c..f9c14d5e6  master                  -> origin/master
+* [new branch]          aseem_merkle_tree       -> origin/aseem_merkle_tree
+* [new branch]          c_fstar-build_unionfind -> origin/c_fstar-build_unionfind
+af3cf3864..227088277  cpitclaudel_bintree_enum -> origin/cpitclaudel_bintree_enum
+* [new branch]          cpitclaudel_interactive_printing -> origin/cpitclaudel_interactive_printing
+* [new branch]          cpitclaudel_tutorial_improvements -> origin/cpitclaudel_tutorial_improvements
+* [new branch]          cwinter_z3nightly       -> origin/cwinter_z3nightly
+7df6e5b39..0d81ebdbd  guido_tactics           -> origin/guido_tactics
+* [new branch]          jroesch_lean_tactic     -> origin/jroesch_lean_tactic
+* [new branch]          kyod_fstarlib_removing_sts -> origin/kyod_fstarlib_removing_sts
+04bdfe5b6..ee4d8e54c  kyod_tmp0               -> origin/kyod_tmp0
+* [new branch]          kyod_tutorial           -> origin/kyod_tutorial
+aa1d773f1..c4f947d53  nik_private             -> origin/nik_private
+* [new branch]          nik_removing_sts        -> origin/nik_removing_sts
+* [new branch]          santiago_pervasives     -> origin/santiago_pervasives
+2228b02dd..ebb01095e  vdum_extract_dm4f_effects -> origin/vdum_extract_dm4f_effects
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make: *** [Makefile:66: libllcrypto.a] Error 1
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make[4]: *** [Makefile:66: libllcrypto.a] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[3]: Circular C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+make[3]: Target 'mitls.cmxa' not remade because of errors.
+make[2]: *** [Makefile:190: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
