@@ -1,0 +1,18 @@
++ FStar/examples/low-level/krml-test.exe
++ FStar/examples/low-level/test-perf.exe
++ cd mitls-fstar/src/tls
++ make -j 24 test
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[1]: Circular C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[1]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
++ set +x
