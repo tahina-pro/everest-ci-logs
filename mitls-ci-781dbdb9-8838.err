@@ -1,0 +1,133 @@
+From https://github.com/FStarLang/FStar
+494e4b141..5034f95a0  master                 -> origin/master
+0d81ebdbd..5f02f5bb3  guido_tactics          -> origin/guido_tactics
+* [new branch]          guido_tactics_relevant -> origin/guido_tactics_relevant
+f0ddf6f0c..68ba5edfa  kyod_fstarlib_removing_sts -> origin/kyod_fstarlib_removing_sts
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/bootlibs/MkPrims.ml", line 89, characters 22-23
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1417, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1286, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1823, characters 25-72
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1286, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1828, characters 32-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_List.ml", line 31, characters 34-51
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5329, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5379, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5426, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5458, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5453, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Transport.fst(15,23-15,34): (Error) Identifier not found: [recv_result]
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/bootlibs/MkPrims.ml", line 89, characters 22-23
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1417, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1286, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1823, characters 25-72
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1286, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1828, characters 32-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_List.ml", line 31, characters 34-51
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5329, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5379, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5426, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5458, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5453, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Transport.fst(15,23-15,34): (Error) Identifier not found: [recv_result]
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/bootlibs/MkPrims.ml", line 89, characters 22-23
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1417, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1286, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1823, characters 25-72
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1286, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1828, characters 32-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1279, characters 6-41
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_List.ml", line 31, characters 34-51
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5329, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5379, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5426, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5458, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5453, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+.\Transport.fst(15,23-15,34): (Error) Identifier not found: [recv_result]
+1 error was reported (see above)
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[3]: *** No rule to make target 'output/FFI.ml', needed by 'output/FFI.cmx'.
+make[3]: *** No rule to make target 'output/TestAPI.ml', needed by 'output/TestAPI.cmx'.
+make[3]: *** No rule to make target 'output/TestFFI.ml', needed by 'output/TestFFI.cmx'.
+make[3]: Target 'mitls.cmxa' not remade because of errors.
+make[2]: *** [Makefile:190: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
