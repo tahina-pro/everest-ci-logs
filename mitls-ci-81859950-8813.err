@@ -1,0 +1,190 @@
+From https://github.com/FStarLang/FStar
+670df2f0a..494e4b141  master                  -> origin/master
+* [new branch]          aseem_kremlin_extraction -> origin/aseem_kremlin_extraction
+* [new branch]          aseem_merkle_tree       -> origin/aseem_merkle_tree
+* [new branch]          aseem_pervasives        -> origin/aseem_pervasives
+13280f95c..730a89fbd  aseem_vale_memory_model -> origin/aseem_vale_memory_model
+* [new branch]          c_fstar-build_two_phase_checker -> origin/c_fstar-build_two_phase_checker
+* [new branch]          c_fstar-build_unionfind -> origin/c_fstar-build_unionfind
+96f275e05..b55ba0645  c_ppdev_initial         -> origin/c_ppdev_initial
+ea1e610b6..555d476f6  catalin_private         -> origin/catalin_private
+* [new branch]          cpitclaudel_bintree_enum -> origin/cpitclaudel_bintree_enum
+* [new branch]          cpitclaudel_interactive_printing -> origin/cpitclaudel_interactive_printing
+* [new branch]          cpitclaudel_related_ranges -> origin/cpitclaudel_related_ranges
+* [new branch]          cpitclaudel_tutorial_improvements -> origin/cpitclaudel_tutorial_improvements
+c59829688..d085248ba  cwinter_cloud_verify    -> origin/cwinter_cloud_verify
+f8a6b60dc..54894a7d9  cwinter_stats           -> origin/cwinter_stats
+* [new branch]          cwinter_z3nightly       -> origin/cwinter_z3nightly
++ 98dc300d6...ee4d8e54c guido_bughunt           -> origin/guido_bughunt  (forced update)
+13be71c26..6a0811132  guido_tactics           -> origin/guido_tactics
+* [new branch]          guido_tactics_relevant  -> origin/guido_tactics_relevant
+* [new branch]          guido_tactics_weird     -> origin/guido_tactics_weird
+* [new branch]          jk_private              -> origin/jk_private
+* [new branch]          jroesch_lean_tactic     -> origin/jroesch_lean_tactic
+* [new branch]          kyod_fstarlib           -> origin/kyod_fstarlib
+* [new branch]          kyod_fstarlib_removing_sts -> origin/kyod_fstarlib_removing_sts
+3b454b9dd..ee4d8e54c  kyod_tmp0               -> origin/kyod_tmp0
+* [new branch]          kyod_tutorial           -> origin/kyod_tutorial
+* [new branch]          nik_aseem_cleanup       -> origin/nik_aseem_cleanup
+* [new branch]          nik_ghost_interface     -> origin/nik_ghost_interface
+18f166947..c4f947d53  nik_private             -> origin/nik_private
+* [new branch]          nik_removing_sts        -> origin/nik_removing_sts
+* [new branch]          santiago_pervasives     -> origin/santiago_pervasives
+81a090fc2..ebb01095e  vdum_extract_dm4f_effects -> origin/vdum_extract_dm4f_effects
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+In file included from tmp/Crypto_AEAD.h:21:0,
+from lowc_stub.c:21:
+tmp/Crypto_Symmetric_UF1CMA.h:39:18: error: redefinition of ‘struct case_Some_s’
+union { struct case_Some_s { uint8_t *v; } case_Some; } ;
+^
+In file included from tmp/Crypto_Symmetric_Bytes.h:15:0,
+from lowc_stub.c:19:
+tmp/FStar.h:26:18: note: originally defined here
+union { struct case_Some_s { void *v; } case_Some; } ;
+^
+In file included from tmp/Crypto_AEAD.h:21:0,
+from lowc_stub.c:21:
+tmp/Crypto_Symmetric_UF1CMA.h:81:12: error: redefinition of ‘struct case_Some_s’
+struct case_Some_s
+^
+tmp/Crypto_Symmetric_UF1CMA.h:39:18: note: originally defined here
+union { struct case_Some_s { uint8_t *v; } case_Some; } ;
+^
+In file included from tmp/Crypto_AEAD.h:23:0,
+from lowc_stub.c:21:
+tmp/Crypto_Symmetric_PRF.h:146:18: error: redefinition of ‘struct case_Some_s’
+union { struct case_Some_s { void *v; } case_Some; } ;
+^
+In file included from tmp/Crypto_AEAD.h:21:0,
+from lowc_stub.c:21:
+tmp/Crypto_Symmetric_UF1CMA.h:81:12: note: originally defined here
+struct case_Some_s
+^
+In file included from tmp/Crypto_AEAD.h:23:0,
+from lowc_stub.c:21:
+tmp/Crypto_Symmetric_PRF.h:173:18: error: redefinition of ‘struct case_Some_s’
+union { struct case_Some_s { Crypto_Symmetric_UF1CMA_state____ v; } case_Some; } ;
+^
+tmp/Crypto_Symmetric_PRF.h:146:18: note: originally defined here
+union { struct case_Some_s { void *v; } case_Some; } ;
+^
+tmp/Crypto_Symmetric_PRF.h:192:18: error: redefinition of ‘struct case_Some_s’
+union { struct case_Some_s { Crypto_Symmetric_PRF_otp____ v; } case_Some; } ;
+^
+tmp/Crypto_Symmetric_PRF.h:173:18: note: originally defined here
+union { struct case_Some_s { Crypto_Symmetric_UF1CMA_state____ v; } case_Some; } ;
+^
+tmp/Crypto_Symmetric_PRF.h:211:18: error: redefinition of ‘struct case_Some_s’
+union { struct case_Some_s { void *v; } case_Some; } ;
+^
+tmp/Crypto_Symmetric_PRF.h:192:18: note: originally defined here
+union { struct case_Some_s { Crypto_Symmetric_PRF_otp____ v; } case_Some; } ;
+^
+In file included from tmp/Crypto_AEAD.h:25:0,
+from lowc_stub.c:21:
+tmp/Crypto_AEAD_Invariant.h:177:18: error: redefinition of ‘struct case_Some_s’
+union { struct case_Some_s { Crypto_AEAD_Invariant_aead_entry____ v; } case_Some; } ;
+^
+In file included from tmp/Crypto_AEAD.h:23:0,
+from lowc_stub.c:21:
+tmp/Crypto_Symmetric_PRF.h:211:18: note: originally defined here
+union { struct case_Some_s { void *v; } case_Some; } ;
+^
+In file included from tmp/Crypto_AEAD.h:29:0,
+from lowc_stub.c:21:
+tmp/Crypto_AEAD_Wrappers_CMA.h:143:18: error: redefinition of ‘struct case_Some_s’
+union { struct case_Some_s { void *v; } case_Some; } ;
+^
+In file included from tmp/Crypto_AEAD.h:25:0,
+from lowc_stub.c:21:
+tmp/Crypto_AEAD_Invariant.h:177:18: note: originally defined here
+union { struct case_Some_s { Crypto_AEAD_Invariant_aead_entry____ v; } case_Some; } ;
+^
+make: *** [Makefile:69: lowc_stub.o] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of uu____661, in top-level declaration Crypto.Symmetric.MAC.rcreate, in file Crypto_Symmetric_MAC: eternal newbuf 0uint8 Crypto.Symmetric.MAC.wlen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, after the definition of len1, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @4 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Poly1305.Spec.field_mul (going into Crypto_Symmetric_Poly1305_Spec) calls FStar.Mul.op_Star (going into FStar) -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls FStar.Monotonic.RRef.m_recall (going into FStar) -- removing the static qualifier from FStar.Monotonic.RRef.m_recall
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt (going into Crypto_AEAD_Decrypt) calls Crypto.AEAD.Encoding.add_bytes (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.add_bytes
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt (going into Crypto_AEAD_Decrypt) calls Crypto.AEAD.Encoding.store_lengths_poly1305 (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_poly1305
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt (going into Crypto_AEAD_Decrypt) calls Crypto.AEAD.Encoding.store_lengths_ghash (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_ghash
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_Symmetric_UF1CMA.c -o tmp/Crypto_Symmetric_UF1CMA.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_Plain.c -o tmp/Crypto_Plain.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_Symmetric_PRF.c -o tmp/Crypto_Symmetric_PRF.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Encoding.c -o tmp/Crypto_AEAD_Encoding.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Invariant.c -o tmp/Crypto_AEAD_Invariant.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Encrypt_Invariant.c -o tmp/Crypto_AEAD_Encrypt_Invariant.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Wrappers_PRF.c -o tmp/Crypto_AEAD_Wrappers_PRF.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_EnxorDexor.c -o tmp/Crypto_AEAD_EnxorDexor.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD.c -o tmp/Crypto_AEAD.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Wrappers_Encoding.c -o tmp/Crypto_AEAD_Wrappers_Encoding.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Wrappers_CMA.c -o tmp/Crypto_AEAD_Wrappers_CMA.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Decrypt.c -o tmp/Crypto_AEAD_Decrypt.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Encrypt_Ideal_Invariant.c -o tmp/Crypto_AEAD_Encrypt_Ideal_Invariant.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_MAC_Wrapper_Invariant.c -o tmp/Crypto_AEAD_MAC_Wrapper_Invariant.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Enxor_Invariant.c -o tmp/Crypto_AEAD_Enxor_Invariant.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Encrypt.c -o tmp/Crypto_AEAD_Encrypt.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_KrmlTest.c -o tmp/Crypto_KrmlTest.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I C:/Build/Agent1/_work/4/s/kremlin/test -I C:/Build/Agent1/_work/4/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wno-unused-but-set-variable -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 tmp/Prims.o tmp/Buffer_Utils.o tmp/Crypto_AEAD_BufferUtils.o tmp/Crypto_Symmetric_Chacha20.o tmp/Crypto_Config.o tmp/Crypto_Indexing.o tmp/Flag.o tmp/Crypto_Symmetric_AES.o tmp/Spartan.o tmp/Crypto_Symmetric_AES128.o tmp/FStar.o tmp/Crypto_Symmetric_Bytes.o tmp/Crypto_Symmetric_Cipher.o tmp/Crypto_Symmetric_Poly1305_Parameters.o tmp/Crypto_Symmetric_Poly1305_Bigint.o tmp/Crypto_Symmetric_Poly1305_Lemmas.o tmp/Crypto_Symmetric_Poly1305_Spec.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part1.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part2.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part3.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part4.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part5.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part6.o tmp/Crypto_Symmetric_Poly1305_Bignum.o tmp/Crypto_Symmetric_Poly1305.o tmp/Crypto_Symmetric_GF128_Spec.o tmp/Crypto_Symmetric_GF128.o tmp/Crypto_Symmetric_MAC.o tmp/kremlib.o tmp/test_hacks.o tmp/testlib.o tmp/spartan_stub.o spartan_aes/aes.o -o krml-test.exe
+make[4]: *** [Makefile:209: krml-test.exe] Error 250
+make[3]: *** [Makefile:54: ../krml-test.exe] Error 2
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:358: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:12: build] Error 2
+make: *** [Makefile:8: all] Error 2
