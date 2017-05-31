@@ -1,0 +1,265 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+make: *** [Makefile:102: fstar.exe] Error 1
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make: *** [Makefile:66: libllcrypto.a] Error 1
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3044, characters 19-113
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3060, characters 30-64
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+C:\Build\Agent2\_work\2\s\hacl-star\secure_api\aead\Crypto.AEAD.EnxorDexor.fst(175,0-175,69): (Error) Failed to process pragma: File -z3rlimit is not a valid option
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2377, characters 18-28
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2750, characters 29-110
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2802, characters 33-70
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5444, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4554, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3703, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\Negotiation.fst(1237,0-1249,15): (Error) Expected a term of type "uu___2930655:Negotiation.t region TLSConstants.Server ->
+uu___2930656:HandshakeMessages.ch -> FStar.ST.St (TLSError.result Negotiation.mode)"; got a function "fun ns offer sid ->
+Negotiation.trace ("offered client extensions " ^
+Negotiation.string_of_option_extensions (Mkch?.ch_extensions offer));
+Negotiation.trace (TLSError.string_of_result (FStar.List.Tot.Base.fold_left (fun s pv ->
+s ^ " " ^ TLSConstants.string_of_pv pv)
+"offered versions")
+(Negotiation.offered_versions TLSConstants.TLS_1p0 offer));
+let Negotiation.S_Init _ = FStar.Monotonic.RRef.m_read (NS?.state ns) in
+match Negotiation.computeServerMode (NS?.cfg ns) offer (NS?.nonce ns) with
+| Platform.Error.Error z ->
+Negotiation.trace ("negotiation failed: " ^ TLSError.string_of_error uu___2930665);
+Platform.Error.Error z
+| Platform.Error.Correct m ->
+Negotiation.trace ("negotiated " ^
+TLSConstants.string_of_pv (Mode?.n_protocol_version uu___2930666) ^
+" " ^ Negotiation.string_of_ciphersuite (Mode?.n_cipher_suite uu___2930666));
+FStar.Monotonic.RRef.m_write (NS?.state ns) (Negotiation.S_ClientHello m);
+Platform.Error.Correct m" (Function definition takes more arguments than expected from its annotated type)
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2377, characters 18-28
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2750, characters 29-110
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2802, characters 33-70
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5444, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4554, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3703, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\Negotiation.fst(1237,0-1249,15): (Error) Expected a term of type "uu___2958663:Negotiation.t region TLSConstants.Server ->
+uu___2958664:HandshakeMessages.ch -> FStar.ST.St (TLSError.result Negotiation.mode)"; got a function "fun ns offer sid ->
+Negotiation.trace ("offered client extensions " ^
+Negotiation.string_of_option_extensions (Mkch?.ch_extensions offer));
+Negotiation.trace (TLSError.string_of_result (FStar.List.Tot.Base.fold_left (fun s pv ->
+s ^ " " ^ TLSConstants.string_of_pv pv)
+"offered versions")
+(Negotiation.offered_versions TLSConstants.TLS_1p0 offer));
+let Negotiation.S_Init _ = FStar.Monotonic.RRef.m_read (NS?.state ns) in
+match Negotiation.computeServerMode (NS?.cfg ns) offer (NS?.nonce ns) with
+| Platform.Error.Error z ->
+Negotiation.trace ("negotiation failed: " ^ TLSError.string_of_error uu___2958673);
+Platform.Error.Error z
+| Platform.Error.Correct m ->
+Negotiation.trace ("negotiated " ^
+TLSConstants.string_of_pv (Mode?.n_protocol_version uu___2958674) ^
+" " ^ Negotiation.string_of_ciphersuite (Mode?.n_cipher_suite uu___2958674));
+FStar.Monotonic.RRef.m_write (NS?.state ns) (Negotiation.S_ClientHello m);
+Platform.Error.Correct m" (Function definition takes more arguments than expected from its annotated type)
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2377, characters 18-28
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2750, characters 29-110
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2802, characters 33-70
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5444, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4554, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3703, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\Negotiation.fst(1237,0-1249,15): (Error) Expected a term of type "uu___2958663:Negotiation.t region TLSConstants.Server ->
+uu___2958664:HandshakeMessages.ch -> FStar.ST.St (TLSError.result Negotiation.mode)"; got a function "fun ns offer sid ->
+Negotiation.trace ("offered client extensions " ^
+Negotiation.string_of_option_extensions (Mkch?.ch_extensions offer));
+Negotiation.trace (TLSError.string_of_result (FStar.List.Tot.Base.fold_left (fun s pv ->
+s ^ " " ^ TLSConstants.string_of_pv pv)
+"offered versions")
+(Negotiation.offered_versions TLSConstants.TLS_1p0 offer));
+let Negotiation.S_Init _ = FStar.Monotonic.RRef.m_read (NS?.state ns) in
+match Negotiation.computeServerMode (NS?.cfg ns) offer (NS?.nonce ns) with
+| Platform.Error.Error z ->
+Negotiation.trace ("negotiation failed: " ^ TLSError.string_of_error uu___2958673);
+Platform.Error.Error z
+| Platform.Error.Correct m ->
+Negotiation.trace ("negotiated " ^
+TLSConstants.string_of_pv (Mode?.n_protocol_version uu___2958674) ^
+" " ^ Negotiation.string_of_ciphersuite (Mode?.n_cipher_suite uu___2958674));
+FStar.Monotonic.RRef.m_write (NS?.state ns) (Negotiation.S_ClientHello m);
+Platform.Error.Correct m" (Function definition takes more arguments than expected from its annotated type)
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2377, characters 18-28
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2750, characters 29-110
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2802, characters 33-70
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5444, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4554, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3703, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4097, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4143, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4231, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4497, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\Negotiation.fst(1237,0-1249,15): (Error) Expected a term of type "uu___2958663:Negotiation.t region TLSConstants.Server ->
+uu___2958664:HandshakeMessages.ch -> FStar.ST.St (TLSError.result Negotiation.mode)"; got a function "fun ns offer sid ->
+Negotiation.trace ("offered client extensions " ^
+Negotiation.string_of_option_extensions (Mkch?.ch_extensions offer));
+Negotiation.trace (TLSError.string_of_result (FStar.List.Tot.Base.fold_left (fun s pv ->
+s ^ " " ^ TLSConstants.string_of_pv pv)
+"offered versions")
+(Negotiation.offered_versions TLSConstants.TLS_1p0 offer));
+let Negotiation.S_Init _ = FStar.Monotonic.RRef.m_read (NS?.state ns) in
+match Negotiation.computeServerMode (NS?.cfg ns) offer (NS?.nonce ns) with
+| Platform.Error.Error z ->
+Negotiation.trace ("negotiation failed: " ^ TLSError.string_of_error uu___2958673);
+Platform.Error.Error z
+| Platform.Error.Correct m ->
+Negotiation.trace ("negotiated " ^
+TLSConstants.string_of_pv (Mode?.n_protocol_version uu___2958674) ^
+" " ^ Negotiation.string_of_ciphersuite (Mode?.n_cipher_suite uu___2958674));
+FStar.Monotonic.RRef.m_write (NS?.state ns) (Negotiation.S_ClientHello m);
+Platform.Error.Correct m" (Function definition takes more arguments than expected from its annotated type)
+1 error was reported (see above)
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make[4]: *** [Makefile:66: libllcrypto.a] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent2/_work/2/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[3]: *** No rule to make target 'output/FFI.ml', needed by 'output/FFI.cmx'.
+make[3]: *** No rule to make target 'output/TestAPI.ml', needed by 'output/TestAPI.cmx'.
+make[3]: *** No rule to make target 'output/TestFFI.ml', needed by 'output/TestFFI.cmx'.
+make[3]: Target 'mitls.cmxa' not remade because of errors.
+make[2]: *** [Makefile:190: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
