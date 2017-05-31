@@ -1,0 +1,1364 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in doc/slides/popl2015/intro-tiny-fstar.mdk.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in doc/slides/popl2015/overview-presentation.mdk.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "CoreCrypto.ml", line 526, characters 24-144:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+ECC_X448
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+openssl_stub.c: In function ‘ocaml_openssl_init’:
+openssl_stub.c:93:3: warning: implicit declaration of function ‘OPENSSL_config’ [-Wimplicit-function-declaration]
+OPENSSL_config("CoreCrypto");
+^
+openssl_stub.c: In function ‘ocaml_rsa_gen_key’:
+openssl_stub.c:668:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_get_key’:
+openssl_stub.c:779:21: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:27: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:33: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_encrypt’:
+openssl_stub.c:823:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_decrypt’:
+openssl_stub.c:878:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_sign’:
+openssl_stub.c:922:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_verify’:
+openssl_stub.c:975:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_dsa_gen_params’:
+openssl_stub.c:1087:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_gen_key’:
+openssl_stub.c:1144:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1144:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_get_key’:
+openssl_stub.c:1183:21: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:27: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:33: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1190:21: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1190:29: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_set_key’:
+openssl_stub.c:1235:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1236:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1236:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_sign’:
+openssl_stub.c:1325:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1326:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv); 
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1326:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv); 
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_verify’:
+openssl_stub.c:1368:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1369:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1369:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dh_gen_params’:
+openssl_stub.c:1473:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_params_of_string’:
+openssl_stub.c:1506:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_gen_key’:
+openssl_stub.c:1561:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1561:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_compute’:
+openssl_stub.c:1672:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1672:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+In file included from /usr/include/inttypes.h:227:0,
+from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/sys/_types/_wchar_t.h:33:26: error: conflicting types for ‘wchar_t’
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:9:0,
+from Vale_Hash_SHA2_256.c:1:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/crtdefs.h:98:24: note: previous declaration of ‘wchar_t’ was here
+typedef unsigned short wchar_t;
+^
+In file included from /usr/include/stdint.h:54:0,
+from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/stdint.h:63,
+from /usr/include/inttypes.h:229,
+from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/sys/_types/_intptr_t.h:30:27: error: conflicting types for ‘intptr_t’
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:9:0,
+from Vale_Hash_SHA2_256.c:1:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/crtdefs.h:62:35: note: previous declaration of ‘intptr_t’ was here
+__MINGW_EXTENSION typedef __int64 intptr_t;
+^
+In file included from /usr/include/stdint.h:54:0,
+from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/stdint.h:63,
+from /usr/include/inttypes.h:229,
+from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/sys/_types/_uintptr_t.h:30:23: error: conflicting types for ‘uintptr_t’
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:9:0,
+from Vale_Hash_SHA2_256.c:1:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/crtdefs.h:75:44: note: previous declaration of ‘uintptr_t’ was here
+__MINGW_EXTENSION typedef unsigned __int64 uintptr_t;
+^
+In file included from /usr/include/stdint.h:58:0,
+from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/stdint.h:63,
+from /usr/include/inttypes.h:229,
+from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/_types/_intmax_t.h:32:18: error: conflicting types for ‘intmax_t’
+In file included from /usr/lib/gcc/x86_64-w64-mingw32/5.4.0/include/stdint.h:9:0,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/inttypes.h:12,
+from Vale_Hash_SHA2_256.c:3:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdint.h:68:38: note: previous declaration of ‘intmax_t’ was here
+__MINGW_EXTENSION typedef long long  intmax_t;
+^
+In file included from /usr/include/stdint.h:59:0,
+from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/stdint.h:63,
+from /usr/include/inttypes.h:229,
+from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/_types/_uintmax_t.h:32:27: error: conflicting types for ‘uintmax_t’
+In file included from /usr/lib/gcc/x86_64-w64-mingw32/5.4.0/include/stdint.h:9:0,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/inttypes.h:12,
+from Vale_Hash_SHA2_256.c:3:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdint.h:69:48: note: previous declaration of ‘uintmax_t’ was here
+__MINGW_EXTENSION typedef unsigned long long   uintmax_t;
+^
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/inttypes.h:234:36: error: ‘introduced’ undeclared here (not in a function)
+/usr/include/inttypes.h:236:1: error: conflicting types for ‘imaxabs’
+#define SCNoLEAST64 __SCN64LEAST(o)
+^
+In file included from Vale_Hash_SHA2_256.c:3:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/inttypes.h:279:18: note: previous declaration of ‘imaxabs’ was here
+intmax_t __cdecl imaxabs (intmax_t j);
+^
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/inttypes.h:242:3: error: conflicting types for ‘imaxdiv_t’
+#define PRIdFAST64 __PRI64FAST(d)
+^
+In file included from Vale_Hash_SHA2_256.c:3:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/inttypes.h:23:4: note: previous declaration of ‘imaxdiv_t’ was here
+} imaxdiv_t;
+^
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/inttypes.h:246:1: error: conflicting types for ‘imaxdiv’
+#define PRIxFAST64 __PRI64FAST(x)
+^
+In file included from Vale_Hash_SHA2_256.c:3:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/inttypes.h:284:19: note: previous declaration of ‘imaxdiv’ was here
+imaxdiv_t __cdecl imaxdiv (intmax_t numer, intmax_t denom);
+^
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/inttypes.h:251:1: error: conflicting types for ‘strtoimax’
+#define SCNoFAST64 __SCN64FAST(o)
+^
+In file included from Vale_Hash_SHA2_256.c:3:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/inttypes.h:288:18: note: previous declaration of ‘strtoimax’ was here
+intmax_t __cdecl strtoimax (const char* __restrict__ nptr,
+^
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/inttypes.h:257:1: error: conflicting types for ‘strtoumax’
+#if __have_long64
+^
+In file included from Vale_Hash_SHA2_256.c:3:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/inttypes.h:290:19: note: previous declaration of ‘strtoumax’ was here
+uintmax_t __cdecl strtoumax (const char* __restrict__ nptr,
+^
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/inttypes.h:264:1: error: conflicting types for ‘wcstoimax’
+#define __PRIMAX(x) __STRINGIFY(x)
+^
+In file included from Vale_Hash_SHA2_256.c:3:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/inttypes.h:293:18: note: previous declaration of ‘wcstoimax’ was here
+intmax_t __cdecl wcstoimax (const wchar_t* __restrict__ nptr,
+^
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include/inttypes.h:30:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:4,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/inttypes.h:270:1: error: conflicting types for ‘wcstoumax’
+#define PRIoMAX  __PRIMAX(o)
+^
+In file included from Vale_Hash_SHA2_256.c:3:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/inttypes.h:295:19: note: previous declaration of ‘wcstoumax’ was here
+uintmax_t __cdecl wcstoumax (const wchar_t* __restrict__ nptr,
+^
+In file included from /usr/include/sys/signal.h:155:0,
+from /usr/include/sys/wait.h:109,
+from /usr/include/stdlib.h:65,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/sys/_types/_size_t.h:30:25: error: conflicting types for ‘size_t’
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:9:0,
+from Vale_Hash_SHA2_256.c:1:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/crtdefs.h:35:44: note: previous declaration of ‘size_t’ was here
+__MINGW_EXTENSION typedef unsigned __int64 size_t;
+^
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:695:0,
+from Vale_Hash_SHA2_256.c:1:
+/usr/include/alloca.h:32:7: error: expected declaration specifiers or ‘...’ before ‘(’ token
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:85:3: error: conflicting types for ‘div_t’
+_PTR _EXFUN(bsearch,(const _PTR __key,
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:62:5: note: previous declaration of ‘div_t’ was here
+} div_t;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:90:3: error: conflicting types for ‘ldiv_t’
+_PTR _EXFUN_NOTHROW(calloc,(size_t __nmemb, size_t __size));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:67:5: note: previous declaration of ‘ldiv_t’ was here
+} ldiv_t;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:96:3: error: conflicting types for ‘lldiv_t’
+char * _EXFUN(_findenv,(_CONST char *, int *));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:653:61: note: previous declaration of ‘lldiv_t’ was here
+typedef struct { __MINGW_EXTENSION long long quot, rem; } lldiv_t;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:139:38: error: expected ‘)’ before ‘__compar’
+_VOID _EXFUN(qsort,(_PTR __base, size_t __nmemb, size_t __size, __compar_fn_t _compar));
+^
+/usr/include/stdlib.h:140:7: error: conflicting types for ‘calloc’
+int _EXFUN(rand,(_VOID));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:455:17: note: previous declaration of ‘calloc’ was here
+void *__cdecl calloc(size_t _NumOfElements,size_t _SizeOfElements);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:141:7: error: conflicting types for ‘div’
+_PTR _EXFUN_NOTHROW(realloc,(_PTR __r, size_t __size));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:367:17: note: previous declaration of ‘div’ was here
+div_t __cdecl div(int _Numerator,int _Denominator);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:146:8: error: conflicting types for ‘ldiv’
+char * _EXFUN(realpath, (const char *__restrict path, char *__restrict resolved_path));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:378:18: note: previous declaration of ‘ldiv’ was here
+ldiv_t __cdecl ldiv(long _Numerator,long _Denominator);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:150:9: error: conflicting types for ‘lldiv’
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:655:37: note: previous declaration of ‘lldiv’ was here
+__MINGW_EXTENSION lldiv_t __cdecl lldiv(long long, long long);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:152:7: error: conflicting types for ‘malloc’
+_VOID _EXFUN(setkey, (const char *__key));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:457:17: note: previous declaration of ‘malloc’ was here
+void *__cdecl malloc(size_t _Size);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:153:5: error: conflicting types for ‘mblen’
+#endif
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:380:15: note: previous declaration of ‘mblen’ was here
+int __cdecl mblen(const char *_Ch,size_t _MaxCount);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:154:8: error: conflicting types for ‘mbstowcs’
+_VOID _EXFUN(srand,(unsigned __seed));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:388:18: note: previous declaration of ‘mbstowcs’ was here
+size_t __cdecl mbstowcs(wchar_t * __restrict__ _Dest,const char * __restrict__ _Source,size_t _MaxCount);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:155:5: error: conflicting types for ‘mbtowc’
+double _EXFUN(strtod,(const char *__restrict __n, char **__restrict __end_PTR));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:386:15: note: previous declaration of ‘mbtowc’ was here
+int __cdecl mbtowc(wchar_t * __restrict__ _DstCh,const char * __restrict__ _SrcCh,size_t _SrcSizeInBytes);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:158:22: error: expected ‘)’ before ‘__compar’
+float _EXFUN(strtof,(const char *__restrict __n, char **__restrict __end_PTR));
+^
+/usr/include/stdlib.h:159:55: error: ‘unavailable’ undeclared here (not in a function)
+/usr/include/stdlib.h:159:68: error: ‘message’ undeclared here (not in a function)
+/usr/include/stdlib.h:160:7: error: conflicting types for ‘realloc’
+#if __MISC_VISIBLE
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:458:17: note: previous declaration of ‘realloc’ was here
+void *__cdecl realloc(void *_Memory,size_t _NewSize);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:191:8: error: conflicting types for ‘wcstombs’
+char *  _EXFUN(_l64a_r,(struct _reent *,long __input));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:450:18: note: previous declaration of ‘wcstombs’ was here
+size_t __cdecl wcstombs(char * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _MaxCount) __MINGW_ATTRIB_DEPRECATED_SEC_WARN;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:192:5: error: conflicting types for ‘wctomb’
+#endif
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:448:15: note: previous declaration of ‘wctomb’ was here
+int __cdecl wctomb(char *_MbCh,wchar_t _WCh) __MINGW_ATTRIB_DEPRECATED_SEC_WARN;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:219:5: error: conflicting types for ‘putenv’
+char * _EXFUN(__itoa,(int, char *, int));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:639:15: note: previous declaration of ‘putenv’ was here
+int __cdecl putenv(const char *_EnvString) __MINGW_ATTRIB_DEPRECATED_MSVC2005;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:259:94: error: ‘deprecated’ undeclared here (not in a function)
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:268:20: error: expected ‘)’ before ‘^’ token
+unsigned long long _EXFUN(strtoull,(const char *__restrict __n, char **__restrict __end_PTR, int __base));
+^
+/usr/include/stdlib.h:270:27: error: expected ‘)’ before ‘^’ token
+unsigned long long _EXFUN(_strtoull_r,(struct _reent *, const char *__restrict __n, char **__restrict __end_PTR, int __base));
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:5:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdlib.h:294:22: error: expected ‘)’ before ‘__compar’
+int _EXFUN(_system_r,(struct _reent *, const char *));
+^
+/usr/include/stdlib.h:297:11: error: expected ‘)’ before ‘^’ token
+/usr/include/stdlib.h:300:22: error: expected ‘)’ before ‘__compar’
+version.  We want that #undef qsort_r will still let you
+^
+/usr/include/stdlib.h:303:11: error: expected ‘)’ before ‘^’ token
+_VOID _EXFUN(qsort_r,(_PTR __base, size_t __nmemb, size_t __size, int (*_compar)(const _PTR, const _PTR, _PTR), _PTR __thunk));
+^
+/usr/include/stdlib.h:306:22: error: expected ‘)’ before ‘__compar’
+_VOID _EXFUN(qsort_r,(_PTR __base, size_t __nmemb, size_t __size, _PTR __thunk, int (*_compar)(_PTR, const _PTR, const _PTR)))
+^
+/usr/include/stdlib.h:309:11: error: expected ‘)’ before ‘^’ token
+_VOID _EXFUN(__bsd_qsort_r,(_PTR __base, size_t __nmemb, size_t __size, _PTR __thunk, int (*_compar)(_PTR, const _PTR, const _PTR)));
+^
+/usr/include/stdlib.h:312:22: error: expected ‘)’ before ‘__compar’
+/usr/include/stdlib.h:315:11: error: expected ‘)’ before ‘^’ token
+#ifdef _HAVE_LONG_DOUBLE
+^
+/usr/include/stdlib.h:318:22: error: expected ‘)’ before ‘__compar’
+extern long double strtold (const char *__restrict, char **__restrict);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:133:19: error: expected ‘)’ before ‘_close’
+#define FILENAME_MAX    __FILENAME_MAX__
+^
+/usr/include/stdio.h:134:19: error: expected ‘)’ before ‘_read’
+/usr/include/stdio.h:135:22: error: expected ‘)’ before ‘_seek’
+#define FILENAME_MAX 1024
+^
+/usr/include/stdio.h:136:19: error: expected ‘)’ before ‘_write’
+/usr/include/stdio.h:153:3: error: conflicting types for ‘FILE’
+#endif
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:36:25: note: previous declaration of ‘FILE’ was here
+typedef struct _iobuf FILE;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:231:6: error: conflicting types for ‘clearerr’
+#ifdef _COMPILING_NEWLIB
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:439:16: note: previous declaration of ‘clearerr’ was here
+void __cdecl clearerr(FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:232:5: error: conflicting types for ‘fclose’
+int _EXFUN(fsetpos, (FILE *, const _fpos_t *));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:440:15: note: previous declaration of ‘fclose’ was here
+int __cdecl fclose(FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:233:5: error: conflicting types for ‘feof’
+#else
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:447:15: note: previous declaration of ‘feof’ was here
+int __cdecl feof(FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:234:5: error: conflicting types for ‘ferror’
+int _EXFUN(fsetpos, (FILE *, const fpos_t *));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:448:15: note: previous declaration of ‘ferror’ was here
+int __cdecl ferror(FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:235:5: error: conflicting types for ‘fflush’
+#endif
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:449:15: note: previous declaration of ‘fflush’ was here
+int __cdecl fflush(FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:236:5: error: conflicting types for ‘fgetc’
+long _EXFUN(ftell, ( FILE *));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:450:15: note: previous declaration of ‘fgetc’ was here
+int __cdecl fgetc(FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:237:5: error: conflicting types for ‘fgetpos’
+void _EXFUN(rewind, (FILE *));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:452:15: note: previous declaration of ‘fgetpos’ was here
+int __cdecl fgetpos(FILE * __restrict__ _File ,fpos_t * __restrict__ _Pos); /* 64bit only, no 32bit version */
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:238:7: error: conflicting types for ‘fgets’
+void _EXFUN(clearerr, (FILE *));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:454:17: note: previous declaration of ‘fgets’ was here
+char *__cdecl fgets(char * __restrict__ _Buf,int _MaxCount,FILE * __restrict__ _File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:242:7: error: conflicting types for ‘fopen’
+#ifndef _REENT_ONLY
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:461:17: note: previous declaration of ‘fopen’ was here
+FILE *__cdecl fopen(const char * __restrict__ _Filename,const char * __restrict__ _Mode) __MINGW_ATTRIB_DEPRECATED_SEC_WARN;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:244:5: error: conflicting types for ‘fprintf’
+int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:378:15: note: previous declaration of ‘fprintf’ was here
+int __cdecl fprintf(FILE * __restrict__ _File,const char * __restrict__ _Format,...);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:245:5: error: conflicting types for ‘fputc’
+_ATTRIBUTE ((__format__ (__printf__, 2, 3))));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:463:15: note: previous declaration of ‘fputc’ was here
+int __cdecl fputc(int _Ch,FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:246:5: error: conflicting types for ‘fputs’
+int _EXFUN(remove, (const char *));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:465:15: note: previous declaration of ‘fputs’ was here
+int __cdecl fputs(const char * __restrict__ _Str,FILE * __restrict__ _File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:247:8: error: conflicting types for ‘fread’
+int _EXFUN(rename, (const char *, const char *));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:466:18: note: previous declaration of ‘fread’ was here
+size_t __cdecl fread(void * __restrict__ _DstBuf,size_t _ElementSize,size_t _Count,FILE * __restrict__ _File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:248:7: error: conflicting types for ‘freopen’
+#ifdef _COMPILING_NEWLIB
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:467:17: note: previous declaration of ‘freopen’ was here
+FILE *__cdecl freopen(const char * __restrict__ _Filename,const char * __restrict__ _Mode,FILE * __restrict__ _File) __MINGW_ATTRIB_DEPRECATED_SEC_WARN;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:250:5: error: conflicting types for ‘fscanf’
+#endif
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:392:15: note: previous declaration of ‘fscanf’ was here
+int __cdecl fscanf(FILE * __restrict__ _File,const char * __restrict__ _Format,...) __MINGW_ATTRIB_DEPRECATED_SEC_WARN;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:251:5: error: conflicting types for ‘fseek’
+#endif
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:470:15: note: previous declaration of ‘fseek’ was here
+int __cdecl fseek(FILE *_File,long _Offset,int _Origin);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:252:5: error: conflicting types for ‘fsetpos’
+#if __LARGEFILE_VISIBLE || __POSIX_VISIBLE >= 200112
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:468:15: note: previous declaration of ‘fsetpos’ was here
+int __cdecl fsetpos(FILE *_File,const fpos_t *_Pos);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:253:6: error: conflicting types for ‘ftell’
+#ifdef _COMPILING_NEWLIB
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:484:16: note: previous declaration of ‘ftell’ was here
+long __cdecl ftell(FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:254:8: error: conflicting types for ‘fwrite’
+int _EXFUN(fseeko, (FILE *, _off_t, int));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:498:18: note: previous declaration of ‘fwrite’ was here
+size_t __cdecl fwrite(const void * __restrict__ _Str,size_t _Size,size_t _Count,FILE * __restrict__ _File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:255:5: error: conflicting types for ‘getc’
+_off_t _EXFUN(ftello, ( FILE *));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:499:15: note: previous declaration of ‘getc’ was here
+int __cdecl getc(FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:260:5: error: conflicting types for ‘putc’
+#endif
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:514:15: note: previous declaration of ‘putc’ was here
+int __cdecl putc(int _Ch,FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:265:6: error: conflicting types for ‘rewind’
+#if __ISO_C_VISIBLE >= 1999
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:527:16: note: previous declaration of ‘rewind’ was here
+void __cdecl rewind(FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:267:6: error: conflicting types for ‘setbuf’
+_ATTRIBUTE ((__format__ (__printf__, 3, 4))));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:529:16: note: previous declaration of ‘setbuf’ was here
+void __cdecl setbuf(FILE * __restrict__ _File,char * __restrict__ _Buffer) __MINGW_ATTRIB_DEPRECATED_SEC_WARN;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:268:5: error: conflicting types for ‘setvbuf’
+int _EXFUN(vsnprintf, (char *__restrict, size_t, const char *__restrict, __VALIST)
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:533:15: note: previous declaration of ‘setvbuf’ was here
+int __cdecl setvbuf(FILE * __restrict__ _File,char * __restrict__ _Buf,int _Mode,size_t _Size);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:271:7: error: conflicting types for ‘tmpfile’
+_ATTRIBUTE ((__format__ (__scanf__, 2, 0))));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:536:17: note: previous declaration of ‘tmpfile’ was here
+FILE *__cdecl tmpfile(void) __MINGW_ATTRIB_DEPRECATED_SEC_WARN;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:278:5: error: conflicting types for ‘ungetc’
+int _EXFUN(asprintf, (char **__restrict, const char *__restrict, ...)
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:538:15: note: previous declaration of ‘ungetc’ was here
+int __cdecl ungetc(int _Ch,FILE *_File);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:279:5: error: conflicting types for ‘vfprintf’
+_ATTRIBUTE ((__format__ (__printf__, 2, 3))));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:385:15: note: previous declaration of ‘vfprintf’ was here
+int __cdecl vfprintf(FILE * __restrict__ _File,const char * __restrict__ _Format,va_list _ArgList);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:303:7: error: conflicting types for ‘fdopen’
+_ATTRIBUTE ((__format__ (__printf__, 2, 3))));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:918:17: note: previous declaration of ‘fdopen’ was here
+FILE *__cdecl fdopen(int _FileHandle,const char *_Format) __MINGW_ATTRIB_DEPRECATED_MSVC2005;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:305:5: error: conflicting types for ‘fileno’
+_ATTRIBUTE ((__format__ (__scanf__, 2, 3))));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:920:15: note: previous declaration of ‘fileno’ was here
+int __cdecl fileno(FILE *_File) __MINGW_ATTRIB_DEPRECATED_MSVC2005;
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/include/stdio.h:321:5: error: conflicting types for ‘_pclose’
+_ATTRIBUTE ((__format__ (__printf__, 1, 0))));
+^
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:508:23: note: previous declaration of ‘_pclose’ was here
+_CRTIMP int __cdecl _pclose(FILE *_File);
+^
+/usr/include/stdio.h:325:7: error: conflicting types for ‘_popen’
+_ATTRIBUTE ((__format__ (__printf__, 2, 0))));
+^
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:509:25: note: previous declaration of ‘_popen’ was here
+_CRTIMP FILE *__cdecl _popen(const char *_Command,const char *_Mode);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:389:5: error: conflicting types for ‘getw’
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:923:15: note: previous declaration of ‘getw’ was here
+int __cdecl getw(FILE *_File) __MINGW_ATTRIB_DEPRECATED_MSVC2005;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:390:5: error: conflicting types for ‘putw’
+* Recursive versions of the above.
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:924:15: note: previous declaration of ‘putw’ was here
+int __cdecl putw(int _Ch,FILE *_File) __MINGW_ATTRIB_DEPRECATED_MSVC2005;
+^
+In file included from /usr/include/stdio.h:417:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/sys/_types/_off_t.h:30:24: error: conflicting types for ‘off_t’
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:80:0,
+from Vale_Hash_SHA2_256.c:2:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/_mingw_off_t.h:26:17: note: previous declaration of ‘off_t’ was here
+typedef off32_t off_t;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:420:5: error: conflicting types for ‘fseeko’
+int _EXFUN(_fiprintf_r, (struct _reent *, FILE *, const char *, ...)
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:475:7: note: previous declaration of ‘fseeko’ was here
+int fseeko(FILE* stream, _off_t offset, int whence);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:421:7: error: conflicting types for ‘ftello’
+_ATTRIBUTE ((__format__ (__printf__, 3, 4))));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:486:10: note: previous declaration of ‘ftello’ was here
+_off_t ftello(FILE * stream);
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:427:5: error: conflicting types for ‘snprintf’
+int _EXFUN(_fprintf_r, (struct _reent *, FILE *__restrict, const char *__restrict, ...)
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:569:5: note: previous definition of ‘snprintf’ was here
+int snprintf (char * __restrict__ __stream, size_t __n, const char * __restrict__ __format, ...)
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:428:5: error: conflicting types for ‘vfscanf’
+_ATTRIBUTE ((__format__ (__printf__, 3, 4))));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:411:7: note: previous definition of ‘vfscanf’ was here
+int vfscanf (FILE *__stream,  const char *__format, __builtin_va_list __local_argv)
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:430:5: error: conflicting types for ‘vsnprintf’
+int _EXFUN(_fputc_r, (struct _reent *, int, FILE *));
+^
+In file included from Vale_Hash_SHA2_256.c:2:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdio.h:558:7: note: previous definition of ‘vsnprintf’ was here
+int vsnprintf (char * __restrict__ __stream, size_t __n, const char * __restrict__ __format, va_list __local_argv)
+^
+In file included from /usr/include/stdio.h:442:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/sys/_types/_ssize_t.h:30:26: error: conflicting types for ‘ssize_t’
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:9:0,
+from Vale_Hash_SHA2_256.c:1:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/crtdefs.h:45:35: note: previous declaration of ‘ssize_t’ was here
+__MINGW_EXTENSION typedef __int64 ssize_t;
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/include/stdio.h:458:18: error: conflicting type qualifiers for ‘_sys_nerr’
+int _EXFUN(_putc_r, (struct _reent *, int, FILE *));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:165:36: note: previous declaration of ‘_sys_nerr’ was here
+extern __declspec(dllimport) int _sys_nerr;
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/include/stdio.h:459:26: error: conflicting types for ‘_sys_errlist’
+int _EXFUN(_putc_unlocked_r, (struct _reent *, int, FILE *));
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:164:38: note: previous declaration of ‘_sys_errlist’ was here
+extern __declspec(dllimport) char *_sys_errlist[1];
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:8:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/stdio.h:477:25: error: conflicting types for ‘_Nullable’
+_ATTRIBUTE ((__format__ (__printf__, 3, 4))));
+^
+/usr/include/stdio.h:476:25: note: previous definition of ‘_Nullable’ was here
+int _EXFUN(_sprintf_r, (struct _reent *, char *__restrict, const char *__restrict, ...)
+^
+/usr/include/stdio.h:478:28: error: conflicting types for ‘_Nullable’
+int _EXFUN(_sscanf_r, (struct _reent *, const char *__restrict, const char *__restrict, ...)
+^
+/usr/include/stdio.h:477:25: note: previous definition of ‘_Nullable’ was here
+_ATTRIBUTE ((__format__ (__printf__, 3, 4))));
+^
+/usr/include/stdio.h:479:25: error: conflicting types for ‘_Nullable’
+_ATTRIBUTE ((__format__ (__scanf__, 3, 4))));
+^
+/usr/include/stdio.h:478:28: note: previous definition of ‘_Nullable’ was here
+int _EXFUN(_sscanf_r, (struct _reent *, const char *__restrict, const char *__restrict, ...)
+^
+In file included from /usr/include/string.h:142:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:9,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/sys/_types/_rsize_t.h:30:25: error: conflicting types for ‘rsize_t’
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:9:0,
+from Vale_Hash_SHA2_256.c:1:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/crtdefs.h:52:16: note: previous declaration of ‘rsize_t’ was here
+typedef size_t rsize_t;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:9:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/string.h:168:6: error: conflicting types for ‘swab’
+#define strndupa(__s, __n) \
+^
+In file included from Vale_Hash_SHA2_256.c:1:0:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:643:16: note: previous declaration of ‘swab’ was here
+void __cdecl swab(char *_Buf1,char *_Buf2,int _SizeInBytes) __MINGW_ATTRIB_DEPRECATED_MSVC2005;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:9:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/string.h:171:47: error: too many decimal points in number
+char *__out = (char *) __builtin_alloca (__len); \
+^
+/usr/include/string.h:172:45: error: too many decimal points in number
+In file included from /usr/include/time.h:71:0,
+from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:10,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/sys/_types/_time_t.h:30:25: error: conflicting types for ‘time_t’
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/stdlib.h:9:0,
+from Vale_Hash_SHA2_256.c:1:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/crtdefs.h:138:20: note: previous declaration of ‘time_t’ was here
+typedef __time64_t time_t;
+^
+In file included from /Users/jonathan/Code/kremlin/kremlib/kremlib.h:10:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/usr/include/time.h:153:17: error: expected ‘,’ or ‘}’ before ‘__attribute__’
+#if __SVID_VISIBLE || __XSI_VISIBLE
+^
+In file included from /Users/jonathan/Code/vale/obj/crypto/hashing/Prims.h:7:0,
+from /Users/jonathan/Code/vale/obj/crypto/hashing/sha256_main_i.h:6,
+from Vale_Hash_SHA2_256.c:6:
+/Users/jonathan/Code/kremlin/kremlib/kremlib.h: In function ‘print128’:
+/Users/jonathan/Code/kremlin/kremlib/kremlib.h:348:10: error: unknown conversion type character ‘l’ in format [-Werror=format=]
+/Users/jonathan/Code/kremlin/kremlib/kremlib.h:348:10: error: unknown conversion type character ‘l’ in format [-Werror=format=]
+/Users/jonathan/Code/kremlin/kremlib/kremlib.h:348:10: error: too many arguments for format [-Werror=format-extra-args]
+/Users/jonathan/Code/kremlin/kremlib/kremlib.h:348:10: error: unknown conversion type character ‘l’ in format [-Werror=format=]
+/Users/jonathan/Code/kremlin/kremlib/kremlib.h:348:10: error: unknown conversion type character ‘l’ in format [-Werror=format=]
+/Users/jonathan/Code/kremlin/kremlib/kremlib.h:348:10: error: too many arguments for format [-Werror=format-extra-args]
+/Users/jonathan/Code/kremlin/kremlib/kremlib.h:348:10: error: unknown conversion type character ‘l’ in format [-Werror=format=]
+/Users/jonathan/Code/kremlin/kremlib/kremlib.h:348:10: error: unknown conversion type character ‘l’ in format [-Werror=format=]
+/Users/jonathan/Code/kremlin/kremlib/kremlib.h:348:10: error: too many arguments for format [-Werror=format-extra-args]
+cc1: all warnings being treated as errors
+make[3]: *** [Makefile:44: Vale_Hash_SHA2_256.o] Error 1
+make[2]: *** [Makefile:40: vale/asm/vale.a] Error 2
+make[1]: *** [Makefile:36: extract-c-crypto] Error 2
+make[1]: *** Waiting for unfinished jobs....
+Warning 6: in the definition of block, after the definition of h1, in top-level declaration Hacl.Impl.Chacha20.Vec128.update_last, in file Hacl_Impl_Chacha20_Vec128: stack newbuf 0uint8 Hacl.Impl.Chacha20.Vec128.vecsizebytes4 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.X25519.main (going into Hacl_Test_X25519) calls Hacl.EC.crypto_scalarmult (going into Curve25519) -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+make: *** [Makefile:16: all] Error 2
