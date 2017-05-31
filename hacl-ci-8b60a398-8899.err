@@ -1,0 +1,834 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in doc/slides/popl2015/intro-tiny-fstar.mdk.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in doc/slides/popl2015/overview-presentation.mdk.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "CoreCrypto.ml", line 526, characters 24-144:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+ECC_X448
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+openssl_stub.c: In function ‘ocaml_openssl_init’:
+openssl_stub.c:93:3: warning: implicit declaration of function ‘OPENSSL_config’ [-Wimplicit-function-declaration]
+OPENSSL_config("CoreCrypto");
+^
+openssl_stub.c: In function ‘ocaml_rsa_gen_key’:
+openssl_stub.c:668:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:668:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_get_key’:
+openssl_stub.c:779:21: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:27: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:779:33: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_encrypt’:
+openssl_stub.c:823:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:823:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_decrypt’:
+openssl_stub.c:878:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:878:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_sign’:
+openssl_stub.c:922:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:922:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_rsa_verify’:
+openssl_stub.c:975:23: warning: passing argument 2 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:29: warning: passing argument 3 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c:975:35: warning: passing argument 4 of ‘RSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+RSA_get0_key(rsa, &b_n, &b_e, &b_d);
+^
+In file included from openssl_stub.c:22:0:
+openssl/include/openssl/rsa.h:194:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void RSA_get0_key(const RSA *r,
+^
+openssl_stub.c: In function ‘ocaml_dsa_gen_params’:
+openssl_stub.c:1087:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1087:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_gen_key’:
+openssl_stub.c:1144:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1144:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_get_key’:
+openssl_stub.c:1183:21: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:27: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1183:33: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1190:21: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1190:29: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_set_key’:
+openssl_stub.c:1235:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1235:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1236:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1236:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_sign’:
+openssl_stub.c:1325:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1325:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1326:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv); 
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1326:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv); 
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dsa_verify’:
+openssl_stub.c:1368:23: warning: passing argument 2 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:29: warning: passing argument 3 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1368:35: warning: passing argument 4 of ‘DSA_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_pqg(dsa, &b_p, &b_q, &b_g);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:173:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_pqg(const DSA *d,
+^
+openssl_stub.c:1369:23: warning: passing argument 2 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c:1369:31: warning: passing argument 3 of ‘DSA_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DSA_get0_key(dsa, &b_pub, &b_priv);
+^
+In file included from openssl_stub.c:23:0:
+openssl/include/openssl/dsa.h:176:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DSA_get0_key(const DSA *d,
+^
+openssl_stub.c: In function ‘ocaml_dh_gen_params’:
+openssl_stub.c:1473:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1473:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_params_of_string’:
+openssl_stub.c:1506:21: warning: passing argument 2 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:27: warning: passing argument 3 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c:1506:33: warning: passing argument 4 of ‘DH_get0_pqg’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_pqg(dh, &b_p, &b_q, &b_g);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:172:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_pqg(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_gen_key’:
+openssl_stub.c:1561:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1561:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c: In function ‘ocaml_dh_compute’:
+openssl_stub.c:1672:21: warning: passing argument 2 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+openssl_stub.c:1672:29: warning: passing argument 3 of ‘DH_get0_key’ from incompatible pointer type [-Wincompatible-pointer-types]
+DH_get0_key(dh, &b_pub, &b_prv);
+^
+In file included from openssl/include/openssl/dsa.h:31:0,
+from openssl_stub.c:23:
+openssl/include/openssl/dh.h:175:6: note: expected ‘const BIGNUM ** {aka const struct bignum_st **}’ but argument is of type ‘BIGNUM ** {aka struct bignum_st **}’
+void DH_get0_key(const DH *dh,
+^
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning 6: in the definition of block, after the definition of h1, in top-level declaration Hacl.Impl.Chacha20.Vec128.update_last, in file Hacl_Impl_Chacha20_Vec128: stack newbuf 0uint8 Hacl.Impl.Chacha20.Vec128.vecsizebytes4 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Test.X25519.main (going into Hacl_Test_X25519) calls Hacl.EC.crypto_scalarmult (going into Curve25519) -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_6, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_6, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_6, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Hacl.Hash.SHA2_384.update (going into Hacl_Hash_SHA2_384) calls Hacl.Hash.Lib.LoadStore.uint64s_from_be_bytes (going into SHA2_256) -- removing the static qualifier from Hacl.Hash.Lib.LoadStore.uint64s_from_be_bytes
+Warning 7: : After inlining, Hacl.Hash.SHA2_256.update (going into Hacl_Hash_SHA2_256) calls Hacl.Hash.Lib.LoadStore.uint32s_from_be_bytes (going into SHA2_384) -- removing the static qualifier from Hacl.Hash.Lib.LoadStore.uint32s_from_be_bytes
+Warning 7: : After inlining, Hacl.Hash.SHA2_256.finish_core (going into Hacl_Hash_SHA2_256) calls Hacl.Hash.Lib.LoadStore.uint32s_to_be_bytes (going into SHA2_384) -- removing the static qualifier from Hacl.Hash.Lib.LoadStore.uint32s_to_be_bytes
+Warning 7: : After inlining, Hacl.Hash.SHA2_512.update (going into Hacl_Hash_SHA2_512) calls Hacl.Hash.Lib.LoadStore.uint64s_from_be_bytes (going into SHA2_384) -- removing the static qualifier from Hacl.Hash.Lib.LoadStore.uint64s_from_be_bytes
+Warning 7: : After inlining, Hacl.Hash.SHA2_256.update (going into Hacl_Hash_SHA2_256) calls Hacl.Hash.Lib.LoadStore.uint32s_from_be_bytes (going into SHA2_512) -- removing the static qualifier from Hacl.Hash.Lib.LoadStore.uint32s_from_be_bytes
+Warning 7: : After inlining, Hacl.Hash.SHA2_256.finish_core (going into Hacl_Hash_SHA2_256) calls Hacl.Hash.Lib.LoadStore.uint32s_to_be_bytes (going into SHA2_512) -- removing the static qualifier from Hacl.Hash.Lib.LoadStore.uint32s_to_be_bytes
+Warning 7: : After inlining, Hacl.Hash.SHA2_384.update (going into Hacl_Hash_SHA2_384) calls Hacl.Hash.Lib.LoadStore.uint64s_from_be_bytes (going into SHA2_512) -- removing the static qualifier from Hacl.Hash.Lib.LoadStore.uint64s_from_be_bytes
+Warning 7: : After inlining, Hacl.Hash.SHA2_384.finish_core (going into Hacl_Hash_SHA2_384) calls Hacl.Hash.Lib.LoadStore.uint64s_to_be_bytes (going into SHA2_256) -- removing the static qualifier from Hacl.Hash.Lib.LoadStore.uint64s_to_be_bytes
+Warning 7: : After inlining, Hacl.Hash.SHA2_512.finish_core (going into Hacl_Hash_SHA2_512) calls Hacl.Hash.Lib.LoadStore.uint64s_to_be_bytes (going into SHA2_384) -- removing the static qualifier from Hacl.Hash.Lib.LoadStore.uint64s_to_be_bytes
+Warning 7: : After inlining, Hacl.Hash.SHA2_384.finish_core (going into Hacl_Hash_SHA2_384) calls Hacl.Hash.Lib.LoadStore.uint64s_to_be_bytes (going into SHA2_512) -- removing the static qualifier from Hacl.Hash.Lib.LoadStore.uint64s_to_be_bytes
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x45c): undefined reference to `__imp__vsnprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x45c): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__vsnprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x4c1): undefined reference to `__imp__vsnwprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x4c1): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__vsnwprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(tb_asnmth.o):tb_asnmth.c:(.text+0x3f): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(tb_asnmth.o):tb_asnmth.c:(.text+0x3f): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(tb_asnmth.o):tb_asnmth.c:(.text+0x3aa): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(tb_asnmth.o):tb_asnmth.c:(.text+0x3aa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(md_rand.o):md_rand.c:(.text+0x6e3): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(md_rand.o):md_rand.c:(.text+0x6e3): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(ameth_lib.o):ameth_lib.c:(.text+0x1f4): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(ameth_lib.o):ameth_lib.c:(.text+0x1f4): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_addr.o):b_addr.c:(.text+0x1bf): undefined reference to `gai_strerrorW'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_addr.o):b_addr.c:(.text+0x1bf): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `gai_strerrorW'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_addr.o):b_addr.c:(.text+0xb84): undefined reference to `gai_strerrorW'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_addr.o):b_addr.c:(.text+0xb84): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `gai_strerrorW'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0xc5): undefined reference to `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0xc5): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0xd3): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0xd3): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x266): undefined reference to `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x266): additional relocation overflows omitted from the output
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x274): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x392): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x3f5): undefined reference to `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x3ff): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x47d): undefined reference to `__imp_WSACleanup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x49a): undefined reference to `__imp_ioctlsocket'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x4b2): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x5ca): undefined reference to `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x5d8): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x84d): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x908): undefined reference to `__imp_ioctlsocket'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x922): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0xa02): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock2.o):b_sock2.c:(.text+0x3e): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock2.o):b_sock2.c:(.text+0x1ab): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock2.o):b_sock2.c:(.text+0x202): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock2.o):b_sock2.c:(.text+0x254): more undefined references to `__imp_WSAGetLastError' follow
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock2.o):b_sock2.c:(.text+0x72a): undefined reference to `__imp_closesocket'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock2.o):b_sock2.c:(.text+0x739): undefined reference to `__imp_closesocket'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_file.o):bss_file.c:(.text+0x2b7): undefined reference to `__imp__fileno'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_file.o):bss_file.c:(.text+0x74b): undefined reference to `__imp__errno'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x1df): undefined reference to `__imp_WSASetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x22a): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x295): undefined reference to `__imp_WSASetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x2da): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x34d): undefined reference to `__imp_WSASetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x38d): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x445): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(eng_openssl.o):eng_openssl.c:(.text+0xb): undefined reference to `__imp___iob_func'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(eng_openssl.o):eng_openssl.c:(.text+0x40f): undefined reference to `__imp___iob_func'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(o_fopen.o):o_fopen.c:(.text+0x188): undefined reference to `__imp__wfopen'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(o_fopen.o):o_fopen.c:(.text+0x194): undefined reference to `__imp__errno'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x5b5): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x615): undefined reference to `__imp__stricmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x724): undefined reference to `__imp__stricmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x762): undefined reference to `__imp__stricmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x7c8): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_utl.o):v3_utl.c:(.text+0xbe4): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_utl.o):v3_utl.c:(.text+0xe47): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(a_time.o):a_time.c:(.text+0x484): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(a_time.o):a_time.c:(.text+0x4d4): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bn_rand.o):bn_rand.c:(.text+0xaf): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bn_rand.o):bn_rand.c:(.text+0x29f): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bn_rand.o):bn_rand.c:(.text+0x48c): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(o_time.o):o_time.c:(.text+0xa): undefined reference to `__imp__gmtime64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(pem_lib.o):pem_lib.c:(.text+0x7c): undefined reference to `__imp___iob_func'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x11bc): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x11d1): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x152b): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x16b3): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x1750): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x2179): more undefined references to `__imp__time64' follow
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_tlsf.o):v3_tlsf.c:(.text+0x39): undefined reference to `__imp__stricmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(ui_openssl.o):ui_openssl.c:(.text+0x19): undefined reference to `__imp___iob_func'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(ui_openssl.o):ui_openssl.c:(.text+0x762): undefined reference to `__imp___iob_func'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(ui_openssl.o):ui_openssl.c:(.text+0x782): undefined reference to `__imp___iob_func'
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:133: test-aead.exe] Error 1
+make[1]: *** Waiting for unfinished jobs....
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x45c): undefined reference to `__imp__vsnprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x45c): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__vsnprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x4c1): undefined reference to `__imp__vsnwprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x4c1): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__vsnwprintf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:18: test-poly.exe] Error 1
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x45c): undefined reference to `__imp__vsnprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x45c): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__vsnprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x4c1): undefined reference to `__imp__vsnwprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x4c1): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__vsnwprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(tb_asnmth.o):tb_asnmth.c:(.text+0x3f): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(tb_asnmth.o):tb_asnmth.c:(.text+0x3f): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(tb_asnmth.o):tb_asnmth.c:(.text+0x3aa): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(tb_asnmth.o):tb_asnmth.c:(.text+0x3aa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(md_rand.o):md_rand.c:(.text+0x6e3): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(md_rand.o):md_rand.c:(.text+0x6e3): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(ameth_lib.o):ameth_lib.c:(.text+0x1f4): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(ameth_lib.o):ameth_lib.c:(.text+0x1f4): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_addr.o):b_addr.c:(.text+0x1bf): undefined reference to `gai_strerrorW'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_addr.o):b_addr.c:(.text+0x1bf): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `gai_strerrorW'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_addr.o):b_addr.c:(.text+0xb84): undefined reference to `gai_strerrorW'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_addr.o):b_addr.c:(.text+0xb84): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `gai_strerrorW'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0xc5): undefined reference to `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0xc5): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0xd3): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0xd3): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x266): undefined reference to `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x266): additional relocation overflows omitted from the output
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x274): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x392): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x3f5): undefined reference to `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x3ff): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x47d): undefined reference to `__imp_WSACleanup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x49a): undefined reference to `__imp_ioctlsocket'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x4b2): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x5ca): undefined reference to `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x5d8): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x84d): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x908): undefined reference to `__imp_ioctlsocket'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:(.text+0x922)C:: /undefined Buildreference/ Agent2to/ `_work__imp_WSAGetLastError/'13
+/Cs://Build/dependenciesAgent2//_work/FStar13//sucontrib//dependencies/CoreCryptoFStar//ucontribml//CoreCrypto/opensslml//openssllibcrypto.a(/cryptlib.olibcrypto.a)(:b_sock.o):cryptlib.cb_sock.c::((..texttext++0x45c0xa02))::  undefinedundefined  referencereference  toto  ``__imp_WSAGetLastError__imp__vsnprintf''
+
+CC:://Build/BuildAgent2//Agent2_work//_work13//13s//sdependencies//FStar/ucontribdependencies//CoreCryptoFStar//ml/ucontribopenssl//CoreCryptolibcrypto.a/(mlb_sock2.o/)openssl:/b_sock2.c:libcrypto.a((.text+0x3ecryptlib.o):) :undefined cryptlib.creference: (to `__imp_WSAGetLastError'
+C:/Build/.Agent2text/_work+/130x45c/s)/:dependencies /relocationFStar/ ucontrib/truncatedCoreCrypto /ml/openssl/libcrypto.ato( b_sock2.o):b_sock2.c:(.text+0x1ab): undefined reference to `__imp_WSAGetLastError'fit
+C:/Build:/Agent2/_work/ 13/s/R_X86_64_PC32dependencies /againstFStar /undefineducontrib /symbolCoreCrypto /`ml/__imp__vsnprintfopenssl'/
+libcrypto.a(Cb_sock2.o:)/:Buildb_sock2.c/:(Agent2./text+_work0x202/)13:/ sundefined/ dependenciesreference/ FStarto/ `ucontrib__imp_WSAGetLastError/'
+CoreCryptoC:/Build//mlAgent2//openssl_work//13libcrypto.a(/cryptlib.o)s:/cryptlib.cdependencies:(/.FStartext/+ucontrib/0x4c1CoreCrypto)/:ml /openssl/libcrypto.a(b_sock2.oundefined):b_sock2.c:(.text+0x254 ): referencemore  undefined references toto  ``__imp_WSAGetLastError__imp__vsnwprintf''
+followC
+:C/:Build//BuildAgent2//Agent2/_work_work//1313//ss//dependencies/dependenciesFStar//FStarucontrib//ucontribCoreCrypto//ml/CoreCryptoopenssl//mllibcrypto.a/(opensslb_sock2.o/):libcrypto.ab_sock2.c(:(cryptlib.o.)text:+0x72acryptlib.c:): undefined reference to `(__imp_closesocket'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/.text+0x4c1): relocation truncated to fitucontrib/CoreCrypto/ml:/ opensslR_X86_64_PC32/ libcrypto.aagainst( b_sock2.oundefined) :symbol `__imp__vsnwprintf'
+b_sock2.cC::(/.Buildtext/+Agent20x739/)_work:/ 13undefined/ sreference/ dependenciesto/ FStar`/__imp_closesocketucontrib'/
+C:/Build/CoreCryptoAgent2/_work//13/mls//openssldependencies//FStarlibcrypto.a/(ucontrib/tb_asnmth.oCoreCrypto)/:ml/tb_asnmth.copenssl:/(libcrypto.a(.bss_file.otext)+:0x3fbss_file.c:)(:. text+undefined0x2b7 ):reference  undefinedto  reference `to `__imp__strnicmp'__imp__fileno
+'C
+:C/:Build//BuildAgent2//Agent2_work//_work13//13s//sdependencies//FStardependencies//ucontribFStar//CoreCryptoucontrib//mlCoreCrypto/ml//openssl/openssllibcrypto.a/(libcrypto.abss_file.o():tb_asnmth.obss_file.c)::(tb_asnmth.c.:text(+.0x74btext)+: 0x3f)undefined:  relocationreference  to truncated to fit: R_X86_64_PC32 against` __imp__errno'
+undefinedC: /symbolBuild /`Agent2__imp__strnicmp/'_work
+/C13://sBuild//dependenciesAgent2//_workFStar//13ucontrib//sCoreCrypto//dependenciesml//FStaropenssl//ucontriblibcrypto.a/(CoreCryptobss_sock.o/)ml:/bss_sock.copenssl:/(libcrypto.a.text+0x1df)(: undefined referencetb_asnmth.o )to: `tb_asnmth.c__imp_WSASetLastError:'(
+.Ctext:+/0x3aaBuild)/:Agent2 /_work/undefined13 /sreference/ todependencies /`FStar/__imp__strnicmpucontrib'/
+CoreCryptoC/:ml//Buildopenssl//Agent2libcrypto.a/(bss_sock.o)_work:/bss_sock.c13:/(s./textdependencies+/0x22aFStar)/:ucontrib /undefinedCoreCrypto /referenceml /toopenssl /`libcrypto.a__imp_WSAGetLastError('tb_asnmth.o
+)C::tb_asnmth.c/:Build(/.Agent2text/_work+/0x3aa): 13relocation/ truncateds /todependencies /fitFStar:/ ucontribR_X86_64_PC32/ CoreCryptoagainst/ mlundefined/ opensslsymbol/ libcrypto.a`(__imp__strnicmpbss_sock.o')
+C::/Buildbss_sock.c/Agent2/_work/:13/(s./textdependencies+/0x295FStar)/:ucontrib /undefinedCoreCrypto /referenceml /toopenssl /`libcrypto.a(__imp_WSASetLastErrormd_rand.o')
+:Cmd_rand.c::/(Build./textAgent2+/0x6e3_work)/:13 /undefineds /referencedependencies /toFStar /`ucontrib__imp__time64/'CoreCrypto
+/Cml://opensslBuild//libcrypto.aAgent2(/bss_sock.o_work)/:13bss_sock.c/:s(/.textdependencies+/0x2daFStar)/:ucontrib /undefinedCoreCrypto /reference mlto/ openssl`/__imp_WSAGetLastErrorlibcrypto.a('md_rand.o)
+:Cmd_rand.c::/(Build./textAgent2+/0x6e3_work)/:13 /relocations /truncateddependencies /toFStar /fitucontrib:/ CoreCryptoR_X86_64_PC32/ mlagainst/ opensslundefined/ libcrypto.asymbol( bss_sock.o`):__imp__time64bss_sock.c':
+(C.:text/+Build0x34d/)Agent2:/ _workundefined/ 13reference/ sto/ dependencies`/__imp_WSASetLastErrorFStar'/
+ucontribC/:CoreCrypto//Buildml//Agent2openssl//_worklibcrypto.a/(13ameth_lib.o/)s:/ameth_lib.cdependencies:/(FStar./textucontrib+/0x1f4CoreCrypto)/:ml /undefinedopenssl /referencelibcrypto.a (tobss_sock.o )`:__imp__strnicmpbss_sock.c':
+(C.:text/+Build0x38d/): Agent2undefined /reference_work /to13 /`s/__imp_WSAGetLastErrordependencies'/
+FStarC/:ucontrib//CoreCrypto/Buildml//openssl/Agent2libcrypto.a(/ameth_lib.o):_workameth_lib.c:(.text+0x1f4): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__strnicmp'
+C:/Build/Agent2//_work13//13s//sdependencies//dependenciesFStar//FStarucontrib/ucontrib//CoreCryptoCoreCrypto/ml/openssl/libcrypto.a(/b_addr.o):b_addr.c:(ml./textopenssl+/0x1bflibcrypto.a)(:bss_sock.o )undefined: bss_sock.creference: (to. text`+gai_strerrorW0x445')
+:C :undefined/ Buildreference/ Agent2to/ _work`/13__imp_WSAGetLastError/'s
+/Cdependencies://FStarBuild//ucontribAgent2//CoreCrypto_work//ml13//openssls//libcrypto.adependencies(/b_addr.oFStar)/:ucontribb_addr.c/CoreCrypto:/(ml./textopenssl+/0x1bflibcrypto.a)(:eng_openssl.o )relocation: eng_openssl.ctruncated :to( .fittext:+ 0xbR_X86_64_PC32) :against  undefinedundefined  referencesymbol  to` gai_strerrorW`'__imp___iob_func
+'C
+:C/:Build//BuildAgent2//Agent2_work//_work13//s/13dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_addr.o):b_addr.c:(.text+0xb84): undefined reference to `gai_strerrorW'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(/b_addr.o)s:/b_addr.cdependencies:/(FStar.text+0xb84/):ucontrib /relocationCoreCrypto /truncatedml /toopenssl /fitlibcrypto.a:( eng_openssl.oR_X86_64_PC32 )against: eng_openssl.cundefined: (symbol. text`+gai_strerrorW0x40f')
+: Cundefined: /referenceBuild /toAgent2 /`_work__imp___iob_func/'13
+/Cs://dependenciesBuild//FStarAgent2//ucontrib_work//CoreCrypto13//mls//openssldependencies//libcrypto.aFStar(/b_sock.oucontrib)/:CoreCryptob_sock.c/:ml(/.openssltext/+libcrypto.a0xc5()o_fopen.o:) :undefinedo_fopen.c :reference( .totext +`0x188)__imp_WSAStartup:'
+C: /undefinedBuild/ Agent2/reference_work /to13 /`s__imp__wfopen/'dependencies
+/CFStar://ucontribBuild//Agent2CoreCrypto//_workml//13openssl//slibcrypto.a/(dependenciesb_sock.o/)FStar:/b_sock.cucontrib:/(CoreCrypto./textml+/0xc5openssl)/:libcrypto.a (relocationo_fopen.o )truncated: o_fopen.cto: (fit.text:+ R_X86_64_PC32 against undefined0x194 ):symbol  undefined` __imp_WSAStartupreference'
+toC:/ Build`__imp__errno/Agent2'/_work/13
+/s/dependencies/FStar/Cucontrib/:CoreCrypto/ml/openssl/libcrypto.a(b_sock.o):b_sock.c:/Build/Agent2/_work/13/s(/.dependenciestext/+FStar0xd3/)ucontrib:/ CoreCryptoundefined/ mlreference/ opensslto/ libcrypto.a`(__imp_WSAGetLastErrorv3_ncons.o')
+:Cv3_ncons.c::/(Build./textAgent2+/0x5b5_work)/:13 /undefineds /referencedependencies /toFStar /`ucontrib__imp__strnicmp/'CoreCrypto
+/Cml://opensslBuild//libcrypto.aAgent2(/b_sock.o_work)/:13/b_sock.cs:/(dependencies./textFStar+/0xd3ucontrib)/:CoreCrypto /relocationml /truncatedopenssl /tolibcrypto.a (fit:v3_ncons.o )R_X86_64_PC32: v3_ncons.cagainst: (undefined. textsymbol+ 0x615`):__imp_WSAGetLastError 'undefined
+C:reference/ Buildto/ Agent2`/__imp__stricmp_work'/
+13C/:s//Builddependencies//Agent2FStar//_workucontrib//13CoreCrypto//s/mldependencies//opensslFStar//libcrypto.aucontrib(/b_sock.oCoreCrypto)/:mlb_sock.c/:openssl(/.libcrypto.atext(+v3_ncons.o0x266))::v3_ncons.c :undefined( .referencetext +to0x724 )`:__imp_WSAStartup 'undefined
+Creference: /toBuild /`Agent2__imp__stricmp/'_work
+/C13://sBuild//dependenciesAgent2//FStar_work//ucontrib13//CoreCryptos//ml/dependenciesopenssl//FStar/ucontrib/CoreCryptolibcrypto.a/ml/(opensslb_sock.o)/:b_sock.c:(.text+libcrypto.a0x266): additional relocation (v3_ncons.o):v3_ncons.c:(.text+0x762): undefined reference to `__imp__stricmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/overflowsopenssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x7c8): undefined  omittedreference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/ dependencies/fromFStar /theucontrib /outputCoreCrypto
+/Cml/:openssl//libcrypto.aBuild/(Agent2/v3_utl.o_work)/:13v3_utl.c/:s(/.dependenciestext/+FStar0xbe4/)ucontrib:/ CoreCryptoundefined/ mlreference/ opensslto/ libcrypto.a`(__imp__strnicmpb_sock.o')
+:Cb_sock.c::/(Build./textAgent2+/0x274_work)/:13 /undefineds /referencedependencies /toFStar /`ucontrib__imp_WSAGetLastError/'CoreCrypto
+/Cml://opensslBuild//libcrypto.aAgent2(/v3_utl.o_work)/:13v3_utl.c/:(.stext/+dependencies0xe47/)FStar:/ ucontribundefined/ CoreCryptoreference/ mlto/ openssl`/__imp__strnicmplibcrypto.a'(
+b_sock.oC)::/b_sock.cBuild:/(Agent2./text_work+/0x39213)/:s /undefineddependencies /referenceFStar /toucontrib /`CoreCrypto__imp_WSAGetLastError/ml/'openssl
+/Clibcrypto.a(:a_time.o/)Build:/a_time.cAgent2:/(_work./text13+/0x484s)/:dependencies /undefinedFStar /referenceucontrib /toCoreCrypto /`ml__imp__time64/'openssl
+/Clibcrypto.a:(/b_sock.oBuild)/:Agent2/b_sock.c_work/:(.text+0x3f5): undefined reference to `__imp_WSAStartup'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(13b_sock.o)/:sb_sock.c/:dependencies(/.FStartext/+ucontrib0x3ff/)CoreCrypto:/ mlundefined/ opensslreference/ libcrypto.ato( a_time.o`)__imp_WSAGetLastError:'
+a_time.cC::(/.Buildtext/+Agent20x4d4/)_work:/ 13undefined/ s/referencedependencies/FStar /toucontrib /`CoreCrypto__imp__time64/'ml
+/Copenssl://libcrypto.aBuild(/Agent2/b_sock.o_work)/:13b_sock.c/:s(/.dependenciestext/+FStar0x47d/)ucontrib:/ CoreCryptoundefined/ mlreference/ opensslto/ libcrypto.a`(__imp_WSACleanupbn_rand.o')
+:Cbn_rand.c::/(Build./textAgent2+/0xaf_work)/:13 /undefineds /referencedependencies /toFStar /`ucontrib__imp__time64/'CoreCrypto
+/Cml://opensslBuild//libcrypto.aAgent2(/b_sock.o_work)/13:/b_sock.cs:/(.text+0x49a): undefineddependencies /reference FStarto/ `ucontrib__imp_ioctlsocket/'
+C:/CoreCryptoBuild//mlAgent2//_workopenssl//13/s/dependencies/libcrypto.aFStar(/ucontrib/CoreCrypto/mlbn_rand.o/)openssl:/bn_rand.c:(libcrypto.a(.b_sock.otext+0x29f): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bn_rand.o):bn_rand.c:().text+0x48c): undefined: b_sock.creference: (to. text`+__imp__time640x4b2')
+:C :undefined/ Buildreference/ Agent2to/ _work`/__imp_WSAGetLastError13'/
+sC/:dependencies//BuildFStar//Agent2ucontrib//_work/13CoreCrypto//sml//dependenciesopenssl//FStarlibcrypto.a/(ucontribo_time.o/)CoreCrypto:/o_time.cml:/(openssl./textlibcrypto.a+(0xab_sock.o)):: b_sock.cundefined: (reference. textto `+__imp__gmtime64'0x5ca
+)C:: /Build/Agent2undefined/ _work/reference13 /tos /`dependencies/__imp_WSAStartupFStar'/
+ucontribC/:CoreCrypto/ml//openssl/Buildlibcrypto.a/(pem_lib.oAgent2/)_work:/pem_lib.c13:/(s./text+dependencies0x7c/)FStar:/ ucontribundefined/ CoreCryptoreference/ mlto/ openssl`/__imp___iob_funclibcrypto.a'
+C:/(Build/b_sock.oAgent2)/:_work/b_sock.c13:/(s/.dependenciestext/+FStar/0x5d8ucontrib)/:CoreCrypto /mlundefined/ openssl/referencelibcrypto.a (tox509_vfy.o )`:x509_vfy.c__imp_WSAGetLastError:'(
+.Ctext:+/0x11bc): undefined Buildreference/Agent2/ _work/to13 /`s/__imp__time64dependencies'/
+FStarC/:ucontrib//BuildCoreCrypto//Agent2ml//_workopenssl/13/s/dependencies//FStar/libcrypto.aucontrib(/b_sock.oCoreCrypto)/:ml/b_sock.copenssl:/(libcrypto.a(.x509_vfy.o)text:+x509_vfy.c:(.text+0x84d0x11d1))::  undefinedundefined  referencereference  toto  ``__imp__time64__imp_WSAGetLastError'
+C':
+/CBuild://Agent2Build//_workAgent2//13_work//s13//dependenciess//FStardependencies//ucontribFStar//CoreCryptoucontrib//mlCoreCrypto//opensslml//libcrypto.aopenssl(/x509_vfy.olibcrypto.a)(:b_sock.ox509_vfy.c)::(b_sock.c.:text(+.0x152btext)+: 0x908undefined) :reference  toundefined  `reference__imp__time64'
+toC :`/Build__imp_ioctlsocket/'Agent2
+/C_work://13/Builds//dependenciesAgent2//_workFStar//13ucontrib//sCoreCrypto//mldependencies//openssl/FStarlibcrypto.a/(ucontribx509_vfy.o/):CoreCryptox509_vfy.c/:ml(/.textopenssl+/0x16b3): libcrypto.aundefined( b_sock.oreference) :to b_sock.c`:__imp__time64('
+.Ctext:+/0x922Build)/:Agent2 /_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x1750):undefined  undefined referencereference  toto  ``__imp__time64__imp_WSAGetLastError''
+
+CC:://BuildBuild//Agent2Agent2//_work_work//1313//ss//dependencies/FStardependencies//ucontrib/FStarCoreCrypto//mlucontrib//opensslCoreCrypto//libcrypto.aml(/x509_vfy.o)openssl:/x509_vfy.c:libcrypto.a((.textb_sock.o+)0x2179:): more undefinedb_sock.c :references (to `__imp__time64' follow
+C:/.Buildtext/+Agent20xa02/)_work/13/s/:dependencies /FStarundefined/ ucontrib/referenceCoreCrypto /ml/opensslto/ libcrypto.a`(v3_tlsf.o__imp_WSAGetLastError)':
+v3_tlsf.cC::(/.Buildtext/+Agent20x39/): _workundefined/ 13reference/ sto `__imp__stricmp/'
+Cdependencies://FStarBuild/Agent2/_work/13/s//dependencies/ucontribFStar//ucontrib/CoreCryptoCoreCrypto//mlml//opensslopenssl//libcrypto.alibcrypto.a((b_sock2.oui_openssl.o))::b_sock2.cui_openssl.c::((..texttext++0x3e0x19)): undefined :reference  toundefined  `reference__imp___iob_func 'to
+C`:/__imp_WSAGetLastErrorBuild'/
+Agent2/C:_work//Build13//Agent2s//_workdependencies//13FStar//sucontrib//CoreCryptodependencies//mlFStar//opensslucontrib/libcrypto.a(ui_openssl.o)/:ui_openssl.cCoreCrypto:/(ml./text+openssl0x762/):libcrypto.a (undefined b_sock2.oreference) :to b_sock2.c:`(__imp___iob_func.'text
++C:0x1ab/)Build:/ Agent2/undefined_work /13/sreference/ dependenciesto/ FStar`/ucontrib__imp_WSAGetLastError/'CoreCrypto/
+mlC/:openssl//Buildlibcrypto.a/(Agent2ui_openssl.o/)_work:/ui_openssl.c:(13./texts+/0x782)dependencies:/ FStarundefined/ ucontribreference/ CoreCryptoto `/__imp___iob_func'
+ml/openssl/libcrypto.a(b_sock2.o):b_sock2.c:(.text+0x202): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_workcollect2: error: ld returned 1 exit status
+/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock2.o):b_sock2.c:(.text+0x254): more undefined references to `__imp_WSAGetLastError' follow
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock2.o):b_sock2.c:(.text+0x72a): undefined reference to `__imp_closesocket'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(b_sock2.o):b_sock2.c:(.text+make[1]: *** [Makefile:58: test-chacha-vec128.exe] Error 1
+0x739): undefined reference to `__imp_closesocket'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_file.o):bss_file.c:(.text+0x2b7): undefined reference to `__imp__fileno'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_file.o):bss_file.c:(.text+0x74b): undefined reference to `__imp__errno'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x1df): undefined reference to `__imp_WSASetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x22a): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x295): undefined reference to `__imp_WSASetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x2da): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x34d): undefined reference to `__imp_WSASetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x38d): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bss_sock.o):bss_sock.c:(.text+0x445): undefined reference to `__imp_WSAGetLastError'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(eng_openssl.o):eng_openssl.c:(.text+0xb): undefined reference to `__imp___iob_func'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(eng_openssl.o):eng_openssl.c:(.text+0x40f): undefined reference to `__imp___iob_func'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(o_fopen.o):o_fopen.c:(.text+0x188): undefined reference to `__imp__wfopen'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(o_fopen.o):o_fopen.c:(.text+0x194): undefined reference to `__imp__errno'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x5b5): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x615): undefined reference to `__imp__stricmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x724): undefined reference to `__imp__stricmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x762): undefined reference to `__imp__stricmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_ncons.o):v3_ncons.c:(.text+0x7c8): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_utl.o):v3_utl.c:(.text+0xbe4): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_utl.o):v3_utl.c:(.text+0xe47): undefined reference to `__imp__strnicmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(a_time.o):a_time.c:(.text+0x484): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(a_time.o):a_time.c:(.text+0x4d4): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bn_rand.o):bn_rand.c:(.text+0xaf): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bn_rand.o):bn_rand.c:(.text+0x29f): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(bn_rand.o):bn_rand.c:(.text+0x48c): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(o_time.o):o_time.c:(.text+0xa): undefined reference to `__imp__gmtime64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(pem_lib.o):pem_lib.c:(.text+0x7c): undefined reference to `__imp___iob_func'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x11bc): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x11d1): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x152b): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x16b3): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x1750): undefined reference to `__imp__time64'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(x509_vfy.o):x509_vfy.c:(.text+0x2179): more undefined references to `__imp__time64' follow
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(v3_tlsf.o):v3_tlsf.c:(.text+0x39): undefined reference to `__imp__stricmp'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(ui_openssl.o):ui_openssl.c:(.text+0x19): undefined reference to `__imp___iob_func'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(ui_openssl.o):ui_openssl.c:(.text+0x762): undefined reference to `__imp___iob_func'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(ui_openssl.o):ui_openssl.c:(.text+0x782): undefined reference to `__imp___iob_func'
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:43: test-chacha.exe] Error 1
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x45c): undefined reference to `__imp__vsnprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x45c): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__vsnprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x4c1): undefined reference to `__imp__vsnwprintf'
+C:/Build/Agent2/_work/13/s/dependencies/FStar/ucontrib/CoreCrypto/ml/openssl/libcrypto.a(cryptlib.o):cryptlib.c:(.text+0x4c1): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `__imp__vsnwprintf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:78: test-curve.exe] Error 1
+make: *** [Makefile:21: all] Error 2
