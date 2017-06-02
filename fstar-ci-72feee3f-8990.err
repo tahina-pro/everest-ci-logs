@@ -1,0 +1,51 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in doc/slides/popl2015/intro-tiny-fstar.mdk.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in doc/slides/popl2015/overview-presentation.mdk.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(393,0-393,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(444,0-444,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(495,0-497,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(718,0-720,39): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.DMFF.fst(806,18-806,22): (Error) Failed to resolve implicit argument of type 'Type' introduced in uu___unification_ 175904 env e context_nm x (see also .\u_boot_fsts\FStar.TypeChecker.DMFF.fst(806,13-806,28))
+1 error was reported (see above)
+make[3]: *** [Makefile:181: u_extract_dmff] Error 1
+.\u_boot_fsts\FStar.Interactive.fst(166,47-166,58): (Error) Failed to resolve implicit argument of type 'Type' introduced in uu___unification_ 292129 m stack env remaining ts uu___2307112 stack env
+1 error was reported (see above)
+make[3]: *** [Makefile:218: u_extract_fstar] Error 1
+.\u_boot_fsts\FStar.ToSyntax.ToSyntax.fst(585,20-585,45): (Error) Failed to resolve implicit argument of type 'Type' introduced in uu___unification_ 204772 env
+p
+is_mut
+check_linear_pattern_variables
+push_bv_maybe_mut
+resolvex
+aux
+env
+p
+loc
+pos
+r
+.\u_boot_fsts\FStar.ToSyntax.ToSyntax.fst(2230,51-2230,53): (Error) Failed to resolve implicit argument of type 'Type' introduced in uu___unification_ 270365 env d trans_qual id term t t l qual se se' env env
+2 errors were reported (see above)
+make[3]: *** [Makefile:195: u_extract_tosyntax] Error 1
+make[3]: Target 'u_extract_all' not remade because of errors.
+make[2]: *** [Makefile:230: ocaml] Error 2
+make[1]: *** [Makefile:240: fstar-ocaml] Error 2
+make: *** [Makefile:255: utest] Error 2
