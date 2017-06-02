@@ -1,0 +1,35 @@
+This is /home/everest/everest-ci/ci
+Working directory: /home/everest/vsts-agent/_work/3/s
+About to run: make -C src utest -j 6 -k
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: FStar-Nightly-Linux
+make: Entering directory '/home/everest/vsts-agent/_work/3/s/src'
+make all
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: Entering directory '/home/everest/vsts-agent/_work/3/s/src'
+mono VS/.nuget/NuGet.exe restore VS/FStar.sln
+WARNING: Error: SendFailure (Error writing headers)
+WARNING: Error: SendFailure (Error writing headers)
+WARNING: Error: SendFailure (Error writing headers)
+WARNING: Error: SendFailure (Error writing headers)
+WARNING: Error: SendFailure (Error writing headers)
+WARNING: Error: SendFailure (Error writing headers)
+WARNING: Error: SendFailure (Error writing headers)
+WARNING: Error: SendFailure (Error writing headers)
+WARNING: Error: SendFailure (Error writing headers)
+Unable to find version '0.1.10' of package 'FSharp.Compatibility.OCaml'.
+Unable to find version '6.1.0' of package 'FsLexYacc'.
+Unable to find version '6.1.0' of package 'FsLexYacc.Runtime'.
+Unable to find version '3.0.0.0' of package 'FSPowerPack.Community'.
+Unable to find version '2.0.0.0' of package 'FSPowerPack.Core.Community'.
+Unable to find version '2.0.0.0' of package 'FSPowerPack.Linq.Community'.
+Unable to find version '2.0.0.0' of package 'FSPowerPack.Metadata.Community'.
+Unable to find version '2.0.0.0' of package 'FSPowerPack.Parallel.Seq.Community'.
+Unable to find version '0.0.2' of package 'PPrintForFSharp'.
+make[1]: *** [nuget-restore] Error 1
+make[1]: Target 'all' not remade because of errors.
+make: *** [utest] Error 2
+Makefile:67: recipe for target 'nuget-restore' failed
+make[1]: Leaving directory '/home/everest/vsts-agent/_work/3/s/src'
+Makefile:252: recipe for target 'utest' failed
+make: Leaving directory '/home/everest/vsts-agent/_work/3/s/src'
