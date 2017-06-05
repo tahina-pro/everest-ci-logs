@@ -1,0 +1,149 @@
+From https://github.com/FStarLang/FStar
+0c236b963..5c2a590f4  master           -> origin/master
+0c6866fd4..46ba4498b  guido_tactics    -> origin/guido_tactics
+* [new branch]          guido_tactics_uf -> origin/guido_tactics_uf
+* [new branch]          jk_smt           -> origin/jk_smt
+0dc58c749..de9064efe  nik_private      -> origin/nik_private
+* [new branch]          taramana_structs_and_arrays_without_modifies -> origin/taramana_structs_and_arrays_without_modifies
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+make: *** [Makefile:102: fstar.exe] Error 1
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[3]: Circular C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[3]: Circular C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[3]: Circular C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[3]: Circular C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/2/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+.\Hashing.CRF.fst(28,8-28,80): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(47,0-48,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(106,0-106,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(171,0-171,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(132,0-132,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(110,0-110,44): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(114,9-118,7): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(494,0-494,50): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(498,0-501,10): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(93,0-94,64): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLS.fst(230,27-235,162): (Error) Unknown assertion failed
+Verified module: TLS (325793 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:130: TLS.fst-ver] Error 1
+.\HandshakeLog.fst(197,5-214,9): (Error) Unknown assertion failed
+.\HandshakeLog.fst(251,0-256,6): (Error) Unknown assertion failed
+.\HandshakeLog.fst(253,29-253,51): (Error) Unknown assertion failed
+.\HandshakeLog.fst(258,0-271,57): (Error) Unknown assertion failed
+Verified module: HandshakeLog (488982 milliseconds)
+4 errors were reported (see above)
+make[2]: *** [Makefile:130: HandshakeLog.fst-ver] Error 1
+make[2]: Target 'all-ver' not remade because of errors.
+make[1]: *** [Makefile:31: verify] Error 2
+make: *** [Makefile:23: all] Error 2
