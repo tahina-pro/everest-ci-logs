@@ -1,0 +1,233 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+make: *** [Makefile:102: fstar.exe] Error 1
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[1]: *** No rule to make target 'vale/aes/aes.o', needed by 'LowCProvider-tmp'.  Stop.
+make: *** [Makefile:51: tmp] Error 2
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2567, characters 29-39
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2588, characters 53-69
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1776, characters 35-368
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2344, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5009, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5424, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5474, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5521, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5553, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5548, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\HandshakeMessages.fst(1429,38-1429,55): (Error) Field cv_sig_scheme of record type HandshakeMessages.cv is missing
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2567, characters 29-39
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2588, characters 53-69
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1776, characters 35-368
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2344, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5009, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5424, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5474, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5521, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5553, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5548, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\HandshakeMessages.fst(1429,38-1429,55): (Error) Field cv_sig_scheme of record type HandshakeMessages.cv is missing
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2567, characters 29-39
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2588, characters 53-69
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1776, characters 35-368
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2344, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5009, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5424, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5474, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5521, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5553, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5548, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\HandshakeMessages.fst(1429,38-1429,55): (Error) Field cv_sig_scheme of record type HandshakeMessages.cv is missing
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2567, characters 29-39
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2588, characters 53-69
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1776, characters 35-368
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2344, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5009, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5424, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5474, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5521, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5553, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5548, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\HandshakeMessages.fst(1429,38-1429,55): (Error) Field cv_sig_scheme of record type HandshakeMessages.cv is missing
+1 error was reported (see above)
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2567, characters 29-39
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2588, characters 53-69
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1776, characters 35-368
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1336, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2344, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5009, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5424, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5474, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5521, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5553, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5548, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\HandshakeMessages.fst(1429,38-1429,55): (Error) Field cv_sig_scheme of record type HandshakeMessages.cv is missing
+1 error was reported (see above)
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+make[5]: *** No rule to make target 'vale/aes/aes.o', needed by 'LowCProvider-tmp'.
+make[5]: Target 'LowCProvider-tmp' not remade because of errors.
+make[4]: *** [Makefile:51: tmp] Error 2
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent1/_work/5/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[3]: *** No rule to make target 'output/FFI.ml', needed by 'output/FFI.cmx'.
+make[3]: *** No rule to make target 'output/TestAPI.ml', needed by 'output/TestAPI.cmx'.
+make[3]: *** No rule to make target 'output/TestFFI.ml', needed by 'output/TestFFI.cmx'.
+make[3]: Target 'mitls.cmxa' not remade because of errors.
+make[2]: *** [Makefile:190: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
