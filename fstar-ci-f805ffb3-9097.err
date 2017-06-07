@@ -1,0 +1,252 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(430,0-430,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(431,0-431,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(481,0-483,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(297,0-301,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(735,0-737,39): (Warning) Annotation from val declaration overrides inline type annotation
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+.\hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+make[2]: *** [Makefile:47: search.cons-snoc.out.check] Error 1
+make[2]: Target 'default' not remade because of errors.
+make[1]: *** [Makefile:268: interactive-test] Error 2
+.\Encrypt_SymEnc.fst(30,0-30,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#415009
+WARNING: (6948,46): pattern does not contain any variable.
+WARNING: (7116,46): pattern does not contain any variable.
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (7022,51): pattern does not contain all quantified variables.
+WARNING: (7022,51): pattern does not contain all quantified variables.
+WARNING: (6872,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#450475
+WARNING: (67421,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#452366 (see also .\Platform.Bytes.fst(257,156-260,30))
+WARNING: (7035,46): pattern does not contain any variable.
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+.\Ex10a.fst(28,0-28,22): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+.\BinarySearchTreeBasic.fst(111,0-121,62): (Error) Unknown assertion failed
+Verified module: BinarySearchTreeBasic (52885 milliseconds)
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: BinarySearchTreeBasic.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: data_structures.all] Error 2
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+.\Ex12a.Cap.fst(22,0-22,26): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+WARNING: (67421,46): pattern does not contain any variable.
+WARNING: (71774,43): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#486088
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#494456 (see also .\Platform.Bytes.fst(257,156-260,30))
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 154692 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 154715 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 156141 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 159315 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(172,0-188,5): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(28,0-28,22): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(20,0-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_Tactics_Interpreter.ml", line 488, characters 24-232
+Called from file "src/ocaml-output/FStar_Tactics_Interpreter.ml", line 615, characters 31-41
+Called from file "src/ocaml-output/FStar_Tactics_Interpreter.ml", line 518, characters 33-52
+Called from file "src/ocaml-output/FStar_Tactics_Interpreter.ml", line 718, characters 28-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7365, characters 31-139
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7448, characters 24-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2976, characters 35-128
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5476, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4580, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3719, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4178, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4224, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4314, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4582, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\GRewrite.fst(25,4-25,20): (Error) user tactic failed: "apply: cannot unify (Prims.squash (uu___unification_ 64539 f w uu___563144 (uu___unification_ 64644 f w uu___563144)))" (see also C:\Build\Agent1\_work\2\s\ulib\FStar.Tactics.Effect.fst(84,32-84,42))
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: GRewrite.uver] Error 1
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: [Makefile:59: Ex01a-ocaml] Error 2 (ignored)
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\examples\tactics\UnitTests.fst.hints; ran without hints
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_Tactics_Interpreter.ml", line 488, characters 24-232
+Called from file "src/ocaml-output/FStar_Tactics_Interpreter.ml", line 615, characters 31-41
+Called from file "src/ocaml-output/FStar_Tactics_Interpreter.ml", line 518, characters 33-52
+Called from file "src/ocaml-output/FStar_Tactics_Interpreter.ml", line 718, characters 28-67
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7365, characters 31-139
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7448, characters 24-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2976, characters 35-128
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5476, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4580, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3719, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4178, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4224, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4314, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4582, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\UnitTests.fst(28,13-28,29): (Error) user tactic failed: "trefl: not an equality (Prims.l_True)" (see also C:\Build\Agent1\_work\2\s\ulib\FStar.Tactics.Effect.fst(84,32-84,42))
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: UnitTests.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: tactics.all] Error 2
+.\FStar.Math.Lemmas.fst(462,0-468,79): (Error) Unknown assertion failed
+Verified module: FStar.Math.Lemmas (70813 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:30: FStar.Math.Lemmas.fst-ver] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:278: ulib] Error 2
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:281: uexamples] Error 2
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:262: utest] Error 2
