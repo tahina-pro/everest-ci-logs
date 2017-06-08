@@ -1,0 +1,80 @@
+From https://github.com/FStarLang/FStar
+fc9d76d75..880972e1b  master            -> origin/master
+546237c36..880972e1b  cwinter_z3nightly -> origin/cwinter_z3nightly
+fatal: ambiguous argument 'b9b6b8627?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[1]: *** No rule to make target 'vale/aes/aes.o', needed by 'LowCProvider-tmp'.  Stop.
+make: *** [Makefile:51: tmp] Error 2
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES.cipher, in file Crypto_Symmetric_AES: stack newbuf 0uint8 Crypto.Symmetric.AES.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, in top-level declaration Crypto.Symmetric.AES128.cipher, in file Crypto_Symmetric_AES128: stack newbuf 0uint8 Crypto.Symmetric.AES128.blocklen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of uu____661, in top-level declaration Crypto.Symmetric.MAC.rcreate, in file Crypto_Symmetric_MAC: eternal newbuf 0uint8 Crypto.Symmetric.MAC.wlen is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k, after the definition of len1, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning: Crypto.Symmetric.UF1CMA.akey_coerce, Crypto.Symmetric.UF1CMA.akey_gen and Crypto.Symmetric.UF1CMA.get_skey mention Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning: Crypto.Symmetric.UF1CMA.akey_gen and Crypto.Symmetric.UF1CMA.get_skey mention Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning: Crypto.Symmetric.UF1CMA.get_skey mentions Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @4 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning: Crypto.Symmetric.PRF.find_blk, Crypto.Symmetric.PRF.find_otp, Crypto.Symmetric.PRF.find_mac and Crypto.Symmetric.PRF.find_sk0 mention Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning: Crypto.Symmetric.PRF.find_otp, Crypto.Symmetric.PRF.find_mac and Crypto.Symmetric.PRF.find_sk0 mention Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning: Crypto.Symmetric.PRF.find_mac and Crypto.Symmetric.PRF.find_sk0 mention Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning: Crypto.Symmetric.PRF.find_sk0 mentions Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning: Crypto.AEAD.Invariant.fresh_nonce mentions Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning: Crypto.AEAD.coerce and Crypto.AEAD.gen mention Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning: Crypto.AEAD.gen mentions Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning: Crypto.AEAD.Wrappers.CMA.verify mentions Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning: Crypto.AEAD.Decrypt.decrypt mentions Prims.option meaning that they cannot be type-checked by KreMLin; if this is normal, please consider using -drop
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Poly1305.Spec.field_mul (going into Crypto_Symmetric_Poly1305_Spec) calls FStar.Mul.op_Star (going into FStar) -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls FStar.Monotonic.RRef.m_recall (going into FStar) -- removing the static qualifier from FStar.Monotonic.RRef.m_recall
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt (going into Crypto_AEAD_Encrypt) calls Crypto.AEAD.Encoding.add_bytes (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.add_bytes
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt (going into Crypto_AEAD_Encrypt) calls Crypto.AEAD.Encoding.store_lengths_poly1305 (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_poly1305
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt (going into Crypto_AEAD_Encrypt) calls Crypto.AEAD.Encoding.store_lengths_ghash (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths_ghash
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I C:/Build/Agent1/_work/5/s/kremlin/test -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -Wno-unknown-warning-option -Wno-unused-but-set-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_Symmetric_MAC.c -o tmp/Crypto_Symmetric_MAC.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I C:/Build/Agent1/_work/5/s/kremlin/test -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -Wno-unknown-warning-option -Wno-unused-but-set-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_Symmetric_UF1CMA.c -o tmp/Crypto_Symmetric_UF1CMA.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I C:/Build/Agent1/_work/5/s/kremlin/test -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -Wno-unknown-warning-option -Wno-unused-but-set-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_Symmetric_PRF.c -o tmp/Crypto_Symmetric_PRF.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I C:/Build/Agent1/_work/5/s/kremlin/test -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -Wno-unknown-warning-option -Wno-unused-but-set-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_AEAD_Wrappers_CMA.c -o tmp/Crypto_AEAD_Wrappers_CMA.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I C:/Build/Agent1/_work/5/s/kremlin/test -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -Wno-unknown-warning-option -Wno-unused-but-set-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 -c tmp/Crypto_KrmlTest.c -o tmp/Crypto_KrmlTest.o
+Warning 3: run_or_warn: the following command failed:
+x86_64-w64-mingw32-gcc -I FSTAR_LIB/hyperstack -I spartan_aes -I crypto -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I C:/Build/Agent1/_work/5/s/kremlin/test -I C:/Build/Agent1/_work/5/s/kremlin/kremlib -I tmp -maes -Wall -Werror -Wno-unused-variable -Wno-unknown-warning-option -Wno-unused-but-set-variable -g -O3 -fwrapv -D_BSD_SOURCE -D_DEFAULT_SOURCE -D__USE_MINGW_ANSI_STDIO -Wno-parentheses -std=c11 tmp/Buffer_Utils.o tmp/Crypto_AEAD_BufferUtils.o tmp/Crypto_Symmetric_Chacha20.o tmp/Crypto_Config.o tmp/Crypto_Indexing.o tmp/Flag.o tmp/Crypto_Symmetric_AES.o tmp/Spartan.o tmp/Crypto_Symmetric_AES128.o tmp/FStar.o tmp/Crypto_Symmetric_Bytes.o tmp/Crypto_Symmetric_Cipher.o tmp/Crypto_Symmetric_Poly1305_Parameters.o tmp/Crypto_Symmetric_Poly1305_Bigint.o tmp/Crypto_Symmetric_Poly1305_Lemmas.o tmp/Crypto_Symmetric_Poly1305_Spec.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part1.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part2.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part3.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part4.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part5.o tmp/Crypto_Symmetric_Poly1305_Bignum_Lemmas_Part6.o tmp/Crypto_Symmetric_Poly1305_Bignum.o tmp/Crypto_Symmetric_Poly1305.o tmp/Crypto_Symmetric_GF128_Spec.o tmp/Crypto_Symmetric_GF128.o tmp/Crypto_Plain.o tmp/Crypto_AEAD_Encoding.o tmp/Crypto_AEAD_Invariant.o tmp/Crypto_AEAD_Encrypt_Invariant.o tmp/Crypto_AEAD_Wrappers_PRF.o tmp/Crypto_AEAD_EnxorDexor.o tmp/Crypto_AEAD.o tmp/Crypto_AEAD_Wrappers_Encoding.o tmp/Crypto_AEAD_Decrypt.o tmp/Crypto_AEAD_Encrypt_Ideal_Invariant.o tmp/Crypto_AEAD_MAC_Wrapper_Invariant.o tmp/Crypto_AEAD_Enxor_Invariant.o tmp/Crypto_AEAD_Encrypt.o tmp/kremlib.o tmp/test_hacks.o tmp/testlib.o tmp/spartan_stub.o spartan_aes/aes.o -o krml-test.exe
+make[4]: *** [Makefile:209: krml-test.exe] Error 250
+make[3]: *** [Makefile:54: ../krml-test.exe] Error 2
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:358: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:12: build] Error 2
+make: *** [Makefile:8: all] Error 2
