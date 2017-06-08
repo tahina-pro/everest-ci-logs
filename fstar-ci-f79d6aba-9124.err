@@ -1,0 +1,62 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(394,0-394,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(496,0-498,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(71,0-73,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(282,0-286,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(720,0-722,39): (Warning) Annotation from val declaration overrides inline type annotation
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1885, characters 20-105
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1402, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2622, characters 33-76
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1395, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1395, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2439, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5164, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5583, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5634, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5685, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5718, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5713, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\FStar.Pointer.fst(1633,2-1641,25): (Error) Constructor StackInline not found
+1 error was reported (see above)
+make[3]: *** [Makefile:44: .mgen] Error 1
+make[2]: *** [Makefile:33: .mgen] Error 2
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:12: ocaml] Error 2
+make: *** [Makefile:256: utest] Error 2
