@@ -1,0 +1,245 @@
+This is /home/everest/everest-ci/ci
+Working directory: /home/everest/vsts-agent/_work/1/s
+About to run: ./.scripts/process_build.sh
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: FStar-BinaryBuild-Linux
+*** Clean up log files ***
+*** Make package (clean build directory first) ***
+make: Entering directory '/home/everest/vsts-agent/_work/1/s/ulib/ml'
+rm -f *.cmi *.cmo *.cmx *.exe *.o *.a *.cmxa *~ FStar_ST.cmx FStar_All.cmx FStar_ST.cmi FStar_All.cmi FStar_ST.o FStar_All.o
+rm -f ./extracted/*
+rm -f hyperstack/*.o hyperstack/*.cm*
+make: Leaving directory '/home/everest/vsts-agent/_work/1/s/ulib/ml'
+cp "../extraction/ml/FStar_Extraction_ML_PrintML_4.04.0.ml" ../extraction/ml/FStar_Extraction_ML_PrintML.ml
+echo 'open FStar_Util' > FStar_Version.ml
+echo 'let dummy () = ();;' >> FStar_Version.ml
+echo 'FStar_Options._version := "0.9.4.3";;' >> FStar_Version.ml
+echo 'FStar_Options._platform := "Linux_x86_64";;' >> FStar_Version.ml
+echo 'FStar_Options._compiler := "OCaml 4.04.0";;' >> FStar_Version.ml
+echo 'FStar_Options._date := "2017-06-10T10:26:57+00:00";;' >> FStar_Version.ml
+echo 'FStar_Options._commit:= "fcc67f308 (dirty)";;' >> FStar_Version.ml
+cd ../../ && ocamlbuild -cflag '-g' -I src/ocaml-output -I src/basic/ml -I src/parser/ml -I src/fstar/ml -I src/extraction/ml -j 24 -build-dir src/ocaml-output/_build -I src/prettyprint/ml  -I ulib/ml -use-ocamlfind main.native
+ocamlfind ocamldep -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -modules src/ocaml-output/FStar_Version.ml > src/ocaml-output/FStar_Version.ml.depends
+ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I ulib/ml -I src/parser/ml -I src/fstar/ml -I src/prettyprint/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
++ ocamlfind ocamlc -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I ulib/ml -I src/parser/ml -I src/fstar/ml -I src/prettyprint/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmo src/ocaml-output/FStar_Version.ml
+findlib: [WARNING] Interface main.cmi occurs in several directories: src/fstar/ml, /home/everest/.opam/4.04.0/lib/ocaml/compiler-libs
+findlib: [WARNING] Interface topdirs.cmi occurs in several directories: /home/everest/.opam/4.04.0/lib/ocaml/compiler-libs, /home/everest/.opam/4.04.0/lib/ocaml
+ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I ulib/ml -I src/parser/ml -I src/fstar/ml -I src/prettyprint/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Version.ml
++ ocamlfind ocamlopt -c -g -annot -bin-annot -thread -w -8-11-21-26-28 -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I src/ocaml-output -I ulib/ml -I src/parser/ml -I src/fstar/ml -I src/prettyprint/ml -I src/extraction/ml -I src/basic/ml -o src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Version.ml
+findlib: [WARNING] Interface main.cmi occurs in several directories: src/fstar/ml, /home/everest/.opam/4.04.0/lib/ocaml/compiler-libs
+findlib: [WARNING] Interface topdirs.cmi occurs in several directories: /home/everest/.opam/4.04.0/lib/ocaml/compiler-libs, /home/everest/.opam/4.04.0/lib/ocaml
+ocamlfind ocamlopt -linkpkg -thread -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I ulib/ml -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/extraction/ml -I src/parser/ml -I src/fstar/ml ulib/ml/FStar_Heap.cmx ulib/ml/FStar_CommonST.cmx ulib/ml/FStar_List_Tot_Base.cmx ulib/ml/FStar_List.cmx ulib/ml/FStar_ST.cmx ulib/ml/prims.cmx src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Platform.cmx ulib/ml/FStar_Char.cmx ulib/ml/FStar_Float.cmx ulib/ml/FStar_Int16.cmx ulib/ml/FStar_Int32.cmx ulib/ml/FStar_Int64.cmx ulib/ml/FStar_Int8.cmx ulib/ml/FStar_UInt16.cmx ulib/ml/FStar_UInt8.cmx ulib/ml/FStar_BaseTypes.cmx src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Unionfind.cmx src/ocaml-output/FStar_Common.cmx ulib/ml/FStar_All.cmx ulib/ml/FStar_String.cmx src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Parser_Const.cmx src/ocaml-output/FStar_Pervasives.cmx src/ocaml-output/FStar_Parser_AST.cmx src/prettyprint/ml/FStar_Pprint.cmx src/ocaml-output/FStar_Parser_ToDocument.cmx ulib/ml/FStar_Option.cmx src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Resugar.cmx src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Extraction_ML_Code.cmx src/extraction/ml/FStar_Extraction_ML_PrintML.cmx src/parser/ml/FStar_Parser_Util.cmx src/ocaml-output/FStar_Parser_Parse.cmx src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Fsdoc_Generator.cmx src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_Tactics_Basic.cmx src/ocaml-output/FStar_Tactics_Embedding.cmx src/ocaml-output/FStar_Tactics_Interpreter.cmx src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_Interleave.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Legacy_Interactive.cmx src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Main.cmx src/fstar/ml/main.cmx -o src/fstar/ml/main.native
++ ocamlfind ocamlopt -linkpkg -thread -package batteries -package zarith -package yojson -package pprint -package compiler-libs -package compiler-libs.common -I ulib/ml -I src/basic/ml -I src/ocaml-output -I src/prettyprint/ml -I src/extraction/ml -I src/parser/ml -I src/fstar/ml ulib/ml/FStar_Heap.cmx ulib/ml/FStar_CommonST.cmx ulib/ml/FStar_List_Tot_Base.cmx ulib/ml/FStar_List.cmx ulib/ml/FStar_ST.cmx ulib/ml/prims.cmx src/basic/ml/FStar_Util.cmx src/basic/ml/FStar_Bytes.cmx src/basic/ml/FStar_Getopt.cmx src/basic/ml/FStar_Platform.cmx ulib/ml/FStar_Char.cmx ulib/ml/FStar_Float.cmx ulib/ml/FStar_Int16.cmx ulib/ml/FStar_Int32.cmx ulib/ml/FStar_Int64.cmx ulib/ml/FStar_Int8.cmx ulib/ml/FStar_UInt16.cmx ulib/ml/FStar_UInt8.cmx ulib/ml/FStar_BaseTypes.cmx src/basic/ml/FStar_Range.cmx src/basic/ml/FStar_Unionfind.cmx src/ocaml-output/FStar_Common.cmx ulib/ml/FStar_All.cmx ulib/ml/FStar_String.cmx src/ocaml-output/FStar_Ident.cmx src/ocaml-output/FStar_Const.cmx src/ocaml-output/FStar_Options.cmx src/ocaml-output/FStar_Errors.cmx src/ocaml-output/FStar_Syntax_Syntax.cmx src/ocaml-output/FStar_Syntax_Const.cmx src/ocaml-output/FStar_Extraction_ML_Syntax.cmx src/ocaml-output/FStar_Parser_Const.cmx src/ocaml-output/FStar_Pervasives.cmx src/ocaml-output/FStar_Parser_AST.cmx src/prettyprint/ml/FStar_Pprint.cmx src/ocaml-output/FStar_Parser_ToDocument.cmx ulib/ml/FStar_Option.cmx src/ocaml-output/FStar_Syntax_Subst.cmx src/ocaml-output/FStar_Syntax_Free.cmx src/ocaml-output/FStar_Syntax_InstFV.cmx src/ocaml-output/FStar_Syntax_Util.cmx src/ocaml-output/FStar_Syntax_Resugar.cmx src/ocaml-output/FStar_Syntax_Print.cmx src/ocaml-output/FStar_TypeChecker_Common.cmx src/ocaml-output/FStar_TypeChecker_Env.cmx src/ocaml-output/FStar_Extraction_ML_UEnv.cmx src/ocaml-output/FStar_Extraction_ML_Util.cmx src/ocaml-output/FStar_Format.cmx src/ocaml-output/FStar_Extraction_ML_Code.cmx src/extraction/ml/FStar_Extraction_ML_PrintML.cmx src/parser/ml/FStar_Parser_Util.cmx src/ocaml-output/FStar_Parser_Parse.cmx src/parser/ml/FStar_Parser_LexFStar.cmx src/parser/ml/FStar_Parser_ParseIt.cmx src/ocaml-output/FStar_Parser_Driver.cmx src/ocaml-output/FStar_Parser_Dep.cmx src/ocaml-output/FStar_Dependencies.cmx src/ocaml-output/FStar_Extraction_Kremlin.cmx src/ocaml-output/FStar_TypeChecker_Normalize.cmx src/ocaml-output/FStar_TypeChecker_Err.cmx src/ocaml-output/FStar_TypeChecker_Rel.cmx src/ocaml-output/FStar_TypeChecker_Util.cmx src/ocaml-output/FStar_TypeChecker_TcTerm.cmx src/ocaml-output/FStar_Extraction_ML_Term.cmx src/ocaml-output/FStar_Extraction_ML_Modul.cmx src/ocaml-output/FStar_Fsdoc_Generator.cmx src/ocaml-output/FStar_Indent.cmx src/ocaml-output/FStar_SMTEncoding_Term.cmx src/ocaml-output/FStar_SMTEncoding_Util.cmx src/ocaml-output/FStar_SMTEncoding_Z3.cmx src/ocaml-output/FStar_SMTEncoding_ErrorReporting.cmx src/ocaml-output/FStar_SMTEncoding_Encode.cmx src/ocaml-output/FStar_SMTEncoding_Solver.cmx src/ocaml-output/FStar_Syntax_MutRecTy.cmx src/ocaml-output/FStar_Tactics_Basic.cmx src/ocaml-output/FStar_Tactics_Embedding.cmx src/ocaml-output/FStar_Tactics_Interpreter.cmx src/ocaml-output/FStar_ToSyntax_Env.cmx src/ocaml-output/FStar_ToSyntax_Interleave.cmx src/ocaml-output/FStar_ToSyntax_ToSyntax.cmx src/ocaml-output/FStar_TypeChecker_DMFF.cmx src/ocaml-output/FStar_TypeChecker_TcInductive.cmx src/ocaml-output/FStar_TypeChecker_Tc.cmx src/ocaml-output/FStar_Universal.cmx src/ocaml-output/FStar_Interactive.cmx src/ocaml-output/FStar_Legacy_Interactive.cmx src/ocaml-output/FStar_Version.cmx src/ocaml-output/FStar_Main.cmx src/fstar/ml/main.cmx -o src/fstar/ml/main.native
+findlib: [WARNING] Interface main.cmi occurs in several directories: src/fstar/ml, /home/everest/.opam/4.04.0/lib/ocaml/compiler-libs
+findlib: [WARNING] Interface topdirs.cmi occurs in several directories: /home/everest/.opam/4.04.0/lib/ocaml/compiler-libs, /home/everest/.opam/4.04.0/lib/ocaml
+# No parallelism done
+cp _build/src/fstar/ml/main.native ../../bin/fstar.exe
+cp _build/src/fstar/ml/main.native ../../bin/fstar.ocaml
+rm -f fstar_0.9.4.3_Linux_x86_64.zip fstar_0.9.4.3_Linux_x86_64.tar.gz
+if [ -d "/home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar" ]; then rm -dfr fstar; fi
+mkdir -p /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar/bin/
+install -m 755 _build/src/fstar/ml/main.native /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar/bin/fstar.exe
+cd ../.. && git archive "--format=tar" "--prefix=ulib/" HEAD:ulib/ | tar -x -C /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar
+cd ../.. && git archive "--format=tar" "--prefix=examples/" HEAD:examples/ | tar -x -C /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar
+cd ../.. && git archive "--format=tar" "--prefix=ucontrib/" HEAD:ucontrib/ | tar -x -C /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar
+cd ../.. && git archive "--format=tar" "--prefix=doc/tutorial/" HEAD:doc/tutorial/ | tar -x -C /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar
+********** WARNING: You don't have Madoko installed. Binary package will not include tutorial in html form.
+cp ../../README.md ../../INSTALL.md ../../LICENSE ../../LICENSE-fsharp.txt /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar
+wget https://raw.githubusercontent.com/Z3Prover/z3/master/LICENSE.txt -O fstar/LICENSE-z3.txt
+--2017-06-10 10:26:59--  https://raw.githubusercontent.com/Z3Prover/z3/master/LICENSE.txt
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.48.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1096 (1.1K) [text/plain]
+Saving to: 'fstar/LICENSE-z3.txt'
+
+0K .                                                     100%  268M=0s
+
+2017-06-10 10:26:59 (268 MB/s) - 'fstar/LICENSE-z3.txt' saved [1096/1096]
+
+if [ -f "/home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar/bin/z3.exe" ]; then chmod 755 /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar/bin/*z3*.*; fi
+make -C ../VS install-packages
+cp: cannot stat '../../bin/*z3*': No such file or directory
+make[1]: Entering directory '/home/everest/vsts-agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+mono .nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[1]: Leaving directory '/home/everest/vsts-agent/_work/1/s/src/VS'
+mkdir -p /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar/src/gmake/
+cp ../../src/gmake/fstar.mk /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar/src/gmake/
+tar czf fstar_0.9.4.3_Linux_x86_64.tar.gz fstar
+*** Unzip and verify the Package  ***
+*** Make the examples ***
+./TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+./Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Inl _
+File "FStar_String.ml", line 16, characters 16-32:
+Warning 3: deprecated: String.lowercase
+Use String.lowercase_ascii instead.
+./hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+./Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (7012,51): pattern does not contain all quantified variables.
+WARNING: (7012,51): pattern does not contain all quantified variables.
+./MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex10a.fst(27,0-27,22): (Warning) Top-level let-bindings must be total; this term may have effects
+./RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+./RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+./RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+./RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12a.Cap.fst(21,0-21,26): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+./CntProtocol.fst(172,0-188,5): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex10a.fst(27,0-27,22): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12a.Cap.fst(19,0-19,26): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+./Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Inl _
+./Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+make[1]: [Ex01a-ocaml] Error 2 (ignored)
+jsonparser.pos/Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 134507 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos/Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos/Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos/Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 134530 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos/Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos/Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos/Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 135804 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos/Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 138847 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos/Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos/Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+./TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+./Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#417709
+WARNING: (6963,46): pattern does not contain any variable.
+WARNING: (7146,46): pattern does not contain any variable.
+WARNING: (6862,46): pattern does not contain any variable.
+./Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+./Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#454201
+./Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#456200 (see also ./Platform.Bytes.fst(257,156-260,30))
+WARNING: (7168,46): pattern does not contain any variable.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+./Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#490752
+./Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#499140 (see also ./Platform.Bytes.fst(257,156-260,30))
+*** Verify the examples ***
+-- Verify Micro-benchmarks -- should output 'Success:' *
+Success: 40 failures were expected
+* [0;32mPASSED![0m for examples/micro-benchmarks
+-- Verify hello ocaml -- should output Hello F*! *
+Hello F*!
+* [0;32mPASSED![0m for examples/hello ocaml
+-- Verify all examples -- Look for Success:
+Success: 40 failures were expected
+* [0;32mPASSED![0m for all examples
+*** Upload the minor version of the package. Will only keep the most recent 4 packages ***
+From github.com:/FStarLang/binaries
++ 188c99e...8dab8b3 master     -> origin/master  (forced update)
+Already on 'master'
+Your branch and 'origin/master' have diverged,
+and have 39 and 2 different commits each, respectively.
+(use "git pull" to merge the remote branch into yours)
+HEAD is now at 8dab8b3 Automatic update of Z3 nightly packages.
+-- copy files and add to Github --
+-- /home/everest/vsts-agent/_work/1/s/src/ocaml-output/fstar_201706101027_Linux_x86_64.tar.gz /home/everest/binaries/weekly
+-- Delete oldest ZIP file if more than 4 exist --
+~/binaries/weekly ~/binaries
+~/binaries
+-- Delete oldest TAR file if more than 4 exist --
+~/binaries/weekly ~/binaries
+rm 'weekly/fstar_201705222034_Linux_x86_64.tar.gz'
+~/binaries
+--- now commit it but keep history truncated ... then push ---
+[master f327606] Adding new build package and removing oldest.
+Author: Christoph M. Wintersteiger <cwinter@microsoft.com>
+Date: Fri Jun 9 18:04:05 2017 +0100
+6 files changed, 0 insertions(+), 0 deletions(-)
+delete mode 100644 weekly/fstar_201705222034_Linux_x86_64.tar.gz
+create mode 100644 weekly/fstar_201706101027_Linux_x86_64.tar.gz
+create mode 100644 z3-tested/z3-4.5.1.ed0e06c7aca4-x64-debian-8.5.zip
+create mode 100644 z3-tested/z3-4.5.1.ed0e06c7aca4-x64-osx-10.11.6.zip
+create mode 100644 z3-tested/z3-4.5.1.ed0e06c7aca4-x64-ubuntu-14.04.zip
+create mode 100644 z3-tested/z3-4.5.1.ed0e06c7aca4-x86-ubuntu-14.04.zip
+To github.com:FStarLang/binaries.git
++ 8dab8b3...f327606 master -> master (forced update)
