@@ -1,0 +1,105 @@
+From https://github.com/FStarLang/FStar
+8ca4988f1..4155f36c5  master            -> origin/master
+31e818b17..4155f36c5  cwinter_z3nightly -> origin/cwinter_z3nightly
+ee723a778..b30c1f6f5  guido_bughunt     -> origin/guido_bughunt
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+make: *** [Makefile:102: fstar.exe] Error 1
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+fatal: ambiguous argument 'd615e77?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+make[1]: *** No rule to make target 'vale/aes/aes.o', needed by 'LowCProvider-tmp'.  Stop.
+make: *** [Makefile:51: tmp] Error 2
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_Parser_Driver.ml", line 44, characters 38-67
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 621, characters 30-69
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 724, characters 6-62
+Called from file "src/ocaml-output/FStar_Main.ml", line 131, characters 15-76
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\Handshake.fst(488,31-488,31): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make: [Makefile:160: .depend-HS] Error 1 (ignored)
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_Parser_Driver.ml", line 44, characters 38-67
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 621, characters 30-69
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 724, characters 6-62
+Called from file "src/ocaml-output/FStar_Dependencies.ml", line 12, characters 24-66
+Called from file "src/ocaml-output/FStar_Main.ml", line 205, characters 27-116
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\Handshake.fst(488,31-488,31): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+make[5]: *** No rule to make target 'vale/aes/aes.o', needed by 'LowCProvider-tmp'.
+make[5]: Target 'LowCProvider-tmp' not remade because of errors.
+make[4]: *** [Makefile:51: tmp] Error 2
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent1/_work/5/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+File "output/FFI.ml", line 10, characters 2-12:
+Error: Unbound module TLSInfo
+make[3]: *** [Extracted.mk:72: output/FFI.cmx] Error 2
+File "output/TestAPI.ml", line 10, characters 21-42:
+Error: Unbound module Connection
+make[3]: *** [Extracted.mk:72: output/TestAPI.cmx] Error 2
+File "output/TestFFI.ml", line 16, characters 17-38:
+Error: Unbound module Connection
+make[3]: *** [Extracted.mk:72: output/TestFFI.cmx] Error 2
+make[3]: Target 'mitls.cmxa' not remade because of errors.
+make[2]: *** [Makefile:190: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
