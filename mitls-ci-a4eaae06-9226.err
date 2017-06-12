@@ -1,0 +1,89 @@
+From https://github.com/FStarLang/FStar
+* [new branch]          aseem_monotonicity -> origin/aseem_monotonicity
+de0ce20b8..435570703  guido_tactics      -> origin/guido_tactics
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+make: *** [Makefile:102: fstar.exe] Error 1
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+From https://github.com/mitls/hacl-star
+676293be..a9fe6c63  master     -> origin/master
+fatal: ambiguous argument 'd615e77?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+make[1]: *** No rule to make target 'vale/aes/aes.o', needed by 'LowCProvider-tmp'.  Stop.
+make: *** [Makefile:51: tmp] Error 2
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+make[5]: *** No rule to make target 'vale/aes/aes.o', needed by 'LowCProvider-tmp'.
+make[5]: Target 'LowCProvider-tmp' not remade because of errors.
+make[4]: *** [Makefile:51: tmp] Error 2
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:63: C:/Build/Agent1/_work/5/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[3]: Circular C:/Build/Agent1/_work/5/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent1/_work/5/s/fstar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+File "output/Hacl_Impl_Poly1305_64.ml", line 121, characters 15-71:
+Error: Unbound module FStar_Ghost
+make[3]: *** [Extracted.mk:72: output/Hacl_Impl_Poly1305_64.cmi] Error 2
+make[3]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+make[3]: Target 'mitls.cmxa' not remade because of errors.
+make[2]: *** [Makefile:190: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
