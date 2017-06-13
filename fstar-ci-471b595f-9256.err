@@ -1,0 +1,364 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(393,0-393,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(444,0-444,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(495,0-497,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(718,0-720,39): (Warning) Annotation from val declaration overrides inline type annotation
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+.\hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1821, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4957, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5423, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5473, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5520, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5552, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5547, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\ImmutableST.fst(3,5-3,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: ImmutableST.uver] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1821, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4957, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5423, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5473, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5520, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5552, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5547, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\AllocST.fst(3,5-3,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: AllocST.uver] Error 1
+.\Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#417709
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1821, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4957, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5423, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5473, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5520, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5552, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5547, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\ImmutableSTwHeaps.fst(4,5-4,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: ImmutableSTwHeaps.uver] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1821, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4957, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5423, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5473, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5520, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5552, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5547, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\MRefHeap.fst(3,5-3,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: ReifyTest.uver] Error 1
+WARNING: (6963,46): pattern does not contain any variable.
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1821, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4957, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5423, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5473, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5520, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5552, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5547, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\AllocSTwHeaps.fst(3,5-3,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: AllocSTwHeaps.uver] Error 1
+WARNING: (7146,46): pattern does not contain any variable.
+WARNING: (6862,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#454201
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#456200 (see also .\Platform.Bytes.fst(257,156-260,30))
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1821, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4957, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5423, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5473, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5520, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5552, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5547, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\MRefHeap.fst(3,5-3,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [Makefile:11: MRefHeap.uver] Error 1
+WARNING: (7168,46): pattern does not contain any variable.
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1821, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4957, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5423, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5473, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5520, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5552, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5547, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\SnapshotST.fst(10,5-10,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: SnapshotST.uver] Error 1
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1821, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4957, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5423, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5473, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5520, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5552, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5547, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\ReifyTestTSST.fst(3,5-3,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: ReifyTestTSST.uver] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1821, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 4957, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5423, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5473, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5520, characters 24-55
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5552, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5547, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 275, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 357, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 376, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 392, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 432, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MRefHeap.fst(3,5-3,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: MRefST.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: preorders.all] Error 2
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+.\Ex10a.fst(27,0-27,22): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (7012,51): pattern does not contain all quantified variables.
+WARNING: (7012,51): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+WARNING: (66219,46): pattern does not contain any variable.
+WARNING: (70115,43): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#490752
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#499140 (see also .\Platform.Bytes.fst(257,156-260,30))
+.\Ex12a.Cap.fst(19,0-19,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(27,0-27,22): (Warning) Top-level let-bindings must be total; this term may have effects
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 134507 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 134530 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 135804 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 138847 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(21,0-21,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: [Makefile:66: Ex01a-ocaml] Error 2 (ignored)
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(172,0-188,5): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\ulib\FStar.Preorder.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\ulib\FStar.Monotonic.Heap.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\ulib\FStar.Monotonic.Heap.fsti.hints; ran without hints
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:277: uexamples] Error 2
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:258: utest] Error 2
