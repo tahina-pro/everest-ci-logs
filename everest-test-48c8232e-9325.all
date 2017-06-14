@@ -1,0 +1,122 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/7/s
+About to run: ./everest --yes -j 24 test
+BUILD_SOURCEBRANCHNAME: handshake
+BUILD_DEFINITIONNAME: Everest-CI-Windows
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent2/_work/7/s
+
+exported FSTAR_HOME=C:/Build/Agent2/_work/7/s/FStar
+exported OPENSSL_HOME=C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/openssl
+exported KREMLIN_HOME=C:/Build/Agent2/_work/7/s/kremlin
+exported VALE_HOME=C:/Build/Agent2/_work/7/s/vale
++ FStar/examples/low-level/krml-test.exe
+exported PATH=/cygdrive/c/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/openssl:/cygdrive/c/Build/Agent2/_work/7/s/FStar/bin:/cygdrive/c/Build/Agent2/_work/7/s/kremlin:/home/everbld/bin:/home/everbld/everest/z3-4.5.0-x64-win/bin:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin/amd64:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin:/cygdrive/c/PROGRA~2/MIA713~1/F#/4.0/FRAMEW~1/v4.0/:/home/everbld/.opam/system/bin:/usr/x86_64-w64-mingw32/sys-root/mingw/bin/:/usr/local/bin:/usr/bin:/cygdrive/c/Build/Agent2/externals/git/cmd:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/WINDOWS:/cygdrive/c/WINDOWS/System32/Wbem:/cygdrive/c/WINDOWS/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:%USERPROFILE%/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Binaries/z3-4.5.0-x64-win/bin:/cygdrive/c/Binaries/scons/Scripts:/cygdrive/c/Python27:/cygdrive/c/Build/Agent/externals.2.104.2/nuget:/cygdrive/c/Program Files (x86)/Pandoc:/cygdrive/c/Program Files/CMake/bin:/cygdrive/c/WINDOWS/system32:/home/everbld/.opam/system/bin:/cygdrive/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/usr/x86_64-w64-mingw32/sys-root/mingw/bin:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin:/cygdrive/c/Users/everbld/AppData/Local/Microsoft/WindowsApps:/cygdrive/c/Build/Agent2/bin:/cygdrive/c/Build/Agent2/bin
+================================================================================
+Running tests (commands shown below)
+[test] expected output cipher is d31a8d34648e60db7b86afbc53ef7ec2a4aded51296e08fea9e2b5a736ee62d63dbea45e8ca9671282fafb69da92728b1a71de0a9e060b2905d6a5b67ecd3b3692ddbd7f2d778b8c9803aee328091b58fab324e4fad675945585808b4831d7bc3ff4def08e4b7a9de576d26586cec64b61161ae10b594f09e26a7e902ecbd0600691
+[test] computed output cipher is d31a8d34648e60db7b86afbc53ef7ec2a4aded51296e08fea9e2b5a736ee62d63dbea45e8ca9671282fafb69da92728b1a71de0a9e060b2905d6a5b67ecd3b3692ddbd7f2d778b8c9803aee328091b58fab324e4fad675945585808b4831d7bc3ff4def08e4b7a9de576d26586cec64b61161ae10b594f09e26a7e902ecbd0600691
+[test] cipher is a success
+[test] expected output decryption is 4c616469657320616e642047656e746c656d656e206f662074686520636c617373206f66202739393a204966204920636f756c64206f6666657220796f75206f6e6c79206f6e652074697020666f7220746865206675747572652c2073756e73637265656e20776f756c642062652069742e
++ FStar/examples/low-level/test-perf.exe
+[test] computed output decryption is 4c616469657320616e642047656e746c656d656e206f662074686520636c617373206f66202739393a204966204920636f756c64206f6666657220796f75206f6e6c79206f6e652074697020666f7220746865206675747572652c2073756e73637265656e20776f756c642062652069742e
+[test] decryption is a success
+[test] expected output cipher is 58e2fccefa7e3061367f1d57a4e7455a
+[test] computed output cipher is 58e2fccefa7e3061367f1d57a4e7455a
+[test] cipher is a success
+[test] expected output decryption is 
+[test] computed output decryption is 
+[test] decryption is a success
+[test] expected output cipher is 530f8afbc74536b9a963b4f1c4cb738b
+[test] computed output cipher is 530f8afbc74536b9a963b4f1c4cb738b
+[test] cipher is a success
+[test] expected output decryption is 
+[test] computed output decryption is 
+[test] decryption is a success
+[test] expected output cipher is cea7403d4d606b6e074ec5d3baf39d18d0d1c8a799996bf0265b98b5d48ab919
+[test] computed output cipher is cea7403d4d606b6e074ec5d3baf39d18d0d1c8a799996bf0265b98b5d48ab919
+[test] cipher is a success
+[test] expected output decryption is 00000000000000000000000000000000
+[test] computed output decryption is 00000000000000000000000000000000
+[test] decryption is a success
+[test] expected output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f662898015adb094dac5d93471bdec1a502270e3cc6c
+[test] computed output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f662898015adb094dac5d93471bdec1a502270e3cc6c
+[test] cipher is a success
+[test] expected output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b391aafd255
+[test] computed output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b391aafd255
+[test] decryption is a success
+[test] expected output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f66276fc6ece0f4e1768cddf8853bb2d551b
+[test] computed output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f66276fc6ece0f4e1768cddf8853bb2d551b
+[test] cipher is a success
+[test] expected output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b39
+[test] computed output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b39
+[test] decryption is a success
+Testing: Kremlin-C-aes256-gcm
+Cycles for 10 2^14 bytes: 232623744 (1419.82cycles/byte)
+User time for 10 2^14 bytes: 0.101000 (0.616455ns/byte)
+Testing: Kremlin-C-chacha20-poly1305
+Cycles for 1000 2^14 bytes: 627068516 (38.27cycles/byte)
+User time for 1000 2^14 bytes: 0.274000 (0.016724ns/byte)
+Testing: openssl-aes-256-gcm
+Cycles for 1000 2^14 bytes: 14561895 (0.89cycles/byte)
+User time for 1000 2^14 bytes: 0.006000 (0.000366ns/byte)
+Testing: openssl-chacha20-poly1305
+Cycles for 1000 2^14 bytes: 25598918 (1.56cycles/byte)
+User time for 1000 2^14 bytes: 0.011000 (0.000671ns/byte)
+Testing: Kremlin-C-aes256
+Cycles for 1 2^14 bytes: 4875640 (297.59cycles/byte)
+User time for 1 2^14 bytes: 0.002000 (0.122070ns/byte)
+Testing: Kremlin-C-chacha20
++ cd mitls-fstar/src/tls
+Cycles for 1000 2^14 bytes: 415116648 (25.34cycles/byte)
+User time for 1000 2^14 bytes: 0.181000 (0.011047ns/byte)
+Testing: Kremlin-C-gcm
+Cycles for 1 2^14 bytes: 12762008 (778.93cycles/byte)
+User time for 1 2^14 bytes: 0.006000 (0.366211ns/byte)
+Testing: Kremlin-C-poly1305
+Cycles for 1000 2^14 bytes: 141408240 (8.63cycles/byte)
+User time for 1000 2^14 bytes: 0.062000 (0.003784ns/byte)
++ make -j 24 test
+make -f Extracted.mk test
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/7/s/mitls-fstar/src/tls'
+Extracted.mk:101: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:190: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:104: warning: overriding recipe for target 'mitls.exe'
+Makefile:193: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:120: warning: overriding recipe for target 'test'
+Makefile:202: warning: ignoring old recipe for target 'test'
+Extracted.mk:180: warning: overriding recipe for target 'cmitls.o'
+Makefile:196: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:182: warning: overriding recipe for target 'cmitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'cmitls.exe'
+make[1]: Circular C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/db/DB.cmi <- C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/db/DB.cmi dependency dropped.
+make[1]: Circular ../../libs/ffi/FFICallbacks.cmi <- ../../libs/ffi/FFICallbacks.cmi dependency dropped.
+C:/Build/Agent2/_work/7/s/FStar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/7/s/FStar --trace_error --print_z3_statistics --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/Platform/fst/ --include ../../../hacl-star/secure_api/LowCProvider/fst --include C:/Build/Agent2/_work/7/s/kremlin/kremlib --include ../../../hacl-star/specs --include ../../../hacl-star/code/lib/kremlin --include ../../../hacl-star/code/bignum --include ../../../hacl-star/code/experimental/aesgcm --include ../../../hacl-star/code/poly1305 --include ../../../hacl-star/code/salsa-family --include ../../../hacl-star/secure_api/test --include ../../../hacl-star/secure_api/utils --include ../../../hacl-star/secure_api/vale --include ../../../hacl-star/secure_api/uf1cma --include ../../../hacl-star/secure_api/prf --include ../../../hacl-star/secure_api/aead --include ../../libs/ffi --include C:/Build/Agent2/_work/7/s/FStar/ulib/hyperstack --lax --codegen OCaml \
+--odir output --no_extract Prims --no_extract FStar.Pervasives --no_extract FStar.Mul --no_extract FStar.Float --no_extract FStar.Char --no_extract FStar.Int8 --no_extract FStar.UInt8 --no_extract FStar.Int16 --no_extract FStar.UInt16 --no_extract FStar.Int32 --no_extract FStar.UInt32 --no_extract FStar.Int64 --no_extract FStar.UInt64 --no_extract FStar.UInt128 --no_extract FStar.Int.Cast --no_extract FStar.BaseTypes --no_extract FStar.IO --no_extract FStar.Heap --no_extract FStar.List.Tot.Base --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.String --no_extract FStar.Set --no_extract FStar.Buffer --no_extract FStar.CommonST --no_extract FStar.TSet --no_extract FStar.Map --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.All --no_extract Platform.Bytes --no_extract Platform.Date --no_extract Platform.Error --no_extract Platform.Tcp --no_extract CoreCrypto --no_extract DHDB --no_extract LowCProvider --no_extract FFICallbacks \
+--codegen-lib Platform \
+--include concrete-flags --extract_module TestKS test/TestKS.fst
+Extracted module TestKS
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/7/s/FStar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/7/s/FStar --trace_error --print_z3_statistics --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/Platform/fst/ --include ../../../hacl-star/secure_api/LowCProvider/fst --include C:/Build/Agent2/_work/7/s/kremlin/kremlib --include ../../../hacl-star/specs --include ../../../hacl-star/code/lib/kremlin --include ../../../hacl-star/code/bignum --include ../../../hacl-star/code/experimental/aesgcm --include ../../../hacl-star/code/poly1305 --include ../../../hacl-star/code/salsa-family --include ../../../hacl-star/secure_api/test --include ../../../hacl-star/secure_api/utils --include ../../../hacl-star/secure_api/vale --include ../../../hacl-star/secure_api/uf1cma --include ../../../hacl-star/secure_api/prf --include ../../../hacl-star/secure_api/aead --include ../../libs/ffi --include C:/Build/Agent2/_work/7/s/FStar/ulib/hyperstack --lax --codegen OCaml \
+--odir output --no_extract Prims --no_extract FStar.Pervasives --no_extract FStar.Mul --no_extract FStar.Float --no_extract FStar.Char --no_extract FStar.Int8 --no_extract FStar.UInt8 --no_extract FStar.Int16 --no_extract FStar.UInt16 --no_extract FStar.Int32 --no_extract FStar.UInt32 --no_extract FStar.Int64 --no_extract FStar.UInt64 --no_extract FStar.UInt128 --no_extract FStar.Int.Cast --no_extract FStar.BaseTypes --no_extract FStar.IO --no_extract FStar.Heap --no_extract FStar.List.Tot.Base --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.String --no_extract FStar.Set --no_extract FStar.Buffer --no_extract FStar.CommonST --no_extract FStar.TSet --no_extract FStar.Map --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.All --no_extract Platform.Bytes --no_extract Platform.Date --no_extract Platform.Error --no_extract Platform.Tcp --no_extract CoreCrypto --no_extract DHDB --no_extract LowCProvider --no_extract FFICallbacks \
+--codegen-lib Platform \
+--include concrete-flags --extract_module TestDH test/TestDH.fst
+Extracted module TestDH
+All verification conditions discharged successfully
+C:/Build/Agent2/_work/7/s/FStar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/7/s/FStar --trace_error --print_z3_statistics --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/Platform/fst/ --include ../../../hacl-star/secure_api/LowCProvider/fst --include C:/Build/Agent2/_work/7/s/kremlin/kremlib --include ../../../hacl-star/specs --include ../../../hacl-star/code/lib/kremlin --include ../../../hacl-star/code/bignum --include ../../../hacl-star/code/experimental/aesgcm --include ../../../hacl-star/code/poly1305 --include ../../../hacl-star/code/salsa-family --include ../../../hacl-star/secure_api/test --include ../../../hacl-star/secure_api/utils --include ../../../hacl-star/secure_api/vale --include ../../../hacl-star/secure_api/uf1cma --include ../../../hacl-star/secure_api/prf --include ../../../hacl-star/secure_api/aead --include ../../libs/ffi --include C:/Build/Agent2/_work/7/s/FStar/ulib/hyperstack --lax --codegen OCaml \
+--odir output --no_extract Prims --no_extract FStar.Pervasives --no_extract FStar.Mul --no_extract FStar.Float --no_extract FStar.Char --no_extract FStar.Int8 --no_extract FStar.UInt8 --no_extract FStar.Int16 --no_extract FStar.UInt16 --no_extract FStar.Int32 --no_extract FStar.UInt32 --no_extract FStar.Int64 --no_extract FStar.UInt64 --no_extract FStar.UInt128 --no_extract FStar.Int.Cast --no_extract FStar.BaseTypes --no_extract FStar.IO --no_extract FStar.Heap --no_extract FStar.List.Tot.Base --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.String --no_extract FStar.Set --no_extract FStar.Buffer --no_extract FStar.CommonST --no_extract FStar.TSet --no_extract FStar.Map --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.ST --no_extract FStar.All --no_extract Platform.Bytes --no_extract Platform.Date --no_extract Platform.Error --no_extract Platform.Tcp --no_extract CoreCrypto --no_extract DHDB --no_extract LowCProvider --no_extract FFICallbacks \
+--codegen-lib Platform \
+--include concrete-flags --extract_module TestGCM test/TestGCM.fst
+Extracted module TestGCM
+All verification conditions discharged successfully
+ocamlfind ocamlopt -package batteries,stdint,fileutils,sqlite3,zarith -linkpkg -g -thread -w -a -I test -I output -I C:/Build/Agent2/_work/7/s/FStar/ulib/ml/extracted -I C:/Build/Agent2/_work/7/s/FStar/ulib/ml/hyperstack -I C:/Build/Agent2/_work/7/s/FStar/ulib/ml -I C:/Build/Agent2/_work/7/s/FStar/ucontrib/Platform/ml -I C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml -I C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/db -I ../../../hacl-star/secure_api/LowCProvider -I ../../libs/ffi \
+C:/Build/Agent2/_work/7/s/FStar/ulib/ml/fstarlib.cmxa \
+C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/CoreCrypto.cmxa \
+../../../hacl-star/secure_api/LowCProvider/lowc_stub.o ../../../hacl-star/secure_api/LowCProvider/libllcrypto.a ../../../hacl-star/secure_api/LowCProvider/LowCProvider.cmx \
+mitls.cmxa \
+output/TestKS.ml output/TestDH.ml output/TestGCM.ml test/parsing_test.ml test/test_hkdf.ml test/test_main.ml -o test.out
+File "test/parsing_test.ml", line 270, characters 13-15:
+Error: Unbound record field bl
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/7/s/mitls-fstar/src/tls'
+make[1]: *** [Extracted.mk:112: test.out] Error 2
+make: *** [Makefile:202: test] Error 2
