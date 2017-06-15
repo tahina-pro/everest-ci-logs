@@ -1,0 +1,107 @@
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(430,0-430,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(431,0-431,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(481,0-483,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(299,0-303,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(733,0-735,39): (Warning) Annotation from val declaration overrides inline type annotation
+warning: CRLF will be replaced by LF in src/parser/ml/parse.mly.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsi.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in src/parser/parse.fsy.
+The file will have its original line endings in your working directory.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Access is denied.
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\examples\hello\hello.fst.hints; ran without hints
+.\hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+Access is denied.
+Access is denied.
+Unexpected error
+Sys_error("Invalid argument")
+Raised by primitive operation at file "pervasives.ml", line 302, characters 2-47
+Called from file "src/basic/ml/FStar_Util.ml", line 152, characters 2-28
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 514, characters 25-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 574, characters 27-47
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 711, characters 21-29
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 1092, characters 19-73
+Called from file "list.ml", line 73, characters 12-15
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7495, characters 24-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3086, characters 35-128
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5586, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4680, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3725, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4188, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 579, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4234, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4326, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4596, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 341, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 132, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 411, characters 32-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 430, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 446, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 486, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+make[1]: *** [Makefile:13: ocaml] Error 1
+make: *** [Makefile:261: utest] Error 2
