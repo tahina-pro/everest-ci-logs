@@ -1,0 +1,309 @@
+This is /home/everest/everest-ci/ci
+Working directory: /home/everest/vsts-agent/_work/5/s
+About to run: scons -j 8 --NOVERIFY
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: VALE-CI-Linux
+scons: Reading SConscript files ...
+***
+*** WARNING:  NOT VERIFYING ANY CODE
+***
+Not building Poly1305 for this target architecture
+scons: done reading SConscript files.
+scons: Building targets ...
+Copy file(s): "tools/Dafny/Provers.SMTLib.dll" to "bin/Provers.SMTLib.dll"
+dmcs -t:library -out:bin/DafnyInterface.dll tools/Vale/DafnyInterface/Source/DafnyInterface/DafnyDriver.cs tools/Vale/DafnyInterface/Source/DafnyInterface/Properties/AssemblyInfo.cs -r:/home/everest/vsts-agent/_work/5/s/tools/Dafny/BoogieAbsInt.dll -r:/home/everest/vsts-agent/_work/5/s/tools/Dafny/BoogieConcurrency.dll -r:/home/everest/vsts-agent/_work/5/s/tools/Dafny/BoogieCore.dll -r:/home/everest/vsts-agent/_work/5/s/tools/Dafny/BoogieExecutionEngine.dll -r:/home/everest/vsts-agent/_work/5/s/tools/Dafny/BoogieParserHelper.dll -r:/home/everest/vsts-agent/_work/5/s/tools/Dafny/BoogieVCGeneration.dll -r:/home/everest/vsts-agent/_work/5/s/tools/Dafny/Dafny.exe -r:/home/everest/vsts-agent/_work/5/s/tools/Dafny/DafnyPipeline.dll -r:/home/everest/vsts-agent/_work/5/s/tools/Dafny/Provers.SMTLib.dll
+mono tools/FsLexYacc/FsLexYacc.6.1.0/build/fsyacc.exe --module "Parse" tools/Vale/src/parse.fsy -o obj/Vale/parse.fs
+mono tools/FsLexYacc/FsLexYacc.6.1.0/build/fslex.exe tools/Vale/src/lex.fsl -o obj/Vale/lex.fs
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/util/types.s.dfy /noVerify > obj/lib/util/types.s.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/collections/Seqs.s.dfy /noVerify > obj/lib/collections/Seqs.s.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/util/Io.s.dfy /noVerify > obj/lib/util/Io.s.tmp
+Copy file(s): "src/crypto/aes/testaes.c" to "obj/crypto/aes/testaes.c"
+Copy file(s): "tools/Dafny/DafnyRuntime.cs" to "bin/DafnyRuntime.cs"
+gcc -o obj/crypto/aes/testaes.o -c -O3 -flto -g -DKRML_NOUINT128 -Ikremlin/kremlib -Isrc/lib/util -Isrc/crypto/aes obj/crypto/aes/testaes.c
+Copy file(s): "tools/Dafny/DafnyPrelude.bpl" to "bin/DafnyPrelude.bpl"
+Copy file(s): "tools/Dafny/Dafny.exe" to "bin/Dafny.exe"
+Copy file(s): "tools/Dafny/DafnyPipeline.dll" to "bin/DafnyPipeline.dll"
+Copy file(s): "tools/Dafny/BoogieVCGeneration.dll" to "bin/BoogieVCGeneration.dll"
+Copy file(s): "tools/Dafny/BoogieVCExpr.dll" to "bin/BoogieVCExpr.dll"
+Copy file(s): "tools/Dafny/BoogieParserHelper.dll" to "bin/BoogieParserHelper.dll"
+Copy file(s): "tools/Dafny/BoogieModel.dll" to "bin/BoogieModel.dll"
+Copy file(s): "tools/Dafny/BoogieHoudini.dll" to "bin/BoogieHoudini.dll"
+Copy file(s): "tools/Dafny/BoogieGraph.dll" to "bin/BoogieGraph.dll"
+Copy file(s): "tools/Dafny/BoogieExecutionEngine.dll" to "bin/BoogieExecutionEngine.dll"
+Copy file(s): "tools/Dafny/BoogieDoomed.dll" to "bin/BoogieDoomed.dll"
+Copy file(s): "tools/Dafny/BoogieCore.dll" to "bin/BoogieCore.dll"
+Copy file(s): "tools/Dafny/BoogieConcurrency.dll" to "bin/BoogieConcurrency.dll"
+Copy file(s): "tools/Dafny/BoogieCodeContractsExtender.dll" to "bin/BoogieCodeContractsExtender.dll"
+Copy file(s): "tools/Dafny/BoogieBasetypes.dll" to "bin/BoogieBasetypes.dll"
+Copy file(s): "tools/Dafny/BoogieAbsInt.dll" to "bin/BoogieAbsInt.dll"
+Copy file(s): "src/crypto/aes/testcbc.c" to "obj/crypto/aes/testcbc.c"
+gcc -o obj/crypto/aes/testcbc.o -c -O3 -flto -g -DKRML_NOUINT128 -Ikremlin/kremlib -Isrc/lib/util obj/crypto/aes/testcbc.c
+warning CS8001: SDK path could not be resolved
+building tables
+compiling to dfas (can take a while...)
+computing first function...mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/mul_nonlinear.i.dfy /noVerify > obj/lib/math/mul_nonlinear.i.tmp
+time: mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/div_nonlinear.i.dfy /noVerify > obj/lib/math/div_nonlinear.i.tmp
+00:00:00.0407713
+building kernels...Compilation succeeded - 1 warning(s)
+time: 00:00:00.0400954
+building kernel table...time: 00:00:00.0076585
+computing lookahead relations.................................mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/power2.s.dfy /noVerify > obj/lib/math/power2.s.tmp
+.....................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.4145274
+building lookahead table...time: 00:00:00.0359918
+building action table...Copy file(s): "obj/lib/collections/Seqs.s.tmp" to "obj/lib/collections/Seqs.s.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/collections/Seqs.i.dfy /noVerify > obj/lib/collections/Seqs.i.tmp
+Copy file(s): "obj/lib/util/Io.s.tmp" to "obj/lib/util/Io.s.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/power.s.dfy /noVerify > obj/lib/math/power.s.tmp
+Copy file(s): "obj/lib/util/types.s.tmp" to "obj/lib/util/types.s.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/util/operations.s.dfy /noVerify > obj/lib/util/operations.s.tmp
+387 states
+writing output
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/util/words_and_bytes.s.dfy /noVerify > obj/lib/util/words_and_bytes.s.tmp
+time: 00:00:00.4697026
+building goto table...Copy file(s): "obj/lib/math/mul_nonlinear.i.tmp" to "obj/lib/math/mul_nonlinear.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/mul_auto_proofs.i.dfy /noVerify > obj/lib/math/mul_auto_proofs.i.tmp
+time: 00:00:00.0466663
+returning tables.
+451 states
+55 nonterminals
+94 terminals
+204 productions
+#rows in action table: 451
+Copy file(s): "obj/lib/math/div_nonlinear.i.tmp" to "obj/lib/math/div_nonlinear.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/util/types.i.dfy /noVerify > obj/lib/util/types.i.tmp
+Copy file(s): "obj/lib/math/power2.s.tmp" to "obj/lib/math/power2.s.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/div_def.i.dfy /noVerify > obj/lib/math/div_def.i.tmp
+fsharpc -g --platform:anycpu --standalone --mlcompatibility -O tools/Vale/src/ast.fs tools/Vale/src/ast_util.fs tools/Vale/src/parse_util.fs obj/Vale/parse.fs obj/Vale/lex.fs tools/Vale/src/transform.fs tools/Vale/src/emit_common.fs tools/Vale/src/emit_dafny_text.fs tools/Vale/src/emit_dafny_direct.fs tools/Vale/src/emit_fstar_text.fs tools/Vale/src/emit_vale_text.fs tools/Vale/src/main.fs -o bin/vale.exe -r tools/Dafny/BoogieAbsInt.dll -r tools/Dafny/BoogieBasetypes.dll -r tools/Dafny/BoogieCodeContractsExtender.dll -r tools/Dafny/BoogieConcurrency.dll -r tools/Dafny/BoogieCore.dll -r tools/Dafny/BoogieDoomed.dll -r tools/Dafny/BoogieExecutionEngine.dll -r tools/Dafny/BoogieGraph.dll -r tools/Dafny/BoogieHoudini.dll -r tools/Dafny/BoogieModel.dll -r tools/Dafny/BoogieParserHelper.dll -r tools/Dafny/BoogieVCExpr.dll -r tools/Dafny/BoogieVCGeneration.dll -r tools/Dafny/DafnyPipeline.dll -r tools/Dafny/Dafny.exe -r bin/DafnyInterface.dll -r tools/Dafny/Newtonsoft.Json.dll -r tools/FsLexYacc/FsLexYacc.Runtime.6.1.0/lib/net40/FsLexYacc.Runtime.dll
+F# Compiler for F# 4.0 (Open Source Edition)
+Freely distributed under the Apache 2.0 Open Source License
+Copy file(s): "obj/lib/math/power.s.tmp" to "obj/lib/math/power.s.vdfy"
+Copy file(s): "src/crypto/hashing/testsha256.c" to "obj/crypto/hashing/testsha256.c"
+Copy file(s): "obj/lib/util/operations.s.tmp" to "obj/lib/util/operations.s.vdfy"
+Copy file(s): "obj/lib/collections/Seqs.i.tmp" to "obj/lib/collections/Seqs.i.vdfy"
+Copy file(s): "obj/lib/util/words_and_bytes.s.tmp" to "obj/lib/util/words_and_bytes.s.vdfy"
+Copy file(s): "obj/lib/math/mul_auto_proofs.i.tmp" to "obj/lib/math/mul_auto_proofs.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/aes/aes.s.dfy /noVerify > obj/crypto/aes/aes.s.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/hashing/sha_common.s.dfy /noVerify > obj/crypto/hashing/sha_common.s.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/hashing/hmac_common.s.dfy /noVerify > obj/crypto/hashing/hmac_common.s.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/mul_auto.i.dfy /noVerify > obj/lib/math/mul_auto.i.tmp
+Copy file(s): "obj/lib/math/div_def.i.tmp" to "obj/lib/math/div_def.i.vdfy"
+Copy file(s): "obj/lib/util/types.i.tmp" to "obj/lib/util/types.i.vdfy"
+Copy file(s): "obj/crypto/hashing/hmac_common.s.tmp" to "obj/crypto/hashing/hmac_common.s.vdfy"
+Copy file(s): "obj/lib/math/mul_auto.i.tmp" to "obj/lib/math/mul_auto.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/mul.i.dfy /noVerify > obj/lib/math/mul.i.tmp
+Copy file(s): "obj/crypto/hashing/sha_common.s.tmp" to "obj/crypto/hashing/sha_common.s.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/hashing/sha256.s.dfy /noVerify > obj/crypto/hashing/sha256.s.tmp
+Copy file(s): "obj/crypto/aes/aes.s.tmp" to "obj/crypto/aes/aes.s.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/arch/x64/def.s.dfy /noVerify > obj/arch/x64/def.s.tmp
+Copy file(s): "obj/lib/math/mul.i.tmp" to "obj/lib/math/mul.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/power.i.dfy /noVerify > obj/lib/math/power.i.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/div_boogie.i.dfy /noVerify > obj/lib/math/div_boogie.i.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/mod_auto_proofs.i.dfy /noVerify > obj/lib/math/mod_auto_proofs.i.tmp
+Copy file(s): "obj/crypto/hashing/sha256.s.tmp" to "obj/crypto/hashing/sha256.s.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/hashing/sha256.i.dfy /noVerify > obj/crypto/hashing/sha256.i.tmp
+Copy file(s): "obj/lib/math/div_boogie.i.tmp" to "obj/lib/math/div_boogie.i.vdfy"
+Copy file(s): "obj/lib/math/mod_auto_proofs.i.tmp" to "obj/lib/math/mod_auto_proofs.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/mod_auto.i.dfy /noVerify > obj/lib/math/mod_auto.i.tmp
+Copy file(s): "obj/lib/math/power.i.tmp" to "obj/lib/math/power.i.vdfy"
+Copy file(s): "obj/arch/x64/def.s.tmp" to "obj/arch/x64/def.s.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/arch/x64/printGcc.s.dfy /noVerify > obj/arch/x64/printGcc.s.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/arch/x64/printMasm.s.dfy /noVerify > obj/arch/x64/printMasm.s.tmp
+Copy file(s): "obj/crypto/hashing/sha256.i.tmp" to "obj/crypto/hashing/sha256.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/hashing/sha256_context.i.dfy /noVerify > obj/crypto/hashing/sha256_context.i.tmp
+Copy file(s): "obj/lib/math/mod_auto.i.tmp" to "obj/lib/math/mod_auto.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/div_auto_proofs.i.dfy /noVerify > obj/lib/math/div_auto_proofs.i.tmp
+Copy file(s): "obj/arch/x64/printGcc.s.tmp" to "obj/arch/x64/printGcc.s.vdfy"
+Copy file(s): "obj/arch/x64/printMasm.s.tmp" to "obj/arch/x64/printMasm.s.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/arch/x64/print.s.dfy /noVerify > obj/arch/x64/print.s.tmp
+Copy file(s): "obj/lib/math/div_auto_proofs.i.tmp" to "obj/lib/math/div_auto_proofs.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/div_auto.i.dfy /noVerify > obj/lib/math/div_auto.i.tmp
+Copy file(s): "obj/crypto/hashing/sha256_context.i.tmp" to "obj/crypto/hashing/sha256_context.i.vdfy"
+Copy file(s): "obj/lib/math/div_auto.i.tmp" to "obj/lib/math/div_auto.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /timeLimit:60 /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/div.i.dfy /noVerify > obj/lib/math/div.i.tmp
+Copy file(s): "obj/arch/x64/print.s.tmp" to "obj/arch/x64/print.s.vdfy"
+Copy file(s): "obj/lib/math/div.i.tmp" to "obj/lib/math/div.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/math/power2.i.dfy /noVerify > obj/lib/math/power2.i.tmp
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/crypto/aes/aes.vad -out obj/crypto/aes/aes.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/crypto/aes/cbc.vad -out obj/crypto/aes/cbc.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/thirdPartyPorts/OpenSSL/poly1305/x64/poly1305.vad -out obj/thirdPartyPorts/OpenSSL/poly1305/x64/poly1305.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/crypto/hashing/sha-x64/sha256.vad -out obj/crypto/hashing/sha-x64/sha256.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/crypto/hashing/sha256.vad -out obj/crypto/hashing/sha256.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/arch/x86/decls.vad -out obj/arch/x86/decls.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/crypto/aes/aes-x64/aes.vad -out obj/crypto/aes/aes-x64/aes.gen.dfy
+// parsing ./src/crypto/aes/cbc.vad
+// parsing ./src/thirdPartyPorts/OpenSSL/poly1305/x64/poly1305.vad
+// parsing ./src/crypto/aes/aes.vad
+// parsing ./src/arch/x86/decls.vad
+// parsing ./src/crypto/aes/../../arch/x86/decls.vad
+// parsing ./src/crypto/aes/aes.vad
+// parsing ./src/crypto/aes/aes-x64/aes.vad
+// parsing ./src/crypto/hashing/sha-x64/sha256.vad
+// parsing ./src/thirdPartyPorts/OpenSSL/poly1305/x64/../../../../arch/x64/decls.vad
+// parsing ./src/crypto/aes/../../arch/x86/decls.vad
+// parsing ./src/thirdPartyPorts/OpenSSL/poly1305/x64/../../../../arch/x64/decls64.vad
+// parsing ./src/crypto/hashing/sha256.vad
+// parsing ./src/crypto/aes/aes-x64/../../../arch/x64/decls.vad
+// parsing ./src/crypto/hashing/sha-x64/../../../arch/x64/decls.vad
+// parsing ./src/crypto/hashing/../../arch/x86/decls.vad
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in tools/Vale/test/inline-if.vad -out obj/Vale/test/inline-if.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in tools/Vale/test/test1.vad -out obj/Vale/test/test1.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in tools/Vale/test/calc.vad -out obj/Vale/test/calc.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/arch/x64/decls.vad -out obj/arch/x64/decls.gen.dfy
+Copy file(s): "obj/lib/math/power2.i.tmp" to "obj/lib/math/power2.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/util/words_and_bytes.i.dfy /noVerify > obj/lib/util/words_and_bytes.i.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /proverOpt:OPTIMIZE_FOR_BV=true /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/util/operations.i.dfy /noVerify > obj/lib/util/operations.i.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/util/dafny_wrappers.i.dfy /noVerify > obj/lib/util/dafny_wrappers.i.tmp
+// parsing ./tools/Vale/test/inline-if.vad
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/collections/Sets.i.dfy /noVerify > obj/lib/collections/Sets.i.tmp
+// parsing ./tools/Vale/test/common.vad
+// parsing ./tools/Vale/test/test1.vad
+// parsing ./src/arch/x64/decls.vad
+// parsing ./tools/Vale/test/calc.vad
+// parsing ./tools/Vale/test/common.vad
+// parsing ./tools/Vale/test/common.vad
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in tools/Vale/test/refined2.vad -out obj/Vale/test/refined2.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/arch/arm/decls.vad -out obj/arch/arm/decls.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/crypto/aes/aes-x64/cbc.vad -out obj/crypto/aes/aes-x64/cbc.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in tools/Vale/test/common.vad -out obj/Vale/test/common.gen.dfy
+// parsing ./tools/Vale/test/refined2.vad
+// parsing ./src/arch/arm/decls.vad
+// parsing ./tools/Vale/test/common.vad
+// parsing ./src/crypto/aes/aes-x64/cbc.vad
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/thirdPartyPorts/OpenSSL/sha/arm/sha256.vad -out obj/thirdPartyPorts/OpenSSL/sha/arm/sha256.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in src/arch/x64/decls64.vad -out obj/arch/x64/decls64.gen.dfy
+// parsing ./src/crypto/aes/aes-x64/../../../arch/x64/decls.vad
+// parsing ./src/crypto/aes/aes-x64/aes.vad
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in tools/Vale/test/DottedNames.vad -out obj/Vale/test/DottedNames.gen.dfy
+// parsing ./src/thirdPartyPorts/OpenSSL/sha/arm/sha256.vad
+// parsing ./src/arch/x64/decls64.vad
+// parsing ./src/thirdPartyPorts/OpenSSL/sha/arm/../../../../arch/arm/decls.vad
+// parsing ./src/arch/x64/decls.vad
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/aes/cbc.s.dfy /noVerify > obj/crypto/aes/cbc.s.tmp
+// parsing ./tools/Vale/test/DottedNames.vad
+// parsing ./tools/Vale/test/common.vad
+Copy file(s): "obj/lib/util/dafny_wrappers.i.tmp" to "obj/lib/util/dafny_wrappers.i.vdfy"
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in tools/Vale/test/refined3.vad -out obj/Vale/test/refined3.gen.dfy
+mono bin/vale.exe -includeSuffix .vad .gen.dfy -in tools/Vale/test/assert-by.vad -out obj/Vale/test/assert-by.gen.dfy
+Copy file(s): "obj/lib/collections/Sets.i.tmp" to "obj/lib/collections/Sets.i.vdfy"
+// parsing ./tools/Vale/test/refined3.vad
+// parsing ./tools/Vale/test/assert-by.vad
+// parsing ./tools/Vale/test/common.vad
+Copy file(s): "obj/lib/util/operations.i.tmp" to "obj/lib/util/operations.i.vdfy"
+Copy file(s): "obj/lib/util/words_and_bytes.i.tmp" to "obj/lib/util/words_and_bytes.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/aes/aes_helpers.i.dfy /noVerify > obj/crypto/aes/aes_helpers.i.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/hashing/sha256_helpers.i.dfy /noVerify > obj/crypto/hashing/sha256_helpers.i.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/hashing/sha256_unique.i.dfy /noVerify > obj/crypto/hashing/sha256_unique.i.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/arch/x64/vale.i.dfy /noVerify > obj/arch/x64/vale.i.tmp
+Copy file(s): "obj/crypto/aes/cbc.s.tmp" to "obj/crypto/aes/cbc.s.vdfy"
+Copy file(s): "obj/crypto/hashing/sha256_unique.i.tmp" to "obj/crypto/hashing/sha256_unique.i.vdfy"
+Copy file(s): "obj/crypto/hashing/sha256_helpers.i.tmp" to "obj/crypto/hashing/sha256_helpers.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /kremlin /noVerify /compile:2 /spillTargetCode:1 src/crypto/hashing/sha256_main.i.dfy /out:obj/crypto/hashing/sha256_main.i.json
+*** (1,0): Warning: Could not find 'z3' in '/home/everest/vsts-agent/_work/5/s/tools/Dafny/z3/bin'.
+Downloading and extracting a Z3 distribution to Dafny's 'Binaries' folder would solve this issue; for now, we'll rely on Boogie to find Z3.
+[TRACE] Using prover: /home/everest/vsts-agent/_work/5/s/tools/Dafny/z3.exe
+Copy file(s): "obj/crypto/aes/aes_helpers.i.tmp" to "obj/crypto/aes/aes_helpers.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/aes/aes_lemmas.i.dfy /noVerify > obj/crypto/aes/aes_lemmas.i.tmp
+Parsing src/crypto/hashing/sha256_main.i.dfy
+Copy file(s): "obj/arch/x64/vale.i.tmp" to "obj/arch/x64/vale.i.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 obj/arch/x64/decls.gen.dfy /noVerify > obj/arch/x64/decls.gen.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/lib/util/heaplets64.i.dfy /noVerify > obj/lib/util/heaplets64.i.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 src/crypto/aes/aes-x64/cbc_helpers.i.dfy /noVerify > obj/crypto/aes/aes-x64/cbc_helpers.i.tmp
+Coalescing blocks...
+Inlining...
+
+Running abstract interpretation...
+[0.078558 s]
+
+Dafny program verifier finished with 0 verified, 0 errors
+Compiled program written to sha256_main.i.json
+cd obj/crypto/hashing && /home/everest/vsts-agent/_work/5/s/kremlin/_build/src/Kremlin.native -warn-error +1..4 -warn-error @4 -skip-compilation -add-include \"DafnyLib.h\" -cc msvc sha256_main.i.json
+[38;5;119m✔[0m Input file successfully checked
+[38;5;119m✔[0m Pattern compilation successfully checked
+[38;5;119m✔[0m Simplify + inlining successfully checked
+KreMLin: writing out .c and .h files for Prims, sha256_main_i, sha256_unique, sha256_helpers_i, sha256_s, sha256_i, hmac_common_s, sha_common_s, operations_s, words_and_bytes_i, Collections__Seqs_i, Collections__Seqs_s, words_and_bytes_s, types_i, Math__power2_i, Math__div_i, Math__div_auto_i, Math__div_auto_proofs_i, Math__mod_auto_i, Math__mod_auto_proofs_i, Math__div_boogie_i, Math__div_def_i, Math__power_i, Math__power_s, Math__power2_s, Math__mul_i, Math__mul_auto_i, Math__mul_auto_proofs_i, Math__mul_nonlinear_i, Math__div_nonlinear_i, types_s, _System, FStar
+gcc -o obj/crypto/hashing/testsha256.o -c -O3 -flto -g -DKRML_NOUINT128 -Ikremlin/kremlib -Isrc/lib/util -Iobj/crypto/hashing obj/crypto/hashing/testsha256.c
+gcc -o obj/crypto/hashing/sha256_main_i.o -c -O3 -flto -g -DKRML_NOUINT128 -Ikremlin/kremlib -Isrc/lib/util -Iobj/crypto/hashing obj/crypto/hashing/sha256_main_i.c
+obj/crypto/hashing/testsha256.c: In function 'getTimeSeconds':
+obj/crypto/hashing/testsha256.c:34:3: warning: implicit declaration of function 'Sleep' [-Wimplicit-function-declaration]
+Sleep(200);  // Sleep for 200ms
+^
+Copy file(s): "obj/crypto/aes/aes_lemmas.i.tmp" to "obj/crypto/aes/aes_lemmas.i.vdfy"
+Copy file(s): "obj/lib/util/heaplets64.i.tmp" to "obj/lib/util/heaplets64.i.vdfy"
+Copy file(s): "obj/crypto/aes/aes-x64/cbc_helpers.i.tmp" to "obj/crypto/aes/aes-x64/cbc_helpers.i.vdfy"
+Copy file(s): "obj/arch/x64/decls.gen.tmp" to "obj/arch/x64/decls.gen.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 obj/crypto/hashing/sha-x64/sha256.gen.dfy /noVerify > obj/crypto/hashing/sha-x64/sha256.gen.tmp
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 obj/crypto/aes/aes-x64/aes.gen.dfy /noVerify > obj/crypto/aes/aes-x64/aes.gen.tmp
+Copy file(s): "obj/crypto/aes/aes-x64/aes.gen.tmp" to "obj/crypto/aes/aes-x64/aes.gen.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /noVerify /compile:2 src/lib/util/IoNative.cs src/crypto/aes/aes-x64/aes_main.i.dfy /out:obj/aes.exe
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /timeLimit:120 /z3exe:/home/everest/z3/z3-4.5.0-x64-ubuntu-14.04/bin/z3 obj/crypto/aes/aes-x64/cbc.gen.dfy /noVerify > obj/crypto/aes/aes-x64/cbc.gen.tmp
+*** (1,0): Warning: Could not find 'z3' in '/home/everest/vsts-agent/_work/5/s/tools/Dafny/z3/bin'.
+Downloading and extracting a Z3 distribution to Dafny's 'Binaries' folder would solve this issue; for now, we'll rely on Boogie to find Z3.
+[TRACE] Using prover: /home/everest/vsts-agent/_work/5/s/tools/Dafny/z3.exe
+Parsing src/crypto/aes/aes-x64/aes_main.i.dfy
+Copy file(s): "obj/crypto/hashing/sha-x64/sha256.gen.tmp" to "obj/crypto/hashing/sha-x64/sha256.gen.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /noVerify /compile:2 src/lib/util/IoNative.cs src/crypto/hashing/sha-x64/sha256_vale_main.i.dfy /out:obj/sha256.exe
+*** (1,0): Warning: Could not find 'z3' in '/home/everest/vsts-agent/_work/5/s/tools/Dafny/z3/bin'.
+Downloading and extracting a Z3 distribution to Dafny's 'Binaries' folder would solve this issue; for now, we'll rely on Boogie to find Z3.
+[TRACE] Using prover: /home/everest/vsts-agent/_work/5/s/tools/Dafny/z3.exe
+Coalescing blocks...
+Inlining...
+
+Running abstract interpretation...
+Parsing src/crypto/hashing/sha-x64/sha256_vale_main.i.dfy
+[0.060944 s]
+
+Dafny program verifier finished with 0 verified, 0 errors
+Compiled program written to aes.cs
+Compiled assembly into aes.exe
+mono obj/aes.exe GCC Win > obj/aes-gcc.S
+mono obj/aes.exe MASM Win > obj/aes.asm
+mono obj/aes.exe GCC Linux > obj/aes-linux.S
+mono obj/aes.exe GCC MacOS > obj/aes-macos.S
+gcc -Ikremlin/kremlib -Isrc/lib/util -Isrc/crypto/aes -c -o obj/aes-linux.o obj/aes-linux.S
+gcc -o obj/testaes.exe obj/crypto/aes/testaes.o obj/aes-linux.o
+obj/testaes.exe
+AES128 success
+echo ABC > obj/testaes.txt
+Copy file(s): "obj/crypto/aes/aes-x64/cbc.gen.tmp" to "obj/crypto/aes/aes-x64/cbc.gen.vdfy"
+mono tools/Dafny/Dafny.exe /ironDafny /allocated:1 /induction:1 /compile:0 /timeLimit:30 /trace /noNLarith /nologo /noVerify /compile:2 src/lib/util/IoNative.cs src/crypto/aes/aes-x64/cbc_main.i.dfy /out:obj/cbc.exe
+*** (1,0): Warning: Could not find 'z3' in '/home/everest/vsts-agent/_work/5/s/tools/Dafny/z3/bin'.
+Downloading and extracting a Z3 distribution to Dafny's 'Binaries' folder would solve this issue; for now, we'll rely on Boogie to find Z3.
+[TRACE] Using prover: /home/everest/vsts-agent/_work/5/s/tools/Dafny/z3.exe
+Parsing src/crypto/aes/aes-x64/cbc_main.i.dfy
+Coalescing blocks...
+Inlining...
+
+Running abstract interpretation...
+[0.037394 s]
+
+Dafny program verifier finished with 0 verified, 0 errors
+Compiled program written to sha256.cs
+Compiled assembly into sha256.exe
+mono obj/sha256.exe GCC MacOS > obj/sha256-macos.S
+mono obj/sha256.exe GCC Win > obj/sha256-gcc.S
+mono obj/sha256.exe GCC Linux > obj/sha256-linux.S
+mono obj/sha256.exe MASM Win > obj/sha256.asm
+gcc -Ikremlin/kremlib -Isrc/lib/util -Iobj/crypto/hashing -c -o obj/sha256-linux.o obj/sha256-linux.S
+gcc -o obj/testsha256.exe obj/crypto/hashing/testsha256.o obj/sha256-linux.o obj/crypto/hashing/sha256_main_i.o
+obj/testsha256.exe
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+echo ABC > obj/testsha256.txt
+Coalescing blocks...
+Inlining...
+
+Running abstract interpretation...
+[0.034478 s]
+
+Dafny program verifier finished with 0 verified, 0 errors
+Compiled program written to cbc.cs
+Compiled assembly into cbc.exe
+mono obj/cbc.exe GCC Linux > obj/cbc-linux.S
+mono obj/cbc.exe GCC Win > obj/cbc-gcc.S
+mono obj/cbc.exe MASM Win > obj/cbc.asm
+mono obj/cbc.exe GCC MacOS > obj/cbc-macos.S
+gcc -Ikremlin/kremlib -Isrc/lib/util -c -o obj/cbc-linux.o obj/cbc-linux.S
+gcc -o obj/testcbc.exe obj/crypto/aes/testcbc.o obj/cbc-linux.o
+obj/testcbc.exe
+AES128 CBC success
+echo ABC > obj/testcbc.txt
+scons: done building targets.
