@@ -1,0 +1,15 @@
++ FStar/examples/low-level/krml-test.exe
++ FStar/examples/low-level/test-perf.exe
++ cd mitls-fstar/src/tls
++ make -j 24 test
+Extracted.mk:92: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:195: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:95: warning: overriding recipe for target 'mitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:108: warning: overriding recipe for target 'test'
+Makefile:207: warning: ignoring old recipe for target 'test'
+Extracted.mk:164: warning: overriding recipe for target 'cmitls.o'
+Makefile:201: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:166: warning: overriding recipe for target 'cmitls.exe'
+Makefile:203: warning: ignoring old recipe for target 'cmitls.exe'
++ set +x

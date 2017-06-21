@@ -1,0 +1,1478 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent2/_work/7/s
+About to run: ./everest --yes -j 24 test
+BUILD_SOURCEBRANCHNAME: handshake
+BUILD_DEFINITIONNAME: Everest-CI-Windows
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent2/_work/7/s
+
+exported FSTAR_HOME=C:/Build/Agent2/_work/7/s/FStar
+exported OPENSSL_HOME=C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/openssl
+exported KREMLIN_HOME=C:/Build/Agent2/_work/7/s/kremlin
+exported VALE_HOME=C:/Build/Agent2/_work/7/s/vale
++ FStar/examples/low-level/krml-test.exe
+exported PATH=/cygdrive/c/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/openssl:/cygdrive/c/Build/Agent2/_work/7/s/FStar/bin:/cygdrive/c/Build/Agent2/_work/7/s/kremlin:/home/everbld/bin:/home/everbld/everest/z3-4.5.0-x64-win/bin:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin/amd64:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin:/cygdrive/c/PROGRA~2/MIA713~1/F#/4.0/FRAMEW~1/v4.0/:/home/everbld/.opam/system/bin:/usr/x86_64-w64-mingw32/sys-root/mingw/bin/:/usr/local/bin:/usr/bin:/cygdrive/c/Build/Agent2/externals/git/cmd:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/WINDOWS:/cygdrive/c/WINDOWS/System32/Wbem:/cygdrive/c/WINDOWS/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:%USERPROFILE%/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Binaries/z3-4.5.0-x64-win/bin:/cygdrive/c/Binaries/scons/Scripts:/cygdrive/c/Python27:/cygdrive/c/Build/Agent/externals.2.104.2/nuget:/cygdrive/c/Program Files (x86)/Pandoc:/cygdrive/c/Program Files/CMake/bin:/cygdrive/c/WINDOWS/system32:/home/everbld/.opam/system/bin:/cygdrive/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/usr/x86_64-w64-mingw32/sys-root/mingw/bin:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin:/cygdrive/c/Users/everbld/AppData/Local/Microsoft/WindowsApps:/cygdrive/c/Build/Agent2/bin:/cygdrive/c/Build/Agent2/bin
+================================================================================
+Running tests (commands shown below)
+[test] expected output cipher is d31a8d34648e60db7b86afbc53ef7ec2a4aded51296e08fea9e2b5a736ee62d63dbea45e8ca9671282fafb69da92728b1a71de0a9e060b2905d6a5b67ecd3b3692ddbd7f2d778b8c9803aee328091b58fab324e4fad675945585808b4831d7bc3ff4def08e4b7a9de576d26586cec64b61161ae10b594f09e26a7e902ecbd0600691
+[test] computed output cipher is d31a8d34648e60db7b86afbc53ef7ec2a4aded51296e08fea9e2b5a736ee62d63dbea45e8ca9671282fafb69da92728b1a71de0a9e060b2905d6a5b67ecd3b3692ddbd7f2d778b8c9803aee328091b58fab324e4fad675945585808b4831d7bc3ff4def08e4b7a9de576d26586cec64b61161ae10b594f09e26a7e902ecbd0600691
+[test] cipher is a success
++ FStar/examples/low-level/test-perf.exe
+[test] expected output decryption is 4c616469657320616e642047656e746c656d656e206f662074686520636c617373206f66202739393a204966204920636f756c64206f6666657220796f75206f6e6c79206f6e652074697020666f7220746865206675747572652c2073756e73637265656e20776f756c642062652069742e
+[test] computed output decryption is 4c616469657320616e642047656e746c656d656e206f662074686520636c617373206f66202739393a204966204920636f756c64206f6666657220796f75206f6e6c79206f6e652074697020666f7220746865206675747572652c2073756e73637265656e20776f756c642062652069742e
+[test] decryption is a success
+[test] expected output cipher is 58e2fccefa7e3061367f1d57a4e7455a
+[test] computed output cipher is 58e2fccefa7e3061367f1d57a4e7455a
+[test] cipher is a success
+[test] expected output decryption is 
+[test] computed output decryption is 
+[test] decryption is a success
+[test] expected output cipher is 530f8afbc74536b9a963b4f1c4cb738b
+[test] computed output cipher is 530f8afbc74536b9a963b4f1c4cb738b
+[test] cipher is a success
+[test] expected output decryption is 
+[test] computed output decryption is 
+[test] decryption is a success
+[test] expected output cipher is cea7403d4d606b6e074ec5d3baf39d18d0d1c8a799996bf0265b98b5d48ab919
+[test] computed output cipher is cea7403d4d606b6e074ec5d3baf39d18d0d1c8a799996bf0265b98b5d48ab919
+[test] cipher is a success
+[test] expected output decryption is 00000000000000000000000000000000
+[test] computed output decryption is 00000000000000000000000000000000
+[test] decryption is a success
+[test] expected output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f662898015adb094dac5d93471bdec1a502270e3cc6c
+[test] computed output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f662898015adb094dac5d93471bdec1a502270e3cc6c
+[test] cipher is a success
+[test] expected output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b391aafd255
+[test] computed output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b391aafd255
+[test] decryption is a success
+[test] expected output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f66276fc6ece0f4e1768cddf8853bb2d551b
+[test] computed output cipher is 522dc1f099567d07f47f37a32a84427d643a8cdcbfe5c0c97598a2bd2555d1aa8cb08e48590dbb3da7b08b1056828838c5f61e6393ba7a0abcc9f66276fc6ece0f4e1768cddf8853bb2d551b
+[test] cipher is a success
+[test] expected output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b39
+[test] computed output decryption is d9313225f88406e5a55909c5aff5269a86a7a9531534f7da2e4c303d8a318a721c3c0c95956809532fcf0e2449a6b525b16aedf5aa0de657ba637b39
+[test] decryption is a success
+Testing: Kremlin-C-aes256-gcm
+Cycles for 10 2^14 bytes: 232541743 (1419.32cycles/byte)
+User time for 10 2^14 bytes: 0.101000 (0.616455ns/byte)
+Testing: Kremlin-C-chacha20-poly1305
+Cycles for 1000 2^14 bytes: 617561633 (37.69cycles/byte)
+User time for 1000 2^14 bytes: 0.269000 (0.016418ns/byte)
+Testing: openssl-aes-256-gcm
+Cycles for 1000 2^14 bytes: 13377683 (0.82cycles/byte)
+User time for 1000 2^14 bytes: 0.006000 (0.000366ns/byte)
+Testing: openssl-chacha20-poly1305
+Cycles for 1000 2^14 bytes: 26314286 (1.61cycles/byte)
+User time for 1000 2^14 bytes: 0.011000 (0.000671ns/byte)
+Testing: Kremlin-C-aes256
+Cycles for 1 2^14 bytes: 5224005 (318.85cycles/byte)
+User time for 1 2^14 bytes: 0.002000 (0.122070ns/byte)
++ cd mitls-fstar/src/tls
+Testing: Kremlin-C-chacha20
+Cycles for 1000 2^14 bytes: 400004944 (24.41cycles/byte)
+User time for 1000 2^14 bytes: 0.175000 (0.010681ns/byte)
+Testing: Kremlin-C-gcm
+Cycles for 1 2^14 bytes: 12322406 (752.10cycles/byte)
+User time for 1 2^14 bytes: 0.005000 (0.305176ns/byte)
+Testing: Kremlin-C-poly1305
+Cycles for 1000 2^14 bytes: 136380363 (8.32cycles/byte)
++ make -j 24 test
+User time for 1000 2^14 bytes: 0.059000 (0.003601ns/byte)
+make -f Extracted.mk test
+make[1]: Entering directory '/cygdrive/c/Build/Agent2/_work/7/s/mitls-fstar/src/tls'
+Extracted.mk:92: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:195: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:95: warning: overriding recipe for target 'mitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:108: warning: overriding recipe for target 'test'
+Makefile:207: warning: ignoring old recipe for target 'test'
+Extracted.mk:164: warning: overriding recipe for target 'cmitls.o'
+Makefile:201: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:166: warning: overriding recipe for target 'cmitls.exe'
+Makefile:203: warning: ignoring old recipe for target 'cmitls.exe'
+C:/Build/Agent2/_work/7/s/FStar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/7/s/FStar --trace_error --print_z3_statistics --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/Platform/fst/ --include ../../../hacl-star/secure_api/LowCProvider/fst --include C:/Build/Agent2/_work/7/s/kremlin/kremlib --include ../../../hacl-star/specs --include ../../../hacl-star/code/lib/kremlin --include ../../../hacl-star/code/bignum --include ../../../hacl-star/code/experimental/aesgcm --include ../../../hacl-star/code/poly1305 --include ../../../hacl-star/code/salsa-family --include ../../../hacl-star/secure_api/test --include ../../../hacl-star/secure_api/utils --include ../../../hacl-star/secure_api/vale --include ../../../hacl-star/secure_api/uf1cma --include ../../../hacl-star/secure_api/prf --include ../../../hacl-star/secure_api/aead --include ../../libs/ffi --lax --codegen OCaml \
+--odir output --no_extract Prims --no_extract FStar.Pervasives --no_extract FStar.Pervasives.Native --no_extract FStar.Mul --no_extract FStar.Float --no_extract FStar.Char --no_extract FStar.UInt --no_extract FStar.Int8 --no_extract FStar.UInt8 --no_extract FStar.Int16 --no_extract FStar.UInt16 --no_extract FStar.Int32 --no_extract FStar.UInt32 --no_extract FStar.Int64 --no_extract FStar.UInt64 --no_extract FStar.UInt128 --no_extract FStar.Int.Cast --no_extract FStar.BaseTypes --no_extract FStar.IO --no_extract FStar.Heap --no_extract FStar.List.Tot.Base --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.String --no_extract FStar.Set --no_extract FStar.Buffer --no_extract FStar.CommonST --no_extract FStar.TSet --no_extract FStar.Map --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.HyperStack.All --no_extract FStar.ST --no_extract FStar.All --no_extract FStar.Monotonic.RRef --no_extract FStar.Monotonic.Seq --no_extract FStar.Seq.Base --no_extract FStar.Seq.Properties --no_extract FStar.BitVector --no_extract FStar.Math.Lib --no_extract Platform.Bytes --no_extract Platform.Date --no_extract Platform.Error --no_extract Platform.Tcp --no_extract CoreCrypto --no_extract DHDB --no_extract LowCProvider --no_extract FFICallbacks \
+--codegen-lib Platform \
+--include concrete-flags --extract_module TestKS test/TestKS.fst
+C:/Build/Agent2/_work/7/s/FStar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/7/s/FStar --trace_error --print_z3_statistics --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/Platform/fst/ --include ../../../hacl-star/secure_api/LowCProvider/fst --include C:/Build/Agent2/_work/7/s/kremlin/kremlib --include ../../../hacl-star/specs --include ../../../hacl-star/code/lib/kremlin --include ../../../hacl-star/code/bignum --include ../../../hacl-star/code/experimental/aesgcm --include ../../../hacl-star/code/poly1305 --include ../../../hacl-star/code/salsa-family --include ../../../hacl-star/secure_api/test --include ../../../hacl-star/secure_api/utils --include ../../../hacl-star/secure_api/vale --include ../../../hacl-star/secure_api/uf1cma --include ../../../hacl-star/secure_api/prf --include ../../../hacl-star/secure_api/aead --include ../../libs/ffi --lax --codegen OCaml \
+--odir output --no_extract Prims --no_extract FStar.Pervasives --no_extract FStar.Pervasives.Native --no_extract FStar.Mul --no_extract FStar.Float --no_extract FStar.Char --no_extract FStar.UInt --no_extract FStar.Int8 --no_extract FStar.UInt8 --no_extract FStar.Int16 --no_extract FStar.UInt16 --no_extract FStar.Int32 --no_extract FStar.UInt32 --no_extract FStar.Int64 --no_extract FStar.UInt64 --no_extract FStar.UInt128 --no_extract FStar.Int.Cast --no_extract FStar.BaseTypes --no_extract FStar.IO --no_extract FStar.Heap --no_extract FStar.List.Tot.Base --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.String --no_extract FStar.Set --no_extract FStar.Buffer --no_extract FStar.CommonST --no_extract FStar.TSet --no_extract FStar.Map --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.HyperStack.All --no_extract FStar.ST --no_extract FStar.All --no_extract FStar.Monotonic.RRef --no_extract FStar.Monotonic.Seq --no_extract FStar.Seq.Base --no_extract FStar.Seq.Properties --no_extract FStar.BitVector --no_extract FStar.Math.Lib --no_extract Platform.Bytes --no_extract Platform.Date --no_extract Platform.Error --no_extract Platform.Tcp --no_extract CoreCrypto --no_extract DHDB --no_extract LowCProvider --no_extract FFICallbacks \
+--codegen-lib Platform \
+--include concrete-flags --extract_module TestDH test/TestDH.fst
+C:/Build/Agent2/_work/7/s/FStar/bin/fstar.exe --fstar_home C:/Build/Agent2/_work/7/s/FStar --trace_error --print_z3_statistics --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/fst/ --include C:/Build/Agent2/_work/7/s/FStar/ucontrib/Platform/fst/ --include ../../../hacl-star/secure_api/LowCProvider/fst --include C:/Build/Agent2/_work/7/s/kremlin/kremlib --include ../../../hacl-star/specs --include ../../../hacl-star/code/lib/kremlin --include ../../../hacl-star/code/bignum --include ../../../hacl-star/code/experimental/aesgcm --include ../../../hacl-star/code/poly1305 --include ../../../hacl-star/code/salsa-family --include ../../../hacl-star/secure_api/test --include ../../../hacl-star/secure_api/utils --include ../../../hacl-star/secure_api/vale --include ../../../hacl-star/secure_api/uf1cma --include ../../../hacl-star/secure_api/prf --include ../../../hacl-star/secure_api/aead --include ../../libs/ffi --lax --codegen OCaml \
+--odir output --no_extract Prims --no_extract FStar.Pervasives --no_extract FStar.Pervasives.Native --no_extract FStar.Mul --no_extract FStar.Float --no_extract FStar.Char --no_extract FStar.UInt --no_extract FStar.Int8 --no_extract FStar.UInt8 --no_extract FStar.Int16 --no_extract FStar.UInt16 --no_extract FStar.Int32 --no_extract FStar.UInt32 --no_extract FStar.Int64 --no_extract FStar.UInt64 --no_extract FStar.UInt128 --no_extract FStar.Int.Cast --no_extract FStar.BaseTypes --no_extract FStar.IO --no_extract FStar.Heap --no_extract FStar.List.Tot.Base --no_extract FStar.List --no_extract FStar.Option --no_extract FStar.String --no_extract FStar.Set --no_extract FStar.Buffer --no_extract FStar.CommonST --no_extract FStar.TSet --no_extract FStar.Map --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.HyperStack.All --no_extract FStar.ST --no_extract FStar.All --no_extract FStar.Monotonic.RRef --no_extract FStar.Monotonic.Seq --no_extract FStar.Seq.Base --no_extract FStar.Seq.Properties --no_extract FStar.BitVector --no_extract FStar.Math.Lib --no_extract Platform.Bytes --no_extract Platform.Date --no_extract Platform.Error --no_extract Platform.Tcp --no_extract CoreCrypto --no_extract DHDB --no_extract LowCProvider --no_extract FFICallbacks \
+--codegen-lib Platform \
+--include concrete-flags --extract_module TestGCM test/TestGCM.fst
+Extracted module TestDH
+All verification conditions discharged successfully
+Extracted module TestGCM
+All verification conditions discharged successfully
+Extracted module TestKS
+All verification conditions discharged successfully
+OCAMLPATH="C:/Build/Agent2/_work/7/s/FStar/bin" ocamlfind opt -package fstarlib -linkpkg -g  -package batteries,stdint,fileutils,sqlite3,zarith,fstarlib -thread -w -a -I test -I output -I C:/Build/Agent2/_work/7/s/FStar/ucontrib/Platform/ml -I C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml -I C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/db -I ../../../hacl-star/secure_api/LowCProvider -I ../../libs/ffi \
+C:/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/CoreCrypto.cmxa \
+../../../hacl-star/secure_api/LowCProvider/lowc_stub.o ../../../hacl-star/secure_api/LowCProvider/libllcrypto.a ../../../hacl-star/secure_api/LowCProvider/LowCProvider.cmx \
+mitls.cmxa \
+output/TestKS.ml output/TestDH.ml output/TestGCM.ml test/parsing_test.ml test/test_hkdf.ml test/test_main.ml -o test.out
+# Unit tests from test/test_main.ml
+PATH="/usr/x86_64-w64-mingw32/sys-root/mingw/bin/:/cygdrive/c/Build/Agent2/_work/7/s/FStar/ucontrib/CoreCrypto/ml/openssl:/cygdrive/c/Build/Agent2/_work/7/s/FStar/bin:/cygdrive/c/Build/Agent2/_work/7/s/kremlin:/home/everbld/bin:/home/everbld/everest/z3-4.5.0-x64-win/bin:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin/amd64:/cygdrive/c/PROGRA~2/MICROS~1.0/VC/bin:/cygdrive/c/PROGRA~2/MIA713~1/F#/4.0/FRAMEW~1/v4.0/:/home/everbld/.opam/system/bin:/usr/x86_64-w64-mingw32/sys-root/mingw/bin/:/usr/local/bin:/usr/bin:/cygdrive/c/Build/Agent2/externals/git/cmd:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/OCaml/bin:/cygdrive/c/Program Files (x86)/Intel/iCLS Client:/cygdrive/c/Program Files/Intel/iCLS Client:/cygdrive/c/Program Files/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/Program Files (x86)/Common Files/Microsoft Shared/Microsoft Online Services:/cygdrive/c/WINDOWS:/cygdrive/c/WINDOWS/System32/Wbem:/cygdrive/c/WINDOWS/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/cygdrive/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/cygdrive/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:%USERPROFILE%/.dnx/bin:/cygdrive/c/Program Files/Microsoft DNX/Dnvm:/cygdrive/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/cygdrive/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/cygdrive/c/Program Files/Git/cmd:/usr/bin:/cygdrive/c/Binaries/Boogie:/cygdrive/c/Program Files (x86)/HP/HP Performance Advisor:/cygdrive/c/Binaries/z3-4.5.0-x64-win/bin:/cygdrive/c/Binaries/scons/Scripts:/cygdrive/c/Python27:/cygdrive/c/Build/Agent/externals.2.104.2/nuget:/cygdrive/c/Program Files (x86)/Pandoc:/cygdrive/c/Program Files/CMake/bin:/cygdrive/c/WINDOWS/system32:/home/everbld/.opam/system/bin:/cygdrive/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/usr/x86_64-w64-mingw32/sys-root/mingw/bin:/cygdrive/c/Program Files (x86)/Microsoft VS Code/bin:/cygdrive/c/Users/everbld/AppData/Local/Microsoft/WindowsApps:/cygdrive/c/Build/Agent2/bin:/cygdrive/c/Build/Agent2/bin" ./test.out
+CDH| Keygen on P256
+CDH| DH responder on P256
+CDH| Keygen on P256
+CDH| DH initiator on P256
+TestKS| Starting KeySchedule tests (based on draft-ietf-tls-tls13-vectors-00).
+
+TestKS|  Replacing the keygen function in Curve25519... 
+TestKS| OK.
+Creating KS instances... 
+TestKS| OK.
+Generating client shares... 
+KS | ks_client_init 1.3
+CDH| Keygen on X255519
+TestKS|  ...keygen call 0... 
+TestKS| OK.
+
+KS | Share: 35e58b160db6124f01a1d2475a22b72abd6896701eed4c7efd6124ee231ba458
+TestKS|  Generating server share... 
+KS | ks_server_init
+KS | No PSK selected.
+KS | Computed early secret: 33AD0A1C607EC03B09E6CD9893680CE210ADF300AA1F2660E1B22E10F170F92A
+KS | Handshake salt: 6F2615A108C702C5678F54FC9DBAB69716C076189C48250CEBEAC3576C3611BA
+CDH| DH responder on X255519
+CDH| Keygen on X255519
+TestKS|  ...keygen call 1... 
+CDH| DH initiator on X255519
+KS | DH shared secret: C08ACC73BA101D7FEA86D223DE32D9FC4948E145493680594B83B0A109F83649
+KS | Handshake secret: CF417C5EB8B03361855AE615668767D14988A855E8D4B41D5D1B4828E0EB7E8B
+KS | Share: a20ed1b7f2d96a7f12568f0e460bb0fc86dc8d1db6c07d6b10d4dc74aaac9219
+KS | ks_server_13_sh, hashed log = 52C04472BDFE929772C98B91CF425F78F47659BE9D4A7D68B9E29D162935E9B9
+KS | client handshake traffic secret: 30B33EE38D0718F8F5D774E4ACBD8D0A33A74161AC379EFF642EB4997928F4AA
+KS | server handshake traffic secret: E201679317A9B198BF8209F30565EFC9D480770301CB082165258BA754D5FF92
+KS | handshake key[C]: 3E9F42A750DE3F41CBC3A52BC54A9121, IV=D622AF3C4DE06EA8A8D42672
+KS | handshake key[S]: 9B055BB510EEB33C1BFAE33AF55FB019, IV=FC8938C6733C4B9C3653A17C
+KS | client finished key: DE9AB548F90DEE9C6B1D7971DE3A95D18F7FC51F62A620C883D4D9AA88F204EA
+KS | server finished key: 17FD816768828E6791D114B22CC54E1AE96606EAB7AA448FFCAED76879B85C4A
+KS | Application salt: B5F6DB24E62850F684D6788933F9D9383476FD39477FC278453F43214EE1CBDD
+KS | Application secret: 2D29DBA2074A5DF0E66BA2A5A65B63FB9ED2C366FD4F251CFB50B887BF378DBE
+Read 4066 characters
+Parsing client hello...
+...OK
+Serializing client hello...
+...OK
+Parsing server hello message...
+...OK
+Serializing server hello...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing server key exchange message...
+...OK
+Serializing server key exchange...OK
+Parsing server hello done message...
+...OK
+Parsing client key exchange message...
+...OK
+Serializing client key exchange...
+...OK
+Parsing finished message...
+...OK
+Serializing finished...
+...OK
+Parsing session ticket message...
+...OK
+Serializing session ticket...
+...OK
+Parsing finished message...
+...OK
+Serializing finished...
+...OK
+Parsed all messages
+
+********************************************
+Read 4660 characters
+Parsing client hello...
+...OK
+Serializing client hello...
+...OK
+Parsing server hello message...
+...OK
+Serializing server hello...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing server key exchange message...
+...OK
+Serializing server key exchange...OK
+Parsing certificate request message...
+...OK
+Serializing certificate request...
+WARNING: not an inverse of parsing. Got:
+03010240001E0601060206030501050205030401040204030301030203030201020202030220001A3018311630140603550403130D416B616D6169504B49526F6F740060305E31133011060A0992268993F22C6401191603636F6D31163014060A0992268993F22C6401191606616B616D616931143012060A0992268993F22C6401191604636F72703119301706035504031310416B616D6169504B4949737375696E670056305431153013060A0992268993F22C64011916054C6F63616C31183016060A0992268993F22C640119160841697257617463683121301F0603550403131841697257617463682D41544C3032505244435331392D43410016301431123010060355040313095243412D55534D41310041303F3121301F060355040A1318416B616D616920546563686E6F6C6F6769657320496E632E311A301806035504031311416B616D6169436F7270526F6F742D4731003E303C3121301F060355040A1318416B616D616920546563686E6F6C6F6769657320496E632E311730150603550403130E416B616D6169436C69656E7443410056305431153013060A0992268993F22C64011916054C6F63616C31183016060A0992268993F22C640119160841697257617463683121301F0603550403131841697257617463682D41544C3034505244435333322D43410055305331153013060A0992268993F22C64011916054C6F63616C31183016060A0992268993F22C640119160841697257617463683120301E0603550403131741697257617463682D55533032505244435333352D4341
+Serialized:
+020102001E06010602060305010502050304010402040303010302030302010202020302200055305331153013060A0992268993F22C64011916054C6F63616C31183016060A0992268993F22C640119160841697257617463683120301E0603550403131741697257617463682D55533032505244435333352D43410056305431153013060A0992268993F22C64011916054C6F63616C31183016060A0992268993F22C640119160841697257617463683121301F0603550403131841697257617463682D41544C3034505244435333322D4341003E303C3121301F060355040A1318416B616D616920546563686E6F6C6F6769657320496E632E311730150603550403130E416B616D6169436C69656E7443410041303F3121301F060355040A1318416B616D616920546563686E6F6C6F6769657320496E632E311A301806035504031311416B616D6169436F7270526F6F742D47310016301431123010060355040313095243412D55534D41310056305431153013060A0992268993F22C64011916054C6F63616C31183016060A0992268993F22C640119160841697257617463683121301F0603550403131841697257617463682D41544C3032505244435331392D43410060305E31133011060A0992268993F22C6401191603636F6D31163014060A0992268993F22C6401191606616B616D616931143012060A0992268993F22C6401191604636F72703119301706035504031310416B616D6169504B4949737375696E67001A3018311630140603550403130D416B616D6169504B49526F6F74
+Parsing server hello done message...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing client key exchange message...
+...OK
+Serializing client key exchange...
+...OK
+Parsing finished message...
+...OK
+Serializing finished...
+...OK
+Parsed all messages
+
+********************************************
+Read 4638 characters
+Parsing client hello...
+...OK
+Serializing client hello...
+...OK
+Parsing server hello message...
+...OK
+Serializing server hello...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing server key exchange message...
+...FAILED
+Parsing server hello done message...
+...OK
+Parsing client key exchange message...
+...OK
+Serializing client key exchange...
+...OK
+Error: parsed an unknown handshake type: 4300002808687474702F312E311ED861C540DB3331007B46053F0E0000000B00000300000010000003000101
+Parsed all messages
+
+********************************************
+Read 4638 characters
+Parsing client hello...
+...OK
+Serializing client hello...
+...OK
+Parsing server hello message...
+...OK
+Serializing server hello...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing server key exchange message...
+...FAILED
+Parsing certificate request message...
+...FAILED
+Parsing server hello done message...
+...OK
+Parsing certificate message...
+...OK
+Running chain validation (no hostname)...FAILED
+Parsing client key exchange message...
+...OK
+Serializing client key exchange...
+...OK
+Parsed all messages
+
+********************************************
+CDH| Keygen on P256
+CDH| DH responder on P256
+CDH| Keygen on P256
+CDH| DH initiator on P256
+CDH| DH initiator on P256
+TestKS| DH exchange test: OK
+
+HKDF: 7/7 tests passed
+TestKS| GCM test: OK
+
+# Run mitls.exe
+./mitls.exe  -v 1.2 -ffi www.google.com
+FFI| ===============================================
+FFI| Starting test client...
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+HS | offering ClientHello 1.2
+KS | ks_client_init 1.2
+NGO| offering client extensions [ server_name alpn session_ticket extended_master_secret signature_algorithms ec_point_formats supported_groups ]
+HSL| emit ClientHello
+TLS| HS.next_fragment returned a fragment
+TLS| sendHandshake
+TLS| send Handshake fragment with index PlaintextID
+TLS| Sending fragment of length 163
+REC| record headers: 16030300A3
+TCP| send
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: -1 of length 73
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (?) 03035949FE1367561D567166D4B5A2E1C77A3A47E93D6EEAE4D576D3CF0E05B3A21A00C02F00001D00170000002300000010000B000908687474702F312E31000B00020100
+HSL| parsed ServerHello
+HSL| end of flight
+HS | client_ServerHello
+NGO| processing server extensions [ extended_master_secret session_ticket alpn ec_point_formats ]
+NGO| negotiated 1.2 TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+HS | Running classic TLS
+HS | Offered SID= Server SID=
+HS | recv_fragment
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: -1 of length 3137
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 000C3A0004843082048030820368A003020102020876B50F23ED6EE2EC300D06092A864886F70D01010B05003049310B300906035504061302555331133011060355040A130A476F6F676C6520496E63312530230603550403131C476F6F676C6520496E7465726E657420417574686F72697479204732301E170D3137303630373135313030305A170D3137303833303135313030305A3068310B30090603550406130255533113301106035504080C0A43616C69666F726E69613116301406035504070C0D4D6F756E7461696E205669657731133011060355040A0C0A476F6F676C6520496E633117301506035504030C0E7777772E676F6F676C652E636F6D30820122300D06092A864886F70D01010105000382010F003082010A0282010100F0FBFB8C4F1BE39513F5B511917A0611AE9A87151D74562979F5EC6AABB0B2319FB384A218E6BE5541A78E3433B7215364E3BE4EA88FDCFAE510348DF8B7D6215B473C6B0FC7C87B112F1E5902DEFBD3F0CFAFA6BE80A72BFBFD378A56CAF5D24E4889EE6486680E4C415D9E806E850EC2F28797AD169328331FF4C7FA3B3F452E0F52AA90971822D5DF64AF70117B27701205D7C86FBE44AC986666D320A472B37E3B493575BE2A502EB31E3F527B610520E8D8806445D72595A70B4E553347D869C54726E65825732FDB25F32F5A0363E42BD9E892573905D8296701C9557F57BF6594D45F06D1594C4F716228763B85A7CF9B55D830C88359E730436CFE390203010001A382014B30820147301D0603551D250416301406082B0601050507030106082B0601050507030230190603551D1104123010820E7777772E676F6F676C652E636F6D306806082B06010505070101045C305A302B06082B06010505073002861F687474703A2F2F706B692E676F6F676C652E636F6D2F47494147322E637274302B06082B06010505073001861F687474703A2F2F636C69656E7473312E676F6F676C652E636F6D2F6F637370301D0603551D0E04160414F111C50CF1B337F2C4D74095A541CC728B1E1376300C0603551D130101FF04023000301F0603551D230418301680144ADD06161BBCF668B576F581B6BB621ABA5A812F30210603551D20041A3018300C060A2B06010401D6790205013008060667810C01020230300603551D1F042930273025A023A021861F687474703A2F2F706B692E676F6F676C652E636F6D2F47494147322E63726C300D06092A864886F70D01010B050003820101002085DED1D6F53F0E453F23B51268992A9C5EA1249CE176D787FE4E7E46A2B5AF945051778D2AD852C8149C8A8212EC096CEFC6D347E462FE95D5AEF09E965274D4681A0476B01351D4FA9775490F7D30FD358D03E7290746422F6E01F4E3763CCE58214C902D4419A4981A1342EA0093EB501E7929CD158BCECB5AB4631F7BA583A684A3A45D73C2B10F0EA442D4E63FA7003F9966F525E539A13AA4B68F2AC04154E0AC7C879FDA1499D050B27046A03B20C653618733DA5CB9C6503787DB110601216BF536925F64ABD8B23A2419BA761C672C0A2273B57F14946534147D10F22C7957F1AB4169CEDA580A48425A8D8D39F23D38322408B401194D44B6919B00042C3082042830820310A00302010202100100212588B0FA59A777EF057B6627DF300D06092A864886F70D01010B05003042310B300906035504061302555331163014060355040A130D47656F547275737420496E632E311B30190603550403131247656F547275737420476C6F62616C204341301E170D3137303532323131333233375A170D3138313233313233353935395A3049310B300906035504061302555331133011060355040A130A476F6F676C6520496E63312530230603550403131C476F6F676C6520496E7465726E657420417574686F7269747920473230820122300D06092A864886F70D01010105000382010F003082010A02820101009C2A04775CD850913A06A382E0D85048BC893FF119701A88467EE08FC5F189CE21EE5AFE610DB7324489A0740B534F55A4CE826295EEEB595FC6E1058012C45E943FBC5B4838F453F724E6FB91E915C4CFF4530DF44AFC9F54DE7DBEA06B6F87C0D0501F28300340DA0873516C7FFF3A3CA737068EBD4B1104EB7D24DEE6F9FC3171FB94D560F32E4AAF42D2CBEAC46A1AB2CC53DD154B8B1FC819611FCD9DA83E632B8435696584C819C54622F85395BEE3804A10C62AECBA972011C739991004A0F0617A95258C4E5275E2B6ED08CA14FCCE226AB34ECF46039797037EC0B1DE7BAF4533CFBA3E71B7DEF42525C20D35899D9DFB0E1179891E37C5AF8E72690203010001A38201113082010D301F0603551D23041830168014C07A98688D89FBAB05640C117DAA7D65B8CACC4E301D0603551D0E041604144ADD06161BBCF668B576F581B6BB621ABA5A812F300E0603551D0F0101FF040403020106302E06082B0601050507010104223020301E06082B060105050730018612687474703A2F2F672E73796D63642E636F6D30120603551D130101FF040830060101FF02010030350603551D1F042E302C302AA028A0268624687474703A2F2F672E73796D63622E636F6D2F63726C732F6774676C6F62616C2E63726C30210603551D20041A3018300C060A2B06010401D6790205013008060667810C010202301D0603551D250416301406082B0601050507030106082B06010505070302300D06092A864886F70D01010B05000382010100CA49E5ACD76464775BBE71FACFF41E23C79A6963545FEB4CD619282364668E1CC78780645F048B26AF98DF0A70BCBC193DEE7B33A97FBDF405D470BB052679EA9AC798B907196534CC3CE93FC501FA6F0C7EDB7A705C4CFE2D00F0CABE2D8EB4A880FB011388CB9C3FE5BB77CA3A6736F3CED527027243A0BD6E02F14705713E0159E9119E1AF3840F80A6A278352FB6C7A27F177CE18B56AEEE678851273060A56252C337D53BEA852A013887A2CF70ADA47AC9C4E7CAC5DABC2332F2FE18C27BE0DF3B2FD4D010E6964CFB44B721640DB900943012268758983905380FCC82480C0A4766EEBFB45FC4FF70A8E17F8B792BB86532A3B9B731E90AF5F61F32DC0003813082037D308202E6A003020102020312BBE6300D06092A864886F70D0101050500304E310B30090603550406130255533110300E060355040A130745717569666178312D302B060355040B1324457175696661782053656375726520436572746966696361746520417574686F72697479301E170D3032303532313034303030305A170D3138303832313034303030305A3042310B300906035504061302555331163014060355040A130D47656F547275737420496E632E311B30190603550403131247656F547275737420476C6F62616C20434130820122300D06092A864886F70D01010105000382010F003082010A0282010100DACC186330FDF417231A567E5BDF3C6C38E471B77891D4BCA1D84CF8A843B603E94D21070888DA582F663929BD05788B9D38E805B76A7E71A4E6C460A6B0EF80E489280F9E25D6ED83F3ADA691C798C9421835149DAD9846922E4FCAF18743C11695572D50EF892D807A57ADF2EE5F6BD2008DB914F8141535D9C046A37B72C891BFC9552BCDD0973E9C2664CCDFCE831971CA4EE6D4D57BA919CD55DEC8ECD25E3853E55C4F8C2DFE502336FC66E6CB8EA4391900B7950239910B0EFE382ED11D059AF64D3E6F0F071DAF2C1E8F6039E2FA36531339D45E262BDB3DA814BD32EB180328520471E5AB333DE138BB073684629C79EA1630F45FC02BE8716BE4F90203010001A381F03081ED301F0603551D2304183016801448E668F92BD2B295D747D82320104F3398909FD4301D0603551D0E04160414C07A98688D89FBAB05640C117DAA7D65B8CACC4E300F0603551D130101FF040530030101FF300E0603551D0F0101FF040403020106303A0603551D1F04333031302FA02DA02B8629687474703A2F2F63726C2E67656F74727573742E636F6D2F63726C732F73656375726563612E63726C304E0603551D200447304530430604551D2000303B303906082B06010505070201162D68747470733A2F2F7777772E67656F74727573742E636F6D2F7265736F75726365732F7265706F7369746F7279300D06092A864886F70D01010505000381810076E1126E4E4B1612863006B28108CFF008C7C7717E66EEC2EDD43B1FFFF0F0C84ED64338B0B9307D18D05583A26ACB36119CE84866A36D7FB813D447FE8B5A5C73FCAED91B321938AB973414AA96D2EBA31C140849B6BBE591EF8336EB1D566FCADABC736390E47F7B3E22CB3D07ED5F38749CE303504EA1AF98EE61F2843F12
+HSL| parsed Certificate
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: -1 of length 300
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 03001D20CDEA4779AC536B56BE139D0119874AAC576E8A6AE6435978C9E2566581740C18040101009EBE273F2DF237B9F3899AA7CAF261E6FEA918A93F3E36AD85F6C5C97EBDBE2952913E9BC66D08446460BCAB07C5FCFB1B1E0D1F927A35D587B92ECF0FAB3E882D9F5F233898C2EED7A92AEF80E6BB010FEA50D51B94851F750448FA8DF6ECD74A04C1627D0082DDE333BA73746010B166EFF12F69D4B5A4345CC46F14083AB283FD14459A21CA647AEF5EC2B05ED70A00E4D8E46B5C86515DD30A0E20E438BDC170E864FEF484AD52E84B1B64FF75BA68DF1419CFDA5EDC9021E98C2B29F1F50F8DF9A55D98D3D349283D2C622921964C17A405FBC55021A2D85B5C97E5E1CB393F79EBC7BD1A411F462A9EC41992BC49888A11351B30BC9F1F1021C5DDC6D0
+HSL| parsed ServerKeyExchange
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: -1 of length 4
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 
+HSL| parsed ServerHelloDone
+HSL| end of flight
+HS | processing ...ServerHelloDone
+NGO| Verifying signature using RSA_PKCS1_SHA256
+NGO| ServerKeyExchange signature: Valid
+CDH| DH responder on X255519
+CDH| Keygen on X255519
+CDH| DH initiator on X255519
+KS | Share: cdea4779ac536b56be139d0119874aac576e8a6ae6435978c9e2566581740c18
+KS | Share: cdaeb4643e569f5c85bf8f0bf09b62ce43eb8528bfdca8d75f1dfba918568344
+KS | PMS: AEC2C13B68CFE5AA66B0D37BB5E3E98F872E0FC7786CABFE991EB36AA2846751
+HSL| emit ClientKeyExchange and hash
+KS | ks_client_12_set_session_hash hashed_log = C1AFA5B662FFD665CAB8304E25F7F81AE9A0166AA1A0A6819AB113B7492C649D
+KS | extended master secret:62B4298CADC7C9A1DC0309F94570148C81222D931E876DCD05356E0440DC2F1AD1DCACCFFC7E2131BBC0A202173AB56F
+KS | ks_12_record_key
+KS | keystring (CK, CIV, SK, SIV) = 6BBE9C367F8A1B05267FA732A5822289E4EAE40E320CBE1A6221D0500DC06ED57D003854AD433310
+HS | digest is C1AFA5B662FFD665CAB8304E25F7F81AE9A0166AA1A0A6819AB113B7492C649D
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned a fragment; CCS; next_keys (for handshake only
+TLS| sendHandshake
+TLS| send Handshake fragment with index PlaintextID
+TLS| Sending fragment of length 37
+REC| record headers: 1603030025
+TCP| send
+TLS| send CCS fragment with index PlaintextID
+TLS| Sending fragment of length 1
+REC| record headers: 1403030001
+TCP| send
+EPO| writer++ -1/0
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned a fragment
+TLS| sendHandshake
+TLS| send Handshake fragment with index ID12
+TLS| Sending fragment of length 40
+REC| record headers: 1603030028
+TCP| send
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, new writer: handshake-only
+TLS| ignore handshake-specifc key change; calling read again
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: -1 of length 206
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 000189C000C429A18F1B894DF603ECD5D60F0E2BA982D69BF3FFAC2299FE2E4D6495C37B753851A103647985F2D03ACD0DE8C1821907EB8913FB2904A6ECD5B902AD03A4C1905BE1D48634FAB6E54E2DAC77628B15B9ACB487E1A1F172C0FEE88E476C5C92948CA2CEF0D1EB7401D8A39EC0A947997D64F4FABC58D4AFECC8CE6FA96527118FAB6465AA6778889E1232D26ED40CF2BC63065B1E0F75BC8DFADEF9182F7067B120372E947F1AF252931567C17DB4C4B5479C2B4AD6B8F0D583AED09076ED1D3AFE76F5DF
+HSL| parsed NewSessionTicket
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: -1 of length 1
+TLS| read CCS fragment
+HS | recv_ccs
+HS | Processing server CCS (full handshake). Ticket: 29A18F1B894DF603ECD5D60F0E2BA982D69BF3FFAC2299FE2E4D6495C37B753851A103647985F2D03ACD0DE8C1821907EB8913FB2904A6ECD5B902AD03A4C1905BE1D48634FAB6E54E2DAC77628B15B9ACB487E1A1F172C0FEE88E476C5C92948CA2CEF0D1EB7401D8A39EC0A947997D64F4FABC58D4AFECC8CE6FA96527118FAB6465AA6778889E1232D26ED40CF2BC63065B1E0F75BC8DFADEF9182F7067B120372E947F1AF252931567C17DB4C4B5479C2B4AD6B8F0D583AED09076ED1D3AFE76F5DF
+EPO| reader++ 0/0
+TLS| readOne ReadAgainFinishing
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 40
+TLS| StAE decrypt correct.
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 39D5602578D66B1A0615CA09
+HSL| parsed Finished
+HSL| end of flight
+TLS| readOne Complete
+FFI| Read OK, sending HTTP request...
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| send Data fragment with index ID12
+TLS| Sending fragment of length 64
+REC| record headers: 1703030040
+TCP| send
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Open, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+HTTP/1.1 200 OK
+Date: Wed, 21 Jun 2017 05:03:15 GMT
+Expires: -1
+Cache-Control: private, max-age=0
+Content-Type: text/html; charset=ISO-8859-1
+P3P: CP="This is not a P3P policy! See https://www.google.com/support/accounts/answer/151657?hl=en for more info."
+Server: gws
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: NID=106=gNHgOj3e3Q7imrw7Pq4rLxQvv9aij8KV-7SlCBjRu-rGaogYTsuzUBOPQzV_TplH4K-xxkykLuvS790J3rXYlEhVkoDjpuY_ua0Myv1Qtw3l2vgB77Hp71qXBG99l6VkS_1chfFJs8XNtTTuEw; expires=Thu, 21-Dec-2017 05:03:15 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: quic=":443"; ma=2592000; v="38,37,36,35"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+
+8000
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for." name="description"><meta content="noodp" name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'E_5JWZbBBuW4jAPqpbwQ',kEXPI:'1353382,1353763,1353968,3700303,3700347,3700433,3700442,4026241,4029815,4031109,4032678,4036527,4039268,4040135,404349
+FFI| Closing connection, irrespective of the response
+FFI| FFI close
+
+TLS| writeCloseNotify
+TLS| sendAlert AD_close_notify (full shutdown)
+TLS| send Alert fragment with index ID12
+TLS| Sending fragment of length 26
+REC| record headers: 150303001A
+TCP| send
+FFI| Sent close_notify, will block waiting for the server's
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+2,4045841,4048347,4057323,4064904,4065786,4072364,4072773,4076096,4076999,4078430,4078762,4081039,4081165,4085472,4090550,4092150,4093134,4093314,4094544,4095910,4097153,4097204,4097922,4097929,4097951,4098050,4098096,4098721,4098728,4098752,4101750,4102020,4102099,4102237,4102827,4103475,4103845,4104005,4104524,4105085,4105178,4105530,4106605,4106816,4107286,4107410,4107420,4107555,4107686,4107828,4108506,4109092,4109316,4109490,4109528,4110381,4110404,4110656,4111014,4112294,4112319,4112332,4112635,4112771,4113495,4114876,4114883,4114975,4115437,4115516,4115697,4116131,4116209,4117160,4117419,4117535,4118354,4118475,10200083,10200095,10201957,19002486,19002536,19002588,19002593,19002594,19002595,19002596,19002597,19002598,19002600,19002601,19002602,19002603,19002604,41027342',authuser:0,kscs:'c9c918f0_24'};google.kHL='en';})();(function(){google.lc=[];google.li=0;google.getEI=function(a){for(var b;a&&(!a.getAttribute||!(b=a.getAttribute("eid")));)a=a.parentNode;return b||google.kEI};google.getLEI=function(a){for(var b=null;a&&(!a.getAttribute||!(b=a.getAttribute("leid")));)a=a.parentNode;return b};google.https=function(){return"https:"==window.location.protocol};google.ml=function(){return null};google.wl=function(a,b){try{google.ml(Error(a),!1,b)}catch(c){}};google.time=function(){return(new Date).getTime()};google.log=function(a,b,c,d,g){a=google.logUrl(a,b,c,d,g);if(""!=a){
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+b=new Image;var e=google.lc,f=google.li;e[f]=b;b.onerror=b.onload=b.onabort=function(){delete e[f]};window.google&&window.google.vel&&window.google.vel.lu&&window.google.vel.lu(a);b.src=a;google.li=f+1}};google.logUrl=function(a,b,c,d,g){var e="",f=google.ls||"";c||-1!=b.search("&ei=")||(e="&ei="+google.getEI(d),-1==b.search("&lei=")&&(d=google.getLEI(d))&&(e+="&lei="+d));a=c||"/"+(g||"gen_204")+"?atyp=i&ct="+a+"&cad="+b+e+f+"&zx="+google.time();/^http:/i.test(a)&&google.https()&&(google.ml(Error("a"),!1,{src:a,glmm:1}),a="");return a};google.y={};google.x=function(a,b){google.y[a.id]=[a,b];return!1};google.lq=[];google.load=function(a,b,c){google.lq.push([[a],b,c])};google.loadAll=function(a,b){google.lq.push([a,b])};}).call(this);google.f={};var a=window.location,b=a.href.indexOf("#");if(0<=b){var c=a.href.substring(b+1);/(^|&)q=/.test(c)&&-1==c.indexOf("#")&&a.replace("/search?"+c.replace(/(^|&)fp=[^&]*/g,"")+"&cad=h")};</script><style>#gb{font:13px/27px Arial,sans-serif;height:30px}#gbz,#gbg{position:absolute;white-space:nowrap;top:0;height:30px;z-index:1000}#gbz{left:0;padding-left:4px}#gbg{right:0;padding-right:5px}#gbs{background:transparent;position:absolute;top:-999px;visibility:hidden;z-index:998;right:0}.gbto #gbs{background:#fff}#gbx3,#gbx4{background-color:#2d2d2d;background-image:none;_background-image:none;background-position:0 -138px;background-repeat:repeat-x;bo
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+rder-bottom:1px solid #000;font-size:24px;height:29px;_height:30px;opacity:1;filter:alpha(opacity=100);position:absolute;top:0;width:100%;z-index:990}#gbx3{left:0}#gbx4{right:0}#gbb{position:relative}#gbbw{left:0;position:absolute;top:30px;width:100%}.gbtcb{position:absolute;visibility:hidden}#gbz .gbtcb{right:0}#gbg .gbtcb{left:0}.gbxx{display:none !important}.gbxo{opacity:0 !important;filter:alpha(opacity=0) !important}.gbm{position:absolute;z-index:999;top:-999px;visibility:hidden;text-align:left;border:1px solid #bebebe;background:#fff;-moz-box-shadow:-1px 1px 1px rgba(0,0,0,.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,.2);box-shadow:0 2px 4px rgba(0,0,0,.2)}.gbrtl .gbm{-moz-box-shadow:1px 1px 1px rgba(0,0,0,.2)}.gbto .gbm,.gbto #gbs{top:29px;visibility:visible}#gbz .gbm{left:0}#gbg .gbm{right:0}.gbxms{background-color:#ccc;display:block;position:absolute;z-index:1;top:-1px;left:-2px;right:-2px;bottom:-2px;opacity:.4;-moz-border-radius:3px;filter:progid:DXImageTransform.Microsoft.Blur(pixelradius=5);*opacity:1;*top:-2px;*left:-5px;*right:5px;*bottom:4px;-ms-filter:"progid:DXImageTransform.Microsoft.Blur(pixelradius=5)";opacity:1\0/;top:-4px\0/;left:-6px\0/;right:5px\0/;bottom:4px\0/}.gbma{position:relative;top:-1px;border-style:solid dashed dashed;border-color:transparent;border-top-color:#c0c0c0;display:-moz-inline-box;display:inline-block;font-size:0;height:0;line-height:0;
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+width:0;border-width:3px 3px 0;padding-top:1px;left:4px}#gbztms1,#gbi4m1,#gbi4s,#gbi4t{zoom:1}.gbtc,.gbmc,.gbmcc{display:block;list-style:none;margin:0;padding:0}.gbmc{background:#fff;padding:10px 0;position:relative;z-index:2;zoom:1}.gbt{position:relative;display:-moz-inline-box;display:inline-block;line-height:27px;padding:0;vertical-align:top}.gbt{*display:inline}.gbto{box-shadow:0 2px 4px rgba(0,0,0,.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,.2)}.gbzt,.gbgt{cursor:pointer;display:block;text-decoration:none !important}span#gbg6,span#gbg4{cursor:default}.gbts{border-left:1px solid transparent;border-right:1px solid transparent;display:block;*display:inline-block;padding:0 5px;position:relative;z-index:1000}.gbts{*display:inline}.gbzt .gbts{display:inline;zoom:1}.gbto .gbts{background:#fff;border-color:#bebebe;color:#36c;padding-bottom:1px;padding-top:2px}.gbz0l .gbts{color:#fff;font-weight:bold}.gbtsa{padding-right:9px}#gbz .gbzt,#gbz .gbgt,#gbg .gbgt{color:#ccc!important}.gbtb2{display:block;border-top:2px solid transparent}.gbto .gbzt .gbtb2,.gbto .gbgt .gbtb2{border-top-width:0}.gbtb .gbts{background:url(https://ssl.gstatic.com/gb/images/b_8d5afc09.png);_background:url(https://ssl.gstatic.com/gb/images/b8_3615d64d.png);background-position:-27px -22px;border:0;font-size:0;padding:29px 0 0;*padding:27px 0 0;width:1px}.gbzt:hover,.gbzt
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+:focus,.gbgt-hvr,.gbgt:focus{background-color:#4c4c4c;background-image:none;_background-image:none;background-position:0 -102px;background-repeat:repeat-x;outline:none;text-decoration:none !important}.gbpdjs .gbto .gbm{min-width:99%}.gbz0l .gbtb2{border-top-color:#dd4b39!important}#gbi4s,#gbi4s1{font-weight:bold}#gbg6.gbgt-hvr,#gbg6.gbgt:focus{background-color:transparent;background-image:none}.gbg4a{font-size:0;line-height:0}.gbg4a .gbts{padding:27px 5px 0;*padding:25px 5px 0}.gbto .gbg4a .gbts{padding:29px 5px 1px;*padding:27px 5px 1px}#gbi4i,#gbi4id{left:5px;border:0;height:24px;position:absolute;top:1px;width:24px}.gbto #gbi4i,.gbto #gbi4id{top:3px}.gbi4p{display:block;width:24px}#gbi4id{background-position:-44px -101px}#gbmpid{background-position:0 0}#gbmpi,#gbmpid{border:none;display:inline-block;height:48px;width:48px}#gbmpiw{display:inline-block;line-height:9px;padding-left:20px;margin-top:10px;position:relative}#gbmpi,#gbmpid,#gbmpiw{*display:inline}#gbg5{font-size:0}#gbgs5{padding:5px !important}.gbto #gbgs5{padding:7px 5px 6px !important}#gbi5{background:url(https://ssl.gstatic.com/gb/images/b_8d5afc09.png);_background:url(https://ssl.gstatic.com/gb/images/b8_3615d64d.png);background-position:0 0;display:block;font-size:0;height:17px;width:16px}.gbto #gbi5{background-position:-6px -22px}.gbn .gbmt,.gbn .gbmt:visited,.gbnd .gbmt,.gbnd .gbmt:visited{color:#dd8e27 !impor
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+tant}.gbf .gbmt,.gbf .gbmt:visited{color:#900 !important}.gbmt,.gbml1,.gbmlb,.gbmt:visited,.gbml1:visited,.gbmlb:visited{color:#36c !important;text-decoration:none !important}.gbmt,.gbmt:visited{display:block}.gbml1,.gbmlb,.gbml1:visited,.gbmlb:visited{display:inline-block;margin:0 10px}.gbml1,.gbmlb,.gbml1:visited,.gbmlb:visited{*display:inline}.gbml1,.gbml1:visited{padding:0 10px}.gbml1-hvr,.gbml1:focus{outline:none;text-decoration:underline !important}#gbpm .gbml1{display:inline;margin:0;padding:0;white-space:nowrap}.gbmlb,.gbmlb:visited{line-height:27px}.gbmlb-hvr,.gbmlb:focus{outline:none;text-decoration:underline !important}.gbmlbw{color:#ccc;margin:0 10px}.gbmt{padding:0 20px}.gbmt:hover,.gbmt:focus{background:#eee;cursor:pointer;outline:0 solid black;text-decoration:none !important}.gbm0l,.gbm0l:visited{color:#000 !important;font-weight:bold}.gbmh{border-top:1px solid #bebebe;font-size:0;margin:10px 0}#gbd4 .gbmc{background:#f5f5f5;padding-top:0}#gbd4 .gbsbic::-webkit-scrollbar-track:vertical{background-color:#f5f5f5;margin-top:2px}#gbmpdv{background:#fff;border-bottom:1px solid #bebebe;-moz-box-shadow:0 2px 4px rgba(0,0,0,.12);-o-box-shadow:0 2px 4px rgba(0,0,0,.12);-webkit-box-shadow:0 2px 4px rgba(0,0,0,.12);box-shadow:0 2px 4px rgba(0,0,0,.12);position:relative;z-index:1}#gbd4 .gbmh{margin:0}.gbmtc{padding:0;margin:0;line-height:27px}.GBMCC:last-child:after,#GBMPAL:l
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+ast-child:after{content:'\0A\0A';white-space:pre;position:absolute}#gbmps{*zoom:1}#gbd4 .gbpc,#gbmpas .gbmt{line-height:17px}#gbd4 .gbpgs .gbmtc{line-height:27px}#gbd4 .gbmtc{border-bottom:1px solid #bebebe}#gbd4 .gbpc{display:inline-block;margin:16px 0 10px;padding-right:50px;vertical-align:top}#gbd4 .gbpc{*display:inline}.gbpc .gbps,.gbpc .gbps2{display:block;margin:0 20px}#gbmplp.gbps{margin:0 10px}.gbpc .gbps{color:#000;font-weight:bold}.gbpc .gbpd{margin-bottom:5px}.gbpd .gbmt,.gbpd .gbps{color:#666 !important}.gbpd .gbmt{opacity:.4;filter:alpha(opacity=40)}.gbps2{color:#666;display:block}.gbp0{display:none}.gbp0 .gbps2{font-weight:bold}#gbd4 .gbmcc{margin-top:5px}.gbpmc{background:#fef9db}.gbpmc .gbpmtc{padding:10px 20px}#gbpm{border:0;*border-collapse:collapse;border-spacing:0;margin:0;white-space:normal}#gbpm .gbpmtc{border-top:none;color:#000 !important;font:11px Arial,sans-serif}#gbpms{*white-space:nowrap}.gbpms2{font-weight:bold;white-space:nowrap}#gbmpal{*border-collapse:collapse;border-spacing:0;border:0;margin:0;white-space:nowrap;width:100%}.gbmpala,.gbmpalb{font:13px Arial,sans-serif;line-height:27px;padding:10px 20px 0;white-space:nowrap}.gbmpala{padding-left:0;text-align:left}.gbmpalb{padding-right:0;text-align:right}#gbmpasb .gbps{color:#000}#gbmpal .gbqfbb{margin:0 20px}.gbp0 .gbps{*display:inline}a.gbiba{margin:8px 20px 10px}.gbmpiaw{display:inline-block;pad
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+ding-right:10px;margin-bottom:6px;margin-top:10px}.gbxv{visibility:hidden}.gbmpiaa{display:block;margin-top:10px}.gbmpia{border:none;display:block;height:48px;width:48px}.gbmpnw{display:inline-block;height:auto;margin:10px 0;vertical-align:top}
+.gbqfb,.gbqfba,.gbqfbb{-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;cursor:default !important;display:inline-block;font-weight:bold;height:29px;line-height:29px;min-width:54px;*min-width:70px;padding:0 8px;text-align:center;text-decoration:none !important;-moz-user-select:none;-webkit-user-select:none}.gbqfb:focus,.gbqfba:focus,.gbqfbb:focus{border:1px solid #4d90fe;-moz-box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.5);-webkit-box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.5);box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.5);outline:none}.gbqfb-hvr:focus,.gbqfba-hvr:focus,.gbqfbb-hvr:focus{-webkit-box-shadow:inset 0 0 0 1px #fff,0 1px 1px rgba(0,0,0,.1);-moz-box-shadow:inset 0 0 0 1px #fff,0 1px 1px rgba(0,0,0,.1);box-shadow:inset 0 0 0 1px #fff,0 1px 1px rgba(0,0,0,.1)}.gbqfb-no-focus:focus{border:1px solid #3079ed;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none}.gbqfb-hvr,.gbqfba-hvr,.gbqfbb-hvr{-webkit-box-shadow:0 1px 1px rgba(0,0,0,.1);-moz-box-shadow:0 1px 1px rgba(0,0,0,.1);box-shadow:0 1px 1px rgba(0,0,0,.1)}.gbqfb::-moz-focus-inner,.gbqfba::-moz-focus-inner,.gbqfbb::-moz-focus-inner{borde
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+r:0}.gbqfba,.gbqfbb{border:1px solid #dcdcdc;border-color:rgba(0,0,0,.1);color:#444 !important;font-size:11px}.gbqfb{background-color:#4d90fe;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);background-image:-moz-linear-gradient(top,#4d90fe,#4787ed);background-image:-ms-linear-gradient(top,#4d90fe,#4787ed);background-image:-o-linear-gradient(top,#4d90fe,#4787ed);background-image:linear-gradient(top,#4d90fe,#4787ed);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#4d90fe',EndColorStr='#4787ed');border:1px solid #3079ed;color:#fff!important;margin:0 0}.gbqfb-hvr{border-color:#2f5bb7}.gbqfb-hvr:focus{border-color:#2f5bb7}.gbqfb-hvr,.gbqfb-hvr:focus{background-color:#357ae8;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#357ae8));background-image:-webkit-linear-gradient(top,#4d90fe,#357ae8);background-image:-moz-linear-gradient(top,#4d90fe,#357ae8);background-image:-ms-linear-gradient(top,#4d90fe,#357ae8);background-image:-o-linear-gradient(top,#4d90fe,#357ae8);background-image:linear-gradient(top,#4d90fe,#357ae8)}.gbqfb:active{background-color:inherit;-webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);-moz-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3)}.gbqfba{background-color:#f5f5f5;b
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+ackground-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-moz-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-ms-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-o-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:linear-gradient(top,#f5f5f5,#f1f1f1);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#f5f5f5',EndColorStr='#f1f1f1')}.gbqfba-hvr,.gbqfba-hvr:active{background-color:#f8f8f8;background-image:-webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-moz-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-ms-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-o-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:linear-gradient(top,#f8f8f8,#f1f1f1);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#f8f8f8',EndColorStr='#f1f1f1')}.gbqfbb{background-color:#fff;background-image:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#fbfbfb));background-image:-webkit-linear-gradient(top,#fff,#fbfbfb);background-image:-moz-linear-gradient(top,#fff,#fbfbfb);background-image:-ms-linear-gradient(top,#fff,#fbfbfb);background-image:-o-linear-gradient(top,#fff,#fbfbfb);background-image:linear-gradient(top,#fff,#fbfbfb);fil
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+ter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff',EndColorStr='#fbfbfb')}.gbqfbb-hvr,.gbqfbb-hvr:active{background-color:#fff;background-image:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#f8f8f8));background-image:-webkit-linear-gradient(top,#fff,#f8f8f8);background-image:-moz-linear-gradient(top,#fff,#f8f8f8);background-image:-ms-linear-gradient(top,#fff,#f8f8f8);background-image:-o-linear-gradient(top,#fff,#f8f8f8);background-image:linear-gradient(top,#fff,#f8f8f8);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff',EndColorStr='#f8f8f8')}.gbqfba-hvr,.gbqfba-hvr:active,.gbqfbb-hvr,.gbqfbb-hvr:active{border-color:#c6c6c6;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.1);-moz-box-shadow:0 1px 1px rgba(0,0,0,.1);box-shadow:0 1px 1px rgba(0,0,0,.1);color:#222 !important}.gbqfba:active,.gbqfbb:active{-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.1);-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,.1);box-shadow:inset 0 1px 2px rgba(0,0,0,.1)}
+#gbmpas{max-height:220px}#gbmm{max-height:530px}.gbsb{-webkit-box-sizing:border-box;display:block;position:relative;*zoom:1}.gbsbic{overflow:auto}.gbsbis .gbsbt,.gbsbis .gbsbb{-webkit-mask-box-image:-webkit-gradient(linear,left top,right top,color-stop(0,rgba(0,0,0,.1)),color-stop(.5,rgba(0,0,0,.8)),color-stop(1,rgba(0,0,0,.1)));left:0;margin-right:0;opacity:0;position:absolute;width:100%}.gbsb .g
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+bsbt:after,.gbsb .gbsbb:after{content:"";display:block;height:0;left:0;position:absolute;width:100%}.gbsbis .gbsbt{background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.2)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,0));background-image:-moz-linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,0));background-image:-ms-linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,0));background-image:-o-linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,0));background-image:linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,0));height:6px;top:0}.gbsb .gbsbt:after{border-top:1px solid #ebebeb;border-color:rgba(0,0,0,.3);top:0}.gbsb .gbsbb{-webkit-mask-box-image:-webkit-gradient(linear,left top,right top,color-stop(0,rgba(0,0,0,.1)),color-stop(.5,rgba(0,0,0,.8)),color-stop(1,rgba(0,0,0,.1)));background:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.2)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,.2),rgba(0,0,0,0));background-image:-moz-linear-gradient(bottom,rgba(0,0,0,.2),rgba(0,0,0,0));background-image:-ms-linear-gradient(bottom,rgba(0,0,0,.2),rgba(0,0,0,0));background-image:-o-linear-gradient(bottom,rgba(0,0,0,.2),rgba(0,0,0,0));background-image:linear-gradient(bottom,rgba(0,0,0,.2),rgba(0,0,0,0));bottom:0;height:4px}.gbsb .gbsbb:after{border-bottom:1px solid #ebebeb;border-color:rgba(0,0,0,.3);bot
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+tom:0}
+</style><style>body,td,a,p,.h{font-family:arial,sans-serif}body{margin:0;overflow-y:scroll}#gog{padding:3px 8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}.h{color:#36c}.q{color:#00c}.ts td{padding:0}.ts{border-collapse:collapse}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{display:inline-box;display:inline-block;margin:3px 0 4px;margin-left:4px}input{font-family:inherit}a.gb1,a.gb2,a.gb3,a.gb4{color:#11c !important}body{background:#fff;color:black}a{color:#11c;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl a{color:#36c}a:visited{color:#551a8b}a.gb1,a.gb4{text-decoration:underline}a.gb3:hover{text-decoration:none}#ghead a.gb2:hover{color:#fff !important}.sblc{padding-top:5px}.sblc a{display:block;margin:2px 0;margin-left:13px;font-size:11px}.lsbb{background:#eee;border:solid 1px;border-color:#ccc #999 #999 #ccc;height:30px}.lsbb{display:block}.ftl,#fll a{display:inline-block;margin:0 12px}.lsb{background:url(/images/nav_logo229.png) 0 -261px repeat-x;border:none;color:#000;cursor:pointer;height:30px;margin:0;outline:0;font:15px arial,sans-serif;vertical-align:top}.lsb:active{background:#ccc}.lst:focus{outline:none}</style><script>(function(){window.google.erd={sp:'hp',jsr:1,bv:148,cs:false};var f=0,g,h=google.erd,k=h.jsr,l;goog
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+le.jsmp=!0;google.ml=function(a,b,c,e){google.dl&&google.dl(a,c,b);if(google._epc(a,b,c,e))return null;a=google._gld(a,"/gen_204?atyp=i",c||{},!1);e||google.log(0,"",a);return a};google._epc=function(a,b,c,e){var d=google.erd.jsr;if(0>d){window.console&&console.error(a,c);if(-2==d)throw a;return!0}if(!a||!a.message||"Error loading script"==a.message||!(m()&&1>f||e))return!0;f++;b&&(g=a&&a.message);return!1};google._gld=function(a,b,c,e){b=b+"&ei="+encodeURIComponent(google.kEI)+(google.kEXPI?"&jexpid="+encodeURIComponent(google.kEXPI):"")+"&srcpg="+encodeURIComponent(h.sp)+"&jsr="+google.erd.jsr+"&bver="+encodeURIComponent(h.bv);for(var d in c)b+="&",b+=encodeURIComponent(d),b+="=",b+=encodeURIComponent(c[d]);b=b+"&emsg="+encodeURIComponent(a.name+": "+a.message);b=b+"&jsst="+encodeURIComponent(a.stack||"N/A");!e&&2E3<=b.length&&(b=b.substr(0,2E3));return b};function m(){if(!h.cs)return!0;var a=google.erd.jsr;void 0==l&&(l=0>a||1==a||1==Math.ceil(Math.random()*a));return l}google.ojsr=function(a){google.erd.jsr=a;l=void 0};google.rjsr=function(){google.erd.jsr=k;l=void 0};window.onerror=function(a,b,c,e,d){g!==a&&google.ml(d instanceof Error?d:Error(a),!1);g=null;m()&&1>f||(window.onerror=null)};})();(function(){try{var e=this;var aa=function(a,b,c,d){d=d||{};d._sn=["cfg",b,c].join(".");window.gbar.logger.ml(a,d)};var g=window.gbar=window.gbar||{},h=window.gbar.i=window.gbar.i||
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+{},ba;function _tvn(a,b){a=parseInt(a,10);return isNaN(a)?b:a}function _tvf(a,b){a=parseFloat(a);return isNaN(a)?b:a}function _tvv(a){return!!a}function p(a,b,c){(c||g)[a]=b}g.bv={n:_tvn("2",0),r:"",f:".66.41.",e:"1300102,3700303,3700347,3700433,3700442",m:_tvn("1",1)};
+function ca(a,b,c){var d="on"+b;if(a.addEventListener)a.addEventListener(b,c,!1);else if(a.attachEvent)a.attachEvent(d,c);else{var f=a[d];a[d]=function(){var a=f.apply(this,arguments),b=c.apply(this,arguments);return void 0==a?b:void 0==b?a:b&&a}}}var da=function(a){return function(){return g.bv.m==a}},ea=da(1),fa=da(2);p("sb",ea);p("kn",fa);h.a=_tvv;h.b=_tvf;h.c=_tvn;h.i=aa;var q=window.gbar.i.i;var r=function(){},u=function(){},ia=function(a){var b=new Image,c=ga;b.onerror=b.onload=b.onabort=function(){try{delete ha[c]}catch(d){}};ha[c]=b;b.src=a;ga=c+1},ha=[],ga=0;p("logger",{il:u,ml:r,log:ia});var v=window.gbar.logger;var w={},ja={},z=[],ka=h.b("0.1",.1),la=h.a("1",!0),ma=function(a,b){z.push([a,b])},na=function(a,b){w[a]=b},oa=function(a){return a in w},A={},B=function(a,b){A[a]||(A[a]=[]);A[a].push(b)},D=function(a){B("m",a)},pa=function(a,b){var c=document.createElement("script");c.src=a;c.async=la;Math.random()<ka&&(c.onerror=function(){c.onerror=null;r(Error("Bundle load failed: name="+(b||"UNK")+" url="+a))});(document.getElementById("xjsc")||document.getElementsByTagName("body")[0]||
+document.getElemen
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+tsByTagName("head")[0]).appendChild(c)},F=function(a){for(var b=0,c;(c=z[b])&&c[0]!=a;++b);!c||c[1].l||c[1].s||(c[1].s=!0,qa(2,a),c[1].url&&pa(c[1].url,a),c[1].libs&&E&&E(c[1].libs))},ra=function(a){B("gc",a)},sa=null,ta=function(a){sa=a},qa=function(a,b,c){if(sa){a={t:a,b:b};if(c)for(var d in c)a[d]=c[d];try{sa(a)}catch(f){}}};p("mdc",w);p("mdi",ja);p("bnc",z);p("qGC",ra);p("qm",D);p("qd",A);p("lb",F);p("mcf",na);p("bcf",ma);p("aq",B);p("mdd","");
+p("has",oa);p("trh",ta);p("tev",qa);if(h.a("m;/_/scs/abc-static/_/js/k=gapi.gapi.en.BznCEch7yrY.O/m=__features__/rt=j/d=1/rs=AHpOoo89FbxkNsIBOnpzYJliP4nzTuPXPg")){var ua=h.a("1"),va=h.a(""),wa=h.a(""),xa=window.gapi={},ya=function(a,b){var c=function(){g.dgl(a,b)};ua?D(c):(B("gl",c),F("gl"))},za={},Aa=function(a){a=a.split(":");for(var b;(b=a.pop())&&za[b];);return!b},E=function(a){function b(){for(var b=a.split(":"),d=0,f;f=b[d];++d)za[f]=1;for(b=0;d=z[b];++b)d=d[1],(f=d.libs)&&!d.l&&d.i&&Aa(f)&&d.i()}g.dgl(a,b)},H=window.___jsl={};H.h="m;/_/scs/abc-static/_/js/k=gapi.gapi.en.BznCEch7yrY.O/m=__features__/rt=j/d=1/rs=AHpOoo89FbxkNsIBOnpzYJliP4nzTuPXPg";H.ms="https://apis.google.com";
+H.m="";H.l=[];ua||z.push(["gl",{url:"//ssl.gstatic.com/gb/js/abc/glm_e7bb39a7e1a24581ff4f8d199678b1b9.js"}]);var Ba={pu:va,sh:"",si:wa,hl:"en"};w.gl=Ba;p("load",ya,xa);p("dgl",ya);p("agl",Aa);h.o=ua};var Ca=h.b("0.1",.001),Da=0;
+function _mlToken(a,b){try
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+{if(1>Da){Da++;var c=a;b=b||{};var d=encodeURIComponent,f=["//www.google.com/gen_204?atyp=i&zx=",(new Date).getTime(),"&jexpid=",d("28834"),"&srcpg=",d("prop=1"),"&jsr=",Math.round(1/Ca),"&ogev=",d("E_5JWY2yB5b2jwOGvbOABg"),"&ogf=",g.bv.f,"&ogrp=",d(""),"&ogv=",d("1497495522.0"),"&oggv="+d("es_plusone_gc_20170607.0_p0"),"&ogd=",d("com"),"&ogc=",d("USA"),"&ogl=",d("en")];b._sn&&(b._sn=
+"og."+b._sn);for(var k in b)f.push("&"),f.push(d(k)),f.push("="),f.push(d(b[k]));f.push("&emsg=");f.push(d(c.name+":"+c.message));var l=f.join("");Ea(l)&&(l=l.substr(0,2E3));var m=l;var n=window.gbar.logger._aem(a,m);ia(n)}}catch(t){}}var Ea=function(a){return 2E3<=a.length},Fa=function(a,b){return b};function Ga(a){r=a;p("_itl",Ea,v);p("_aem",Fa,v);p("ml",r,v);a={};w.er=a}h.a("")?Ga(function(a){throw a;}):h.a("1")&&Math.random()<Ca&&Ga(_mlToken);var _E="left",Ha=h.a(""),J=function(a,b){var c=a.className;I(a,b)||(a.className+=(""!=c?" ":"")+b)},K=function(a,b){var c=a.className;b=new RegExp("\\s?\\b"+b+"\\b");c&&c.match(b)&&(a.className=c.replace(b,""))},I=function(a,b){b=new RegExp("\\b"+b+"\\b");a=a.className;return!(!a||!a.match(b))},Ia=function(a,b){I(a,b)?K(a,b):J(a,b)},Ja=function(a,b){a[b]=function(c){var d=arguments;g.qm(function(){a[b].apply(this,d)})}},Ka=function(a){a=["//www.gstatic.com","/og/_/js/d=1/k=",
+"og.og2.en_US.qyHu3ZRo7eU.O","/rt=j/m=",a,"/rs=","AA2YrTvD9LV4vcsxxciHqbesqehdTdY
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+1QA"];Ha&&a.push("?host=www.gstatic.com&bust=og.og2.en_US.08cy6n-goAc.DU");a=a.join("");pa(a)};p("ca",J);p("cr",K);p("cc",I);h.k=J;h.l=K;h.m=I;h.n=Ia;h.p=Ka;h.q=Ja;var La=["gb_71","gb_155"],Ma;function Na(a){Ma=a}function Oa(a){var b=Ma&&!a.href.match(/.*\/accounts\/ClearSID[?]/)&&encodeURIComponent(Ma());b&&(a.href=a.href.replace(/([?&]continue=)[^&]*/,"$1"+b))}function Pa(a){window.gApplication&&(a.href=window.gApplication.getTabUrl(a.href))}function Qa(a){try{var b=(document.forms[0].q||"").value;b&&(a.href=a.href.replace(/([?&])q=[^&]*|$/,function(a,d){return(d||"&")+"q="+encodeURIComponent(b)}))}catch(c){q(c,"sb","pq")}}
+var Ra=function(){for(var a=[],b=0,c;c=La[b];++b)(c=document.getElementById(c))&&a.push(c);return a},Sa=function(){var a=Ra();return 0<a.length?a[0]:null},Ta=function(){return document.getElementById("gb_70")},L={},M={},Ua={},N={},O=void 0,Za=function(a,b){try{var c=document.getElementById("gb");J(c,"gbpdjs");P();Va(document.getElementById("gb"))&&J(c,"gbrtl");if(b&&b.getAttribute){var d=b.getAttribute("aria-owns");if(d.length){var f=document.getElementById(d);if(f){var k=b.parentNode;if(O==d)O=void 0,
+K(k,"gbto");else{if(O){var l=document.getElementById(O);if(l&&l.getAttribute){var m=l.getAttribute("aria-owner");if(m.length){var n=document.getElementById(m);n&&n.parentNode&&K(n.parentNode,"gbto")}}}Wa(f)&&Xa(f);O=d;J(k,"gbto")}}}}D(function(){g.tg(a,b,!0)}
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+);Ya(a)}catch(t){q(t,"sb","tg")}},$a=function(a){D(function(){g.close(a)})},ab=function(a){D(function(){g.rdd(a)})},Va=function(a){var b,c=document.defaultView;c&&c.getComputedStyle?(a=c.getComputedStyle(a,""))&&(b=a.direction):b=a.currentStyle?
+a.currentStyle.direction:a.style.direction;return"rtl"==b},cb=function(a,b,c){if(a)try{var d=document.getElementById("gbd5");if(d){var f=d.firstChild,k=f.firstChild,l=document.createElement("li");l.className=b+" gbmtc";l.id=c;a.className="gbmt";l.appendChild(a);if(k.hasChildNodes()){c=[["gbkc"],["gbf","gbe","gbn"],["gbkp"],["gbnd"]];for(var d=0,m=k.childNodes.length,f=!1,n=-1,t=0,C;C=c[t];t++){for(var T=0,G;G=C[T];T++){for(;d<m&&I(k.childNodes[d],G);)d++;if(G==b){k.insertBefore(l,k.childNodes[d]||
+null);f=!0;break}}if(f){if(d+1<k.childNodes.length){var U=k.childNodes[d+1];I(U.firstChild,"gbmh")||bb(U,C)||(n=d+1)}else if(0<=d-1){var V=k.childNodes[d-1];I(V.firstChild,"gbmh")||bb(V,C)||(n=d)}break}0<d&&d+1<m&&d++}if(0<=n){var x=document.createElement("li"),y=document.createElement("div");x.className="gbmtc";y.className="gbmt gbmh";x.appendChild(y);k.insertBefore(x,k.childNodes[n])}g.addHover&&g.addHover(a)}else k.appendChild(l)}}catch(Ab){q(Ab,"sb","al")}},bb=function(a,b){for(var c=b.length,
+d=0;d<c;d++)if(I(a,b[d]))return!0;return!1},db=function(a,b,c){cb(a,b,c)},eb=function(a,b){cb(a,"gbe",b)},fb=function(){D(function(){g.pcm&&g.pcm()})
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+},gb=function(){D(function(){g.pca&&g.pca()})},hb=function(a,b,c,d,f,k,l,m,n,t){D(function(){g.paa&&g.paa(a,b,c,d,f,k,l,m,n,t)})},ib=function(a,b){L[a]||(L[a]=[]);L[a].push(b)},jb=function(a,b){M[a]||(M[a]=[]);M[a].push(b)},kb=function(a,b){Ua[a]=b},lb=function(a,b){N[a]||(N[a]=[]);N[a].push(b)},Ya=function(a){a.preventDefault&&a.preventDefault();a.returnValue=
+!1;a.cancelBubble=!0},mb=null,Xa=function(a,b){P();if(a){nb(a,"Opening&hellip;");Q(a,!0);b="undefined"!=typeof b?b:1E4;var c=function(){ob(a)};mb=window.setTimeout(c,b)}},pb=function(a){P();a&&(Q(a,!1),nb(a,""))},ob=function(a){try{P();var b=a||document.getElementById(O);b&&(nb(b,"This service is currently unavailable.%1$sPlease try again later.","%1$s"),Q(b,!0))}catch(c){q(c,"sb","sdhe")}},nb=function(a,b,c){if(a&&b){var d=Wa(a);if(d){if(c){d.innerHTML="";b=b.split(c);c=0;for(var f;f=b[c];c++){var k=document.createElement("div");
+k.innerHTML=f;d.appendChild(k)}}else d.innerHTML=b;Q(a,!0)}}},Q=function(a,b){(b=void 0!==b?b:!0)?J(a,"gbmsgo"):K(a,"gbmsgo")},Wa=function(a){for(var b=0,c;c=a.childNodes[b];b++)if(I(c,"gbmsg"))return c},P=function(){mb&&window.clearTimeout(mb)},qb=function(a){var b="inner"+a;a="offset"+a;return window[b]?window[b]:document.documentElement&&document.documentElement[a]?document.documentElement[a]:0},rb=function(){return!1},sb=function(){return!!O};p("so",Sa);p("sos",Ra);p("si",Ta);p("tg",Za);
+p("
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+close",$a);p("rdd",ab);p("addLink",db);p("addExtraLink",eb);p("pcm",fb);p("pca",gb);p("paa",hb);p("ddld",Xa);p("ddrd",pb);p("dderr",ob);p("rtl",Va);p("op",sb);p("bh",L);p("abh",ib);p("dh",M);p("adh",jb);p("ch",N);p("ach",lb);p("eh",Ua);p("aeh",kb);ba=h.a("")?Pa:Qa;p("qs",ba);p("setContinueCb",Na);p("pc",Oa);p("bsy",rb);h.d=Ya;h.j=qb;var tb={};w.base=tb;z.push(["m",{url:"//ssl.gstatic.com/gb/js/sem_5d66c29bc58baacda7ce693764edfc8e.js"}]);g.sg={c:"1"};p("wg",{rg:{}});var ub={tiw:h.c("15000",0),tie:h.c("30000",0)};w.wg=ub;var vb={thi:h.c("10000",0),thp:h.c("180000",0),tho:h.c("5000",0),tet:h.b("0.5",0)};w.wm=vb;if(h.a("1")){var wb=h.a("");z.push(["gc",{auto:wb,url:"//ssl.gstatic.com/gb/js/abc/gci_91f30755d6a6b787dcc2a4062e6e9824.js",libs:"googleapis.client:plusone:gapi.iframes"}]);var xb={version:"gci_91f30755d6a6b787dcc2a4062e6e9824.js",index:"",lang:"en"};w.gc=xb;var yb=function(a){window.googleapis&&window.iframes?a&&a():(a&&ra(a),F("gc"))};p("lGC",yb);h.a("1")&&p("lPWF",yb)};window.__PVT="";if(h.a("1")&&h.a("1")){var zb=function(a){yb(function(){B("pw",a);F("pw")})};p("lPW",zb);z.push(["pw",{url:"//ssl.gstatic.com/gb/js/abc/pwm_45f73e4df07a0e388b0fa1f3d30e7280.js"}]);var Bb=[],Cb=function(a){Bb[0]=a},Db=function(a,b){b=b||{};b._sn="pw";r(a,b)},Eb={signed:Bb,elog:Db,base:"https://plusone.google.com/u/0",loadTime:(new Date).getTime()};w.pw=Eb;var Fb=function(a,b){var c=b.split(".
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+");b=function(){var b=arguments;a(function(){for(var a=g,d=0,f=c.length-1;d<f;++d)a=a[c[d]];a[c[d]].apply(a,b)})};for(var d=g,f=0,k=c.length-1;f<
+k;++f)d=d[c[f]]=d[c[f]]||{};return d[c[f]]=b};Fb(zb,"pw.clk");Fb(zb,"pw.hvr");p("su",Cb,g.pw)};var Gb=[1,2,3,4,5,6,9,10,11,13,14,28,29,30,34,35,37,38,39,40,41,42,43,48,49,500];var Hb=h.b("0.001",1E-4),Ib=h.b("1",1),Jb=!1,Kb=!1;if(h.a("1")){var Lb=Math.random();Lb<Hb&&(Jb=!0);Lb<Ib&&(Kb=!0)}var R=null;
+function Mb(a,b){var c=Hb,d=Jb;var f=a;if(!R){R={};for(var k=0;k<Gb.length;k++){var l=Gb[k];R[l]=!0}}if(f=!!R[f])c=Ib,d=Kb;if(d){var d=encodeURIComponent;if(g.rp){var m=g.rp();m="-1"!=m?m:""}else m="";f=(new Date).getTime();var k=d("28834"),l=d("E_5JWY2yB5b2jwOGvbOABg"),n=g.bv.f,t=d("1");m=d(m);var c=Math.round(1/c),C=d("1497495522.0"),T="&oggv="+d("es_plusone_gc_20170607.0_p0"),G=d("com"),U=d("en"),
+V=d("USA");var x=0;h.a("")&&(x|=1);h.a("")&&(x|=2);h.a("")&&(x|=4);a=["//www.google.com/gen_204?atyp=i&zx=",f,"&oge=",a,"&ogex=",k,"&ogev=",l,"&ogf=",n,"&ogp=",t,"&ogrp=",m,"&ogsr=",c,"&ogv=",C,T,"&ogd=",G,"&ogl=",U,"&ogc=",V,"&ogus=",x];if(b){"ogw"in b&&(a.push("&ogw="+b.ogw),delete b.ogw);f=[];for(y in b)0!=f.length&&f.push(","),f.push(Nb(y)),f.push("."),f.push(Nb(b[y]));var y=f.join("");""!=y&&(a.push("&ogad="),a.push(d(y)))}ia(a.join(""))}}
+function Nb(a){"number"==typeof a&&(a+="");return"string"==typeof a?a.replace(".","%2E").replace(",
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1285
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1261 bytes of data
+FFI| Received data:
+","%2C"):a}u=Mb;p("il",u,v);var Ob={};w.il=Ob;var Pb=function(a,b,c,d,f,k,l,m,n,t){D(function(){g.paa(a,b,c,d,f,k,l,m,n,t)})},Qb=function(){D(function(){g.prm()})},Rb=function(a){D(function(){g.spn(a)})},Sb=function(a){D(function(){g.sps(a)})},Tb=function(a){D(function(){g.spp(a)})},Ub={"27":"https://ssl.gstatic.com/gb/images/silhouette_24.png","27":"https://ssl.gstatic.com/gb/images/silhouette_24.png","27":"https://ssl.gstatic.com/gb/images/silhouette_24.png"},Vb=function(a){return(a=Ub[a])||"https://ssl.gstatic.com/gb/images/silhouette_24.png"},
+Wb=function(){D(function(){g.spd()})};p("spn",Rb);p("spp",Tb);p("sps",Sb);p("spd",Wb);p("paa",Pb);p("prm",Qb);ib("gbd4",Qb);
+if(h.a("")){var Xb={d:h.a(""),e:"",sanw:h.a(""),p:"https://ssl.gstatic.com/gb/images/silhouette_96.png",cp:"1",xp:h.a("1"),mg:"%1$s (delegated)",md:"%1$s (default)",mh:"220",s:"1",pp:Vb,ppl:h.a(""),ppa:h.a(""),
+ppm:"Google+ page"};w.prf=Xb};var S,Yb,W,Zb,X=0,$b=function(a,b,c){if(a.indexOf)return a.indexOf(b,c);if(Array.indexOf)return Array.indexOf(a,b,c);for(c=null==c?0:0>c?Math.max(0,a.length+c):c;c<a.length;c++)if(c in a&&a[c]===b)return c;return-1},Y=function(a,b){return-1==$b(a,X)?(q(Error(X+"_"+b),"up","caa"),!1):!0},bc=function(a,b){Y([1,2],"r")&&(S[a]=S[a]||[],S[a].
+
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+7a1
+push(b),2==X&&window.setTimeout(function(){b(ac(a))},0))},cc=function(a,b,c){if(Y([1],"nap")&&c){for(var d=0;d<c.length;d++)Yb[c[d]]=!0;g.up.spl(a,b,"nap",c)}},dc=
+function(a,b,c){if(Y([1],"aop")&&c){if(W)for(var d in W)W[d]=W[d]&&-1!=$b(c,d);else for(W={},d=0;d<c.length;d++)W[c[d]]=!0;g.up.spl(a,b,"aop",c)}},ec=function(){try{if(X=2,!Zb){Zb=!0;for(var a in S)for(var b=S[a],c=0;c<b.length;c++)try{b[c](ac(a))}catch(d){q(d,"up","tp")}}}catch(d){q(d,"up","mtp")}},ac=function(a){if(Y([2],"ssp")){var b=!Yb[a];W&&(b=b&&!!W[a]);return b}};Zb=!1;S={};Yb={};W=null;
+var X=1,fc=function(a){var b=!1;try{b=a.cookie&&a.cookie.match("PREF")}catch(c){}return!b},gc=function(){try{return!!e.localStorage&&"object"==typeof e.localStorage}catch(a){return!1}},hc=function(a){return a&&a.style&&a.style.behavior&&"undefined"!=typeof a.load},ic=function(a,b,c,d){try{fc(document)||(d||(b="og-up-"+b),gc()?e.localStorage.setItem(b,c):hc(a)&&(a.setAttribute(b,c),a.save(a.id)))}catch(f){f.code!=DOMException.QUOTA_EXCEEDED_ERR&&q(f,"up","spd")}},jc=function(a,b,c){try{if(fc(document))return"";
+c||(b="og-up-"+b);if(gc())return e.localStorage.getItem(b);if(hc(a))return a.load(a.id),a.getAttribute(b)}catch(d){d.code!=DOMException.QUOTA_EXCEEDED_ERR&&q(d,"up","gpd")}return""},kc=function(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)},lc=function(a){for(var b=0,c;c
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 583
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 559 bytes of data
+FFI| Received data:
+=a[b];b++){var d=g.up;c=c in d&&d[c];if(!c)return!1}return!0},mc=function(a,b){try{if(fc(a))return-1;var c=a.cookie.match(/OGPC=([^;]*)/);if(c&&c[1]){var d=c[1].match(new RegExp("\\b"+
+b+"-([0-9]+):"));if(d&&d[1])return parseInt(d[1],10)}}catch(f){f.code!=DOMException.QUOTA_EXCEEDED_ERR&&q(f,"up","gcc")}return-1};p("up",{r:bc,nap:cc,aop:dc,tp:ec,ssp:ac,spd:ic,gpd:jc,aeh:kc,aal:lc,gcc:mc});var Z=function(a,b){a[b]=function(c){var d=arguments;g.qm(function(){a[b].apply(this,d)})}};Z(g.up,"sl");Z(g.up,"si");Z(g.up,"spl");Z(g.up,"dpc");Z(g.up,"iic");g.mcf
+
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 222
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 198 bytes of data
+FFI| Received data:
+c0
+("up",{sp:h.b("0.01",1),tld:"com",prid:"1"});function nc(){function a(){for(var b;(b=k[l++])&&"m"!=b[0]&&!b[1].auto;);b&&(qa(2,b[0]),b[1].url&&pa(b[1].url,b[0]),b[1].libs&&E&&E(b[1].libs));l<k
+
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+31a5
+.length&&setTimeout(a,0)}function b(){0<f--?setTimeout(b,0):a()}var c=h.a("1"),d=h.a(""),f=3,k=z,l=0,m=window.gbarOnReady;if(m)try{m()}catch(n){q(n,"ml","or")}d?p("ldb",a):c?ca(window,"load",b):b()}p("rdl",nc);}catch(e){window.gbar&&gbar.logger&&gbar.logger.ml(e,{"_sn":"cfg.init"});}})();
+(function(){try{var a=window.gbar;a.mcf("pm",{p:""});}catch(e){window.gbar&&gbar.logger&&gbar.logger.ml(e,{"_sn":"cfg.init"});}})();
+(function(){try{var a=window.gbar;a.mcf("mm",{s:"1"});}catch(e){window.gbar&&gbar.logger&&gbar.logger.ml(e,{"_sn":"cfg.init"});}})();
+(function(){try{var d=window.gbar.i.i;var e=window.gbar;var f=e.i;var g=f.c("1",0),h=/\bgbmt\b/,k=function(a){try{var b=document.getElementById("gb_"+g),c=document.getElementById("gb_"+a);b&&f.l(b,h.test(b.className)?"gbm0l":"gbz0l");c&&f.k(c,h.test(c.className)?"gbm0l":"gbz0l")}catch(l){d(l,"sj","ssp")}g=a},m=e.qs,n=function(a){var b=a.href;var c=window.location.href.match(/.*?:\/\/[^\/]*/)[0],c=new RegExp("^"+c+"/search\\?");(b=c.test(b))&&!/(^|\\?|&)ei=/.test(a.href)&&(b=window.google)&&b.kEXPI&&(a.href+="&ei="+b.kEI)},p=function(a){m(a);
+n(a)},q=function(){if(window.google&&window.google.sn){var a=/.*hp$/;return a.test(window.google.sn)?"":"1"}return"-1"};e.rp=q;e.slp=k;e.qs=p;e.qsi=n;}catch(e){window.gbar&&gbar.logger&&gbar.logger.ml(e,{"_sn":"cfg.init"});}})();
+(function(){try{var a=this;var b=window.gbar;var c=b.i;var d
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+=c.a,e=c.c,f={cty:"USA",cv:"1497495522",dbg:d(""),ecv:"0",ei:e("E_5JWY2yB5b2jwOGvbOABg"),ele:d("1"),esr:e("0.1"),evts:["mousedown","touchstart","touchmove","wheel","keydown"],gbl:"es_plusone_gc_20170607.0_p0",hd:"com",hl:"en",irp:d(""),pid:e("1"),
+snid:e("28834"),to:e("300000"),u:e(""),vf:".66.41."},g=f,h=["bndcfg"],k=a;h[0]in k||!k.execScript||k.execScript("var "+h[0]);for(var l;h.length&&(l=h.shift());)h.length||void 0===g?k=k[l]&&k[l]!==Object.prototype[l]?k[l]:k[l]={}:k[l]=g;}catch(e){window.gbar&&gbar.logger&&gbar.logger.ml(e,{"_sn":"cfg.init"});}})();
+(function(){try{window.gbar.rdl();}catch(e){window.gbar&&gbar.logger&&gbar.logger.ml(e,{"_sn":"cfg.init"});}})();
+</script><link href="/images/branding/product/ico/googleg_lodp.ico" rel="shortcut icon"></head><body bgcolor="#fff"><script>(function(){var src='/images/nav_logo229.png';var iesg=false;document.body.onload = function(){window.n && window.n();if (document.images){new Image().src=src;}
+if (!iesg){document.f&&document.f.q.focus();document.gbqf&&document.gbqf.q.focus();}
+}
+})();</script><div id="mngb"> <div id=gb><script nonce=''>window.gbar&&gbar.eli&&gbar.eli()</script><div id=gbw><div id=gbz><span class=gbtcb></span><ol id=gbzc class=gbtc><li class=gbt><a onclick=gbar.logger.il(1,{t:1}); class="gbzt gbz0l gbp1" id=gb_1 href="https://www.google.com/webhp?tab=ww"><span class=gbtb2></span><span class=gbts>Search</span
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+></a></li><li class=gbt><a onclick=gbar.logger.il(1,{t:2}); class=gbzt id=gb_2 href="https://www.google.com/imghp?hl=en&tab=wi"><span class=gbtb2></span><span class=gbts>Images</span></a></li><li class=gbt><a onclick=gbar.logger.il(1,{t:8}); class=gbzt id=gb_8 href="https://maps.google.com/maps?hl=en&tab=wl"><span class=gbtb2></span><span class=gbts>Maps</span></a></li><li class=gbt><a onclick=gbar.logger.il(1,{t:78}); class=gbzt id=gb_78 href="https://play.google.com/?hl=en&tab=w8"><span class=gbtb2></span><span class=gbts>Play</span></a></li><li class=gbt><a onclick=gbar.logger.il(1,{t:36}); class=gbzt id=gb_36 href="https://www.youtube.com/?tab=w1"><span class=gbtb2></span><span class=gbts>YouTube</span></a></li><li class=gbt><a onclick=gbar.logger.il(1,{t:5}); class=gbzt id=gb_5 href="https://news.google.com/nwshp?hl=en&tab=wn"><span class=gbtb2></span><span class=gbts>News</span></a></li><li class=gbt><a onclick=gbar.logger.il(1,{t:23}); class=gbzt id=gb_23 href="https://mail.google.com/mail/?tab=wm"><span class=gbtb2></span><span class=gbts>Gmail</span></a></li><li class=gbt><a onclick=gbar.logger.il(1,{t:49}); class=gbzt id=gb_49 href="https://drive.google.com/?tab=wo"><span class=gbtb2></span><span class=gbts>Drive</span></a></li><li class=gbt><a class=gbgt id=gbztm href="https://www.google.com/intl/en/options/" onclick="gbar.tg(event,this)" aria-haspopup=true aria-owns=
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+gbd><span class=gbtb2></span><span id=gbztms class="gbts gbtsa"><span id=gbztms1>More</span><span class=gbma></span></span></a><div class=gbm id=gbd aria-owner=gbztm><div id=gbmmb class="gbmc gbsb gbsbis"><ol id=gbmm class="gbmcc gbsbic"><li class=gbmtc><a onclick=gbar.logger.il(1,{t:24}); class=gbmt id=gb_24 href="https://www.google.com/calendar?tab=wc">Calendar</a></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:51}); class=gbmt id=gb_51 href="https://translate.google.com/?hl=en&tab=wT">Translate</a></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:17}); class=gbmt id=gb_17 href="http://www.google.com/mobile/?hl=en&tab=wD">Mobile</a></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:10}); class=gbmt id=gb_10 href="https://books.google.com/bkshp?hl=en&tab=wp">Books</a></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:212}); class=gbmt id=gb_212 href="https://wallet.google.com/?tab=wa">Wallet</a></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:6}); class=gbmt id=gb_6 href="http://www.google.com/shopping?hl=en&tab=wf">Shopping</a></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:30}); class=gbmt id=gb_30 href="https://www.blogger.com/?tab=wj">Blogger</a></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:27}); class=gbmt id=gb_27 href="https://www.google.com/finance?tab=we">Finance</a></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:31}); class=gbmt id=gb_31 href=
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+"https://photos.google.com/?tab=wq&pageId=none">Photos</a></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:12}); class=gbmt id=gb_12 href="http://video.google.com/?hl=en&tab=wv">Videos</a></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:25}); class=gbmt id=gb_25 href="https://docs.google.com/document/?usp=docs_alc">Docs</a></li><li class=gbmtc><div class="gbmt gbmh"></div></li><li class=gbmtc><a onclick=gbar.logger.il(1,{t:66}); href="https://www.google.com/intl/en/options/" class=gbmt>Even more &raquo;</a></li></ol><div class=gbsbt></div><div class=gbsbb></div></div></div></li></ol></div><div id=gbg><h2 class=gbxx>Account Options</h2><span class=gbtcb></span><ol class=gbtc><li class=gbt><a target=_top href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/" onclick="gbar.logger.il(9,{l:'i'})" id=gb_70 class=gbgt><span class=gbtb2></span><span id=gbgs4 class=gbts><span id=gbi4s1>Sign in</span></span></a></li><li class="gbt gbtb"><span class=gbts></span></li><li class=gbt><a class=gbgt id=gbg5 href="http://www.google.com/preferences?hl=en" title="Options" onclick="gbar.tg(event,this)" aria-haspopup=true aria-owns=gbd5><span class=gbtb2></span><span id=gbgs5 class=gbts><span id=gbi5></span></span></a><div class=gbm id=gbd5 aria-owner=gbg5><div class=gbmc><ol id=gbom class=gbmcc><li class="gbkc gbmtc"><a  class=gbmt href="/preference
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+s?hl=en">Search settings</a></li><li class=gbmtc><div class="gbmt gbmh"></div></li><li class="gbkp gbmtc"><a class=gbmt href="http://www.google.com/history/optout?hl=en">Web History</a></li></ol></div></div></li></ol></div></div><div id=gbx3></div><div id=gbx4></div><script nonce=''>window.gbar&&gbar.elp&&gbar.elp()</script></div> </div><center><br clear="all" id="lgpd"><div id="lga"><img alt="Google" height="92" src="/images/branding/googlelogo/1x/googlelogo_white_background_color_272x92dp.png" style="padding:28px 0 14px" width="272" id="hplogo" onload="window.lol&&lol()"><br><br></div><form action="/search" name="f"><table cellpadding="0" cellspacing="0"><tr valign="top"><td width="25%">&nbsp;</td><td align="center" nowrap=""><input name="ie" value="ISO-8859-1" type="hidden"><input value="en" name="hl" type="hidden"><input name="source" type="hidden" value="hp"><input name="biw" type="hidden"><input name="bih" type="hidden"><div class="ds" style="height:32px;margin:4px 0"><input style="color:#000;margin:0;padding:5px 8px 0 6px;vertical-align:top" autocomplete="off" class="lst" value="" title="Google Search" maxlength="2048" name="q" size="57"></div><br style="line-height:0"><span class="ds"><span class="lsbb"><input class="lsb" value="Google Search" name="btnG" type="submit"></span></span><span class="ds"><span class="lsbb"><input class="lsb" value="I'm Feeling Lucky" name="bt
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+nI" onclick="if(this.form.q.value)this.checked=1; else top.location='/doodles/'" type="submit"></span></span></td><td class="fl sblc" align="left" nowrap="" width="25%"><a href="/advanced_search?hl=en&amp;authuser=0">Advanced search</a><a href="/language_tools?hl=en&amp;authuser=0">Language tools</a></td></tr></table><input id="gbv" name="gbv" type="hidden" value="1"><script>(function(){var a,b="1";if(document&&document.getElementById)if("undefined"!=typeof XMLHttpRequest)b="2";else if("undefined"!=typeof ActiveXObject){var c,d,e=["MSXML2.XMLHTTP.6.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"];for(c=0;d=e[c++];)try{new ActiveXObject(d),b="2"}catch(h){}}a=b;if("2"==a&&-1==location.search.indexOf("&gbv=2")){var f=google.gbvu,g=document.getElementById("gbv");g&&(g.value=a);f&&window.setTimeout(function(){location.href=f},0)};}).call(this);</script></form><div id="gac_scont"></div><div style="font-size:83%;min-height:3.5em"><br><div id="prm"><style>.szppmdbYutt__middle-slot-promo{font-size:small;margin-bottom:32px}.szppmdbYutt__middle-slot-promo a._uFi{display:inline-block;text-decoration:none}.szppmdbYutt__middle-slot-promo img{border:none;margin-right:5px;vertical-align:middle}.szppmdbYutt__middle-slot-promo ._vFi{color:red}</style><div class="szppmdbYutt__middle-slot-promo r-iiNEqDmTVWck" jsl="$t t-Gza07Ho9En4;$x 0;" data-ved="0ahUKEwjWlvzIlM7UAhVlHGMKHeoSDwIQnIcB
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+CAQ"><span>This World Refugee Day, </span><a class="_XIi" href="https://www.google.com/url?q=https://www.youtube.com/youtube&amp;source=hpp&amp;id=19002593&amp;ct=3&amp;usg=AFQjCNGNCjANcU9ieZ0iUaMLihSej1uYug&amp;sa=X&amp;ved=0ahUKEwjWlvzIlM7UAhVlHGMKHeoSDwIQ8IcBCAU" rel="nofollow">explore the stories of refugees</a><span> on YouTube</span></div></div></div><span id="footer"><div style="font-size:10pt"><div style="margin:19px auto;text-align:center" id="fll"><a href="/intl/en/ads/">Advertising Programs</a><a href="/services/">Business Solutions</a><a href="https://plus.google.com/116899029375914044550" rel="publisher">+Google</a><a href="/intl/en/about.html">About Google</a></div></div><p style="color:#767676;font-size:8pt">&copy; 2017 - <a href="/intl/en/policies/privacy/">Privacy</a> - <a href="/intl/en/policies/terms/">Terms</a></p></span></center><script>(function(){window.google.cdo={height:0,width:0};(function(){var a=window.innerWidth,b=window.innerHeight;if(!a||!b)var c=window.document,d="CSS1Compat"==c.compatMode?c.documentElement:c.body,a=d.clientWidth,b=d.clientHeight;a&&b&&(a!=google.cdo.width||b!=google.cdo.height)&&google.log("","","/client_204?&atyp=i&biw="+a+"&bih="+b+"&ei="+google.kEI);}).call(this);})();</script><div id="xjsd"></div><div id="xjsi"><script>(function(){function c(b){window.setTimeout(function(){var a=document.createElement("script");a.src=b;docume
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+FFI| Received data:
+nt.getElementById("xjsd").appendChild(a)},0)}google.dljp=function(b,a){google.xjsu=b;c(a)};google.dlj=c;}).call(this);(function(){window.google.xjsrm=['mids'];})();if(google.y)google.y.first=[];if(!google.xjs){window._=window._||{};window._DumpException=window._._DumpException=function(e){throw e};if(google.timers&&google.timers.load.t){google.timers.load.t.xjsls=new Date().getTime();}google.dljp('/xjs/_/js/k\x3dxjs.hp.en_US.Wsp4_PD-z9g.O/m\x3dsb_he,d/am\x3dADA/rt\x3dj/d\x3d1/t\x3dzcms/rs\x3dACT90oFsLRiRj9GMTIqsofmCrISiws-aMw','/xjs/_/js/k\x3dxjs.hp.en_US.Wsp4_PD-z9g.O/m\x3dsb_he,d/am\x3dADA/rt\x3dj/d\x3d1/t\x3dzcms/rs\x3dACT90oFsLRiRj9GMTIqsofmCrISiws-aMw');google.xjs=1;}google.pmc={"sb_he":{"agen":false,"cgen":false,"client":"heirloom-hp","dh":true,"dhqt":true,"ds":"","fl":true,"host":"google.com","isbh":28,"jam":0,"jsonp":true,"msgs":{"cibl":"Clear Search","dym":"Did you mean:","lcky":"I\u0026#39;m Feeling Lucky","lml":"Learn more","oskt":"Input tools","psrc":"This search was removed from your \u003Ca href=\"/history\"\u003EWeb History\u003C/a\u003E","psrl":"Remove","sbit":"Search by image","srch":"Google Search"},"nds":true,"ovr":{},"pq":"","refpd":true,"rfs":[],"sbpl":24,"sbpr":24,"scd":10,"sce":5,"stok":"-8g4BxheHtl8EZiv6A0q14RVCg0"},"d":{},"aWiv7g":{},"YFCs/g":{}};google.y.first.push(function(){if(google.med){google.med('init');google.initHistory();google.med('history');}
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TCP| recv
+TLS| Read fragment at epoch index: 0 of length 137
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 113 bytes of data
+FFI| Received data:
+});if(google.j&&google.j.en&&google.j.xi){window.setTimeout(google.j.xi,0);}
+</script></div></body></html>
+0
+
+
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Closed, nothing
+TCP| recv
+TLS| readOne ReadError TCP close
+FFI| returning error: (None) TCP close
+
+FFI| Improperly closed connection
+./mitls.exe  -v 1.2 www.microsoft.com
+API| *** Starting miTLS client...
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+HS | offering ClientHello 1.2
+KS | ks_client_init 1.2
+NGO| offering client extensions [ server_name alpn session_ticket extended_master_secret signature_algorithms ec_point_formats supported_groups ]
+HSL| emit ClientHello
+TLS| HS.next_fragment returned a fragment
+TLS| sendHandshake
+TLS| send Handshake fragment with index PlaintextID
+TLS| Sending fragment of length 166
+REC| record headers: 16030300A6
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 71
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (?) 03037D9E45545C120A497CD701659801D82945108DF15F7689F6D28E9CEFD0E0614800C03000001B000B000403000102002300000010000B000908687474702F312E31
+HSL| parsed ServerHello
+HSL| end of flight
+HS | client_ServerHello
+NGO| processing server extensions [ ec_point_formats session_ticket alpn ]
+NGO| negotiated 1.2 TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+HS | Running classic TLS
+HS | Offered SID= Server SID=
+HS | recv_fragment
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 3136
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 000C390006F7308206F3308205DBA003020102021003EB7E1D9B4C4C7B145FF6A902CE81F9300D06092A864886F70D01010B0500307E310B3009060355040613025553311D301B060355040A131453796D616E74656320436F72706F726174696F6E311F301D060355040B131653796D616E746563205472757374204E6574776F726B312F302D0603550403132653796D616E74656320436C61737320332053656375726520536572766572204341202D204734301E170D3137303430373030303030305A170D3139303430383233353935395A308180310B30090603550406130255533113301106035504080C0A57617368696E67746F6E3110300E06035504070C075265646D6F6E64311E301C060355040A0C154D6963726F736F667420436F72706F726174696F6E310E300C060355040B0C054D53434F4D311A301806035504030C117777772E6D6963726F736F66742E636F6D30820122300D06092A864886F70D01010105000382010F003082010A0282010100B5AA73E7BDFFA06C6A1D0F0E116386ACB98C55C27EEC1FDF0164539D337F4D66EE0824CE6355927411770262AC284619AE06F2BAADF3D9E03E40850F42846F821AF49219E7EF8434AEF76DB5E3E9F17AFB5CE04E45959B77CC9B55819EC501B5979F345DF10051AC456926A48CD44F0EC8FBD3E8E91D5A76C35C882DC8FA95275AC2150ACF990D4019B96E55497CB1F46A842643C64168DFD8A31AC4A1E808DF710C53363ADAF82B5F62C9A2AAEE1FEC64880D951E7D48BDB3FDF724E25F67F373D2EC1426B7E4BA2B60442A42320D3FEF96640B6E795CF8C4FEB28E1608CB968BBB83B65F96BB5175682095310CE5FD02805AA9273326F7A9E8B33730EB8EDD0203010001A3820368308203643081990603551D1104819130818E8215707269766163792E6D6963726F736F66742E636F6D8211632E732D6D6963726F736F66742E636F6D820D6D6963726F736F66742E636F6D8211692E732D6D6963726F736F66742E636F6D8218737461746963766965772E6D6963726F736F66742E636F6D82117777772E6D6963726F736F66742E636F6D821377777771612E6D6963726F736F66742E636F6D30090603551D1304023000300E0603551D0F0101FF0404030205A0301D0603551D250416301406082B0601050507030106082B0601050507030230610603551D20045A30583056060667810C010202304C302306082B06010505070201161768747470733A2F2F642E73796D63622E636F6D2F637073302506082B0601050507020230190C1768747470733A2F2F642E73796D63622E636F6D2F727061301F0603551D230418301680145F60CF619055DF8443148A602AB2F57AF44318EF302B0603551D1F042430223020A01EA01C861A687474703A2F2F73732E73796D63622E636F6D2F73732E63726C305706082B06010505070101044B3049301F06082B060105050730018613687474703A2F2F73732E73796D63642E636F6D302606082B06010505073002861A687474703A2F2F73732E73796D63622E636F6D2F73732E63727430820180060A2B06010401D679020402048201700482016C016A007600DDEB1D2B7A0D4FA6208B81AD8168707E2E8E9D01D55C888D3D11C4CDB6ECBECC0000015B49E33F30000004030047304502202C120993A99E062A5225B952D481EF4E5EB16E03621BF872A7AAD42A3F16EC23022100C985D52BE92DB9B762A275F2A7E0F49771EA0ACE86743858AA4CF80290DA8145007700A4B90990B418581487BB13A2CC67700A3C359804F91BDFB8E377CD0EC80DDC100000015B49E33F7000000403004830460221008B6517805EB1D97BEC542B71A306D951919A939F2636F2FB040E0DB6028B4C64022100E93EC6DBE9CB33EC35E648B57B8E9C9FC689B41E7F16BEA3DF2E925D8689CA57007700EE4BBDB775CE60BAE142691FABE19E66A30F7E5FB072D88300C47B897AA8FDCB0000015B49E3412F0000040300483046022100DC119C89231AE57213DA754DF08E0E8EE64B3761515E473E2FB8364757C56ED6022100C824C1810D0338256ABE99EC7A862AB73EDEA1EF796EA10F79C1E755F1FCC59F300D06092A864886F70D01010B05000382010100462713C195078A607A226FB4279E2CBA8C363DA6F4696B88677E83E1E8BA5773681BA2EABA141A425CB2E9E065EF2D1037353C7BD31F39C63CB2B0449F0AF1BFBC7E90C175C335437AAED10AA0A15BB67B357E8E9F7DFF2C3D25A467D12878809E114717EEA877175DF255954728BABC5E616B55262EDC494019B6E8301D8D8D676D86731FCECAAF040C6D8D93BA608AD7F76D4065A83BB6E9AEDE3208BE4574213D478764AF0634773B4FA5543AA3523ED795DC1AFC76D8A8AAEA09E0B259ABC6924A82C2F1D5E6F7F18B131EEC9B163CE11A8339FAA52426105F053136B245E51B8BE836EFE6A75671F1FC02CC6F5BF6BE19AE00171E27FE157FD1DC32378400053C3082053830820420A0030201020210513FB9743870B73440418D30930699FF300D06092A864886F70D01010B05003081CA310B300906035504061302555331173015060355040A130E566572695369676E2C20496E632E311F301D060355040B1316566572695369676E205472757374204E6574776F726B313A3038060355040B1331286329203230303620566572695369676E2C20496E632E202D20466F7220617574686F72697A656420757365206F6E6C79314530430603550403133C566572695369676E20436C6173732033205075626C6963205072696D6172792043657274696669636174696F6E20417574686F72697479202D204735301E170D3133313033313030303030305A170D3233313033303233353935395A307E310B3009060355040613025553311D301B060355040A131453796D616E74656320436F72706F726174696F6E311F301D060355040B131653796D616E746563205472757374204E6574776F726B312F302D0603550403132653796D616E74656320436C61737320332053656375726520536572766572204341202D20473430820122300D06092A864886F70D01010105000382010F003082010A0282010100B2D805CA1C742DB5175639C54A520996E84BD80CF1689F9A422862C3A530537E5511825B037A0D2FE17904C9B496771981019459F9BCF77A9927822DB783DD5A277FB2037A9C5325E9481F464FC89D29F8BE7956F6F7FDD93A68DA8B4B82334112C3C83CCCD6967A84211A22040327178B1C6861930F0E5180331DB4B5CEEB7ED062ACEEB37B0174EF6935EBCAD53DA9EE9798CA8DAA440E25994A1596A4CE6D02541F2A6A26E2063A6348ACB44CD1759350FF132FD6DAE1C618F59FC9255DF3003ADE264DB42909CD0F3D236F164A8116FBF28310C3B8D6D855323DF1BD0FBD8C52954A16977A522163752F16F9C466BEF5B509D8FF2700CD447C6F4B3FB0F70203010001A38201633082015F30120603551D130101FF040830060101FF02010030300603551D1F042930273025A023A021861F687474703A2F2F73312E73796D63622E636F6D2F706361332D67352E63726C300E0603551D0F0101FF040403020106302F06082B0601050507010104233021301F06082B060105050730018613687474703A2F2F73322E73796D63622E636F6D306B0603551D20046430623060060A6086480186F8450107363052302606082B06010505070201161A687474703A2F2F7777772E73796D617574682E636F6D2F637073302806082B06010505070202301C1A1A687474703A2F2F7777772E73796D617574682E636F6D2F72706130290603551D1104223020A41E301C311A30180603550403131153796D616E746563504B492D312D353334301D0603551D0E041604145F60CF619055DF8443148A602AB2F57AF44318EF301F0603551D230418301680147FD365A7C2DDECBBF03009F34339FA02AF333133300D06092A864886F70D01010B050003820101005E945649DD8E2D65F5C13651B603E3DA9E7319F21F59AB587E6C26052CFA81D75C2317222C3793F786EC85E6B0A3FD1FE232A8456FE1D9FBB9AFD270A0324265BF84FE162A8F3FC5A6D6A3937D43E97421913528F463E92EEDF7F55C7F4B9AB520E90ABDE045100C14949A5DA5E34B91E8249B464065F42272CD99F88811F5F37FE63382E6A8C57EFED008E22558087168E6CDA2E614DE4E52242DFDE5791353E75E2F2D4D1B6D4015522BF787897812816ED94DAA2D78D4C22C3D085F87919E1F0EB0DE3052648689AA9D669C0E760C80F274D82AF8B83ACED7D60F11BE6BAB14F5BD41A0226389F1BA0F6F2963662D3FAC8C72C5FBC7E4D40FF23B4F8C29C7
+HSL| parsed Certificate
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 333
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 0300174104587FE7176DF048FF0DA76265EBB2109052FA38C7A37166A227349B4694A4F99B7CB690A768B10E8BDCA7A93AF05F07CFFEE028AA61BF135172B8E7C7F24164520201010031F97C136394D52EDD4681FF03D2370C2B299471E6635096CC72DA138C61730B9D3A3A0099BD7C097CA668F7186461EC3C82D825D151167F821FD3BB7F02D9616654ADCE2810B9A95BCAA19125CC2858BC2A214055A572AF164DE6725AA18F46A74120B150E23C7A2644C6D3402AC0750CCD7425284397692662B49FE3E3903D79D703ECF4FDD25235E136865EF6CC705A2C9D756230B155D314107E42663F92E86EB3D5F36F0815A920CCBD2E889D77667D8914770A1D34EFE80563DF08E2B801DB5454C8AD0BFE6400AEC1E2AFF6DB2726D54E450D73D2DAC68639363F4E4183CC6B50594A4AC3D774DF4756F3A809BD69BFA4ED93A3D040E119F91C9CE2F4
+HSL| parsed ServerKeyExchange
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 4
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 
+HSL| parsed ServerHelloDone
+HSL| end of flight
+HS | processing ...ServerHelloDone
+NGO| Verifying signature using RSA_PKCS1_SHA1
+NGO| ServerKeyExchange signature: Valid
+CDH| DH responder on P256
+CDH| Keygen on P256
+CDH| DH initiator on P256
+KS | Share: 04587fe7176df048ff0da76265ebb2109052fa38c7a37166a227349b4694a4f99b7cb690a768b10e8bdca7a93af05f07cffee028aa61bf135172b8e7c7f2416452
+KS | Share: 04f95cbdec5b0997622bb7827d213e0510ad867b451e16bf43e864e9c80dffabac957f1f50383cf5423269e8ce0cd317b3eb51798cf3d87cbe58493accd370e923
+KS | PMS: 80770CB6F5C16624F7729D308EFEC8C93474D3BF236C176B30A4EE53AA181034
+KS | master secret: BE07A6EA9BC4B9EB91DA4861007A6178D97FAF01881EDFF4FE8FF5A641F0ED20F658FADA64149A67E65AE717D390B27E
+HSL| emit ClientKeyExchange and hash
+KS | ks_client_12_set_session_hash hashed_log = F3F868F8EC8C438830567D8D7472F6AC543F243D285F906513FBE6789C6032B18E7EF37781504FEECDAFE589B078F8C1
+KS | master secret:BE07A6EA9BC4B9EB91DA4861007A6178D97FAF01881EDFF4FE8FF5A641F0ED20F658FADA64149A67E65AE717D390B27E
+KS | ks_12_record_key
+KS | keystring (CK, CIV, SK, SIV) = BBEF2E95786CE942CE81125E0B7C9FE6555BAB1839F74385E84254F7C2D270246490351432D651CE83E508B4CAE07E45E1B0DB956622D01CFA6E97A92AED0B2ED7EE8BE449273419
+HS | digest is F3F868F8EC8C438830567D8D7472F6AC543F243D285F906513FBE6789C6032B18E7EF37781504FEECDAFE589B078F8C1
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned a fragment; CCS; next_keys (for handshake only
+TLS| sendHandshake
+TLS| send Handshake fragment with index PlaintextID
+TLS| Sending fragment of length 70
+REC| record headers: 1603030046
+TLS| send CCS fragment with index PlaintextID
+TLS| Sending fragment of length 1
+REC| record headers: 1403030001
+EPO| writer++ -1/0
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned a fragment
+TLS| sendHandshake
+TLS| send Handshake fragment with index ID12
+TLS| Sending fragment of length 40
+REC| record headers: 1603030028
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, new writer: handshake-only
+TLS| ignore handshake-specifc key change; calling read again
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 186
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 00001C2000B000000747597D40CD3422359B6124CFEFC42E350BE463E326013E1B4F8B76AB660F20323DF97C1D41AEC57FD158EAC4445A6BCC092F0BD5C997DB6A4549851AF01A758F886DB7853CCA1480F0DBEE20BA23DF4F8FE6733465888F2C6124664426365F0AC79C42771AC539241F82A22AF70C6A598F8FB0BBC11C4911019CD1AFC5FA047661FE35BBB4A6C9A43ACD79675B4CC33BEC55A627017B2563DE9C2CB46F6FF5F5AE293477B19B9B99AD90A23287
+HSL| parsed NewSessionTicket
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 1
+TLS| read CCS fragment
+HS | recv_ccs
+HS | Processing server CCS (full handshake). Ticket: 00000747597D40CD3422359B6124CFEFC42E350BE463E326013E1B4F8B76AB660F20323DF97C1D41AEC57FD158EAC4445A6BCC092F0BD5C997DB6A4549851AF01A758F886DB7853CCA1480F0DBEE20BA23DF4F8FE6733465888F2C6124664426365F0AC79C42771AC539241F82A22AF70C6A598F8FB0BBC11C4911019CD1AFC5FA047661FE35BBB4A6C9A43ACD79675B4CC33BEC55A627017B2563DE9C2CB46F6FF5F5AE293477B19B9B99AD90A23287
+EPO| reader++ 0/0
+TLS| readOne ReadAgainFinishing
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: 0 of length 40
+TLS| StAE decrypt correct.
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) A9D4B0505E955033673BC54A
+HSL| parsed Finished
+HSL| end of flight
+TLS| readOne Complete
+API| Read OK, sending HTTP request...
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| send Data fragment with index ID12
+TLS| Sending fragment of length 86
+REC| record headers: 1703030056
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Open, nothing
+TLS| Read fragment at epoch index: 0 of length 1311
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1287 bytes of data
+API| Received data: HTTP/1.0 200 OK
+Server: Apache
+ETag: "6082151bd56ea922e1357f5896a90d0a:1425454794"
+Last-Modified: Wed, 04 Mar 2015 07:39:54 GMT
+Accept-Ranges: bytes
+Content-Length: 1020
+Content-Type: text/html
+Date: Wed, 21 Jun 2017 05:03:15 GMT
+Connection: close
+X-N: S
+
+<html><head><title>Microsoft Corporation</title><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="SearchTitle" content="Microsoft.com" scheme=""></meta><meta name="Description" content="Get product information, support, and news from Microsoft." scheme=""></meta><meta name="Title" content="Microsoft.com Home Page" scheme=""></meta><meta name="Keywords" content="Microsoft, product, support, help, training, Office, Windows, software, download, trial, preview, demo,  business, security, update, free, computer, PC, server, search, download, install, news" scheme=""></meta><meta name="SearchDescription" content="Microsoft.com Homepage" scheme=""></meta></head><body><p>Your current User-Agent string appears to be from an automated process, if this is incorrect, please click this link:<a href="http://www.microsoft.com/en/us/default.aspx?redir=true">United States English Microsoft Homepage</a></p></body></html>
+
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Open, nothing
+TLS| Read fragment at epoch index: 0 of length 26
+TLS| StAE decrypt correct.
+TLS| read Alert fragment AD_close_notify
+TLS| sendAlert AD_close_notify (notify response)
+TLS| send Alert fragment with index ID12
+TLS| Sending fragment of length 26
+REC| record headers: 150303001A
+TLS| readOne Read Close
+API| Got close_notify, clean closure.
+
+#./mitls.exe -v 1.3. www.google.com failing due to different draft versions
+./cmitls.exe -v 1.2 www.google.com
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+HS | offering ClientHello 1.2
+KS | ks_client_init 1.2
+NGO| offering client extensions [ server_name session_ticket extended_master_secret signature_algorithms ec_point_formats supported_groups ]
+HSL| emit ClientHello
+TLS| HS.next_fragment returned a fragment
+TLS| sendHandshake
+TLS| send Handshake fragment with index PlaintextID
+TLS| Sending fragment of length 148
+REC| record headers: 1603030094
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 58
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (?) 03035949FE133601B55BFD537FCAB87BAD5F3B82A1EA2022E4ACDCC89EA4FD77876800C02F00000E0017000000230000000B00020100
+HSL| parsed ServerHello
+HSL| end of flight
+HS | client_ServerHello
+NGO| processing server extensions [ extended_master_secret session_ticket ec_point_formats ]
+NGO| negotiated 1.2 TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+HS | Running classic TLS
+HS | Offered SID= Server SID=
+HS | recv_fragment
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 3137
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 000C3A0004843082048030820368A003020102020876B50F23ED6EE2EC300D06092A864886F70D01010B05003049310B300906035504061302555331133011060355040A130A476F6F676C6520496E63312530230603550403131C476F6F676C6520496E7465726E657420417574686F72697479204732301E170D3137303630373135313030305A170D3137303833303135313030305A3068310B30090603550406130255533113301106035504080C0A43616C69666F726E69613116301406035504070C0D4D6F756E7461696E205669657731133011060355040A0C0A476F6F676C6520496E633117301506035504030C0E7777772E676F6F676C652E636F6D30820122300D06092A864886F70D01010105000382010F003082010A0282010100F0FBFB8C4F1BE39513F5B511917A0611AE9A87151D74562979F5EC6AABB0B2319FB384A218E6BE5541A78E3433B7215364E3BE4EA88FDCFAE510348DF8B7D6215B473C6B0FC7C87B112F1E5902DEFBD3F0CFAFA6BE80A72BFBFD378A56CAF5D24E4889EE6486680E4C415D9E806E850EC2F28797AD169328331FF4C7FA3B3F452E0F52AA90971822D5DF64AF70117B27701205D7C86FBE44AC986666D320A472B37E3B493575BE2A502EB31E3F527B610520E8D8806445D72595A70B4E553347D869C54726E65825732FDB25F32F5A0363E42BD9E892573905D8296701C9557F57BF6594D45F06D1594C4F716228763B85A7CF9B55D830C88359E730436CFE390203010001A382014B30820147301D0603551D250416301406082B0601050507030106082B0601050507030230190603551D1104123010820E7777772E676F6F676C652E636F6D306806082B06010505070101045C305A302B06082B06010505073002861F687474703A2F2F706B692E676F6F676C652E636F6D2F47494147322E637274302B06082B06010505073001861F687474703A2F2F636C69656E7473312E676F6F676C652E636F6D2F6F637370301D0603551D0E04160414F111C50CF1B337F2C4D74095A541CC728B1E1376300C0603551D130101FF04023000301F0603551D230418301680144ADD06161BBCF668B576F581B6BB621ABA5A812F30210603551D20041A3018300C060A2B06010401D6790205013008060667810C01020230300603551D1F042930273025A023A021861F687474703A2F2F706B692E676F6F676C652E636F6D2F47494147322E63726C300D06092A864886F70D01010B050003820101002085DED1D6F53F0E453F23B51268992A9C5EA1249CE176D787FE4E7E46A2B5AF945051778D2AD852C8149C8A8212EC096CEFC6D347E462FE95D5AEF09E965274D4681A0476B01351D4FA9775490F7D30FD358D03E7290746422F6E01F4E3763CCE58214C902D4419A4981A1342EA0093EB501E7929CD158BCECB5AB4631F7BA583A684A3A45D73C2B10F0EA442D4E63FA7003F9966F525E539A13AA4B68F2AC04154E0AC7C879FDA1499D050B27046A03B20C653618733DA5CB9C6503787DB110601216BF536925F64ABD8B23A2419BA761C672C0A2273B57F14946534147D10F22C7957F1AB4169CEDA580A48425A8D8D39F23D38322408B401194D44B6919B00042C3082042830820310A00302010202100100212588B0FA59A777EF057B6627DF300D06092A864886F70D01010B05003042310B300906035504061302555331163014060355040A130D47656F547275737420496E632E311B30190603550403131247656F547275737420476C6F62616C204341301E170D3137303532323131333233375A170D3138313233313233353935395A3049310B300906035504061302555331133011060355040A130A476F6F676C6520496E63312530230603550403131C476F6F676C6520496E7465726E657420417574686F7269747920473230820122300D06092A864886F70D01010105000382010F003082010A02820101009C2A04775CD850913A06A382E0D85048BC893FF119701A88467EE08FC5F189CE21EE5AFE610DB7324489A0740B534F55A4CE826295EEEB595FC6E1058012C45E943FBC5B4838F453F724E6FB91E915C4CFF4530DF44AFC9F54DE7DBEA06B6F87C0D0501F28300340DA0873516C7FFF3A3CA737068EBD4B1104EB7D24DEE6F9FC3171FB94D560F32E4AAF42D2CBEAC46A1AB2CC53DD154B8B1FC819611FCD9DA83E632B8435696584C819C54622F85395BEE3804A10C62AECBA972011C739991004A0F0617A95258C4E5275E2B6ED08CA14FCCE226AB34ECF46039797037EC0B1DE7BAF4533CFBA3E71B7DEF42525C20D35899D9DFB0E1179891E37C5AF8E72690203010001A38201113082010D301F0603551D23041830168014C07A98688D89FBAB05640C117DAA7D65B8CACC4E301D0603551D0E041604144ADD06161BBCF668B576F581B6BB621ABA5A812F300E0603551D0F0101FF040403020106302E06082B0601050507010104223020301E06082B060105050730018612687474703A2F2F672E73796D63642E636F6D30120603551D130101FF040830060101FF02010030350603551D1F042E302C302AA028A0268624687474703A2F2F672E73796D63622E636F6D2F63726C732F6774676C6F62616C2E63726C30210603551D20041A3018300C060A2B06010401D6790205013008060667810C010202301D0603551D250416301406082B0601050507030106082B06010505070302300D06092A864886F70D01010B05000382010100CA49E5ACD76464775BBE71FACFF41E23C79A6963545FEB4CD619282364668E1CC78780645F048B26AF98DF0A70BCBC193DEE7B33A97FBDF405D470BB052679EA9AC798B907196534CC3CE93FC501FA6F0C7EDB7A705C4CFE2D00F0CABE2D8EB4A880FB011388CB9C3FE5BB77CA3A6736F3CED527027243A0BD6E02F14705713E0159E9119E1AF3840F80A6A278352FB6C7A27F177CE18B56AEEE678851273060A56252C337D53BEA852A013887A2CF70ADA47AC9C4E7CAC5DABC2332F2FE18C27BE0DF3B2FD4D010E6964CFB44B721640DB900943012268758983905380FCC82480C0A4766EEBFB45FC4FF70A8E17F8B792BB86532A3B9B731E90AF5F61F32DC0003813082037D308202E6A003020102020312BBE6300D06092A864886F70D0101050500304E310B30090603550406130255533110300E060355040A130745717569666178312D302B060355040B1324457175696661782053656375726520436572746966696361746520417574686F72697479301E170D3032303532313034303030305A170D3138303832313034303030305A3042310B300906035504061302555331163014060355040A130D47656F547275737420496E632E311B30190603550403131247656F547275737420476C6F62616C20434130820122300D06092A864886F70D01010105000382010F003082010A0282010100DACC186330FDF417231A567E5BDF3C6C38E471B77891D4BCA1D84CF8A843B603E94D21070888DA582F663929BD05788B9D38E805B76A7E71A4E6C460A6B0EF80E489280F9E25D6ED83F3ADA691C798C9421835149DAD9846922E4FCAF18743C11695572D50EF892D807A57ADF2EE5F6BD2008DB914F8141535D9C046A37B72C891BFC9552BCDD0973E9C2664CCDFCE831971CA4EE6D4D57BA919CD55DEC8ECD25E3853E55C4F8C2DFE502336FC66E6CB8EA4391900B7950239910B0EFE382ED11D059AF64D3E6F0F071DAF2C1E8F6039E2FA36531339D45E262BDB3DA814BD32EB180328520471E5AB333DE138BB073684629C79EA1630F45FC02BE8716BE4F90203010001A381F03081ED301F0603551D2304183016801448E668F92BD2B295D747D82320104F3398909FD4301D0603551D0E04160414C07A98688D89FBAB05640C117DAA7D65B8CACC4E300F0603551D130101FF040530030101FF300E0603551D0F0101FF040403020106303A0603551D1F04333031302FA02DA02B8629687474703A2F2F63726C2E67656F74727573742E636F6D2F63726C732F73656375726563612E63726C304E0603551D200447304530430604551D2000303B303906082B06010505070201162D68747470733A2F2F7777772E67656F74727573742E636F6D2F7265736F75726365732F7265706F7369746F7279300D06092A864886F70D01010505000381810076E1126E4E4B1612863006B28108CFF008C7C7717E66EEC2EDD43B1FFFF0F0C84ED64338B0B9307D18D05583A26ACB36119CE84866A36D7FB813D447FE8B5A5C73FCAED91B321938AB973414AA96D2EBA31C140849B6BBE591EF8336EB1D566FCADABC736390E47F7B3E22CB3D07ED5F38749CE303504EA1AF98EE61F2843F12
+HSL| parsed Certificate
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 300
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 03001D20C31EAEA8CCA9FC29FB121C2EC8B0D6EA3298D876DFFA215DEE1AB4CBC817E561040101006F74AA1621CC721EF023078E90D1143CCD2CDFCF8081CF263DA18A2E7577A52A03BBA32AFD02F0F468BC1F6ADFABCDE31FD85E7C6AF07AFF136F638D820432063750B112156AA777C2F95EA44ADDE9C3C928A99198CE29442238AF94BA32CA03FC495392A0FABD7C632D3DF75343C49BE148521134727B52459FA92A576ECB3EE55BB3511F83040909FEA2EDAA3C3CFFE0FBD78EF60A43DED3FC1C9BE2C588DF94DA288CC3DDC6354D3B6935CEB21261046F2907438276602816945FCC820F117B5284F30171756A32EB0C6B4D764F14F691CB82C1AE07A9D5ADA75A8561576ECA9E9734ED9F9291EDB2B4C3926922D437E503449619DC3CABA51932D791742C
+HSL| parsed ServerKeyExchange
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 4
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 
+HSL| parsed ServerHelloDone
+HSL| end of flight
+HS | processing ...ServerHelloDone
+NGO| Verifying signature using RSA_PKCS1_SHA256
+NGO| ServerKeyExchange signature: Valid
+CDH| DH responder on X255519
+CDH| Keygen on X255519
+CDH| DH initiator on X255519
+KS | Share: c31eaea8cca9fc29fb121c2ec8b0d6ea3298d876dffa215dee1ab4cbc817e561
+KS | Share: 548e7167c269e3d2722bbd79c799da688d9274abbf3f252407361f5660706d7f
+KS | PMS: 5FF5FFD9D38F52049D29BA38A61DCC95CCDFB6088028CB61926AA79426F1D732
+HSL| emit ClientKeyExchange and hash
+KS | ks_client_12_set_session_hash hashed_log = DF9D6C2EF59D3709ACC3A0A3F4AF808F8827DC7A4931C81F8EC843D29BF44F78
+KS | extended master secret:41783B37B358C41AB98894998BAA3758E385FCADA34505FCE9549797EAFF942D30A684AB16A1CEEDC5761EC14B750962
+KS | ks_12_record_key
+KS | keystring (CK, CIV, SK, SIV) = 109BAEB9BE6A4B711DDD367ECDD197F3D30E93CB390B7E44C6A2BDB1E83C46D3DACB397ADFE15F92
+HS | digest is DF9D6C2EF59D3709ACC3A0A3F4AF808F8827DC7A4931C81F8EC843D29BF44F78
+TLS| readOne ReadAgain
+TLS| writeHandshake (plaintext)
+TLS| HS.next_fragment PlaintextID?
+HS | next_fragment
+TLS| HS.next_fragment returned a fragment; CCS; next_keys (for handshake only
+TLS| sendHandshake
+TLS| send Handshake fragment with index PlaintextID
+TLS| Sending fragment of length 37
+REC| record headers: 1603030025
+TLS| send CCS fragment with index PlaintextID
+TLS| Sending fragment of length 1
+REC| record headers: 1403030001
+EPO| writer++ -1/0
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned a fragment
+TLS| sendHandshake
+TLS| send Handshake fragment with index ID12
+TLS| Sending fragment of length 40
+REC| record headers: 1603030028
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, new writer: handshake-only
+TLS| ignore handshake-specifc key change; calling read again
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 206
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 000189C000C429A18F1B894DF603ECD5D60F0E2BA982F9E8FF37DD6A8DFC0BDC49BA583A557DF73A9DC18608CB3084EECDDF1E43D7E596FC95CD892E92D7D551990210E02C3AA8233543C93A09C60183CDBC57E82F025B0559572A7919FA921BCA95734C650D6138A091A5FE289D1692D8D89836F06783C8CF108D641F1317648E8B41BEE2E543B7A59BA806622054B6316296C051BC2B1012C97DFCF47E55AD6F51FFF55CE72FA8F30210175A7676121B5D230958F3B4609E35C670CADB0CEEE92FE03BA668BB51B26C
+HSL| parsed NewSessionTicket
+HSL| more bytes required
+TLS| readOne ReadAgain
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: -1 of length 1
+TLS| read CCS fragment
+HS | recv_ccs
+HS | Processing server CCS (full handshake). Ticket: 29A18F1B894DF603ECD5D60F0E2BA982F9E8FF37DD6A8DFC0BDC49BA583A557DF73A9DC18608CB3084EECDDF1E43D7E596FC95CD892E92D7D551990210E02C3AA8233543C93A09C60183CDBC57E82F025B0559572A7919FA921BCA95734C650D6138A091A5FE289D1692D8D89836F06783C8CF108D641F1317648E8B41BEE2E543B7A59BA806622054B6316296C051BC2B1012C97DFCF47E55AD6F51FFF55CE72FA8F30210175A7676121B5D230958F3B4609E35C670CADB0CEEE92FE03BA668BB51B26C
+EPO| reader++ 0/0
+TLS| readOne ReadAgainFinishing
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Ctrl/Ctrl, nothing
+TLS| Read fragment at epoch index: 0 of length 40
+TLS| StAE decrypt correct.
+TLS| read Handshake fragment
+HS | recv_fragment
+HSL| parsing (1.2) 46B8EEEE26FEF2A149BDA65F
+HSL| parsed Finished
+HSL| end of flight
+TLS| readOne Complete
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| send Data fragment with index ID12
+TLS| Sending fragment of length 64
+REC| record headers: 1703030040
+TLS| writeHandshake (encrypted)
+TLS| HS.next_fragment ID12?
+HS | next_fragment
+TLS| HS.next_fragment returned nothing
+TLS| sendHandshake
+TLS| read: WrittenHS, Open/Open, nothing
+TLS| Read fragment at epoch index: 0 of length 1425
+TLS| StAE decrypt correct.
+TLS| read Data fragment
+TLS| readOne Read 1401 bytes of data
+===============================================
+Starting test client...
+Read OK, sending HTTP request...
+Received data:
+HTTP/1.1 200 OK
+Date: Wed, 21 Jun 2017 05:03:15 GMT
+Expires: -1
+Cache-Control: private, max-age=0
+Content-Type: text/html; charset=ISO-8859-1
+P3P: CP="This is not a P3P policy! See https://www.google.com/support/accounts/answer/151657?hl=en for more info."
+Server: gws
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: NID=106=ksBmeGfwR9Ba54NB3CkidZLlkIKgoEA29ACCmZlKM2DnV8JkT3DT_KslVNFc_eh7lfWvih2eWDf256o_-O5O43G5pdt9uBPJdzhE_99Spwpc-h5VDORrM3nI20OmRUVm3G8WlecwUHl4Aern; expires=Thu, 21-Dec-2017 05:03:15 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: quic=":443"; ma=2592000; v="38,37,36,35"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+
++ set +x
+8000
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for." name="description"><meta content="noodp" name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'E_5JWeuwNYSKjwOJ_qbwDg',kEXPI:'1301796,1352553,1353383,1353764,1353968,1354038,1354290,1354467,3700341,3700347,3700433,3700442,4029815,4031109,403267
+Closing connection, irrespective of the response
+make[1]: Leaving directory '/cygdrive/c/Build/Agent2/_work/7/s/mitls-fstar/src/tls'
+================================================================================
