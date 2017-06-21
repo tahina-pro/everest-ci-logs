@@ -1,0 +1,295 @@
+dos2unix: converting file parser/parse.fsi to Unix format...
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(393,0-393,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(444,0-444,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(495,0-497,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(714,0-716,39): (Warning) Annotation from val declaration overrides inline type annotation
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+.\hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (7041,51): pattern does not contain all quantified variables.
+WARNING: (7041,51): pattern does not contain all quantified variables.
+.\Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#430686
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (6992,46): pattern does not contain any variable.
+WARNING: (7175,46): pattern does not contain any variable.
+WARNING: (6891,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#467482
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#469481 (see also .\Platform.Bytes.fst(257,156-260,30))
+WARNING: (7197,46): pattern does not contain any variable.
+WARNING: (66615,46): pattern does not contain any variable.
+WARNING: (70511,43): pattern does not contain all quantified variables.
+WARNING: (66615,46): pattern does not contain any variable.
+WARNING: (70511,43): pattern does not contain all quantified variables.
+WARNING: (66615,46): pattern does not contain any variable.
+WARNING: (70511,43): pattern does not contain all quantified variables.
+WARNING: (66615,46): pattern does not contain any variable.
+WARNING: (70511,43): pattern does not contain all quantified variables.
+WARNING: (66615,46): pattern does not contain any variable.
+WARNING: (70511,43): pattern does not contain all quantified variables.
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(27,0-27,22): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (66615,46): pattern does not contain any variable.
+WARNING: (70511,43): pattern does not contain all quantified variables.
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (66615,46): pattern does not contain any variable.
+WARNING: (70511,43): pattern does not contain all quantified variables.
+WARNING: (66615,46): pattern does not contain any variable.
+WARNING: (70511,43): pattern does not contain all quantified variables.
+WARNING: (66615,46): pattern does not contain any variable.
+WARNING: (70511,43): pattern does not contain all quantified variables.
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(19,0-19,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#504206
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#512594 (see also .\Platform.Bytes.fst(257,156-260,30))
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#439118
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#655849
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#701518
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#703441
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#704223
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(172,0-188,5): (Warning) Top-level let-bindings must be total; this term may have effects
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#439118
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#484787
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#486710
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#487492
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#655849
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#701518
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#703441
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#704223
+make[3]: [Makefile:66: Ex01a-ocaml] Error 2 (ignored)
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#655849
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#701518
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#703441
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#704223
+.\Ex10a.fst(27,0-27,22): (Warning) Top-level let-bindings must be total; this term may have effects
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#655849
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#701518
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#703441
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#704223
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#655849
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#655849
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#701518
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#703441
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#704223
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#701518
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#703441
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#704223
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#655849
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#701518
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#703441
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#704223
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#655849
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#701518
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#703441
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#704223
+.\Ex12a.Cap.fst(21,0-21,26): (Warning) Top-level let-bindings must be total; this term may have effects
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#655849
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#701518
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#703441
+WARNING: (71903,45): pattern does not contain all quantified variables.
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#704223
+.\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#457185
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#655849
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#701518
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#703441
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#704223
+.\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#439118
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#439118
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#484787
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#486710
+C:\Build\Agent1\_work\2\s\ulib\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#487492
+WARNING: (70494,45): pattern does not contain all quantified variables.
+.\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#444265
+.\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#444265
+.\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#444265
+WARNING: (8474,45): pattern does not contain all quantified variables.
+WARNING: (9658,46): pattern does not contain all quantified variables.
+.\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#503081
+.\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#505004
+.\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#505786
+WARNING: (70494,45): pattern does not contain all quantified variables.
+.\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#804456
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (71903,45): pattern does not contain all quantified variables.
+.\FStar.HyperHeap.fst(393,2-395,39): (Warning) Pattern misses at least one bound variable: m#462332
+WARNING: (8474,45): pattern does not contain all quantified variables.
+WARNING: (9658,46): pattern does not contain all quantified variables.
+.\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#508228
+.\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#510151
+.\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#510933
+WARNING: (8474,45): pattern does not contain all quantified variables.
+WARNING: (8474,45): pattern does not contain all quantified variables.
+WARNING: (94788,45): pattern does not contain all quantified variables.
+WARNING: (9658,46): pattern does not contain all quantified variables.
+WARNING: (9658,46): pattern does not contain all quantified variables.
+.\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#508228
+.\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#510151
+.\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#510933
+.\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#508228
+.\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#510151
+.\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#510933
+WARNING: (12662,45): pattern does not contain all quantified variables.
+WARNING: (13846,46): pattern does not contain all quantified variables.
+.\FStar.HyperStack.fst(435,2-437,39): (Warning) Pattern misses at least one bound variable: h#868418
+.\FStar.HyperStack.fst(530,2-533,40): (Warning) Pattern misses at least one bound variable: h#870341
+.\FStar.HyperStack.fst(561,2-564,42): (Warning) Pattern misses at least one bound variable: h#871123
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (94788,45): pattern does not contain all quantified variables.
+WARNING: (104625,46): pattern does not contain all quantified variables.
+WARNING: (105502,50): pattern does not contain all quantified variables.
+WARNING: (105731,52): pattern does not contain all quantified variables.
+WARNING: (94788,45): pattern does not contain all quantified variables.
+WARNING: (104625,46): pattern does not contain all quantified variables.
+WARNING: (105502,50): pattern does not contain all quantified variables.
+WARNING: (105731,52): pattern does not contain all quantified variables.
+WARNING: (94788,45): pattern does not contain all quantified variables.
+WARNING: (104625,46): pattern does not contain all quantified variables.
+WARNING: (105502,50): pattern does not contain all quantified variables.
+WARNING: (105731,52): pattern does not contain all quantified variables.
+WARNING: (94788,45): pattern does not contain all quantified variables.
+WARNING: (104625,46): pattern does not contain all quantified variables.
+WARNING: (105502,50): pattern does not contain all quantified variables.
+WARNING: (105731,52): pattern does not contain all quantified variables.
+WARNING: (7662,46): pattern does not contain all quantified variables.
+WARNING: (7671,46): pattern does not contain all quantified variables.
+WARNING: (7924,50): pattern does not contain all quantified variables.
+WARNING: (7730,46): pattern does not contain all quantified variables.
+WARNING: (8028,50): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (7924,50): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (9961,50): pattern does not contain all quantified variables.
+WARNING: (10275,50): pattern does not contain all quantified variables.
+WARNING: (10005,46): pattern does not contain all quantified variables.
+WARNING: (10350,50): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (9968,46): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (10087,50): pattern does not contain all quantified variables.
+WARNING: (94788,45): pattern does not contain all quantified variables.
+WARNING: (104625,46): pattern does not contain all quantified variables.
+WARNING: (105502,50): pattern does not contain all quantified variables.
+WARNING: (105731,52): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (94788,45): pattern does not contain all quantified variables.
+WARNING: (104625,46): pattern does not contain all quantified variables.
+WARNING: (105502,50): pattern does not contain all quantified variables.
+WARNING: (105731,52): pattern does not contain all quantified variables.
+WARNING: (94788,45): pattern does not contain all quantified variables.
+WARNING: (104625,46): pattern does not contain all quantified variables.
+WARNING: (105502,50): pattern does not contain all quantified variables.
+WARNING: (105731,52): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (94788,45): pattern does not contain all quantified variables.
+WARNING: (104625,46): pattern does not contain all quantified variables.
+WARNING: (105502,50): pattern does not contain all quantified variables.
+WARNING: (105731,52): pattern does not contain all quantified variables.
+WARNING: (9442,50): pattern does not contain all quantified variables.
+WARNING: (9031,50): pattern does not contain all quantified variables.
+WARNING: (8919,50): pattern does not contain all quantified variables.
+WARNING: (9133,50): pattern does not contain all quantified variables.
+WARNING: (8937,50): pattern does not contain all quantified variables.
+WARNING: (9140,50): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
+WARNING: (8895,50): pattern does not contain all quantified variables.
+WARNING: (70494,45): pattern does not contain all quantified variables.
+WARNING: (80331,46): pattern does not contain all quantified variables.
+WARNING: (81208,50): pattern does not contain all quantified variables.
+WARNING: (81437,52): pattern does not contain all quantified variables.
