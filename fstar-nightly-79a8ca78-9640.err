@@ -1,0 +1,18 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+./u_boot_fsts/FStar.Syntax.Syntax.fst(394,0-394,33): (Warning) Annotation from val declaration overrides inline type annotation
+./u_boot_fsts/FStar.Syntax.Syntax.fst(445,0-445,48): (Warning) Annotation from val declaration overrides inline type annotation
+./u_boot_fsts/FStar.Syntax.Syntax.fst(446,0-446,76): (Warning) Annotation from val declaration overrides inline type annotation
+./u_boot_fsts/FStar.Syntax.Syntax.fst(496,0-498,38): (Warning) Annotation from val declaration overrides inline type annotation
+./u_boot_fsts/FStar.TypeChecker.Util.fst(71,0-73,32): (Warning) Annotation from val declaration overrides inline type annotation
+./u_boot_fsts/FStar.TypeChecker.Env.fst(282,0-286,35): (Warning) Annotation from val declaration overrides inline type annotation
+./u_boot_fsts/FStar.TypeChecker.Env.fst(716,0-718,39): (Warning) Annotation from val declaration overrides inline type annotation
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+./hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module FStar_IO, and its interface was not compiled with -opaque
+File "out/Hello.ml", line 1:
+Error: Cannot find file ../../bin/fstarlib/fstarlib.cmxa
+make[1]: *** [ocaml] Error 2
+make: *** [utest] Error 2
