@@ -1,0 +1,765 @@
+dos2unix: converting file parser/parse.fsi to Unix format...
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 12, characters 27-33:
+Warning 40: C_Unit was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 15, characters 27-32:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 17, characters 43-48:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 20, characters 27-33:
+Warning 40: C_True was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 23, characters 27-34:
+Warning 40: C_False was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 36, characters 27-33:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 38, characters 43-49:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 41, characters 27-34:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 43, characters 43-50:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 46, characters 27-33:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 48, characters 43-49:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 50, characters 43-49:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 53, characters 27-33:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 55, characters 43-49:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 57, characters 43-49:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 60, characters 27-35:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 62, characters 43-51:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 64, characters 43-51:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 67, characters 27-34:
+Warning 40: Tv_Type was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 71, characters 27-36:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 73, characters 43-52:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 75, characters 43-52:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 78, characters 27-35:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 80, characters 43-51:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 83, characters 27-37:
+Warning 40: Tv_Unknown was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 197, characters 8-14:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 209, characters 57-63:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 246, characters 9-15:
+Warning 40: C_Unit was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 246, characters 17-23:
+Warning 40: C_Unit was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 247, characters 9-14:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 247, characters 17-22:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 248, characters 9-15:
+Warning 40: C_True was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 248, characters 17-23:
+Warning 40: C_True was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 249, characters 9-16:
+Warning 40: C_False was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 249, characters 18-25:
+Warning 40: C_False was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 250, characters 9-15:
+Warning 40: C_Unit was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 251, characters 19-25:
+Warning 40: C_Unit was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 252, characters 9-14:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 253, characters 19-24:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 254, characters 9-15:
+Warning 40: C_True was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 255, characters 19-25:
+Warning 40: C_True was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 256, characters 9-16:
+Warning 40: C_False was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 257, characters 19-26:
+Warning 40: C_False was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 265, characters 9-15:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 265, characters 19-25:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 266, characters 9-16:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 266, characters 20-27:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 267, characters 9-15:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 267, characters 24-30:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 270, characters 9-15:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 270, characters 24-30:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 273, characters 9-17:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 273, characters 26-34:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 276, characters 9-18:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 276, characters 27-36:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 279, characters 9-16:
+Warning 40: Tv_Type was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 279, characters 20-27:
+Warning 40: Tv_Type was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 280, characters 9-17:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 280, characters 21-29:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 281, characters 9-19:
+Warning 40: Tv_Unknown was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 281, characters 21-31:
+Warning 40: Tv_Unknown was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 282, characters 9-15:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 283, characters 19-25:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 284, characters 9-16:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 285, characters 19-26:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 286, characters 9-15:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 287, characters 19-25:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 288, characters 9-15:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 289, characters 19-25:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 290, characters 9-17:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 291, characters 19-27:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 292, characters 9-16:
+Warning 40: Tv_Type was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 293, characters 19-26:
+Warning 40: Tv_Type was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 294, characters 9-18:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 295, characters 19-28:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 296, characters 9-17:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 297, characters 19-27:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 298, characters 9-19:
+Warning 40: Tv_Unknown was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 299, characters 19-29:
+Warning 40: Tv_Unknown was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Tactics_Builtins.ml", line 67, characters 46-47:
+Warning 20: this argument will not be used by the function.
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 12, characters 27-33:
+Warning 40: C_Unit was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 15, characters 27-32:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 17, characters 43-48:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 20, characters 27-33:
+Warning 40: C_True was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 23, characters 27-34:
+Warning 40: C_False was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 36, characters 27-33:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 38, characters 43-49:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 41, characters 27-34:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 43, characters 43-50:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 46, characters 27-33:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 48, characters 43-49:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 50, characters 43-49:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 53, characters 27-33:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 55, characters 43-49:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 57, characters 43-49:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 60, characters 27-35:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 62, characters 43-51:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 64, characters 43-51:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 67, characters 27-34:
+Warning 40: Tv_Type was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 71, characters 27-36:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 73, characters 43-52:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 75, characters 43-52:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 78, characters 27-35:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 80, characters 43-51:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 83, characters 27-37:
+Warning 40: Tv_Unknown was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 197, characters 8-14:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 209, characters 57-63:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 246, characters 9-15:
+Warning 40: C_Unit was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 246, characters 17-23:
+Warning 40: C_Unit was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 247, characters 9-14:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 247, characters 17-22:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 248, characters 9-15:
+Warning 40: C_True was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 248, characters 17-23:
+Warning 40: C_True was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 249, characters 9-16:
+Warning 40: C_False was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 249, characters 18-25:
+Warning 40: C_False was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 250, characters 9-15:
+Warning 40: C_Unit was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 251, characters 19-25:
+Warning 40: C_Unit was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 252, characters 9-14:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 253, characters 19-24:
+Warning 40: C_Int was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 254, characters 9-15:
+Warning 40: C_True was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 255, characters 19-25:
+Warning 40: C_True was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 256, characters 9-16:
+Warning 40: C_False was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 257, characters 19-26:
+Warning 40: C_False was selected from type FStar_Reflection_Data.vconst.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 265, characters 9-15:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 265, characters 19-25:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 266, characters 9-16:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 266, characters 20-27:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 267, characters 9-15:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 267, characters 24-30:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 270, characters 9-15:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 270, characters 24-30:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 273, characters 9-17:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 273, characters 26-34:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 276, characters 9-18:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 276, characters 27-36:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 279, characters 9-16:
+Warning 40: Tv_Type was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 279, characters 20-27:
+Warning 40: Tv_Type was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 280, characters 9-17:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 280, characters 21-29:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 281, characters 9-19:
+Warning 40: Tv_Unknown was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 281, characters 21-31:
+Warning 40: Tv_Unknown was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 282, characters 9-15:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 283, characters 19-25:
+Warning 40: Tv_Var was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 284, characters 9-16:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 285, characters 19-26:
+Warning 40: Tv_FVar was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 286, characters 9-15:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 287, characters 19-25:
+Warning 40: Tv_App was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 288, characters 9-15:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 289, characters 19-25:
+Warning 40: Tv_Abs was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 290, characters 9-17:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 291, characters 19-27:
+Warning 40: Tv_Arrow was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 292, characters 9-16:
+Warning 40: Tv_Type was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 293, characters 19-26:
+Warning 40: Tv_Type was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 294, characters 9-18:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 295, characters 19-28:
+Warning 40: Tv_Refine was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 296, characters 9-17:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 297, characters 19-27:
+Warning 40: Tv_Const was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 298, characters 9-19:
+Warning 40: Tv_Unknown was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Reflection_Syntax.ml", line 299, characters 19-29:
+Warning 40: Tv_Unknown was selected from type FStar_Reflection_Data.term_view.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/tactics/ml/FStar_Tactics_Builtins.ml", line 67, characters 46-47:
+Warning 20: this argument will not be used by the function.
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(442,0-442,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(443,0-443,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(493,0-495,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(303,0-307,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(71,0-73,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(738,0-740,39): (Warning) Annotation from val declaration overrides inline type annotation
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "ulib/ml/FStar_Tactics_Builtins.ml", line 67, characters 46-47:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "ulib/ml/FStar_Tactics_Builtins.ml", line 67, characters 46-47:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+.\hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Encrypt_SymEnc.fst(30,0-30,18): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (6937,51): pattern does not contain all quantified variables.
+WARNING: (6937,51): pattern does not contain all quantified variables.
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(28,0-28,22): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#435339
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (6888,46): pattern does not contain any variable.
+WARNING: (7071,46): pattern does not contain any variable.
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(22,0-22,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(28,0-28,22): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (6787,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#472371
+WARNING: (66346,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#474284 (see also .\Platform.Bytes.fst(257,156-260,30))
+WARNING: (7093,46): pattern does not contain any variable.
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+.\CntProtocol.fst(172,0-188,5): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+.\Ex12a.Cap.fst(20,0-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+WARNING: (66346,46): pattern does not contain any variable.
+WARNING: (70703,43): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#510391
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#518843 (see also .\Platform.Bytes.fst(257,156-260,30))
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.Pervasives.Native.fst.hints; ran without hints
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: [Makefile:59: Ex01a-ocaml] Error 2 (ignored)
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 138509 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 138532 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 139902 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 143076 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\examples\tactics\Setopts.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.Tactics.Simplifier.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.Reflection.Types.fsti.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.Tactics.Types.fsti.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.Dyn.fsti.hints; ran without hints
