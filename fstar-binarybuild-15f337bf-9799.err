@@ -1,0 +1,15 @@
+--2017-06-26 15:58:43--  https://raw.githubusercontent.com/Z3Prover/z3/master/LICENSE.txt
+Resolving raw.githubusercontent.com... 151.101.48.133
+Connecting to raw.githubusercontent.com|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1096 (1.1K) [text/plain]
+Saving to: ‘fstar/LICENSE-z3.txt’
+
+0K .                                                     100% 65.7K=0.02s
+
+2017-06-26 15:58:43 (65.7 KB/s) - ‘fstar/LICENSE-z3.txt’ saved [1096/1096]
+
+File "ulib/ml/prims.ml", line 2, characters 16-33:
+Error: Unbound module Big_int_Z
+make[1]: *** [Makefile:26: fstarlib.cma] Error 2
+make: *** [Makefile:12: ocaml] Error 2
