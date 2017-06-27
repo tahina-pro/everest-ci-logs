@@ -1,0 +1,745 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "CoreCrypto.ml", line 526, characters 24-144:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+ECC_X448
+crypto/asn1/x_int64.c: In function 'uint64_print':
+crypto/asn1/x_int64.c:105:32: warning: unknown conversion type character 'j' in format [-Wformat=]
+return BIO_printf(out, "%jd\n", **(int64_t **)pval);
+^
+crypto/asn1/x_int64.c:105:32: warning: too many arguments for format [-Wformat-extra-args]
+crypto/asn1/x_int64.c:106:28: warning: unknown conversion type character 'j' in format [-Wformat=]
+return BIO_printf(out, "%ju\n", **(uint64_t **)pval);
+^
+crypto/asn1/x_int64.c:106:28: warning: too many arguments for format [-Wformat-extra-args]
+crypto/bio/b_sock.c: In function 'BIO_get_accept_socket':
+crypto/bio/b_sock.c:211:13: warning: overflow in implicit constant conversion [-Woverflow]
+int s = INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:216:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:219:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:226:13: warning: overflow in implicit constant conversion [-Woverflow]
+s = INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:233:13: warning: overflow in implicit constant conversion [-Woverflow]
+s = INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c: In function 'BIO_socket':
+crypto/bio/b_sock2.c:45:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c:51:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c: In function 'BIO_connect':
+crypto/bio/b_sock2.c:90:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:98:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c: In function 'BIO_listen':
+crypto/bio/b_sock2.c:164:47: warning: passing argument 4 of 'getsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (getsockopt(sock, SOL_SOCKET, SO_TYPE, &socktype, &socktype_len) != 0
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:980:34: note: expected 'char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI getsockopt(SOCKET s,int level,int optname,char *optval,int *optlen);
+^
+crypto/bio/b_sock2.c:187:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:195:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:204:57: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_IPV6, IPV6_V6ONLY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c: In function 'BIO_accept_ex':
+crypto/bio/b_sock2.c:249:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c:254:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+In file included from crypto/bn/bn_print.c:15:0:
+crypto/bn/bn_print.c: In function 'BN_bn2dec':
+crypto/bn/bn_lcl.h:94:27: warning: unknown conversion type character 'l' in format [-Wformat=]
+#  define BN_DEC_FMT1     "%llu"
+^
+crypto/bn/bn_print.c:104:37: note: in expansion of macro 'BN_DEC_FMT1'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
+^
+crypto/bn/bn_lcl.h:94:27: warning: too many arguments for format [-Wformat-extra-args]
+#  define BN_DEC_FMT1     "%llu"
+^
+crypto/bn/bn_print.c:104:37: note: in expansion of macro 'BN_DEC_FMT1'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
+^
+crypto/bn/bn_lcl.h:95:27: warning: unknown conversion type character 'l' in format [-Wformat=]
+#  define BN_DEC_FMT2     "%019llu"
+^
+crypto/bn/bn_print.c:109:41: note: in expansion of macro 'BN_DEC_FMT2'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
+^
+crypto/bn/bn_lcl.h:95:27: warning: too many arguments for format [-Wformat-extra-args]
+#  define BN_DEC_FMT2     "%019llu"
+^
+crypto/bn/bn_print.c:109:41: note: in expansion of macro 'BN_DEC_FMT2'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
+^
+crypto/threads_win.c: In function 'CRYPTO_atomic_add':
+crypto/threads_win.c:132:35: warning: passing argument 1 of '_InterlockedExchangeAdd' from incompatible pointer type [-Wincompatible-pointer-types]
+*ret = InterlockedExchangeAdd(val, amount) + amount;
+^
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/winnt.h:27:0,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/minwindef.h:163,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/windef.h:8,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/windows.h:69,
+from crypto/threads_win.c:11:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/psdk_inc/intrin-impl.h:1026:10: note: expected 'volatile long int *' but argument is of type 'int *'
+__LONG32 _InterlockedExchangeAdd(__LONG32 volatile *Addend, __LONG32 Value) {
+^
+test/testutil/tests.c: In function 'test_size_t_eq':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:581:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, eq, ==, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:581:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, eq, ==, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:581:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, eq, ==, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c: In function 'test_size_t_ne':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:582:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ne, !=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:582:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ne, !=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:582:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ne, !=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c: In function 'test_size_t_lt':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:583:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, lt, <, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:583:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, lt, <, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:583:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, lt, <, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c: In function 'test_size_t_le':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:584:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, le, <=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:584:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, le, <=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:584:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, le, <=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c: In function 'test_size_t_gt':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:585:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, gt, >, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:585:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, gt, >, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:585:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, gt, >, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c: In function 'test_size_t_ge':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:586:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ge, >=, fmt)
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:586:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ge, >=, fmt)
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:586:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ge, >=, fmt)
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+ar: creating test/libtestutil.a
+ar: creating libssl.a
+ar: creating libcrypto.a
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Tactics.ml", line 353, characters 45-46:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 40-41:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 42-43:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 3, characters 64-65:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 37-38:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 62-63:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Tactics.ml", line 353, characters 45-46:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 40-41:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 42-43:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 3, characters 64-65:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 37-38:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 62-63:
+Warning 20: this argument will not be used by the function.
+Warning 7: : After inlining, Hacl.Test.X25519.main (going into Hacl_Test_X25519) calls Hacl.EC.crypto_scalarmult (going into Curve25519) -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+/usr/lib/gcc/x86_64-w64-mingw32/5.4.0/../../../../x86_64-w64-mingw32/bin/ld: final link failed: File truncated
+collect2: error: ld returned 1 exit status
+** Fatal error: Error during linking
+
+File "caml_startup", line 1:
+Error: Error during linking
+make[2]: *** [Makefile:99: sha2_256.exe] Error 2
+make[2]: *** Waiting for unfinished jobs....
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_6, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_6, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_6, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k1, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k1, after the definition of len1, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of h0, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @5 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.little_endian (going into Crypto_Symmetric_Bytes) calls FStar.Endianness.little_endian (going into FStar) -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.big_endian (going into Crypto_Symmetric_Bytes) calls FStar.Endianness.big_endian (going into FStar) -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.little_bytes (going into Crypto_Symmetric_Bytes) calls FStar.Endianness.little_bytes (going into FStar) -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.setup (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.setup
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.setup (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.setup has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.setup from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.copy_state (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.copy_state
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.copy_state (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.copy_state has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.copy_state from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.rounds (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.rounds
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.rounds (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.rounds has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.rounds from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.sum_states (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.sum_states
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.sum_states (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.sum_states has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.sum_states from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Lib.LoadStore32.uint32s_to_le_bytes (going into Hacl) -- removing the static qualifier from Hacl.Lib.LoadStore32.uint32s_to_le_bytes
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update (going into Crypto_Symmetric_MAC) calls Hacl.Impl.Poly1305_64.poly1305_update (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_update
+Warning 8: : After inlining, Crypto.Symmetric.MAC.update (going into Crypto_Symmetric_MAC) calls Hacl.Impl.Poly1305_64.poly1305_update (going into Hacl). This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_update has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_update from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update (going into Crypto_Symmetric_MAC) calls Hacl.Impl.Poly1305_64.mk_state (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.mk_state
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls FStar.Monotonic.RRef.m_recall (going into FStar) -- removing the static qualifier from FStar.Monotonic.RRef.m_recall
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.poly1305_process_last_block (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_process_last_block
+Warning 8: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.poly1305_process_last_block (going into Hacl). This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_process_last_block has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_process_last_block from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.poly1305_last_pass (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_last_pass
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.State.__proj__MkState__item__h (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.State.__proj__MkState__item__h
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt (going into Crypto_AEAD) calls Crypto.Symmetric.UF1CMA.__proj__Acc__item__a (going into Crypto_Symmetric_UF1CMA) -- removing the static qualifier from Crypto.Symmetric.UF1CMA.__proj__Acc__item__a
+Warning 7: : After inlining, Crypto.KrmlTest.test (going into Crypto_KrmlTest) calls Crypto.AEAD.Encrypt.encrypt (going into Crypto_AEAD) -- removing the static qualifier from Crypto.AEAD.Encrypt.encrypt
+Warning 7: : After inlining, Crypto.KrmlTest.test (going into Crypto_KrmlTest) calls Crypto.AEAD.Decrypt.decrypt (going into Crypto_AEAD) -- removing the static qualifier from Crypto.AEAD.Decrypt.decrypt
+Warning 6: in the definition of buf, after the definition of m0, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k1, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k1, after the definition of len1, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of h0, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @5 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of cipher1, after the definition of cipherlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm, in file Crypto_KrmlTest: stack newbuf 2uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_0, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_1, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plain, after the definition of plainlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_2, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of aad, after the definition of aadlen, in top-level declaration Crypto.KrmlTest.test_aes_gcm_3, in file Crypto_KrmlTest: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.little_endian (going into Crypto_Symmetric_Bytes) calls FStar.Endianness.little_endian (going into FStar) -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.big_endian (going into Crypto_Symmetric_Bytes) calls FStar.Endianness.big_endian (going into FStar) -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.little_bytes (going into Crypto_Symmetric_Bytes) calls FStar.Endianness.little_bytes (going into FStar) -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.setup (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.setup
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.setup (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.setup has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.setup from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.copy_state (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.copy_state
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.copy_state (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.copy_state has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.copy_state from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.rounds (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.rounds
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.rounds (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.rounds has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.rounds from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.sum_states (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.sum_states
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.sum_states (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.sum_states has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.sum_states from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Lib.LoadStore32.uint32s_to_le_bytes (going into Hacl) -- removing the static qualifier from Hacl.Lib.LoadStore32.uint32s_to_le_bytes
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update (going into Crypto_Symmetric_MAC) calls Hacl.Impl.Poly1305_64.poly1305_update (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_update
+Warning 8: : After inlining, Crypto.Symmetric.MAC.update (going into Crypto_Symmetric_MAC) calls Hacl.Impl.Poly1305_64.poly1305_update (going into Hacl). This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_update has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_update from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update (going into Crypto_Symmetric_MAC) calls Hacl.Impl.Poly1305_64.mk_state (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.mk_state
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls FStar.Monotonic.RRef.m_recall (going into FStar) -- removing the static qualifier from FStar.Monotonic.RRef.m_recall
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.poly1305_process_last_block (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_process_last_block
+Warning 8: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.poly1305_process_last_block (going into Hacl). This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_process_last_block has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_process_last_block from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.poly1305_last_pass (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_last_pass
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.State.__proj__MkState__item__h (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.State.__proj__MkState__item__h
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt (going into Crypto_AEAD) calls Crypto.Symmetric.UF1CMA.__proj__Acc__item__a (going into Crypto_Symmetric_UF1CMA) -- removing the static qualifier from Crypto.Symmetric.UF1CMA.__proj__Acc__item__a
+Warning 7: : After inlining, Crypto.KrmlTest.test (going into Crypto_KrmlTest) calls Crypto.AEAD.Encrypt.encrypt (going into Crypto_AEAD) -- removing the static qualifier from Crypto.AEAD.Encrypt.encrypt
+Warning 7: : After inlining, Crypto.KrmlTest.test (going into Crypto_KrmlTest) calls Crypto.AEAD.Decrypt.decrypt (going into Crypto_AEAD) -- removing the static qualifier from Crypto.AEAD.Decrypt.decrypt
+Warning 7: : After inlining, Hacl.Test.X25519.main (going into Hacl_Test_X25519) calls Hacl.EC.crypto_scalarmult (going into Curve25519) -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_6, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_6, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_1b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_2b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_3b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4a, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_4b, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_5, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of ctx, after the definition of expected, in top-level declaration Hacl.Test.SHA2_256.test_6, in file Hacl_Test_SHA2_256: stack newbuf 0uint32 SHA2_256.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_1a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_1b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_2a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_2b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_3a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_3b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_4a, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_4b, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_384.test_5, in file Hacl_Test_SHA2_384: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of state, after the definition of expected, in top-level declaration Hacl.Test.SHA2_384.test_6, in file Hacl_Test_SHA2_384: stack newbuf 0uint64 SHA2_384.size_state is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_1b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_2b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_3b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4a, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_4b, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of plaintext, after the definition of plaintext_len, in top-level declaration Hacl.Test.SHA2_512.test_5, in file Hacl_Test_SHA2_512: stack newbuf 0x61uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of output, after the definition of output_len, in top-level declaration Hacl.Test.SHA2_512.test_6, in file Hacl_Test_SHA2_512: stack newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+make[1]: *** [Makefile:10: all] Error 2
+make: *** [Makefile:24: extract-specs] Error 2
+Checking out files:   8% (410/4782)   Checking out files:   9% (431/4782)   Checking out files:  10% (479/4782)   Checking out files:  11% (527/4782)   Checking out files:  12% (574/4782)   Checking out files:  13% (622/4782)   Checking out files:  14% (670/4782)   Checking out files:  15% (718/4782)   Checking out files:  16% (766/4782)   Checking out files:  16% (812/4782)   Checking out files:  17% (813/4782)   Checking out files:  18% (861/4782)   Checking out files:  19% (909/4782)   Checking out files:  20% (957/4782)   Checking out files:  21% (1005/4782)   Checking out files:  22% (1053/4782)   Checking out files:  23% (1100/4782)   Checking out files:  24% (1148/4782)   Checking out files:  25% (1196/4782)   Checking out files:  25% (1230/4782)   Checking out files:  26% (1244/4782)   Checking out files:  27% (1292/4782)   Checking out files:  28% (1339/4782)   Checking out files:  29% (1387/4782)   Checking out files:  30% (1435/4782)   Checking out files:  31% (1483/4782)   Checking out files:  32% (1531/4782)   Checking out files:  33% (1579/4782)   Checking out files:  34% (1626/4782)   Checking out files:  34% (1650/4782)   Checking out files:  35% (1674/4782)   Checking out files:  36% (1722/4782)   Checking out files:  37% (1770/4782)   Checking out files:  38% (1818/4782)   Checking out files:  39% (1865/4782)   Checking out files:  40% (1913/4782)   Checking out files:  41% (1961/4782)   Checking out files:  42% (2009/4782)   Checking out files:  42% (2054/4782)   Checking out files:  43% (2057/4782)   Checking out files:  44% (2105/4782)   Checking out files:  45% (2152/4782)   Checking out files:  46% (2200/4782)   Checking out files:  47% (2248/4782)   Checking out files:  48% (2296/4782)   Checking out files:  49% (2344/4782)   Checking out files:  50% (2391/4782)   Checking out files:  51% (2439/4782)   Checking out files:  51% (2462/4782)   Checking out files:  52% (2487/4782)   Checking out files:  53% (2535/4782)   Checking out files:  54% (2583/4782)   Checking out files:  55% (2631/4782)   Checking out files:  56% (2678/4782)   Checking out files:  57% (2726/4782)   Checking out files:  58% (2774/4782)   Checking out files:  59% (2822/4782)   Checking out files:  59% (2866/4782)   Checking out files:  60% (2870/4782)   Checking out files:  61% (2918/4782)   Checking out files:  62% (2965/4782)   Checking out files:  63% (3013/4782)   Checking out files:  64% (3061/4782)   Checking out files:  65% (3109/4782)   Checking out files:  66% (3157/4782)   Checking out files:  67% (3204/4782)   Checking out files:  67% (3251/4782)   Checking out files:  68% (3252/4782)   Checking out files:  69% (3300/4782)   Checking out files:  70% (3348/4782)   Checking out files:  71% (3396/4782)   Checking out files:  72% (3444/4782)   Checking out files:  73% (3491/4782)   Checking out files:  74% (3539/4782)   Checking out files:  75% (3587/4782)   Checking out files:  76% (3635/4782)   Checking out files:  76% (3666/4782)   Checking out files:  77% (3683/4782)   Checking out files:  78% (3730/4782)   Checking out files:  79% (3778/4782)   Checking out files:  80% (3826/4782)   Checking out files:  81% (3874/4782)   Checking out files:  82% (3922/4782)   Checking out files:  83% (3970/4782)   Checking out files:  84% (4017/4782)   Checking out files:  85% (4065/4782)   Checking out files:  85% (4077/4782)   Checking out files:  86% (4113/4782)   Checking out files:  87% (4161/4782)   Checking out files:  88% (4209/4782)   Checking out files:  89% (4256/4782)   Checking out files:  90% (4304/4782)   Checking out files:  91% (4352/4782)   Checking out files:  92% (4400/4782)   Checking out files:  93% (4448/4782)   Checking out files:  94% (4496/4782)   Checking out files:  94% (4506/4782)   Checking out files:  95% (4543/4782)   Checking out files:  96% (4591/4782)   Checking out files:  97% (4639/4782)   Checking out files:  98% (4687/4782)   Checking out files:  99% (4735/4782)   Checking out files: 100% (4782/4782)   Checking out files: 100% (4782/4782), done.
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+678ac373 [CI] regenerate hints
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+git branch <new-branch-name> 678ac373
+
+Switched to a new branch 'cwinter_debug'
+To github.com:mitls/hacl-star.git
+f113bd6c..678ac373  cwinter_debug -> cwinter_debug
