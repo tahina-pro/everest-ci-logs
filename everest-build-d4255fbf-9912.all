@@ -1,0 +1,122 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent1/_work/12/s
+About to run: everest_rebuild
+BUILD_SOURCEBRANCHNAME: taramana_env_dest_file
+BUILD_DEFINITIONNAME: Everest-CI-Windows
+Removing FStar/
+Removing fstarlang_binaries/
+Removing hacl-star/
+Removing kremlin/
+Removing mitls-fstar/
+Removing vale/
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent1/_work/12/s
+
+OVERVIEW: ./everest, a high-level management script for Project Everest
+
+USAGE: ./everest [OPTIONS] COMMANDS
+
+OPTION:
+--yes     Non-interactive mode (answer y to all questions, verbose)
+
+-j n      Set max number of parallel jobs to n (default 1)
+
+COMMAND:
+check     ensure that all the required programs are found in path, install
+them if needed; offer to customize ~/.bashrc with proper env
+variables
+(destination file ~/.bashrc can be overridden with the
+EVEREST_ENV_DEST_FILE environment variable)
+
+pull      self-update the everest repository (i.e. the script and
+hashes.sh) then run reset
+
+reset     pull all projects and move them to the revisions specified by
+hashes.sh
+
+snapshot  make the current state a new known set of working revisions; this
+writes into hashes.sh
+
+make      rebuild all projects
+
+test      launch the test artifacts
+
+verify    run verification for all projects
+
+clean     clean all projects
+
+help      print the current message
+Checking environment
+... which found
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+... all 45 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... all 15 ocamlfind packages found
+... sample ocamlbuild project compiles successfully
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+... cloning FStarLang/binaries
+Cloning into 'fstarlang_binaries'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 553b5e4 Adding new build package and removing oldest.
+... version of z3 found in PATH: 4.5.0
+... version of z3 found for win-x64 in z3-tested is: 1f29cebd4df6
+Get the freshest z3 from FStarLang/binaries? [Yn]
+... unzipping fstarlang_binaries/z3-tested/z3-4.5.1.1f29cebd4df6-x64-win.zip
+Archive:  fstarlang_binaries/z3-tested/z3-4.5.1.1f29cebd4df6-x64-win.zip
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/LICENSE.txt
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/com.microsoft.z3.jar
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/libz3.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/libz3.lib
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/libz3java.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/libz3java.lib
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/Microsoft.Z3.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/Microsoft.Z3.xml
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/msvcp110.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/msvcr110.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/vcomp110.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/z3.exe
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/example.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3consts.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3core.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3num.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3poly.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3printer.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3rcf.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3types.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3util.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__init__.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3consts.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3core.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3num.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3poly.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3printer.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3rcf.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3types.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3util.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/__init__.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3++.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_algebraic.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_api.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_ast_containers.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_fixedpoint.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_fpa.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_interp.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_macros.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_optimization.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_polynomial.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_rcf.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_v1.h
+Automatically customize ~/.bashrc with the z3 path? [Yn]
+./everest: line 99: ~/.bashrc: No such file or directory
