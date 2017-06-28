@@ -1,0 +1,182 @@
+dos2unix: converting file parser/parse.fsi to Unix format...
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5983, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 6085, characters 30-125
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5986, characters 10-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5631, characters 37-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3771, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4170, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 574, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4304, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4574, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 325, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 408, characters 18-100
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+.\u_boot_fsts\FStar.SMTEncoding.Term.fst(572,0-698,31): (Error) Only function literals with arrow types can be defined recursively; got let basic =
+"(set-logic ALL)
+(declare-sort Ref 0)
+(declare-fun Ref_constr_id (Ref) Int)
+
+(declare-sort FString 0)
+(declare-fun FString_constr_id (FString) Int)
+
+(declare-sort Term 0)
+(declare-fun Term_constr_id (Term) Int)
+(declare-datatypes () ((Fuel 
+(ZFuel) 
+(SFuel (prec Fuel)))))
+(declare-fun MaxIFuel () Fuel)
+(declare-fun MaxFuel () Fuel)
+(declare-fun PreType (Term) Term)
+(declare-fun Valid (Term) Bool)
+(declare-fun HasTypeFuel (Fuel Term Term) Bool)
+(define-fun HasTypeZ ((x Term) (t Term)) Bool
+(HasTypeFuel ZFuel x t))
+(define-fun HasType ((x Term) (t Term)) Bool
+(HasTypeFuel MaxIFuel x t))
+;;fuel irrelevance
+(assert (forall ((f Fuel) (x Term) (t Term))
+(! (= (HasTypeFuel (SFuel f) x t)
+(HasTypeZ x t))
+:pattern ((HasTypeFuel (SFuel f) x t)))))
+(declare-fun NoHoist (Term Bool) Bool)
+;;no-hoist
+(assert (forall ((dummy Term) (b Bool))
+(! (= (NoHoist dummy b)
+b)
+:pattern ((NoHoist dummy b)))))
+(define-fun  IsTyped ((x Term)) Bool
+(exists ((t Term)) (HasTypeZ x t)))
+(declare-fun ApplyTF (Term Fuel) Term)
+(declare-fun ApplyTT (Term Term) Term)
+(declare-fun Rank (Term) Int)
+(declare-fun Closure (Term) Term)
+(declare-fun ConsTerm (Term Term) Term)
+(declare-fun ConsFuel (Fuel Term) Term)
+(declare-fun Precedes (Term Term) Term)
+(define-fun Reify ((x Term)) Term x)
+(assert (forall ((t Term))
+(! (=> (exists ((e Term)) (HasType e t))
+(Valid t))
+:pattern ((Valid t)))))
+(assert (forall ((t1 Term) (t2 Term))
+(! (= (Valid (Precedes t1 t2)) 
+(< (Rank t1) (Rank t2)))
+:pattern ((Precedes t1 t2)))))
+(define-fun Prims.precedes ((a Term) (b Term) (t1 Term) (t2 Term)) Term
+(Precedes t1 t2))
+(declare-fun Range_const () Term)
+(declare-fun _mul (Int Int) Int)
+(declare-fun _div (Int Int) Int)
+(declare-fun _mod (Int Int) Int)
+(assert (forall ((x Int) (y Int)) (! (= (_mul x y) (* x y)) :pattern ((_mul x y)))))
+(assert (forall ((x Int) (y Int)) (! (= (_div x y) (div x y)) :pattern ((_div x y)))))
+(assert (forall ((x Int) (y Int)) (! (= (_mod x y) (mod x y)) :pattern ((_mod x y)))))"
+in
+let constrs =
+FStar.Pervasives.Native.Mktuple5 "FString_const"
+(FStar.Pervasives.Native.Mktuple3 "FString_const_proj_0" FStar.SMTEncoding.Term.Int_sort true ::
+Prims.Nil)
+FStar.SMTEncoding.Term.String_sort
+0
+true ::
+FStar.Pervasives.Native.Mktuple5 "Tm_type" Prims.Nil FStar.SMTEncoding.Term.Term_sort 2 true ::
+FStar.Pervasives.Native.Mktuple5 "Tm_arrow"
+(FStar.Pervasives.Native.Mktuple3 "Tm_arrow_id" FStar.SMTEncoding.Term.Int_sort true ::
+Prims.Nil)
+FStar.SMTEncoding.Term.Term_sort
+3
+false ::
+FStar.Pervasives.Native.Mktuple5 "Tm_uvar"
+(FStar.Pervasives.Native.Mktuple3 "Tm_uvar_fst" FStar.SMTEncoding.Term.Int_sort true ::
+Prims.Nil)
+FStar.SMTEncoding.Term.Term_sort
+5
+true ::
+FStar.Pervasives.Native.Mktuple5 "Tm_unit" Prims.Nil FStar.SMTEncoding.Term.Term_sort 6 true ::
+FStar.Pervasives.Native.Mktuple5 "BoxInt"
+(FStar.Pervasives.Native.Mktuple3 "BoxInt_proj_0" FStar.SMTEncoding.Term.Int_sort true ::
+Prims.Nil)
+FStar.SMTEncoding.Term.Term_sort
+7
+true ::
+FStar.Pervasives.Native.Mktuple5 "BoxBool"
+(FStar.Pervasives.Native.Mktuple3 "BoxBool_proj_0" FStar.SMTEncoding.Term.Bool_sort true ::
+Prims.Nil)
+FStar.SMTEncoding.Term.Term_sort
+8
+true ::
+FStar.Pervasives.Native.Mktuple5 "BoxString"
+(FStar.Pervasives.Native.Mktuple3 "BoxString_proj_0" FStar.SMTEncoding.Term.String_sort true ::
+Prims.Nil)
+FStar.SMTEncoding.Term.Term_sort
+9
+true ::
+FStar.Pervasives.Native.Mktuple5 "BoxRef"
+(FStar.Pervasives.Native.Mktuple3 "BoxRef_proj_0" FStar.SMTEncoding.Term.Ref_sort true ::
+Prims.Nil)
+FStar.SMTEncoding.Term.Term_sort
+10
+true ::
+FStar.Pervasives.Native.Mktuple5 "LexCons"
+(FStar.Pervasives.Native.Mktuple3 "LexCons_0" FStar.SMTEncoding.Term.Term_sort true ::
+FStar.Pervasives.Native.Mktuple3 "LexCons_1" FStar.SMTEncoding.Term.Term_sort true ::
+Prims.Nil)
+FStar.SMTEncoding.Term.Term_sort
+11
+true ::
+Prims.Nil
+in
+let bcons =
+constrs |> FStar.List.collect FStar.SMTEncoding.Term.constructor_to_decl |>
+FStar.List.map FStar.SMTEncoding.Term.declToSmt |>
+FStar.String.concat "
+"
+in
+let lex_ordering =
+"
+(define-fun is-Prims.LexCons ((t Term)) Bool 
+(is-LexCons t))
+(assert (forall ((x1 Term) (x2 Term) (y1 Term) (y2 Term))
+(= (Valid (Precedes (LexCons x1 x2) (LexCons y1 y2)))
+(or (Valid (Precedes x1 y1))
+(and (= x1 y1)
+(Valid (Precedes x2 y2)))))))
+"
+in
+basic ^ bcons ^ lex_ordering : uu___unification_ 165242
+1 error was reported (see above)
+make[3]: *** [Makefile:208: u_extract_smtencoding_base] Error 1
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(394,0-394,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(496,0-498,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(71,0-73,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(282,0-286,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(716,0-718,39): (Warning) Annotation from val declaration overrides inline type annotation
+make[3]: Target 'u_extract_all' not remade because of errors.
+make[2]: *** [Makefile:234: ocaml] Error 2
+make[1]: *** [Makefile:244: fstar-ocaml] Error 2
+make: *** [Makefile:259: utest] Error 2
