@@ -1,0 +1,526 @@
+dos2unix: converting file parser/parse.fsi to Unix format...
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(71,0-73,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(394,0-394,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(496,0-498,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(282,0-286,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(716,0-718,39): (Warning) Annotation from val declaration overrides inline type annotation
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Encrypt_SymEnc.fst(30,0-30,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Encrypt_SymEnc.fst(30,8-30,16): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder Prims.int' introduced in uu___unification_ 149603
+.\Encrypt_SymEnc.fst(30,11-30,16): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder Prims.int' introduced in uu___unification_ 149648 (see also .\Encrypt_SymEnc.fst(34,7-34,9))
+.\Encrypt_SymEnc.fst(32,0-38,30): (Error) Unknown assertion failed
+.\Encrypt_SymEnc.fst(33,10-33,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder Prims.int' introduced in uu___unification_ 149648 (see also .\Encrypt_SymEnc.fst(34,7-34,9))
+Verified module: Encrypt_SymEnc (6509 milliseconds)
+4 errors were reported (see above)
+make[3]: *** [Makefile:57: verify-Encrypt_SymEnc.fst] Error 1
+.\Encrypt_SymEnc.fst(30,8-30,16): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder Prims.int' introduced in uu___unification_ 148442
+.\Encrypt_SymEnc.fst(30,11-30,16): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder Prims.int' introduced in uu___unification_ 148481 (see also .\Encrypt_SymEnc.fst(34,7-34,9))
+.\Encrypt_SymEnc.fst(33,10-33,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder Prims.int' introduced in uu___unification_ 148481 (see also .\Encrypt_SymEnc.fst(34,7-34,9))
+Verified module: Encrypt_Sample (36 milliseconds)
+3 errors were reported (see above)
+make[3]: *** [Makefile:57: verify-Encrypt_Sample.fst] Error 1
+WARNING: (7076,51): pattern does not contain all quantified variables.
+WARNING: (7076,51): pattern does not contain all quantified variables.
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1980, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5207, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\MRefST.fst(3,5-3,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:16: ReifyTest.uver] Error 1
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MAC.fst(45,10-45,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 145561
+.\MAC.fst(45,13-45,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 146510 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(52,19-52,34): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 145769 (see also .\MAC.fst(56,8-56,25))
+.\MAC.fst(68,11-68,27): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 146038
+.\MAC.fst(78,0-82,3): (Error) Unknown assertion failed
+.\MAC.fst(78,4-78,7): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 146510 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(80,2-80,15): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 146317 (see also .\MAC.fst(81,24-81,28))
+.\MAC.fst(84,4-84,10): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 146510 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(92,8-92,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 146510
+Verified module: MAC (4358 milliseconds)
+9 errors were reported (see above)
+make[3]: *** [Makefile:57: verify-MAC.fst] Error 1
+File "ulib/ml/FStar_HyperStack_ST.ml", line 44, characters 17-47:
+Error: This expression has type (FStar_HyperHeap.rid, unit) FStar_Map.t
+but an expression was expected of type
+FStar_HyperStack.hh =
+(FStar_HyperHeap.rid, FStar_Monotonic_Heap.heap) FStar_Map.t
+Type unit is not compatible with type
+FStar_Monotonic_Heap.heap = FStar_Monotonic_Heap.heap_rec 
+make[3]: *** [Makefile:26: fstarlib.cma] Error 2
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:12: ocaml] Error 2
+make[1]: *** [Makefile:274: hello] Error 2
+.\IfcExample.fst(33,0-33,44): (Error) Unknown assertion failed
+.\IfcExample.fst(34,0-34,28): (Error) Unknown assertion failed
+.\IfcExample.fst(36,0-36,48): (Error) Unknown assertion failed
+.\IfcExample.fst(38,0-38,49): (Error) Unknown assertion failed
+Verified module: IfcExample (14119 milliseconds)
+4 errors were reported (see above)
+make[3]: *** [../Makefile.include:16: IfcExample.uver] Error 1
+Unexpected error
+Failure("Bound term variable not found (after unmangling): uu___#643318 in environment: h1#644018, a#644017, h1#644016, a#644015, y#644010, y#644006, h1#644002, a#644001, b#644000, h#643992, p#643991, uu___#643985, f, f, redeem, issue, gen, capRead, utf8, byte, byte, rc, test, tmp, tmp, readme, readme, pwd, pwd, delete, read, canRead, publicFile, canWrite, file, file, string_of_char, string_of_list, list_of_string, collect, get, substring, sub, index, lowercase, strlen, compare, concat, strcat, split, make, length, char, char, verify, mac, keygen, log, log, __proj__Entry__item__m, __proj__Entry__item__t, __proj__Entry__item__k, uu___is_Entry, Entry, entry, entry, pkey, key_prop, hmac_sha1, sha1, sample, tag, tag, key, key, macsize, macsize, blocksize, blocksize, keysize, keysize, text, text, load_key, load_chain, verify_signature, hash_and_sign, get_key_from_cert, validate_chain, has_priv, __proj__KeyECDSA__item___0, uu___is_KeyECDSA, __proj__KeyDSA__item___0, uu___is_KeyDSA, __proj__KeyRSA__item___0, uu___is_KeyRSA, KeyECDSA, KeyDSA, KeyRSA, key, key, ec_gen_key, ecdsa_verify, ecdsa_sign, ecdh_agreement, ec_is_on_curve, __proj__Mkec_key__item__ec_priv, __proj__Mkec_key__item__ec_point, __proj__Mkec_key__item__ec_params, Mkec_key, ec_key, ec_key, __proj__Mkec_point__item__ecy, __proj__Mkec_point__item__ecx, Mkec_point, ec_point, ec_point, __proj__Mkec_params__item__point_compression, __proj__Mkec_params__item__curve, Mkec_params, ec_params, ec_params, ec_bytelen, uu___is_ECC_X448, uu___is_ECC_X25519, uu___is_ECC_P521, uu___is_ECC_P384, uu___is_ECC_P256, ECC_X448, ECC_X25519, ECC_P521, ECC_P384, ECC_P256, ec_curve, ec_curve, dh_agreement, dh_gen_key, dh_gen_params, dsa_verify, dsa_sign, dsa_gen_key, rsa_verify, rsa_sign, rsa_decrypt, rsa_encrypt, rsa_gen_key, random, stream_fini, stream_process, stream_decryptor, stream_encryptor, cipher_stream, cipher_stream, block_decrypt, block_encrypt, __proj__Mkdh_key__item__dh_private, __proj__Mkdh_key__item__dh_public, __proj__Mkdh_key__item__dh_params, Mkdh_key, dh_key, dh_key, __proj__Mkdh_params__item__safe_prime, __proj__Mkdh_params__item__dh_q, __proj__Mkdh_params__item__dh_g, __proj__Mkdh_params__item__dh_p, Mkdh_params, dh_params, dh_params, __proj__Mkdsa_key__item__dsa_private, __proj__Mkdsa_key__item__dsa_public, __proj__Mkdsa_key__item__dsa_params, Mkdsa_key, dsa_key, dsa_key, __proj__Mkdsa_params__item__dsa_g, __proj__Mkdsa_params__item__dsa_q, __proj__Mkdsa_params__item__dsa_p, Mkdsa_params, dsa_params, dsa_params, __proj__Mkrsa_key__item__rsa_prv_exp, __proj__Mkrsa_key__item__rsa_pub_exp, __proj__Mkrsa_key__item__rsa_mod, Mkrsa_key, rsa_key, rsa_key, aead_decrypt, aead_encrypt, aead_encryptT, aeadTagSize, aeadRealIVSize, aeadKeySize, uu___is_AES_256_CCM_8, uu___is_AES_128_CCM_8, uu___is_AES_256_CCM, uu___is_AES_128_CCM, uu___is_CHACHA20_POLY1305, uu___is_AES_256_GCM, uu___is_AES_128_GCM, AES_256_CCM_8, AES_128_CCM_8, AES_256_CCM, AES_128_CCM, CHACHA20_POLY1305, AES_256_GCM, AES_128_GCM, aead_cipher, aead_cipher, blockSize, uu___is_Pad_PKCS1, uu___is_Pad_none, Pad_PKCS1, Pad_none, rsa_padding, rsa_padding, uu___is_RC4_128, RC4_128, stream_cipher, stream_cipher, uu___is_TDES_EDE_CBC, uu___is_AES_256_CBC, uu___is_AES_128_CBC, TDES_EDE_CBC, AES_256_CBC, AES_128_CBC, block_cipher, block_cipher, uu___is_RSAPSS, uu___is_ECDSA, uu___is_DSA, uu___is_RSASIG, RSAPSS, ECDSA, DSA, RSASIG, sig_alg, sig_alg, digest_final, digest_update, digest_create, hash_ctx, hash_ctx, hmac, hash, hashSize, uu___is_SHA512, uu___is_SHA384, uu___is_SHA256, uu___is_SHA224, uu___is_SHA1, uu___is_MD5, SHA512, SHA384, SHA256, SHA224, SHA1, MD5, hash_alg, hash_alg, debug_print_string, write_string, read_line, close_write_file, close_read_file, open_write_file, open_read_file, input_float, input_int, input_line, print_any, print_string, print_newline, fd_write, fd_write, fd_read, fd_read, uu___is_EOF, EOF, try_with, exit, failwith, pipe_left, pipe_right, lift_exn_all, lift_state_all, all_wp, all_post, all_pre, all_pre, modifies_none, ref, get, write, read, alloc, recall, mref, contains_pred, lift_gst_state, st_wp, st_post, st_pre, st_pre, gst_recall, gst_witness, witnessed, stable, heap_predicate, heap_predicate, gst_put, gst_get, heap_rel, lift_div_gst, gst_wp, gst_post, gst_pre, gst_pre, double, double, float, float, ref, trivial_preorder, lemma_upd_equals_upd_tot_for_contained_refs, lemma_sel_equals_sel_tot_for_contained_refs, upd_upd_same_mref, lemma_unused_upd_modifies, lemma_contains_upd_modifies, lemma_upd_unused, lemma_upd_contains_different_addr, lemma_unused_upd_contains, lemma_well_typed_upd_contains, lemma_upd_contains, lemma_in_dom_emp, lemma_mref_injectivity, lemma_mref_injectivity, lemma_sel_upd2, lemma_sel_upd1, lemma_sel_same_addr, lemma_free_mm_unused, lemma_free_mm_contains, lemma_free_mm_sel, lemma_alloc, lemma_distinct_addrs_unused, lemma_distinct_addrs_distinct_preorders, lemma_distinct_addrs_distinct_types, lemma_contains_implies_used, equal_dom, modifies, modifies_t, free_mm, alloc, upd, upd_tot, valid_upd, sel, sel_tot, op_Hat_Plus_Hat, op_Plus_Plus_Hat, op_Hat_Plus_Plus, only, only_t, fresh, unused_in, contains, compare_addrs, is_mm, addr_of, mref, emp, emp, equal_extensional, equal, heap, heap, tset, set, lemma_mem_tset_of_set, lemma_mem_tset_of_set_r, lemma_mem_tset_of_set_l, tset_of_set, lemma_equal_refl, lemma_equal_elim, lemma_equal_intro, mem_subset, subset_mem, mem_complement, mem_intersect, mem_union, mem_singleton, mem_empty, subset, complement, intersect, union, singleton, empty, mem, equal, set, predicateExtensionality, peq, predicate, apply, axiom, as_set, as_set', as_set', eqtype, eqtype, disjoint_not_in_both, lemma_equal_refl, lemma_equal_elim, lemma_equal_intro, mem_subset, subset_mem, mem_complement, mem_intersect, mem_union, mem_singleton, mem_empty, subset, disjoint, complement, intersect, union, singleton, empty, mem, equal, set, gfeq, gfun, feq, efun, stable, preorder, preorder_rel, predicate, relation, hex_of_string, string_of_hex, hex_of_bytes, bytes_of_hex, byte_of_int, print_bytes, iutf8, iutf8_opt, utf8, int_of_bytes_of_int, int_of_bytes, bytes_of_int, split2, append_assoc, append_empty_bytes_r, append_empty_bytes_l, lemma_append_inj, split_eq, lemma_split, split, xor, equalBytes, initBytes, createBytes, index, cbyte2, cbyte, get_cbytes, abyte2, abyte, abytes, empty_bytes, empty_bytes, lbytes, length, op_At_Bar, seq_of_bytes, bytes, bytes, cbytes, cbytes, byte, byte, lemma_repr_bytes_values, repr_bytes, char_of_int, int_of_char, uppercase, lowercase, char, char, __proj__Char__item___0, uu___is_Char, Char, char', char', char_code, char_code, mem_seq_of_list, seq_of_list_tl, slice_slice, slice_length, slice_is_empty, cons_index_slice, snoc_slice_index, mem_cons, index_tail, append_cons, index_cons_r, index_cons_l, suffix_of_tail, head_cons, cons_head_tail, suffix_of, find_l_none_no_index, append_slices, append_cons_snoc, contains_cons, lemma_find_l_contains, contains_snoc, append_contains_equiv, intro_append_contains_from_disjunction, lemma_contains_singleton, lemma_contains_empty, contains_elim, contains_intro, contains, lemma_index_is_nth, createL, createL_post, lemma_list_seq_bij, lemma_seq_list_bij, seq_of_list, seq_of_list, seq_to_list, seq_to_list, seq_mem_k, seq_find, seq_find_aux, seq_find_aux, found, find_r, find_r, un_snoc, find_snoc, find_append_none_s2, find_append_none, find_append_some, find_l, find_l, lemma_mem_snoc, lemma_snoc_inj, lemma_tail_snoc, lemma_cons_snoc, snoc, lemma_trans_perm, lemma_weaken_perm_right, lemma_weaken_perm_left, lemma_trans_frame, lemma_weaken_frame_left, lemma_weaken_frame_right, lemma_tail_slice, lemma_seq_frame_lo, lemma_seq_frame_hi, lemma_swap_splice, splice_refl, splice, lemma_swap_permutes_slice, lemma_swap_slice_commute, swap_frame_hi, swap_frame_lo', swap_frame_lo, lemma_ordering_hi_cons, lemma_ordering_lo_snoc, lemma_slice_snoc, lemma_slice_cons, lemma_mem_append, cons_perm, lemma_swap_permutes, permutation, lemma_swap_permutes_aux, lemma_swap_permutes_aux_frag_eq, split_5, sorted_concat_lemma, tot_ord, total_order, lemma_count_slice, lemma_mem_count, lemma_mem_inversion, lemma_append_count_aux, lemma_append_count, sorted, sorted, lemma_tl, lemma_append_cons, upd_slice, slice_upd, lemma_slice_first_in_append, lemma_slice_append, swap, mem, count, count, split_eq, lemma_split, split, lemma_cons_inj, cons, last, lemma_tail_append, lemma_head_append, tail, head, lemma_append_inj, lemma_append_len_disj, lemma_append_inj_r, lemma_append_inj_l, indexable, init_index, init_index_aux, append_empty_r, append_empty_l, append_assoc, lemma_eq_elim, lemma_eq_refl, lemma_eq_intro, eq, eq_i, eq_i, equal, hasEq_lemma, lemma_index_slice, lemma_index_app2, lemma_index_app1, lemma_index_upd2, lemma_index_upd1, lemma_index_create, lemma_len_slice, lemma_len_append, lemma_len_upd, lemma_init_len, lemma_init_aux_len, lemma_create_len, slice, op_At_Bar, append, upd, createEmpty, exFalso0, lemma_of_list, lemma_of_list_length, of_list, init, init_aux, init_aux, create, tl, hd, cons, index, length, __proj__MkSeq__item__l, uu___is_MkSeq, MkSeq, seq, assoc_precedes, memP_precedes, precedes_append_cons_prod_r, precedes_append_cons_r, precedes_tl, strict_prefix_of_or_eq_exists_append, strict_prefix_of_exists_append, mem_strict_prefix_of, map_strict_prefix_of, strict_prefix_of_correct, strict_prefix_of_trans, strict_prefix_of_cons, strict_prefix_of_or_eq_nil, strict_prefix_of_nil, index_extensionality, index_extensionality_aux, fold_left_append_monoid, fold_left_monoid, fold_left_append, map_append, fold_left_map, fold_left_invar, assoc_mem, assoc_memP_none, assoc_memP_some, assoc_append_elim_l, assoc_append_elim_r, assoc_cons_not_eq, assoc_cons_eq, assoc_nil, noRepeats_append_intro, noRepeats_append_elim, noRepeats_cons, noRepeats_nil, memP_map_elim, memP_map_intro, memP_existsb, memP_empty, mem_memP, sortWith_sorted, append_sorted, total_order, sorted, sorted, sortWith_permutation, partition_count_forall, partition_count, partition_mem_p_forall, partition_mem_forall, partition_mem, map_lemma, rev_ind, rev'_list_ind, rev_involutive, rev'_involutive, rev_append, rev'_append, rev_rev', rev_acc_rev', rev'T, rev', rev', append_length_inv_tail, append_length_inv_head, append_inv_tail, append_inv_head, append_eq_singl, append_eq_nil, append_count_forall, append_count, append_mem_forall, append_mem, append_length, append_assoc, append_l_cons, append_cons_l, append_l_nil, append_nil_l, rev_mem, rev_acc_mem, rev_length, rev_acc_length, mem_existsb, mem_empty, strict_prefix_of, strict_prefix_of, test_sort, test_sort, sortWith, sortWith, compare_of_bool, bool_of_compare, partition_length, unzip3, unzip3, unzip, split, split, assoc, assoc, noRepeats, noRepeats, subset, subset, partition, partition, choose, choose, tryPick, tryPick, tryFind, tryFind, collect, collect, for_all, for_all, mem_filter_forall, mem_filter, filter, filter, mem_filter_spec, find, find, existsb, existsb, contains, memP, memP, mem, mem, fold_left2, fold_left2, fold_right, fold_right, fold_left, fold_left, concatMap, concatMap, mapi, mapi_init, mapi_init, map, map, flatten, flatten, op_At, append, append, rev, rev_acc, rev_acc, count, count, index, index, nth, nth, length, length, tl, tail, hd, isEmpty, excluded_middle, or_elim, ghost_lemma, impl_intro_gen, forall_impl_intro, move_requires, exists_elim, impl_intro, impl_intro_gtot, forall_to_exists_2, forall_to_exists, exists_intro, forall_intro_3, forall_intro_2, forall_intro', forall_intro, forall_intro_squash_gtot_join, forall_intro_squash_gtot, lemma_to_squash_gtot, gtot_to_lemma, lemma_forall_intro_gtot, forall_intro_gtot, arrow_to_impl, impl_to_arrow, get_forall, get_equality, get_squashed, give_witness, strong_excluded_middle, join_squash, map_squash, bind_squash, return_squash, squash_double_sum, squash_double_arrow, proof_irrelevance, give_proof, get_proof, false_elim, ignore, __proj__Mkdtuple4__item___4, __proj__Mkdtuple4__item___3, __proj__Mkdtuple4__item___2, __proj__Mkdtuple4__item___1, uu___is_Mkdtuple4, Mkdtuple4, dtuple4, __proj__Mkdtuple3__item___3, __proj__Mkdtuple3__item___2, __proj__Mkdtuple3__item___1, uu___is_Mkdtuple3, Mkdtuple3, dtuple3, dsnd, dfst, __proj__Inr__item__v, uu___is_Inr, __proj__Inl__item__v, uu___is_Inl, Inr, Inl, either, invertOption, allow_inversion, inversion, all_trivial, all_null_wp, all_assume_p, all_assert_p, all_close_wp, all_stronger, all_if_then_else, all_bind_wp, all_return, all_ite_wp, all_wp_h, all_post_h, all_pre_h, raise, lift_div_exn, ex_trivial, ex_null_wp, ex_assume_p, ex_assert_p, ex_close_wp, ex_stronger, ex_if_then_else, ex_ite_wp, ex_bind_wp, ex_return, ex_wp, ex_post, ex_pre, ex_pre, __proj__Err__item__msg, uu___is_Err, __proj__E__item__e, uu___is_E, __proj__V__item__v, uu___is_V, Err, E, V, result, st_trivial, st_null_wp, st_assume_p, st_assert_p, st_close_wp, st_stronger, st_ite_wp, st_if_then_else, st_bind_wp, st_return, st_wp_h, st_post_h, st_pre_h, __proj__Mktuple8__item___8, __proj__Mktuple8__item___7, __proj__Mktuple8__item___6, __proj__Mktuple8__item___5, __proj__Mktuple8__item___4, __proj__Mktuple8__item___3, __proj__Mktuple8__item___2, __proj__Mktuple8__item___1, uu___is_Mktuple8, Mktuple8, tuple8, __proj__Mktuple7__item___7, __proj__Mktuple7__item___6, __proj__Mktuple7__item___5, __proj__Mktuple7__item___4, __proj__Mktuple7__item___3, __proj__Mktuple7__item___2, __proj__Mktuple7__item___1, uu___is_Mktuple7, Mktuple7, tuple7, __proj__Mktuple6__item___6, __proj__Mktuple6__item___5, __proj__Mktuple6__item___4, __proj__Mktuple6__item___3, __proj__Mktuple6__item___2, __proj__Mktuple6__item___1, uu___is_Mktuple6, Mktuple6, tuple6, __proj__Mktuple5__item___5, __proj__Mktuple5__item___4, __proj__Mktuple5__item___3, __proj__Mktuple5__item___2, __proj__Mktuple5__item___1, uu___is_Mktuple5, Mktuple5, tuple5, __proj__Mktuple4__item___4, __proj__Mktuple4__item___3, __proj__Mktuple4__item___2, __proj__Mktuple4__item___1, uu___is_Mktuple4, Mktuple4, tuple4, __proj__Mktuple3__item___3, __proj__Mktuple3__item___2, __proj__Mktuple3__item___1, uu___is_Mktuple3, Mktuple3, tuple3, snd, fst, __proj__Mktuple2__item___2, __proj__Mktuple2__item___1, uu___is_Mktuple2, Mktuple2, tuple2, __proj__Some__item__v, uu___is_Some, uu___is_None, Some, None, option, assert_norm, normalize, normalize_term, string_of_int, string_of_bool, abs, min, pow2, pow2, op_Division, op_Modulus, nonzero, nonzero, pos, pos, nat, nat, cut, _assert, admitP, unsafe_coerce, magic, admit, _assume, as_ensures, as_requires, LexTop, lex_t, lex_t, returnM, decreases, smt_pat_or, smt_pat, pattern, pattern, __proj__Cons__item__tl, __proj__Cons__item__hd, uu___is_Cons, uu___is_Nil, Cons, Nil, list, strcat, array, exn, exn, op_disEquality, op_Equality, op_LessThan, op_GreaterThanOrEqual, op_GreaterThan, op_LessThanOrEqual, op_Minus, op_Addition, op_Subtraction, op_Multiply, op_Negation, op_BarBar, op_AmpAmp, int, int, guard_free, pure_wp, pure_post, pure_pre, pure_pre, range_of, labeled, string, string, range_0, range_0, range, range, l_Exists, __proj__Mkdtuple2__item___2, __proj__Mkdtuple2__item___1, uu___is_Mkdtuple2, Mkdtuple2, dtuple2, prop, prop, l_Forall, has_type, precedes, l_not, l_iff, l_imp, l_or, __proj__Right__item___0, uu___is_Right, __proj__Left__item___0, uu___is_Left, Right, Left, c_or, l_and, __proj__And__item___1, __proj__And__item___0, uu___is_And, And, c_and, b2t, eq3, uu___is_HRefl, HRefl, h_equals, eq2, uu___is_Refl, Refl, equals, l_False, l_False, l_True, l_True, squash, unit, unit, uu___is_T, T, c_True, c_True, c_False, c_False, bool, bool, eqtype, eqtype, hasEq, cps, cps, attribute, attribute")
+Raised at file "pervasives.ml", line 30, characters 22-33
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1230, characters 20-41
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2726, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1867, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2726, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1867, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2726, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1867, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2726, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1867, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2930, characters 19-66
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2926, characters 10-301
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2959, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2954, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2997, characters 39-61
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2959, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2954, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2959, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2954, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2959, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2954, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3060, characters 29-52
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2959, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2954, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 8356, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 1073, characters 11-69
+Called from file "list.ml", line 73, characters 12-15
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7735, characters 8-64
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3035, characters 35-128
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5587, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4685, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3771, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4170, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 574, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4304, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4574, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 302, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 115, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\MAC.fst(45,10-45,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 145431
+.\MAC.fst(45,13-45,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 146064 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(52,19-52,34): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 145563 (see also .\MAC.fst(56,8-56,25))
+.\MAC.fst(68,11-68,27): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 145754
+.\MAC.fst(78,4-78,7): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 146064 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(80,2-80,15): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 145945 (see also .\MAC.fst(81,24-81,28))
+.\MAC.fst(84,4-84,10): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 146064 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(92,8-92,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 146064
+8 errors were reported (see above)
+make[3]: *** [Makefile:57: verify-Cap.fst] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1980, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5207, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\MRefST.fst(3,5-3,13): (Error) Namespace Preorder cannot be found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:16: MRefST.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: preorders.all] Error 2
+.\Ex10a.fst(28,0-28,22): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MAC.fst(45,10-45,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 147877
+.\MAC.fst(45,13-45,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148510 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(52,19-52,34): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148009 (see also .\MAC.fst(56,8-56,25))
+.\MAC.fst(68,11-68,27): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148200
+.\MAC.fst(78,4-78,7): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148510 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(80,2-80,15): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148391 (see also .\MAC.fst(81,24-81,28))
+.\MAC.fst(84,4-84,10): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148510 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(92,8-92,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148510
+Verified module: RPC (3628 milliseconds)
+8 errors were reported (see above)
+make[3]: *** [Makefile:57: verify-RPC.fst] Error 1
+.\Ex10a.fst(28,0-28,22): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2545, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1539, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1395, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1395, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\TestMRef.fst(7,13-7,17): (Error) Identifier not found: [MRef.mref]
+Module MRef resolved into FStar.MRef, definition mref not found
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:16: TestMRef.uver] Error 1
+.\Ex12a.Cap.fst(22,0-22,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12.MAC.fst(34,10-34,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145431
+.\Ex12.MAC.fst(34,13-34,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145733 (see also .\Ex12.MAC.fst(66,8-66,12))
+.\Ex12.MAC.fst(40,40-40,55): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145490
+.\Ex12.MAC.fst(53,4-53,7): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145733 (see also .\Ex12.MAC.fst(66,8-66,12))
+.\Ex12.MAC.fst(55,2-55,28): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145625 (see also .\Ex12.MAC.fst(55,24-55,28))
+.\Ex12.MAC.fst(66,8-66,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145733
+Verified module: Ex12a.Cap (254 milliseconds)
+6 errors were reported (see above)
+make[3]: *** [Makefile:38: verify-Ex12a.Cap.fst] Error 1
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#450879
+WARNING: (7027,46): pattern does not contain any variable.
+WARNING: (7210,46): pattern does not contain any variable.
+WARNING: (6926,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#487673
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#489672 (see also .\Platform.Bytes.fst(257,156-260,30))
+WARNING: (7232,46): pattern does not contain any variable.
+WARNING: (67961,46): pattern does not contain any variable.
+WARNING: (71857,43): pattern does not contain all quantified variables.
+WARNING: (67961,46): pattern does not contain any variable.
+WARNING: (71857,43): pattern does not contain all quantified variables.
+WARNING: (7059,46): pattern does not contain any variable.
+WARNING: (67961,46): pattern does not contain any variable.
+WARNING: (71857,43): pattern does not contain all quantified variables.
+WARNING: (67961,46): pattern does not contain any variable.
+WARNING: (71857,43): pattern does not contain all quantified variables.
+WARNING: (67961,46): pattern does not contain any variable.
+WARNING: (71857,43): pattern does not contain all quantified variables.
+WARNING: (67961,46): pattern does not contain any variable.
+WARNING: (71857,43): pattern does not contain all quantified variables.
+WARNING: (67961,46): pattern does not contain any variable.
+WARNING: (71857,43): pattern does not contain all quantified variables.
+WARNING: (67961,46): pattern does not contain any variable.
+WARNING: (71857,43): pattern does not contain all quantified variables.
+WARNING: (67961,46): pattern does not contain any variable.
+WARNING: (71857,43): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#524397
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#532784 (see also .\Platform.Bytes.fst(257,156-260,30))
+.\Ex12a.Cap.fst(20,0-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12.MAC.fst(34,10-34,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145431
+.\Ex12.MAC.fst(34,13-34,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145733 (see also .\Ex12.MAC.fst(66,8-66,12))
+.\Ex12.MAC.fst(40,40-40,55): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145490
+.\Ex12.MAC.fst(53,4-53,7): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145733 (see also .\Ex12.MAC.fst(66,8-66,12))
+.\Ex12.MAC.fst(55,2-55,28): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145625 (see also .\Ex12.MAC.fst(55,24-55,28))
+.\Ex12.MAC.fst(66,8-66,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145733
+Verified module: Ex12a.Cap (347 milliseconds)
+6 errors were reported (see above)
+make[3]: *** [Makefile:39: verify-Ex12a.Cap.fst] Error 1
+.\Ex10b.fst(79,10-79,20): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder ((fun uu___267638 p -> (fun uu___267640 p -> Prims.int) uu___267638 p) uu___266740
+p)' introduced in uu___unification_ 53528 uu___266740 p (see also .\Ex10b.fst(80,34-80,43))
+Verified module: Ex10b (14866 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:39: verify-Ex10b.fst] Error 1
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12.MAC.fst(34,10-34,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145431
+.\Ex12.MAC.fst(34,13-34,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145733 (see also .\Ex12.MAC.fst(66,8-66,12))
+.\Ex12.MAC.fst(40,40-40,55): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145490
+.\Ex12.MAC.fst(53,4-53,7): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145733 (see also .\Ex12.MAC.fst(66,8-66,12))
+.\Ex12.MAC.fst(55,2-55,28): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145625 (see also .\Ex12.MAC.fst(55,24-55,28))
+.\Ex12.MAC.fst(66,8-66,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list Ex12.MAC.entry)' introduced in uu___unification_ 145733
+Verified module: Ex12b.RPC (3725 milliseconds)
+6 errors were reported (see above)
+make[3]: *** [Makefile:39: verify-Ex12b.RPC.fst] Error 1
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(70,10-70,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 194424
+.\Mac.fst(70,13-70,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 194679 (see also .\Mac.fst(79,122-79,126))
+.\Mac.fst(72,0-75,3): (Error) Unknown assertion failed
+.\Mac.fst(74,2-74,28): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 194490 (see also .\Mac.fst(74,24-74,28))
+.\Mac.fst(79,122-79,126): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 194679
+Verified module: MAC (3046 milliseconds)
+5 errors were reported (see above)
+make[3]: *** [../Makefile.include:16: Mac.uver] Error 1
+File "ulib/ml/FStar_HyperStack_ST.ml", line 44, characters 17-47:
+Error: This expression has type (FStar_HyperHeap.rid, unit) FStar_Map.t
+but an expression was expected of type
+FStar_HyperStack.hh =
+(FStar_HyperHeap.rid, FStar_Monotonic_Heap.heap) FStar_Map.t
+Type unit is not compatible with type
+FStar_Monotonic_Heap.heap = FStar_Monotonic_Heap.heap_rec 
+make[4]: *** [Makefile:26: fstarlib.cma] Error 2
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Makefile:56: Ex01a-ocaml] Error 2
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+Failure("Bound term variable not found (after unmangling): uu___#665304 in environment: h1#666224, a#666223, y#666221, y#666216, x#666215, y#666214, h1#666213, a#666212, y#666184, b#666154, h1#666153, a#666152, b#666151, h#666147, p#666146, s#666145, recall_all, k, k, req, signal, recv, send, msg_buffer, msg_buffer, log_and_update, log_event, update_cnt, next_cnt, fresh_cnt, invariant, max_lemma, max_list, server_max, server_max, server_cnt, server_cnt, client_cnt, client_cnt, log_prot, log_prot, __proj__Recv__item__c, __proj__Recv__item__m, uu___is_Recv, Recv, event, event, max, init_print, init_print, verify, mac, keygen, log, log, __proj__Entry__item__m, __proj__Entry__item__t, __proj__Entry__item__k, uu___is_Entry, Entry, entry, entry, pkey, key_prop, hmac_sha1, sha1, sample, tag, tag, key, key, macsize, macsize, blocksize, blocksize, keysize, keysize, text, text, load_key, load_chain, verify_signature, hash_and_sign, get_key_from_cert, validate_chain, has_priv, __proj__KeyECDSA__item___0, uu___is_KeyECDSA, __proj__KeyDSA__item___0, uu___is_KeyDSA, __proj__KeyRSA__item___0, uu___is_KeyRSA, KeyECDSA, KeyDSA, KeyRSA, key, key, ec_gen_key, ecdsa_verify, ecdsa_sign, ecdh_agreement, ec_is_on_curve, __proj__Mkec_key__item__ec_priv, __proj__Mkec_key__item__ec_point, __proj__Mkec_key__item__ec_params, Mkec_key, ec_key, ec_key, __proj__Mkec_point__item__ecy, __proj__Mkec_point__item__ecx, Mkec_point, ec_point, ec_point, __proj__Mkec_params__item__point_compression, __proj__Mkec_params__item__curve, Mkec_params, ec_params, ec_params, ec_bytelen, uu___is_ECC_X448, uu___is_ECC_X25519, uu___is_ECC_P521, uu___is_ECC_P384, uu___is_ECC_P256, ECC_X448, ECC_X25519, ECC_P521, ECC_P384, ECC_P256, ec_curve, ec_curve, dh_agreement, dh_gen_key, dh_gen_params, dsa_verify, dsa_sign, dsa_gen_key, rsa_verify, rsa_sign, rsa_decrypt, rsa_encrypt, rsa_gen_key, random, stream_fini, stream_process, stream_decryptor, stream_encryptor, cipher_stream, cipher_stream, block_decrypt, block_encrypt, __proj__Mkdh_key__item__dh_private, __proj__Mkdh_key__item__dh_public, __proj__Mkdh_key__item__dh_params, Mkdh_key, dh_key, dh_key, __proj__Mkdh_params__item__safe_prime, __proj__Mkdh_params__item__dh_q, __proj__Mkdh_params__item__dh_g, __proj__Mkdh_params__item__dh_p, Mkdh_params, dh_params, dh_params, __proj__Mkdsa_key__item__dsa_private, __proj__Mkdsa_key__item__dsa_public, __proj__Mkdsa_key__item__dsa_params, Mkdsa_key, dsa_key, dsa_key, __proj__Mkdsa_params__item__dsa_g, __proj__Mkdsa_params__item__dsa_q, __proj__Mkdsa_params__item__dsa_p, Mkdsa_params, dsa_params, dsa_params, __proj__Mkrsa_key__item__rsa_prv_exp, __proj__Mkrsa_key__item__rsa_pub_exp, __proj__Mkrsa_key__item__rsa_mod, Mkrsa_key, rsa_key, rsa_key, aead_decrypt, aead_encrypt, aead_encryptT, aeadTagSize, aeadRealIVSize, aeadKeySize, uu___is_AES_256_CCM_8, uu___is_AES_128_CCM_8, uu___is_AES_256_CCM, uu___is_AES_128_CCM, uu___is_CHACHA20_POLY1305, uu___is_AES_256_GCM, uu___is_AES_128_GCM, AES_256_CCM_8, AES_128_CCM_8, AES_256_CCM, AES_128_CCM, CHACHA20_POLY1305, AES_256_GCM, AES_128_GCM, aead_cipher, aead_cipher, blockSize, uu___is_Pad_PKCS1, uu___is_Pad_none, Pad_PKCS1, Pad_none, rsa_padding, rsa_padding, uu___is_RC4_128, RC4_128, stream_cipher, stream_cipher, uu___is_TDES_EDE_CBC, uu___is_AES_256_CBC, uu___is_AES_128_CBC, TDES_EDE_CBC, AES_256_CBC, AES_128_CBC, block_cipher, block_cipher, uu___is_RSAPSS, uu___is_ECDSA, uu___is_DSA, uu___is_RSASIG, RSAPSS, ECDSA, DSA, RSASIG, sig_alg, sig_alg, digest_final, digest_update, digest_create, hash_ctx, hash_ctx, hmac, hash, hashSize, uu___is_SHA512, uu___is_SHA384, uu___is_SHA256, uu___is_SHA224, uu___is_SHA1, uu___is_MD5, SHA512, SHA384, SHA256, SHA224, SHA1, MD5, hash_alg, hash_alg, debug_print_string, write_string, read_line, close_write_file, close_read_file, open_write_file, open_read_file, input_float, input_int, input_line, print_any, print_string, print_newline, fd_write, fd_write, fd_read, fd_read, uu___is_EOF, EOF, double, double, float, float, signal_components_corr, signal_split, signal, signal_size, signal_size, response, request, tag2, tag2, tag1, tag1, tag0, tag0, string16, string16, bytes_to_uint32, bytes_to_uint16, uint32_to_bytes, uint16_to_bytes, uint32, uint32, uint16, uint16, pint, pint, uint, uint, append_inj_lemma, msg, message, message, length, op_At_Bar, string_of_char, string_of_list, list_of_string, collect, get, substring, sub, index, lowercase, strlen, compare, concat, strcat, split, make, length, char, char, try_with, exit, failwith, pipe_left, pipe_right, lift_exn_all, lift_state_all, all_wp, all_post, all_pre, all_pre, modifies_none, ref, get, write, read, alloc, recall, mref, contains_pred, lift_gst_state, st_wp, st_post, st_pre, st_pre, gst_recall, gst_witness, witnessed, stable, heap_predicate, heap_predicate, gst_put, gst_get, heap_rel, lift_div_gst, gst_wp, gst_post, gst_pre, gst_pre, ref, trivial_preorder, lemma_upd_equals_upd_tot_for_contained_refs, lemma_sel_equals_sel_tot_for_contained_refs, upd_upd_same_mref, lemma_unused_upd_modifies, lemma_contains_upd_modifies, lemma_upd_unused, lemma_upd_contains_different_addr, lemma_unused_upd_contains, lemma_well_typed_upd_contains, lemma_upd_contains, lemma_in_dom_emp, lemma_mref_injectivity, lemma_mref_injectivity, lemma_sel_upd2, lemma_sel_upd1, lemma_sel_same_addr, lemma_free_mm_unused, lemma_free_mm_contains, lemma_free_mm_sel, lemma_alloc, lemma_distinct_addrs_unused, lemma_distinct_addrs_distinct_preorders, lemma_distinct_addrs_distinct_types, lemma_contains_implies_used, equal_dom, modifies, modifies_t, free_mm, alloc, upd, upd_tot, valid_upd, sel, sel_tot, op_Hat_Plus_Hat, op_Plus_Plus_Hat, op_Hat_Plus_Plus, only, only_t, fresh, unused_in, contains, compare_addrs, is_mm, addr_of, mref, emp, emp, equal_extensional, equal, heap, heap, tset, set, lemma_mem_tset_of_set, lemma_mem_tset_of_set_r, lemma_mem_tset_of_set_l, tset_of_set, lemma_equal_refl, lemma_equal_elim, lemma_equal_intro, mem_subset, subset_mem, mem_complement, mem_intersect, mem_union, mem_singleton, mem_empty, subset, complement, intersect, union, singleton, empty, mem, equal, set, predicateExtensionality, peq, predicate, apply, axiom, stable, preorder, preorder_rel, predicate, relation, as_set, as_set', as_set', eqtype, eqtype, disjoint_not_in_both, lemma_equal_refl, lemma_equal_elim, lemma_equal_intro, mem_subset, subset_mem, mem_complement, mem_intersect, mem_union, mem_singleton, mem_empty, subset, disjoint, complement, intersect, union, singleton, empty, mem, equal, set, gfeq, gfun, feq, efun, hex_of_string, string_of_hex, hex_of_bytes, bytes_of_hex, byte_of_int, print_bytes, iutf8, iutf8_opt, utf8, int_of_bytes_of_int, int_of_bytes, bytes_of_int, split2, append_assoc, append_empty_bytes_r, append_empty_bytes_l, lemma_append_inj, split_eq, lemma_split, split, xor, equalBytes, initBytes, createBytes, index, cbyte2, cbyte, get_cbytes, abyte2, abyte, abytes, empty_bytes, empty_bytes, lbytes, length, op_At_Bar, seq_of_bytes, bytes, bytes, cbytes, cbytes, byte, byte, lemma_repr_bytes_values, repr_bytes, mem_seq_of_list, seq_of_list_tl, slice_slice, slice_length, slice_is_empty, cons_index_slice, snoc_slice_index, mem_cons, index_tail, append_cons, index_cons_r, index_cons_l, suffix_of_tail, head_cons, cons_head_tail, suffix_of, find_l_none_no_index, append_slices, append_cons_snoc, contains_cons, lemma_find_l_contains, contains_snoc, append_contains_equiv, intro_append_contains_from_disjunction, lemma_contains_singleton, lemma_contains_empty, contains_elim, contains_intro, contains, lemma_index_is_nth, createL, createL_post, lemma_list_seq_bij, lemma_seq_list_bij, seq_of_list, seq_of_list, seq_to_list, seq_to_list, seq_mem_k, seq_find, seq_find_aux, seq_find_aux, found, find_r, find_r, un_snoc, find_snoc, find_append_none_s2, find_append_none, find_append_some, find_l, find_l, lemma_mem_snoc, lemma_snoc_inj, lemma_tail_snoc, lemma_cons_snoc, snoc, lemma_trans_perm, lemma_weaken_perm_right, lemma_weaken_perm_left, lemma_trans_frame, lemma_weaken_frame_left, lemma_weaken_frame_right, lemma_tail_slice, lemma_seq_frame_lo, lemma_seq_frame_hi, lemma_swap_splice, splice_refl, splice, lemma_swap_permutes_slice, lemma_swap_slice_commute, swap_frame_hi, swap_frame_lo', swap_frame_lo, lemma_ordering_hi_cons, lemma_ordering_lo_snoc, lemma_slice_snoc, lemma_slice_cons, lemma_mem_append, cons_perm, lemma_swap_permutes, permutation, lemma_swap_permutes_aux, lemma_swap_permutes_aux_frag_eq, split_5, sorted_concat_lemma, tot_ord, total_order, lemma_count_slice, lemma_mem_count, lemma_mem_inversion, lemma_append_count_aux, lemma_append_count, sorted, sorted, lemma_tl, lemma_append_cons, upd_slice, slice_upd, lemma_slice_first_in_append, lemma_slice_append, swap, mem, count, count, split_eq, lemma_split, split, lemma_cons_inj, cons, last, lemma_tail_append, lemma_head_append, tail, head, lemma_append_inj, lemma_append_len_disj, lemma_append_inj_r, lemma_append_inj_l, indexable, init_index, init_index_aux, append_empty_r, append_empty_l, append_assoc, lemma_eq_elim, lemma_eq_refl, lemma_eq_intro, eq, eq_i, eq_i, equal, hasEq_lemma, lemma_index_slice, lemma_index_app2, lemma_index_app1, lemma_index_upd2, lemma_index_upd1, lemma_index_create, lemma_len_slice, lemma_len_append, lemma_len_upd, lemma_init_len, lemma_init_aux_len, lemma_create_len, slice, op_At_Bar, append, upd, createEmpty, exFalso0, lemma_of_list, lemma_of_list_length, of_list, init, init_aux, init_aux, create, tl, hd, cons, index, length, __proj__MkSeq__item__l, uu___is_MkSeq, MkSeq, seq, assoc_precedes, memP_precedes, precedes_append_cons_prod_r, precedes_append_cons_r, precedes_tl, strict_prefix_of_or_eq_exists_append, strict_prefix_of_exists_append, mem_strict_prefix_of, map_strict_prefix_of, strict_prefix_of_correct, strict_prefix_of_trans, strict_prefix_of_cons, strict_prefix_of_or_eq_nil, strict_prefix_of_nil, index_extensionality, index_extensionality_aux, fold_left_append_monoid, fold_left_monoid, fold_left_append, map_append, fold_left_map, fold_left_invar, assoc_mem, assoc_memP_none, assoc_memP_some, assoc_append_elim_l, assoc_append_elim_r, assoc_cons_not_eq, assoc_cons_eq, assoc_nil, noRepeats_append_intro, noRepeats_append_elim, noRepeats_cons, noRepeats_nil, memP_map_elim, memP_map_intro, memP_existsb, memP_empty, mem_memP, sortWith_sorted, append_sorted, total_order, sorted, sorted, sortWith_permutation, partition_count_forall, partition_count, partition_mem_p_forall, partition_mem_forall, partition_mem, map_lemma, rev_ind, rev'_list_ind, rev_involutive, rev'_involutive, rev_append, rev'_append, rev_rev', rev_acc_rev', rev'T, rev', rev', append_length_inv_tail, append_length_inv_head, append_inv_tail, append_inv_head, append_eq_singl, append_eq_nil, append_count_forall, append_count, append_mem_forall, append_mem, append_length, append_assoc, append_l_cons, append_cons_l, append_l_nil, append_nil_l, rev_mem, rev_acc_mem, rev_length, rev_acc_length, mem_existsb, mem_empty, strict_prefix_of, strict_prefix_of, test_sort, test_sort, sortWith, sortWith, compare_of_bool, bool_of_compare, partition_length, unzip3, unzip3, unzip, split, split, assoc, assoc, noRepeats, noRepeats, subset, subset, partition, partition, choose, choose, tryPick, tryPick, tryFind, tryFind, collect, collect, for_all, for_all, mem_filter_forall, mem_filter, filter, filter, mem_filter_spec, find, find, existsb, existsb, contains, memP, memP, mem, mem, fold_left2, fold_left2, fold_right, fold_right, fold_left, fold_left, concatMap, concatMap, mapi, mapi_init, mapi_init, map, map, flatten, flatten, op_At, append, append, rev, rev_acc, rev_acc, count, count, index, index, nth, nth, length, length, tl, tail, hd, isEmpty, excluded_middle, or_elim, ghost_lemma, impl_intro_gen, forall_impl_intro, move_requires, exists_elim, impl_intro, impl_intro_gtot, forall_to_exists_2, forall_to_exists, exists_intro, forall_intro_3, forall_intro_2, forall_intro', forall_intro, forall_intro_squash_gtot_join, forall_intro_squash_gtot, lemma_to_squash_gtot, gtot_to_lemma, lemma_forall_intro_gtot, forall_intro_gtot, arrow_to_impl, impl_to_arrow, get_forall, get_equality, get_squashed, give_witness, strong_excluded_middle, join_squash, map_squash, bind_squash, return_squash, squash_double_sum, squash_double_arrow, proof_irrelevance, give_proof, get_proof, char_of_int, int_of_char, uppercase, lowercase, char, char, __proj__Char__item___0, uu___is_Char, Char, char', char', char_code, char_code, false_elim, ignore, __proj__Mkdtuple4__item___4, __proj__Mkdtuple4__item___3, __proj__Mkdtuple4__item___2, __proj__Mkdtuple4__item___1, uu___is_Mkdtuple4, Mkdtuple4, dtuple4, __proj__Mkdtuple3__item___3, __proj__Mkdtuple3__item___2, __proj__Mkdtuple3__item___1, uu___is_Mkdtuple3, Mkdtuple3, dtuple3, dsnd, dfst, __proj__Inr__item__v, uu___is_Inr, __proj__Inl__item__v, uu___is_Inl, Inr, Inl, either, invertOption, allow_inversion, inversion, all_trivial, all_null_wp, all_assume_p, all_assert_p, all_close_wp, all_stronger, all_if_then_else, all_bind_wp, all_return, all_ite_wp, all_wp_h, all_post_h, all_pre_h, raise, lift_div_exn, ex_trivial, ex_null_wp, ex_assume_p, ex_assert_p, ex_close_wp, ex_stronger, ex_if_then_else, ex_ite_wp, ex_bind_wp, ex_return, ex_wp, ex_post, ex_pre, ex_pre, __proj__Err__item__msg, uu___is_Err, __proj__E__item__e, uu___is_E, __proj__V__item__v, uu___is_V, Err, E, V, result, st_trivial, st_null_wp, st_assume_p, st_assert_p, st_close_wp, st_stronger, st_ite_wp, st_if_then_else, st_bind_wp, st_return, st_wp_h, st_post_h, st_pre_h, __proj__Mktuple8__item___8, __proj__Mktuple8__item___7, __proj__Mktuple8__item___6, __proj__Mktuple8__item___5, __proj__Mktuple8__item___4, __proj__Mktuple8__item___3, __proj__Mktuple8__item___2, __proj__Mktuple8__item___1, uu___is_Mktuple8, Mktuple8, tuple8, __proj__Mktuple7__item___7, __proj__Mktuple7__item___6, __proj__Mktuple7__item___5, __proj__Mktuple7__item___4, __proj__Mktuple7__item___3, __proj__Mktuple7__item___2, __proj__Mktuple7__item___1, uu___is_Mktuple7, Mktuple7, tuple7, __proj__Mktuple6__item___6, __proj__Mktuple6__item___5, __proj__Mktuple6__item___4, __proj__Mktuple6__item___3, __proj__Mktuple6__item___2, __proj__Mktuple6__item___1, uu___is_Mktuple6, Mktuple6, tuple6, __proj__Mktuple5__item___5, __proj__Mktuple5__item___4, __proj__Mktuple5__item___3, __proj__Mktuple5__item___2, __proj__Mktuple5__item___1, uu___is_Mktuple5, Mktuple5, tuple5, __proj__Mktuple4__item___4, __proj__Mktuple4__item___3, __proj__Mktuple4__item___2, __proj__Mktuple4__item___1, uu___is_Mktuple4, Mktuple4, tuple4, __proj__Mktuple3__item___3, __proj__Mktuple3__item___2, __proj__Mktuple3__item___1, uu___is_Mktuple3, Mktuple3, tuple3, snd, fst, __proj__Mktuple2__item___2, __proj__Mktuple2__item___1, uu___is_Mktuple2, Mktuple2, tuple2, __proj__Some__item__v, uu___is_Some, uu___is_None, Some, None, option, assert_norm, normalize, normalize_term, string_of_int, string_of_bool, abs, min, pow2, pow2, op_Division, op_Modulus, nonzero, nonzero, pos, pos, nat, nat, cut, _assert, admitP, unsafe_coerce, magic, admit, _assume, as_ensures, as_requires, LexTop, lex_t, lex_t, returnM, decreases, smt_pat_or, smt_pat, pattern, pattern, __proj__Cons__item__tl, __proj__Cons__item__hd, uu___is_Cons, uu___is_Nil, Cons, Nil, list, strcat, array, exn, exn, op_disEquality, op_Equality, op_LessThan, op_GreaterThanOrEqual, op_GreaterThan, op_LessThanOrEqual, op_Minus, op_Addition, op_Subtraction, op_Multiply, op_Negation, op_BarBar, op_AmpAmp, int, int, guard_free, pure_wp, pure_post, pure_pre, pure_pre, range_of, labeled, string, string, range_0, range_0, range, range, l_Exists, __proj__Mkdtuple2__item___2, __proj__Mkdtuple2__item___1, uu___is_Mkdtuple2, Mkdtuple2, dtuple2, prop, prop, l_Forall, has_type, precedes, l_not, l_iff, l_imp, l_or, __proj__Right__item___0, uu___is_Right, __proj__Left__item___0, uu___is_Left, Right, Left, c_or, l_and, __proj__And__item___1, __proj__And__item___0, uu___is_And, And, c_and, b2t, eq3, uu___is_HRefl, HRefl, h_equals, eq2, uu___is_Refl, Refl, equals, l_False, l_False, l_True, l_True, squash, unit, unit, uu___is_T, T, c_True, c_True, c_False, c_False, bool, bool, eqtype, eqtype, hasEq, cps, cps, attribute, attribute")
+Raised at file "pervasives.ml", line 30, characters 22-33
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1230, characters 20-41
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2726, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1867, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2726, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1867, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3134, characters 34-54
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2959, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2954, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2959, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2954, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2997, characters 39-61
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2959, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2954, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2959, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2954, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2959, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 546, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 547, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2954, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3060, characters 29-52
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3204, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3294, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 8356, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 1073, characters 11-69
+Called from file "list.ml", line 73, characters 12-15
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7735, characters 8-64
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3035, characters 35-128
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5587, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4685, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3771, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4170, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 574, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4304, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4574, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 302, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 115, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\MAC.fst(45,10-45,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 147777
+.\MAC.fst(45,13-45,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148410 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(52,19-52,34): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 147909 (see also .\MAC.fst(56,8-56,25))
+.\MAC.fst(68,11-68,27): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148100
+.\MAC.fst(78,4-78,7): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148410 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(80,2-80,15): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148291 (see also .\MAC.fst(81,24-81,28))
+.\MAC.fst(84,4-84,10): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148410 (see also .\MAC.fst(92,8-92,12))
+.\MAC.fst(92,8-92,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 148410
+8 errors were reported (see above)
+make[3]: *** [Makefile:57: verify-CntProtocol.fst] Error 1
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 135728 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 135751 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 137025 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 140068 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: micro-benchmarks.all] Error 2
+.\MAC.fst(45,10-45,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 100822
+.\MAC.fst(52,19-52,34): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 100948 (see also .\MAC.fst(56,8-56,25))
+.\MAC.fst(68,11-68,27): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 101139
+.\MAC.fst(80,2-80,15): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 101330 (see also .\MAC.fst(81,24-81,28))
+.\MAC.fst(92,8-92,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 101449
+5 errors were reported (see above)
+make[3]: *** [Makefile:69: RPC.ml] Error 1
+.\CntProtocol.fst(145,2-145,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 103914 s
+.\CntProtocol.fst(159,2-159,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 104186 uu___484436
+.\MAC.fst(45,10-45,18): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 100524
+.\MAC.fst(52,19-52,34): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 100650 (see also .\MAC.fst(56,8-56,25))
+.\MAC.fst(68,11-68,27): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 100841
+.\MAC.fst(80,2-80,15): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 101032 (see also .\MAC.fst(81,24-81,28))
+.\MAC.fst(92,8-92,12): (Error) Failed to resolve implicit argument of type 'FStar.Preorder.preorder (Prims.list MAC.entry)' introduced in uu___unification_ 101151
+7 errors were reported (see above)
+make[3]: *** [Makefile:75: CntProtocol.ml] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: crypto.all] Error 2
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\ulib\FStar.Preorder.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\ulib\FStar.Monotonic.Heap.fst.hints; ran without hints
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\ulib\FStar.Seq.Sorted.fst.hints; ran without hints
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: ../doc/tutorial/code/exercises.all] Error 2
+Warning: Unable to open hints file: C:\Build\Agent1\_work\2\s\ulib\FStar.Monotonic.Heap.fsti.hints; ran without hints
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: ../doc/tutorial/code/solutions.all] Error 2
+.\IfcRules.fst(41,2-41,80): (Error) Unknown assertion failed
+.\IfcRules.fst(208,0-208,27): (Error) Unknown assertion failed
+.\IfcRules.fst(241,0-291,5): (Error) Unknown assertion failed
+Verified module: IfcRules (91959 milliseconds)
+3 errors were reported (see above)
+make[3]: *** [../Makefile.include:16: IfcRules.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: rel.all] Error 2
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:283: uexamples] Error 2
+.\FStar.Buffer.fst(899,8-907,55): (Error) Unknown assertion failed
+Verified module: FStar.Buffer (312049 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:16: FStar.Buffer.fst-ver] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:280: ulib] Error 2
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:260: utest] Error 2
