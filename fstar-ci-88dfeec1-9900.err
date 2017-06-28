@@ -1,0 +1,63 @@
+dos2unix: converting file parser/parse.fsi to Unix format...
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(70,0-72,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(393,0-393,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(444,0-444,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(495,0-497,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(280,0-284,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(714,0-716,39): (Warning) Annotation from val declaration overrides inline type annotation
+File "extracted/FStar_Pervasives.ml", line 22, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(E _|Err _)
+File "extracted/FStar_Pervasives.ml", line 25, characters 35-66:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|Err _)
+File "extracted/FStar_Pervasives.ml", line 28, characters 39-76:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+(V _|E _)
+File "extracted/FStar_Pervasives.ml", line 64, characters 38-72:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+None
+File "extracted/FStar_Pervasives.ml", line 71, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inr _
+File "extracted/FStar_Pervasives.ml", line 74, characters 37-70:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+Inl _
+Unexpected error
+Failure("Impossible: option smt_solver not found")
+Raised at file "pervasives.ml", line 30, characters 22-33
+Called from file "src/ocaml-output/FStar_Options.ml", line 242, characters 23-37
+Called from file "src/ocaml-output/FStar_Options.ml", line 1317, characters 21-37
+Called from file "src/ocaml-output/FStar_Options.ml", line 1351, characters 27-40
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 176, characters 20-47
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 296, characters 39-50
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 304, characters 15-22
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 753, characters 24-45
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4476, characters 8-76
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4496, characters 10-60
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 98, characters 11-189
+Called from file "src/ocaml-output/FStar_Universal.ml", line 413, characters 20-31
+Called from file "src/ocaml-output/FStar_Main.ml", line 208, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 230, characters 6-11
+
+make[1]: *** [Makefile:13: ocaml] Error 1
+make: *** [Makefile:260: utest] Error 2
