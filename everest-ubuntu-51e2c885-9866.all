@@ -1,0 +1,145 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent1/_work/11/s
+About to run: docker_from_scratch
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: Everest-Nightly-Windows
+Login Succeeded
+Sending build context to Docker daemon 2.048 kB
+Step 1/4 : FROM projecteverest/everest-chomolungma
+latest: Pulling from projecteverest/everest-chomolungma
+75c416ea735c: Already exists
+c6ff40b6d658: Already exists
+a7050fc1f338: Already exists
+f0ffb5cf6ba9: Already exists
+be232718519c: Already exists
+7776d8e2fb6e: Pulling fs layer
+e51106c3d8b9: Pulling fs layer
+0bad9bcd9d94: Pulling fs layer
+e5119a4f9861: Pulling fs layer
+3884758fbaa4: Pulling fs layer
+8b73f820d35a: Pulling fs layer
+3478b17390e4: Pulling fs layer
+bb4c30eda7c8: Pulling fs layer
+bdb6b5633dd3: Pulling fs layer
+895ec319870a: Pulling fs layer
+3be21cce499b: Pulling fs layer
+cb676f4e7c6c: Pulling fs layer
+94c32f25ecf7: Pulling fs layer
+e42de9399c51: Pulling fs layer
+b4da6e3627dd: Pulling fs layer
+2836b42bd939: Pulling fs layer
+b53bbfcd6b70: Pulling fs layer
+8cb418774a61: Pulling fs layer
+a52e84390059: Pulling fs layer
+554b0ffba5cc: Pulling fs layer
+9d74584a866c: Pulling fs layer
+8b73f820d35a: Waiting
+ffddc441b734: Pulling fs layer
+3478b17390e4: Waiting
+bb4c30eda7c8: Waiting
+bdb6b5633dd3: Waiting
+895ec319870a: Waiting
+b53bbfcd6b70: Waiting
+8cb418774a61: Waiting
+e42de9399c51: Waiting
+b4da6e3627dd: Waiting
+3be21cce499b: Waiting
+cb676f4e7c6c: Waiting
+a52e84390059: Waiting
+2836b42bd939: Waiting
+94c32f25ecf7: Waiting
+e5119a4f9861: Waiting
+ffddc441b734: Waiting
+3884758fbaa4: Waiting
+9d74584a866c: Waiting
+0bad9bcd9d94: Download complete
+7776d8e2fb6e: Verifying Checksum
+7776d8e2fb6e: Download complete
+7776d8e2fb6e: Pull complete
+e51106c3d8b9: Pull complete
+0bad9bcd9d94: Pull complete
+8b73f820d35a: Download complete
+3884758fbaa4: Verifying Checksum
+3884758fbaa4: Download complete
+3478b17390e4: Verifying Checksum
+3478b17390e4: Download complete
+e5119a4f9861: Verifying Checksum
+e5119a4f9861: Download complete
+895ec319870a: Verifying Checksum
+895ec319870a: Download complete
+bdb6b5633dd3: Verifying Checksum
+bdb6b5633dd3: Download complete
+cb676f4e7c6c: Verifying Checksum
+cb676f4e7c6c: Download complete
+e5119a4f9861: Pull complete
+3be21cce499b: Verifying Checksum
+3be21cce499b: Download complete
+3884758fbaa4: Pull complete
+8b73f820d35a: Pull complete
+3478b17390e4: Pull complete
+bb4c30eda7c8: Verifying Checksum
+bb4c30eda7c8: Download complete
+b4da6e3627dd: Download complete
+2836b42bd939: Verifying Checksum
+2836b42bd939: Download complete
+b53bbfcd6b70: Verifying Checksum
+b53bbfcd6b70: Download complete
+8cb418774a61: Verifying Checksum
+8cb418774a61: Download complete
+a52e84390059: Verifying Checksum
+a52e84390059: Download complete
+554b0ffba5cc: Download complete
+9d74584a866c: Verifying Checksum
+9d74584a866c: Download complete
+e42de9399c51: Verifying Checksum
+e42de9399c51: Download complete
+ffddc441b734: Download complete
+bb4c30eda7c8: Pull complete
+bdb6b5633dd3: Pull complete
+895ec319870a: Pull complete
+94c32f25ecf7: Verifying Checksum
+94c32f25ecf7: Download complete
+3be21cce499b: Pull complete
+cb676f4e7c6c: Pull complete
+94c32f25ecf7: Pull complete
+e42de9399c51: Pull complete
+b4da6e3627dd: Pull complete
+2836b42bd939: Pull complete
+b53bbfcd6b70: Pull complete
+8cb418774a61: Pull complete
+a52e84390059: Pull complete
+554b0ffba5cc: Pull complete
+9d74584a866c: Pull complete
+ffddc441b734: Pull complete
+Digest: sha256:77d90834b4724192ccd4c5b65ccd29a8c2ad07c81cef71af047735f54920a8f9
+Status: Downloaded newer image for projecteverest/everest-chomolungma:latest
+---> ab55a568e65e
+Step 2/4 : ARG PARALLEL_OPT
+---> Running in efa4befe448a
+---> c5391554d908
+Removing intermediate container efa4befe448a
+Step 3/4 : RUN ./everest --yes check pull $PARALLEL_OPT make test verify
+---> Running in 795f924f2bf5
+# Switching to the everest directory ... now in /home/everest/everest
+
+Checking environment
+... which found
+Warning: git client not configured with the proper ssh credentials
+Hint: check which git you're running, and make sure you have the same SSH key in ~/.ssh and github.com
+... ocaml minimum version requirements met
+... opam found
+... all 15 ocamlfind packages found
+... sample ocamlbuild project compiles successfully
+... fsharpc found
+... fsc found in PATH
+[91mAlready on 'master'
+[0mYour branch is up-to-date with 'origin/master'.
+HEAD is now at a9120af Adding new build package and removing oldest.
+... version of z3 found in PATH: no z3 in path!
+... version of z3 found for win-x64 in z3-tested is: ed0e06c7aca4
+Get the freshest z3 from FStarLang/binaries? [Yn]
+... unzipping fstarlang_binaries/z3-tested/z3-4.5.1.ed0e06c7aca4-x64-ubuntu-14.04.zip
+Archive:  fstarlang_binaries/z3-tested/z3-4.5.1.ed0e06c7aca4-x64-ubuntu-14.04.zip
+[91mreplace z3-4.5.1.ed0e06c7aca4-x64-ubuntu-14.04/LICENSE.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename:  NULL
+(EOF or read error, treating as "[N]one" ...)
+The command '/bin/bash --login -c ./everest --yes check pull $PARALLEL_OPT make test verify' returned a non-zero code: 1
