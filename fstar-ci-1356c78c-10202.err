@@ -1,0 +1,574 @@
+dos2unix: converting file parser/parse.fsi to Unix format...
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(71,0-73,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(394,0-394,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(496,0-498,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(282,0-286,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(716,0-718,39): (Warning) Annotation from val declaration overrides inline type annotation
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_Parser_Driver.ml", line 46, characters 38-67
+Called from file "src/ocaml-output/FStar_Universal.ml", line 18, characters 23-56
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 378, characters 18-100
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\FStar.Monotonic.Heap.fst(139,62-139,62): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[4]: *** [Makefile:44: .mgen] Error 1
+make[3]: *** [Makefile:39: .mgen] Error 2
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:12: ocaml] Error 2
+make[1]: *** [Makefile:274: hello] Error 2
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+make[2]: *** [Makefile:54: search.cons-snoc.out.check] Error 1
+make[2]: Target 'default' not remade because of errors.
+make[1]: *** [Makefile:266: interactive-test] Error 2
+.\Encrypt_SymEnc.fst(30,0-30,27): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (7120,51): pattern does not contain all quantified variables.
+WARNING: (7120,51): pattern does not contain all quantified variables.
+.\IfcExample.fst(66,0-66,55): (Error) Unknown assertion failed
+Verified module: IfcExample (22586 milliseconds)
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:16: IfcExample.uver] Error 1
+C:\Build\Agent2\_work\1\s\ulib\FStar.Pointer.fst(1660,31-1660,84): (Error) Expected type "FStar.Monotonic.HyperHeap.maybe_live_heap"; but "FStar.Monotonic.Heap.upd (FStar.Map.sel m (MkRef?.id x))
+(FStar.Monotonic.HyperHeap.as_ref (MkRef?.ref x))
+v" has type "FStar.Monotonic.Heap.heap"
+C:\Build\Agent2\_work\1\s\ulib\FStar.Pointer.fst(1660,41-1660,60): (Error) Expected type "FStar.Monotonic.Heap.heap"; but "FStar.Map.sel m (MkRef?.id x)" has type "FStar.Monotonic.HyperHeap.maybe_live_heap"
+Verified module: Test (22984 milliseconds)
+2 errors were reported (see above)
+make[3]: *** [Makefile:17: point-with-nesting.pos.pver] Error 1
+.\MAC.fst(45,0-45,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#458643
+WARNING: (7071,46): pattern does not contain any variable.
+WARNING: (7254,46): pattern does not contain any variable.
+WARNING: (6970,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#495437
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#497436 (see also .\Platform.Bytes.fst(257,156-260,30))
+WARNING: (7276,46): pattern does not contain any variable.
+WARNING: (68366,46): pattern does not contain any variable.
+WARNING: (72262,43): pattern does not contain all quantified variables.
+WARNING: (68366,46): pattern does not contain any variable.
+WARNING: (72262,43): pattern does not contain all quantified variables.
+WARNING: (7103,46): pattern does not contain any variable.
+WARNING: (68366,46): pattern does not contain any variable.
+WARNING: (72262,43): pattern does not contain all quantified variables.
+WARNING: (68366,46): pattern does not contain any variable.
+WARNING: (72262,43): pattern does not contain all quantified variables.
+WARNING: (68366,46): pattern does not contain any variable.
+WARNING: (72262,43): pattern does not contain all quantified variables.
+WARNING: (68366,46): pattern does not contain any variable.
+WARNING: (72262,43): pattern does not contain all quantified variables.
+WARNING: (68366,46): pattern does not contain any variable.
+WARNING: (72262,43): pattern does not contain all quantified variables.
+WARNING: (68366,46): pattern does not contain any variable.
+WARNING: (72262,43): pattern does not contain all quantified variables.
+WARNING: (68366,46): pattern does not contain any variable.
+WARNING: (72262,43): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#532161
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#540548 (see also .\Platform.Bytes.fst(257,156-260,30))
+.\Ex10a.fst(28,0-28,22): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(28,0-28,22): (Warning) Top-level let-bindings must be total; this term may have effects
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 143557 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 143580 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 144854 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 147897 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 143557 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 143580 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 144854 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 147897 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.Buffer.fst(812,28-812,75): (Error) Expected type "FStar.Monotonic.HyperHeap.maybe_live_heap"; but "FStar.Monotonic.Heap.upd (FStar.Map.sel m (MkRef?.id x))
+(FStar.Monotonic.HyperHeap.as_ref (MkRef?.ref x))
+v" has type "FStar.Monotonic.Heap.heap"
+C:\Build\Agent2\_work\1\s\ulib\FStar.Buffer.fst(812,38-812,54): (Error) Expected type "FStar.Monotonic.Heap.heap"; but "FStar.Map.sel m (MkRef?.id x)" has type "FStar.Monotonic.HyperHeap.maybe_live_heap"
+Verified module: Test (4995 milliseconds)
+2 errors were reported (see above)
+make[3]: *** [Makefile:17: jsonparser.pos.pver] Error 1
+.\Ex12a.Cap.fst(20,0-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+C:\Build\Agent2\_work\1\s\ulib\FStar.Pointer.fst(1660,31-1660,84): (Error) Expected type "FStar.Monotonic.HyperHeap.maybe_live_heap"; but "FStar.Monotonic.Heap.upd (FStar.Map.sel m (MkRef?.id x))
+(FStar.Monotonic.HyperHeap.as_ref (MkRef?.ref x))
+v" has type "FStar.Monotonic.Heap.heap"
+C:\Build\Agent2\_work\1\s\ulib\FStar.Pointer.fst(1660,41-1660,60): (Error) Expected type "FStar.Monotonic.Heap.heap"; but "FStar.Map.sel m (MkRef?.id x)" has type "FStar.Monotonic.HyperHeap.maybe_live_heap"
+Verified module: Test (36116 milliseconds)
+2 errors were reported (see above)
+make[3]: *** [Makefile:17: nested.pos.pver] Error 1
+.\FStar.Map.fst(133,0-133,43): (Error) Unknown assertion failed
+.\FStar.Map.fst(146,0-157,27): (Error) Unknown assertion failed
+Verified module: FStar.Map (6674 milliseconds)
+2 errors were reported (see above)
+make[2]: *** [Makefile:16: FStar.Map.fst-ver] Error 1
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+Warning: the module declaration "module AriadneM" found in file Ariadne.fst does not match its filename. Dependencies will be incorrect.
+Unexpected error
+FStar_Errors.Err("You passed --verify_module ariadne but I found no file that contains [module ariadne] in the dependency graph.\n")
+Raised at file "src/ocaml-output/FStar_Parser_Dep.ml", line 973, characters 24-34
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 940, characters 7-1023
+Called from file "src/ocaml-output/FStar_Dependencies.ml", line 12, characters 24-66
+Called from file "src/ocaml-output/FStar_Main.ml", line 210, characters 27-116
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+(Error) You passed --verify_module ariadne but I found no file that contains [module ariadne] in the dependency graph.
+
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:16: Ariadne.uver] Error 1
+File "ulib/ml/FStar_Constructive.ml", line 43, characters 20-47:
+Error: Unbound module FStar_Pervasives
+make[4]: *** [Makefile:26: fstarlib.cma] Error 2
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Makefile:56: Ex01a-ocaml] Error 2
+.\Ex12a.Cap.fst(22,0-22,26): (Warning) Top-level let-bindings must be total; this term may have effects
+C:\Build\Agent2\_work\1\s\ulib\FStar.Pointer.fst(1660,31-1660,84): (Error) Expected type "FStar.Monotonic.HyperHeap.maybe_live_heap"; but "FStar.Monotonic.Heap.upd (FStar.Map.sel m (MkRef?.id x))
+(FStar.Monotonic.HyperHeap.as_ref (MkRef?.ref x))
+v" has type "FStar.Monotonic.Heap.heap"
+C:\Build\Agent2\_work\1\s\ulib\FStar.Pointer.fst(1660,41-1660,60): (Error) Expected type "FStar.Monotonic.Heap.heap"; but "FStar.Map.sel m (MkRef?.id x)" has type "FStar.Monotonic.HyperHeap.maybe_live_heap"
+disjoint.pos\Test.fst(45,0-57,3): (Error) Unknown assertion failed
+Verified module: Test (21167 milliseconds)
+3 errors were reported (see above)
+make[3]: *** [Makefile:17: disjoint.pos.pver] Error 1
+C:\Build\Agent2\_work\1\s\ulib\FStar.Pointer.fst(1660,31-1660,84): (Error) Expected type "FStar.Monotonic.HyperHeap.maybe_live_heap"; but "FStar.Monotonic.Heap.upd (FStar.Map.sel m (MkRef?.id x))
+(FStar.Monotonic.HyperHeap.as_ref (MkRef?.ref x))
+v" has type "FStar.Monotonic.Heap.heap"
+C:\Build\Agent2\_work\1\s\ulib\FStar.Pointer.fst(1660,41-1660,60): (Error) Expected type "FStar.Monotonic.Heap.heap"; but "FStar.Map.sel m (MkRef?.id x)" has type "FStar.Monotonic.HyperHeap.maybe_live_heap"
+Verified module: Test (17223 milliseconds)
+2 errors were reported (see above)
+make[3]: *** [Makefile:17: point.pos.pver] Error 1
+.\TestMRef.fst(8,0-8,15): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: preorders.all] Error 2
+C:\Build\Agent2\_work\1\s\ulib\FStar.Pointer.fst(1660,31-1660,84): (Error) Expected type "FStar.Monotonic.HyperHeap.maybe_live_heap"; but "FStar.Monotonic.Heap.upd (FStar.Map.sel m (MkRef?.id x))
+(FStar.Monotonic.HyperHeap.as_ref (MkRef?.ref x))
+v" has type "FStar.Monotonic.Heap.heap"
+C:\Build\Agent2\_work\1\s\ulib\FStar.Pointer.fst(1660,41-1660,60): (Error) Expected type "FStar.Monotonic.Heap.heap"; but "FStar.Map.sel m (MkRef?.id x)" has type "FStar.Monotonic.HyperHeap.maybe_live_heap"
+array.pos\Test.fst(34,0-46,3): (Error) Unknown assertion failed
+Verified module: Test (31023 milliseconds)
+3 errors were reported (see above)
+make[3]: *** [Makefile:17: array.pos.pver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: struct.all] Error 2
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(70,0-70,53): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2545, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1539, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1395, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 956, characters 28-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1287, characters 32-47
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1290, characters 26-44
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1348, characters 30-59
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1370, characters 26-73
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1395, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2529, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5263, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\FStar.HyperStack.All.fst(24,39-24,44): (Error) Identifier not found: [st_wp]
+1 error was reported (see above)
+make[2]: *** [Makefile:16: FStar.HyperStack.All.fst-ver] Error 1
+.\EtM.CPA.fst(48,0-52,21): (Error) Unknown assertion failed
+Verified module: EtM.CPA (9958 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:61: verify_hh-EtM.CPA.fst] Error 1
+.\EtM.MAC.fst(64,0-68,21): (Error) Unknown assertion failed
+Verified module: EtM.MAC (11114 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:61: verify_hh-EtM.MAC.fst] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2545, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1539, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1395, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 956, characters 28-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1287, characters 32-47
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1290, characters 26-44
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1348, characters 30-59
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1370, characters 26-73
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1395, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2529, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5263, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.HyperStack.All.fst(24,39-24,44): (Error) Identifier not found: [st_wp]
+1 error was reported (see above)
+make[3]: *** [Makefile:61: verify_hh-HyE.CCA2.fst] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2545, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1539, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1395, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 956, characters 28-56
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1287, characters 32-47
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1290, characters 26-44
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1348, characters 30-59
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1370, characters 26-73
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1395, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2529, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5263, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+C:\Build\Agent2\_work\1\s\ulib\FStar.HyperStack.All.fst(24,39-24,44): (Error) Identifier not found: [st_wp]
+1 error was reported (see above)
+make[3]: *** [Makefile:61: verify_hh-HyE.HCCA2.fst] Error 1
+.\HyE.AE.fst(44,0-48,21): (Error) Unknown assertion failed
+Verified module: HyE.AE (9889 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:61: verify_hh-HyE.AE.fst] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_Parser_Driver.ml", line 46, characters 38-67
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 722, characters 30-69
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/ocaml-output/FStar_Parser_Dep.ml", line 836, characters 6-62
+Called from file "src/ocaml-output/FStar_Dependencies.ml", line 12, characters 24-66
+Called from file "src/ocaml-output/FStar_Main.ml", line 210, characters 27-116
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\FStar.Monotonic.Heap.fst(139,62-139,62): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[2]: *** [Makefile:16: FStar.Monotonic.Heap.fst-ver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: rel.all] Error 2
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.Monotonic.HyperHeap.fst.hints; ran without hints
+.\FStar.Pointer.fst(1660,31-1660,84): (Error) Expected type "FStar.Monotonic.HyperHeap.maybe_live_heap"; but "FStar.Monotonic.Heap.upd (FStar.Map.sel m (MkRef?.id x))
+(FStar.Monotonic.HyperHeap.as_ref (MkRef?.ref x))
+v" has type "FStar.Monotonic.Heap.heap"
+.\FStar.Pointer.fst(1660,41-1660,60): (Error) Expected type "FStar.Monotonic.Heap.heap"; but "FStar.Map.sel m (MkRef?.id x)" has type "FStar.Monotonic.HyperHeap.maybe_live_heap"
+Verified module: FStar.BufferNG (32221 milliseconds)
+2 errors were reported (see above)
+make[2]: *** [Makefile:16: FStar.BufferNG.fst-ver] Error 1
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.Preorder.fst.hints; ran without hints
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3693, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 329, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3545, characters 47-61
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1512, characters 22-108
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3545, characters 47-61
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1512, characters 22-108
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3545, characters 47-61
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1512, characters 22-108
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2888, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3545, characters 47-61
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1512, characters 22-108
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5864, characters 24-52
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2308, characters 12-69
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2090, characters 42-57
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5864, characters 24-52
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5930, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 187, characters 24-54
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4170, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 574, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4304, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4574, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 302, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\FStar.HyperHeap.ST.fst(42,45-42,53): (Error) Expected expression of type "FStar.Monotonic.HyperHeap.maybe_live_heap"; got expression "FStar.Monotonic.Heap.emp" of type "FStar.Monotonic.Heap.heap"
+1 error was reported (see above)
+make[2]: *** [Makefile:16: FStar.HyperHeap.All.fst-ver] Error 1
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.Monotonic.HyperStack.fst.hints; ran without hints
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(172,0-188,5): (Warning) Top-level let-bindings must be total; this term may have effects
+.\EtM.AE.fst(70,0-75,23): (Error) Unknown assertion failed
+Verified module: EtM.AE (39056 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:61: verify_hh-EtM.AE.fst] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: crypto.all] Error 2
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.Seq.Sorted.fst.hints; ran without hints
+.\FStar.Buffer.fst(812,28-812,75): (Error) Expected type "FStar.Monotonic.HyperHeap.maybe_live_heap"; but "FStar.Monotonic.Heap.upd (FStar.Map.sel m (MkRef?.id x))
+(FStar.Monotonic.HyperHeap.as_ref (MkRef?.ref x))
+v" has type "FStar.Monotonic.Heap.heap"
+.\FStar.Buffer.fst(812,38-812,54): (Error) Expected type "FStar.Monotonic.Heap.heap"; but "FStar.Map.sel m (MkRef?.id x)" has type "FStar.Monotonic.HyperHeap.maybe_live_heap"
+Verified module: FStar.Buffer.Quantifiers (5258 milliseconds)
+2 errors were reported (see above)
+make[2]: *** [Makefile:16: FStar.Buffer.Quantifiers.fst-ver] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_TypeChecker_Util.ml", line 3693, characters 20-30
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 329, characters 24-77
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3545, characters 47-61
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1512, characters 22-108
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3545, characters 47-61
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1512, characters 22-108
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5864, characters 24-52
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3898, characters 37-134
+Called from file "src/batList.mlv", line 529, characters 39-54
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3884, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1490, characters 23-112
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2888, characters 22-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3545, characters 47-61
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 1512, characters 22-108
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5864, characters 24-52
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2308, characters 12-69
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2090, characters 42-57
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5864, characters 24-52
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5930, characters 8-34
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 187, characters 24-54
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4170, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 574, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4304, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4574, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 302, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 115, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\FStar.HyperHeap.ST.fst(42,45-42,53): (Error) Expected expression of type "FStar.Monotonic.HyperHeap.maybe_live_heap"; got expression "FStar.Monotonic.Heap.emp" of type "FStar.Monotonic.Heap.heap"
+1 error was reported (see above)
+make[2]: *** [Makefile:16: FStar.HyperHeap.ST.fst-ver] Error 1
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.Monotonic.Heap.fsti.hints; ran without hints
+.\FStar.Monotonic.Heap.fsti(94,0-98,56): (Error) Unknown assertion failed
+.\FStar.Monotonic.Heap.fsti(96,33-96,41): (Error) Unknown assertion failed
+.\FStar.Monotonic.Heap.fsti(96,64-96,79): (Error) Unknown assertion failed
+.\FStar.Monotonic.Heap.fsti(97,35-97,45): (Error) Unknown assertion failed
+.\FStar.Monotonic.Heap.fsti(98,38-98,55): (Error) Unknown assertion failed
+Verified i'face (or impl+i'face): FStar.Monotonic.Heap (3049 milliseconds)
+5 errors were reported (see above)
+make[2]: *** [Makefile:16: FStar.Monotonic.Heap.fsti-ver] Error 1
+.\FStar.Monotonic.RRef.fst(75,0-81,81): (Error) Unknown assertion failed
+.\FStar.Monotonic.RRef.fst(82,0-82,44): (Error) Unknown assertion failed
+.\FStar.Monotonic.RRef.fst(84,0-90,47): (Error) Unknown assertion failed
+.\FStar.Monotonic.RRef.fst(91,0-91,26): (Error) Unknown assertion failed
+.\FStar.Monotonic.RRef.fst(93,0-100,52): (Error) Unknown assertion failed
+.\FStar.Monotonic.RRef.fst(101,0-101,33): (Error) Unknown assertion failed
+.\FStar.Monotonic.RRef.fst(146,0-146,34): (Error) Unknown assertion failed
+Verified module: FStar.Monotonic.RRef (16167 milliseconds)
+7 errors were reported (see above)
+make[2]: *** [Makefile:16: FStar.Monotonic.RRef.fst-ver] Error 1
+.\FStar.Monotonic.Seq.fst(65,0-73,39): (Error) Unknown assertion failed
+.\FStar.Monotonic.Seq.fst(113,0-118,39): (Error) Unknown assertion failed
+.\FStar.Monotonic.Seq.fst(444,0-460,18): (Error) Unknown assertion failed
+Verified module: FStar.Monotonic.Seq (46530 milliseconds)
+3 errors were reported (see above)
+make[2]: *** [Makefile:16: FStar.Monotonic.Seq.fst-ver] Error 1
+.\Ex11a.fst(76,0-81,15): (Error) Unknown assertion failed
+.\Ex11a.fst(89,0-93,11): (Error) Unknown assertion failed
+.\Ex11a.fst(102,0-107,20): (Error) Unknown assertion failed
+.\Ex11a.fst(118,0-122,28): (Error) Unknown assertion failed
+.\Ex11a.fst(131,0-139,34): (Error) Unknown assertion failed
+.\Ex11a.fst(208,0-211,16): (Error) Unknown assertion failed
+Verified module: Ex11a (173908 milliseconds)
+6 errors were reported (see above)
+make[3]: *** [Makefile:38: verify-Ex11a.fst] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: ../doc/tutorial/code/exercises.all] Error 2
+.\FStar.Pointer.fst(727,9-733,33): (Error) Unknown assertion failed
+.\FStar.Pointer.fst(1656,8-1661,56): (Error) Unknown assertion failed
+.\FStar.Pointer.fst(1660,31-1660,84): (Error) Expected type "FStar.Monotonic.HyperHeap.maybe_live_heap"; but "FStar.Monotonic.Heap.upd (FStar.Map.sel m (MkRef?.id x))
+(FStar.Monotonic.HyperHeap.as_ref (MkRef?.ref x))
+v" has type "FStar.Monotonic.Heap.heap"
+.\FStar.Pointer.fst(1660,41-1660,60): (Error) Expected type "FStar.Monotonic.Heap.heap"; but "FStar.Map.sel m (MkRef?.id x)" has type "FStar.Monotonic.HyperHeap.maybe_live_heap"
+.\FStar.Pointer.fst(1663,9-1682,3): (Error) Unknown assertion failed
+.\FStar.Pointer.fst(1704,9-1711,28): (Error) Unknown assertion failed
+.\FStar.Pointer.fst(1729,0-1733,16): (Error) Unknown assertion failed
+Verified module: FStar.Pointer (187259 milliseconds)
+7 errors were reported (see above)
+make[2]: *** [Makefile:16: FStar.Pointer.fst-ver] Error 1
+Detailed error report follows for .\FStar.HyperStack.ST.fst(261,0-274,12)
+Taking 5 seconds per proof obligation (17 proofs in total)
+OK: proof obligation at .\FStar.HyperStack.ST.fst(0,0-0,0) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(0,0-0,0) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(34,52-34,65) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(104,108-104,129) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(147,40-147,62) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(244,54-244,68) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(244,72-244,79) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(259,23-259,37) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(259,41-259,56) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(260,27-260,42) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(260,46-260,73) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(265,9-265,18) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(270,50-270,65) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(270,69-270,94) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(271,53-271,72) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(272,52-272,70) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(273,9-273,26) was proven
+Detailed error report follows for .\FStar.HyperStack.ST.fst(470,0-473,14)
+Taking 5 seconds per proof obligation (4 proofs in total)
+OK: proof obligation at .\FStar.HyperStack.ST.fst(0,0-0,0) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(0,0-0,0) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(185,22-185,32) was proven
+Detailed error report follows for .\FStar.HyperStack.ST.fst(562,0-567,3)
+Taking 5 seconds per proof obligation (8 proofs in total)
+OK: proof obligation at .\FStar.HyperStack.ST.fst(0,0-0,0) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(0,0-0,0) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(104,44-104,65) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(185,22-185,32) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(390,22-390,41) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(390,22-390,41) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(552,22-552,43) was proven
+Detailed error report follows for .\FStar.HyperStack.ST.fst(610,0-614,3)
+Taking 5 seconds per proof obligation (7 proofs in total)
+OK: proof obligation at .\FStar.HyperStack.ST.fst(0,0-0,0) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(0,0-0,0) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(63,35-63,40) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(185,22-185,32) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(603,61-603,67) was proven
+OK: proof obligation at .\FStar.HyperStack.ST.fst(605,3-609,21) was proven
+.\FStar.HyperStack.ST.fst(63,83-63,101): (Error) could not prove post-condition
+.\FStar.HyperStack.ST.fst(63,83-63,101): (Error) could not prove post-condition
+.\FStar.HyperStack.ST.fst(63,83-63,101): (Error) could not prove post-condition
+Verified module: FStar.HyperStack.ST (186572 milliseconds)
+3 errors were reported (see above)
+make[2]: *** [Makefile:16: FStar.HyperStack.ST.fst-ver] Error 1
+.\Ex11a.fst(77,0-82,15): (Error) Unknown assertion failed
+.\Ex11a.fst(90,0-94,11): (Error) Unknown assertion failed
+.\Ex11a.fst(103,0-108,20): (Error) Unknown assertion failed
+.\Ex11a.fst(119,0-123,28): (Error) Unknown assertion failed
+.\Ex11a.fst(132,0-140,34): (Error) Unknown assertion failed
+.\Ex11a.fst(213,0-223,48): (Error) Unknown assertion failed
+.\Ex11a.fst(231,0-234,16): (Error) Unknown assertion failed
+Verified module: Ex11a (262485 milliseconds)
+7 errors were reported (see above)
+make[3]: *** [Makefile:39: verify-Ex11a.fst] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: ../doc/tutorial/code/solutions.all] Error 2
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:283: uexamples] Error 2
+.\FStar.Buffer.fst(66,0-66,34): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(808,0-813,56): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(812,28-812,75): (Error) Expected type "FStar.Monotonic.HyperHeap.maybe_live_heap"; but "FStar.Monotonic.Heap.upd (FStar.Map.sel m (MkRef?.id x))
+(FStar.Monotonic.HyperHeap.as_ref (MkRef?.ref x))
+v" has type "FStar.Monotonic.Heap.heap"
+.\FStar.Buffer.fst(812,38-812,54): (Error) Expected type "FStar.Monotonic.Heap.heap"; but "FStar.Map.sel m (MkRef?.id x)" has type "FStar.Monotonic.HyperHeap.maybe_live_heap"
+.\FStar.Buffer.fst(825,0-833,3): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(855,0-858,25): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(866,0-869,32): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(875,0-877,29): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(889,8-897,58): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(899,8-907,55): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(922,0-930,53): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(1288,0-1291,6): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(1293,0-1297,6): (Error) Unknown assertion failed
+.\FStar.Buffer.fst(1299,0-1305,6): (Error) Unknown assertion failed
+Verified module: FStar.Buffer (394017 milliseconds)
+14 errors were reported (see above)
+make[2]: *** [Makefile:16: FStar.Buffer.fst-ver] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:280: ulib] Error 2
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:260: utest] Error 2
