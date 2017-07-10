@@ -1,0 +1,1333 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "CoreCrypto.ml", line 526, characters 24-144:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+ECC_X448
+crypto/asn1/x_int64.c: In function 'uint64_print':
+crypto/asn1/x_int64.c:105:32: warning: unknown conversion type character 'j' in format [-Wformat=]
+return BIO_printf(out, "%jd\n", **(int64_t **)pval);
+^
+crypto/asn1/x_int64.c:105:32: warning: too many arguments for format [-Wformat-extra-args]
+crypto/asn1/x_int64.c:106:28: warning: unknown conversion type character 'j' in format [-Wformat=]
+return BIO_printf(out, "%ju\n", **(uint64_t **)pval);
+^
+crypto/asn1/x_int64.c:106:28: warning: too many arguments for format [-Wformat-extra-args]
+crypto/bio/b_sock.c: In function 'BIO_get_accept_socket':
+crypto/bio/b_sock.c:211:13: warning: overflow in implicit constant conversion [-Woverflow]
+int s = INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:216:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:219:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:226:13: warning: overflow in implicit constant conversion [-Woverflow]
+s = INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:233:13: warning: overflow in implicit constant conversion [-Woverflow]
+s = INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c: In function 'BIO_socket':
+crypto/bio/b_sock2.c:45:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c:51:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c: In function 'BIO_connect':
+crypto/bio/b_sock2.c:90:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:98:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c: In function 'BIO_listen':
+crypto/bio/b_sock2.c:164:47: warning: passing argument 4 of 'getsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (getsockopt(sock, SOL_SOCKET, SO_TYPE, &socktype, &socktype_len) != 0
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:980:34: note: expected 'char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI getsockopt(SOCKET s,int level,int optname,char *optval,int *optlen);
+^
+crypto/bio/b_sock2.c:187:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:195:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:204:57: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_IPV6, IPV6_V6ONLY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:218:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c: In function 'BIO_accept_ex':
+crypto/bio/b_sock2.c:249:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c:254:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+In file included from crypto/bn/bn_print.c:15:0:
+crypto/bn/bn_print.c: In function 'BN_bn2dec':
+crypto/bn/bn_lcl.h:94:27: warning: unknown conversion type character 'l' in format [-Wformat=]
+#  define BN_DEC_FMT1     "%llu"
+^
+crypto/bn/bn_print.c:104:37: note: in expansion of macro 'BN_DEC_FMT1'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
+^
+crypto/bn/bn_lcl.h:94:27: warning: too many arguments for format [-Wformat-extra-args]
+#  define BN_DEC_FMT1     "%llu"
+^
+crypto/bn/bn_print.c:104:37: note: in expansion of macro 'BN_DEC_FMT1'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
+^
+crypto/bn/bn_lcl.h:95:27: warning: unknown conversion type character 'l' in format [-Wformat=]
+#  define BN_DEC_FMT2     "%019llu"
+^
+crypto/bn/bn_print.c:109:41: note: in expansion of macro 'BN_DEC_FMT2'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
+^
+crypto/bn/bn_lcl.h:95:27: warning: too many arguments for format [-Wformat-extra-args]
+#  define BN_DEC_FMT2     "%019llu"
+^
+crypto/bn/bn_print.c:109:41: note: in expansion of macro 'BN_DEC_FMT2'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
+^
+crypto/threads_win.c: In function 'CRYPTO_atomic_add':
+crypto/threads_win.c:132:35: warning: passing argument 1 of '_InterlockedExchangeAdd' from incompatible pointer type [-Wincompatible-pointer-types]
+*ret = InterlockedExchangeAdd(val, amount) + amount;
+^
+In file included from /usr/x86_64-w64-mingw32/sys-root/mingw/include/winnt.h:27:0,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/minwindef.h:163,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/windef.h:8,
+from /usr/x86_64-w64-mingw32/sys-root/mingw/include/windows.h:69,
+from crypto/threads_win.c:11:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/psdk_inc/intrin-impl.h:1026:10: note: expected 'volatile long int *' but argument is of type 'int *'
+__LONG32 _InterlockedExchangeAdd(__LONG32 volatile *Addend, __LONG32 Value) {
+^
+test/testutil/tests.c: In function 'test_size_t_eq':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:581:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, eq, ==, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:581:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, eq, ==, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:581:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, eq, ==, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c: In function 'test_size_t_ne':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:582:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ne, !=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:582:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ne, !=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:582:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ne, !=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c: In function 'test_size_t_lt':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:583:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, lt, <, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:583:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, lt, <, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:583:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, lt, <, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c: In function 'test_size_t_le':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:584:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, le, <=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:584:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, le, <=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:584:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, le, <=, fmt)                          \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c: In function 'test_size_t_gt':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:585:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, gt, >, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:585:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, gt, >, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:585:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, gt, >, fmt)                           \
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c: In function 'test_size_t_ge':
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:586:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ge, >=, fmt)
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: unknown conversion type character 'z' in format [-Wformat=]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:586:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ge, >=, fmt)
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+test/testutil/tests.c:575:27: warning: too many arguments for format [-Wformat-extra-args]
+"[" fmt "] compared to [" fmt "]",            \
+^
+test/testutil/tests.c:586:5: note: in expansion of macro 'DEFINE_COMPARISON'
+DEFINE_COMPARISON(type, name, ge, >=, fmt)
+^
+test/testutil/tests.c:594:1: note: in expansion of macro 'DEFINE_COMPARISONS'
+DEFINE_COMPARISONS(size_t, size_t, "%zu")
+^
+ar: creating test/libtestutil.a
+ar: creating libssl.a
+ar: creating libcrypto.a
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.Impl.Xor.Lemmas.fst-lax] Error 1
+make[2]: *** Waiting for unfinished jobs....
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Chacha20Poly1305.fst-lax] Error 1
+make[2]: *** Waiting for unfinished jobs....
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\Hacl.Cast.fst(20,61-20,78): (Error) Identifier not found: [FStar.UInt128.uint64_to_uint128]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint64_to_uint128 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: ../bignum/Hacl.Bignum.Wide.fst-lax] Error 1
+make[2]: *** Waiting for unfinished jobs....
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\Hacl.Cast.fst(20,61-20,78): (Error) Identifier not found: [FStar.UInt128.uint64_to_uint128]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint64_to_uint128 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: ../bignum/Hacl.Bignum.Limb.fst-lax] Error 1
+make[2]: *** Waiting for unfinished jobs....
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.Impl.HSalsa20.fst-lax] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.Hash.Lib.LoadStore.fst-lax] Error 1
+make[2]: *** Waiting for unfinished jobs....
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.Impl.BignumQ.Mul.fst-lax] Error 1
+make[2]: *** Waiting for unfinished jobs....
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.HMAC.SHA2_256.fst-lax] Error 1
+make[1]: *** [Makefile:16: hmac-ct] Error 2
+make[1]: *** Waiting for unfinished jobs....
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir chacha-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent1/_work/3/s/code/lib/kremlin --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/specs --include . --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib Chacha20.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[3]: *** [Makefile:43: chacha-c/Chacha20.c] Error 2
+make[3]: *** Waiting for unfinished jobs....
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\Hacl.Cast.fst(20,61-20,78): (Error) Identifier not found: [FStar.UInt128.uint64_to_uint128]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint64_to_uint128 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: ../bignum/Hacl.Bignum.Limb.fst-lax] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.Lib.LoadStore32.fst-lax] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.Impl.Chacha20.fst-lax] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.Impl.Salsa20.fst-lax] Error 1
+make[1]: *** [Makefile:16: salsa-family-ct] Error 2
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\Hacl.Cast.fst(20,61-20,78): (Error) Identifier not found: [FStar.UInt128.uint64_to_uint128]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint64_to_uint128 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: ../bignum/Hacl.Spec.Bignum.Bigint.fst-lax] Error 1
+make[1]: *** [Makefile:16: poly1305-ct] Error 2
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir box-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include ../lib/kremlin --include ../salsa-family --include ../curve25519 --include ../poly1305 --include ../../specs --include C:/Build/Agent1/_work/3/s/code/bignum --include C:/Build/Agent1/_work/3/s/code/lib/kremlin --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/specs --include . --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib NaCl.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[3]: *** [Makefile:51: box-c/NaCl.c] Error 2
+make[3]: *** Waiting for unfinished jobs....
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\Hacl.Cast.fst(20,61-20,78): (Error) Identifier not found: [FStar.UInt128.uint64_to_uint128]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint64_to_uint128 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: ../bignum/Hacl.Bignum.Wide.fst-lax] Error 1
+make[1]: *** [Makefile:16: curve25519-ct] Error 2
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.SecretBox.ZeroPad.fst-lax] Error 1
+make[1]: *** [Makefile:16: api-ct] Error 2
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir poly-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent1/_work/3/s/code/lib/kremlin --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/specs --include . --include ../bignum --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib ../bignum/Hacl.Spec.Bignum.Field.fst ../bignum/Hacl.Bignum.Limb.fst ../bignum/Hacl.Bignum.Wide.fst ../bignum/Hacl.Spec.Bignum.Bigint.fst ../bignum/Hacl.Spec.Bignum.Fsum.fst ../bignum/Hacl.Spec.Bignum.Fproduct.fst ../bignum/Hacl.Spec.Bignum.Fmul.fst ../bignum/Hacl.Bignum.Fsum.fst ../bignum/Hacl.Bignum.Fproduct.fst ../bignum/Hacl.Bignum.Fmul.fst Hacl.Bignum.Constants.fst Hacl.Bignum.Parameters.fst Hacl.Spec.Bignum.Modulo.fst Hacl.Spec.Bignum.AddAndMultiply.fst ../../specs/Spec.Poly1305.fst Hacl.Spec.Poly1305_64.fst Hacl.Spe.Poly1305_64.fst Hacl.Bignum.Modulo.fst Hacl.Bignum.AddAndMultiply.fst Hacl.Impl.Poly1305_64.fst Hacl.Standalone.Poly1305_64.fst Poly1305_64.fst Hacl.Spec.Poly1305_64.Lemmas1.fst AEAD.Poly1305_64.fst Hacl.Test.Poly1305_64.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[3]: *** [Makefile:76: poly-c/out.krml] Error 2
+make[2]: *** [Makefile:7: poly1305-c] Error 2
+make[2]: *** Waiting for unfinished jobs....
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir x25519-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent1/_work/3/s/code/lib/kremlin --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/specs --include . --include ../bignum --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib ../bignum/Hacl.Bignum.Limb.fst ../bignum/Hacl.Spec.Bignum.Field.fst ../bignum/Hacl.Bignum.Wide.fst ../bignum/Hacl.Spec.Bignum.Bigint.fst ../bignum/Hacl.Spec.Bignum.Fproduct.fst ../bignum/Hacl.Spec.Bignum.Fsum.fst ../bignum/Hacl.Spec.Bignum.Fdifference.fst ../bignum/Hacl.Spec.Bignum.Fmul.fst ../bignum/Hacl.Spec.Bignum.Fscalar.fst ../bignum/Hacl.Spec.Bignum.fst ../bignum/Hacl.Bignum.Fscalar.fst ../bignum/Hacl.Bignum.Fproduct.fst ../bignum/Hacl.Bignum.Fmul.fst ../bignum/Hacl.Bignum.fst Hacl.Spec.Curve25519.Lemmas.fst Hacl.Bignum.Parameters.fst Hacl.Spec.Bignum.Modulo.fst Hacl.Spec.EC.AddAndDouble.fst Hacl.Spec.Bignum.Fsquare.fst Hacl.Spec.Bignum.Crecip.fst Hacl.Bignum.Modulo.fst Hacl.Bignum.Fsquare.fst Hacl.Bignum.Crecip.fst Hacl.Spec.EC.Point.fst Hacl.EC.Point.fst Hacl.Spec.EC.AddAndDouble2.fst Hacl.Spec.EC.Format.Lemmas.fst Hacl.Spec.EC.Format.fst Hacl.EC.Format.fst Hacl.EC.AddAndDouble.fst Hacl.Spec.EC.Ladder.Lemmas.fst Hacl.Spec.EC.Ladder.fst Hacl.EC.Ladder.SmallLoop.fst Hacl.EC.Ladder.BigLoop.fst Hacl.EC.Ladder.fst Hacl.Spec.EC.fst Hacl.EC.fst Curve25519.fst Hacl.Test.X25519.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[3]: *** [Makefile:89: x25519-c/out.krml] Error 2
+make[2]: *** [Makefile:7: curve25519-c] Error 2
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir aead-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include ../lib/kremlin --include ../salsa-family --include ../curve25519 --include ../poly1305 --include ../../specs --include C:/Build/Agent1/_work/3/s/code/bignum --include C:/Build/Agent1/_work/3/s/code/lib/kremlin --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/specs --include . --include ../salsa-family --include ../poly1305 --include ../bignum --include ../../specs --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib Chacha20Poly1305.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[3]: *** [Makefile:58: aead-c/Chacha20Poly1305.c] Error 2
+make[2]: *** [Makefile:7: api-c] Error 2
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir salsa-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent1/_work/3/s/code/lib/kremlin --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/specs --include . --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib Salsa20.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[3]: *** [Makefile:56: salsa-c/Salsa20.c] Error 2
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.Hash.Lib.Create.fst-lax] Error 1
+make[1]: *** [Makefile:16: hash-ct] Error 2
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir chacha-vec128 --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent1/_work/3/s/code/lib/kremlin --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/specs --include . --include C:/Build/Agent1/_work/3/s/specs --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib Hacl.Impl.Chacha20.Vec128.State.fst Hacl.Impl.Chacha20.Vec128.fst Chacha20.Vec128.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[3]: *** [Makefile:69: chacha20-vec128/Chacha20_Vec128.c] Error 2
+make[2]: *** [Makefile:7: salsa-family-c] Error 2
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+.\Hacl.Spec.BignumQ.Mul.fst(240,28-240,45): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [../Makefile.include:104: Hacl.Spec.BignumQ.Mul.fst-lax] Error 1
+make[1]: *** [Makefile:16: ed25519-ct] Error 2
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir hmac-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent1/_work/3/s/code/lib/kremlin --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/specs --include . --include C:/Build/Agent1/_work/3/s/code/hash --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib HMAC_SHA2_256.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[3]: *** [Makefile:45: hmac-c/HMAC_SHA2_256.c] Error 2
+make[2]: *** [Makefile:7: hmac-c] Error 2
+make: *** [Makefile:54: ct] Error 2
+make: *** Waiting for unfinished jobs....
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir tmp-vale --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include aead --include uf1cma --include vale --include vale/asm --include prf --include hkdf --include utils --include indexing --include ../code/experimental/aesgcm --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/hash --include ../code/lib/kremlin --include ../specs --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/test --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib test/test_vale/Crypto.Indexing.fst test/Flag.fst utils/Hacl.Spec.fst test/Crypto.KrmlTest.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[2]: *** [Makefile:51: tmp-vale/out.krml] Error 2
+make[1]: *** [Makefile:34: extract-c-crypto] Error 2
+make[1]: *** Waiting for unfinished jobs....
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir ed25519-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent1/_work/3/s/code/lib/kremlin --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/specs --include . --include ../bignum --include ../curve25519 --include ../hash --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib Hacl.Impl.BignumQ.Mul.fst Hacl.Spec.BignumQ.Mul.fst Hacl.Lib.Create64.fst Hacl.Bignum25519.fst Hacl.Impl.Ed25519.ExtPoint.fst Hacl.Impl.Ed25519.SwapConditional.fst Hacl.Impl.Ed25519.PointDouble.fst Hacl.Impl.Ed25519.PointAdd.fst Hacl.Impl.Ed25519.Ladder.Step.fst Hacl.Impl.Ed25519.Ladder.fst Hacl.Impl.Store51.fst Hacl.Impl.Ed25519.PointCompress.fst Hacl.Impl.Ed25519.G.fst Hacl.Impl.Ed25519.SecretExpand.fst Hacl.Spec.BignumQ.Eval.fst Hacl.Spec.BignumQ.Mul.Lemmas_1.fst Hacl.Spec.BignumQ.Mul.Lemmas_3.fst Spec.BarrettReduction.fst Hacl.Lib.Create128.fst Hacl.Impl.Sha512.fst Hacl.Impl.Load56.fst Hacl.Impl.SHA512.ModQ.fst Hacl.Impl.Store56.fst Hacl.Impl.Ed25519.Sign.Steps.fst Hacl.Impl.Ed25519.Sign.fst Hacl.Impl.Load51.fst Hacl.Impl.Ed25519.Pow2_252m2.fst Hacl.Impl.Ed25519.RecoverX.fst Hacl.Impl.Ed25519.PointDecompress.fst Hacl.Impl.Ed25519.Verify.Lemmas.fst Hacl.Impl.Ed25519.PointEqual.fst Hacl.Impl.Ed25519.Verify.Steps.fst Hacl.Impl.Ed25519.Verify.fst Hacl.Impl.Ed25519.SecretToPublic.fst Ed25519.fst ../bignum/Hacl.Bignum.Limb.fst ../bignum/Hacl.Bignum.Wide.fst ../bignum/Hacl.Bignum.Fsum.fst ../bignum/Hacl.Bignum.Fproduct.fst ../bignum/Hacl.Bignum.Fmul.fst ../bignum/Hacl.Spec.Bignum.Field.fst ../bignum/Hacl.Spec.Bignum.Bigint.fst ../bignum/Hacl.Spec.Bignum.Fsum.fst ../bignum/Hacl.Spec.Bignum.Fproduct.fst ../bignum/Hacl.Spec.Bignum.Fmul.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[3]: *** [Makefile:150: ed25519-c/Ed25519.c] Error 2
+make[2]: *** [Makefile:7: ed25519-c] Error 2
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent1/_work/3/s/dependencies/FStar/bin/fstar.exe --odir sha2-c --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.UInt128 --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include C:/Build/Agent1/_work/3/s/code/lib/kremlin --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib --include C:/Build/Agent1/_work/3/s/specs --include . --include C:/Build/Agent1/_work/3/s/code/hash --include C:/Build/Agent1/_work/3/s/dependencies/kremlin/kremlib Hacl.Hash.Lib.LoadStore.fst Hacl.Hash.Lib.Create.fst Hacl.Hash.SHA2_512.Lemmas.fst Hacl.Hash.SHA2_512.fst Hacl.Hash.SHA2_384.Lemmas.fst Hacl.Hash.SHA2_384.fst Hacl.Hash.SHA2_256.Lemmas.fst Hacl.Hash.SHA2_256.fst SHA2_256.fst SHA2_384.fst SHA2_512.fst Hacl.Test.SHA2_256.fst Hacl.Test.SHA2_384.fst Hacl.Test.SHA2_512.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Driver.ml", line 279, characters 6-29
+Called from file "src/Kremlin.ml", line 276, characters 14-96
+make[3]: *** [Makefile:40: sha2-c/out.krml] Error 2
+make[2]: *** [Makefile:7: hash-c] Error 2
+make[1]: *** [Makefile:28: extract-c-code] Error 2
+make: *** [Makefile:47: extract-all-c] Error 2
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Tactics.ml", line 353, characters 45-46:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 40-41:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 42-43:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 3, characters 64-65:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 37-38:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 62-63:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Tactics.ml", line 353, characters 45-46:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 40-41:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 42-43:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 3, characters 64-65:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 37-38:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 62-63:
+Warning 20: this argument will not be used by the function.
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [Makefile:65: curve25519.exe] Error 1
+make[2]: *** Waiting for unfinished jobs....
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [Makefile:81: salsa20.exe] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [Makefile:57: poly1305.exe] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [Makefile:73: chacha20.exe] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [Makefile:49: gf128.exe] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [Makefile:89: chacha20poly1305.exe] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [Makefile:97: sha2_256.exe] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [Makefile:113: sha2_512.exe] Error 1
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 2762, characters 12-71
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1668, characters 14-206
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 1510, characters 6-41
+Called from file "src/batList.mlv", line 513, characters 26-35
+Called from file "src/batList.mlv", line 517, characters 2-18
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 2763, characters 20-141
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5768, characters 26-70
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6220, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6277, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6332, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6368, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 6363, characters 8-327
+Called from file "src/ocaml-output/FStar_Universal.ml", line 313, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 414, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 440, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 458, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 502, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 229, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 255, characters 6-11
+
+C:\Build\Agent1\_work\3\s\code\lib\kremlin\FStar.Endianness.fst(30,35-30,52): (Error) Identifier not found: [FStar.UInt128.uint128_to_uint64]
+Module FStar.UInt128 resolved into FStar.UInt128, definition uint128_to_uint64 not found
+1 error was reported (see above)
+make[2]: *** [Makefile:129: ed25519.exe] Error 1
+make[1]: *** [Makefile:10: all] Error 2
+make: *** [Makefile:24: extract-specs] Error 2
