@@ -1,0 +1,5 @@
+warning CS8001: SDK path could not be resolved
+obj/crypto/hashing/testsha256.c: In function 'getTimeSeconds':
+obj/crypto/hashing/testsha256.c:34:3: warning: implicit declaration of function 'Sleep' [-Wimplicit-function-declaration]
+Sleep(200);  // Sleep for 200ms
+^
