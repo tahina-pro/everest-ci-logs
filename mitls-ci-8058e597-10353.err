@@ -1,0 +1,297 @@
+From https://github.com/FStarLang/FStar
+24c34527a..b645c45e5  master                -> origin/master
+5ee601ccc..ef6871f09  aseem_monotonicity    -> origin/aseem_monotonicity
+9025fcffb..72a28e0d5  catalin_rpc_monotonic -> origin/catalin_rpc_monotonic
+* [new branch]          kyoDralliam-patch-1   -> origin/kyoDralliam-patch-1
+* [new branch]          kyoDralliam-patch-1-1 -> origin/kyoDralliam-patch-1-1
+b7b11e8e6..d7e110366  nickgian_bitvector    -> origin/nickgian_bitvector
+09dad4b47..2022625e2  nik_tactics           -> origin/nik_tactics
+7701eb125..70e005d7a  shaolintl_phases_from_tactics -> origin/shaolintl_phases_from_tactics
+* [new branch]          tchajed_uint128_perf  -> origin/tchajed_uint128_perf
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+From https://github.com/FStarLang/kremlin
+e4dec0e..92c51c9  master     -> origin/master
+From https://github.com/mitls/hacl-star
+bb31018e..a77217d8  master                -> origin/master
+* [new branch]        beurdouche_fix_shifts -> origin/beurdouche_fix_shifts
+708c2567..67dfd967  beurdouche_post_sts_hash -> origin/beurdouche_post_sts_hash
+1b4fd197..ca6817d8  migrating_sts_bis     -> origin/migrating_sts_bis
+641c921e..cb032923  polubelova_rsa        -> origin/polubelova_rsa
+File "CoreCrypto.ml", line 526, characters 24-144:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+ECC_X448
+Warning 3: run_or_warn: the following command failed:
+C:/Build/Agent2/_work/12/s/fstar/bin/fstar.exe --odir LowCProvider/tmp --codegen Kremlin --lax --no_extract FStar.Math.Lib --no_extract FStar.HyperHeap --no_extract FStar.HyperStack --no_extract FStar.HyperStack.ST --no_extract FStar.Seq.Base --no_extract FStar.Int128 --no_extract FStar.UInt64 --no_extract FStar.Int64 --no_extract FStar.UInt63 --no_extract FStar.Int63 --no_extract FStar.UInt32 --no_extract FStar.Int32 --no_extract FStar.UInt31 --no_extract FStar.Int31 --no_extract FStar.UInt16 --no_extract FStar.Int16 --no_extract FStar.UInt8 --no_extract FStar.Int8 --trace_error --include aead --include uf1cma --include vale --include vale/asm --include prf --include hkdf --include utils --include indexing --include ../code/experimental/aesgcm --include ../code/bignum --include ../code/poly1305 --include ../code/salsa-family --include ../code/hash --include ../code/lib/kremlin --include ../specs --include C:/Build/Agent2/_work/12/s/kremlin/kremlib --include C:/Build/Agent2/_work/12/s/kremlin/test --include C:/Build/Agent2/_work/12/s/kremlin/kremlib LowCProvider/Crypto.Indexing.fst test/Flag.fst utils/Hacl.Spec.fst aead/Crypto.AEAD.fst
+F* failed
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 48, characters 10-39
+Called from file "src/Driver.ml", line 283, characters 6-29
+Called from file "src/Kremlin.ml", line 286, characters 14-96
+make[1]: *** [Makefile:34: LowCProvider-tmp] Error 2
+make: *** [Makefile:51: tmp] Error 2
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\secure_api\utils\Crypto.Symmetric.Bytes.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\secure_api\utils\Crypto.Symmetric.Bytes.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\Hacl.Cast.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\secure_api\utils\Crypto.Symmetric.Bytes.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\poly1305\Hacl.Spec.Poly1305_64.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Tactics.ml", line 353, characters 45-46:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 40-41:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 42-43:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 3, characters 64-65:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 37-38:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 62-63:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Tactics.ml", line 353, characters 45-46:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 40-41:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 42-43:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 3, characters 64-65:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 37-38:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 62-63:
+Warning 20: this argument will not be used by the function.
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Extracted.mk:92: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:195: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:95: warning: overriding recipe for target 'mitls.exe'
+Makefile:198: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:117: warning: overriding recipe for target 'test'
+Makefile:207: warning: ignoring old recipe for target 'test'
+Extracted.mk:173: warning: overriding recipe for target 'cmitls.o'
+Makefile:201: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:175: warning: overriding recipe for target 'cmitls.exe'
+Makefile:203: warning: ignoring old recipe for target 'cmitls.exe'
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1980, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5207, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst(10,20-10,24): (Error) Namespace FStar.Int.Cast.Full cannot be found
+1 error was reported (see above)
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\secure_api\utils\Crypto.Symmetric.Bytes.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1980, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5207, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst(10,20-10,24): (Error) Namespace FStar.Int.Cast.Full cannot be found
+1 error was reported (see above)
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\secure_api\utils\Crypto.Symmetric.Bytes.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1980, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5207, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst(10,20-10,24): (Error) Namespace FStar.Int.Cast.Full cannot be found
+1 error was reported (see above)
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\secure_api\utils\Crypto.Symmetric.Bytes.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1980, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5207, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst(10,20-10,24): (Error) Namespace FStar.Int.Cast.Full cannot be found
+1 error was reported (see above)
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\secure_api\utils\Crypto.Symmetric.Bytes.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1980, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5207, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst(10,20-10,24): (Error) Namespace FStar.Int.Cast.Full cannot be found
+1 error was reported (see above)
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\secure_api\utils\Crypto.Symmetric.Bytes.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1980, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5207, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst(10,20-10,24): (Error) Namespace FStar.Int.Cast.Full cannot be found
+1 error was reported (see above)
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\Hacl.Cast.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\FStar.Endianness.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\secure_api\utils\Crypto.Symmetric.Bytes.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: in C:\Build\Agent2\_work\12\s\hacl-star\code\poly1305\Hacl.Spec.Poly1305_64.fst: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Warning: no modules in namespace FStar.Int.Cast.Full and no file with that name either
+Unexpected error
+FStar_Errors.Error(_)
+Raised at file "src/ocaml-output/FStar_ToSyntax_Env.ml", line 1980, characters 21-31
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5207, characters 21-62
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5682, characters 35-54
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5733, characters 30-54
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5784, characters 8-63
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5817, characters 37-57
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/FStar_ToSyntax_ToSyntax.ml", line 5812, characters 8-326
+Called from file "src/ocaml-output/FStar_Universal.ml", line 290, characters 26-47
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+C:\Build\Agent2\_work\12\s\hacl-star\code\lib\kremlin\Hacl.Cast.fst(7,20-7,24): (Error) Namespace FStar.Int.Cast.Full cannot be found
+1 error was reported (see above)
+make[3]: *** No rule to make target 'output/FFI.ml', needed by 'output/FFI.cmx'.
+make[3]: *** No rule to make target 'output/TestAPI.ml', needed by 'output/TestAPI.cmx'.
+make[3]: *** No rule to make target 'output/TestFFI.ml', needed by 'output/TestFFI.cmx'.
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+x86_64-w64-mingw32-ar: tmp/*.o: No such file or directory
+make[4]: *** [Makefile:73: libllcrypto.a] Error 1
+make[4]: Target 'all' not remade because of errors.
+make[3]: *** [Extracted.mk:56: C:/Build/Agent2/_work/12/s/hacl-star/secure_api/LowCProvider/LowCProvider.cmxa] Error 2
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: Target 'mitls.cmxa' not remade because of errors.
+make[2]: *** [Makefile:195: mitls.cmxa] Error 2
+make[2]: Target 'mitls.exe' not remade because of errors.
+make[1]: *** [Makefile:26: build] Error 2
+make: *** [Makefile:22: all] Error 2
