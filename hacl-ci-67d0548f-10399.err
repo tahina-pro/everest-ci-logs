@@ -1,0 +1,24 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "DB.ml", line 1:
+Error: Could not find the .cmi file for interface DB.mli.
+make[1]: *** [DB.cmx] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [db/DB.cmx] Error 2
+make: *** Waiting for unfinished jobs....
+ar: creating libssl.a
+ar: creating libcrypto.a
+ar: creating test/libtestutil.a
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+a147d0fb [CI] regenerate hints
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+git branch <new-branch-name> a147d0fb
+
+Switched to branch 'master'
+To github.com:mitls/hacl-star.git
+67d0548f..a147d0fb  master -> master
