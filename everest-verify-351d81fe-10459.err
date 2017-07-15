@@ -1,0 +1,85 @@
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+parallel (-j) builds may not work reliably with open Python files.
+File "C:\Binaries\scons\Scripts\scons.py", line 199, in <module>
+.\Nonce.fst(49,0-50,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(134,0-134,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Hashing.CRF.fst(29,8-29,80): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(108,0-108,44): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(112,9-116,7): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(106,0-106,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(171,0-171,32): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+Sys_error("Invalid argument")
+Raised by primitive operation at file "pervasives.ml", line 302, characters 2-47
+Called from file "src/basic/ml/FStar_Util.ml", line 152, characters 2-28
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 479, characters 25-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 538, characters 27-47
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 684, characters 21-29
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 1116, characters 19-73
+Called from file "list.ml", line 73, characters 12-15
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7858, characters 32-297
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7874, characters 6-66
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 149, characters 13-60
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 187, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4170, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 574, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4304, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4574, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 302, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 115, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+make[1]: *** [Makefile:132: StreamAE.fst-ver] Error 1
+make[1]: *** Waiting for unfinished jobs....
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(508,0-508,50): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(512,0-515,10): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+Sys_error("Invalid argument")
+Raised by primitive operation at file "pervasives.ml", line 302, characters 2-47
+Called from file "src/basic/ml/FStar_Util.ml", line 152, characters 2-28
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 479, characters 25-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 538, characters 27-47
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 684, characters 21-29
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 1116, characters 19-73
+Called from file "list.ml", line 73, characters 12-15
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7858, characters 32-297
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7874, characters 6-66
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 149, characters 13-60
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 187, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4170, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 574, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4304, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4574, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 302, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 115, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+make[1]: *** [Makefile:132: StAE.fst-ver] Error 1
+Warning: Unable to open hints file: C:\Build\Agent2\_work\7\s\mitls-fstar\src\tls\QUIC.fst.hints; ran without hints
+.\ConnInvariant.fst(93,0-94,64): (Warning) Top-level let-bindings must be total; this term may have effects
+make: *** [Makefile:31: verify] Error 2
