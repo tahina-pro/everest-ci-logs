@@ -1,0 +1,161 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent1/_work/12/s
+About to run: everest_rebuild
+BUILD_SOURCEBRANCHNAME: test
+BUILD_DEFINITIONNAME: Everest-CI-Windows
+Removing FStar/
+Removing fstarlang_binaries/
+Removing hacl-star/
+Removing kremlin/
+Removing mitls-fstar/
+Removing vale/
+# Switching to the everest directory ... now in /cygdrive/c/Build/Agent1/_work/12/s
+
+Checking environment
+... which found
+... no suspicious bash
+... 64-bit cygwin
+... no suspicious cygwin packages
+... all 45 cygwin packages seem to be installed
+... proper mingw directory seems to be in PATH
+... github.com access ok
+... ocaml minimum version requirements met
+... flexdll ok
+... opam found
+... all 15 ocamlfind packages found
+... sample ocamlbuild project compiles successfully
+... found fsc.exe
+... found nmake.exe
+... found ml64.exe
+... fsc found in PATH
+... cloning FStarLang/binaries
+Cloning into 'fstarlang_binaries'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 21d40ad Adding new build package and removing oldest.
+... version of z3 found in PATH: 4.5.0
+... version of z3 found for win-x64 in z3-tested is: 1f29cebd4df6
+Get the freshest z3 from FStarLang/binaries? [Yn]
+... unzipping fstarlang_binaries/z3-tested/z3-4.5.1.1f29cebd4df6-x64-win.zip
+Archive:  fstarlang_binaries/z3-tested/z3-4.5.1.1f29cebd4df6-x64-win.zip
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/LICENSE.txt
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/com.microsoft.z3.jar
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/libz3.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/libz3.lib
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/libz3java.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/libz3java.lib
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/Microsoft.Z3.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/Microsoft.Z3.xml
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/msvcp110.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/msvcr110.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/vcomp110.dll
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/z3.exe
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/example.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3consts.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3core.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3num.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3poly.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3printer.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3rcf.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3types.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/z3util.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__init__.py
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3consts.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3core.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3num.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3poly.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3printer.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3rcf.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3types.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/z3util.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/bin/python/z3/__pycache__/__init__.cpython-36.pyc
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3++.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_algebraic.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_api.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_ast_containers.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_fixedpoint.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_fpa.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_interp.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_macros.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_optimization.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_polynomial.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_rcf.h
+inflating: z3-4.5.1.1f29cebd4df6-x64-win/include/z3_v1.h
+Automatically customize /home/everbld/.bashrc with the z3 path? [Yn]
+Remember to run source "/home/everbld/.bashrc" in your terminal afterwards!
+... nuget found in PATH
+... Python 2.7.13 found
+... scons.bat found in PATH
+
+Remember to run source "/home/everbld/.bashrc" if it was modified!
+Note: you *may* want to add C:/Build/Agent1/_work/12/s/FStar/bin and C:/Build/Agent1/_work/12/s/kremlin to your PATH
+Note: you *may* want to export FSTAR_HOME=C:/Build/Agent1/_work/12/s/FStar
+Note: you *may* want to export KREMLIN_HOME=C:/Build/Agent1/_work/12/s/kremlin
+Note: you *may* want to export HACL_HOME=C:/Build/Agent1/_work/12/s/hacl-star
+
+Pulling mitls-fstar
+Note: you're welcome to create symbolic links if you already have cloned the repository elsewhere
+Cloning into 'mitls-fstar'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 0f36db8 Add missing dependency
+
+Pulling vale
+Cloning into 'vale'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at f6c33ca Use pre-generated FStar.h with definition of FStar_UInt128_uint128
+
+Pulling FStar
+Cloning into 'FStar'...
+Checking out files:  50% (1048/2087)   Checking out files:  51% (1065/2087)   Checking out files:  52% (1086/2087)   Checking out files:  53% (1107/2087)   Checking out files:  54% (1127/2087)   Checking out files:  55% (1148/2087)   Checking out files:  56% (1169/2087)   Checking out files:  57% (1190/2087)   Checking out files:  58% (1211/2087)   Checking out files:  59% (1232/2087)   Checking out files:  60% (1253/2087)   Checking out files:  61% (1274/2087)   Checking out files:  62% (1294/2087)   Checking out files:  63% (1315/2087)   Checking out files:  64% (1336/2087)   Checking out files:  65% (1357/2087)   Checking out files:  66% (1378/2087)   Checking out files:  67% (1399/2087)   Checking out files:  68% (1420/2087)   Checking out files:  69% (1441/2087)   Checking out files:  70% (1461/2087)   Checking out files:  71% (1482/2087)   Checking out files:  72% (1503/2087)   Checking out files:  73% (1524/2087)   Checking out files:  74% (1545/2087)   Checking out files:  75% (1566/2087)   Checking out files:  76% (1587/2087)   Checking out files:  77% (1607/2087)   Checking out files:  78% (1628/2087)   Checking out files:  79% (1649/2087)   Checking out files:  80% (1670/2087)   Checking out files:  81% (1691/2087)   Checking out files:  82% (1712/2087)   Checking out files:  83% (1733/2087)   Checking out files:  84% (1754/2087)   Checking out files:  85% (1774/2087)   Checking out files:  86% (1795/2087)   Checking out files:  87% (1816/2087)   Checking out files:  88% (1837/2087)   Checking out files:  89% (1858/2087)   Checking out files:  90% (1879/2087)   Checking out files:  90% (1890/2087)   Checking out files:  91% (1900/2087)   Checking out files:  92% (1921/2087)   Checking out files:  93% (1941/2087)   Checking out files:  94% (1962/2087)   Checking out files:  95% (1983/2087)   Checking out files:  96% (2004/2087)   Checking out files:  97% (2025/2087)   Checking out files:  98% (2046/2087)   Checking out files:  99% (2067/2087)   Checking out files: 100% (2087/2087)   Checking out files: 100% (2087/2087), done.
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at f3260cb14 regen hints for UInt128; expose that UInt128 hasEq
+
+Pulling hacl-star
+Cloning into 'hacl-star'...
+Checking out files:  11% (586/5263)   Checking out files:  12% (632/5263)   Checking out files:  13% (685/5263)   Checking out files:  14% (737/5263)   Checking out files:  15% (790/5263)   Checking out files:  16% (843/5263)   Checking out files:  17% (895/5263)   Checking out files:  18% (948/5263)   Checking out files:  19% (1000/5263)   Checking out files:  20% (1053/5263)   Checking out files:  21% (1106/5263)   Checking out files:  21% (1156/5263)   Checking out files:  22% (1158/5263)   Checking out files:  23% (1211/5263)   Checking out files:  24% (1264/5263)   Checking out files:  25% (1316/5263)   Checking out files:  26% (1369/5263)   Checking out files:  27% (1422/5263)   Checking out files:  28% (1474/5263)   Checking out files:  29% (1527/5263)   Checking out files:  30% (1579/5263)   Checking out files:  31% (1632/5263)   Checking out files:  32% (1685/5263)   Checking out files:  33% (1737/5263)   Checking out files:  34% (1790/5263)   Checking out files:  34% (1831/5263)   Checking out files:  35% (1843/5263)   Checking out files:  36% (1895/5263)   Checking out files:  37% (1948/5263)   Checking out files:  38% (2000/5263)   Checking out files:  39% (2053/5263)   Checking out files:  40% (2106/5263)   Checking out files:  41% (2158/5263)   Checking out files:  42% (2211/5263)   Checking out files:  43% (2264/5263)   Checking out files:  44% (2316/5263)   Checking out files:  45% (2369/5263)   Checking out files:  45% (2389/5263)   Checking out files:  46% (2421/5263)   Checking out files:  47% (2474/5263)   Checking out files:  48% (2527/5263)   Checking out files:  49% (2579/5263)   Checking out files:  50% (2632/5263)   Checking out files:  51% (2685/5263)   Checking out files:  52% (2737/5263)   Checking out files:  53% (2790/5263)   Checking out files:  54% (2843/5263)   Checking out files:  55% (2895/5263)   Checking out files:  56% (2948/5263)   Checking out files:  57% (3000/5263)   Checking out files:  57% (3010/5263)   Checking out files:  58% (3053/5263)   Checking out files:  59% (3106/5263)   Checking out files:  60% (3158/5263)   Checking out files:  61% (3211/5263)   Checking out files:  62% (3264/5263)   Checking out files:  63% (3316/5263)   Checking out files:  64% (3369/5263)   Checking out files:  65% (3421/5263)   Checking out files:  66% (3474/5263)   Checking out files:  67% (3527/5263)   Checking out files:  68% (3579/5263)   Checking out files:  69% (3632/5263)   Checking out files:  70% (3685/5263)   Checking out files:  70% (3698/5263)   Checking out files:  71% (3737/5263)   Checking out files:  72% (3790/5263)   Checking out files:  73% (3842/5263)   Checking out files:  74% (3895/5263)   Checking out files:  75% (3948/5263)   Checking out files:  76% (4000/5263)   Checking out files:  77% (4053/5263)   Checking out files:  78% (4106/5263)   Checking out files:  79% (4158/5263)   Checking out files:  80% (4211/5263)   Checking out files:  81% (4264/5263)   Checking out files:  82% (4316/5263)   Checking out files:  83% (4369/5263)   Checking out files:  83% (4377/5263)   Checking out files:  84% (4421/5263)   Checking out files:  85% (4474/5263)   Checking out files:  86% (4527/5263)   Checking out files:  87% (4579/5263)   Checking out files:  88% (4632/5263)   Checking out files:  89% (4685/5263)   Checking out files:  90% (4737/5263)   Checking out files:  91% (4790/5263)   Checking out files:  92% (4842/5263)   Checking out files:  93% (4895/5263)   Checking out files:  94% (4948/5263)   Checking out files:  95% (5000/5263)   Checking out files:  95% (5043/5263)   Checking out files:  96% (5053/5263)   Checking out files:  97% (5106/5263)   Checking out files:  98% (5158/5263)   Checking out files:  99% (5211/5263)   Checking out files: 100% (5263/5263)   Checking out files: 100% (5263/5263), done.
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+error: no such commit d7179212736c0653155035b2ca67461e6458cccc
+usage: git branch [<options>] [-r | -a] [--merged | --no-merged]
+or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+or: git branch [<options>] [-r | -a] [--points-at]
+
+Generic options
+-v, --verbose         show hash and subject, give twice for upstream branch
+-q, --quiet           suppress informational messages
+-t, --track           set up tracking mode (see git-pull(1))
+--set-upstream        change upstream info
+-u, --set-upstream-to <upstream>
+change the upstream info
+--unset-upstream      Unset the upstream info
+--color[=<when>]      use colored output
+-r, --remotes         act on remote-tracking branches
+--contains <commit>   print only branches that contain the commit
+--abbrev[=<n>]        use <n> digits to display SHA-1s
+
+Specific git-branch actions:
+-a, --all             list both remote-tracking and local branches
+-d, --delete          delete fully merged branch
+-D                    delete branch (even if not merged)
+-m, --move            move/rename a branch and its reflog
+ERROR: in repository hacl-star, the hash d7179212736c0653155035b2ca67461e6458cccc claims to belong to branch master, but master pulls from origin/master which does not contain d7179212736c0653155035b2ca67461e6458cccc
+-M                    move/rename a branch, even if target exists
+--list                list branch names
+-l, --create-reflog   create the branch's reflog
+--edit-description    edit the description for the branch
+-f, --force           force creation, move/rename, deletion
+--merged <commit>     print only branches that are merged
+--no-merged <commit>  print only branches that are not merged
+--column[=<style>]    list branches in columns
+--sort <key>          field name to sort on
+--points-at <object>  print only branches of the object
+-i, --ignore-case     sorting and filtering are case insensitive
+
