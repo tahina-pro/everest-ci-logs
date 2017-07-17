@@ -1,0 +1,27 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent1/_work/11/s
+About to run: docker_from_scratch
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: Everest-Nightly-Windows
+Login Succeeded
+WARNING: Error loading config file:C:\Users\everbld\.docker\config.json - open C:\Users\everbld\.docker\config.json: The process cannot access the file because it is being used by another process.
+Sending build context to Docker daemon  2.048kB
+Step 1/4 : FROM projecteverest/everest-chomolungma
+latest: Pulling from projecteverest/everest-chomolungma
+Digest: sha256:34383389ad4ce40c45e649a57a1dee12b61f212f6ec1769184005cfa09e4551e
+Status: Image is up to date for projecteverest/everest-chomolungma:latest
+---> 31df799bd1d7
+Step 2/4 : ARG PARALLEL_OPT
+---> Running in b376b56ca023
+---> 6dce34f9df59
+Removing intermediate container b376b56ca023
+Step 3/4 : RUN ./everest --yes check pull $PARALLEL_OPT make test verify
+---> Running in 0247b518d7bf
+# Switching to the everest directory ... now in /home/everest/everest
+
+Checking environment
+... which found
+Warning: git client not configured with the proper ssh credentials
+Hint: check which git you're running, and make sure you have the same SSH key in ~/.ssh and github.com
+[91m./everest: line 367: cannot create temp file for here-document: No space left on device
+The command '/bin/bash --login -c ./everest --yes check pull $PARALLEL_OPT make test verify' returned a non-zero code: 1
