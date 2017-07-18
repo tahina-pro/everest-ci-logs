@@ -250,3 +250,11 @@ WARNING: (95768,34): pattern does not contain all quantified variables.
 WARNING: (95872,33): pattern does not contain all quantified variables.
 WARNING: (96052,31): pattern does not contain all quantified variables.
 WARNING: (96336,46): pattern does not contain all quantified variables.
+.\FStar.Math.Lemmas.fst(287,0-294,33): (Error) Killed: Unknown assertion failed
+Verified module: FStar.Math.Lemmas (5814351 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:16: FStar.Math.Lemmas.fst-ver] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:280: ulib] Error 2
+make[1]: Target 'uregressions' not remade because of errors.
+make: *** [Makefile:260: utest] Error 2
