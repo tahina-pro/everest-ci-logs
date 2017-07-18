@@ -1,0 +1,103 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent1/_work/11/s
+About to run: docker_from_scratch
+BUILD_SOURCEBRANCHNAME: master
+BUILD_DEFINITIONNAME: Everest-Nightly-Windows
+Login Succeeded
+WARNING: Error loading config file:C:\Users\everbld\.docker\config.json - open C:\Users\everbld\.docker\config.json: The process cannot access the file because it is being used by another process.
+Sending build context to Docker daemon  2.048kB
+Step 1/4 : FROM projecteverest/everest-chomolungma
+latest: Pulling from projecteverest/everest-chomolungma
+75c416ea735c: Already exists
+c6ff40b6d658: Already exists
+a7050fc1f338: Already exists
+f0ffb5cf6ba9: Already exists
+be232718519c: Already exists
+e762d47eb263: Pulling fs layer
+db3a62f1712b: Pulling fs layer
+94046b3bf5ef: Pulling fs layer
+2f5070b9c04d: Pulling fs layer
+f087018bc260: Pulling fs layer
+af821837f607: Pulling fs layer
+146fdd2c4d56: Pulling fs layer
+bf923425e8b6: Pulling fs layer
+1f5db7ad98ec: Pulling fs layer
+fc4f12471382: Pulling fs layer
+6689571c5380: Pulling fs layer
+cb5c2eeaad3f: Pulling fs layer
+a79ac4cd180c: Pulling fs layer
+c8c83c83b885: Pulling fs layer
+b9193b9bd754: Pulling fs layer
+11094162bd04: Pulling fs layer
+4c9515aec52f: Pulling fs layer
+41c01f5ed008: Pulling fs layer
+af821837f607: Waiting
+6bcbd5cd583e: Pulling fs layer
+f978859ae5df: Pulling fs layer
+146fdd2c4d56: Waiting
+a5fb0d12e7f5: Pulling fs layer
+5a70f58f39c3: Pulling fs layer
+6689571c5380: Waiting
+2f5070b9c04d: Waiting
+cb5c2eeaad3f: Waiting
+6bcbd5cd583e: Waiting
+41c01f5ed008: Waiting
+a79ac4cd180c: Waiting
+f087018bc260: Waiting
+11094162bd04: Waiting
+a5fb0d12e7f5: Waiting
+4c9515aec52f: Waiting
+b9193b9bd754: Waiting
+5a70f58f39c3: Waiting
+1f5db7ad98ec: Waiting
+f978859ae5df: Waiting
+94046b3bf5ef: Download complete
+e762d47eb263: Download complete
+db3a62f1712b: Verifying Checksum
+db3a62f1712b: Download complete
+e762d47eb263: Pull complete
+db3a62f1712b: Pull complete
+94046b3bf5ef: Pull complete
+af821837f607: Verifying Checksum
+af821837f607: Download complete
+146fdd2c4d56: Download complete
+f087018bc260: Verifying Checksum
+f087018bc260: Download complete
+2f5070b9c04d: Verifying Checksum
+2f5070b9c04d: Download complete
+1f5db7ad98ec: Download complete
+fc4f12471382: Download complete
+2f5070b9c04d: Pull complete
+cb5c2eeaad3f: Verifying Checksum
+cb5c2eeaad3f: Download complete
+f087018bc260: Pull complete
+af821837f607: Pull complete
+146fdd2c4d56: Pull complete
+6689571c5380: Verifying Checksum
+6689571c5380: Download complete
+bf923425e8b6: Verifying Checksum
+bf923425e8b6: Download complete
+b9193b9bd754: Verifying Checksum
+b9193b9bd754: Download complete
+11094162bd04: Verifying Checksum
+11094162bd04: Download complete
+4c9515aec52f: Verifying Checksum
+4c9515aec52f: Download complete
+41c01f5ed008: Download complete
+6bcbd5cd583e: Verifying Checksum
+6bcbd5cd583e: Download complete
+bf923425e8b6: Pull complete
+c8c83c83b885: Verifying Checksum
+c8c83c83b885: Download complete
+1f5db7ad98ec: Pull complete
+fc4f12471382: Pull complete
+f978859ae5df: Verifying Checksum
+f978859ae5df: Download complete
+a5fb0d12e7f5: Download complete
+6689571c5380: Pull complete
+cb5c2eeaad3f: Pull complete
+5a70f58f39c3: Verifying Checksum
+5a70f58f39c3: Download complete
+a79ac4cd180c: Verifying Checksum
+a79ac4cd180c: Download complete
+failed to register layer: Error processing tar file(exit status 1): write /home/everest/everest/z3-4.5.1.1f29cebd4df6-x64-ubuntu-14.04/bin/libz3.a: no space left on device
