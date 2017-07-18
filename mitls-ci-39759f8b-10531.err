@@ -1,0 +1,189 @@
+From https://github.com/FStarLang/FStar
+f0067ceb4..704c7a0f1  master                 -> origin/master
+ef6871f09..dc0dd1be8  aseem_monotonicity     -> origin/aseem_monotonicity
+f0067ceb4..704c7a0f1  cwinter_query_stats    -> origin/cwinter_query_stats
+* [new branch]          guido_extraction       -> origin/guido_extraction
+bb4de48dd..8fa669a97  guido_tactics          -> origin/guido_tactics
+* [new branch]          kyod_fix_1106          -> origin/kyod_fix_1106
+24c34527a..08dd6d58b  kyod_tmp0              -> origin/kyod_tmp0
+0e7fa6383..3ebfb163d  monal_private          -> origin/monal_private
+d7e110366..4e7094688  nickgian_bitvector     -> origin/nickgian_bitvector
+94ca76569..47eaca7aa  nik_private            -> origin/nik_private
+f3260cb14..d71792127  protz_debugging_misery -> origin/protz_debugging_misery
+* [new branch]          tchajed_fix-u128-shift -> origin/tchajed_fix-u128-shift
++ 6a289aaed...4c65eb301 tchajed_kv_parsing     -> origin/tchajed_kv_parsing  (forced update)
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+From https://github.com/FStarLang/kremlin
+92c51c9..85e67b8  master     -> origin/master
+From https://github.com/mitls/hacl-star
+1c9a0f4a..4b683773  master            -> origin/master
+* [new branch]        c_record_aead     -> origin/c_record_aead
+dc913f5d..b64cfd6b  cwinter_debug     -> origin/cwinter_debug
+2963f260..5996c4ab  migrating_sts_bis -> origin/migrating_sts_bis
+File "CoreCrypto.ml", line 526, characters 24-144:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+ECC_X448
+Warning 6: in the definition of buf, after the definition of m0, in the last element of the sequence, in top-level declaration Crypto.Symmetric.Bytes.random_bytes, in file Crypto_Symmetric_Bytes: stack newbuf 0uint8 @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k1, in top-level declaration Crypto.Symmetric.UF1CMA.akey_gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of sk, in top-level declaration Crypto.Symmetric.UF1CMA.akey_coerce, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of k1, after the definition of len1, in top-level declaration Crypto.Symmetric.UF1CMA.gen, in file Crypto_Symmetric_UF1CMA: eternal newbuf 0uint8 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in top-level declaration Crypto.Plain.create, in file Crypto_Plain: stack newbuf @1 @0 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in the last element of the sequence, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @1 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of key, after the definition of keystate, in the last element of the sequence, in top-level declaration Crypto.Symmetric.PRF.gen, in file Crypto_Symmetric_PRF: stack newbuf 0uint8 Crypto.Symmetric.PRF.keylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keystate, after the definition of mac_rgn, in top-level declaration Crypto.Symmetric.PRF.coerce, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.PRF.statelen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of h0, in the last element of the sequence, after the definition of macId, in top-level declaration Crypto.Symmetric.PRF.prf_mac, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.keylen @5 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 6: in the definition of keyBuffer, after the definition of x, in top-level declaration Crypto.Symmetric.PRF.prf_sk0, in file Crypto_Symmetric_PRF: eternal newbuf 0uint8 Crypto.Symmetric.UF1CMA.skeylen @2 is a non-constant size, stack-allocated array; this is not supported by CompCert
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.uint128_to_uint8 (going into Crypto_Symmetric_Bytes) calls FStar.Int.Cast.Full.uint128_to_uint64 (going into FStar) -- removing the static qualifier from FStar.Int.Cast.Full.uint128_to_uint64
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.little_endian (going into Crypto_Symmetric_Bytes) calls FStar.Endianness.little_endian (going into FStar) -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.big_endian (going into Crypto_Symmetric_Bytes) calls FStar.Endianness.big_endian (going into FStar) -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.uint8_to_uint128 (going into Crypto_Symmetric_Bytes) calls FStar.Int.Cast.Full.uint64_to_uint128 (going into FStar) -- removing the static qualifier from FStar.Int.Cast.Full.uint64_to_uint128
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.load_uint128 (going into Crypto_Symmetric_Bytes) calls FStar.UInt128.add (going into FStar) -- removing the static qualifier from FStar.UInt128.add
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.load_uint128 (going into Crypto_Symmetric_Bytes) calls FStar.UInt128.shift_left (going into FStar) -- removing the static qualifier from FStar.UInt128.shift_left
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.little_bytes (going into Crypto_Symmetric_Bytes) calls FStar.Endianness.little_bytes (going into FStar) -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Crypto.Symmetric.Bytes.store_uint128 (going into Crypto_Symmetric_Bytes) calls FStar.UInt128.shift_right (going into FStar) -- removing the static qualifier from FStar.UInt128.shift_right
+Warning 7: : After inlining, Hacl.Bignum.Modulo.carry_top_wide (going into Hacl) calls FStar.UInt128.logand (going into FStar) -- removing the static qualifier from FStar.UInt128.logand
+Warning 7: : After inlining, Hacl.Bignum.Fproduct.sum_scalar_multiplication_ (going into Hacl) calls FStar.UInt128.add_mod (going into FStar) -- removing the static qualifier from FStar.UInt128.add_mod
+Warning 7: : After inlining, Hacl.Bignum.Fproduct.sum_scalar_multiplication_ (going into Hacl) calls FStar.UInt128.mul_wide (going into FStar) -- removing the static qualifier from FStar.UInt128.mul_wide
+Warning 7: : After inlining, Hacl.Impl.Poly1305_64.poly1305_encode_r (going into Hacl) calls FStar.UInt128.logor (going into FStar) -- removing the static qualifier from FStar.UInt128.logor
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.setup (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.setup
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.setup (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.setup has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.setup from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.copy_state (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.copy_state
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.copy_state (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.copy_state has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.copy_state from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.rounds (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.rounds
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.rounds (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.rounds has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.rounds from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.sum_states (going into Hacl) -- removing the static qualifier from Hacl.Impl.Chacha20.sum_states
+Warning 8: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Impl.Chacha20.sum_states (going into Hacl). This is a call across translation units but Hacl.Impl.Chacha20.sum_states has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Chacha20.sum_states from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.Cipher.compute (going into Crypto_Symmetric_Cipher) calls Hacl.Lib.LoadStore32.uint32s_to_le_bytes (going into Hacl) -- removing the static qualifier from Hacl.Lib.LoadStore32.uint32s_to_le_bytes
+Warning 7: : After inlining, Crypto.Symmetric.GF128.gf128_add (going into Crypto_Symmetric_GF128) calls FStar.UInt128.logxor (going into FStar) -- removing the static qualifier from FStar.UInt128.logxor
+Warning 7: : After inlining, Crypto.Symmetric.GF128.gf128_shift_reduce (going into Crypto_Symmetric_GF128) calls FStar.UInt128.eq_mask (going into FStar) -- removing the static qualifier from FStar.UInt128.eq_mask
+Warning 7: : After inlining, Crypto.Symmetric.MAC.rcreate (going into Crypto_Symmetric_MAC) calls FStar.UInt128.uint64_to_uint128 (going into FStar) -- removing the static qualifier from FStar.UInt128.uint64_to_uint128
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update (going into Crypto_Symmetric_MAC) calls Hacl.Impl.Poly1305_64.poly1305_update (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_update
+Warning 8: : After inlining, Crypto.Symmetric.MAC.update (going into Crypto_Symmetric_MAC) calls Hacl.Impl.Poly1305_64.poly1305_update (going into Hacl). This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_update has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_update from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.MAC.update (going into Crypto_Symmetric_MAC) calls Hacl.Impl.Poly1305_64.mk_state (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.mk_state
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls FStar.Monotonic.RRef.m_recall (going into FStar) -- removing the static qualifier from FStar.Monotonic.RRef.m_recall
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.poly1305_process_last_block (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_process_last_block
+Warning 8: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.poly1305_process_last_block (going into Hacl). This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_process_last_block has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_process_last_block from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.poly1305_last_pass (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.poly1305_last_pass
+Warning 7: : After inlining, Crypto.Symmetric.UF1CMA.verify (going into Crypto_Symmetric_UF1CMA) calls Hacl.Impl.Poly1305_64.State.__proj__MkState__item__h (going into Hacl) -- removing the static qualifier from Hacl.Impl.Poly1305_64.State.__proj__MkState__item__h
+Warning 7: : After inlining, Crypto.AEAD.Invariant.remaining_len_ok (going into Crypto_AEAD_Invariant) calls FStar.Mul.op_Star (going into FStar) -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt (going into Crypto_AEAD_Decrypt) calls Crypto.AEAD.Encoding.add_bytes (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.add_bytes
+Warning 7: : After inlining, Crypto.AEAD.Decrypt.decrypt (going into Crypto_AEAD_Decrypt) calls Crypto.AEAD.Encoding.store_lengths (going into Crypto_AEAD_Encoding) -- removing the static qualifier from Crypto.AEAD.Encoding.store_lengths
+Warning 7: : After inlining, Crypto.AEAD.Encrypt.encrypt (going into Crypto_AEAD_Encrypt) calls Crypto.Symmetric.UF1CMA.__proj__Acc__item__a (going into Crypto_Symmetric_UF1CMA) -- removing the static qualifier from Crypto.Symmetric.UF1CMA.__proj__Acc__item__a
+Warning 9: : Some globals did not compile to C values and must be initialized in the before starting main(). You did not provide a main function, so users of your library MUST MAKE SURE they call kremlinit_globals(); (see kremlinit.c)
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Tactics.ml", line 353, characters 45-46:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 40-41:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 42-43:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 3, characters 64-65:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 37-38:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 62-63:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Tactics.ml", line 353, characters 45-46:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 40-41:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 42-43:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 3, characters 64-65:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 37-38:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 62-63:
+Warning 20: this argument will not be used by the function.
+Extracted.mk:94: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:196: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:97: warning: overriding recipe for target 'mitls.exe'
+Makefile:199: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:119: warning: overriding recipe for target 'test'
+Makefile:208: warning: ignoring old recipe for target 'test'
+Extracted.mk:188: warning: overriding recipe for target 'cmitls.o'
+Makefile:202: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:190: warning: overriding recipe for target 'cmitls.exe'
+Makefile:204: warning: ignoring old recipe for target 'cmitls.exe'
+Extracted.mk:94: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:196: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:97: warning: overriding recipe for target 'mitls.exe'
+Makefile:199: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:119: warning: overriding recipe for target 'test'
+Makefile:208: warning: ignoring old recipe for target 'test'
+Extracted.mk:188: warning: overriding recipe for target 'cmitls.o'
+Makefile:202: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:190: warning: overriding recipe for target 'cmitls.exe'
+Makefile:204: warning: ignoring old recipe for target 'cmitls.exe'
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+ffi.c:1:0: warning: -fPIC ignored for target (all code is position independent)
+#include <stdio.h>
+^
+Extracted.mk:94: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:196: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:97: warning: overriding recipe for target 'mitls.exe'
+Makefile:199: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:119: warning: overriding recipe for target 'test'
+Makefile:208: warning: ignoring old recipe for target 'test'
+Extracted.mk:188: warning: overriding recipe for target 'cmitls.o'
+Makefile:202: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:190: warning: overriding recipe for target 'cmitls.exe'
+Makefile:204: warning: ignoring old recipe for target 'cmitls.exe'
+Extracted.mk:94: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:196: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:97: warning: overriding recipe for target 'mitls.exe'
+Makefile:199: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:119: warning: overriding recipe for target 'test'
+Makefile:208: warning: ignoring old recipe for target 'test'
+Extracted.mk:188: warning: overriding recipe for target 'cmitls.o'
+Makefile:202: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:190: warning: overriding recipe for target 'cmitls.exe'
+Makefile:204: warning: ignoring old recipe for target 'cmitls.exe'
+Extracted.mk:94: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:196: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:97: warning: overriding recipe for target 'mitls.exe'
+Makefile:199: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:119: warning: overriding recipe for target 'test'
+Makefile:208: warning: ignoring old recipe for target 'test'
+Extracted.mk:188: warning: overriding recipe for target 'cmitls.o'
+Makefile:202: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:190: warning: overriding recipe for target 'cmitls.exe'
+Makefile:204: warning: ignoring old recipe for target 'cmitls.exe'
+Extracted.mk:94: warning: overriding recipe for target 'mitls.cmxa'
+Makefile:196: warning: ignoring old recipe for target 'mitls.cmxa'
+Extracted.mk:97: warning: overriding recipe for target 'mitls.exe'
+Makefile:199: warning: ignoring old recipe for target 'mitls.exe'
+Extracted.mk:119: warning: overriding recipe for target 'test'
+Makefile:208: warning: ignoring old recipe for target 'test'
+Extracted.mk:188: warning: overriding recipe for target 'cmitls.o'
+Makefile:202: warning: ignoring old recipe for target 'cmitls.o'
+Extracted.mk:190: warning: overriding recipe for target 'cmitls.exe'
+Makefile:204: warning: ignoring old recipe for target 'cmitls.exe'
+.\Nonce.fst(49,0-50,55): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Nonce.fst(134,0-134,40): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Hashing.CRF.fst(29,8-29,80): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IdNonce.fst(20,0-21,60): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(108,0-108,44): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CommonDH.fst(112,9-116,7): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(106,0-106,67): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Signature.fst(171,0-171,32): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(508,0-508,50): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TLSInfo.fst(512,0-515,10): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MasterSecret.fst(34,0-35,75): (Warning) Top-level let-bindings must be total; this term may have effects
+.\ConnInvariant.fst(93,0-94,64): (Warning) Top-level let-bindings must be total; this term may have effects
