@@ -1,0 +1,301 @@
+Cloning into 'vale'...
+Already on 'master'
+Cloning into 'mitls-fstar'...
+Already on 'master'
+Cloning into 'FStar'...
+Checking out files:  49% (986/1989)   Checking out files:  50% (995/1989)   Checking out files:  51% (1015/1989)   Checking out files:  52% (1035/1989)   Checking out files:  53% (1055/1989)   Checking out files:  54% (1075/1989)   Checking out files:  55% (1094/1989)   Checking out files:  56% (1114/1989)   Checking out files:  57% (1134/1989)   Checking out files:  58% (1154/1989)   Checking out files:  59% (1174/1989)   Checking out files:  60% (1194/1989)   Checking out files:  61% (1214/1989)   Checking out files:  62% (1234/1989)   Checking out files:  63% (1254/1989)   Checking out files:  64% (1273/1989)   Checking out files:  65% (1293/1989)   Checking out files:  66% (1313/1989)   Checking out files:  67% (1333/1989)   Checking out files:  68% (1353/1989)   Checking out files:  69% (1373/1989)   Checking out files:  70% (1393/1989)   Checking out files:  71% (1413/1989)   Checking out files:  72% (1433/1989)   Checking out files:  73% (1452/1989)   Checking out files:  74% (1472/1989)   Checking out files:  75% (1492/1989)   Checking out files:  76% (1512/1989)   Checking out files:  77% (1532/1989)   Checking out files:  78% (1552/1989)   Checking out files:  79% (1572/1989)   Checking out files:  80% (1592/1989)   Checking out files:  81% (1612/1989)   Checking out files:  82% (1631/1989)   Checking out files:  83% (1651/1989)   Checking out files:  84% (1671/1989)   Checking out files:  85% (1691/1989)   Checking out files:  86% (1711/1989)   Checking out files:  87% (1731/1989)   Checking out files:  88% (1751/1989)   Checking out files:  89% (1771/1989)   Checking out files:  90% (1791/1989)   Checking out files:  91% (1810/1989)   Checking out files:  92% (1830/1989)   Checking out files:  93% (1850/1989)   Checking out files:  94% (1870/1989)   Checking out files:  95% (1890/1989)   Checking out files:  95% (1895/1989)   Checking out files:  96% (1910/1989)   Checking out files:  97% (1930/1989)   Checking out files:  98% (1950/1989)   Checking out files:  99% (1970/1989)   Checking out files: 100% (1989/1989)   Checking out files: 100% (1989/1989), done.
+Already on 'master'
+Cloning into 'hacl-star'...
+Already on 'master'
+Cloning into 'kremlin'...
+Already on 'master'
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning: Spec.Salsa20.test_column_round2 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+There an issue with your bundle.
+You specified: -bundle Poly1305_64=...
+Here's the issue: there is no module named Poly1305_64.
+Suggestion #1: if the file does exist, pass it to KreMLin.
+Suggestion #2: if it doesn't, skip the Poly1305_64= part and write -bundle ...
+Fatal error: exception Warnings.Fatal("Unrecoverable error")
+Raised at file "src/Warnings.ml", line 47, characters 10-39
+Called from file "src/Bundles.ml", line 103, characters 8-423
+Called from file "src/Bundles.ml", line 133, characters 23-53
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/Bundles.ml", line 132, characters 22-191
+Called from file "src/Kremlin.ml", line 238, characters 14-40
+make[1]: *** [Makefile:122: Poly1305_64.c] Error 2
+make[1]: *** Waiting for unfinished jobs....
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning: Spec.Poly1305.test, Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.expected, Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.k and Spec.Poly1305.msg mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Poly1305.msg mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_nonce, Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_key, Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_ciphertext, Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.test_plaintext and Spec.Chacha20.constants mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20.constants mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 4: in top-level declaration Spec.Chacha20Poly1305.test, in file Spec_Chacha20Poly1305: Malformed input:
+Type annotation is not an lid but any
+Dropping Spec.Chacha20Poly1305.test (at checking time)
+
+Warning: Spec.Chacha20Poly1305.xmac, Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.xcipher, Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.aad, Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.p, Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.n and Spec.Chacha20Poly1305.k mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Chacha20Poly1305.k mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Poly1305.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 8: : After inlining, Hacl.Bignum.Fmul.shift_reduce calls Hacl.Bignum.Fproduct.shift. This is a call across translation units but Hacl.Bignum.Fproduct.shift has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.shift from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Bignum.Fmul.shift_reduce calls Hacl.Bignum.Modulo.reduce. This is a call across translation units but Hacl.Bignum.Modulo.reduce has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.reduce from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Bignum.Fmul.mul_shift_reduce_ calls Hacl.Bignum.Fproduct.sum_scalar_multiplication_. This is a call across translation units but Hacl.Bignum.Fproduct.sum_scalar_multiplication_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.sum_scalar_multiplication_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.carry_wide_. This is a call across translation units but Hacl.Bignum.Fproduct.carry_wide_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_wide_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Modulo.carry_top_wide. This is a call across translation units but Hacl.Bignum.Modulo.carry_top_wide has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.carry_top_wide from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.copy_from_wide_. This is a call across translation units but Hacl.Bignum.Fproduct.copy_from_wide_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.copy_from_wide_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Bignum.Fmul.fmul_ calls Hacl.Bignum.Fproduct.carry_0_to_1. This is a call across translation units but Hacl.Bignum.Fproduct.carry_0_to_1 has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_0_to_1 from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Bignum.AddAndMultiply.add_and_multiply calls Hacl.Bignum.Fsum.fsum_. This is a call across translation units but Hacl.Bignum.Fsum.fsum_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fsum.fsum_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Bignum.AddAndMultiply.add_and_multiply calls Hacl.Bignum.Fmul.fmul. This is a call across translation units but Hacl.Bignum.Fmul.fmul has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fmul.fmul from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.poly1305_update calls Hacl.Bignum.AddAndMultiply.add_and_multiply. This is a call across translation units but Hacl.Bignum.AddAndMultiply.add_and_multiply has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.AddAndMultiply.add_and_multiply from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.carry_last_unrolled calls Hacl.Bignum.Modulo.carry_top. This is a call across translation units but Hacl.Bignum.Modulo.carry_top has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Modulo.carry_top from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Impl.Poly1305_64.poly1305_last_pass calls Hacl.Bignum.Fproduct.carry_limb_. This is a call across translation units but Hacl.Bignum.Fproduct.carry_limb_ has a C "inline" qualifier. The C standard allows removing Hacl.Bignum.Fproduct.carry_limb_ from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Standalone.Poly1305_64.poly1305_blocks calls Hacl.Impl.Poly1305_64.poly1305_update. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_update has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_update from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+Warning 8: : After inlining, Hacl.Standalone.Poly1305_64.poly1305_complete calls Hacl.Impl.Poly1305_64.poly1305_process_last_block. This is a call across translation units but Hacl.Impl.Poly1305_64.poly1305_process_last_block has a C "inline" qualifier. The C standard allows removing Hacl.Impl.Poly1305_64.poly1305_process_last_block from its translation unit (see C11 6.7.3 §5), and CompCert will do it. 
+make: *** [Makefile:6: poly1305-c] Error 2
+make: *** Waiting for unfinished jobs....
+Warning: Spec.Curve25519.expected2, Spec.Curve25519.expected1, Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.expected1, Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.input2, Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.input1, Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.scalar2 and Spec.Curve25519.scalar1 mention Prims.list meaning that they cannot be type-checked by KreMLin
+Warning: Spec.Curve25519.scalar1 mentions Prims.list meaning that they cannot be type-checked by KreMLin
+Warning 7: : After inlining, Spec.Lib.uint32_from_le calls FStar.Endianness.little_endian -- removing the static qualifier from FStar.Endianness.little_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_le calls FStar.Endianness.little_bytes -- removing the static qualifier from FStar.Endianness.little_bytes
+Warning 7: : After inlining, Spec.Lib.uint32_from_be calls FStar.Endianness.big_endian -- removing the static qualifier from FStar.Endianness.big_endian
+Warning 7: : After inlining, Spec.Lib.uint32_to_be calls FStar.Endianness.big_bytes -- removing the static qualifier from FStar.Endianness.big_bytes
+Warning 7: : After inlining, Spec.Curve25519.fmul calls FStar.Mul.op_Star -- removing the static qualifier from FStar.Mul.op_Star
+Warning 7: : After inlining, Hacl.Test.X25519.main calls Hacl.EC.crypto_scalarmult -- removing the static qualifier from Hacl.EC.crypto_scalarmult
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+parallel (-j) builds may not work reliably with open Python files.
+File "C:\Binaries\scons\Scripts\scons.py", line 199, in <module>
+scons: *** [obj\crypto\hashing\sha256_main_i.c] Error 309
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+File "CoreCrypto.ml", line 526, characters 24-144:
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a value that is not matched:
+ECC_X448
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Cloning into '/cygdrive/c/Build/Agent2/_work/8/s/FStar/ucontrib/CoreCrypto/ml/openssl'...
+Cloning into '/cygdrive/c/Build/Agent2/_work/8/s/FStar/ucontrib/CoreCrypto/ml/openssl/boringssl'...
+Cloning into '/cygdrive/c/Build/Agent2/_work/8/s/FStar/ucontrib/CoreCrypto/ml/openssl/krb5'...
+Cloning into '/cygdrive/c/Build/Agent2/_work/8/s/FStar/ucontrib/CoreCrypto/ml/openssl/pyca-cryptography'...
+crypto/asn1/x_int64.c: In function 'uint64_print':
+crypto/asn1/x_int64.c:105:32: warning: unknown conversion type character 'j' in format [-Wformat=]
+return BIO_printf(out, "%jd\n", **(int64_t **)pval);
+^
+crypto/asn1/x_int64.c:105:32: warning: too many arguments for format [-Wformat-extra-args]
+crypto/asn1/x_int64.c:106:28: warning: unknown conversion type character 'j' in format [-Wformat=]
+return BIO_printf(out, "%ju\n", **(uint64_t **)pval);
+^
+crypto/asn1/x_int64.c:106:28: warning: too many arguments for format [-Wformat-extra-args]
+crypto/bio/b_sock.c: In function 'BIO_get_accept_socket':
+crypto/bio/b_sock.c:214:13: warning: overflow in implicit constant conversion [-Woverflow]
+int s = INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:219:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:222:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:229:13: warning: overflow in implicit constant conversion [-Woverflow]
+s = INVALID_SOCKET;
+^
+crypto/bio/b_sock.c:236:13: warning: overflow in implicit constant conversion [-Woverflow]
+s = INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c: In function 'BIO_socket':
+crypto/bio/b_sock2.c:45:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c:51:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c: In function 'BIO_connect':
+crypto/bio/b_sock2.c:90:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:217:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:98:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:217:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c: In function 'BIO_listen':
+crypto/bio/b_sock2.c:164:47: warning: passing argument 4 of 'getsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (getsockopt(sock, SOL_SOCKET, SO_TYPE, &socktype, &socktype_len) != 0
+^
+In file included from ./e_os.h:217:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:980:34: note: expected 'char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI getsockopt(SOCKET s,int level,int optname,char *optval,int *optlen);
+^
+crypto/bio/b_sock2.c:187:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:217:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:195:56: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:217:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c:204:57: warning: passing argument 4 of 'setsockopt' from incompatible pointer type [-Wincompatible-pointer-types]
+if (setsockopt(sock, IPPROTO_IPV6, IPV6_V6ONLY, &on, sizeof(on)) != 0) {
+^
+In file included from ./e_os.h:217:0,
+from crypto/bio/bio_lcl.h:11,
+from crypto/bio/b_sock2.c:14:
+/usr/x86_64-w64-mingw32/sys-root/mingw/include/winsock2.h:999:34: note: expected 'const char *' but argument is of type 'int *'
+WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+^
+crypto/bio/b_sock2.c: In function 'BIO_accept_ex':
+crypto/bio/b_sock2.c:249:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+crypto/bio/b_sock2.c:254:16: warning: overflow in implicit constant conversion [-Woverflow]
+return INVALID_SOCKET;
+^
+In file included from crypto/bn/bn_print.c:15:0:
+crypto/bn/bn_print.c: In function 'BN_bn2dec':
+crypto/bn/bn_lcl.h:94:27: warning: unknown conversion type character 'l' in format [-Wformat=]
+#  define BN_DEC_FMT1     "%llu"
+^
+crypto/bn/bn_print.c:106:37: note: in expansion of macro 'BN_DEC_FMT1'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
+^
+crypto/bn/bn_lcl.h:94:27: warning: too many arguments for format [-Wformat-extra-args]
+#  define BN_DEC_FMT1     "%llu"
+^
+crypto/bn/bn_print.c:106:37: note: in expansion of macro 'BN_DEC_FMT1'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT1, *lp);
+^
+crypto/bn/bn_lcl.h:95:27: warning: unknown conversion type character 'l' in format [-Wformat=]
+#  define BN_DEC_FMT2     "%019llu"
+^
+crypto/bn/bn_print.c:111:41: note: in expansion of macro 'BN_DEC_FMT2'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
+^
+crypto/bn/bn_lcl.h:95:27: warning: too many arguments for format [-Wformat-extra-args]
+#  define BN_DEC_FMT2     "%019llu"
+^
+crypto/bn/bn_print.c:111:41: note: in expansion of macro 'BN_DEC_FMT2'
+BIO_snprintf(p, BUF_REMAIN, BN_DEC_FMT2, *lp);
+^

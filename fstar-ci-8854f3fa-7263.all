@@ -1,0 +1,214 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent/_work/1/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: darrenge_binarybuild
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FsLexYacc 6.1.0'.
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+make -C VS install-packages
+make[2]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+[ -d packages ] || make update-nuget
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src/VS'
+"C:/Program Files (x86)/MSBuild/14.0/bin/amd64/"/MSBuild.exe /verbosity:minimal /p:Configuration=Release VS/FStar.sln
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+basic -> C:\Build\Agent\_work\1\s\bin\basic.dll
+Restoring NuGet packages...
+To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+All packages listed in packages.config are already installed.
+prettyprint -> C:\Build\Agent\_work\1\s\bin\prettyprint.dll
+syntax -> C:\Build\Agent\_work\1\s\bin\syntax.dll
+compiling to dfas (can take a while...)
+340 states
+writing output
+building tables
+computing first function...time: 00:00:00.2134096
+building kernels...time: 00:00:00.1491479
+building kernel table...time: 00:00:00.0174193
+computing lookahead relations................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................time: 00:00:00.5253357
+building lookahead table...time: 00:00:00.2901023
+building action table...state 427: shift/reduce error on SEMICOLON
+state 427: shift/reduce error on SEMICOLON_SEMICOLON
+state 462: shift/reduce error on BAR
+state 465: shift/reduce error on LBRACE
+state 466: shift/reduce error on BAR
+state 477: shift/reduce error on BAR
+state 553: shift/reduce error on COLON_EQUALS
+state 589: shift/reduce error on LBRACE
+time: 00:00:00.9069178
+building goto table...time: 00:00:00.2384084
+returning tables.
+8 shift/reduce conflicts
+749 states
+138 nonterminals
+139 terminals
+401 productions
+#rows in action table: 749
+parser -> C:\Build\Agent\_work\1\s\bin\parser.dll
+typechecker -> C:\Build\Agent\_work\1\s\bin\typechecker.dll
+format -> C:\Build\Agent\_work\1\s\bin\format.dll
+extraction -> C:\Build\Agent\_work\1\s\bin\extraction.dll
+fsdoc -> C:\Build\Agent\_work\1\s\bin\fsdoc.dll
+smtencoding -> C:\Build\Agent\_work\1\s\bin\smtencoding.dll
+tactics -> C:\Build\Agent\_work\1\s\src\tactics\bin\Release\tactics.dll
+tosyntax -> C:\Build\Agent\_work\1\s\bin\tosyntax.dll
+fstar -> C:\Build\Agent\_work\1\s\bin\fstar.exe
+C:\Build\Agent\_work\1\s\src\tests\tactics.fs(53,19): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'. [C:\Build\Agent\_work\1\s\src\tests\tests.fsproj]
+tests -> C:\Build\Agent\_work\1\s\bin\tests.exe
+# An artefact of the build process is that parse.fsi is auto-generated
+true parser/parse.fsi
+chmod a+x ../bin/tests.exe
+chmod a+x ../bin/fstar.exe
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make fsharp-regressions #normalizer failures on linux so only run on windows
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+../bin/tests.exe
+Initializing ...
+Goal is (l_Forall (fun x -> (l_imp (eq2 x@0 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x@1 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x@1 z@0))))))))
+TAC (ngoals=1, maingoal=(l_Forall (fun x -> (l_imp (eq2 x@0 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x@1 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x@1 z@0)))))))), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(l_Forall (fun x -> (l_imp (eq2 x@0 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x@1 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x@1 z@0)))))))) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(l_Forall (fun x -> (l_imp (eq2 x@0 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x@1 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x@1 z@0)))))))), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(l_Forall (fun x -> (l_imp (eq2 x@0 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x@1 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x@1 z@0)))))))), rest=):
+TAC>> intros
+intros: x
+TAC (ngoals=1, maingoal=(l_imp (eq2 x 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x z@0)))))), rest=):
+TAC>> or_else: trying simplify_eq_impl
+TAC (ngoals=1, maingoal=(l_imp (eq2 x 0) (l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x z@0)))))), rest=):
+TAC>> imp_intro
+imp_intro: uu___#170762
+TAC (ngoals=1, maingoal=(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 x y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 x z@0))))), rest=):
+TAC>> rewrite
++++Rewrite uu___#170762 : (eq2 x 0)
+TAC (ngoals=1, maingoal=(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))), rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(l_and (l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) (l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))), rest=):
+TAC>> split
+TAC (ngoals=2, maingoal=(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))), rest=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))):
+TAC>> debug
+TAC (ngoals=2, maingoal=(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))), rest=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0))))):
+TAC>> map
+TAC (ngoals=1, maingoal=(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(l_Forall (fun y -> (l_imp (eq2 y@0 0) (eq2 0 y@0)))), rest=):
+TAC>> intros
+intros: y
+TAC (ngoals=1, maingoal=(l_imp (eq2 y 0) (eq2 0 y)), rest=):
+TAC>> or_else: trying simplify_eq_impl
+TAC (ngoals=1, maingoal=(l_imp (eq2 y 0) (eq2 0 y)), rest=):
+TAC>> imp_intro
+imp_intro: uu___#170766
+TAC (ngoals=1, maingoal=(eq2 0 y), rest=):
+TAC>> rewrite
++++Rewrite uu___#170766 : (eq2 y 0)
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(eq2 0 0) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: trying trivial
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert
+reverting y#170765
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> inner
+After reverting intros, goal is x |- l_True
+TAC (ngoals=1, maingoal=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0)))), rest=):
+TAC>> map
+TAC (ngoals=1, maingoal=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0)))), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0)))) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0)))), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(l_Forall (fun z -> (l_imp (eq2 z@0 0) (eq2 0 z@0)))), rest=):
+TAC>> intros
+intros: z
+TAC (ngoals=1, maingoal=(l_imp (eq2 z 0) (eq2 0 z)), rest=):
+TAC>> or_else: trying simplify_eq_impl
+TAC (ngoals=1, maingoal=(l_imp (eq2 z 0) (eq2 0 z)), rest=):
+TAC>> imp_intro
+imp_intro: uu___#170770
+TAC (ngoals=1, maingoal=(eq2 0 z), rest=):
+TAC>> rewrite
++++Rewrite uu___#170770 : (eq2 z 0)
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: trying simplify_eq_impl
+(eq2 0 0) is not an equality imp
+>>>>>Not an equality implication
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: simplify_eq_impl failed; trying visit_strengthen_else
+TAC (ngoals=1, maingoal=(eq2 0 0), rest=):
+TAC>> or_else: trying trivial
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert
+reverting z#170769
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> inner
+After reverting intros, goal is x |- l_True
+TAC (ngoals=2, maingoal=l_True, rest=l_True):
+TAC>> merge_sub_goals
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> revert
+reverting x#170761
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear_hd
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> clear
+TAC (ngoals=1, maingoal=l_True, rest=):
+TAC>> inner
+After reverting intros, goal is  |- l_True
+Goal: l_True
+make[1]: Leaving directory '/cygdrive/c/Build/Agent/_work/1/s/src'
+make -C ocaml-output
+make[1]: Entering directory '/cygdrive/c/Build/Agent/_work/1/s/src/ocaml-output'
+cp "../extraction/ml/FStar_Extraction_ML_PrintML_4.02.3.ml" ../extraction/ml/FStar_Extraction_ML_PrintML.ml
+# TODO : call menhir directly when positions are fixed instead of
+# letting OCamlbuild go through ocamlyacc
+menhir  --only-preprocess-for-ocamlyacc ../parser/parse.mly > parse.mly
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.

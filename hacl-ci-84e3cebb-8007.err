@@ -1,0 +1,16 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\Hacl.Lib.Create.fst(20,0-26,99): (Error) Unknown assertion failed
+Verified module: Hacl.Lib.Create (202465 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:41: Hacl.Lib.Create.fst-verify] Error 1
+make[4]: Target 'all-ci' not remade because of errors.
+make[3]: *** [Makefile:15: salsa-family-ci] Error 2

@@ -1,0 +1,469 @@
+dos2unix: converting file parser/parse.fsi to Unix format...
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+dos2unix: converting file parse.mly to Unix format...
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 49, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\u_boot_fsts\FStar.TypeChecker.Util.fst(71,0-73,32): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(394,0-394,33): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(445,0-445,48): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(446,0-446,76): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.Syntax.Syntax.fst(496,0-498,38): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(282,0-286,35): (Warning) Annotation from val declaration overrides inline type annotation
+.\u_boot_fsts\FStar.TypeChecker.Env.fst(716,0-718,39): (Warning) Annotation from val declaration overrides inline type annotation
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Tactics.ml", line 353, characters 45-46:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 40-41:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 42-43:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 3, characters 64-65:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 37-38:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 62-63:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_IndefiniteDescription.ml", line 7, characters 31-33:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Tactics.ml", line 353, characters 45-46:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 40-41:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 2, characters 42-43:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 3, characters 64-65:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 37-38:
+Warning 20: this argument will not be used by the function.
+File "ulib/ml/extracted/FStar_Util.ml", line 5, characters 62-63:
+Warning 20: this argument will not be used by the function.
+.\hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Encrypt_SymEnc.fst(30,0-30,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\BinarySearchTreeBasic.fst(140,0-144,78): (Error) Unknown assertion failed
+Verified module: BinarySearchTreeBasic (70999 milliseconds)
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:16: BinarySearchTreeBasic.uver] Error 1
+WARNING: (64698,51): pattern does not contain all quantified variables.
+WARNING: (64698,51): pattern does not contain all quantified variables.
+WARNING: (64698,51): pattern does not contain all quantified variables.
+WARNING: (64698,51): pattern does not contain all quantified variables.
+WARNING: (6858,51): pattern does not contain all quantified variables.
+WARNING: (64698,51): pattern does not contain all quantified variables.
+WARNING: (64698,51): pattern does not contain all quantified variables.
+WARNING: (6858,51): pattern does not contain all quantified variables.
+WARNING: (64698,51): pattern does not contain all quantified variables.
+WARNING: (64698,51): pattern does not contain all quantified variables.
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 133428 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 133451 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 134725 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 137768 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 133428 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 133451 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 134725 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 137768 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 133428 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 133451 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 134725 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 137768 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 133428 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 133451 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 134725 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 137768 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 133428 column 95: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 133451 column 82: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.object_as_type.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 134725 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gprint.fuel_instrumented (Fuel Term Term) Term)")
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (error "line 137768 column 47: Wrong number of arguments (1) passed to function (declare-fun JSONParser.Spec.gparse.fuel_instrumented
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: (Fuel Term Term Term)
+
+jsonparser.pos\Test.fst(0,0-0,0): (Warning) Test: Unexpected output from Z3: Term)")
+
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(28,0-28,22): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: data_structures.all] Error 2
+.\Ex12a.Cap.fst(22,0-22,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex10a.fst(28,0-28,22): (Warning) Top-level let-bindings must be total; this term may have effects
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#419079
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (6815,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (6952,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (6734,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#455873
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#457872 (see also .\Platform.Bytes.fst(257,156-260,30))
+WARNING: (6940,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+WARNING: (65140,46): pattern does not contain any variable.
+WARNING: (69036,43): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#492597
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#500984 (see also .\Platform.Bytes.fst(257,156-260,30))
+.\Ex12a.Cap.fst(20,0-20,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+make[3]: [Makefile:59: Ex01a-ocaml] Error 2 (ignored)
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(172,0-188,5): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex11a.fst(0,0-0,0): (Warning) Ex11a: Unexpected output from Z3: 
+
+.\Ex11a.fst(213,0-223,48): (Error) Killed: Unknown assertion failed
+Verified module: Ex11a (225108 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:39: verify-Ex11a.fst] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: ../doc/tutorial/code/solutions.all] Error 2
+Warning: Unable to open hints file: C:\Build\Agent2\_work\1\s\ulib\FStar.UInt128.fsti.hints; ran without hints
+(error "out of memory")
+.\FStar.UInt.fst(0,0-0,0): (Warning) FStar.UInt: Unexpected output from Z3: 
+
+(error "out of memory")
+Unexpected error
+Sys_error("Broken pipe")
+Raised by primitive operation at file "pervasives.ml", line 302, characters 2-47
+Called from file "src/basic/ml/FStar_Util.ml", line 152, characters 2-28
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 498, characters 25-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 554, characters 27-47
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 700, characters 21-29
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 1116, characters 19-73
+Called from file "list.ml", line 73, characters 12-15
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7858, characters 32-297
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7874, characters 6-66
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3771, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4170, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 574, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4304, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4574, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 302, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 115, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\FStar.UInt.fst(154,0-156,20): (Error) Unknown assertion failed
+.\FStar.UInt.fst(571,0-577,44): (Error) Killed: Unknown assertion failed
+2 errors were reported (see above)
+make[2]: *** [Makefile:16: FStar.UInt.fst-ver] Error 1
+(error "out of memory")
+Unexpected error
+Sys_error("Broken pipe")
+Raised by primitive operation at file "pervasives.ml", line 302, characters 2-47
+Called from file "src/basic/ml/FStar_Util.ml", line 152, characters 2-28
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 498, characters 25-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 554, characters 27-47
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 700, characters 21-29
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 1116, characters 19-73
+Called from file "list.ml", line 73, characters 12-15
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7735, characters 8-64
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7893, characters 28-50
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 149, characters 13-60
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 187, characters 23-53
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4170, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 574, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4304, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4574, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 302, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 115, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+.\FStar.Math.Lemmas.fst(464,0-470,79): (Error) Unknown assertion failed
+1 error was reported (see above)
+make[2]: *** [Makefile:16: FStar.Math.Lemmas.fst-ver] Error 1
+(error "out of memory")
+The system cannot execute the specified program.
+Unexpected error
+Sys_error("Invalid argument")
+Raised by primitive operation at file "pervasives.ml", line 302, characters 2-47
+Called from file "src/basic/ml/FStar_Util.ml", line 152, characters 2-28
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 498, characters 25-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 554, characters 27-47
+Called from file "src/ocaml-output/FStar_SMTEncoding_Z3.ml", line 700, characters 21-29
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 1116, characters 19-73
+Called from file "list.ml", line 73, characters 12-15
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 7735, characters 8-64
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 3035, characters 35-128
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5587, characters 21-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4685, characters 27-59
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3771, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4170, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 574, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4216, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4304, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4574, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 46, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 302, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "ulib/ml/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 115, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 383, characters 18-101
+Called from file "src/ocaml-output/FStar_Universal.ml", line 407, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 424, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 465, characters 26-68
+Called from file "src/ocaml-output/FStar_Main.ml", line 213, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 236, characters 6-11
+
+make[2]: *** [Makefile:16: FStar.Buffer.fst-ver] Error 1
+(error "out of memory")
+.\WhileReify.fst(0,0-0,0): (Warning) WhileReify: Unexpected output from Z3: 
+
+(error "out of memory")
+.\WhileReify.fst(0,0-0,0): (Warning) WhileReify: Unexpected output from Z3: 
+
+.\WhileReify.fst(137,0-137,98): (Error) Killed: Unknown assertion failed
+.\WhileReify.fst(138,0-138,88): (Error) Killed: Unknown assertion failed
+Verified module: WhileReify (716492 milliseconds)
+2 errors were reported (see above)
+make[3]: *** [../Makefile.include:16: WhileReify.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: rel.all] Error 2
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:283: uexamples] Error 2

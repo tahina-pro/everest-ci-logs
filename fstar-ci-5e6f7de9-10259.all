@@ -1,0 +1,34 @@
+This is /home/everbld/everest-ci/ci
+Working directory: /cygdrive/c/Build/Agent1/_work/2/s
+About to run: make -C src utest -j 24 -k
+BUILD_SOURCEBRANCHNAME: c_graph
+BUILD_DEFINITIONNAME: FStar-CI-Windows
+make all
+make[1]: Entering directory '/cygdrive/c/Build/Agent1/_work/2/s/src'
+VS/.nuget/NuGet.exe restore VS/FStar.sln
+Installing 'FSharp.Compatibility.OCaml 0.1.10'.
+Installing 'FSPowerPack.Metadata.Community 2.0.0.0'.
+Installing 'FSPowerPack.Core.Community 2.0.0.0'.
+Installing 'FSPowerPack.Linq.Community 2.0.0.0'.
+Installing 'FsLexYacc 6.1.0'.
+Installing 'PPrintForFSharp 0.0.2'.
+Installing 'FSPowerPack.Community 3.0.0.0'.
+Installing 'FSPowerPack.Parallel.Seq.Community 2.0.0.0'.
+Installing 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'PPrintForFSharp 0.0.2'.
+Successfully installed 'FSPowerPack.Parallel.Seq.Community 2.0.0.0'.
+Successfully installed 'FSharp.Compatibility.OCaml 0.1.10'.
+Successfully installed 'FsLexYacc.Runtime 6.1.0'.
+Successfully installed 'FSPowerPack.Linq.Community 2.0.0.0'.
+Successfully installed 'FSPowerPack.Community 3.0.0.0'.
+Successfully installed 'FsLexYacc 6.1.0'.
+Successfully installed 'FSPowerPack.Core.Community 2.0.0.0'.
+Successfully installed 'FSPowerPack.Metadata.Community 2.0.0.0'.
+make[1]: Leaving directory '/cygdrive/c/Build/Agent1/_work/2/s/src'
+make -C VS install-packages
+[ -d packages ] || make update-nuget
+make[2]: Entering directory '/cygdrive/c/Build/Agent1/_work/2/s/src/VS'
+.nuget/NuGet.exe restore FStar.sln
+All packages listed in packages.config are already installed.
+find packages -name '*.exe' -exec chmod +x '{}' ';'
+make[2]: Leaving directory '/cygdrive/c/Build/Agent1/_work/2/s/src/VS'

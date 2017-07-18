@@ -1,0 +1,15 @@
+From https://github.com/FStarLang/FStar
+8caa3b284..f09e4b29a  master          -> origin/master
+4a6fd53ce..62c741327  c_ppdev_initial -> origin/c_ppdev_initial
+8d7d309ff..f09e4b29a  cwinter_stats   -> origin/cwinter_stats
+d5c4ed07c..31009ae33  guido_tactics   -> origin/guido_tactics
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.

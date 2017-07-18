@@ -1,0 +1,249 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+File "src/basic/ml/FStar_Util.ml", line 47, characters 57-65:
+Warning 40: st_mtime was selected from type BatUnix.stats.
+It is not visible in the current scope, and will not 
+be selected if the type becomes unknown.
+.\hello.fst(5,0-5,37): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(68,0-68,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Encrypt_SymEnc.fst(29,0-29,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\MAC.fst(45,0-45,35): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (76509,51): pattern does not contain all quantified variables.
+WARNING: (76509,51): pattern does not contain all quantified variables.
+.\RPC.fst(9,0-9,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(23,0-23,39): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (7817,51): pattern does not contain all quantified variables.
+WARNING: (7817,51): pattern does not contain all quantified variables.
+.\CntProtocol.fst(14,0-14,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(29,0-29,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(48,0-49,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(32,0-32,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(35,0-35,54): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RPC.fst(116,0-116,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(99,0-99,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\CntProtocol.fst(126,0-126,18): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Platform.Bytes.fst(15,32-18,29): (Warning) Pattern misses at least one bound variable: uu___#1039
+.\CntProtocol.fst(172,0-188,5): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (7775,46): pattern does not contain any variable.
+WARNING: (7957,46): pattern does not contain any variable.
+WARNING: (7674,46): pattern does not contain any variable.
+.\Platform.Bytes.fst(257,22-260,30): (Warning) Pattern misses at least one bound variable: i#36802
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#38774 (see also .\Platform.Bytes.fst(257,156-260,30))
+WARNING: (7980,46): pattern does not contain any variable.
+.\EtM.MAC.fst(90,34-90,64): (Error) could not prove post-condition
+Verified module: EtM.MAC (11567 milliseconds)
+1 error was reported (see above)
+make[3]: *** [Makefile:61: verify_hh-EtM.MAC.fst] Error 1
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+.\Ex10a.fst(27,0-27,22): (Warning) Top-level let-bindings must be total; this term may have effects
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+WARNING: (76971,46): pattern does not contain any variable.
+WARNING: (80728,43): pattern does not contain all quantified variables.
+.\Platform.Bytes.fst(15,40-18,29): (Warning) Pattern misses at least one bound variable: uu___#72866
+.\Platform.Bytes.fst(261,8-261,24): (Warning) Pattern misses at least one bound variable: i#81274 (see also .\Platform.Bytes.fst(257,156-260,30))
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: crypto.all] Error 2
+.\Ex10a.fst(27,0-27,22): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(21,0-21,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\IfcRules.fst(251,31-251,43): (Error) Subtyping check failed; expected type (h:Rel.rel (Prims.option FStar.Heap.heap){ Prims.LexCons (IfcRules.decr_while (R?.l h) v +
+IfcRules.decr_while (R?.r h) v)
+Prims.LexTop <<
+Prims.LexCons (IfcRules.decr_while (R?.l h) v + IfcRules.decr_while (R?.r h) v) Prims.LexTop }); got type Rel.rel (Prims.option FStar.Heap.heap) (see also .\IfcRules.fst(241,0-291,5))
+Verified module: IfcRules (9476 milliseconds)
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: IfcRules.uver] Error 1
+.\Ex12b.RPC.fst(8,0-8,53): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(21,0-21,39): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12a.Cap.fst(19,0-19,26): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(53,0-54,16): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex12b.RPC.fst(123,0-123,17): (Warning) Top-level let-bindings must be total; this term may have effects
+.\RBTree.fst(222,25-222,50): (Error) could not prove post-condition
+Verified module: RBTree (46825 milliseconds)
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: RBTree.uver] Error 1
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+.\TestMRef.fst(8,0-8,20): (Warning) Top-level let-bindings must be total; this term may have effects
+.\Ex01a.fst(58,0-58,48): (Warning) Top-level let-bindings must be total; this term may have effects
+Unexpected error
+Failure("Bound term variable not found (after unmangling): uu___#205356 in environment: y#205824, x#205811, x#205774, x#205762, x#205760, b#205749, b#205748, k#205730, p#205728, Memo.fpartial_result_lemma, w#203770, px#203769, x#203768, f#203767, Memo.fpartial_result, Memo.fpartial_result, Memo.reachable_lemma, Memo.__proj__Later__item___2, Memo.__proj__Later__item__cont, Memo.__proj__Later__item__x, Memo.uu___is_Later, Memo.uu___is_Now, Memo.Later, Memo.Now, Memo.reachable, Memo.fixp, Memo.complete_fixp, Memo.fixp, Memo.complete_fixp, Memo.op_Less_Bar, Memo.__proj__Need__item__cont, Memo.__proj__Need__item__x, Memo.uu___is_Need, Memo.__proj__Done__item___0, Memo.uu___is_Done, Memo.Need, Memo.Done, Memo.partial_result, Memo.fix, Memo.memo_extr_p_computes, Memo.memo_extr_p_lemma, Memo.memo_extr_p, Memo.to_memo_pack, Memo.memo_extr_computes, Memo.memo_extr_lemma, Memo.memo_extr, Memo.memo_, Memo.apply_memo, Memo.__proj__MemoPack__item__mf, Memo.__proj__MemoPack__item__h0, Memo.uu___is_MemoPack, Memo.MemoPack, Memo.memo_pack, Memo.computes, Memo.memo_heap_id, Memo.valid_memo_id_lemma, Memo.valid_memo_to_memo_heap, Memo.valid_memo_to_memo_heap, Memo.memo_heap_to_valid_memo, Memo.memo_heap_to_valid_memo, Memo.memo_heap, Memo.valid_memo_preserve, Memo.valid_memo, Memo.forall_prop_assoc_lemma2, Memo.for_all_prop_assoc_lemma, Memo.for_all_prop, Memo.for_all_prop, Memo.get_heap, Memo.__proj__MEMO__item__put, Memo.__proj__MEMO__item__get, Memo._dm4f_MEMO_wp_trivial, Memo._dm4f_MEMO_null_wp, Memo._dm4f_MEMO_wp_ite, Memo._dm4f_MEMO_stronger, Memo._dm4f_MEMO_wp_close, Memo._dm4f_MEMO_wp_assume, Memo._dm4f_MEMO_wp_assert, Memo._dm4f_MEMO_wp_if_then_else, Memo._dm4f_MEMO_push, Memo._dm4f_MEMO_lift2, Memo._dm4f_MEMO_lift1, Memo._dm4f_MEMO_app, Memo._dm4f_MEMO_pure, Memo._dm4f_MEMO_gctx, Memo._dm4f_MEMO_ctx, Memo._dm4f_MEMO_wp, Memo._dm4f_MEMO_post, Memo._dm4f_MEMO_pre, Memo._dm4f_MEMO_pre, Memo._dm4f_MEMO_repr, Memo._dm4f_MEMO___proj__MEMO__item__put_complete_type, Memo._dm4f_MEMO___proj__MEMO__item__put_complete_type, Memo._dm4f_MEMO___proj__MEMO__item__put_elab, Memo._dm4f_MEMO___proj__MEMO__item__get_complete_type, Memo._dm4f_MEMO___proj__MEMO__item__get_complete_type, Memo._dm4f_MEMO___proj__MEMO__item__get_elab, Memo._dm4f_MEMO_bind_elab, Memo._dm4f_MEMO_bind_wp, Memo._dm4f_MEMO_return_elab, Memo._dm4f_MEMO_return_wp, Memo._dm4f_MEMO_lift_from_pure, Memo.put, Memo.get, Memo.bind, Memo.return, Memo.memo, Memo.heap, Memo.heap, Memo.codom, Memo.codom, Memo.dom, Memo.dom, FStar.WellFounded.fix, FStar.WellFounded.fix_F, FStar.WellFounded.fix_F, FStar.WellFounded.apply, FStar.WellFounded.axiom1, FStar.WellFounded.axiom1_dep, FStar.WellFounded.acc_inv, FStar.WellFounded.well_founded, FStar.WellFounded.__proj__AccIntro__item___0, FStar.WellFounded.uu___is_AccIntro, FStar.WellFounded.AccIntro, FStar.WellFounded.acc, FStar.List.index, FStar.List.filter_map, FStar.List.splitAt, FStar.List.sortWith, FStar.List.zip, FStar.List.partition, FStar.List.choose, FStar.List.tryPick, FStar.List.tryFind, FStar.List.collect, FStar.List.forall2, FStar.List.for_all, FStar.List.filter, FStar.List.fold_right, FStar.List.fold_left2, FStar.List.fold_left, FStar.List.map3, FStar.List.map2, FStar.List.concatMap, FStar.List.mapi, FStar.List.mapi_init, FStar.List.mapT, FStar.List.map, FStar.List.iteri, FStar.List.iteri_aux, FStar.List.iter, FStar.List.nth, FStar.List.tl, FStar.List.tail, FStar.List.hd, FStar.List.Tot.Properties.assoc_precedes, FStar.List.Tot.Properties.memP_precedes, FStar.List.Tot.Properties.precedes_append_cons_prod_r, FStar.List.Tot.Properties.precedes_append_cons_r, FStar.List.Tot.Properties.precedes_tl, FStar.List.Tot.Properties.strict_prefix_of_or_eq_exists_append, FStar.List.Tot.Properties.strict_prefix_of_exists_append, FStar.List.Tot.Properties.mem_strict_prefix_of, FStar.List.Tot.Properties.map_strict_prefix_of, FStar.List.Tot.Properties.strict_prefix_of_correct, FStar.List.Tot.Properties.strict_prefix_of_trans, FStar.List.Tot.Properties.strict_prefix_of_cons, FStar.List.Tot.Properties.strict_prefix_of_or_eq_nil, FStar.List.Tot.Properties.strict_prefix_of_nil, FStar.List.Tot.Properties.index_extensionality, FStar.List.Tot.Properties.index_extensionality_aux, FStar.List.Tot.Properties.fold_left_append_monoid, FStar.List.Tot.Properties.fold_left_monoid, FStar.List.Tot.Properties.fold_left_append, FStar.List.Tot.Properties.map_append, FStar.List.Tot.Properties.fold_left_map, FStar.List.Tot.Properties.fold_left_invar, FStar.List.Tot.Properties.assoc_mem, FStar.List.Tot.Properties.assoc_memP_none, FStar.List.Tot.Properties.assoc_memP_some, FStar.List.Tot.Properties.assoc_append_elim_l, FStar.List.Tot.Properties.assoc_append_elim_r, FStar.List.Tot.Properties.assoc_cons_not_eq, FStar.List.Tot.Properties.assoc_cons_eq, FStar.List.Tot.Properties.assoc_nil, FStar.List.Tot.Properties.noRepeats_append_intro, FStar.List.Tot.Properties.noRepeats_append_elim, FStar.List.Tot.Properties.noRepeats_cons, FStar.List.Tot.Properties.noRepeats_nil, FStar.List.Tot.Properties.memP_map_elim, FStar.List.Tot.Properties.memP_map_intro, FStar.List.Tot.Properties.memP_existsb, FStar.List.Tot.Properties.memP_empty, FStar.List.Tot.Properties.mem_memP, FStar.List.Tot.Properties.sortWith_sorted, FStar.List.Tot.Properties.append_sorted, FStar.List.Tot.Properties.total_order, FStar.List.Tot.Properties.sorted, FStar.List.Tot.Properties.sorted, FStar.List.Tot.Properties.sortWith_permutation, FStar.List.Tot.Properties.partition_count_forall, FStar.List.Tot.Properties.partition_count, FStar.List.Tot.Properties.partition_mem_p_forall, FStar.List.Tot.Properties.partition_mem_forall, FStar.List.Tot.Properties.partition_mem, FStar.List.Tot.Properties.map_lemma, FStar.List.Tot.Properties.rev_ind, FStar.List.Tot.Properties.rev'_list_ind, FStar.List.Tot.Properties.rev_involutive, FStar.List.Tot.Properties.rev'_involutive, FStar.List.Tot.Properties.rev_append, FStar.List.Tot.Properties.rev'_append, FStar.List.Tot.Properties.rev_rev', FStar.List.Tot.Properties.rev_acc_rev', FStar.List.Tot.Properties.rev'T, FStar.List.Tot.Properties.rev', FStar.List.Tot.Properties.rev', FStar.List.Tot.Properties.append_inv_tail, FStar.List.Tot.Properties.append_inv_head, FStar.List.Tot.Properties.append_eq_singl, FStar.List.Tot.Properties.append_eq_nil, FStar.List.Tot.Properties.append_count_forall, FStar.List.Tot.Properties.append_count, FStar.List.Tot.Properties.append_mem_forall, FStar.List.Tot.Properties.append_mem, FStar.List.Tot.Properties.append_length, FStar.List.Tot.Properties.append_assoc, FStar.List.Tot.Properties.append_l_cons, FStar.List.Tot.Properties.append_cons_l, FStar.List.Tot.Properties.append_l_nil, FStar.List.Tot.Properties.append_nil_l, FStar.List.Tot.Properties.rev_mem, FStar.List.Tot.Properties.rev_acc_mem, FStar.List.Tot.Properties.rev_length, FStar.List.Tot.Properties.rev_acc_length, FStar.List.Tot.Properties.mem_existsb, FStar.List.Tot.Properties.mem_empty, FStar.List.Tot.Base.strict_prefix_of, FStar.List.Tot.Base.strict_prefix_of, FStar.List.Tot.Base.test_sort, FStar.List.Tot.Base.test_sort, FStar.List.Tot.Base.sortWith, FStar.List.Tot.Base.sortWith, FStar.List.Tot.Base.compare_of_bool, FStar.List.Tot.Base.bool_of_compare, FStar.List.Tot.Base.partition_length, FStar.List.Tot.Base.unzip3, FStar.List.Tot.Base.unzip3, FStar.List.Tot.Base.unzip, FStar.List.Tot.Base.split, FStar.List.Tot.Base.split, FStar.List.Tot.Base.assoc, FStar.List.Tot.Base.assoc, FStar.List.Tot.Base.noRepeats, FStar.List.Tot.Base.noRepeats, FStar.List.Tot.Base.subset, FStar.List.Tot.Base.subset, FStar.List.Tot.Base.partition, FStar.List.Tot.Base.partition, FStar.List.Tot.Base.choose, FStar.List.Tot.Base.choose, FStar.List.Tot.Base.tryPick, FStar.List.Tot.Base.tryPick, FStar.List.Tot.Base.tryFind, FStar.List.Tot.Base.tryFind, FStar.List.Tot.Base.collect, FStar.List.Tot.Base.collect, FStar.List.Tot.Base.for_all, FStar.List.Tot.Base.for_all, FStar.List.Tot.Base.mem_filter_forall, FStar.List.Tot.Base.mem_filter, FStar.List.Tot.Base.filter, FStar.List.Tot.Base.filter, FStar.List.Tot.Base.mem_filter_spec, FStar.List.Tot.Base.find, FStar.List.Tot.Base.find, FStar.List.Tot.Base.existsb, FStar.List.Tot.Base.existsb, FStar.List.Tot.Base.contains, FStar.List.Tot.Base.memP, FStar.List.Tot.Base.memP, FStar.List.Tot.Base.mem, FStar.List.Tot.Base.mem, FStar.List.Tot.Base.fold_left2, FStar.List.Tot.Base.fold_left2, FStar.List.Tot.Base.fold_right, FStar.List.Tot.Base.fold_right, FStar.List.Tot.Base.fold_left, FStar.List.Tot.Base.fold_left, FStar.List.Tot.Base.concatMap, FStar.List.Tot.Base.concatMap, FStar.List.Tot.Base.mapi, FStar.List.Tot.Base.mapi_init, FStar.List.Tot.Base.mapi_init, FStar.List.Tot.Base.map, FStar.List.Tot.Base.map, FStar.List.Tot.Base.flatten, FStar.List.Tot.Base.flatten, FStar.List.Tot.Base.op_At, FStar.List.Tot.Base.append, FStar.List.Tot.Base.append, FStar.List.Tot.Base.rev, FStar.List.Tot.Base.rev_acc, FStar.List.Tot.Base.rev_acc, FStar.List.Tot.Base.count, FStar.List.Tot.Base.count, FStar.List.Tot.Base.index, FStar.List.Tot.Base.index, FStar.List.Tot.Base.nth, FStar.List.Tot.Base.nth, FStar.List.Tot.Base.length, FStar.List.Tot.Base.length, FStar.List.Tot.Base.tl, FStar.List.Tot.Base.tail, FStar.List.Tot.Base.hd, FStar.List.Tot.Base.isEmpty, FStar.All.try_with, FStar.All.exit, FStar.All.failwith, FStar.All.pipe_left, FStar.All.pipe_right, FStar.All.lift_exn_all, FStar.All.lift_state_all, FStar.All.all_wp, FStar.All.all_post, FStar.All.all_pre, FStar.All.all_pre, FStar.ST.get, FStar.ST.write, FStar.ST.read, FStar.ST.alloc, FStar.ST.recall, FStar.ST.lift_div_state, FStar.ST.st_wp, FStar.ST.st_post, FStar.ST.st_pre, FStar.ST.st_pre, FStar.ST.modifies_none, FStar.ST.ref, FStar.Heap.op_Hat_Plus_Hat, FStar.Heap.op_Plus_Plus_Hat, FStar.Heap.op_Hat_Plus_Plus, FStar.Heap.upd_upd_same_ref, FStar.Heap.equal_extensional, FStar.Heap.equal, FStar.Heap.lemma_unused_upd_modifies, FStar.Heap.lemma_contains_upd_modifies, FStar.Heap.lemma_upd_unused, FStar.Heap.lemma_upd_contains_different_addr, FStar.Heap.lemma_unused_upd_contains, FStar.Heap.lemma_well_typed_upd_contains, FStar.Heap.lemma_upd_contains, FStar.Heap.lemma_in_dom_emp, FStar.Heap.emp, FStar.Heap.emp, FStar.Heap.equal_dom, FStar.Heap.lemma_ref_injectivity, FStar.Heap.lemma_ref_injectivity, FStar.Heap.lemma_sel_upd2, FStar.Heap.lemma_sel_upd1, FStar.Heap.lemma_sel_same_addr, FStar.Heap.lemma_free_mm_unused, FStar.Heap.lemma_free_mm_contains, FStar.Heap.lemma_free_mm_sel, FStar.Heap.lemma_alloc, FStar.Heap.lemma_distinct_addrs_unused, FStar.Heap.lemma_distinct_addrs_distinct_types, FStar.Heap.lemma_contains_implies_used, FStar.Heap.lemma_alloc_fresh_test, FStar.Heap.lemma_free_mm_test, FStar.Heap.lemma_alloc_test, FStar.Heap.lemma_upd_unused_test, FStar.Heap.lemma_upd_contains_not_necessarily_well_typed_test, FStar.Heap.lemma_upd_contains_test, FStar.Heap.modifies, FStar.Heap.modifies_t, FStar.Heap.free_mm, FStar.Heap.alloc, FStar.Heap.upd, FStar.Heap.upd_tot, FStar.Heap.sel, FStar.Heap.sel_tot, FStar.Heap.only, FStar.Heap.only_t, FStar.Heap.fresh, FStar.Heap.unused_in, FStar.Heap.contains, FStar.Heap.compare_addrs, FStar.Heap.is_mm, FStar.Heap.addr_of, FStar.Heap.__proj__Mkref__item__mm, FStar.Heap.__proj__Mkref__item__init, FStar.Heap.__proj__Mkref__item__addr, FStar.Heap.Mkref, FStar.Heap.ref, FStar.Heap.consistent, FStar.Heap.heap, FStar.Heap.heap, FStar.Heap.__proj__Mkheap_rec__item__memory, FStar.Heap.__proj__Mkheap_rec__item__next_addr, FStar.Heap.Mkheap_rec, FStar.Heap.heap_rec, FStar.Heap.heap_rec, FStar.TSet.lemma_mem_tset_of_set, FStar.TSet.lemma_mem_tset_of_set_r, FStar.TSet.lemma_mem_tset_of_set_l, FStar.TSet.tset_of_set, FStar.TSet.lemma_equal_refl, FStar.TSet.lemma_equal_elim, FStar.TSet.lemma_equal_intro, FStar.TSet.mem_subset, FStar.TSet.subset_mem, FStar.TSet.mem_complement, FStar.TSet.mem_intersect, FStar.TSet.mem_union, FStar.TSet.mem_singleton, FStar.TSet.mem_empty, FStar.TSet.subset, FStar.TSet.complement, FStar.TSet.intersect, FStar.TSet.union, FStar.TSet.singleton, FStar.TSet.empty, FStar.TSet.mem, FStar.TSet.equal, FStar.TSet.set, FStar.PredicateExtensionality.predicateExtensionality, FStar.PredicateExtensionality.peq, FStar.PredicateExtensionality.predicate, FStar.PropositionalExtensionality.apply, FStar.PropositionalExtensionality.axiom, FStar.StrongExcludedMiddle.strong_excluded_middle, FStar.Set.as_set, FStar.Set.as_set', FStar.Set.as_set', FStar.Set.eqtype, FStar.Set.eqtype, FStar.Set.disjoint_not_in_both, FStar.Set.lemma_equal_refl, FStar.Set.lemma_equal_elim, FStar.Set.lemma_equal_intro, FStar.Set.mem_subset, FStar.Set.subset_mem, FStar.Set.mem_complement, FStar.Set.mem_intersect, FStar.Set.mem_union, FStar.Set.mem_singleton, FStar.Set.mem_empty, FStar.Set.subset, FStar.Set.disjoint, FStar.Set.complement, FStar.Set.intersect, FStar.Set.union, FStar.Set.singleton, FStar.Set.empty, FStar.Set.mem, FStar.Set.equal, FStar.Set.set, FStar.FunctionalExtensionality.gfeq, FStar.FunctionalExtensionality.gfun, FStar.FunctionalExtensionality.feq, FStar.FunctionalExtensionality.efun, FStar.Classical.excluded_middle, FStar.Classical.or_elim, FStar.Classical.ghost_lemma, FStar.Classical.impl_intro_gen, FStar.Classical.forall_impl_intro, FStar.Classical.move_requires, FStar.Classical.exists_elim, FStar.Classical.impl_intro, FStar.Classical.impl_intro_gtot, FStar.Classical.forall_to_exists_2, FStar.Classical.forall_to_exists, FStar.Classical.exists_intro, FStar.Classical.forall_intro_3, FStar.Classical.forall_intro_2, FStar.Classical.forall_intro', FStar.Classical.forall_intro, FStar.Classical.forall_intro_squash_gtot_join, FStar.Classical.forall_intro_squash_gtot, FStar.Classical.lemma_to_squash_gtot, FStar.Classical.gtot_to_lemma, FStar.Classical.lemma_forall_intro_gtot, FStar.Classical.forall_intro_gtot, FStar.Classical.arrow_to_impl, FStar.Classical.impl_to_arrow, FStar.Classical.get_forall, FStar.Classical.get_equality, FStar.Classical.get_squashed, FStar.Classical.give_witness, FStar.Squash.join_squash, FStar.Squash.map_squash, FStar.Squash.bind_squash, FStar.Squash.return_squash, FStar.Squash.squash_double_sum, FStar.Squash.squash_double_arrow, FStar.Squash.proof_irrelevance, FStar.Squash.give_proof, FStar.Squash.get_proof, Prims.false_elim, Prims.false_elim, Prims.assert_norm, Prims.normalize, Prims.normalize_term, Prims.string_of_int, Prims.string_of_bool, Prims.abs, Prims.min, Prims.pow2, Prims.pow2, Prims.op_Division, Prims.op_Modulus, Prims.invertOption, Prims.allow_inversion, Prims.nonzero, Prims.nonzero, Prims.pos, Prims.pos, Prims.nat, Prims.nat, Prims.ignore, Prims.raise, Prims.cut, Prims._assert, Prims.admitP, Prims.unsafe_coerce, Prims.magic, Prims.admit, Prims._assume, Prims.dsnd, Prims.dfst, Prims.snd, Prims.fst, Prims.as_ensures, Prims.as_requires, Prims.__proj__Mkdtuple8__item___8, Prims.__proj__Mkdtuple8__item___7, Prims.__proj__Mkdtuple8__item___6, Prims.__proj__Mkdtuple8__item___5, Prims.__proj__Mkdtuple8__item___4, Prims.__proj__Mkdtuple8__item___3, Prims.__proj__Mkdtuple8__item___2, Prims.__proj__Mkdtuple8__item___1, Prims.uu___is_Mkdtuple8, Prims.Mkdtuple8, Prims.dtuple8, Prims.__proj__Mkdtuple7__item___7, Prims.__proj__Mkdtuple7__item___6, Prims.__proj__Mkdtuple7__item___5, Prims.__proj__Mkdtuple7__item___4, Prims.__proj__Mkdtuple7__item___3, Prims.__proj__Mkdtuple7__item___2, Prims.__proj__Mkdtuple7__item___1, Prims.uu___is_Mkdtuple7, Prims.Mkdtuple7, Prims.dtuple7, Prims.__proj__Mkdtuple6__item___6, Prims.__proj__Mkdtuple6__item___5, Prims.__proj__Mkdtuple6__item___4, Prims.__proj__Mkdtuple6__item___3, Prims.__proj__Mkdtuple6__item___2, Prims.__proj__Mkdtuple6__item___1, Prims.uu___is_Mkdtuple6, Prims.Mkdtuple6, Prims.dtuple6, Prims.__proj__Mkdtuple5__item___5, Prims.__proj__Mkdtuple5__item___4, Prims.__proj__Mkdtuple5__item___3, Prims.__proj__Mkdtuple5__item___2, Prims.__proj__Mkdtuple5__item___1, Prims.uu___is_Mkdtuple5, Prims.Mkdtuple5, Prims.dtuple5, Prims.__proj__Mkdtuple4__item___4, Prims.__proj__Mkdtuple4__item___3, Prims.__proj__Mkdtuple4__item___2, Prims.__proj__Mkdtuple4__item___1, Prims.uu___is_Mkdtuple4, Prims.Mkdtuple4, Prims.dtuple4, Prims.__proj__Mkdtuple3__item___3, Prims.__proj__Mkdtuple3__item___2, Prims.__proj__Mkdtuple3__item___1, Prims.uu___is_Mkdtuple3, Prims.Mkdtuple3, Prims.dtuple3, Prims.__proj__Mktuple8__item___8, Prims.__proj__Mktuple8__item___7, Prims.__proj__Mktuple8__item___6, Prims.__proj__Mktuple8__item___5, Prims.__proj__Mktuple8__item___4, Prims.__proj__Mktuple8__item___3, Prims.__proj__Mktuple8__item___2, Prims.__proj__Mktuple8__item___1, Prims.uu___is_Mktuple8, Prims.Mktuple8, Prims.tuple8, Prims.__proj__Mktuple7__item___7, Prims.__proj__Mktuple7__item___6, Prims.__proj__Mktuple7__item___5, Prims.__proj__Mktuple7__item___4, Prims.__proj__Mktuple7__item___3, Prims.__proj__Mktuple7__item___2, Prims.__proj__Mktuple7__item___1, Prims.uu___is_Mktuple7, Prims.Mktuple7, Prims.tuple7, Prims.__proj__Mktuple6__item___6, Prims.__proj__Mktuple6__item___5, Prims.__proj__Mktuple6__item___4, Prims.__proj__Mktuple6__item___3, Prims.__proj__Mktuple6__item___2, Prims.__proj__Mktuple6__item___1, Prims.uu___is_Mktuple6, Prims.Mktuple6, Prims.tuple6, Prims.__proj__Mktuple5__item___5, Prims.__proj__Mktuple5__item___4, Prims.__proj__Mktuple5__item___3, Prims.__proj__Mktuple5__item___2, Prims.__proj__Mktuple5__item___1, Prims.uu___is_Mktuple5, Prims.Mktuple5, Prims.tuple5, Prims.__proj__Mktuple4__item___4, Prims.__proj__Mktuple4__item___3, Prims.__proj__Mktuple4__item___2, Prims.__proj__Mktuple4__item___1, Prims.uu___is_Mktuple4, Prims.Mktuple4, Prims.tuple4, Prims.__proj__Mktuple3__item___3, Prims.__proj__Mktuple3__item___2, Prims.__proj__Mktuple3__item___1, Prims.uu___is_Mktuple3, Prims.Mktuple3, Prims.tuple3, Prims.__proj__Mktuple2__item___2, Prims.__proj__Mktuple2__item___1, Prims.uu___is_Mktuple2, Prims.Mktuple2, Prims.tuple2, Prims.LexTop, Prims.lex_t, Prims.lex_t, Prims.all_wp_h, Prims.all_post_h, Prims.all_pre_h, Prims.ex_wp, Prims.ex_post, Prims.ex_pre, Prims.ex_pre, Prims.st_wp_h, Prims.st_post_h, Prims.st_pre_h, Prims.returnM, Prims.__proj__Err__item__msg, Prims.uu___is_Err, Prims.__proj__E__item__e, Prims.uu___is_E, Prims.__proj__V__item__v, Prims.uu___is_V, Prims.Err, Prims.E, Prims.V, Prims.result, Prims.__proj__Inr__item__v, Prims.uu___is_Inr, Prims.__proj__Inl__item__v, Prims.uu___is_Inl, Prims.Inr, Prims.Inl, Prims.either, Prims.__proj__Some__item__v, Prims.uu___is_Some, Prims.uu___is_None, Prims.Some, Prims.None, Prims.option, Prims.decreases, Prims.__proj__SMTPatOr__item___0, Prims.uu___is_SMTPatOr, Prims.__proj__SMTPatT__item__a, Prims.uu___is_SMTPatT, Prims.__proj__SMTPat__item___1, Prims.__proj__SMTPat__item__a, Prims.uu___is_SMTPat, Prims.SMTPatOr, Prims.SMTPatT, Prims.SMTPat, Prims.pattern, Prims.pattern, Prims.__proj__Cons__item__tl, Prims.__proj__Cons__item__hd, Prims.uu___is_Cons, Prims.uu___is_Nil, Prims.Cons, Prims.Nil, Prims.list, Prims.strcat, Prims.array, Prims.exn, Prims.exn, Prims.op_disEquality, Prims.op_Equality, Prims.op_LessThan, Prims.op_GreaterThanOrEqual, Prims.op_GreaterThan, Prims.op_LessThanOrEqual, Prims.op_Minus, Prims.op_Addition, Prims.op_Subtraction, Prims.op_Multiply, Prims.op_Negation, Prims.op_BarBar, Prims.op_AmpAmp, Prims.int, Prims.int, Prims.guard_free, Prims.pure_wp, Prims.pure_post, Prims.pure_pre, Prims.pure_pre, Prims.range_of, Prims.labeled, Prims.string, Prims.string, Prims.range_0, Prims.range_0, Prims.range, Prims.range, Prims.l_Exists, Prims.__proj__Mkdtuple2__item___2, Prims.__proj__Mkdtuple2__item___1, Prims.uu___is_Mkdtuple2, Prims.Mkdtuple2, Prims.dtuple2, Prims.prop, Prims.prop, Prims.l_Forall, Prims.has_type, Prims.precedes, Prims.l_not, Prims.l_iff, Prims.l_imp, Prims.l_or, Prims.__proj__Right__item___0, Prims.uu___is_Right, Prims.__proj__Left__item___0, Prims.uu___is_Left, Prims.Right, Prims.Left, Prims.c_or, Prims.l_and, Prims.__proj__And__item___1, Prims.__proj__And__item___0, Prims.uu___is_And, Prims.And, Prims.c_and, Prims.b2t, Prims.eq3, Prims.uu___is_HRefl, Prims.HRefl, Prims.h_equals, Prims.eq2, Prims.uu___is_Refl, Prims.Refl, Prims.equals, Prims.inversion, Prims.l_False, Prims.l_False, Prims.l_True, Prims.l_True, Prims.squash, Prims.unit, Prims.unit, Prims.uu___is_T, Prims.T, Prims.c_True, Prims.c_True, Prims.c_False, Prims.c_False, Prims.bool, Prims.bool, Prims.eqtype, Prims.eqtype, Prims.hasEq, Prims.cps, Prims.cps, Prims.attribute, Prims.attribute")
+Raised at file "pervasives.ml", line 30, characters 22-33
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1053, characters 20-41
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1956, characters 50-75
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1956, characters 50-75
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1956, characters 50-75
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1956, characters 50-75
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2450, characters 39-56
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 1641, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2919, characters 34-54
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2775, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2775, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3076, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2775, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3076, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2775, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2748, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 544, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 545, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2743, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2775, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2748, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 544, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 545, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2743, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2775, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3076, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2775, characters 29-51
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2989, characters 34-58
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 3076, characters 30-62
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2846, characters 29-52
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2748, characters 38-58
+Called from file "src/basic/ml/FStar_Util.ml", line 544, characters 19-28
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/basic/ml/FStar_Util.ml", line 545, characters 20-56
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 2743, characters 10-387
+Called from file "src/ocaml-output/FStar_SMTEncoding_Encode.ml", line 7636, characters 38-60
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 1031, characters 11-69
+Called from file "list.ml", line 73, characters 12-15
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_Rel.ml", line 6316, characters 24-56
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 2877, characters 35-128
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5591, characters 23-51
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 5265, characters 21-103
+Called from file "src/batList.mlv", line 171, characters 23-28
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_TypeChecker_TcTerm.ml", line 4768, characters 42-69
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 3694, characters 20-1023
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4076, characters 31-46
+Called from file "src/basic/ml/FStar_Util.ml", line 572, characters 30-37
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4122, characters 8-70
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4210, characters 25-77
+Called from file "src/ocaml-output/FStar_TypeChecker_Tc.ml", line 4477, characters 23-49
+Called from file "src/basic/ml/FStar_Util.ml", line 44, characters 14-18
+Called from file "src/ocaml-output/FStar_Universal.ml", line 287, characters 34-233
+Called from file "list.ml", line 84, characters 24-34
+Called from file "src/ocaml-output/bootlibs/FStar_All.ml", line 3, characters 21-24
+Called from file "src/ocaml-output/FStar_SMTEncoding_Solver.ml", line 104, characters 16-20
+Called from file "src/ocaml-output/FStar_Universal.ml", line 402, characters 18-66
+Called from file "src/ocaml-output/FStar_Universal.ml", line 421, characters 31-72
+Called from file "src/ocaml-output/FStar_Universal.ml", line 437, characters 24-71
+Called from file "src/ocaml-output/FStar_Universal.ml", line 477, characters 27-69
+Called from file "src/ocaml-output/FStar_Main.ml", line 204, characters 27-67
+Called from file "src/ocaml-output/FStar_Main.ml", line 226, characters 6-11
+
+make[3]: *** [../Makefile.include:15: Memo.uver] Error 1
+make[3]: [Makefile:66: Ex01a-ocaml] Error 2 (ignored)
+.\Mac.fst(70,0-70,35): (Warning) Top-level let-bindings must be total; this term may have effects
+.\While.fst(76,27-76,43): (Error) Subtyping check failed; expected type (c:((c:While.com{ Prims.b2t (While? c) })){ Prims.LexCons (Prims.LexCons c
+(Prims.LexCons (While.decr_while h' c) (Prims.LexCons 0 Prims.LexTop)))
+Prims.LexTop <<
+Prims.LexCons (Prims.LexCons uu___6535
+(Prims.LexCons (While.decr_while h uu___6535) (Prims.LexCons 0 Prims.LexTop)))
+Prims.LexTop }); got type While.com (see also .\While.fst(69,0-97,23))
+Verified module: While (5296 milliseconds)
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: While.uver] Error 1
+.\FStar.Math.Lemmas.fst(557,0-564,41): (Error) Unknown assertion failed
+Verified module: FStar.Math.Lemmas (38642 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:28: FStar.Math.Lemmas.fst-ver] Error 1
+.\UnionFind.fst(314,15-314,48): (Error) assertion failed
+Verified module: UnionFind (101635 milliseconds)
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: UnionFind.uver] Error 1
+.\BinaryTrees.fst(168,19-168,60): (Error) could not prove post-condition
+Verified module: BinaryTrees (234441 milliseconds)
+1 error was reported (see above)
+make[3]: *** [../Makefile.include:15: BinaryTrees.uver] Error 1
+make[3]: Target 'all' not remade because of errors.
+make[2]: *** [Makefile:35: data_structures.all] Error 2
+.\FStar.Struct.fst(449,82-449,84): (Error) Subtyping check failed; expected type (p2:FStar.Struct.path u#_ from v2{ FStar.Struct.path_disjoint u#_ p1 p2 }); got type FStar.Struct.path u#_ from v2 (see also .\FStar.Struct.fst(422,27-422,46))
+Verified module: FStar.ST (49284 milliseconds)
+Verified module: FStar.All (896 milliseconds)
+Verified module: FStar.Struct (64859 milliseconds)
+1 error was reported (see above)
+make[2]: *** [Makefile:63: struct] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[1]: *** [Makefile:272: ulib] Error 2

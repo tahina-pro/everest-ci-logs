@@ -1,0 +1,76 @@
+Warning: you are using the standard library and/or the %inline keyword. We
+recommend switching on --infer in order to avoid obscure type error messages.
+.\Hacl.Lib.Create.fst(20,0-26,99): (Error) Unknown assertion failed
+Verified module: Hacl.Lib.Create (137479 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:45: Hacl.Lib.Create.fst-verify] Error 1
+.\uf1cma\Crypto.Symmetric.MAC.fst(197,41-197,43): (Error) Identifier not found: [mm]
+1 error was reported (see above)
+make[3]: *** [Makefile:179: uf1cma/Crypto.Symmetric.MAC.fst-ver] Error 1
+.\Hacl.SecretBox.ZeroPad.fst(54,8-60,38): (Error) Unknown assertion failed
+Verified module: Hacl.SecretBox.ZeroPad (142609 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:45: Hacl.SecretBox.ZeroPad.fst-verify] Error 1
+.\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.Invariant.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.Encrypt.Invariant.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.Enxor.Invariant.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.EnxorDexor.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.Wrappers.PRF.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.Wrappers.CMA.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.Wrappers.Encoding.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.Decrypt.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.MAC_Wrapper.Invariant.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\uf1cma\Crypto.Symmetric.MAC.fst(197,41-197,43): (Error) Identifier not found: [mm]
+1 error was reported (see above)
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.Encrypt.Ideal.Invariant.fst-ver] Error 1
+make[3]: *** [Makefile:179: prf/Crypto.Symmetric.PRF.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.Encrypt.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\aead\Crypto.AEAD.Invariant.fst(810,30-810,30): (Error) Syntax error: Parsing.Parse_error
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.fst-ver] Error 1
+.\aead\Crypto.AEAD.BufferUtils.fst(21,30-21,40): (Error) Expected expression of type "FStar.Set.set Prims.nat"; got expression "FStar.TSet.empty" of type "FStar.TSet.set (uu___unification_ 292395 prf_region mac_region h0 h1)"
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.BufferUtils.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\uf1cma\Crypto.Symmetric.MAC.fst(197,41-197,43): (Error) Identifier not found: [mm]
+1 error was reported (see above)
+make[3]: *** [Makefile:179: uf1cma/Crypto.Symmetric.UF1CMA.fst-ver] Error 1
+C:\Build\Agent2\_work\13\s\secure_api\uf1cma\Crypto.Symmetric.MAC.fst(197,41-197,43): (Error) Identifier not found: [mm]
+1 error was reported (see above)
+make[3]: *** [Makefile:179: aead/Crypto.AEAD.Encoding.fst-ver] Error 1
+make[3]: Target 'all-ver' not remade because of errors.
+make[2]: *** [Makefile:38: verify-crypto] Error 2
+.\Hacl.Impl.Chacha20.fst(780,0-785,13): (Error) Unknown assertion failed
+Verified module: Hacl.Impl.Chacha20 (1063640 milliseconds)
+1 error was reported (see above)
+make[4]: *** [Makefile:45: Hacl.Impl.Chacha20.fst-verify] Error 1
+make[4]: Target 'all-ci' not remade because of errors.
+make[3]: *** [Makefile:15: salsa-family-ci] Error 2
+.\Chacha20Poly1305.fst(50,8-55,36): (Error) Unknown assertion failed
+.\Chacha20Poly1305.fst(159,8-164,38): (Error) Unknown assertion failed
+Verified module: Chacha20Poly1305 (1156798 milliseconds)
+2 errors were reported (see above)
+make[4]: *** [Makefile:45: Chacha20Poly1305.fst-verify] Error 1
+make[4]: Target 'all-ci' not remade because of errors.
+make[3]: *** [Makefile:15: api-ci] Error 2
