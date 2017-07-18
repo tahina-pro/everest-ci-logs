@@ -1,0 +1,38 @@
+"ID (Name, Index)","Location","#","time","fstar_fuel","fstar_ifuel","fstar_rlimit","fstar_tag","fstar_time","fstar_usedhints","add-rows","added-eqs","arith-conflicts","assert-diseq","assert-lower","assert-upper","binary-propagations","bound-prop","conflicts","datatype-accessor-ax","datatype-occurs-check","decisions","del-clause","dyn-ack","eq-adapter","final-checks","fixed-eqs","gcd-tests","gomory-cuts","grobner","ineq-splits","interface-eqs","lazy-quant-instantiations","max-generation","max-memory","max-min","max-missed-qa-cost","memory","min-missed-qa-cost","minimized-lits","missed-quant-instantiations","mk-bool-var","mk-clause","nonlinear-bounds","nonlinear-horner","num-allocs","num-checks","offset-eqs","pivots","propagations","pseudo-nonlinear","quant-instantiations","reason-unknown","restarts","rlimit-count","time"
+"(Benton2004.RHL.Examples2.proof, 1)",".\Benton2004.RHL.Examples2.fst(20,0-32,59)",4,73,12,7,34857984,"---+",76117,"+---",17072,3436477,,238,6618,9340,29613,54,1398,22,1923,870865,1996439,,8423,517,3814,207,,,8,190,881529,48,246,,24,240,22,915,5327,3846414,2014049,,,16158210405,7,2295,6760,723995,,1744007,"(incomplete quantifiers) canceled canceled",9,47929601,73
+"(QuickSort.Seq.partition, 5)",".\QuickSort.Seq.fst(31,0-48,15)",1,30.66,2,2,21786240,+,30740,+,744933,1370909,332,9770,71817,87450,152,11029,2037,3,8256,1124003,1197781,,49826,2745,88599,3096,,,1,1376,345670,20,39.79,,,35.63,,1798,,1160762,1207104,,,2111268964,1,125406,17462,1271563,,538239,,17,17056773,30.66
+"(RBTree.balance, 1)",".\RBTree.fst(227,0-233,23)",1,15.82,2,1,21786240,+,15866,+,33738,2299372,40,678,23242,30720,50,821,3411,3,,599240,808708,1,22139,,26974,,,,,,,10,30.98,,,29.3,,12262,,795232,819120,,,624338779,1,21104,6646,1137716,,359596,,27,11290452,15.82
+"(FStar.Buffer.lemma_modifies_2_1'', 1)",".\FStar.Buffer.fst(744,0-748,6)",2,14,0,2,108931200,"-+",15847,"+-",32195,477333,21,1,9162,11087,5925,21,772,4,432,213720,466225,,7206,277,6651,,,,,133,37962,27,49,,,49,,314,71,508695,470373,,,1008222589,2,1912,13500,288329,,261801,"(incomplete quantifiers)",6,6700458,14
+"(IfcRulesReify.while_inv_com', 1)",".\IfcRulesReify.fst(422,0-436,41)",1,8.89,2,2,21786240,+,8974,+,11958,1016028,11,2105,10122,12687,189,138,1544,3,1380,534212,275229,,5501,255,9545,,,,,25,6301,13,14.92,,,14.58,,993,,339154,280689,,,185035384,1,4734,4502,604812,,144193,,13,7279549,8.89
+"(FStar.UInt128.sum_shift_carry, 2)",".\FStar.UInt128.fst(1040,0-1044,29)",2,8,0,0,43572480,"-+",10695,"+-",413294,14354,585,2587,7169,8859,9002,730,686,2,1715,36004,4940,,1377,1717,2341,1038,1,13830,2,411,,13,44,25790,,44,,3159,,28162,7917,1613,15358,272025367,2,2985,12725,36635,720,2515,"(resource limits reached)",5,28322959,8
+"(IfcRulesReify.while_ni_com'_low_equiv_low, 1)",".\IfcRulesReify.fst(458,0-485,44)",1,5.97,2,1,21786240,+,6127,+,7998,386646,22,752,5671,8407,196,121,896,3,486,184153,118730,1,4602,100,5243,,,,,19,1022,11,12.2,,,12.0,,991,,158178,122151,,,34093580,1,3148,2263,207452,,86783,,8,3106359,5.97
+"(MergeSort.merge, 1)",".\MergeSort.fst(32,0-37,47)",1,4.3,2,1,5446560,+,4352,+,56516,509274,62,1742,10742,11831,130,1379,895,3,624,242823,249684,,6712,194,12053,,,,,105,16621,13,22.0,,,21.19,,1402,,308454,254003,,,126568808,1,13485,6898,259339,,132448,,8,3945991,4.3
+"(IfcRules.while_com', 1)",".\IfcRules.fst(241,0-291,5)",1,4.12,2,1,16339680,+,4188,+,11362,580690,79,300,4676,5594,82,251,1636,3,,269519,180873,,3682,,4673,,,,,,,10,17.12,,,16.27,,6453,,209535,186510,,,33966612,1,3635,1037,396931,,84305,,14,4023768,4.12
+"(OneTimePad.one_time_pad_ok, 1)",".\OneTimePad.fst(48,0-55,7)",1,3.98,0,4,54465600,+,4021,+,,976849,,,,,36,,5231,5,30,14652,94067,31,,2,,,,,,,35,11,10.57,,,10.57,,102754,,221010,99646,,,13395108,1,,,138558,,238319,,40,2710259,3.98
+
+"Name","Value","Unit"
+"# Queries",10679,""
+"# succeeded",11293,""
+"# succeeded (with hint)",11251,""
+"# succeeded (without hint)",42,""
+"# failed",205,""
+"# failed (with hint)",42,""
+"# failed (without hint)",163,""
+"Sum(num-checks)",12495,""
+"Sum(time)",296.15,"sec"
+"Sum(fstar_time)",1093475,"msec"
+"Max(time)",73.0,"sec"
+"Max(fstar_time)",76117,"msec"
+"Sum(rlimit-count)",495620388,""
+"Max(rlimit-count)",47929601,""
+"Sum(rlimit)",170068836000,""
+"Max(rlimit)",2230910976,""
+"rlimit budget used",0.00189855445167,"%"
+"time/rlimit",1.74135371868e-09,"sec"
+"rlimit/sec",574265865.271,""
+"Max(memory)",246.0,"MB"
+"# Modules",298,""
+"# Sum(time modules)",1752927,"msec"
+"# Min(time modules)",19,"msec","FStar.List.Tot"
+"# Max(time modules)",124229,"msec","FStar.Buffer"
+
